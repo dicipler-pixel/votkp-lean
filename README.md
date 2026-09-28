@@ -6,7 +6,7 @@
 
 [![Lean proof check](https://github.com/dicipler-pixel/votkp-lean/actions/workflows/build.yml/badge.svg)](https://github.com/dicipler-pixel/votkp-lean/actions/workflows/build.yml)
 ![Lean](https://img.shields.io/badge/Lean-v4.34.1-blue)
-![Theorems](https://img.shields.io/badge/theorems-52-2EA043)
+![Theorems](https://img.shields.io/badge/theorems-57-2EA043)
 ![sorry](https://img.shields.io/badge/sorry-0-2EA043)
 [![Paper DOI](https://img.shields.io/badge/paper-10.5281%2Fzenodo.23011140-blue)](https://doi.org/10.5281/zenodo.23011140)
 ![Code: MIT](https://img.shields.io/badge/code-MIT-lightgrey)
@@ -30,7 +30,8 @@ Knots*, version 1.1, 25 September 2026
 | [`VOTKP/Film.lean`](VOTKP/Film.lean) | 12 | §6.4, Theorems 6.1–6.2, §15.2 | The film reflection is `Γ ⊕ x` with first-order echo `1 − Γ²`; the echo series; the exact identity for `|r|² − |a|²` and the circle through the origin that decides rise or fall; one radius cannot decide (`49/121` against `1/9`); the zero-phase stack telescopes |
 | [`VOTKP/Peel.lean`](VOTKP/Peel.lean) | 18 | §5, §15.2 | Positive-channel peel (form, order, kernels); form tomography; Schur boundary memory; the four-reading coefficient and its sign; phase-reference recovery and its error bound; the cumulant witness (`c₃ = 0` against `3/50`); the transmission closed form, shared records `T(0) = T(√2) = 1/2`, later outcomes `0` against `4/5` and the gap `79,600,000/400,039,601`; one-energy snapshots; the reduced-product associator |
 | [`VOTKP/Knot.lean`](VOTKP/Knot.lean) | 1 | Appendix A.12 | `(1 − ω)/(1 − ω̄) = −ω` on the unit circle |
-| | **52** | | |
+| [`VOTKP/Ordinal.lean`](VOTKP/Ordinal.lean) | 5 | §18, control 41 (v1.2) | Zero permutation entropy at delay 2 holds for the ladder `1,…,6` and for the same ladder with one transposition, so it does not identify the defect; delay 1 does |
+| | **57** | | |
 
 What is not proved is listed in [`LIMITATIONS.md`](LIMITATIONS.md).
 
@@ -42,11 +43,11 @@ Every push runs [the proof check](.github/workflows/build.yml) on GitHub:
 2. **Independent replay**: every module is re-checked by Lean's separate kernel checker.
 3. **Axiom audit**: every named theorem depends only on `propext`, `Classical.choice` and
    `Quot.sound`. No `sorry`, no project axioms, no `native_decide`.
-4. **False controls**: five deliberately wrong claims must fail to compile, for a mathematical
+4. **False controls**: six deliberately wrong claims must fail to compile, for a mathematical
    reason: the first shell wall reflecting `1/2` (it is `3/5`); the ladders `1, 2, 6` and
    `1, 3, 6` having the same first step; the echo `x = −1/5` raising the reflectance; the two
-   channel sets sharing a third cumulant; and the shared record `T(0)` fixing the later
-   transmission.
+   channel sets sharing a third cumulant; the shared record `T(0)` fixing the later
+   transmission; and zero entropy at delay 2 excluding the transposed ladder.
 
 ```bash
 lake exe cache get

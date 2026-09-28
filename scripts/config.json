@@ -15,14 +15,19 @@
   {
    "module": "VOTKP.Knot",
    "path": "VOTKP/Knot.lean"
+  },
+  {
+   "module": "VOTKP.Ordinal",
+   "path": "VOTKP/Ordinal.lean"
   }
  ],
- "expected_theorems": 52,
- "expected_false_controls": 5,
+ "expected_theorems": 57,
+ "expected_false_controls": 6,
  "root_imports": [
   "VOTKP.Smith",
   "VOTKP.Film",
   "VOTKP.Peel",
-  "VOTKP.Knot"
+  "VOTKP.Knot",
+  "VOTKP.Ordinal"
  ]
 }

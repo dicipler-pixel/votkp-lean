@@ -13,8 +13,7 @@ f743b39bba31e8e7e5dfcdc61fb29b68  VOTKP_ELEMENTAL_PEELING_PAPER_v1_1_20260925.ht
 eac2ff97bd0792ce11bca82f00864a0e  VOTKP_Elemental_Peeling_Paper_v1_1_Package_20260925.zip
 ```
 
-The HTML and PDF copies used here match their checksums. The package zip was not opened for this
-repository.
+The HTML, PDF and package zip used here match their checksums.
 
 **How the Lean files were made.** The four modules were written for this repository from the
 statements of v1.1. Every numerical value they assert (the wall fractions, the ladder composites,
@@ -23,3 +22,8 @@ the film counterexample, the cumulant witness, the transmissions and the gap
 
 Lean v4.34.1, Mathlib v4.34.1. First verified at commit `2342555` (GitHub Actions run
 36406349897).
+
+
+**Version 1.2.** `VOTKP/Ordinal.lean` proves negative control 41 of version 1.2 (§18), restored from
+the programme's version 0.1 control list with an explicit witness. The witness was checked by
+evaluation before it was written.
