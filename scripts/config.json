@@ -1,0 +1,28 @@
+{
+ "modules": [
+  {
+   "module": "VOTKP.Smith",
+   "path": "VOTKP/Smith.lean"
+  },
+  {
+   "module": "VOTKP.Film",
+   "path": "VOTKP/Film.lean"
+  },
+  {
+   "module": "VOTKP.Peel",
+   "path": "VOTKP/Peel.lean"
+  },
+  {
+   "module": "VOTKP.Knot",
+   "path": "VOTKP/Knot.lean"
+  }
+ ],
+ "expected_theorems": 51,
+ "expected_false_controls": 5,
+ "root_imports": [
+  "VOTKP.Smith",
+  "VOTKP.Film",
+  "VOTKP.Peel",
+  "VOTKP.Knot"
+ ]
+}
