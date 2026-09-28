@@ -21,7 +21,17 @@ Why each check proves what it claims:
    a typo or a missing name. This shows the checker can say no: a pipeline that
    accepts everything would pass the first two checks and fail this one.
 
-4. Hashes. The SHA-256 of every source file is written to the report, so anyone
+4. Showcase. `Showcase.lean` states the headline results and is the one file a
+   reader must trust. It must import only Mathlib and contain no proofs, axioms,
+   `sorry`, notation, macros or options, since any of those could make a statement
+   read differently from what it means. `Showcase_WithProofs.lean` must prove
+   `Showcase.main_theorem`, and the audit file compiles
+   `example : Showcase.MainTheorem := Showcase.main_theorem`, which Lean accepts
+   only if the proved theorem carries exactly the showcase statement. Its axioms
+   are audited like every other theorem, and a false control shows that an
+   altered statement is rejected.
+
+5. Hashes. The SHA-256 of every source file is written to the report, so anyone
    can confirm the checked files are the files in the repository.
 """
 from __future__ import annotations
@@ -97,14 +107,34 @@ def main() -> int:
         }
         names += found
     total = sum(v["theorems"] for v in report["modules"].values())
+
+    # Showcase: the statement file is plain.
+    show = CONFIG["showcase"]
+    stext = strip_comments((ROOT / show["statements"]).read_text())
+    imports = re.findall(r"^\s*import\s+(\S+)", stext, re.M)
+    if imports != ["Mathlib"]:
+        raise SystemExit(f"Showcase.lean must import only Mathlib, found {imports}")
+    banned = re.findall(r"\b(sorry|admit|axiom|theorem|lemma|notation|infix|infixl|infixr|prefix|"
+                        r"postfix|macro|macro_rules|syntax|elab|set_option|unsafe|opaque|"
+                        r"implemented_by|extern|instance|attribute|local|scoped)\b", stext)
+    if banned:
+        raise SystemExit(f"Showcase.lean contains {sorted(set(banned))}")
+    report["showcase"] = {
+        "statements": show["statements"],
+        "statements_sha256": hashlib.sha256((ROOT / show["statements"]).read_bytes()).hexdigest(),
+        "proofs": show["proofs"],
+        "proofs_sha256": hashlib.sha256((ROOT / show["proofs"]).read_bytes()).hexdigest(),
+    }
+    names_all = names + [show["main"]]
     if total != EXPECTED_THEOREMS:
         raise SystemExit(f"inventory changed: {total} theorems, expected {EXPECTED_THEOREMS}")
     report["theorems"] = total
 
     # Axiom audit.
     audit = OUT / "AxiomAudit.lean"
-    lines = [f"import {m}" for m in ROOT_IMPORTS] + [""]
-    lines += [f"#print axioms {name}" for name in names]
+    lines = [f"import {m}" for m in ROOT_IMPORTS + ["Showcase_WithProofs"]] + [""]
+    lines += [f"example : {show['statement']} := {show['main']}", ""]
+    lines += [f"#print axioms {name}" for name in names_all]
     audit.write_text("\n".join(lines) + "\n")
     proc = run(["lake", "env", "lean", str(audit.relative_to(ROOT))])
     log = proc.stdout + proc.stderr
@@ -113,7 +143,7 @@ def main() -> int:
         print(log)
         raise SystemExit("axiom audit file did not compile")
     axioms: dict[str, list[str]] = {}
-    for name in names:
+    for name in names_all:
         dep = re.search(re.escape(f"'{name}' depends on axioms: [") + r"([^\]]*)\]", log, re.S)
         none = f"'{name}' does not depend on any axioms" in log
         if dep:

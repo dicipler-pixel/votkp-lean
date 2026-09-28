@@ -1,6 +1,6 @@
 name = "votkp-lean"
 version = "1.0.0"
-defaultTargets = ["VOTKP"]
+defaultTargets = ["VOTKP", "Showcase"]
 
 [[require]]
 name = "mathlib"
@@ -10,3 +10,7 @@ rev = "v4.34.1"
 [[lean_lib]]
 name = "VOTKP"
 globs = ["VOTKP.+"]
+
+[[lean_lib]]
+name = "Showcase"
+roots = ["Showcase", "Showcase_WithProofs"]

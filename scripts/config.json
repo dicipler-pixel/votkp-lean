@@ -22,12 +22,22 @@
   }
  ],
  "expected_theorems": 57,
- "expected_false_controls": 6,
+ "expected_false_controls": 7,
  "root_imports": [
   "VOTKP.Smith",
   "VOTKP.Film",
   "VOTKP.Peel",
   "VOTKP.Knot",
   "VOTKP.Ordinal"
- ]
+ ],
+ "showcase": {
+  "statements": "Showcase.lean",
+  "proofs": "Showcase_WithProofs.lean",
+  "modules": [
+   "Showcase",
+   "Showcase_WithProofs"
+  ],
+  "main": "Showcase.main_theorem",
+  "statement": "Showcase.MainTheorem"
+ }
 }
