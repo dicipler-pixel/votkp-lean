@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use these Lean proofs, please cite them as below, together with the paper."
+title: "VOTKP: The Vector of Traits Kept under Peeling: Lean proofs"
+authors:
+  - family-names: "Beasley"
+    given-names: "Jeromie"
+version: 1.0.0
+date-released: 2026-09-28
+license:
+  - MIT
+  - CC-BY-4.0
+repository-code: "https://github.com/dicipler-pixel/votkp-lean"
+keywords:
+  - Lean 4
+  - Mathlib
+  - formal verification
+  - ionization energies
+  - Smith chart
+  - thin films
+  - knot invariants
+references:
+  - type: article
+    title: "VOTKP: The Vector of Traits Kept under Peeling"
+    authors:
+      - family-names: "Beasley"
+        given-names: "Jeromie"
+    doi: "10.5281/zenodo.23011140"
+    year: 2026
