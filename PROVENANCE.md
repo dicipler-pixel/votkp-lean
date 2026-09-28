@@ -27,3 +27,9 @@ Lean v4.34.1, Mathlib v4.34.1. First verified at commit `2342555` (GitHub Action
 **Version 1.2.** `VOTKP/Ordinal.lean` proves negative control 41 of version 1.2 (§18), restored from
 the programme's version 0.1 control list with an explicit witness. The witness was checked by
 evaluation before it was written.
+
+**Showcase.** `Showcase.lean` and `Showcase_WithProofs.lean` separate the statements a reader
+must trust from the proofs, after the pattern of Gómez-Serrano, Liehr and Taylor's Lean
+formalization of their counterexamples to Grad's conjecture
+([lukasliehr/Grad-Conjecture](https://github.com/lukasliehr/Grad-Conjecture)). Verified at
+commit `b522f2a` (GitHub Actions run 36447512334).

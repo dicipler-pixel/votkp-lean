@@ -35,6 +35,20 @@ Knots*, version 1.1, 25 September 2026
 
 What is not proved is listed in [`LIMITATIONS.md`](LIMITATIONS.md).
 
+## Start here: the showcase
+
+[`Showcase.lean`](Showcase.lean) is the one file a reader has to trust. It imports only Mathlib,
+defines every notion it uses, contains no proofs, and states twelve headline results as one
+`MainTheorem`: the Smith identity, peel steps adding like velocities, order dropping out of the
+composite, the shell wall, the film echo identity and its decision circle, one radius not
+deciding, the telescoping stack, the cumulant witness, the reduced-record bound, the unit-circle
+ratio, and control 41.
+
+[`Showcase_WithProofs.lean`](Showcase_WithProofs.lean) proves `MainTheorem` from the library.
+Lean accepts that proof only if each library theorem's statement is the showcase statement, so
+the 691 lines of the library cannot be proving something weaker than the one page that states
+them.
+
 ## How it is checked
 
 Every push runs [the proof check](.github/workflows/build.yml) on GitHub:
@@ -43,11 +57,15 @@ Every push runs [the proof check](.github/workflows/build.yml) on GitHub:
 2. **Independent replay**: every module is re-checked by Lean's separate kernel checker.
 3. **Axiom audit**: every named theorem depends only on `propext`, `Classical.choice` and
    `Quot.sound`. No `sorry`, no project axioms, no `native_decide`.
-4. **False controls**: six deliberately wrong claims must fail to compile, for a mathematical
+4. **Showcase**: `Showcase.lean` imports only Mathlib and holds no proofs, axioms, `sorry`,
+   notation, macros or options; `example : Showcase.MainTheorem := Showcase.main_theorem`
+   compiles, so the proved theorem carries exactly the showcase statement.
+5. **False controls**: seven deliberately wrong claims must fail to compile, for a mathematical
    reason: the first shell wall reflecting `1/2` (it is `3/5`); the ladders `1, 2, 6` and
    `1, 3, 6` having the same first step; the echo `x = −1/5` raising the reflectance; the two
    channel sets sharing a third cumulant; the shared record `T(0)` fixing the later
-   transmission; and zero entropy at delay 2 excluding the transposed ladder.
+   transmission; zero entropy at delay 2 excluding the transposed ladder; and the showcase's shell
+   wall altered from `2n − 1` to `2n + 1`, which the proved main theorem cannot stand in for.
 
 ```bash
 lake exe cache get
