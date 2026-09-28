@@ -85,7 +85,7 @@ theorem form_tomography [DecidableEq n] (G : Matrix n n ℝ) (hG : Gᵀ = G) (j 
 
 /-- **5.3.** If `(z − A)x − By = f` and `−Cx + (z − D)y = 0` with `M(z − D) = 1`, then the
 retained equation is `(z − A − BMC)x = f`: the hidden layer survives as the self-energy `BMC`. -/
-theorem schur_memory {m k : Type*} [Fintype m] [Fintype k] (A : Matrix m m ℝ) (B : Matrix m k ℝ)
+theorem schur_memory {m k : Type*} [Fintype m] [Fintype k] [DecidableEq k] (A : Matrix m m ℝ) (B : Matrix m k ℝ)
     (C : Matrix k m ℝ) (Dz M : Matrix k k ℝ) (hM : M * Dz = 1) (Az : Matrix m m ℝ) (x f : m → ℝ)
     (y : k → ℝ) (h1 : Az *ᵥ x - B *ᵥ y = f) (h2 : -(C *ᵥ x) + Dz *ᵥ y = 0) :
     (Az - B * M * C) *ᵥ x = f := by
@@ -124,11 +124,22 @@ theorem coeff_neg_between (d y1 y2 : ℝ) (hd : 0 < d) (h1 : y1 < d ^ 2) (h2 : d
 /-! ## 5.7 Phase reference -/
 
 open Complex in
-/-- **5.7.** Four intensity readings against a real reference `a ≠ 0` recover `z`. -/
-theorem phase_reference (z : ℂ) (a : ℝ) (ha : a ≠ 0) :
-    z = ((normSq (z + a) - normSq (z - a)) / (4 * a) : ℝ) +
-      ((normSq (z + a * I) - normSq (z - a * I)) / (4 * a) : ℝ) * I := by
-  apply Complex.ext <;> simp [normSq_apply] <;> field_simp <;> ring
+/-- **5.7, real part.** `Re z = (|z + a|² − |z − a|²)/(4a)` for a real reference `a ≠ 0`. -/
+theorem phase_reference_re (z : ℂ) (a : ℝ) (ha : a ≠ 0) :
+    z.re = (normSq (z + a) - normSq (z - a)) / (4 * a) := by
+  simp only [normSq_apply, add_re, add_im, sub_re, sub_im, ofReal_re, ofReal_im]
+  field_simp
+  ring
+
+open Complex in
+/-- **5.7, imaginary part.** `Im z = (|z + ia|² − |z − ia|²)/(4a)`, so the four readings
+`I₀^± = |z ± a|²` and `I₉₀^± = |z ± ia|²` recover `z`. -/
+theorem phase_reference_im (z : ℂ) (a : ℝ) (ha : a ≠ 0) :
+    z.im = (normSq (z + a * I) - normSq (z - a * I)) / (4 * a) := by
+  simp only [normSq_apply, add_re, add_im, sub_re, sub_im, mul_re, mul_im, ofReal_re, ofReal_im,
+    I_re, I_im]
+  field_simp
+  ring
 
 /-- **5.7, the error bound.** If each of the four readings is off by at most `ε`, the recovered
 value is off by `e` with `|e|² ≤ ε²/(2a²)`, i.e. `|e| ≤ ε/(√2 a)`. -/
@@ -142,7 +153,7 @@ theorem phase_error (a ε d1 d2 d3 d4 : ℝ) (ha : 0 < a) (h1 : |d1| ≤ ε) (h2
   have s1 : (d1 - d2) ^ 2 ≤ (2 * ε) ^ 2 := sq_le_sq' (by linarith) (by linarith)
   have s2 : (d3 - d4) ^ 2 ≤ (2 * ε) ^ 2 := sq_le_sq' (by linarith) (by linarith)
   have ha2 : (0 : ℝ) ≤ 2 * a ^ 2 := by positivity
-  rw [div_pow, div_pow, div_add_div_same, div_le_div_iff₀ (by positivity) (by positivity)]
+  rw [div_pow, div_pow, ← add_div, div_le_div_iff₀ (by positivity) (by positivity)]
   nlinarith [mul_le_mul_of_nonneg_right (add_le_add s1 s2) ha2]
 
 /-! ## 5.8 Cumulants -/
@@ -185,7 +196,7 @@ theorem transmission_closed (s x : ℝ) (hs : s ^ 2 = 1) (hx : x - s ≠ 0) :
   unfold T
   rw [hden]
   field_simp
-  ring
+  try ring
 
 /-- **5.9, the shared records.** Both signs give `T(0) = T(√2) = 1/2`. -/
 theorem shared_records :
@@ -217,7 +228,9 @@ theorem later_outcomes :
 
 /-- **5.10.** `Σ_λ(0) = −c` for every `λ ≠ 0`. -/
 theorem snapshot_value (c l : ℝ) (hl : l ≠ 0) : c * l / (0 - l) = -c := by
-  field_simp
+  have : (0 : ℝ) - l ≠ 0 := by simpa using hl
+  rw [div_eq_iff this]
+  ring
 
 /-- **5.10.** The slope at `0` is `−c/λ`, which depends on `λ`. -/
 theorem snapshot_slope (c l : ℝ) (hl : l ≠ 0) :

@@ -17,7 +17,7 @@
    "path": "VOTKP/Knot.lean"
   }
  ],
- "expected_theorems": 51,
+ "expected_theorems": 52,
  "expected_false_controls": 5,
  "root_imports": [
   "VOTKP.Smith",
