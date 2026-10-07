@@ -12,7 +12,7 @@ VOTKP v1.1, Section 5: finite peel theorems, and the reduced-product associator 
   at most `ε` give `|error|² ≤ ε²/(2a²)`, i.e. `|error| ≤ ε/(√2 a)`.
 * 5.8 Cumulants: `{1/5, 1/2, 4/5}` and `{3/10, (6 ± √6)/10}` share `c₁ = 3/2` and `c₂ = 57/100`
   but have `c₃ = 0` and `3/50`.
-* 5.9 The reduced-record bound: `T_s(x) = (x − s)²/(x⁴ − 2sx³ + 2)` equals
+* 5.9 The reduced-record bound, its witness: `T_s(x) = (x − s)²/(x⁴ − 2sx³ + 2)` equals
   `1/(1 + (x − Σ_s)²)` with `Σ_s = 1/(x − s)`; both signs give `T(0) = T(√2) = 1/2`; at `x = 1`
   they give `0` and `4/5`; at `x = 1/10` they differ by `79,600,000/400,039,601`.
 * 5.10 One-energy snapshots: `Σ_λ(E) = cλ/(E − λ)` has `Σ_λ(0) = −c` for every `λ` but
@@ -181,12 +181,12 @@ theorem cumulant_witness :
   · linear_combination (-2 / 100 : ℝ) * hr
   · linear_combination (12 / 1000 : ℝ) * hr
 
-/-! ## 5.9 The reduced-record impossibility bound -/
+/-! ## 5.9 The reduced-record impossibility bound: the witness -/
 
 /-- The transmission through the first site when the second is hidden. -/
 noncomputable def T (s x : ℝ) : ℝ := (x - s) ^ 2 / (x ^ 4 - 2 * s * x ^ 3 + 2)
 
-/-- **5.9, the closed form.** With `s² = 1` and `x ≠ s`, eliminating the hidden site gives
+/-- **5.9, the closed form.** With `s² = 1` and `x ≠ s`, the transmission has the self-energy form
 `T_s(x) = 1/(1 + (x − Σ_s)²)` with `Σ_s = 1/(x − s)`. -/
 theorem transmission_closed (s x : ℝ) (hs : s ^ 2 = 1) (hx : x - s ≠ 0) :
     1 / (1 + (x - 1 / (x - s)) ^ 2) = T s x := by

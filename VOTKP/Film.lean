@@ -83,9 +83,10 @@ theorem circle_identity (A : ℝ) (hA : A ≠ 0) (C x : ℂ) :
   field_simp
   ring
 
-/-- **Theorem 6.2, the criterion.** With `A > 0`, the film reflects more than its bulk
-(`A|x|² + 2 Re(Cx) > 0`) exactly when the echo lies outside the circle `|x − x_c| = |x_c|`,
-which passes through the origin. -/
+/-- **Theorem 6.2, the criterion.** For `A > 0`, `A|x|² + 2 Re(Cx) > 0` exactly when `x` lies
+outside the circle `|x − x_c| = |x_c|`, which passes through the origin. With `A = 1 − |a|⁴` and
+`C = ā(1 − a²)`, `echo_circle` makes this the condition for the film to reflect more than its
+bulk; that combined statement is not proved here. -/
 theorem circle_criterion (A : ℝ) (hA : 0 < A) (C x : ℂ) :
     0 < A * normSq x + 2 * (C * x).re ↔ normSq (centre A C) < normSq (x - centre A C) := by
   rw [← circle_identity A hA.ne' C x]

@@ -60,8 +60,10 @@ abbrev OrderDropsOut : Prop :=
     oplus ((3 - 1) / (3 + 1)) ((2 - 1) / (2 + 1)) = (6 - 1) / (6 + 1) ∧
     ((2 - 1) / (2 + 1) : ℝ) ≠ (3 - 1) / (3 + 1)
 
-/-- **Theorem 8.2, the shell wall.** At a shell wall the reflection is `(2n − 1)/(n² + (n − 1)²)`,
-the odd leg over the hypotenuse of a Pythagorean triple. -/
+/-- **Theorem 8.2, the shell wall.** At a shell wall the shell part of the step, the Smith
+reflection of the ratio `(n/(n − 1))²`, is `(2n − 1)/(n² + (n − 1)²)`, the odd leg over the
+hypotenuse of a Pythagorean triple. It is not the measured reflection of the step, which also
+carries the screening part. -/
 abbrev ShellWall : Prop :=
   (∀ n : ℝ, 1 < n →
       ((n / (n - 1)) ^ 2 - 1) / ((n / (n - 1)) ^ 2 + 1) = (2 * n - 1) / (n ^ 2 + (n - 1) ^ 2)) ∧
@@ -75,8 +77,11 @@ abbrev EchoIdentity : Prop :=
       ((1 - Complex.normSq a ^ 2) * Complex.normSq x + 2 * ((starRingEnd ℂ) a * (1 - a * a) * x).re) /
         Complex.normSq (1 + a * x)
 
-/-- **Theorem 6.2, the criterion.** With `A > 0`, the film reflects more than its bulk exactly
-when the echo lies outside one circle, and that circle passes through the origin. -/
+/-- **Theorem 6.2, the criterion.** For any `A > 0` and `C`, `A|x|² + 2 Re(Cx) > 0` exactly when
+`x` lies outside the circle `|x − x_c| = |x_c|`, and that circle passes through the origin. With
+`A = 1 − |a|⁴` and `C = ā(1 − a²)` (so `A > 0` when `|a| < 1`), `EchoIdentity` makes this the
+condition for the film to reflect more than its bulk; that combined statement is not stated
+here. -/
 abbrev EchoCircle : Prop :=
   (∀ A : ℝ, 0 < A → ∀ C x : ℂ,
       0 < A * Complex.normSq x + 2 * (C * x).re ↔
