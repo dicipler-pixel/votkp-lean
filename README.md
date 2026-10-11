@@ -6,7 +6,7 @@
 
 [![Lean proof check](https://github.com/dicipler-pixel/votkp-lean/actions/workflows/build.yml/badge.svg)](https://github.com/dicipler-pixel/votkp-lean/actions/workflows/build.yml)
 ![Lean](https://img.shields.io/badge/Lean-v4.34.1-blue)
-![Theorems](https://img.shields.io/badge/theorems-57-2EA043)
+![Theorems](https://img.shields.io/badge/theorems-74-2EA043)
 ![sorry](https://img.shields.io/badge/sorry-0-2EA043)
 [![Paper DOI](https://img.shields.io/badge/paper-10.5281%2Fzenodo.23011140-blue)](https://doi.org/10.5281/zenodo.23011140)
 ![Code: MIT](https://img.shields.io/badge/code-MIT-lightgrey)
@@ -31,7 +31,8 @@ Knots*, version 1.1, 25 September 2026
 | [`VOTKP/Peel.lean`](VOTKP/Peel.lean) | 18 | §5, §15.2 | Positive-channel peel (form, order, kernels); form tomography; Schur boundary memory; the four-reading coefficient and its sign; phase-reference recovery and its error bound; the cumulant witness (`c₃ = 0` against `3/50`); the transmission closed form, shared records `T(0) = T(√2) = 1/2`, later outcomes `0` against `4/5` and the gap `79,600,000/400,039,601`; one-energy snapshots; the reduced-product associator |
 | [`VOTKP/Knot.lean`](VOTKP/Knot.lean) | 1 | Appendix A.12 | `(1 − ω)/(1 − ω̄) = −ω` on the unit circle, for `ω ≠ 1` |
 | [`VOTKP/Ordinal.lean`](VOTKP/Ordinal.lean) | 5 | §18, control 41 (v1.2) | Zero permutation entropy at delay 2 holds for the ladder `1,…,6` and for the same ladder with one transposition, so it does not identify the defect; delay 1 does |
-| | **57** | | |
+| [`VOTKP/Energy.lean`](VOTKP/Energy.lean) | 17 | New §21 | Finite binding/removal ledger, ground-energy differences, telescoping, reference shifts, anchored peel inversion and negative controls; see [section and visual](docs/energy-state-atlas.md) |
+| | **74** | | |
 
 What is not proved is listed in [`LIMITATIONS.md`](LIMITATIONS.md).
 
@@ -80,3 +81,9 @@ Copyright (c) 2026 Jeromie Beasley. Code and proofs: [MIT](LICENSE). Written tex
 [CC BY 4.0](LICENSE-CC-BY-4.0.md). See [`LICENSING.md`](LICENSING.md). Citation metadata is in
 [`CITATION.cff`](CITATION.cff); where the files came from is in [`PROVENANCE.md`](PROVENANCE.md);
 how AI tools were used is stated in [`AI_USE.md`](AI_USE.md).
+
+## Energy and the element atlas — 11 October 2026
+
+[New section §21](docs/energy-state-atlas.md) applies the energy ledger to all 118 element slots. [Archived inputs](data/element_thresholds_20261011.json.gz) preserve evidence grades and references; [exact arithmetic controls](scripts/verify_energy_data.py) cover 5,847 thresholds, 103 complete ladders and 5,714 peels. This adds finite identities, not new atomic response or decay laws.
+
+![Electronic binding remaining](docs/assets/element-energy-landscape.png)

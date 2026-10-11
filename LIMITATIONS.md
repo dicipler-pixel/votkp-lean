@@ -37,3 +37,7 @@ statements written, under exactly the hypotheses written.
 **Stated with explicit hypotheses.** `⊕`-associativity assumes the two inner denominators are
 nonzero. The film identities assume `1 + Γx ≠ 0`, and the echo series `‖Γx‖ < 1`. The
 reduced-product associator holds for any additive map `P`, not only a projector.
+
+## Energy-ledger extension
+
+VOTKP/Energy.lean proves finite real-arithmetic identities conditional on supplied thresholds. Data completeness and arithmetic checks do not turn mixed evaluated/semi-empirical/theoretical inputs into wholly experimental data. Wavefunctions, excitation strengths, kinetics, isotope-resolved masses and feedback dynamics are not reconstructed by the threshold ledger. Section 21 separates these proposed extensions from the proved ledger.
