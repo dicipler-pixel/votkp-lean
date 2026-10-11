@@ -273,7 +273,7 @@ Input SHA-256: b792eb46d426d60ef6944139e2103734f8b52dca428a346549c3318262787d56.
 
 ## Lean proof correspondence
 
-The new module VOTKP/Energy.lean contains 17 theorem statements with proofs. Local/CI Lean certification is pending until the proof check completes; the arithmetic data controls have passed.
+The new module VOTKP/Energy.lean contains 17 theorem statements with proofs. Exact-commit verification results are recorded in [public PR #1](https://github.com/dicipler-pixel/votkp-lean/pull/1) and its linked Actions checks. The workflow compiles every configured module, independently replays it with leanchecker, audits theorem axioms and rejects nine false controls. Exact rational controls on the archived energy data have passed; they verify arithmetic and coverage, not the physical accuracy of the input thresholds.
 
 | Result | Lean declaration |
 |---|---|
