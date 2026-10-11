@@ -33,3 +33,7 @@ must trust from the proofs, after the pattern of Gómez-Serrano, Liehr and Taylo
 formalization of their counterexamples to Grad's conjecture
 ([lukasliehr/Grad-Conjecture](https://github.com/lukasliehr/Grad-Conjecture)). Verified at
 commit `b522f2a` (GitHub Actions run 36447512334).
+
+## Energy extension (11 October 2026)
+
+The archived threshold input is a public-data-only extraction from the VOTKP v2.3 element atlas: element identity, charge, energy, uncertainty, E/S/T label and bibliographic reference. It excludes private cross-paper notes. The parent archive hash is preserved inside the compressed JSON. New Lean identities, exact rational controls and the 5:2 visual accompany section 21. Input values were not refreshed against live NIST in this pass.

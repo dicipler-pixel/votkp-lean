@@ -19,16 +19,21 @@
   {
    "module": "VOTKP.Ordinal",
    "path": "VOTKP/Ordinal.lean"
+  },
+  {
+   "module": "VOTKP.Energy",
+   "path": "VOTKP/Energy.lean"
   }
  ],
- "expected_theorems": 57,
- "expected_false_controls": 7,
+ "expected_theorems": 74,
+ "expected_false_controls": 9,
  "root_imports": [
   "VOTKP.Smith",
   "VOTKP.Film",
   "VOTKP.Peel",
   "VOTKP.Knot",
-  "VOTKP.Ordinal"
+  "VOTKP.Ordinal",
+  "VOTKP.Energy"
  ],
  "showcase": {
   "statements": "Showcase.lean",
