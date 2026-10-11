@@ -56,6 +56,7 @@ def analyze():
                     j += 1
             if q + 1 in thresholds:
                 nxt = thresholds[q + 1]
+                assert nxt > val, "archived ratio not on positive Smith radius"
                 gamma = (nxt - val) / (nxt + val)
                 assert val * (1 + gamma) / (1 - gamma) == nxt
                 counts["peel_inverse_checks"] += 1
@@ -124,6 +125,46 @@ def figure(states, cover):
     plt.close(fig)
 
 
+def peel_figure():
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    source = json.loads(gzip.decompress(SOURCE.read_bytes()))
+    points = []
+    for r in source["records"]:
+        values = {t["q"]: t["IE_eV"] for t in r["thresholds"]}
+        for q, a in values.items():
+            if q + 1 in values:
+                b = values[q + 1]
+                points.append((r["Z"], r["Z"] - q, (b - a) / (b + a)))
+    fig, ax = plt.subplots(figsize=(15, 6), dpi=180)
+    fig.patch.set_facecolor("#050914")
+    ax.set_facecolor("#050914")
+    x, y, g = zip(*points)
+    im = ax.scatter(x, y, c=g, cmap="magma", vmin=0, vmax=1,
+                    marker="s", s=11, linewidths=0)
+    ax.plot([1, 118], [1, 118], lw=.7, color="#9db8d8", alpha=.4)
+    ax.set(xlim=(0, 120), ylim=(0, 122))
+    ax.set_xlabel("Proton number Z", color="#dce9ff", labelpad=8)
+    ax.set_ylabel("Electrons before the first removal Z − q", color="#dce9ff", labelpad=8)
+    ax.set_title("VOTKP peel shape aligned by electron count",
+                 color="#f5f7ff", fontsize=16, loc="left", pad=16)
+    ax.tick_params(colors="#a9bbd1")
+    for spine in ax.spines.values():
+        spine.set_color("#26364e")
+    ax.grid(alpha=.12, color="#9db8d8", linewidth=.5)
+    cb = fig.colorbar(im, ax=ax, pad=.025, fraction=.035)
+    cb.set_label("Peel Γq = (Iq+1 − Iq)/(Iq+1 + Iq)", color="#dce9ff")
+    cb.ax.tick_params(colors="#a9bbd1")
+    cb.outline.set_edgecolor("#26364e")
+    fig.text(.08, .025,
+             "5,714 archived adjacent pairs • E/S/T inputs • missing pairs left blank • aligned comparisons, not trajectories",
+             color="#a9bbd1", fontsize=9)
+    fig.subplots_adjust(left=.08, right=.89, bottom=.15, top=.88)
+    fig.savefig(ROOT / "docs/assets/element-peel-landscape.png", facecolor=fig.get_facecolor())
+    plt.close(fig)
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--figure", action="store_true")
@@ -138,6 +179,7 @@ def main():
     (out / "energy_data_report.json").write_text(json.dumps(result, indent=2) + "\n")
     if args.figure:
         figure(states, cover)
+        peel_figure()
     print(json.dumps({"status": "passed", "counts": dict(counts)}, indent=2))
 
 

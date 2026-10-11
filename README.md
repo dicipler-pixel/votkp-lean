@@ -61,18 +61,20 @@ Every push runs [the proof check](.github/workflows/build.yml) on GitHub:
 4. **Showcase**: `Showcase.lean` imports only Mathlib and holds no proofs, axioms, `sorry`,
    notation, macros or options; `example : Showcase.MainTheorem := Showcase.main_theorem`
    compiles, so the proved theorem carries exactly the showcase statement.
-5. **False controls**: seven deliberately wrong claims must fail to compile, for a mathematical
+5. **False controls**: nine deliberately wrong claims must fail to compile, for a mathematical
    reason: the shell part at the first shell wall (the Smith reflection of the ratio `4`) being
    `1/2` (it is `3/5`); the ladders `1, 2, 6` and `1, 3, 6` having the same first step; the echo
    `x = −1/5` raising the reflectance; the two channel sets sharing a third cumulant; the shared
    record `T(0)` fixing the later transmission; zero entropy at delay 2 excluding the transposed
    ladder; and the showcase's shell wall altered from `2n − 1` to `2n + 1`, which the proved main
-   theorem cannot stand in for.
+   theorem cannot stand in for; the ground-energy binding sign reversed; and equal first
+   thresholds asserted to imply equal total binding.
 
 ```bash
 lake exe cache get
 lake build
 python3 scripts/verify.py
+python3 scripts/verify_energy_data.py
 ```
 
 ## Licence, citation and AI use
@@ -87,3 +89,5 @@ how AI tools were used is stated in [`AI_USE.md`](AI_USE.md).
 [New section §21](docs/energy-state-atlas.md) applies the energy ledger to all 118 element slots. [Archived inputs](data/element_thresholds_20261011.json.gz) preserve evidence grades and references; [exact arithmetic controls](scripts/verify_energy_data.py) cover 5,847 thresholds, 103 complete ladders and 5,714 peels. This adds finite identities, not new atomic response or decay laws.
 
 ![Electronic binding remaining](docs/assets/element-energy-landscape.png)
+
+![Peel shape aligned by electron count](docs/assets/element-peel-landscape.png)

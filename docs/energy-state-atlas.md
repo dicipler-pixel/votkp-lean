@@ -299,3 +299,9 @@ Every colored point is a supported remaining-binding sum B_q, including theoreti
 ## Reproduction
 
 Run python3 scripts/verify_energy_data.py for exact rational controls on the archived decimal energies. Add --figure to regenerate the figure with matplotlib. Run lake build and python3 scripts/verify.py for Lean compilation, the axiom audit and false controls. The repository workflow independently replays the listed modules with leanchecker.
+
+### Peel-shape view
+
+![Peel shape aligned by electron count](assets/element-peel-landscape.png)
+
+This complementary view colors the 5,714 adjacent threshold comparisons by Gamma. Horizontal bands are visible in the archived isoelectronic alignment. Among well-populated rows, the n=3, n=11 and n=29 rows have median Gamma about 0.6086, 0.3869 and 0.2574 respectively. Their sample sizes are 101, 100 and 82. The n=3 row contains 93 T/T pairs and no E/E pairs; n=11 has only 6 E/E pairs; n=29 has 9. Across the whole image, only 156 pairs are E/E. These are features of a mixed evaluated/model archive, not an independent experimental discovery or a new shell law. Neither a horizontal family comparison nor a drawn column is a trajectory.

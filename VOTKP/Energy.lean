@@ -93,7 +93,7 @@ theorem peel_anchor_reconstruction (a b : ℝ) (ha : 0 < a) (hb : 0 < b) :
     have heq : (b - a) / (b + a) = 1 := by linarith
     have hba : b - a = b + a := (div_eq_one_iff_eq hab).mp heq
     linarith
-  field_simp
+  field_simp [ha.ne', hab, hden]
   <;> ring
 
 /-- A common positive rescaling preserves the peel but rescales binding. -/
