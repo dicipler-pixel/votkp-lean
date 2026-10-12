@@ -152,7 +152,9 @@ theorem closes_iff (L : V →ₗ[K] V) (R : V →ₗ[K] Y) :
       simpa using this
     have h2 : R.quotKerEquivRange.symm ⟨R v, LinearMap.mem_range_self R v⟩
         = (LinearMap.ker R).mkQ v := by
-      rw [LinearEquiv.symm_apply_eq, Submodule.mkQ_apply, LinearMap.quotKerEquivRange_apply_mk]
+      rw [LinearEquiv.symm_apply_eq, Submodule.mkQ_apply]
+      apply Subtype.ext
+      rw [LinearMap.quotKerEquivRange_apply_mk]
     rw [LinearMap.comp_apply, LinearMap.comp_apply, h1, h2, hg, Submodule.mkQ_apply,
       Submodule.liftQ_apply, LinearMap.comp_apply]
 

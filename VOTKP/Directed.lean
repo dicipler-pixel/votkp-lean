@@ -23,7 +23,7 @@ import VOTKP.Smith
 
 namespace VOTKP.Directed
 
-open Real VOTKP.Smith
+open Real VOTKP.Smith Matrix
 
 /-! ## 19.2 The directed coordinate and its inverse -/
 
@@ -99,6 +99,7 @@ lemma abs_split (x : ℝ) : |x| = max x 0 + max (-x) 0 := by
   · rw [abs_of_nonneg h, max_eq_left h, max_eq_right (by linarith : -x ≤ 0)]
     ring
   · rw [abs_of_nonpos h, max_eq_right h, max_eq_left (by linarith : 0 ≤ -x)]
+    ring
 
 lemma self_split (x : ℝ) : x = max x 0 - max (-x) 0 := by
   rcases le_total 0 x with h | h
