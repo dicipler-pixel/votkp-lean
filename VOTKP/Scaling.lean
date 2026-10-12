@@ -10,6 +10,11 @@ The kinetic operator is written with one mass per coordinate direction `b k` (th
 particle), `(Tψ)(x) = −Σₖ (ℏ²/2mₖ) ∂²_{bₖ}ψ(x)`. The theorem `scale_blindness` is the pointwise
 intertwining: if `Hψ = Eψ`, then `φ(x) = ψ(λx)` satisfies `H_λ φ = λE φ`. Any potential with
 `V(λx) = λ⁻¹V(x)` qualifies; `coulomb_homogeneous` shows every pair-Coulomb sum does.
+
+The dilation is unitary on `L²`: with `n = dim E` and an additive Haar measure,
+`(U_λ f)(x) = λ^{n/2} f(λx)` preserves every inner product `∫ conj f · g`
+(`dilation_inner`, from Mathlib's `integral_comp_smul_of_nonneg`), and `U_{1/λ}` inverts it
+(`dilation_inverse`).
 Developed with AI assistance.
 -/
 import Mathlib
@@ -96,5 +101,57 @@ theorem scale_blindness (hbar : ℝ) (m : ι → ℝ) (b : ι → E) (V : E → 
   rw [kinetic_scaling hbar m b ψ hψ l hl x, hVx]
   push_cast
   linear_combination (l : ℂ) * h
+
+/-! ## The dilation is unitary -/
+
+section Unitary
+
+open MeasureTheory Module ComplexConjugate
+
+variable [MeasurableSpace E] [BorelSpace E] [FiniteDimensional ℝ E]
+
+/-- `(U_λ f)(x) = λ^{n/2} f(λx)`, `n = dim E`. -/
+noncomputable def dilation (l : ℝ) (f : E → ℂ) (x : E) : ℂ :=
+  ((Real.sqrt (l ^ finrank ℝ E) : ℝ) : ℂ) * f (l • x)
+
+/-- **Theorem 15.4, unitarity.** For `λ > 0` the dilation preserves the `L²` inner product
+`∫ conj f · g` with respect to any additive Haar measure. -/
+theorem dilation_inner (μ : Measure E) [μ.IsAddHaarMeasure] (l : ℝ) (hl : 0 < l)
+    (f g : E → ℂ) :
+    ∫ x, conj (dilation l f x) * dilation l g x ∂μ = ∫ x, conj (f x) * g x ∂μ := by
+  have ha : (0 : ℝ) ≤ l ^ finrank ℝ E := pow_nonneg hl.le _
+  have ha0 : (l ^ finrank ℝ E : ℝ) ≠ 0 := pow_ne_zero _ hl.ne'
+  have hs : ((Real.sqrt (l ^ finrank ℝ E) : ℝ) : ℂ) * ((Real.sqrt (l ^ finrank ℝ E) : ℝ) : ℂ)
+      = ((l ^ finrank ℝ E : ℝ) : ℂ) := by
+    rw [← Complex.ofReal_mul, Real.mul_self_sqrt ha]
+  have key : ∀ x, conj (dilation l f x) * dilation l g x
+      = ((l ^ finrank ℝ E : ℝ) : ℂ) * (conj (f (l • x)) * g (l • x)) := by
+    intro x
+    simp only [dilation, map_mul, Complex.conj_ofReal]
+    rw [← hs]
+    ring
+  simp_rw [key]
+  have hc := Measure.integral_comp_smul_of_nonneg μ (fun y => conj (f y) * g y) l (hR := hl.le)
+  rw [integral_const_mul, show (∫ x, conj (f (l • x)) * g (l • x) ∂μ)
+      = (l ^ finrank ℝ E)⁻¹ • ∫ y, conj (f y) * g y ∂μ from hc]
+  rw [Complex.real_smul, ← mul_assoc, ← Complex.ofReal_mul, mul_inv_cancel₀ ha0,
+    Complex.ofReal_one, one_mul]
+
+/-- **Theorem 15.4, unitarity.** In particular the dilation preserves the `L²` norm. -/
+theorem dilation_norm_sq (μ : Measure E) [μ.IsAddHaarMeasure] (l : ℝ) (hl : 0 < l)
+    (f : E → ℂ) :
+    ∫ x, conj (dilation l f x) * dilation l f x ∂μ = ∫ x, conj (f x) * f x ∂μ :=
+  dilation_inner μ l hl f f
+
+/-- **Theorem 15.4, unitarity.** `U_{1/λ}` inverts `U_λ`, so the dilation is onto. -/
+theorem dilation_inverse (l : ℝ) (hl : 0 < l) (f : E → ℂ) (x : E) :
+    dilation l⁻¹ (dilation l f) x = f x := by
+  have ha : (0 : ℝ) ≤ l ^ finrank ℝ E := pow_nonneg hl.le _
+  have ha0 : (l ^ finrank ℝ E : ℝ) ≠ 0 := pow_ne_zero _ hl.ne'
+  simp only [dilation, smul_smul, mul_inv_cancel₀ hl.ne', one_smul]
+  rw [← mul_assoc, ← Complex.ofReal_mul, inv_pow, ← Real.sqrt_mul (inv_nonneg.2 ha),
+    inv_mul_cancel₀ ha0, Real.sqrt_one, Complex.ofReal_one, one_mul]
+
+end Unitary
 
 end VOTKP.Scaling

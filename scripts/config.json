@@ -51,10 +51,18 @@
   {
    "module": "VOTKP.Directed",
    "path": "VOTKP/Directed.lean"
+  },
+  {
+   "module": "VOTKP.Channels",
+   "path": "VOTKP/Channels.lean"
+  },
+  {
+   "module": "VOTKP.Witnesses",
+   "path": "VOTKP/Witnesses.lean"
   }
  ],
- "expected_theorems": 120,
- "expected_false_controls": 13,
+ "expected_theorems": 140,
+ "expected_false_controls": 15,
  "root_imports": [
   "VOTKP.Smith",
   "VOTKP.Film",
@@ -68,7 +76,9 @@
   "VOTKP.ThinFilm",
   "VOTKP.WallParity",
   "VOTKP.Scaling",
-  "VOTKP.Directed"
+  "VOTKP.Directed",
+  "VOTKP.Channels",
+  "VOTKP.Witnesses"
  ],
  "showcase": {
   "statements": "Showcase.lean",
