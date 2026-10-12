@@ -43,11 +43,15 @@ noncomputable def readoutOf (v : Fin 2 → ℂ) : ℝ := (normSq (v 0) - normSq 
 
 /-- **§20.5.2, the readout.** `⟨Z⟩_t = sin(2gt) sin φ`. -/
 theorem readout (g t φ : ℝ) : readoutOf (U g t *ᵥ psi φ) = Real.sin (2 * g * t) * Real.sin φ := by
+  have hpy := Real.sin_sq_add_cos_sq φ
   rw [show 2 * g * t = 2 * (g * t) by ring, Real.sin_two_mul]
-  simp [readoutOf, U, psi, mulVec, dotProduct, Fin.sum_univ_two, normSq_apply]
-  first
-    | linear_combination (Real.sin (g * t) ^ 2 - Real.cos (g * t) ^ 2) / 2 * Real.sin_sq_add_cos_sq φ
-    | nlinarith [Real.sin_sq_add_cos_sq φ, Real.sin_sq_add_cos_sq (g * t)]
+  simp only [readoutOf, U, psi]
+  generalize Real.cos (g * t) = c
+  generalize Real.sin (g * t) = s
+  generalize Real.cos φ = cf at hpy ⊢
+  generalize Real.sin φ = sf at hpy ⊢
+  simp [mulVec, dotProduct, Fin.sum_univ_two, normSq_apply]
+  linear_combination (s ^ 2 - c ^ 2) / 2 * hpy
 
 /-- **§20.5.2, the present summaries.** Every `ψ_φ` has squared norm `2`, and its normalized
 exchange expectation is `⟨ψ, Xψ⟩/2 = cos φ`, which vanishes for both `φ = ±π/2`. -/
@@ -55,12 +59,17 @@ theorem same_present (φ : ℝ) :
     normSq (psi φ 0) + normSq (psi φ 1) = 2 ∧
       star (psi φ) ⬝ᵥ (X *ᵥ psi φ) / 2 = (Real.cos φ : ℂ) ∧
       Real.cos (Real.pi / 2) = 0 ∧ Real.cos (-(Real.pi / 2)) = 0 := by
+  have hpy := Real.sin_sq_add_cos_sq φ
   refine ⟨?_, ?_, Real.cos_pi_div_two, by rw [Real.cos_neg, Real.cos_pi_div_two]⟩
-  · simp [psi, normSq_apply]
-    first
-      | linear_combination Real.sin_sq_add_cos_sq φ
-      | nlinarith [Real.sin_sq_add_cos_sq φ]
-  · apply Complex.ext <;> simp [psi, X, mulVec, dotProduct, Fin.sum_univ_two] <;> ring
+  · simp only [psi]
+    generalize Real.cos φ = cf at hpy ⊢
+    generalize Real.sin φ = sf at hpy ⊢
+    simp [normSq_apply]
+    linear_combination hpy
+  · simp only [psi, X]
+    generalize Real.cos φ = cf
+    generalize Real.sin φ = sf
+    apply Complex.ext <;> simp [mulVec, dotProduct, Fin.sum_univ_two] <;> ring
 
 /-- **§20.5.2, different futures.** The two preparations give opposite readouts `±sin(2gt)`;
 at `g = 0.7`, `t = 0.4` these are `±sin(0.56) ≈ ±0.531186`. -/
@@ -75,6 +84,9 @@ theorem opposite_futures (g t : ℝ) :
 /-- `U(t)` is unitary. -/
 theorem U_unitary (g t : ℝ) : U g t * (U g t)ᴴ = 1 := by
   have hpy := Real.sin_sq_add_cos_sq (g * t)
+  simp only [U]
+  generalize Real.cos (g * t) = c at hpy ⊢
+  generalize Real.sin (g * t) = s at hpy ⊢
   ext i j
   fin_cases i <;> fin_cases j <;>
     simp [U, Matrix.mul_apply, Fin.sum_univ_two, Complex.ext_iff, conjTranspose_apply] <;>

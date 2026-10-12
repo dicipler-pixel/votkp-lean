@@ -213,6 +213,7 @@ section Contour
 
 open Complex Metric Real
 
+open Classical in
 /-- **§20.3.3, contour selection.** For the channel sum `Σ(z) = Σₖ Wₖ/(z − eₖ)` and `f`
 holomorphic on the closed disk `|z − c| ≤ R` whose circle avoids every `eₖ`,
 `(2πi)⁻¹ ∮ f(z)Σ(z) dz` keeps exactly the channels inside the circle, each weighted by
@@ -231,8 +232,8 @@ theorem channel_contour {E : Type*} [NormedAddCommGroup E] [NormedSpace ℂ E] [
     refine (continuousOn_id.sub continuousOn_const).inv₀ ?_
     intro z hz h
     apply he k hk
-    rw [sub_eq_zero] at h
-    rw [← h]
+    have hz' : z = e k := by simpa [sub_eq_zero] using h
+    rw [← hz']
     exact hz
   rw [circleIntegral.integral_fun_sum hint, Finset.smul_sum]
   refine Finset.sum_congr rfl fun k hk => ?_
@@ -259,13 +260,14 @@ theorem channel_contour {E : Type*} [NormedAddCommGroup E] [NormedSpace ℂ E] [
     have hzero : (∮ z in C(c, R), f z * (z - e k)⁻¹) = 0 := by
       refine circleIntegral_eq_zero_of_differentiable_on_off_countable hR.le Set.countable_empty
         ?_ ?_
-      · exact hf.continuousOn.mul ((continuousOn_id.sub continuousOn_const).inv₀ hne)
+      · exact hf.continuousOn.mul ((continuousOn_id.sub continuousOn_const).inv₀
+          fun z hz => by simpa using hne z hz)
       · intro z hz
         have hzb : z ∈ closedBall c R := ball_subset_closedBall hz.1
         have hfz : DifferentiableAt ℂ f z :=
           hf.differentiableAt (Filter.mem_of_superset (isOpen_ball.mem_nhds hz.1)
             ball_subset_closedBall)
-        exact hfz.mul ((differentiableAt_id.sub_const (e k)).inv (hne z hzb))
+        exact hfz.mul ((differentiableAt_id.sub_const (e k)).inv (by simpa using hne z hzb))
     rw [hzero, mul_zero]
 
 end Contour
@@ -292,7 +294,7 @@ theorem commutator_coupling (A : Matrix p p ℂ) (B : Matrix p q ℂ) (D : Matri
     ext (i | i) (j | j) <;> simp
   rw [hC, fromBlocks_multiply]
   simp only [Matrix.zero_mul, Matrix.mul_zero, zero_add, add_zero, Matrix.neg_mul,
-    Matrix.mul_neg]
+    Matrix.mul_neg, neg_zero]
   have htr : ∀ (X : Matrix p p ℂ) (Y : Matrix q q ℂ),
       trace (fromBlocks X 0 0 Y) = trace X + trace Y := by
     intro X Y
