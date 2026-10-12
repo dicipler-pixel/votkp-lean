@@ -202,8 +202,8 @@ lemma rot_orth (θ : ℝ) : (rot θ)ᵀ * rot θ = 1 := by
   fin_cases i <;> fin_cases j <;>
     simp [rot, Matrix.mul_apply, Fin.sum_univ_three] <;>
     first
-    | ring
     | linear_combination Real.cos_sq_add_sin_sq θ
+    | ring
 
 /-- **Proposition 19.3, the spectrum.** Every lift has the characteristic polynomial of `D(ρ)`:
 the same eigenvalues, gaps and gap coordinate, for every `b`. -/
@@ -228,8 +228,8 @@ theorem lift_ground (b ρ : ℝ) :
       fin_cases i <;>
         simp [rot, gvec, Matrix.mulVec, dotProduct, Fin.sum_univ_three] <;>
         first
-        | ring
         | linear_combination Real.cos_sq_add_sin_sq (b * ρ)
+        | ring
     have h2 : Dlad ρ *ᵥ ![1, 0, 0] = 0 := by
       ext i
       fin_cases i <;> simp [Dlad, Matrix.mulVec_diagonal]
