@@ -54,7 +54,7 @@
   }
  ],
  "expected_theorems": 120,
- "expected_false_controls": 9,
+ "expected_false_controls": 13,
  "root_imports": [
   "VOTKP.Smith",
   "VOTKP.Film",
