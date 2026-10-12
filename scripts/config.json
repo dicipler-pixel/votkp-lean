@@ -23,9 +23,37 @@
   {
    "module": "VOTKP.Energy",
    "path": "VOTKP/Energy.lean"
+  },
+  {
+   "module": "VOTKP.Observer",
+   "path": "VOTKP/Observer.lean"
+  },
+  {
+   "module": "VOTKP.Curvature",
+   "path": "VOTKP/Curvature.lean"
+  },
+  {
+   "module": "VOTKP.Memory",
+   "path": "VOTKP/Memory.lean"
+  },
+  {
+   "module": "VOTKP.ThinFilm",
+   "path": "VOTKP/ThinFilm.lean"
+  },
+  {
+   "module": "VOTKP.WallParity",
+   "path": "VOTKP/WallParity.lean"
+  },
+  {
+   "module": "VOTKP.Scaling",
+   "path": "VOTKP/Scaling.lean"
+  },
+  {
+   "module": "VOTKP.Directed",
+   "path": "VOTKP/Directed.lean"
   }
  ],
- "expected_theorems": 74,
+ "expected_theorems": 120,
  "expected_false_controls": 9,
  "root_imports": [
   "VOTKP.Smith",
@@ -33,7 +61,14 @@
   "VOTKP.Peel",
   "VOTKP.Knot",
   "VOTKP.Ordinal",
-  "VOTKP.Energy"
+  "VOTKP.Energy",
+  "VOTKP.Observer",
+  "VOTKP.Curvature",
+  "VOTKP.Memory",
+  "VOTKP.ThinFilm",
+  "VOTKP.WallParity",
+  "VOTKP.Scaling",
+  "VOTKP.Directed"
  ],
  "showcase": {
   "statements": "Showcase.lean",
