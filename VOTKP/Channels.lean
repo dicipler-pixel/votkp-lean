@@ -302,12 +302,19 @@ theorem commutator_coupling (A : Matrix p p ℂ) (B : Matrix p q ℂ) (D : Matri
   rw [htr, trace_neg, trace_neg, trace_mul_comm Bᴴ B]
   ring
 
+/-- The footprint of a two-channel coupling `B = (a, ib)`: `BB† = a² + b²`. -/
+lemma footprint_two (a b : ℝ) :
+    (!![(a : ℂ), (b : ℂ) * Complex.I] * (!![(a : ℂ), (b : ℂ) * Complex.I])ᴴ) 0 0
+      = ((a ^ 2 + b ^ 2 : ℝ) : ℂ) := by
+  refine Complex.ext ?_ ?_ <;> simp [Matrix.mul_apply, Fin.sum_univ_two] <;> ring
+
 /-- **§20.5.1, the example.** For `B = (0.7, 0.3i)` the footprint is `BB† = 0.58`. -/
 theorem footprint_example :
     (!![((7 / 10 : ℝ) : ℂ), ((3 / 10 : ℝ) : ℂ) * Complex.I]
       * (!![((7 / 10 : ℝ) : ℂ), ((3 / 10 : ℝ) : ℂ) * Complex.I])ᴴ) 0 0
       = ((58 / 100 : ℝ) : ℂ) := by
-  norm_num [Matrix.mul_apply, Fin.sum_univ_two, Complex.ext_iff]
+  rw [footprint_two]
+  norm_num
 
 end Footprint
 

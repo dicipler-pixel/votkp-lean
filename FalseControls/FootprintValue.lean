@@ -5,4 +5,5 @@ example :
     (!![((7 / 10 : ℝ) : ℂ), ((3 / 10 : ℝ) : ℂ) * Complex.I]
       * (!![((7 / 10 : ℝ) : ℂ), ((3 / 10 : ℝ) : ℂ) * Complex.I])ᴴ) 0 0
       = ((59 / 100 : ℝ) : ℂ) := by
-  norm_num [Matrix.mul_apply, Fin.sum_univ_two, Complex.ext_iff]
+  rw [VOTKP.Channels.footprint_two]
+  norm_num

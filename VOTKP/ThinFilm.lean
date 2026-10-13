@@ -163,7 +163,7 @@ lemma isBigO_sq_of_deriv_zero {g : ℂ → ℂ} (hg : AnalyticAt ℂ g 0) (h0 : 
     calc ‖deriv g w‖ ≤ C * ‖w‖ := h1'
       _ ≤ C * ‖z‖ := by gcongr
   have hmv := Convex.norm_image_sub_le_of_norm_deriv_le hdiff hbound (convex_closedBall 0 ‖z‖)
-    (Metric.mem_closedBall_self (norm_nonneg z)) (by simp)
+    (Metric.mem_closedBall_self (norm_nonneg z)) (show z ∈ Metric.closedBall (0 : ℂ) ‖z‖ by simp)
   rw [h0, sub_zero, sub_zero] at hmv
   calc ‖g z‖ ≤ C * ‖z‖ * ‖z‖ := hmv
     _ = C * ‖z ^ 2‖ := by rw [norm_pow]; ring
