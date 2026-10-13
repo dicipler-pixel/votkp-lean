@@ -1,4 +1,5 @@
 import VOTKP.Channels
+open Matrix
 -- Deliberately false: for B = (0.7, 0.3i) the coupling footprint BB† is 0.49 + 0.09 = 0.58,
 -- not 0.59.
 example :
