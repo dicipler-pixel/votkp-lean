@@ -306,7 +306,7 @@ theorem commutator_coupling (A : Matrix p p ℂ) (B : Matrix p q ℂ) (D : Matri
 lemma footprint_two (a b : ℝ) :
     (!![(a : ℂ), (b : ℂ) * Complex.I] * (!![(a : ℂ), (b : ℂ) * Complex.I])ᴴ) 0 0
       = ((a ^ 2 + b ^ 2 : ℝ) : ℂ) := by
-  refine Complex.ext ?_ ?_ <;> simp [Matrix.mul_apply, Fin.sum_univ_two] <;> ring
+  refine Complex.ext ?_ ?_ <;> simp [Matrix.mul_apply, Fin.sum_univ_two, pow_two] <;> ring
 
 /-- **§20.5.1, the example.** For `B = (0.7, 0.3i)` the footprint is `BB† = 0.58`. -/
 theorem footprint_example :

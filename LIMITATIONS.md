@@ -10,8 +10,8 @@ statements written, under exactly the hypotheses written.
   Jones, Khovanov, knot Floer, signature function), the A-polynomial volumes, the nuclear and
   particle rounds, and the test ledger of Appendix D. These are the paper's [Exact] results,
   computed by the scripts in its package; Lean checks none of them.
-- The matrix form of 5.6. The four-reading certificate is proved per channel: the coefficient
-  formula and its sign on each side of a pole.
+- 5.6 is proved per channel in `Peel` and in matrix form in `Channels` for real symmetric forms
+  `Kₘ`; complex Hermitian forms are not stated.
 - 6.2's "surviving matches" equivalences and the oblique-incidence statements.
 - The hyperbolic-disk reading of Corollary 15.2 is proved as the identity
   `(1 + Γ)/(1 − Γ) = z`; the Poincaré metric itself is not formalized.
@@ -50,17 +50,20 @@ VOTKP/Energy.lean proves finite real-arithmetic identities conditional on suppli
 - **5.5** states silence without inverses: at every `z` with `χ_D(z) ≠ 0`, every solution of
   `(zI − D)y = Ce` has `By = 0`. The sharpness example is checked over `ℤ` by `decide`.
 - **Theorem 6.3** is proved as first-order agreement: the exact characteristic-matrix
-  reflection and the shunt law have the same value and the same derivative at `d = 0`. The
-  `O(d²)` size of the remainder and the whole-`N²` sheet comparison are not formalized.
+  reflection and the shunt law have the same value and the same derivative at `d = 0`, and
+  their difference is `O(d²)` as the real thickness `d → 0`. The whole-`N²` sheet comparison is
+  not formalized.
 - **Proposition 11.1**: the determinant factorization and the parity statement are proved. The
   parity theorem takes as a hypothesis that `det H(t) = (t − t₀)^m g(t)` with `g` of one sign
   on the two sides; deriving that from the root multiplicity of the Alexander polynomial, and
   the exact `±2` jump at a simple root (which uses Rellich's analytic eigenvalue branches),
-  are not formalized.
+  are not formalized. Mathlib provides no analytic perturbation theory for eigenvalues (Rellich,
+  Kato), so the `±2` jump is not stated in Lean.
 - **Theorem 15.4** is proved as the pointwise intertwining `H_λ ψ(λ·) = λ(Hψ)(λ·)` for `C²`
   wavefunctions, with the kinetic operator written as second directional derivatives along a
-  chosen family of coordinate directions. Unitarity of the dilation on `L²` and operator domains
-  are not formalized.
+  chosen family of coordinate directions. The dilation `(U_λ f)(x) = λ^{n/2} f(λx)` is proved to
+  preserve every `∫ conj f · g` against an additive Haar measure and to be inverted by
+  `U_{1/λ}`; operator domains are not formalized.
 - **Proposition 19.3** uses the explicit three-level family of §19.4. The ground state is
   shown by an explicit unit vector annihilated by `H_b`, and the metric
   `½ Tr((∂P)²) = b²` is computed entrywise.
@@ -68,3 +71,11 @@ VOTKP/Energy.lean proves finite real-arithmetic identities conditional on suppli
   hypothesis (it is IQGT's spectral weighting; the finite-sum step is `spectral_weighting`).
   The slow-driving expansion, the bath model and the RP-WEIGHT/RP-POLAR numerics are not
   formalized.
+- **§20.3** is proved for finite matrices: the retained-resolvent identity needs `z − D` and
+  the Schur complement invertible, and contour selection takes a finite channel sum
+  `Σₖ Wₖ/(z − eₖ)` and a circle avoiding every `eₖ`; continua are not formalized.
+- **§20.5** is proved on the one-excitation basis `{|10⟩, |01⟩}` with the state written as
+  `(1, e^{iφ})` of squared norm `2`; the equality of the two local reductions `I/2` is computed in
+  the paper, not in Lean. The signed offset is stated through the determinant ratio; entropies
+  are not formalized.
+- **§8.7's in-shell stagger** is a computation on the archived ladders, not a Lean statement.
