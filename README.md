@@ -6,7 +6,7 @@
 
 [![Lean proof check](https://github.com/dicipler-pixel/votkp-lean/actions/workflows/build.yml/badge.svg)](https://github.com/dicipler-pixel/votkp-lean/actions/workflows/build.yml)
 ![Lean](https://img.shields.io/badge/Lean-v4.34.1-blue)
-![Theorems](https://img.shields.io/badge/theorems-57-2EA043)
+![Theorems](https://img.shields.io/badge/theorems-140-2EA043)
 ![sorry](https://img.shields.io/badge/sorry-0-2EA043)
 [![Paper DOI](https://img.shields.io/badge/paper-10.5281%2Fzenodo.23011140-blue)](https://doi.org/10.5281/zenodo.23011140)
 ![Code: MIT](https://img.shields.io/badge/code-MIT-lightgrey)
@@ -31,7 +31,19 @@ Knots*, version 1.1, 25 September 2026
 | [`VOTKP/Peel.lean`](VOTKP/Peel.lean) | 18 | §5, §15.2 | Positive-channel peel (form, order, kernels); form tomography; Schur boundary memory; the four-reading coefficient and its sign; phase-reference recovery and its error bound; the cumulant witness (`c₃ = 0` against `3/50`); the transmission closed form, shared records `T(0) = T(√2) = 1/2`, later outcomes `0` against `4/5` and the gap `79,600,000/400,039,601`; one-energy snapshots; the reduced-product associator |
 | [`VOTKP/Knot.lean`](VOTKP/Knot.lean) | 1 | Appendix A.12 | `(1 − ω)/(1 − ω̄) = −ω` on the unit circle, for `ω ≠ 1` |
 | [`VOTKP/Ordinal.lean`](VOTKP/Ordinal.lean) | 5 | §18, control 41 (v1.2) | Zero permutation entropy at delay 2 holds for the ladder `1,…,6` and for the same ladder with one transposition, so it does not identify the defect; delay 1 does |
-| | **57** | | |
+| [`VOTKP/Energy.lean`](VOTKP/Energy.lean) | 17 | New §21 | Finite binding/removal ledger, ground-energy differences, telescoping, reference shifts, anchored peel inversion and negative controls; see [section and visual](docs/energy-state-atlas.md) |
+| [`VOTKP/Observer.lean`](VOTKP/Observer.lean) | 7 | Theorem 3.1 | The finite linear predictive quotient: identical futures iff the difference lies in `N = ker 𝒪`; `N` is `L`-invariant; `dim V/N = rank 𝒪`; every output-preserving autonomous summary forgets only directions in `N`, and `V/N` is one; the present observation closes iff `ker R` is `L`-invariant; the Cayley–Hamilton horizon |
+| [`VOTKP/Curvature.lean`](VOTKP/Curvature.lean) | 5 | Theorem 4.1 | The spectrum `δ ∓ E(a)` of `H_M(a)`; `U(a) = U(0) + μ_eff a²/2 + O(a⁴)` with the remainder bounded explicitly; the Bloch slope `c/δ`, `g_aa(0) = c²/4δ²`, `χ = 2c²/δ = 8δ g_aa(0)`; the critical occupation `r_c` |
+| [`VOTKP/Memory.lean`](VOTKP/Memory.lean) | 4 | 5.4, 5.5 | Variation of constants: a peeled layer leaves the kernel `B e^{(t−u)D} C` and forcing `B e^{tD} y(0)`; the transfer `B(zI − D)⁻¹C` vanishes at every `z` off the spectrum iff `B Dʲ C = 0` for `j < q`; the five-site shift shows the bound is sharp |
+| [`VOTKP/ThinFilm.lean`](VOTKP/ThinFilm.lean) | 4 | Theorem 6.3 | From the characteristic matrix, the exact film reflection and the shunt law `Y = n_b − ikd(N² − n_b²)` agree at `d = 0` with equal derivative in the real thickness, and differ by `O(d²)` (both are analytic in `d`; mean value theorem); at the substrate face the law reads `Y = n_b − ikd(N² − n₀²)` |
+| [`VOTKP/WallParity.lean`](VOTKP/WallParity.lean) | 3 | Proposition 11.1 | `det((1 − ω)V + (1 − ω̄)Vᵀ) = (1 − ω̄)^{2g} det(V − ωVᵀ)` on the unit circle; the sign of a nonsingular Hermitian determinant is `(−1)^{#negative eigenvalues}`; across a zero of order `m` of `det H`, half the signature change is `≡ m (mod 2)` |
+| [`VOTKP/Scaling.lean`](VOTKP/Scaling.lean) | 6 | Theorem 15.4 | Second derivatives scale by `λ²` under dilation; pair-Coulomb sums are homogeneous of degree `−1`; if `Hψ = Eψ` then `ψ(λ·)` satisfies `H_λ φ = λE φ` with every mass multiplied by `λ`; the dilation `(U_λ f)(x) = λ^{n/2} f(λx)` preserves every `L²` inner product for an additive Haar measure and is inverted by `U_{1/λ}`, so it is unitary |
+| [`VOTKP/Directed.lean`](VOTKP/Directed.lean) | 22 | §19 | Prop. 19.1: the directed coordinate in `(−1, 1)` without ordering, reversal, `⊕` as a group law on `(−1, 1)`, the telescoping composite, when a step shrinks the distance; Prop. 19.2: `L_rec − D_end = 4 min(R₊, R₋)` and its equality case; Prop. 19.3: lifts `U_b D U_bᵀ` share the spectrum and gap coordinate `tanh ρ` while the ground projector moves at metric `b²`; Prop. 19.4: `𝓛 ≥ a·TV`, Cauchy–Schwarz, `W ≥ w* 𝓛²/T ≥ w* a² L_rec²/4T`; §19.6: equal weights iff `de = 1/τ²`, the `1`/`4` example, equal populations give no friction |
+| [`VOTKP/Channels.lean`](VOTKP/Channels.lean) | 8 | 5.6, §20.3, §20.5.1 | 5.6 in matrix form for real symmetric forms: `D = Σ cₘ δsₘ Kₘ`, `β₋ L ≼ D ≼ β₊ L`, `ker D = ker L` when `β₋ > 0`, and `ker L` the intersection of the active kernels; the retained block of `(z − H)⁻¹` is `(z − A − B(z − D)⁻¹B†)⁻¹` (Schur complement); `(2πi)⁻¹∮ f(z) Σₖ Wₖ/(z − eₖ) dz = Σ_{eₖ inside} f(eₖ)Wₖ` (Cauchy's formula); `Tr [H,P]² = −2 Tr BB†`; the footprint `0.58` |
+| [`VOTKP/Witnesses.lean`](VOTKP/Witnesses.lean) | 7 | §20.5 | The readout `⟨Z⟩_t = sin(2gt) sin φ`; `φ = ±π/2` share norm and exchange expectation and give opposite readouts; `U(t)` is unitary and the dephased state reads `0`; the signed offset by Schur elimination, `det(I − C_A)/det C_A = det s₀/det s₁` when the interior determinants agree, and its sign change under `C ↦ I − C` |
+| | **140** | | |
+
+The last nine rows follow the section numbering of version 2.7 (12 October 2026).
 
 What is not proved is listed in [`LIMITATIONS.md`](LIMITATIONS.md).
 
@@ -60,18 +72,23 @@ Every push runs [the proof check](.github/workflows/build.yml) on GitHub:
 4. **Showcase**: `Showcase.lean` imports only Mathlib and holds no proofs, axioms, `sorry`,
    notation, macros or options; `example : Showcase.MainTheorem := Showcase.main_theorem`
    compiles, so the proved theorem carries exactly the showcase statement.
-5. **False controls**: seven deliberately wrong claims must fail to compile, for a mathematical
+5. **False controls**: fifteen deliberately wrong claims must fail to compile, for a mathematical
    reason: the shell part at the first shell wall (the Smith reflection of the ratio `4`) being
    `1/2` (it is `3/5`); the ladders `1, 2, 6` and `1, 3, 6` having the same first step; the echo
    `x = −1/5` raising the reflectance; the two channel sets sharing a third cumulant; the shared
    record `T(0)` fixing the later transmission; zero entropy at delay 2 excluding the transposed
    ladder; and the showcase's shell wall altered from `2n − 1` to `2n + 1`, which the proved main
-   theorem cannot stand in for.
+   theorem cannot stand in for; the ground-energy binding sign reversed; equal first
+   thresholds asserted to imply equal total binding; the gaps `1` and `3` sharing a friction
+   weight; an out-and-back record whose endpoint distance equals its length; the five-site
+   shift's fifth Markov parameter being `0`; the curvature vanishing at half filling; the footprint
+   `0.58` claimed as `0.59`; and a negative channel coefficient giving a positive semidefinite form.
 
 ```bash
 lake exe cache get
 lake build
 python3 scripts/verify.py
+python3 scripts/verify_energy_data.py
 ```
 
 ## Licence, citation and AI use
@@ -80,3 +97,11 @@ Copyright (c) 2026 Jeromie Beasley. Code and proofs: [MIT](LICENSE). Written tex
 [CC BY 4.0](LICENSE-CC-BY-4.0.md). See [`LICENSING.md`](LICENSING.md). Citation metadata is in
 [`CITATION.cff`](CITATION.cff); where the files came from is in [`PROVENANCE.md`](PROVENANCE.md);
 how AI tools were used is stated in [`AI_USE.md`](AI_USE.md).
+
+## Energy and the element atlas — 11 October 2026
+
+[New section §21](docs/energy-state-atlas.md) applies the energy ledger to all 118 element slots. [Archived inputs](data/element_thresholds_20261011.json.gz) preserve evidence grades and references; [exact arithmetic controls](scripts/verify_energy_data.py) cover 5,847 thresholds, 103 complete ladders and 5,714 peels. This adds finite identities, not new atomic response or decay laws.
+
+![Electronic binding remaining](docs/assets/element-energy-landscape.png)
+
+![Peel shape aligned by electron count](docs/assets/element-peel-landscape.png)
