@@ -35,6 +35,8 @@ Knots*, version 1.1, 25 September 2026
 
 What is not proved is listed in [`LIMITATIONS.md`](LIMITATIONS.md).
 
+[`peel-atlas/`](peel-atlas/) records a separate proposal (30 October 2026) that uses the peel coordinate. It is not part of the Lean build.
+
 ## Start here: the showcase
 
 [`Showcase.lean`](Showcase.lean) is the one file a reader has to trust. It imports only Mathlib,

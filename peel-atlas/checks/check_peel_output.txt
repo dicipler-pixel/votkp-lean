@@ -1,0 +1,25 @@
+PASS integer quaternions of norm 5: 48 (expected 48)
+PASS normalized ones (odd real part, even i,j,k) are +/- the six 1+-2u: 12 = 2 x 6
+PASS norm 5^1: 6 reduced words give distinct quaternions, and +/- them are exactly the normalized norm-5^1 quaternions not divisible by 5: words 6, distinct 6, target 12
+PASS norm 5^2: 30 reduced words give distinct quaternions, and +/- them are exactly the normalized norm-5^2 quaternions not divisible by 5: words 30, distinct 30, target 60
+PASS norm 5^3: 150 reduced words give distinct quaternions, and +/- them are exactly the normalized norm-5^3 quaternions not divisible by 5: words 150, distinct 150, target 300
+PASS his step ln 5 = 1.6094: 1.609438
+PASS Smith step tanh(ln5/2) = (5-1)/(5+1) = 2/3
+PASS straight path 3 steps = 3 ln 5 = 4.8283: 4.828314
+PASS turned path (i,i,j) = 4.1757, shorter by 0.6526: 4.175750, saving 0.652564
+PASS turned path closed form: cosh d = cosh(2 ln5) cosh(ln5)
+PASS (i,j,k) = 3.5589 is a different path, not the panel's turned path: 3.5589
+PASS ln 7 option: 1.9459, straight 5.8377, turned 5.1652
+PASS ln 7 saving 0.6726 (matches the panel; check_ink.py prints 0.6725 because it subtracts a rounded value): 0.672561
+PASS two boosts on different axes do not compose to a pure boost (not symmetric): Theorem 15.1's 'add like velocities' is literal on one axis only
+PASS depth-3 six-way tree has 1+6+30+150 = 187 nodes (panel: 187 his)
+PASS |M| = e^0.44 = 1.5527, meridian boost 2x = 0.88, tanh x = 0.4136
+PASS meridian translation length 2 ln|M| = 2x
+PASS T(2,3) relation a W b^-1 W^-1 = 1 (6 letters, panel 6): |loop - I| = 8.0e-16
+PASS T(2,3) longitude commutes with the meridian a
+PASS T(2,3) y = log|L| = -6x = -2.64, longitude boost 2|y| = 5.28: y = -2.640000
+PASS T(2,5) relation a W b^-1 W^-1 = 1 (10 letters, panel 10): |loop - I| = 5.6e-15
+PASS T(2,5) longitude commutes with the meridian a
+PASS T(2,5) y = log|L| = -10x = -4.4, longitude boost 2|y| = 8.80: y = -4.400000
+
+23 of 23 checks passed
