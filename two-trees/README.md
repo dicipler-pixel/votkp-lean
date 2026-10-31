@@ -8,6 +8,9 @@ Jeromie Beasley. Prepared with AI assistance (Claude, Anthropic); see [`../AI_US
 ![Lean](https://img.shields.io/badge/Lean-v4.34.1%20core-blue)
 ![Theorems](https://img.shields.io/badge/theorems-159-2EA043)
 ![sorry](https://img.shields.io/badge/sorry-0-2EA043)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23847114-blue)](https://doi.org/10.5281/zenodo.23847114)
+
+Zenodo record (paper, code and the interactive Knot Atlas): [10.5281/zenodo.23847114](https://doi.org/10.5281/zenodo.23847114).
 
 The paper: [`paper/Two_Trees_in_One_Ball_v4.pdf`](paper/Two_Trees_in_One_Ball_v4.pdf) (101 pages; every Lean file and
 every script with its output is printed in the appendices) and the same text as

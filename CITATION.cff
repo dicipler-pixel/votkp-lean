@@ -33,3 +33,10 @@ references:
         given-names: "Jeromie"
     doi: "10.5281/zenodo.23011140"
     year: 2026
+  - type: article
+    title: "Two Trees in One Ball: Norm Ladders, Peel Steps and Knot Boosts (version 4)"
+    authors:
+      - family-names: "Beasley"
+        given-names: "Jeromie"
+    doi: "10.5281/zenodo.23847114"
+    year: 2026
