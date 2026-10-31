@@ -8,7 +8,7 @@
 ![Lean](https://img.shields.io/badge/Lean-v4.34.1-blue)
 ![Theorems](https://img.shields.io/badge/theorems-140-2EA043)
 ![sorry](https://img.shields.io/badge/sorry-0-2EA043)
-[![Paper DOI](https://img.shields.io/badge/paper-10.5281%2Fzenodo.23011140-blue)](https://doi.org/10.5281/zenodo.23011140)
+[![Paper v2.9 DOI](https://img.shields.io/badge/paper%20v2.9-10.5281%2Fzenodo.23340757-blue)](https://doi.org/10.5281/zenodo.23340757)
 ![Code: MIT](https://img.shields.io/badge/code-MIT-lightgrey)
 ![Text: CC BY 4.0](https://img.shields.io/badge/text-CC%20BY%204.0-lightgrey)
 
@@ -19,8 +19,10 @@ Jeromie Beasley
 ---
 
 Companion to *VOTKP: The Vector of Traits Kept under Peeling — Elemental Peeling of Atoms and
-Knots*, version 1.1, 25 September 2026
-([10.5281/zenodo.23011140](https://doi.org/10.5281/zenodo.23011140)).
+Knots*. The current version is **2.9, 13 October 2026**
+([10.5281/zenodo.23340757](https://doi.org/10.5281/zenodo.23340757)); its Appendix B lists the Lean
+forms of its numbered results. The library was first written from version 1.1, 25 September 2026
+([10.5281/zenodo.23011140](https://doi.org/10.5281/zenodo.23011140)), and has grown with the paper.
 
 ## What is proved
 
