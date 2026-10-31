@@ -10,16 +10,11 @@ statements written, under exactly the hypotheses written.
   Jones, Khovanov, knot Floer, signature function), the A-polynomial volumes, the nuclear and
   particle rounds, and the test ledger of Appendix D. These are the paper's [Exact] results,
   computed by the scripts in its package; Lean checks none of them.
-- Theorem 3.1 (finite linear predictive quotient) and Theorem 4.1 (occupation sets a response
-  curvature).
-- 5.4 (memory kernel), 5.5 (transfer silence), and the matrix form of 5.6. The four-reading
-  certificate is proved per channel: the coefficient formula and its sign on each side of a pole.
-- 6.2's "surviving matches" equivalences, Theorem 6.3 (the thin end as a shunt admittance), and
-  the oblique-incidence statements.
-- Theorem 15.4 is proved only in its ratio form; the unitary equivalence `H_λ ≅ λH` is not.
+- 5.6 is proved per channel in `Peel` and in matrix form in `Channels` for real symmetric forms
+  `Kₘ`; complex Hermitian forms are not stated.
+- 6.2's "surviving matches" equivalences and the oblique-incidence statements.
 - The hyperbolic-disk reading of Corollary 15.2 is proved as the identity
   `(1 + Γ)/(1 − Γ) = z`; the Poincaré metric itself is not formalized.
-- Of Proposition 11.1, only the unit-circle identity of Appendix A.12 is proved.
 - Theorem 8.2 is an exact split of the hydrogenic form `IE = Ry Z²/n²`, with `Z` the effective
   charge that this form defines. The wall values `3/5, 5/13, …, 13/85` are those of the shell
   part `tanh(−Δ ln n)` alone, the Smith reflection of the ratio `(n/(n − 1))²`. They are not
@@ -37,3 +32,50 @@ statements written, under exactly the hypotheses written.
 **Stated with explicit hypotheses.** `⊕`-associativity assumes the two inner denominators are
 nonzero. The film identities assume `1 + Γx ≠ 0`, and the echo series `‖Γx‖ < 1`. The
 reduced-product associator holds for any additive map `P`, not only a projector.
+
+## Energy-ledger extension
+
+VOTKP/Energy.lean proves finite real-arithmetic identities conditional on supplied thresholds. Data completeness and arithmetic checks do not turn mixed evaluated/semi-empirical/theoretical inputs into wholly experimental data. Wavefunctions, excitation strengths, kinetics, isotope-resolved masses and feedback dynamics are not reconstructed by the threshold ledger. Section 21 separates these proposed extensions from the proved ledger.
+
+## Version 2.2 additions: how each result is stated
+
+- **Theorem 3.1** reads futures along the discrete evolution `v ↦ Lv`: identical futures means
+  `R(Lᵏv) = R(Lᵏw)` for every `k`. For the flow `e^{tL}` these are its Taylor coefficients; that
+  analytic step (Appendix A.1) is not formalized.
+- **Theorem 4.1** pins the curvature by an explicit two-sided bound
+  `|U(a) − U(0) − μ_eff a²/2| ≤ (|λ|/4 + |1 − 2r| c⁴/8δ³) a⁴`. The metric is computed from the
+  slope of the Bloch direction; the ground projector itself is not built as a matrix.
+- **5.4** assumes `x` and `y` are differentiable solutions of the coupled system on all of `ℝ`,
+  with complete normed state spaces. Existence of solutions is not proved.
+- **5.5** states silence without inverses: at every `z` with `χ_D(z) ≠ 0`, every solution of
+  `(zI − D)y = Ce` has `By = 0`. The sharpness example is checked over `ℤ` by `decide`.
+- **Theorem 6.3** is proved as first-order agreement: the exact characteristic-matrix
+  reflection and the shunt law have the same value and the same derivative at `d = 0`, and
+  their difference is `O(d²)` as the real thickness `d → 0`. The whole-`N²` sheet comparison is
+  not formalized.
+- **Proposition 11.1**: the determinant factorization and the parity statement are proved. The
+  parity theorem takes as a hypothesis that `det H(t) = (t − t₀)^m g(t)` with `g` of one sign
+  on the two sides; deriving that from the root multiplicity of the Alexander polynomial, and
+  the exact `±2` jump at a simple root (which uses Rellich's analytic eigenvalue branches),
+  are not formalized. Mathlib provides no analytic perturbation theory for eigenvalues (Rellich,
+  Kato), so the `±2` jump is not stated in Lean.
+- **Theorem 15.4** is proved as the pointwise intertwining `H_λ ψ(λ·) = λ(Hψ)(λ·)` for `C²`
+  wavefunctions, with the kinetic operator written as second directional derivatives along a
+  chosen family of coordinate directions. The dilation `(U_λ f)(x) = λ^{n/2} f(λx)` is proved to
+  preserve every `∫ conj f · g` against an additive Haar measure and to be inverted by
+  `U_{1/λ}`; operator domains are not formalized.
+- **Proposition 19.3** uses the explicit three-level family of §19.4. The ground state is
+  shown by an explicit unit vector annihilated by `H_b`, and the metric
+  `½ Tr((∂P)²) = b²` is computed entrywise.
+- **Proposition 19.4** takes the leading excess-work density bound `ζ ≥ w* h ρ̇²` as a
+  hypothesis (it is IQGT's spectral weighting; the finite-sum step is `spectral_weighting`).
+  The slow-driving expansion, the bath model and the RP-WEIGHT/RP-POLAR numerics are not
+  formalized.
+- **§20.3** is proved for finite matrices: the retained-resolvent identity needs `z − D` and
+  the Schur complement invertible, and contour selection takes a finite channel sum
+  `Σₖ Wₖ/(z − eₖ)` and a circle avoiding every `eₖ`; continua are not formalized.
+- **§20.5** is proved on the one-excitation basis `{|10⟩, |01⟩}` with the state written as
+  `(1, e^{iφ})` of squared norm `2`; the equality of the two local reductions `I/2` is computed in
+  the paper, not in Lean. The signed offset is stated through the determinant ratio; entropies
+  are not formalized.
+- **§8.7's in-shell stagger** is a computation on the archived ladders, not a Lean statement.
