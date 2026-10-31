@@ -1,7 +1,8 @@
 # Limitations
 
-This repository proves the exact, finite parts of *VOTKP* v1.1. Lean proves exactly the
-statements written, under exactly the hypotheses written.
+This repository proves the exact, finite parts of *VOTKP*: the statements of version 1.1, and the
+results added since, listed in the sections below (the current paper is version 2.9). Lean proves
+exactly the statements written, under exactly the hypotheses written.
 
 **Not formalized.**
 

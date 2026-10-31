@@ -4,8 +4,8 @@ title: "VOTKP: The Vector of Traits Kept under Peeling: Lean proofs"
 authors:
   - family-names: "Beasley"
     given-names: "Jeromie"
-version: 1.0.0
-date-released: 2026-09-28
+version: 2.0.0
+date-released: 2026-10-31
 license:
   - MIT
   - CC-BY-4.0
@@ -20,7 +20,14 @@ keywords:
   - knot invariants
 references:
   - type: article
-    title: "VOTKP: The Vector of Traits Kept under Peeling"
+    title: "VOTKP: The Vector of Traits Kept under Peeling (version 2.9)"
+    authors:
+      - family-names: "Beasley"
+        given-names: "Jeromie"
+    doi: "10.5281/zenodo.23340757"
+    year: 2026
+  - type: article
+    title: "VOTKP: The Vector of Traits Kept under Peeling (version 1.1)"
     authors:
       - family-names: "Beasley"
         given-names: "Jeromie"

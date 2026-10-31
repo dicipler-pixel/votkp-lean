@@ -37,3 +37,21 @@ commit `b522f2a` (GitHub Actions run 36447512334).
 ## Energy extension (11 October 2026)
 
 The archived threshold input is a public-data-only extraction from the VOTKP v2.3 element atlas: element identity, charge, energy, uncertainty, E/S/T label and bibliographic reference. It excludes private cross-paper notes. The parent archive hash is preserved inside the compressed JSON. New Lean identities, exact rational controls and the 5:2 visual accompany section 21. Input values were not refreshed against live NIST in this pass.
+
+## Current paper: version 2.9 (13 October 2026)
+
+*VOTKP: The Vector of Traits Kept under Peeling*, version 2.9, 13 October 2026. Zenodo
+[10.5281/zenodo.23340757](https://doi.org/10.5281/zenodo.23340757). Its files, with the MD5
+checksums the record lists:
+
+```
+6ddfe492cba71521aae3e4f6c77d4e44  VOTKP_ELEMENTAL_PEELING_PAPER_v2_9_20261013.pdf
+003026b6532928615d38f063489d28c2  VOTKP_ELEMENTAL_PEELING_PAPER_v2_9_20261013.html
+8ca37846dc6819db714e57554763a65d  VOTKP_v2_9_Code_Proofs_Data_20261013.zip
+7760d68710e9cc60d407eb52a5c15fc8  VOTKP_Mixer_v1_3_20261013_standalone.html
+```
+
+The library on `main` now holds 140 theorems in 15 modules (commit `bbe5b9e`, 31 October 2026,
+checked by GitHub Actions and by an independent cold-clone rebuild on SAIR's Open Math OS). The
+folder `two-trees/` (commit `f26efd2`) adds the separate paper *Two Trees in One Ball*, version 4,
+with its own core-Lean check.
