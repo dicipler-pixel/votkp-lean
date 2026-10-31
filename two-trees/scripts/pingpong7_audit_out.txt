@@ -1,0 +1,10 @@
+'PingPong7.pingpong_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PingPong7.caps_disjoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PingPong7.pingpong' does not depend on any axioms
+'PingPong7.word_in_cap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PingPong7.word_ne_scalar' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PingPong7.word_ne_id' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PingPong7.step_lorentz' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PingPong7.step_inv' depends on axioms: [propext, Classical.choice, Quot.sound]
+{ t := 145011, x := 132721, y := 58226, z := 4802 }
+exit 0

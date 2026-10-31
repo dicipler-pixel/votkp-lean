@@ -1,0 +1,25 @@
+LPS
+ gen i 1 tr 2 det 5 tr2/det 4/5
+ gen i -1 tr 2 det 5 tr2/det 4/5
+ gen j 1 tr 2 det 5 tr2/det 4/5
+ gen j -1 tr 2 det 5 tr2/det 4/5
+ gen k 1 tr 2 det 5 tr2/det 4/5
+ gen k -1 tr 2 det 5 tr2/det 4/5
+BOOST
+ gen i 1 tr 6 det 5 tr2/det 36/5
+ gen i -1 tr 6 det 5 tr2/det 36/5
+ gen j 1 tr 6 det 5 tr2/det 36/5
+ gen j -1 tr 6 det 5 tr2/det 36/5
+ gen k 1 tr 6 det 5 tr2/det 36/5
+ gen k -1 tr 6 det 5 tr2/det 36/5
+inverse check ok (g*g^-1 = 5I)
+LPS products g_u g_v (u!=v) tr2/det distinct values: [4/25]
+LPS commutators tr2/det distinct values: [196/625]
+BOOST products g_u g_v (u!=v) tr2/det distinct values: [324/25]
+BOOST commutators tr2/det distinct values: [196/625]
+LPS g^2 tr2/det {36/25}
+BOOST g^2 tr2/det {676/25}
+products common values LPS vs BOOST: set()
+commutators common values LPS vs BOOST: {196/625}
+example i,j product LPS 4/25 BOOST 324/25
+example comm [i,j] LPS 196/625 BOOST 196/625

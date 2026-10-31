@@ -1,0 +1,160 @@
+=== 3_1 (p,q)=(3,1), |W|=2, relator length 6  (setup 0.0s)
+ x=0.7 v=3.3018 [v>0 reflection] K1=6.7e-52 K2=0.0 K3=2.0e-52,0.0 K4=1.3e-50
+      K5 max|A| on l (6 pts) = 5.28e-50 ; K6 max|A(Ko)+A(o)| = 7.75e-50 ; A off l = ['-1.8315', '-0.30629', '-1.1714']
+      axes do not cross (v>(s-1/s)^2 or v<0): o* off l, A(o*) = -1.5239316 ; |o*|^2-1/v = 0.2632
+ x=1.2 v=10.1139 [v>0 reflection] K1=0.0 K2=0.0 K3=0.0,6.4e-52 K4=4.1e-50
+      K5 max|A| on l (6 pts) = 2.53e-49 ; K6 max|A(Ko)+A(o)| = 1.03e-48 ; A off l = ['-4.3261', '-4.5206', '-5.3363']
+      axes do not cross (v>(s-1/s)^2 or v<0): o* off l, A(o*) = -1.0538546 ; |o*|^2-1/v = 0.0217
+ x=2.0 v=53.6165 [v>0 reflection] K1=0.0 K2=2.2e-52 K3=0.0,2.2e-52 K4=2.1e-49
+      K5 max|A| on l (6 pts) = 5.86e-47 ; K6 max|A(Ko)+A(o)| = 9.03e-47 ; A off l = ['-3.1598', '-5.1192', '-2.5184']
+      axes do not cross (v>(s-1/s)^2 or v<0): o* off l, A(o*) = -0.52428353 ; |o*|^2-1/v = 0.0007089
+ x=3.5 v=1095.63 [v>0 reflection] K1=0.0 K2=0.0 K3=0.0,0.0 K4=8.5e-47
+      K5 max|A| on l (6 pts) = 3.33e-45 ; K6 max|A(Ko)+A(o)| = 7.96e-44 ; A off l = ['-2.5324', '-0.4045', '-1.1214']
+      axes do not cross (v>(s-1/s)^2 or v<0): o* off l, A(o*) = -0.12058826 ; |o*|^2-1/v = 1.668e-6
+=== 4_1 (p,q)=(5,3), |W|=4, relator length 10  (setup 0.0s)
+ x=0.7 v=-0.662671 [v<0 half-turn] K1=6.7e-52 K2=5.4e-52 K3=3.3e-52,5.4e-52 K4=n/a
+      K7 max|A(Ko)-A(o)| = 2.06e-49 ; A at random pts = ['1.0375', '1.345', '1.2697']
+      axes do not cross (v>(s-1/s)^2 or v<0): o* off l, A(o*) = 1.2689812 ; |o*|^2-1/v = 3.887
+ x=0.7 v=1.96447 [v>0 reflection, axes cross] K1=0.0 K2=2.0e-51 K3=0.0,2.0e-51 K4=1.4e-49
+      K5 max|A| on l (6 pts) = 3.49e-49 ; K6 max|A(Ko)+A(o)| = 4.7e-49 ; A off l = ['-0.73445', '0.54678', '-3.8007']
+      o* crossing pt: ||o*|^2-1/v| = 1.34e-51, A(o*) = 2.0e-49
+ x=1.2 v=-0.90014 [v<0 half-turn] K1=0.0 K2=4.5e-52 K3=0.0,4.5e-52 K4=n/a
+      K7 max|A(Ko)-A(o)| = 9.06e-49 ; A at random pts = ['1.0874', '1.0076', '1.0276']
+      axes do not cross (v>(s-1/s)^2 or v<0): o* off l, A(o*) = 1.0045377 ; |o*|^2-1/v = 2.441
+ x=1.2 v=9.01403 [v>0 reflection, axes cross] K1=0.0 K2=2.3e-51 K3=0.0,5.8e-52 K4=2.1e-47
+      K5 max|A| on l (6 pts) = 6.43e-47 ; K6 max|A(Ko)+A(o)| = 9.91e-47 ; A off l = ['-1.6569', '-3.4551', '-2.4665']
+      o* crossing pt: ||o*|^2-1/v| = 0.0, A(o*) = 5.43e-47
+ x=2.0 v=-0.981343 [v<0 half-turn] K1=0.0 K2=2.7e-53 K3=0.0,1.6e-51 K4=n/a
+      K7 max|A(Ko)-A(o)| = 6.27e-47 ; A at random pts = ['0.42437', '0.2471', '0.61674']
+      axes do not cross (v>(s-1/s)^2 or v<0): o* off l, A(o*) = 0.5195023 ; |o*|^2-1/v = 2.076
+ x=2.0 v=52.5978 [v>0 reflection, axes cross] K1=0.0 K2=2.6e-52 K3=0.0,2.6e-52 K4=1.7e-45
+      K5 max|A| on l (6 pts) = 5.54e-44 ; K6 max|A(Ko)+A(o)| = 1.93e-43 ; A off l = ['-4.4756', '-4.5579', '-1.7484']
+      o* crossing pt: ||o*|^2-1/v| = 0.0, A(o*) = 1.29e-42
+ x=3.5 v=-0.999087 [v<0 half-turn] K1=0.0 K2=6.9e-53 K3=0.0,6.9e-53 K4=n/a
+      K7 max|A(Ko)-A(o)| = 1.18e-43 ; A at random pts = ['0.080921', '0.1294', '0.12276']
+      axes do not cross (v>(s-1/s)^2 or v<0): o* off l, A(o*) = 0.1205333 ; |o*|^2-1/v = 2.004
+ x=3.5 v=1094.63 [v>0 reflection, axes cross] K1=0.0 K2=0.0 K3=0.0,2.2e-54 K4=1.1e-40
+      K5 max|A| on l (6 pts) = 7.49e-39 ; K6 max|A(Ko)+A(o)| = 6.81e-38 ; A off l = ['-2.0662', '-3.1904', '-4.6282']
+      o* crossing pt: ||o*|^2-1/v| = 0.0, A(o*) = 1.21e-36
+=== 5_2 (p,q)=(7,3), |W|=6, relator length 14  (setup 0.1s)
+ x=0.7 v=3.07295 [v>0 reflection] K1=0.0 K2=8.4e-51 K3=0.0,5.0e-51 K4=3.0e-48
+      K5 max|A| on l (6 pts) = 2.54e-49 ; K6 max|A(Ko)+A(o)| = 1.75e-48 ; A off l = ['-1.9731', '-0.86247', '-2.1353']
+      axes do not cross (v>(s-1/s)^2 or v<0): o* off l, A(o*) = -1.3596515 ; |o*|^2-1/v = 0.218
+ x=1.2 v=0.213357 [v>0 reflection, axes cross] K1=0.0 K2=1.3e-51 K3=0.0,1.3e-51 K4=1.3e-49
+      K5 max|A| on l (6 pts) = 4.94e-48 ; K6 max|A(Ko)+A(o)| = 3.75e-48 ; A off l = ['-0.031436', '0.15177', '-0.10709']
+      o* crossing pt: ||o*|^2-1/v| = 1.07e-50, A(o*) = 6.99e-49
+ x=1.2 v=8.99044 [v>0 reflection, axes cross] K1=0.0 K2=2.2e-49 K3=0.0,7.2e-50 K4=1.4e-47
+      K5 max|A| on l (6 pts) = 1.67e-47 ; K6 max|A(Ko)+A(o)| = 1.31e-47 ; A off l = ['-4.5597', '-2.8642', '-4.3113']
+      o* crossing pt: ||o*|^2-1/v| = 1.67e-52, A(o*) = 4.42e-47
+ x=1.2 v=10.024 [v>0 reflection] K1=0.0 K2=7.5e-51 K3=0.0,2.3e-51 K4=8.2e-47
+      K5 max|A| on l (6 pts) = 7.49e-47 ; K6 max|A(Ko)+A(o)| = 4.59e-46 ; A off l = ['-2.4401', '-1.8164', '-3.4367']
+      axes do not cross (v>(s-1/s)^2 or v<0): o* off l, A(o*) = -1.0096057 ; |o*|^2-1/v = 0.01992
+ x=2.0 v=0.0376832 [v>0 reflection, axes cross] K1=0.0 K2=3.9e-52 K3=0.0,3.9e-52 K4=2.3e-49
+      K5 max|A| on l (6 pts) = 7.51e-46 ; K6 max|A(Ko)+A(o)| = 1.52e-45 ; A off l = ['0.090579', '0.038103', '0.096385']
+      o* crossing pt: ||o*|^2-1/v| = 0.0, A(o*) = 2.42e-46
+ x=2.0 v=52.5971 [v>0 reflection, axes cross] K1=0.0 K2=1.5e-48 K3=0.0,2.0e-49 K4=1.7e-45
+      K5 max|A| on l (6 pts) = 8.35e-46 ; K6 max|A(Ko)+A(o)| = 4.16e-45 ; A off l = ['-4.1648', '-1.8834', '-5.0121']
+      o* crossing pt: ||o*|^2-1/v| = 0.0, A(o*) = 3.72e-44
+ x=2.0 v=53.5982 [v>0 reflection] K1=0.0 K2=9.7e-50 K3=0.0,1.3e-50 K4=3.7e-43
+      K5 max|A| on l (6 pts) = 8.32e-44 ; K6 max|A(Ko)+A(o)| = 3.21e-43 ; A off l = ['-3.446', '-1.4632', '-2.7422']
+      axes do not cross (v>(s-1/s)^2 or v<0): o* off l, A(o*) = -0.51959195 ; |o*|^2-1/v = 0.0006962
+ x=3.5 v=0.00182626 [v>0 reflection, axes cross] K1=0.0 K2=1.3e-52 K3=0.0,1.3e-52 K4=2.1e-47
+      K5 max|A| on l (6 pts) = 4.65e-42 ; K6 max|A(Ko)+A(o)| = 1.67e-40 ; A off l = ['0.03649', '0.01805', '0.018836']
+      o* crossing pt: ||o*|^2-1/v| = 1.37e-48, A(o*) = 5.08e-43
+ x=3.5 v=1094.63 [v>0 reflection, axes cross] K1=0.0 K2=2.8e-45 K3=0.0,8.6e-47 K4=3.3e-40
+      K5 max|A| on l (6 pts) = 3.51e-41 ; K6 max|A(Ko)+A(o)| = 4.03e-40 ; A off l = ['-3.75', '-4.6054', '-5.7643']
+      o* crossing pt: ||o*|^2-1/v| = 0.0, A(o*) = 7.98e-39
+ x=3.5 v=1095.63 [v>0 reflection] K1=0.0 K2=1.0e-48 K3=0.0,3.1e-50 K4=1.5e-37
+      K5 max|A| on l (6 pts) = 1.18e-38 ; K6 max|A(Ko)+A(o)| = 3.17e-37 ; A off l = ['-5.2092', '-5.0398', '-5.6514']
+      axes do not cross (v>(s-1/s)^2 or v<0): o* off l, A(o*) = -0.12053335 ; |o*|^2-1/v = 1.666e-6
+=== 6_2 (p,q)=(11,3), |W|=10, relator length 22  (setup 0.2s)
+ x=0.7 v=-0.0461676 [v<0 half-turn] K1=6.7e-52 K2=5.5e-52 K3=3.3e-52,5.5e-52 K4=n/a
+      K7 max|A(Ko)-A(o)| = 1.5e-46 ; A at random pts = ['0.55833', '0.41136', '0.84431']
+      axes do not cross (v>(s-1/s)^2 or v<0): o* off l, A(o*) = 0.34240192 ; |o*|^2-1/v = 44.19
+ x=0.7 v=2.21533 [v>0 reflection, axes cross] K1=0.0 K2=3.2e-51 K3=0.0,3.2e-51 K4=2.9e-48
+      K5 max|A| on l (6 pts) = 4.46e-48 ; K6 max|A(Ko)+A(o)| = 7.6e-48 ; A off l = ['-2.117', '-0.48953', '-1.6131']
+      o* crossing pt: ||o*|^2-1/v| = 6.68e-52, A(o*) = 2.63e-49
+ x=0.7 v=3.57334 [v>0 reflection] K1=0.0 K2=2.0e-50 K3=0.0,1.1e-50 K4=4.1e-48
+      K5 max|A| on l (6 pts) = 1.4e-47 ; K6 max|A(Ko)+A(o)| = 9.03e-48 ; A off l = ['-1.7178', '-4.5347', '-1.9025']
+      axes do not cross (v>(s-1/s)^2 or v<0): o* off l, A(o*) = -1.6833101 ; |o*|^2-1/v = 0.3092
+ x=1.2 v=-0.00799675 [v<0 half-turn] K1=0.0 K2=1.1e-51 K3=0.0,1.1e-51 K4=n/a
+      K7 max|A(Ko)-A(o)| = 3.1e-43 ; A at random pts = ['0.19033', '0.18065', '0.77572']
+      axes do not cross (v>(s-1/s)^2 or v<0): o* off l, A(o*) = 0.098738892 ; |o*|^2-1/v = 250.3
+ x=1.2 v=9.08842 [v>0 reflection, axes cross] K1=0.0 K2=1.3e-50 K3=7.4e-53,5.1e-51 K4=5.8e-46
+      K5 max|A| on l (6 pts) = 1.89e-45 ; K6 max|A(Ko)+A(o)| = 1.31e-44 ; A off l = ['-0.24627', '-2.5228', '-1.5332']
+      o* crossing pt: ||o*|^2-1/v| = 0.0, A(o*) = 2.35e-46
+ x=1.2 v=10.2117 [v>0 reflection] K1=0.0 K2=4.1e-50 K3=0.0,1.2e-50 K4=7.2e-46
+      K5 max|A| on l (6 pts) = 3.87e-45 ; K6 max|A(Ko)+A(o)| = 1.28e-45 ; A off l = ['-3.6038', '-3.6702', '-2.42']
+      axes do not cross (v>(s-1/s)^2 or v<0): o* off l, A(o*) = -1.0991649 ; |o*|^2-1/v = 0.02359
+ x=2.0 v=-0.000335115 [v<0 half-turn] K1=0.0 K2=8.8e-53 K3=0.0,8.8e-53 K4=n/a
+      K7 max|A(Ko)-A(o)| = 9.1e-38 ; A at random pts = ['0.21605', '0.08546', '0.087216']
+      axes do not cross (v>(s-1/s)^2 or v<0): o* off l, A(o*) = 0.0097315793 ; |o*|^2-1/v = 5968.0
+ x=2.0 v=52.6118 [v>0 reflection, axes cross] K1=0.0 K2=8.4e-51 K3=0.0,1.0e-51 K4=4.4e-43
+      K5 max|A| on l (6 pts) = 1.07e-40 ; K6 max|A(Ko)+A(o)| = 1.5e-39 ; A off l = ['-1.8126', '-4.1482', '-4.5976']
+      o* crossing pt: ||o*|^2-1/v| = 0.0, A(o*) = 4.66e-42
+ x=2.0 v=53.6351 [v>0 reflection] K1=0.0 K2=1.7e-48 K3=0.0,2.3e-49 K4=1.6e-41
+      K5 max|A| on l (6 pts) = 2.04e-40 ; K6 max|A(Ko)+A(o)| = 2.78e-41 ; A off l = ['-5.2278', '-3.8406', '-1.123']
+      axes do not cross (v>(s-1/s)^2 or v<0): o* off l, A(o*) = -0.52901343 ; |o*|^2-1/v = 0.0007219
+ x=3.5 v=-8.31527e-7 [v<0 half-turn] K1=4.2e-53 K2=7.0e-53 K3=1.3e-54,7.0e-53 K4=n/a
+      K7 max|A(Ko)-A(o)| = 1.56e-27 ; A at random pts = ['0.016195', '0.014553', '0.026053']
+      axes do not cross (v>(s-1/s)^2 or v<0): o* off l, A(o*) = 0.00011004531 ; |o*|^2-1/v = 2.405e+6
+ x=3.5 v=1094.63 [v>0 reflection, axes cross] K1=0.0 K2=3.2e-48 K3=0.0,9.7e-50 K4=1.8e-36
+      K5 max|A| on l (6 pts) = 5.35e-33 ; K6 max|A(Ko)+A(o)| = 4.09e-31 ; A off l = ['-5.1292', '-2.6634', '-1.5236']
+      o* crossing pt: ||o*|^2-1/v| = 0.0, A(o*) = 2.46e-36
+ x=3.5 v=1095.63 [v>0 reflection] K1=0.0 K2=1.1e-45 K3=0.0,3.2e-47 K4=1.3e-34
+      K5 max|A| on l (6 pts) = 7.97e-33 ; K6 max|A(Ko)+A(o)| = 2.41e-34 ; A off l = ['-2.5112', '-4.6198', '-1.7447']
+      axes do not cross (v>(s-1/s)^2 or v<0): o* off l, A(o*) = -0.12064319 ; |o*|^2-1/v = 1.669e-6
+=== 6_1 (p,q)=(9,7), |W|=8, relator length 18  (setup 0.1s)
+ x=0.7 v=-0.285329 [v<0 half-turn] K1=0.0 K2=1.2e-51 K3=0.0,1.2e-51 K4=n/a
+      K7 max|A(Ko)-A(o)| = 1.94e-49 ; A at random pts = ['0.8637', '0.86083', '0.84844']
+      axes do not cross (v>(s-1/s)^2 or v<0): o* off l, A(o*) = 0.8476635 ; |o*|^2-1/v = 7.878
+ x=0.7 v=2.28393 [v>0 reflection, axes cross] K1=0.0 K2=0.0 K3=0.0,1.4e-51 K4=7.7e-47
+      K5 max|A| on l (6 pts) = 1.56e-46 ; K6 max|A(Ko)+A(o)| = 1.03e-46 ; A off l = ['-0.89062', '-2.1287', '-0.48431']
+      o* crossing pt: ||o*|^2-1/v| = 0.0, A(o*) = 8.69e-47
+ x=1.2 v=-2.54533 [v<0 half-turn] K1=0.0 K2=1.4e-51 K3=0.0,1.4e-51 K4=n/a
+      K7 max|A(Ko)-A(o)| = 9.59e-48 ; A at random pts = ['0.75409', '3.4057', '1.6282']
+      axes do not cross (v>(s-1/s)^2 or v<0): o* off l, A(o*) = 1.5673871 ; |o*|^2-1/v = 1.005
+ x=1.2 v=-2.10023 [v<0 half-turn] K1=0.0 K2=7.4e-51 K3=0.0,7.4e-51 K4=n/a
+      K7 max|A(Ko)-A(o)| = 3.85e-49 ; A at random pts = ['3.4894', '1.568', '0.41066']
+      axes do not cross (v>(s-1/s)^2 or v<0): o* off l, A(o*) = 1.4520961 ; |o*|^2-1/v = 1.172
+ x=1.2 v=-0.353634 [v<0 half-turn] K1=0.0 K2=8.0e-52 K3=0.0,8.1e-52 K4=n/a
+      K7 max|A(Ko)-A(o)| = 7.48e-49 ; A at random pts = ['0.64784', '0.68819', '0.6679']
+      axes do not cross (v>(s-1/s)^2 or v<0): o* off l, A(o*) = 0.64603149 ; |o*|^2-1/v = 5.875
+ x=1.2 v=9.11309 [v>0 reflection, axes cross] K1=0.0 K2=2.4e-51 K3=0.0,1.2e-51 K4=1.8e-43
+      K5 max|A| on l (6 pts) = 2.26e-43 ; K6 max|A(Ko)+A(o)| = 1.61e-42 ; A off l = ['-0.79911', '-3.7229', '-3.4684']
+      o* crossing pt: ||o*|^2-1/v| = 1.67e-52, A(o*) = 3.44e-42
+ x=2.0 v=-2.60456 [v<0 half-turn] K1=0.0 K2=4.0e-52 K3=0.0,4.0e-52 K4=n/a
+      K7 max|A(Ko)-A(o)| = 1.01e-46 ; A at random pts = ['0.77707', '1.0781', '0.90828']
+      axes do not cross (v>(s-1/s)^2 or v<0): o* off l, A(o*) = 0.82810462 ; |o*|^2-1/v = 0.8059
+ x=2.0 v=-2.01866 [v<0 half-turn] K1=0.0 K2=3.1e-51 K3=0.0,3.1e-51 K4=n/a
+      K7 max|A(Ko)-A(o)| = 5.75e-48 ; A at random pts = ['1.2979', '1.158', '0.93272']
+      axes do not cross (v>(s-1/s)^2 or v<0): o* off l, A(o*) = 0.73471567 ; |o*|^2-1/v = 1.029
+ x=2.0 v=-0.376779 [v<0 half-turn] K1=0.0 K2=2.3e-52 K3=0.0,1.6e-51 K4=n/a
+      K7 max|A(Ko)-A(o)| = 2.91e-46 ; A at random pts = ['0.67523', '0.42782', '0.26509']
+      axes do not cross (v>(s-1/s)^2 or v<0): o* off l, A(o*) = 0.32459706 ; |o*|^2-1/v = 5.346
+ x=2.0 v=52.6165 [v>0 reflection, axes cross] K1=0.0 K2=0.0 K3=0.0,4.5e-53 K4=3.7e-38
+      K5 max|A| on l (6 pts) = 3.69e-37 ; K6 max|A(Ko)+A(o)| = 1.59e-36 ; A off l = ['-4.4271', '-1.8456', '-3.6898']
+      o* crossing pt: ||o*|^2-1/v| = 0.0, A(o*) = 1.18e-34
+ x=3.5 v=-2.61737 [v<0 half-turn] K1=4.2e-53 K2=9.4e-53 K3=1.3e-54,9.4e-53 K4=n/a
+      K7 max|A(Ko)-A(o)| = 1.07e-43 ; A at random pts = ['0.35214', '0.23421', '0.16349']
+      axes do not cross (v>(s-1/s)^2 or v<0): o* off l, A(o*) = 0.1948533 ; |o*|^2-1/v = 0.766
+ x=3.5 v=-2.00091 [v<0 half-turn] K1=0.0 K2=3.3e-50 K3=1.3e-54,3.3e-50 K4=n/a
+      K7 max|A(Ko)-A(o)| = 2.41e-46 ; A at random pts = ['0.20938', '0.2706', '0.1885']
+      axes do not cross (v>(s-1/s)^2 or v<0): o* off l, A(o*) = 0.17044759 ; |o*|^2-1/v = 1.001
+ x=3.5 v=-0.381714 [v<0 half-turn] K1=0.0 K2=2.5e-53 K3=0.0,2.5e-53 K4=n/a
+      K7 max|A(Ko)-A(o)| = 1.86e-43 ; A at random pts = ['0.071261', '0.075069', '0.074242']
+      axes do not cross (v>(s-1/s)^2 or v<0): o* off l, A(o*) = 0.074537854 ; |o*|^2-1/v = 5.241
+Traceback (most recent call last):
+  File "/tmp/claude-0/-home-claude/d7048feb-3787-5f7f-b86a-f71c9a373eed/scratchpad/lanes/open/area/area_sym.py", line 68, in <module>
+    Aon.append(abs(area(M, rel, oo)))
+                   ~~~~^^^^^^^^^^^^
+  File "/tmp/claude-0/-home-claude/d7048feb-3787-5f7f-b86a-f71c9a373eed/scratchpad/lanes/open/area/area_sym.py", line 28, in area
+    pts = orbit(M, rel, o); A, E = poly_area_turn(pts); return A
+                                   ~~~~~~~~~~~~~~^^^^^
+  File "/tmp/claude-0/-home-claude/d7048feb-3787-5f7f-b86a-f71c9a373eed/scratchpad/lanes/compute/q2_lib.py", line 112, in poly_area_turn
+    E += mp.atan2(sn, cs)
+         ~~~~~~~~^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/mpmath/ctx_mp.py", line 261, in atan2
+    return ctx.make_mpf(libmp.mpf_atan2(y._mpf_, x._mpf_, *ctx._prec_rounding))
+                                        ^^^^^^^
+AttributeError: 'mpc' object has no attribute '_mpf_'. Did you mean: '_mpc_'?

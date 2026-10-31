@@ -1,0 +1,26 @@
+T(2,3)  p/q=3/1  enters=False  first=-                            det=3   off-circle Alexander roots=0  sum eps=+2
+T(2,5)  p/q=5/1  enters=False  first=-                            det=5   off-circle Alexander roots=0  sum eps=+4
+4_1     p/q=5/3  enters=True   first=(np.float64(0.485), np.float64(0.13928), np.float64(1.87775)) det=5   off-circle Alexander roots=2  sum eps=+0
+T(2,7)  p/q=7/1  enters=False  first=-                            det=7   off-circle Alexander roots=0  sum eps=+6
+5_2     p/q=7/3  enters=True   first=(np.float64(0.725), np.float64(1.48801), np.float64(0.49759)) det=7   off-circle Alexander roots=0  sum eps=+2
+6_1     p/q=9/5  enters=True   first=(np.float64(0.35), np.float64(0.02623), np.float64(1.9873)) det=9   off-circle Alexander roots=2  sum eps=+0
+6_2     p/q=11/3  enters=True   first=(np.float64(0.36), np.float64(0.16501), np.float64(1.93793)) det=11  off-circle Alexander roots=2  sum eps=+2
+7_2     p/q=11/5  enters=True   first=(np.float64(0.605), np.float64(0.99262), np.float64(1.3458)) det=11  off-circle Alexander roots=0  sum eps=+2
+7_3     p/q=13/3  enters=True   first=(np.float64(0.475), np.float64(0.50188), np.float64(1.76383)) det=13  off-circle Alexander roots=0  sum eps=+4
+6_3     p/q=13/5  enters=True   first=(np.float64(2.865), np.float64(305.9725), np.float64(1.99486)) det=13  off-circle Alexander roots=4  sum eps=+0
+8_1     p/q=13/7  enters=True   first=(np.float64(0.285), np.float64(0.00095), np.float64(1.99968)) det=13  off-circle Alexander roots=2  sum eps=+0
+7_4     p/q=15/11  enters=True   first=(np.float64(0.485), np.float64(0.72051), np.float64(1.78635)) det=15  off-circle Alexander roots=0  sum eps=+2
+8_2     p/q=17/3  enters=True   first=(np.float64(0.295), np.float64(0.11919), np.float64(1.9715)) det=17  off-circle Alexander roots=2  sum eps=+4
+7_5     p/q=17/5  enters=True   first=(np.float64(2.055), np.float64(58.96299), np.float64(1.99177)) det=17  off-circle Alexander roots=0  sum eps=+4
+8_3     p/q=17/13  enters=True   first=(np.float64(0.25), np.float64(0.04315), np.float64(1.99085)) det=17  off-circle Alexander roots=2  sum eps=+0
+8_4     p/q=19/5  enters=True   first=(np.float64(0.265), np.float64(0.05725), np.float64(1.98682)) det=19  off-circle Alexander roots=2  sum eps=+2
+7_6     p/q=19/7  enters=True   first=(np.float64(0.555), np.float64(0.96769), np.float64(1.61658)) det=19  off-circle Alexander roots=2  sum eps=+2
+7_7     p/q=21/13  enters=True   first=(np.float64(0.725), np.float64(2.4109), np.float64(1.79077)) det=21  off-circle Alexander roots=4  sum eps=+0
+8_7     p/q=23/5  enters=True   first=(np.float64(1.42), np.float64(15.17381), np.float64(1.99422)) det=23  off-circle Alexander roots=4  sum eps=+2
+8_6     p/q=23/7  enters=True   first=(np.float64(0.27), np.float64(0.1387), np.float64(1.9778)) det=23  off-circle Alexander roots=2  sum eps=+2
+8_9     p/q=25/7  enters=True   first=(np.float64(0.285), np.float64(0.05046), np.float64(1.9857)) det=25  off-circle Alexander roots=6  sum eps=+0
+8_8     p/q=25/9  enters=True   first=(np.float64(1.335), np.float64(12.5092), np.float64(1.99978)) det=25  off-circle Alexander roots=4  sum eps=+0
+8_11    p/q=27/17  enters=True   first=(np.float64(0.35), np.float64(0.01562), np.float64(1.99227)) det=27  off-circle Alexander roots=2  sum eps=-2
+8_13    p/q=29/11  enters=True   first=(np.float64(0.57), np.float64(1.02019), np.float64(1.56499)) det=29  off-circle Alexander roots=4  sum eps=+0
+8_12    p/q=29/17  enters=True   first=(np.float64(0.305), np.float64(0.03919), np.float64(1.9865)) det=29  off-circle Alexander roots=4  sum eps=+0
+8_14    p/q=31/13  enters=True   first=(np.float64(0.39), np.float64(0.10615), np.float64(1.94334)) det=31  off-circle Alexander roots=2  sum eps=+2

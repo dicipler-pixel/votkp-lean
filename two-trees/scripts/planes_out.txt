@@ -1,0 +1,6 @@
+<N_u,N_u> = -7
+Q_u N_{-u} = -7 N_u for all u: True
+cosh d(plane(-u), plane(u)) = 25/7 = cosh l ; cosh d(plane(-u), plane(w perp)) = 9/7 = cosh delta
+sinh d(O, plane i)     = 1.13389341902768  sinh(l/2) = 1.13389341902768
+sinh d(B_iO, plane i)  = 1.13389341902768
+numerical min distance plane(-i) to plane(j) = 0.7389979438517325   delta = 0.7389979438517387

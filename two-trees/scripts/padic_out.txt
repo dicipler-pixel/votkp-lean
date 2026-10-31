@@ -1,0 +1,21 @@
+LPS det valuations {('i', 1): 1, ('i', -1): 1, ('j', 1): 1, ('j', -1): 1, ('k', 1): 1, ('k', -1): 1}
+LPS image lines mod 5 (point of P1(F5)) {('i', 1): ('inf', 0), ('i', -1): ('1', 0), ('j', 1): ('1', 3), ('j', -1): ('1', 2), ('k', 1): ('1', 4), ('k', -1): ('1', 1)}
+LPS six lines distinct: True
+LPS depth 1 words 6 distinct vertices so far 7 expected 7
+LPS depth 2 words 30 distinct vertices so far 37 expected 37
+LPS depth 3 words 150 distinct vertices so far 187 expected 187
+LPS depth 4 words 750 distinct vertices so far 937 expected 937
+LPS all reduced words up to depth 4: det-valuation=depth and vertices distinct: True
+BOOST det valuations {('i', 1): 1, ('i', -1): 1, ('j', 1): 1, ('j', -1): 1, ('k', 1): 1, ('k', -1): 1}
+BOOST image lines mod 5 (point of P1(F5)) {('i', 1): ('1', 4), ('i', -1): ('1', 1), ('j', 1): ('1', 3), ('j', -1): ('1', 2), ('k', 1): ('inf', 0), ('k', -1): ('1', 0)}
+BOOST six lines distinct: True
+BOOST depth 1 words 6 distinct vertices so far 7 expected 7
+BOOST depth 2 words 30 distinct vertices so far 37 expected 37
+BOOST depth 3 words 150 distinct vertices so far 187 expected 187
+BOOST depth 4 words 750 distinct vertices so far 937 expected 937
+BOOST all reduced words up to depth 4: det-valuation=depth and vertices distinct: True
+LPS eigenvalues 1+2i5 valuation 1  1-2i5 valuation 0
+LPS ratio == 5 ? False   ratio == 1/5 ? False
+5-adic digits of valuation of (a-5b), (b-5a): 1 0
+v(-3+4 i5)= 2  v(-3-4 i5)= 0
+v_5(36/5-4/5) = v(32)-1 = -1
