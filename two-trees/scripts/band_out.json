@@ -1,0 +1,498 @@
+{
+ "T(2,3)": {
+  "p": 3,
+  "q": 1,
+  "real_points": 1250,
+  "enters": false,
+  "first": null,
+  "last": null,
+  "det": 3,
+  "alex_offcircle_roots": 0,
+  "eps_sum": 2,
+  "alexander": "t**2 - t + 1"
+ },
+ "T(2,5)": {
+  "p": 5,
+  "q": 1,
+  "real_points": 2500,
+  "enters": false,
+  "first": null,
+  "last": null,
+  "det": 5,
+  "alex_offcircle_roots": 0,
+  "eps_sum": 4,
+  "alexander": "t**4 - t**3 + t**2 - t + 1"
+ },
+ "4_1": {
+  "p": 5,
+  "q": 3,
+  "real_points": 2206,
+  "enters": true,
+  "first": [
+   0.485,
+   0.13928,
+   1.87775
+  ],
+  "last": [
+   5.995,
+   161133.35419,
+   1.00001
+  ],
+  "det": 5,
+  "alex_offcircle_roots": 2,
+  "eps_sum": 0,
+  "alexander": "t**2 - 3*t + 1"
+ },
+ "T(2,7)": {
+  "p": 7,
+  "q": 1,
+  "real_points": 3714,
+  "enters": false,
+  "first": null,
+  "last": null,
+  "det": 7,
+  "alex_offcircle_roots": 0,
+  "eps_sum": 6,
+  "alexander": "t**6 - t**5 + t**4 - t**3 + t**2 - t + 1"
+ },
+ "5_2": {
+  "p": 7,
+  "q": 3,
+  "real_points": 3360,
+  "enters": true,
+  "first": [
+   0.725,
+   1.48801,
+   0.49759
+  ],
+  "last": [
+   5.995,
+   1e-05,
+   1e-05
+  ],
+  "det": 7,
+  "alex_offcircle_roots": 0,
+  "eps_sum": 2,
+  "alexander": "2*t**2 - 3*t + 2"
+ },
+ "6_1": {
+  "p": 9,
+  "q": 5,
+  "real_points": 4070,
+  "enters": true,
+  "first": [
+   0.35,
+   0.02623,
+   1.9873
+  ],
+  "last": [
+   5.995,
+   1e-05,
+   -1e-05
+  ],
+  "det": 9,
+  "alex_offcircle_roots": 2,
+  "eps_sum": 0,
+  "alexander": "2*t**2 - 5*t + 2"
+ },
+ "6_2": {
+  "p": 11,
+  "q": 3,
+  "real_points": 3286,
+  "enters": true,
+  "first": [
+   0.36,
+   0.16501,
+   1.93793
+  ],
+  "last": [
+   3.93,
+   2589.52066,
+   1.72975
+  ],
+  "det": 11,
+  "alex_offcircle_roots": 2,
+  "eps_sum": 2,
+  "alexander": "t**4 - 3*t**3 + 3*t**2 - 3*t + 1"
+ },
+ "7_2": {
+  "p": 11,
+  "q": 5,
+  "real_points": 4916,
+  "enters": true,
+  "first": [
+   0.605,
+   0.99262,
+   1.3458
+  ],
+  "last": [
+   5.995,
+   1e-05,
+   1.0
+  ],
+  "det": 11,
+  "alex_offcircle_roots": 0,
+  "eps_sum": 2,
+  "alexander": "3*t**2 - 5*t + 3"
+ },
+ "7_3": {
+  "p": 13,
+  "q": 3,
+  "real_points": 3738,
+  "enters": true,
+  "first": [
+   0.475,
+   0.50188,
+   1.76383
+  ],
+  "last": [
+   5.995,
+   0.0,
+   2.0
+  ],
+  "det": 13,
+  "alex_offcircle_roots": 0,
+  "eps_sum": 4,
+  "alexander": "2*t**4 - 3*t**3 + 3*t**2 - 3*t + 2"
+ },
+ "6_3": {
+  "p": 13,
+  "q": 5,
+  "real_points": 1712,
+  "enters": true,
+  "first": [
+   2.865,
+   305.9725,
+   1.99486
+  ],
+  "last": [
+   3.87,
+   2296.47137,
+   -1.31461
+  ],
+  "det": 13,
+  "alex_offcircle_roots": 4,
+  "eps_sum": 0,
+  "alexander": "t**4 - 3*t**3 + 5*t**2 - 3*t + 1"
+ },
+ "8_1": {
+  "p": 13,
+  "q": 7,
+  "real_points": 5268,
+  "enters": true,
+  "first": [
+   0.285,
+   0.00095,
+   1.99968
+  ],
+  "last": [
+   5.995,
+   1e-05,
+   1.0
+  ],
+  "det": 13,
+  "alex_offcircle_roots": 2,
+  "eps_sum": 0,
+  "alexander": "3*t**2 - 7*t + 3"
+ },
+ "7_4": {
+  "p": 15,
+  "q": 11,
+  "real_points": 5038,
+  "enters": true,
+  "first": [
+   0.485,
+   0.72051,
+   1.78635
+  ],
+  "last": [
+   5.995,
+   0.0,
+   1.5
+  ],
+  "det": 15,
+  "alex_offcircle_roots": 0,
+  "eps_sum": 2,
+  "alexander": "4*t**2 - 7*t + 4"
+ },
+ "8_2": {
+  "p": 17,
+  "q": 3,
+  "real_points": 3384,
+  "enters": true,
+  "first": [
+   0.295,
+   0.11919,
+   1.9715
+  ],
+  "last": [
+   2.315,
+   100.49217,
+   -1.18007
+  ],
+  "det": 17,
+  "alex_offcircle_roots": 2,
+  "eps_sum": 4,
+  "alexander": "t**6 - 3*t**5 + 3*t**4 - 3*t**3 + 3*t**2 - 3*t + 1"
+ },
+ "7_5": {
+  "p": 17,
+  "q": 5,
+  "real_points": 4514,
+  "enters": true,
+  "first": [
+   2.055,
+   58.96299,
+   1.99177
+  ],
+  "last": [
+   2.755,
+   245.14604,
+   -0.239
+  ],
+  "det": 17,
+  "alex_offcircle_roots": 0,
+  "eps_sum": 4,
+  "alexander": "2*t**4 - 4*t**3 + 5*t**2 - 4*t + 2"
+ },
+ "8_3": {
+  "p": 17,
+  "q": 13,
+  "real_points": 5928,
+  "enters": true,
+  "first": [
+   0.25,
+   0.04315,
+   1.99085
+  ],
+  "last": [
+   5.995,
+   0.0,
+   1.5
+  ],
+  "det": 17,
+  "alex_offcircle_roots": 2,
+  "eps_sum": 0,
+  "alexander": "4*t**2 - 9*t + 4"
+ },
+ "8_4": {
+  "p": 19,
+  "q": 5,
+  "real_points": 4228,
+  "enters": true,
+  "first": [
+   0.265,
+   0.05725,
+   1.98682
+  ],
+  "last": [
+   5.995,
+   0.0,
+   2.0
+  ],
+  "det": 19,
+  "alex_offcircle_roots": 2,
+  "eps_sum": 2,
+  "alexander": "2*t**4 - 5*t**3 + 5*t**2 - 5*t + 2"
+ },
+ "7_6": {
+  "p": 19,
+  "q": 7,
+  "real_points": 4894,
+  "enters": true,
+  "first": [
+   0.555,
+   0.96769,
+   1.61658
+  ],
+  "last": [
+   5.995,
+   1e-05,
+   1.00001
+  ],
+  "det": 19,
+  "alex_offcircle_roots": 2,
+  "eps_sum": 2,
+  "alexander": "t**4 - 5*t**3 + 7*t**2 - 5*t + 1"
+ },
+ "7_7": {
+  "p": 21,
+  "q": 13,
+  "real_points": 3426,
+  "enters": true,
+  "first": [
+   0.725,
+   2.4109,
+   1.79077
+  ],
+  "last": [
+   2.59,
+   175.66568,
+   -1.99817
+  ],
+  "det": 21,
+  "alex_offcircle_roots": 4,
+  "eps_sum": 0,
+  "alexander": "t**4 - 5*t**3 + 9*t**2 - 5*t + 1"
+ },
+ "8_7": {
+  "p": 23,
+  "q": 5,
+  "real_points": 3044,
+  "enters": true,
+  "first": [
+   1.42,
+   15.17381,
+   1.99422
+  ],
+  "last": [
+   5.995,
+   0.0,
+   2.0
+  ],
+  "det": 23,
+  "alex_offcircle_roots": 4,
+  "eps_sum": 2,
+  "alexander": "t**6 - 3*t**5 + 5*t**4 - 5*t**3 + 5*t**2 - 3*t + 1"
+ },
+ "8_6": {
+  "p": 23,
+  "q": 7,
+  "real_points": 4876,
+  "enters": true,
+  "first": [
+   0.27,
+   0.1387,
+   1.9778
+  ],
+  "last": [
+   1.945,
+   46.8466,
+   -1.96928
+  ],
+  "det": 23,
+  "alex_offcircle_roots": 2,
+  "eps_sum": 2,
+  "alexander": "2*t**4 - 6*t**3 + 7*t**2 - 6*t + 2"
+ },
+ "8_9": {
+  "p": 25,
+  "q": 7,
+  "real_points": 3954,
+  "enters": true,
+  "first": [
+   0.285,
+   0.05046,
+   1.9857
+  ],
+  "last": [
+   1.83,
+   36.78774,
+   -1.65437
+  ],
+  "det": 25,
+  "alex_offcircle_roots": 6,
+  "eps_sum": 0,
+  "alexander": "t**6 - 3*t**5 + 5*t**4 - 7*t**3 + 5*t**2 - 3*t + 1"
+ },
+ "8_8": {
+  "p": 25,
+  "q": 9,
+  "real_points": 4186,
+  "enters": true,
+  "first": [
+   1.335,
+   12.5092,
+   1.99978
+  ],
+  "last": [
+   5.995,
+   1e-05,
+   1.00001
+  ],
+  "det": 25,
+  "alex_offcircle_roots": 4,
+  "eps_sum": 0,
+  "alexander": "2*t**4 - 6*t**3 + 9*t**2 - 6*t + 2"
+ },
+ "8_11": {
+  "p": 27,
+  "q": 17,
+  "real_points": 4098,
+  "enters": true,
+  "first": [
+   0.35,
+   0.01562,
+   1.99227
+  ],
+  "last": [
+   5.995,
+   0.0,
+   2.0
+  ],
+  "det": 27,
+  "alex_offcircle_roots": 2,
+  "eps_sum": -2,
+  "alexander": "2*t**4 - 7*t**3 + 9*t**2 - 7*t + 2"
+ },
+ "8_13": {
+  "p": 29,
+  "q": 11,
+  "real_points": 4166,
+  "enters": true,
+  "first": [
+   0.57,
+   1.02019,
+   1.56499
+  ],
+  "last": [
+   5.995,
+   0.0,
+   2.0
+  ],
+  "det": 29,
+  "alex_offcircle_roots": 4,
+  "eps_sum": 0,
+  "alexander": "2*t**4 - 7*t**3 + 11*t**2 - 7*t + 2"
+ },
+ "8_12": {
+  "p": 29,
+  "q": 17,
+  "real_points": 7660,
+  "enters": true,
+  "first": [
+   0.305,
+   0.03919,
+   1.9865
+  ],
+  "last": [
+   5.995,
+   1e-05,
+   1.00001
+  ],
+  "det": 29,
+  "alex_offcircle_roots": 4,
+  "eps_sum": 0,
+  "alexander": "t**4 - 7*t**3 + 13*t**2 - 7*t + 1"
+ },
+ "8_14": {
+  "p": 31,
+  "q": 13,
+  "real_points": 5748,
+  "enters": true,
+  "first": [
+   0.39,
+   0.10615,
+   1.94334
+  ],
+  "last": [
+   5.995,
+   1e-05,
+   1.00002
+  ],
+  "det": 31,
+  "alex_offcircle_roots": 2,
+  "eps_sum": 2,
+  "alexander": "2*t**4 - 8*t**3 + 11*t**2 - 8*t + 2"
+ }
+}

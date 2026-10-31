@@ -1,0 +1,15 @@
+K11 palindrome e_{p-i}=e_i for odd q: 364 pairs (p<=59), failures 0
+K9 3_1 x=1.0 v=6.52439: max|Sigma p_k - p_{k+m}| = 2.4e-99 ; |Sigma^2 z - z| = 6.52e-101
+K10 3_1 v=6.5244: grid edges with a sign change of A = 7; of these with both ends on the same side of l = 0; A range [-5.839, 2.036]
+K9 4_1 x=1.2 v=9.01403: max|Sigma p_k - p_{k+m}| = 1.12e-96 ; |Sigma^2 z - z| = 1.79e-97
+K10 4_1 v=9.014: grid edges with a sign change of A = 7; of these with both ends on the same side of l = 0; A range [-5.91, 1.518]
+K9 5_2 x=1.2 v=0.213357: max|Sigma p_k - p_{k+m}| = 9.25e-98 ; |Sigma^2 z - z| = 2.03e-99
+K10 5_2 v=0.21336: grid edges with a sign change of A = 25; of these with both ends on the same side of l = 0; A range [-0.1355, 2.938]
+K9 5_2 x=1.2 v=8.99044: max|Sigma p_k - p_{k+m}| = 7.7e-96 ; |Sigma^2 z - z| = 5.08e-98
+K10 5_2 v=8.9904: grid edges with a sign change of A = 7; of these with both ends on the same side of l = 0; A range [-5.909, 1.523]
+K9 5_2 x=1.2 v=10.024: max|Sigma p_k - p_{k+m}| = 1.64e-94 ; |Sigma^2 z - z| = 6.37e-96
+K10 5_2 v=10.024: grid edges with a sign change of A = 7; of these with both ends on the same side of l = 0; A range [-5.918, 1.359]
+K12 (13,5) x=1.2 v=9.12776: max|A| on l = 8.44e-97 ; A off l = -1.75555
+K12 (13,5) x=1.2 v=10.0014: max|A| on l = 2.22e-96 ; A off l = -1.79572
+K12 (13,5) x=2.0 v=52.6168: max|A| on l = 1.46e-90 ; A off l = -2.18801
+K12 (13,5) x=2.0 v=53.5974: max|A| on l = 1.68e-90 ; A off l = -2.19145

@@ -1,0 +1,40 @@
+# Two Trees in One Ball: the five core-Lean files (no Mathlib) in two-trees/lean/.
+# Compiles each file with plain `lean`, counts theorems, scans for sorry/admit/native_decide/axiom,
+# audits the axioms of every theorem, and confirms every false control is rejected.
+name: Two Trees core Lean check
+
+on:
+  push:
+    paths:
+      - 'two-trees/**'
+      - '.github/workflows/two-trees-core.yml'
+  pull_request:
+    paths:
+      - 'two-trees/**'
+      - '.github/workflows/two-trees-core.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  core:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+
+      - name: Install Lean v4.34.1 (core only, no Mathlib)
+        run: |
+          set -euo pipefail
+          curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -o "$RUNNER_TEMP/elan-init.sh"
+          bash "$RUNNER_TEMP/elan-init.sh" -y --default-toolchain leanprover/lean4:v4.34.1
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+
+      - name: Compile, audit axioms, reject false controls
+        run: |
+          set -euo pipefail
+          lean --version
+          python3 two-trees/check_core.py

@@ -1,0 +1,25 @@
+ell = 1.94591014906  delta = 0.738997943852  delta/ell = 0.37976981836
+L  #words(first=i)  min[d-(l+(L-1)delta)]  min d   min d/(L l)   argmin word
+1 1 0.0 1.945910149 1.0 i
+2 5 0.5526302452 3.237538338 0.83188279 i j
+3 25 0.7894485265 4.213354563 0.72174531 i j -i
+4 125 0.8961968264 5.059100807 0.64996588 i j -i -j
+5 625 0.9457706911 5.847672616 0.60102185 i j -i -j i
+6 3125 0.9691316688 6.610031537 0.56614737 i j -i -j i j
+7 15625 0.9802175388 7.360115351 0.54033587 i j -i -j i j -i
+8 78125 0.9854959165 8.104391673 0.52060418 i j -i -j i j -i -j
+9 390625 0.9880131545 8.845906854 0.50509965 i j -i -j i j -i -j i
+refined bound d >= l(1+#straight) + delta(#turns): min margin per L
+(straight words i^L give equality d = L l exactly; listed below: words with >= 1 turn)
+2 0.5526302452 i j
+3 0.5343515109 i i j
+4 0.5145971448 i i j j
+5 0.5141899167 i i i j j
+6 0.513782024 i i i j j j
+7 0.5137736979 i i i i j j j
+8 0.5137653716 i i i i j j j j
+9 0.5137652017 i i i i i j j j j
+overall min margin (L>=2): 0.552630245241
+lower bound fails anywhere (tol 1e-40): False
+refined bound fails anywhere (tol 1e-40): False
+T4(9/7) = 23137/2401   commutator cosh(tau) = 23137/2401
