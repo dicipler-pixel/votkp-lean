@@ -10,3 +10,9 @@ and every false control must be rejected for the check to pass. What the stateme
 what they do not claim, is set out in plain words in `README.md` and `LIMITATIONS.md`.
 
 The 11 October 2026 energy-ledger extension, section 21 and data visual were developed with AI assistance. Lean validation and numerical data controls are reported separately.
+
+The November theta/colour extension used separate AI helpers for existing
+project setup, theta structure, grid certificates, colour, the multi-action
+observer, and an independent statement review. Machine validation and the
+review's interpretation checks are separate: a compiled conditional theorem
+does not establish its unproved knot or physical hypotheses.
