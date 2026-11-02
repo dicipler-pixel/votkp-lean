@@ -1,4 +1,5 @@
 import VOTKP.ThetaStructure
+import Mathlib.Data.ZMod.Basic
 
 -- Deliberately false even with nonzero weight: a ring with zero divisors
 -- does not support the cancellation used in the mirror equivalence.
