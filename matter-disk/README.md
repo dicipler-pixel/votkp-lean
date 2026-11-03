@@ -67,3 +67,7 @@ python3 s01_bridge.py      # and so on; numpy, scipy, matplotlib
 ```
 
 `s03d` writes the signature map that `fig01_signature_and_disk.py` draws.
+
+## Paper
+
+`paper/matter_then_on_down_v3.pdf`: the paper with Appendix A (every result used, proved), Appendix B (Lean module `VOTKP.MatterDisk`, 12 theorems, CI-checked) and Appendix C (every script with its output).
