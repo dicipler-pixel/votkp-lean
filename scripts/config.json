@@ -59,9 +59,13 @@
   {
    "module": "VOTKP.Witnesses",
    "path": "VOTKP/Witnesses.lean"
+  },
+  {
+   "module": "VOTKP.MatterDisk",
+   "path": "VOTKP/MatterDisk.lean"
   }
  ],
- "expected_theorems": 140,
+ "expected_theorems": 152,
  "expected_false_controls": 15,
  "root_imports": [
   "VOTKP.Smith",
