@@ -1,0 +1,4 @@
+5He: |Gamma|=1.074062 (VOTKP 1.074)  |Gamma|-1=0.074062  2s/(S_next-s)=0.074062  2s/S_next=0.071417
+5Li: |Gamma|=1.220318 (VOTKP 1.22)  |Gamma|-1=0.220318  2s/(S_next-s)=0.220318  2s/S_next=0.198457
+8Be: |Gamma|=1.025238 (VOTKP 1.025)  |Gamma|-1=0.025238  2s/(S_next-s)=0.025238  2s/S_next=0.024923
+VERDICT: exact identity holds

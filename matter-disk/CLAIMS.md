@@ -84,3 +84,21 @@ Grades: [T] proved, [V] verified numerically with controls, [C] conjecture, [H] 
   - Γ_b equals |1 − 2ν|, not the signed Γ.
   - A zero boundary count at T > 0 does not mean zero cross-boundary correlation (Tr X_A = 0.170835 in the warm ring).
   - For opened (non-Hermitian) matter, the count must use the radial |1 − 4λ|^½, not a real square root.
+
+## §10 His nuclear script, rerun (3 Nov 2026)
+
+- `mass_gaps_smith.py` from the VOTKP v2.9 package was run unchanged on NUBASE2020 via pynucastro. Its output matches §15.4 to every printed digit. [V]
+
+## §11 Is the exit the quarter-turn of the offset? (3 Nov 2026)
+
+- Source: a lead from the matter-downward lead finder (`leads/LEADS_matter_down_v1.md`, lead 1).
+- Identity: ⟨K⟩ = 1 + u²/(E(0)E(π)) = sec²(½ Im τ) with Im τ = 2 arctan(u/√(E(0)E(π))). So ⟨K⟩ = 2 ⇔ Im τ = π/2. [T]
+- Kill (written before the run): at u = 0.3, 0.5, 0.7 and v at 60/80/95 % of the exit, the gap between the measured census rotation and 2 arctan(u/√(E0 Eπ))/π is not smaller at block 160 than at block 20, or it exceeds 2 × 10⁻³ at block 160.
+- Outcome: KILL fires. The gaps are block-independent: +9.8e-3, +2.1e-2 and +3.4e-2 (u = 0.3); +4.9e-3, +8.0e-3 and +6.3e-3 (u = 0.5); about 1e-5 (u = 0.7). The opposite guess 2 arctan(u/E(π)) fails too, as required.
+- Follow-up probe (after the run, post hoc): the maximising level often has |Re W| ≈ 15–19, i.e. ν within 10⁻⁷–10⁻⁸ of an endpoint. These are the same filter-sensitive levels as §9.
+- Survives: both curves reach a quarter-turn at E(0)E(π) = u².
+
+## §12 The rim distance is exact (3 Nov 2026)
+
+- Kill (written before the run): the identity |Γ| − 1 = 2s/(S_next − s) misses by more than 1e-12 on ⁵He, ⁵Li or ⁸Be.
+- Outcome: exact, at 0.074062, 0.220318 and 0.025238. The author's 2s/S_next is the small-s form: 0.071417, 0.198457, 0.024923. [T][V]

@@ -27,6 +27,9 @@ Every section here is tagged with where its idea and its method come from. Only 
 | 7 | MINE (identity) + IMPORTED (thresholded count) | X_A = C_AB C_BA is my coupling energy from *The Weight Between* with H replaced by C: Tr X_A = ‖P_A C (1 − P_A)‖². The thresholded count and the ring table come from the 3 Nov gas review. |
 | 8 | IMPORTED | A textbook ideal Saha gas shown in my coordinate. It is a reproduction note, not a finding. |
 | 9 | IMPORTED (GPT, OpenAI tools) | The formal edition's proofs are standard mathematics about declared models. They do not implement or test my connection-energy / two-books framework, and the edition says so itself (§1, §16). Its filter audit and counterexample P3 are checks on §5 and §6, and both reproduce. |
+| 10 | MINE | My VOTKP script, rerun unchanged. |
+| 11 | MINE ON A TEST BED | My offset closed form continued to the opened SSH chain; killed as a description away from the exit. |
+| 12 | MINE | An exact form of my VOTKP §15.4 observation. |
 
 ## My papers to check first
 
