@@ -18,14 +18,18 @@ Every section here is tagged with where its idea and its method come from. Only 
 
 | § | Tag | Note |
 | :-: | :-- | :-- |
-| 1 | MINE | The bridge to the census. The identity itself is standard; the reading is mine. |
+| 1 | MINE | The bridge to the census. Summed over levels, ε is my signed offset τ = Tr[log(I − C) − log C] (*The Offset Speed Limit*). For a thermal occupation, Γ = tanh(ε/2) is the fermion-record point of *Beyond the Event Horizon*, ed. 10. |
 | 2 | MINE | The peel ladder, checked on the Ising chain. |
 | 3 | MINE ON A TEST BED | Non-Hermitian SSH chain. |
 | 4 | MINE | Across the Cayley pole; reproduces the ⁵He value of VOTKP §15.4. |
 | 5 | MINE ON A TEST BED | The exit law, on the SSH chain. |
 | 6 | MINE ON A TEST BED | Second model; it limits §5 to the PT-symmetric class. |
-| 7 | IMPORTED | The block identity comes from the 3 Nov gas review; the numbers reproduce that review. Comparison only. |
+| 7 | MINE (identity) + IMPORTED (thresholded count) | X_A = C_AB C_BA is my coupling energy from *The Weight Between* with H replaced by C: Tr X_A = ‖P_A C (1 − P_A)‖². The thresholded count and the ring table come from the 3 Nov gas review. |
 | 8 | IMPORTED | A textbook ideal Saha gas shown in my coordinate. It is a reproduction note, not a finding. |
+
+## My papers to check first
+
+Before building a test, check *The Weight Between*, *The Offset Speed Limit*, *Non-Normality Is Connection Energy*, *Two Trees in One Ball*, *When the Neutrinos Leave*, *Beyond the Event Horizon* ed. 10, *Colour Selects the Leader* and the Operator-First Atlas (B1–B207). The piece needed is usually already in one of them.
 
 ## Checks before anything leaves this folder
 
