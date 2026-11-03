@@ -2,6 +2,8 @@
 
 Jeromie Beasley. Working record, started 3 November 2026. Made with AI assistance (see [`AI_USE.md`](AI_USE.md)).
 
+**Read [`PROVENANCE.md`](PROVENANCE.md) first.** Every section is tagged there as MINE, MINE ON A TEST BED or IMPORTED, and only MINE sections count as findings.
+
 This folder is the growing home of one line of work. It joins three of my papers:
 
 - *Matter at a Scale* (August 2026): matter has no absolute size; the only place scale returns is a logarithmic boundary count with coefficient `A = 2c/π²`, where `c` is the central charge.
@@ -48,7 +50,7 @@ Kill conditions are written before each run. These are recorded in [`CLAIMS.md`]
 
 ## Adding a section
 
-Each new piece of work gets the next number `§n`: scripts named `sNN*_*.py`, each carrying `# SCRIPT: NAME` and its kill condition in the header; the verbatim output in `outputs/`; one row in the table above; and one entry in `CLAIMS.md`. Nothing earlier is rewritten. A section that changes an earlier one says so in its own row.
+Each new piece of work gets the next number `§n`: scripts named `sNN*_*.py`, each carrying `# SCRIPT: NAME` and its kill condition in the header; the verbatim output in `outputs/`; one row in the table above; one entry in `CLAIMS.md`; and its provenance tag in `PROVENANCE.md`. Nothing earlier is rewritten. A section that changes an earlier one says so in its own row.
 
 ## Run
 
