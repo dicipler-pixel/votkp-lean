@@ -1,0 +1,5 @@
+(this script prints nothing; it writes ../figures/fig02_boundary_and_gas.png, unchanged on rerun)
+
+real	0m2.170s
+user	0m1.608s
+sys	0m0.159s
