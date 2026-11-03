@@ -1,0 +1,86 @@
+<!doctype html><html><head><meta charset="utf-8"><title>One chart card</title>
+<style>
+html,body{margin:0;background:#05070c;overflow:hidden;font-family:"DejaVu Sans",Arial,sans-serif}
+#lab{position:absolute;inset:0;pointer-events:none}
+.l{position:absolute;color:#e8e2d0;font-size:26px;letter-spacing:.5px;white-space:nowrap;text-shadow:0 0 10px #000}
+.l small{display:block;font-size:18px;color:#9fb6c8;margin-top:4px}
+#title{position:absolute;left:0;right:0;top:5%;text-align:center;color:#f3ead2;opacity:0}
+#title h1{font-size:76px;margin:0;letter-spacing:2px;font-weight:600}
+#title h2{font-size:34px;margin:14px 0 0;color:#9fd3e6;font-weight:400}
+#title p{font-size:26px;margin:22px 0 0;color:#d8cfb8}
+</style></head><body>
+<div id="lab"></div>
+<div id="title"><h1>Matter, Then On Down</h1><h2>One chart, every scale</h2><p>Jeromie Beasley</p></div>
+<script src="node_modules/three/build/three.min.js"></script>
+<script>
+const W=1920,H=1080;
+const renderer=new THREE.WebGLRenderer({antialias:true,preserveDrawingBuffer:true});
+renderer.setSize(W,H); renderer.setPixelRatio(1); document.body.appendChild(renderer.domElement);
+const scene=new THREE.Scene(); scene.fog=new THREE.FogExp2(0x05070c,0.025);
+const cam=new THREE.PerspectiveCamera(38,W/H,0.1,200);
+let DATA=null;
+// glow sprite texture
+function glowTex(){const c=document.createElement('canvas');c.width=c.height=128;const g=c.getContext('2d');
+ const r=g.createRadialGradient(64,64,0,64,64,64);r.addColorStop(0,'rgba(255,255,255,1)');r.addColorStop(0.18,'rgba(255,255,255,0.85)');r.addColorStop(0.45,'rgba(255,255,255,0.25)');r.addColorStop(1,'rgba(255,255,255,0)');
+ g.fillStyle=r;g.fillRect(0,0,128,128);return new THREE.CanvasTexture(c);}
+const TEX=glowTex();
+function spr(col,size){const m=new THREE.SpriteMaterial({map:TEX,color:col,transparent:true,blending:THREE.AdditiveBlending,depthWrite:false});const s=new THREE.Sprite(m);s.scale.set(size,size,1);return s;}
+const R=2.2; // disk radius in scene units
+const LAYERS=[{y:4.8,name:'Matter',sub:'census ladder, Γ = tanh(ε/2)',col:0x3fb0d8},
+              {y:1.6,name:'The atom',sub:'peel walk of sodium; helium Γ₀ = 0.378',col:0xe0a640},
+              {y:-1.6,name:'The nucleus',sub:'bound inside, unbound outside the rim',col:0xa98be8},
+              {y:-4.8,name:'Opened matter',sub:'census levels leaving the disk',col:0x5ad08a}];
+const groups=[]; const labels=[];
+function disk(L){
+ const g=new THREE.Group(); g.userData.y0=L.y;
+ const fill=new THREE.Mesh(new THREE.CircleGeometry(R,96),new THREE.MeshBasicMaterial({color:L.col,transparent:true,opacity:0.07,side:THREE.DoubleSide,depthWrite:false}));
+ fill.rotation.x=-Math.PI/2; g.add(fill);
+ for(const rr of [0.25,0.5,0.75]){const pts=[];for(let i=0;i<=128;i++){const a=i/128*2*Math.PI;pts.push(new THREE.Vector3(R*rr*Math.cos(a),0,R*rr*Math.sin(a)));}
+  g.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts),new THREE.LineBasicMaterial({color:0x8899aa,transparent:true,opacity:0.18})));}
+ const pts=[];for(let i=0;i<=256;i++){const a=i/256*2*Math.PI;pts.push(new THREE.Vector3(R*Math.cos(a),0,R*Math.sin(a)));}
+ const rim=new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts),new THREE.LineBasicMaterial({color:0xf0e6cf,transparent:true,opacity:0.75}));g.add(rim);
+ const ax=[new THREE.Vector3(-R*1.15,0,0),new THREE.Vector3(R*1.15,0,0)];
+ g.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(ax),new THREE.LineBasicMaterial({color:0x8899aa,transparent:true,opacity:0.25})));
+ g.userData.items=[]; scene.add(g); return g;}
+function P(re,im){return new THREE.Vector3(R*re,0.02,-R*im);}
+function addPoint(g,re,im,col,size,t0){const s=spr(col,size);s.position.copy(P(re,im));s.userData.t0=t0;s.material.opacity=0;g.add(s);g.userData.items.push(s);return s;}
+function build(){
+ LAYERS.forEach((L,i)=>{const g=disk(L);groups.push(g);const d=document.createElement('div');d.className='l';d.innerHTML=L.name+'<small>'+L.sub+'</small>';document.getElementById('lab').appendChild(d);labels.push(d);});
+ // matter
+ DATA.ising.forEach((G,j)=>addPoint(groups[0],G,0,0x5fd0ff,0.55,1.2+0.25*j));
+ // atom: walk + helium
+ const wpts=DATA.sodium.map(G=>P(G,0)); const wl=new THREE.Line(new THREE.BufferGeometry().setFromPoints(wpts),new THREE.LineBasicMaterial({color:0xe0a640,transparent:true,opacity:0}));wl.userData.t0=3.0;wl.userData.line=true;groups[1].add(wl);groups[1].userData.items.push(wl);
+ DATA.sodium.forEach((G,j)=>addPoint(groups[1],G,0,0xffc05a,0.42,3.0+0.12*j));
+ addPoint(groups[1],DATA.helium,0.0,0xffffff,0.55,4.2);
+ // nucleus
+ DATA.nuc_in.forEach(([k,G],j)=>addPoint(groups[2],G,0,0xc7aef5,0.66,4.8+0.3*j));
+ DATA.nuc_out.forEach(([k,G],j)=>addPoint(groups[2],G,0,0xff7ab0,0.72,5.4+0.3*j));
+ // opened: one sprite pool, positions swapped per sweep frame
+ groups[3].userData.pool=[];for(let i=0;i<18;i++){const s=spr(0x6fe6a0,0.46);s.material.opacity=0;groups[3].add(s);groups[3].userData.pool.push(s);}
+}
+function smooth(x){x=Math.min(Math.max(x,0),1);return x*x*(3-2*x);}
+function renderAt(t){
+ // camera: slow orbit, rising to top-down during the fold
+ const fold=smooth((t-9.2)/2.3), endT=smooth((t-11.6)/1.2);
+ const ang=0.55+0.07*t; const dist=19.0-6.5*fold; const elev=0.42+1.05*fold;
+ cam.position.set(dist*Math.cos(elev)*Math.sin(ang),dist*Math.sin(elev),dist*Math.cos(elev)*Math.cos(ang));
+ cam.lookAt(0,1.6*endT,0); cam.up.set(0,1,0);
+ groups.forEach((g,i)=>{g.position.y=g.userData.y0*(1-fold);
+  g.userData.items.forEach(s=>{const a=smooth((t-s.userData.t0)/0.6)*(1-0.55*endT); if(s.userData.line) s.material.opacity=0.8*a; else s.material.opacity=a;});
+  g.children.forEach(c=>{if(c.material&&c.material.userData&&0){}});});
+ // opened-matter sweep: v from 0.30 to 0.495 between t=6 and t=9
+ const pool=groups[3].userData.pool; const k=Math.min(DATA.opened.length-1,Math.max(0,Math.floor((t-6.0)/3.0*(DATA.opened.length-1))));
+ const on=smooth((t-6.0)/0.5)*(1-0.55*endT); const pts=DATA.opened[k];
+ pool.forEach((s,i)=>{if(i<pts.length){s.position.copy(P(pts[i][0],pts[i][1]));const out=Math.hypot(pts[i][0],pts[i][1])>1.0001;s.material.color.setHex(out?0xff6a5a:0x6fe6a0);s.material.opacity=on;}else s.material.opacity=0;});
+ // fade disks slightly once merged so the merged chart reads as one
+ groups.forEach((g,i)=>g.children.forEach(c=>{if(c.isMesh) c.material.opacity=0.07*(1-0.6*fold)+0.02;}));
+ renderer.render(scene,cam);
+ // labels follow their disks' right edge
+ labels.forEach((d,i)=>{const v=new THREE.Vector3(R*1.25,groups[i].position.y,0).applyMatrix4(groups[i].matrixWorld.clone().setPosition(0,groups[i].position.y,0));
+  const p=new THREE.Vector3(R*1.3,groups[i].position.y,0).project(cam);d.style.left=((p.x*0.5+0.5)*W+20)+'px';d.style.top=((-p.y*0.5+0.5)*H-26)+'px';
+  d.style.opacity=(smooth((t-0.6-0.4*i)/0.8)*(1-smooth((t-8.8)/0.8))).toFixed(3);});
+ document.getElementById('title').style.opacity=smooth((t-11.4)/1.0).toFixed(3);
+}
+fetch('data.json').then(r=>r.json()).then(d=>{DATA=d;build();renderAt(0);window.READY=true;});
+window.renderAt=renderAt;
+</script></body></html>
