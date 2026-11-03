@@ -1,0 +1,9 @@
+# 2026-06-24_Spectral_Stability_Across_Obstruction_Interfaces (25 pp)
+Title (in text): "Spectral Stability Across Obstruction Interfaces in Geometric Transport Systems: Effective Inertia Tensors and Gluing Dynamics", Jeromie N Beasley, June 24 2026. fileId 1SQNNTO_HDpQOG-isTI903kacZ5MSDkNQ (Drive title "..._25pp_723ab87b.pdf"). 3032 lines extracted text.
+COVERAGE: This is the same paper as "obs (14)". I read obs (14) in full (see obs.md for every definition, theorem, formula and flag) and then did a line-level diff of this file against it (diff of non-blank lines, whole file). Differences are only:
+ 1. Abstract: here the duplicated abstract paragraph is absent; wording "quantitative bounds on resolvent growth within the pseudospectrum and on the Kreiss constant K(H_N(eps)) <= C' max_n Delta_n/sqrt(eps) (with possible additional factors linear in N and alpha_N) using the Kreiss Matrix Theorem" (obs (14): first paragraph says "show that the global Kreiss constant satisfies ... (with possible mild additional factors ...)").
+ 2. Table of contents: sections 7 / 7.1 listed in a different position.
+ 3. This file ends at the last sentence of Appendix A ("...unaffected.") with no reference list; obs (14) additionally prints 6-7 raw BibTeX-style reference entries.
+Body (Sections 1-12, Appendix A, Theorems 3.1, 8.1, 10.3, 11.1, Lemmas 9.1, A.1, Corollaries 8.2, 9.2, 10.4, Props 10.1 and the localization proposition, Defs 10.2, 12.1-12.3) is identical, so all facts, numbers, grades and flags are as in obs.md. No new numerics, no figures text beyond the same captions.
+Flags: same as obs.md (non-normality, Kreiss, pseudospectral bulges, rigidity interfaces/walls, "transport memory view" in 10.4; no Smith disk, offset/log-odds, census, EP).
+Note: sibling paper III is the 06-22 NonNormal_Lattice_Transport_Operators (see nonnormal_lattice.md); I did not diff those two.

@@ -1,0 +1,11 @@
+# Prospective addendum: reverse recovery of the peel from a gas
+
+Written 3 November 2026 after reading the newly supplied `matter-disk/scripts/s08_gas_carries_the_peel.py` at repository commit `881386a0ab00d917af6334a01423fb8b22469f5e`, and before executing the new formal gas controls. The original script's results are already known. Reproducing those results is retrospective; the following partition-weight opposite is a new internally specified control.
+
+1. General finite-charge identity: adjacent three-state population ratios cancel electron density and thermal wavelength, leaving `log(U_q U_(q+2)/U_(q+1)^2) - beta*(I_(q+1)-I_q)`.
+2. Full-ladder identity: `log[p0/(pZ*(ne*lambda^3)^Z)] = beta*sum(I) + log[U0/(2^Z*UZ)]`. The corrected expression requires `ne*lambda^3`; it is not a population-only observable.
+3. At two distinct temperatures, fixed partition weights yield threshold differences and the threshold sum from slopes. Those reconstruct the full ladder and its Cayley ratios. Across five densities `1e18,1e20,1e22,1e24,1e26 m^-3`, the reconstructed helium Gamma must agree with the input value within `1e-10`.
+4. Opposite control: hold the published helium thresholds fixed, but use the **synthetic**, positive excited-partition function `U0=1, U1(T)=2+4*exp[-10 eV/(k_B T)], U2=1`. This is a controlled model change, not a claim about helium's actual level spectrum. At temperatures 30,000 and 32,000 K, ignoring the partition variation must bias the recovered Gamma by more than `1e-3`, at every density above. Subtracting the known partition terms before taking slopes must recover Gamma within `1e-10`.
+5. For 16 seeded synthetic ladders with 2–8 ionization stages and fixed partition weights, the differences plus total-energy slope must reconstruct every input threshold within `1e-9` in dimensionless energy units. Temperature and density are positive; density may differ between the two temperatures. No experimental validation or new empirical identification is inferred from this closed-loop model calculation.
+
+The companion analytic theorem, rather than numerical agreement, establishes the general identities. All results and failed controls must remain in the output.

@@ -59,3 +59,28 @@ Grades: [T] proved, [V] verified numerically with controls, [C] conjecture, [H] 
 - Kill conditions (written before the run): (a) the review's populations at 10²² m⁻³ are missed by > 10⁻⁶ % at 10, 20, 50 kK, or the 20 kK density sweep misses 0.5680 % and 87.6482 %; (b) `Γ₀` read back from the gas differs from 0.377575066984 by > 10⁻⁹ at any density from 10¹⁸ to 10²⁶ m⁻³; (c) the two solvers disagree by > 10⁻¹².
 - Outcome: (a) all match; (b) worst 2.2 × 10⁻¹⁶, with D = 29.830376517 eV and B = 79.005154539 eV at every density; (c) PASS. [T] in the model, [V].
 - Scope: exact only for ground-state weights. Excited-state `U(T)` is the opposite test, and it is open.
+
+## §9 The GPT formal edition, checked (3 Nov 2026)
+
+- Source: *Matter, Gases and VOTKP — Formal Research Edition*, 3 Nov 2026, prepared with OpenAI tools for Open Math OS review. It was handed over by Jeromie and is kept unchanged in `external/gpt_formal_20261103/`. The reproduction zip (51 MB) is not committed; its SHA-256 is recorded there.
+- Kill conditions for my independent check (written before the run):
+  - (1) its endpoint-filter table for the §6 massive exit fails to reproduce at 10⁻⁶, 10⁻⁸, 10⁻⁹, 10⁻¹⁰, 10⁻¹² to 4 digits;
+  - (2) its P3 counterexample shows a level leaving {0, 1}, or a band average other than 2;
+  - (3) its D5 matrix is not idempotent;
+  - (4) 4 Tr X_A > I_G in any of 200 random Gaussian cases;
+  - (5) its G9 biased value 0.36614943350748 fails to reproduce to 10⁻¹⁰.
+- Outcome:
+  - (1) reproduces: 0.271637, 0.271637, 0.169170, 0.169170, 0.122722 (theirs 0.122791 at 10⁻¹², the same 3 digits);
+  - (2) block eigenvalues sit within 10⁻¹⁴ of {0, 1}, with ⟨K⟩ = 2.000000;
+  - (3) idempotent, Y_A = −2;
+  - (4) minimum margin 2.0 × 10⁻³ ≥ 0;
+  - (5) 0.36614943350815.
+  - Their gas verifier: 18/18 PASS. Their adversarial, Gaussian-information and moment scripts: status PASS.
+  - Lean: not rebuilt (no toolchain here). The sources contain no `sorry`. [V]
+- What this changes, as an addition (§5 and §6 stay as written):
+  - §6's massive exit value is a property of the 10⁻⁹ endpoint filter, not a filter-free threshold.
+  - §5's ⟨K⟩ = 2 exit statement needs its coupling and partition assumptions; P3 shows that the average alone does not force an exit.
+- Their framing points that I accept:
+  - Γ_b equals |1 − 2ν|, not the signed Γ.
+  - A zero boundary count at T > 0 does not mean zero cross-boundary correlation (Tr X_A = 0.170835 in the warm ring).
+  - For opened (non-Hermitian) matter, the count must use the radial |1 − 4λ|^½, not a real square root.

@@ -26,10 +26,15 @@ Every section here is tagged with where its idea and its method come from. Only 
 | 6 | MINE ON A TEST BED | Second model; it limits §5 to the PT-symmetric class. |
 | 7 | MINE (identity) + IMPORTED (thresholded count) | X_A = C_AB C_BA is my coupling energy from *The Weight Between* with H replaced by C: Tr X_A = ‖P_A C (1 − P_A)‖². The thresholded count and the ring table come from the 3 Nov gas review. |
 | 8 | IMPORTED | A textbook ideal Saha gas shown in my coordinate. It is a reproduction note, not a finding. |
+| 9 | IMPORTED (GPT, OpenAI tools) | The formal edition's proofs are standard mathematics about declared models. They do not implement or test my connection-energy / two-books framework, and the edition says so itself (§1, §16). Its filter audit and counterexample P3 are checks on §5 and §6, and both reproduce. |
 
 ## My papers to check first
 
 Before building a test, check *The Weight Between*, *The Offset Speed Limit*, *Non-Normality Is Connection Energy*, *Two Trees in One Ball*, *When the Neutrinos Leave*, *Beyond the Event Horizon* ed. 10, *Colour Selects the Leader* and the Operator-First Atlas (B1–B207). The piece needed is usually already in one of them.
+
+## Reading notes
+
+[`corpus-notes/`](corpus-notes/) holds AI reading notes from full reads of my papers (3 Nov 2026), one file per paper, each with its coverage and the places the text was cut off. They are notes about my papers, not my text, and the paper itself is the authority.
 
 ## Checks before anything leaves this folder
 

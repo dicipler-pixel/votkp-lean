@@ -1,0 +1,11 @@
+(1) massive band t1=0.5 m=0.4, exit gamma by endpoint filter:
+    filter 1e-06: exit gamma 0.271636928
+    filter 1e-08: exit gamma 0.271636928
+    filter 1e-09: exit gamma 0.169169918
+    filter 1e-10: exit gamma 0.169169918
+    filter 1e-12: exit gamma 0.122721579
+    massless t1=0.5 m=0, filters 1e-8 and 1e-12: 0.474341648 0.474123961
+(2) P3 w=0, v^2=2u^2: max distance of block eigenvalues from {0,1} = 1.0e-14 ; band <K> = 1+u^2/(E0 Epi) = 1.9999999999999996
+(3) D5: C^2==C True  Y_A = -2  A-A^2 = -2
+(4) B13 lower bound: min of I_G - 4 Tr X_A over 200 random cases = 2.025e-03 (>=0 required)
+(5) G9 naive Gamma with synthetic U1(T): 0.36614943350815 (claim 0.36614943350748); exact 0.37757506698375
