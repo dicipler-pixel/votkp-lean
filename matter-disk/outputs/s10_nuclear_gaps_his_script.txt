@@ -1,0 +1,6 @@
+case                                                  S first (keV)  S next (keV)  |Gamma|  half-life (NUBASE)
+5He: remove n, then n from 4He                               -734.8       20577.6    1.074  602     ys
+5Li: remove p, then p from 4He                              -1966.1       19813.9    1.220  370     ys
+8Be: remove alpha (12C ladder: 12C -> 8Be -> 4He)             -91.8        7366.6    1.025  81.9   as
+7Li (bound, for contrast): remove n, then n from 6Li         7251.1        5664.4    0.123  stbl
+4He (bound): remove n, then p from 3He                      20577.6        5493.5    0.579  stbl

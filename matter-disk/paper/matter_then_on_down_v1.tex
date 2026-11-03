@@ -1,0 +1,217 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx,booktabs,xcolor}
+\usepackage{listings}
+\usepackage[hidelinks]{hyperref}
+\lstset{basicstyle=\ttfamily\scriptsize,breaklines=true,columns=fullflexible,frame=single,framerule=0.3pt,rulecolor=\color{gray}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newcommand{\grade}[1]{\textsf{\small[#1]}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\title{Matter, Then On Down\\[4pt]\large One coordinate from bulk matter to the nucleus}
+\author{Jeromie Beasley}
+\date{3 November 2026 \quad Draft v1}
+\begin{document}
+\maketitle
+
+\noindent\emph{Prepared with AI assistance (Claude, Anthropic): the ideas and research direction are the author's; the computation, drafting and checking were done with AI tools. This draft was assembled from the author's published papers for his review.}
+
+\begin{abstract}
+Matter has no absolute size. The one place scale returns is a logarithmic boundary count whose coefficient is fixed by the central charge, $A=2c/\pi^2$ for an interval. This paper follows that boundary downward. At every scale the same function, $\Gamma=(z-1)/(z+1)=\tanh(\tfrac12\ln z)$, reads a ratio: occupation odds at a cut of bulk matter, successive removal energies of an atom, separation energies of a nucleus, and the complex odds of opened, non-Hermitian matter. The boundary census is the gauge without its sign; the signed offset $\tau=\log\det(I-C)-\log\det C$ is its clock face, and it moves only as fast as the coupling energy across the cut allows. The thermal entanglement ladder of the Ising chain is a peel ladder with one constant step. Helium's two thresholds give $\Gamma_0=0.377575$. The unbound nuclei ${}^5$He, ${}^5$Li and ${}^8$Be sit outside the disk at $|\Gamma|=1.074$, $1.220$, $1.025$, recomputed here from NUBASE2020, and their rapidity has turned half a revolution. Opened matter leaves the disk before its critical point; on the PT-symmetric chain the exit line is $E(0)E(\pi)=u^2$, equivalently a band-averaged Petermann factor of exactly 2, and the conditions under which that holds are stated with their counterexamples. Every claim carries a grade, every number a script, and the scripts are printed with their outputs at the end.
+\end{abstract}
+
+\paragraph{Grades.} \grade{T} proved here or in the cited paper of the author; \grade{V} verified numerically with stated controls; \grade{R} a reproduction of a known result in this coordinate; \grade{C} conjecture; \grade{H} a reading. \grade{lit} marks comparison with other people's published data.
+
+\section{Matter has no absolute size}
+Every instrument needs a zero and a span. In the operator framework of \emph{Matter at a Scale} (v5) and \emph{Foundational Operator Field Theory}, the zero is free and so is the span: difference observables are unchanged by $K\mapsto K+cI$, and spectral projectors, principal angles and the infrared boundary census are unchanged by $K\mapsto cK$ with $c>0$ \grade{T}. Only ratios are observable.
+
+The single failure is ultraviolet. For a region $A$ with $|\partial A|$ boundary points in a substrate of correlation length $\xi$ and central charge $c$, the number $N$ of eigenvalues of the restricted correlation matrix in $[\varepsilon,1-\varepsilon]$ grows as
+\begin{equation}
+N=|\partial A|\,\frac{c}{\pi^2}\,\log\frac{\xi}{a}\,\log\frac1\varepsilon+\dots
+\label{eq:census}
+\end{equation}
+so a two-endpoint interval carries $A=2c/\pi^2$ \grade{T}. The coefficient was measured at $c=1$ as $0.202692$ against $2/\pi^2=0.202642$, and at $c=\tfrac12$ (the transverse-field Ising chain) as $0.103689$, bracketing $1/\pi^2$ from both sides and $41.8$ times closer to it than to the $c=1$ value \grade{V}. \emph{The Angle Between the Rails} derives the same coefficient from the spacing $\Delta=4\pi K(\tilde u)/K'(\tilde u)$ of the entanglement ladder, $N=4\Lambda/\Delta$ for two cuts \grade{T}. A rescaling of the substrate is registered only as a running, never as a power.
+
+The physical reading of \emph{Matter at a Scale} is the starting point of everything below: matter is a gap wearing a boundary. A gapped substrate keeps a finite, area-law census; gas, the gapless phase, floods it.
+
+\section{The boundary keeps a ledger}
+\subsection{Census, offset and one chart}
+Let $C$ be the one-body correlation matrix of a region, with eigenvalues $\nu\in(0,1)$. Each level has odds $z=(1-\nu)/\nu$ and a rapidity $\varepsilon=\ln z$. Write $\Gamma=(z-1)/(z+1)$.
+
+\begin{proposition}[the bridge] \label{prop:bridge}
+$\Gamma=\tanh(\varepsilon/2)=1-2\nu$, and the window $\nu\in[\delta,1-\delta]$ is the disk $|\Gamma|\le1-2\delta$. The binary entropy integrated over the rapidity is $\int_{-\infty}^{\infty}H(\nu(\varepsilon))\,d\varepsilon=\pi^2/3$. \grade{T}
+\end{proposition}
+\begin{proof}
+With $z=(1-\nu)/\nu$: $z-1=(1-2\nu)/\nu$ and $z+1=1/\nu$, so $\Gamma=1-2\nu$. Also $(e^\varepsilon-1)/(e^\varepsilon+1)=\tanh(\varepsilon/2)$. The window statement is $|1-2\nu|\le1-2\delta$. For the integral, $\nu=1/(1+e^\varepsilon)$ and $d\nu=-\nu(1-\nu)\,d\varepsilon$, so $\int H\,d\varepsilon=\int_0^1 H(\nu)/(\nu(1-\nu))\,d\nu=2\int_0^1(-\ln\nu)/(1-\nu)\,d\nu=2\zeta(2)=\pi^2/3$.
+\end{proof}
+Checked to $1.1\times10^{-16}$ and $6.7\times10^{-15}$ (script \texttt{s01}). The identity $1-2\nu=\tanh(\varepsilon/2)$ is standard in entanglement-spectrum work; the reading is the author's. \emph{The Offset Speed Limit} (Appendix B) names the same function four ways at once: the Smith-chart reflection $(z-1)/(z+1)$, the two-level Gibbs population gap $\tanh(\beta\Delta/2)$, the asymmetry $1-2\nu$ of an occupation against its log-odds, and the peel coordinate of VOTKP.
+
+Summed over the levels of the region, the rapidity is the author's signed offset,
+\begin{equation}
+\tau=\sum_\nu \varepsilon_\nu=\Tr[\log(I-C)-\log C]=\log\frac{\det(I-C)}{\det C}=\log\frac{P(N_A=0)}{P(N_A=|A|)},
+\end{equation}
+the log-odds of the region being empty against full (\emph{The Offset Belongs to the Boundary}, v31, Theorem 2) \grade{T}. The census counts levels inside a window of $\nu(1-\nu)$, and $\nu(1-\nu)=(1-\Gamma^2)/4$ is blind to the sign of $\Gamma$. In the author's words: ``The offset is the clock face; the census is the gauge without its sign.'' The census of $\mathrm{diag}(0.2,0.8)$ and of $\mathrm{diag}(0.2,0.2)$ is the same $0.16I$; their offsets are $0$ and $\log16$.
+
+\subsection{The weight between and the speed of the record}
+Split the space into the region $A$ and the rest $B$. Block multiplication gives the exact defect split
+\begin{equation}
+C_A-C_A^2=(C-C^2)_{AA}+X_A,\qquad X_A=C_{AB}C_{BA}.
+\label{eq:split}
+\end{equation}
+For a pure state $C^2=C$, so $X_A=C_A(1-C_A)$ and the eigenvalues of $X_A$ are $\nu(1-\nu)$. Then $\Gamma_b=\sqrt{1-4\lambda(X_A)}=|1-2\nu|$: the boundary coordinate is the modulus of the census point, not the signed point \grade{T}. And $\Tr X_A=\|P_AC(1-P_A)\|_F^2$ is the coupling energy $E_B=\|PH(1-P)\|^2$ of \emph{The Weight Between}, with the correlation matrix in place of the generator \grade{T}.
+
+The offset moves only through that coupling (\emph{The Offset Speed Limit}, Theorem 1 and Corollary 3): for a family of projectors with $C=E^\dagger PE$, $0<C<I$, $g=\tfrac12\|\dot P\|_F^2$ and $S=\Tr[(C(I-C))^{-1}]$,
+\begin{equation}
+\dot\tau^2\le4gS,\qquad |\dot\tau|\le2\sqrt{E_BS}\ \text{ when }\dot P=-i[H,P],
+\end{equation}
+with equality exactly along the trajectories the theorem names \grade{T}. If $PH(1-P)=0$ the offset is frozen: no weight between, no motion of the record, no memory.
+
+\subsection{Warm matter: heat moves the gauge, not the cut}
+At finite temperature $C^2\neq C$. The first term of \eqref{eq:split} is mixing inside the region; only $X_A$ crosses the cut. Counting $\lambda(X_A)\ge\varepsilon(1-\varepsilon)$ instead of $\nu\in[\varepsilon,1-\varepsilon]$ separates the two. On a ring of 128 sites (antiperiodic, $\mu=0$, half-ring region, $\varepsilon=0.1$) the raw count rises from 2 to 24 to 64 as $T$ goes $0\to0.5\to2$, while the boundary count goes $2\to0\to0$; disconnected sites $C=0.3I$ give raw 32, boundary 0 \grade{V} (script \texttt{s07}, Figure~\ref{fig:boundary}, left). A boundary count of zero means every cross-cut strength is below the threshold, not that the cut is uncorrelated: $\Tr X_A=0.170835$ in the warm uniform ring. The block identity and these numbers are standard finite-dimensional facts and were also recorded in an independent review of 3 November 2026; the identification of $X_A$ with the weight between is the author's.
+
+\subsection{Gas}
+\emph{Matter at a Scale} §4 makes gas the gapless phase: the census floods as $L\log L$, directions are free and failures are non-modal. On the disk the gas state is a layer that can be varied freely while an atomic record survives it. In an ideal Saha helium gas built on VOTKP's two thresholds, each pair of neighbouring charge states is a disk point that sweeps the whole diameter with temperature and density, while the density-free combinations $\ln(n_0n_2/n_1^2)$ and $\ln(n_0/(n_2n_e^2\lambda_e^6))$ have temperature slopes $-(I_1-I_0)$ and $I_0+I_1$, returning $\Gamma_0=0.377575066984$ at every density from $10^{18}$ to $10^{26}\,\mathrm{m^{-3}}$ (Figure~\ref{fig:boundary}, right). This is a reproduction in the declared ideal model \grade{R}; with temperature-dependent partition functions the naive read-back is biased (to $0.366149$ for a synthetic excited level) and the known correction restores it.
+
+\begin{figure}[t]\centering
+\includegraphics[width=\textwidth]{fig02_boundary_and_gas.png}
+\caption{Left: heat pulls raw census levels toward the centre of the disk; the boundary coordinate $|\Gamma_b|$ keeps only what crosses the cut. Right: helium's charge-state pairs sweep the disk as the gas changes, while $\Gamma_0$ read back from the gas stays at $0.377575$.}
+\label{fig:boundary}
+\end{figure}
+
+\section{One chart for all of it}
+\begin{theorem}[peel steps add like velocities; VOTKP Theorem 15.1]\label{thm:add}
+For a positive ladder $I_0,\dots,I_n$ with steps $\Gamma_k=\tanh(\tfrac12\ln(I_{k+1}/I_k))$, the composite of a block of steps is $\Gamma_{j\to l}=\Gamma_j\oplus\Gamma_{j+1}\oplus\dots\oplus\Gamma_{l-1}$, with $u\oplus v=(u+v)/(1+uv)$. \grade{T}
+\end{theorem}
+\begin{proof}
+$\ln(I_l/I_j)=\sum_k\ln(I_{k+1}/I_k)$, and $\tanh(a+b)=\tanh a\oplus\tanh b$.
+\end{proof}
+This is Einstein's addition of collinear velocities; the half-rapidities add. On the Smith disk read as the Poincaré disk the peel is a walk along a geodesic diameter whose hyperbolic lengths add (VOTKP Corollary 15.2) \grade{T}. The composite forgets the order of its steps; the resolved ladder keeps it.
+
+\paragraph{Matter's census ladder is a peel ladder.} On the transverse-field Ising chain ($c=\tfrac12$) the single-particle entanglement energies are odd multiples $\varepsilon_0,3\varepsilon_0,5\varepsilon_0,\dots$ of one spacing (\emph{Matter at a Scale}, LADDER-C12-01). By Theorem~\ref{thm:add} the levels then satisfy $\Gamma_{j+1}=\Gamma_j\oplus\tanh\varepsilon_0$: one constant peel step. Measured residuals are $8.0\times10^{-6}$, $5.5\times10^{-6}$, $3.2\times10^{-6}$ at $\xi=20.5$, $50.5$, $125.5$, and the ladder's own uniformity error falls $0.022$, $0.011$, $0.0062$ \grade{V} (script \texttt{s02}). Near the rim the disk compresses differences, so the informative number is the uniformity error in rapidity.
+
+\begin{figure}[t]\centering
+\includegraphics[width=0.82\textwidth]{fig03_matter_then_down.png}
+\caption{One chart, every scale. Blue: the Ising census ladder, $\Gamma=\tanh(\varepsilon/2)$. Gold: sodium's peel walk $\tanh(\frac12\ln I_k/I_1)$ from NIST thresholds, and helium's $\Gamma_0$. Purple: nuclear separation-energy peels; bound nuclei inside, the unbound mass-5 and mass-8 gaps outside (VOTKP §15.4, recomputed from NUBASE2020). Green and red: census levels of the opened non-Hermitian SSH chain ($u=0.5$) before ($v=0.30$) and past ($v=0.49$) its exit.}
+\label{fig:hero}
+\end{figure}
+
+\section{The atom}
+For an atom the ratio is between successive relaxed removal thresholds, $z_q=I_{q+1}/I_q$, and every step lies on the positive real radius (VOTKP §8, Theorem 8.1 chart). Helium's two thresholds, $24.587389011$ and $54.4177655282$\,eV, give $\Gamma_0=0.377575066984$ and a binding sum of $79.0051545392$\,eV \grade{T}. An anchor and the full coordinate vector reconstruct the ladder exactly, $I_q=I_0\prod_{j<q}(1+\Gamma_j)/(1-\Gamma_j)$, and a common scale leaves every $\Gamma$ unchanged \grade{T}. VOTKP Theorem 15.4 (scale blindness) is the atomic form of §1: multiplying every mass by $\lambda$ scales every energy by $\lambda$ and leaves every ratio fixed, so the peel coordinate is blind to which particle carries the charge except through charges, mass ratios and statistics \grade{T}. The coordinate needs a physical zero: removal energies are measured from the continuum, which is why the ratio means something, and why quantum-dot addition spectra, which can be moved up or down, have no peel (VOTKP §15.3).
+
+Sodium's eleven thresholds walk from the centre to $\Gamma=0.9938$ along one diameter (Figure~\ref{fig:hero}); shell jumps are the long strides. The last peel step is derived in closed form (VOTKP §15.10), and the middle of the peel follows the Thomas–Fermi law with $\Gamma_k\to\tanh(\tfrac23\ln\tfrac{k+1}{k})\approx2/(3k)$ (§15.11, cited there) \grade{T}/\grade{lit}.
+
+\section{The nucleus}
+A nucleus peels by separation energies. VOTKP §15.4 uses $z=S_{\mathrm{next}}/S_{\mathrm{first}}$ and the same $\Gamma$, ``the form that extends to $z<0$''. A bound peel has $z>0$ and sits inside the disk. A negative separation energy gives $z<0$ and $|\Gamma|>1$; $z=-1$ is a Cayley pole, and the real logarithmic rapidity is not extended across it. Recomputed here from NUBASE2020 with the author's own script:
+
+\begin{center}
+\begin{tabular}{lrrrl}\toprule
+case & $S_{\mathrm{first}}$ (keV) & $S_{\mathrm{next}}$ (keV) & $|\Gamma|$ & half-life\\\midrule
+${}^5$He: $n$, then $n$ from ${}^4$He & $-734.8$ & $20577.6$ & $1.074$ & 602 ys\\
+${}^5$Li: $p$, then $p$ from ${}^4$He & $-1966.1$ & $19813.9$ & $1.220$ & 370 ys\\
+${}^8$Be: $\alpha$ ($^{12}$C ladder) & $-91.8$ & $7366.6$ & $1.025$ & 81.9 as\\
+${}^7$Li (bound) & $7251.1$ & $5664.4$ & $0.123$ & stable\\
+${}^4$He (bound) & $20577.6$ & $5493.5$ & $0.579$ & stable\\\bottomrule
+\end{tabular}
+\end{center}
+\noindent These agree with VOTKP §15.4 to every printed digit \grade{V}\grade{lit}. The placement says no more than the sign of a separation energy, and the author's own caution stands: a resonance's leak through its barrier ``is not a literal atomic or nuclear Smith reflection derived from the threshold coordinate''.
+
+\paragraph{The half-turn.} Write $\Gamma=\tanh(W/2)$ with $W=\operatorname{Log}z$ (principal branch). For $z\neq-1$, $|z+1|^2-|z-1|^2=4\operatorname{Re}z$, so $|\Gamma|<1\iff\operatorname{Re}z>0\iff|\operatorname{Im}W|<\pi/2$ \grade{T}. A negative ratio has $\operatorname{Im}W=\pi$ exactly: the three unbound nuclei are peels whose rapidity has turned half a revolution, and the rim of the disk is the quarter-turn. Random complex $z$ ($4000$ draws) give zero mismatches, and $z=-28$ gives $\Gamma=1.0741$, the ${}^5$He value \grade{V} (script \texttt{s04a}). A complex ratio by itself does not leave the disk: $z=1-i\gamma$ stays inside for every $\gamma$, since $\operatorname{Re}z>0$. Leaving needs a ratio whose real part changes sign.
+
+\section{Opened matter}
+\subsection{The opened chain}
+Opening matter means a non-Hermitian generator. The cone paper (v8) proves that at a Hermitian point the round-trip form $Q(\theta)=M_{+-}M_{-+}/(E_+-E_-)^2$ has $\operatorname{Re}Q\ge0$, so no cone exists there, and measures a Lorentzian cone when the system is opened \grade{T}/\grade{V}. Take the PT-symmetric SSH chain
+\[
+h(k)=\begin{pmatrix} iu & v+we^{-ik}\\ v+we^{ik} & -iu\end{pmatrix},\qquad E(k)^2=|v+we^{ik}|^2-u^2,
+\]
+fill the lower band with the biorthogonal projector, and restrict to a block. The occupations are complex, and so is $\Gamma=1-2\nu$; the biorthogonal $C$ is still idempotent ($\|C^2-C\|\le3\times10^{-14}$), so $Y_A=C_{AB}C_{BA}=C_A-C_A^2$ and the radial census $\sqrt{|1-4\lambda|}=|1-2\nu|$ survive opening \grade{T}\grade{V}. On the opened plane at $u=0.5$ the band metric is Lorentzian over $93\%$ of the cells, its determinant changes sign exactly at the critical points $|v-w|=u$, and the closed plane is degenerate \grade{V}. At the critical point the Rényi-2 central charge reads $-1.79\to-1.96$ on the $v<w$ side \grade{V}; the $v>w$ side has not converged. A negative fitted coefficient is a property of the biorthogonal entropy convention, not a negative number of channels.
+
+\subsection{Where opened matter leaves the disk}
+Approaching the critical point at fixed $u$, the census levels leave the disk \emph{before} it, inside the gapped phase, and the exit does not move under a fourfold larger block or a doubled ring ($v_{\mathrm{exit}}=0.468$ at $u=0.5$) \grade{V}. At every critical point tested ($u=0.2,\dots,0.7$) a level sits at $\operatorname{Im}W=\pi$ exactly: the half-turn of the unbound nuclei.
+
+\begin{proposition}[the exit line of the PT-symmetric chain]
+The Petermann factor of the lower band is $K(k)=1+u^2/E(k)^2$, and for $A=v^2+w^2-u^2>|2vw|$ its band average is
+\[
+\langle K\rangle=1+\frac{u^2}{\sqrt{A^2-B^2}}=1+\frac{u^2}{E(0)E(\pi)},\qquad B=2vw.
+\]
+Hence $\langle K\rangle=2\iff E(0)E(\pi)=u^2$. \grade{T}
+\end{proposition}
+\begin{proof}
+For $h=d\cdot\sigma$ with $E^2=d\cdot d$ the band projector is $P=\tfrac12(I-h/E)$ and $K=\Tr P^\dagger P=\tfrac12(1+\sum|d_j|^2/|E|^2)$. Here $d=(\operatorname{Re}q,\operatorname{Im}q,iu)$, so $\sum|d_j|^2=|q|^2+u^2$ and $|E|^2=|q|^2-u^2$, giving $K=1+u^2/E^2$. With $E^2=A+B\cos k$ and $\frac1{2\pi}\int_0^{2\pi}\frac{dk}{A+B\cos k}=\frac1{\sqrt{A^2-B^2}}$, and $\sqrt{A^2-B^2}=\sqrt{A+B}\sqrt{A-B}=E(0)E(\pi)$.
+\end{proof}
+Checked to $3.6\times10^{-14}$. Predicted from $\langle K\rangle=2$ at three values of $u$ not used before, the exits are $0.7474014$, $0.5291503$, $0.2357262$; measured, $0.7474015$, $0.5291503$, $0.2357262$ (differences $4\times10^{-8}$ and below) \grade{V}.
+
+\paragraph{The limits of the exit law.} Three findings scope it, and they belong in the statement.
+\begin{enumerate}
+\item On the cone paper's band made one-dimensional, $d=(t_1+\cos k,\sin k,m+i\gamma)$, a mass term moves the exit far earlier ($\langle K\rangle\approx1.015$–$1.022$); the law holds only at $m=0$, which is the SSH class \grade{V}.
+\item The massive exit depends on the endpoint filter that discards levels with $\nu$ at $0$ or $1$: $\gamma_{\mathrm{exit}}=0.27164$ at filters $10^{-6}$ and $10^{-8}$, $0.16917$ at $10^{-9}$ and $10^{-10}$, $0.12272$ at $10^{-12}$, while the massless exit stays at $0.47434$ through $10^{-8}$ \grade{V}. This was found in an independent formal review (3 November 2026) and reproduced here (script \texttt{s09}).
+\item With $w=0$ and $v^2=2u^2$ the band average is exactly 2, yet no block level ever leaves $\{0,1\}$ \grade{T}. So the average alone does not force an exit; the coupling and the partition are part of the law.
+\end{enumerate}
+What survives: on the coupled PT-symmetric chain with whole-cell blocks and the stated filter, the census leaves the disk where $E(0)E(\pi)=u^2$, to $4\times10^{-8}$ \grade{V}; why it does is open \grade{C}.
+
+\subsection{The offset as the exit's clock}
+For opened matter each level's offset $\tau_\nu=\operatorname{Log}((1-\nu)/\nu)$ is complex, and the rotation used above is $|\operatorname{Im}\tau_\nu|/\pi$. The disk exit is therefore the place where some level's signed offset has turned a quarter, and the critical point the place where one has turned a half. Whether the speed limit $\dot\tau^2\le4gS$ has a biorthogonal form that governs this rotation is open \grade{C}.
+
+\section{What is proved, what is measured, what is open}
+\begin{center}\small
+\begin{tabular}{p{0.62\textwidth}l}\toprule
+Statement & grade\\\midrule
+Zero and span free; census logarithm with $A=2c/\pi^2$ & \grade{T}, \grade{V} at $c=1,\tfrac12$\\
+$\Gamma=\tanh(\varepsilon/2)=1-2\nu$; $\int H\,d\varepsilon=\pi^2/3$ & \grade{T}\\
+Offset = summed level rapidity = log-odds empty/full & \grade{T}\\
+$\Gamma_b=|1-2\nu|$; $\Tr X_A=$ the weight between & \grade{T}\\
+Offset speed limit $\dot\tau^2\le4gS$ & \grade{T}\\
+Warm census: heat moves raw levels, not boundary levels (ring, 128 sites) & \grade{V}\\
+Ising census ladder = constant peel step & \grade{V}\\
+Peel steps add like velocities & \grade{T}\\
+Ideal helium gas returns $\Gamma_0$ at every density & \grade{R}\\
+Unbound nuclei outside the disk; half-turn of the rapidity & \grade{T}, \grade{V}\grade{lit}\\
+Biorthogonal idempotence; radial census survives opening & \grade{T}, \grade{V}\\
+Opened matter exits before critical; exit line $E(0)E(\pi)=u^2$ (PT class, stated filter and partition) & \grade{V}\\
+$\langle K\rangle=1+u^2/(E(0)E(\pi))$ & \grade{T}\\\bottomrule
+\end{tabular}
+\end{center}
+\noindent Open: a proof that the exit happens exactly at $\langle K\rangle=2$ on the coupled chain; a filter-independent definition of the massive exit (filter, ring and block sizes, order of limits); a biorthogonal speed limit for the complex offset; convergence on the $v>w$ side; placing nuclear resonances with their widths on the chart; a second non-unitary model of a different kind.
+
+\section*{Sources}
+\small
+J.~Beasley, \emph{Matter at a Scale: Zero, Span, and the Logarithm Between Them}, v5 (2026), doi:10.5281/zenodo.22019893.
+J.~Beasley, \emph{VOTKP: The Vector of Traits Kept under Peeling}, v2.9 (2026), doi:10.5281/zenodo.23340757.
+J.~Beasley, \emph{The Offset Belongs to the Boundary}, v31 (2026), doi:10.5281/zenodo.22555919.
+J.~Beasley, \emph{The Offset Speed Limit}, v1.1 (2026).
+J.~Beasley, \emph{The Weight Between}, v2.3 (2026).
+J.~Beasley, \emph{The Angle Between the Rails} (2026).
+J.~Beasley, \emph{A Measured Lorentzian Cone in Non-Hermitian Quantum Geometry}, v8 (2026).
+J.~Beasley, \emph{Beyond the Event Horizon}, edition 10 (2026).
+F.~G.~Kondev et al., The NUBASE2020 evaluation of nuclear physics properties, Chin.\ Phys.\ C 45 (2021) 030001.
+A.~Kramida et al., NIST Atomic Spectra Database (ionization energies), accessed through the VOTKP v2.9 package.
+P.-Y.~Chang, J.-S.~You, X.~Wen, S.~Ryu, Phys.\ Rev.\ Research 2 (2020) 033069.
+Independent formal review, \emph{Matter, Gases and VOTKP}, 3 November 2026 (prepared with OpenAI tools), kept in the repository.
+\normalsize
+
+\appendix
+\section{Scripts and outputs}
+Every script below is printed whole, with its kill condition in its header, followed by its verbatim output. They run with Python 3, numpy, scipy and matplotlib; the nuclear script also needs pynucastro (for the NUBASE2020 file). Repository: \texttt{dicipler-pixel/votkp-lean}, folder \texttt{matter-disk/}.
+
+\newcommand{\scr}[2]{\subsection*{\texttt{\detokenize{#1}}}\lstinputlisting{../scripts/#1}\noindent Output:\lstinputlisting{../outputs/#2}}
+\scr{s01_bridge.py}{s01_bridge.txt}
+\scr{s02_ladder.py}{s02_ladder.txt}
+\scr{nhssh_lib_and_s03a_occupations.py}{nhssh_lib_and_s03a_occupations.txt}
+\scr{s03b_renyi_central_charge.py}{s03b_renyi_central_charge.txt}
+\scr{s03d_metric_rank_checked.py}{s03d_metric_rank_checked.txt}
+\scr{s04a_rotation_unwindowed.py}{s04a_rotation_unwindowed.txt}
+\scr{s04b_rotation_windowed.py}{s04b_rotation_windowed.txt}
+\scr{s05a_exit_line.py}{s05a_exit_line.txt}
+\scr{s05b_predict_exit.py}{s05b_predict_exit.txt}
+\scr{s06_second_model_exit_law.py}{s06_second_model_exit_law.txt}
+\scr{s07_boundary_census_disk.py}{s07_boundary_census_disk.txt}
+\scr{s08_gas_carries_the_peel.py}{s08_gas_carries_the_peel.txt}
+\scr{s09_check_gpt_formal.py}{s09_check_gpt_formal.txt}
+\scr{s10_nuclear_gaps_his_script.py}{s10_nuclear_gaps_his_script.txt}
+\end{document}
