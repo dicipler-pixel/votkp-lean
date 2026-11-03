@@ -1,0 +1,16 @@
+helium ladder (VOTKP v2.9): I0=24.587389011 eV, I1=54.4177655282 eV, Gamma0=0.377575066984
+(a) populations at n = 1e22 m^-3, percent [ours | review], and the disk point of each pair
+    T= 10000 K  He  99.937400| 99.937400  He+   0.062600|  0.062600  He2+   0.000000|  0.000000  Gamma_pop = (+0.9987, +1.0000)  MATCH
+    T= 20000 K  He  28.978059| 28.978059  He+  71.021940| 71.021940  He2+   0.000001|  0.000001  Gamma_pop = (-0.4204, +1.0000)  MATCH
+    T= 50000 K  He   0.000873|  0.000873  He+  17.146019| 17.146019  He2+  82.853108| 82.853108  Gamma_pop = (-0.9999, -0.6571)  MATCH
+    T=20000 K n=1e+20: neutral 0.5680% | review 0.568%  MATCH
+    T=20000 K n=1e+24: neutral 87.6482% | review 87.6482%  MATCH
+(a) PASS
+(c) cubic solver agrees with the root finder: PASS
+(b) Gamma0 read back from the gas (two temperatures 30 kK and 32 kK), by density
+    n=1e+18: neutral fraction at 30 kK   0.00001%   D=29.830376517 eV  B=79.005154539 eV  Gamma0=0.377575066984
+    n=1e+20: neutral fraction at 30 kK   0.00267%   D=29.830376517 eV  B=79.005154539 eV  Gamma0=0.377575066984
+    n=1e+22: neutral fraction at 30 kK   0.26765%   D=29.830376517 eV  B=79.005154539 eV  Gamma0=0.377575066984
+    n=1e+24: neutral fraction at 30 kK  18.06496%   D=29.830376517 eV  B=79.005154539 eV  Gamma0=0.377575066984
+    n=1e+26: neutral fraction at 30 kK  82.49125%   D=29.830376517 eV  B=79.005154539 eV  Gamma0=0.377575066984
+(b) worst |Gamma0(gas) - Gamma0(VOTKP)| = 2.2e-16 PASS

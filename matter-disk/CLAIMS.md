@@ -45,3 +45,17 @@ Grades: [T] proved, [V] verified numerically with controls, [C] conjecture, [H] 
 - Size check at (0.5, 0.4): exit γ = 0.169170 at blocks 40, 80, 160 and rings 2000, 4000. The early exit is real. [V]
 - Opposite tried: max and mean of `|arg E|`, `max |Im E|/min Re E`, `min Re E`, `min |E|`, `max arg(d_z/E)` at the three massive exits; none is constant. Open.
 - Rebuilt: `⟨K⟩ = 2`, equivalently `E(0)E(π) = u²`, is the exit law of the PT-symmetric class; §5's statement is scoped to that class.
+
+## §7 The boundary census on the disk (3 Nov 2026)
+
+- Source of the idea: the 3 Nov 2026 gas review (`Matter_Gases_VOTKP_Deep_Dive_20261103.pdf`). The block identity is standard; what is new is placing it on the disk.
+- Kill conditions (written before the run): (a) identity error > 10⁻¹² on 32 random Hermitian contractions; (b) a nonzero boundary count on disconnected sites `C = 0.3 I`; (c) at T = 0 the boundary count differs from the raw count, or `\|Γ_b\|` differs from `\|Γ\|` by > 10⁻⁸; (d) the review's 128-site ring table is missed by > 10⁻⁵ in Tr X_A or mutual information, or by any integer in a count; (e) on the opened SSH chain, `C² ≠ C` or the identity fails by > 10⁻⁸.
+- Outcome: (a) 2.8 × 10⁻¹⁶; (b) raw 32, boundary 0; (c) 4 × 10⁻¹⁵; (d) all six rows match; (e) `\|C² − C\|` 9 × 10⁻¹⁵ and 2.8 × 10⁻¹⁴, `\|X_A − C_A(1 − C_A)\|` ≤ 1.3 × 10⁻¹⁴. PASS on all five. [T] identity, [V] numbers.
+- Reading: heat moves raw levels to the centre of the disk (raw count 24, then 64), with no correlation across the cut (boundary count 0; innermost `\|Γ_b\|` 0.82, then 0.97).
+
+## §8 A gas carries the peel (3 Nov 2026)
+
+- Model: ideal Saha helium, ground-state weights U = (1, 2, 1), charge neutrality solved (root finder and an independent cubic).
+- Kill conditions (written before the run): (a) the review's populations at 10²² m⁻³ are missed by > 10⁻⁶ % at 10, 20, 50 kK, or the 20 kK density sweep misses 0.5680 % and 87.6482 %; (b) `Γ₀` read back from the gas differs from 0.377575066984 by > 10⁻⁹ at any density from 10¹⁸ to 10²⁶ m⁻³; (c) the two solvers disagree by > 10⁻¹².
+- Outcome: (a) all match; (b) worst 2.2 × 10⁻¹⁶, with D = 29.830376517 eV and B = 79.005154539 eV at every density; (c) PASS. [T] in the model, [V].
+- Scope: exact only for ground-state weights. Excited-state `U(T)` is the opposite test, and it is open.

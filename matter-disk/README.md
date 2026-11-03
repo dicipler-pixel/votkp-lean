@@ -20,6 +20,8 @@ It is a working record, not a finished paper. Every claim carries a grade, and e
 | 4 | **Across the Cayley pole.** With `Γ = tanh(W/2)`, `W = ln z`: `\|Γ\| < 1` iff `\|Im W\| < π/2`; a negative ratio has `Im W = π`. At every opened critical point tested (u = 0.2 … 0.7) a level sits at exactly `Im W = π`, the signature of the unbound nuclei in VOTKP §15.4. | [T] + [V] | `s04*` |
 | 5 | **The disk-exit law.** The levels leave the disk where the band-averaged Petermann factor equals 2. For this chain the Petermann factor is `K(k) = 1 + u²/E(k)²` and its band average is `1 + u²/(E(0)E(π))`, so the exit line is `E(0)·E(π) = u²`. Predicted at three unseen `u` and measured to within 4 × 10⁻⁸. | [T] for the average; [V] for exit ⇔ average = 2 | `s05*` |
 | 6 | **Is the exit law universal?** Second band: the cone paper's family in one dimension, `d = (t₁ + cos k, sin k, m + iγ)`. The general Petermann factor is `K = ½(1 + \|d\|²/\|E\|²)` (exact). With no mass (`m = 0`, the SSH class) the exit is again at `⟨K⟩ = 2.000000`. With a mass term the census leaves the disk much earlier, at `⟨K⟩` ≈ 1.015–1.022, and the exit does not move under a fourfold larger block. So `E(0)E(π) = u²` is the law of the PT-symmetric class, not of all opened bands; what sets the massive exit is open. | [T] for K; [V]; open | `s06_second_model_exit_law.py` |
+| 7 | **The boundary census on the disk.** Split a one-body correlation matrix at a cut: `C_A − C_A² = (C − C²)_A + X_A`, `X_A = C_AB C_BA`. In a pure state the eigenvalues of `X_A` are `ν(1 − ν) = (1 − Γ²)/4`, so the boundary coordinate `Γ_b = √(1 − 4λ)` is the same disk point as `\|Γ\|` and the count is the §1 window. Heat pulls raw levels to the centre with nothing crossing the cut; `Γ_b` sends them back to the rim. Disconnected sites: raw count 32, boundary 0. The 128-site ring table of the 3 Nov gas review is reproduced to every printed digit. On the opened chain the biorthogonal `C` is still idempotent (10⁻¹⁴), so §§4–6 carry over to the boundary census unchanged. | [T] identity; [V] | `s07_boundary_census_disk.py` |
+| 8 | **A gas carries the peel.** Helium in an ideal Saha gas, with the VOTKP v2.9 ladder (24.587389011, 54.4177655282 eV). Each adjacent charge pair is a disk point `Γ_pop = tanh(½ ln n_q/n_{q+1})` that sweeps the whole diameter as temperature and density change. Two combinations lose density exactly: `ln(n₀n₂/n₁²) = −(I₁ − I₀)/kT − ln 4` and `ln(n₀/(n₂ n_e² λ⁶)) = (I₀ + I₁)/kT − ln 4`. Their temperature slopes return `Γ₀ = 0.377575066984` to 2 × 10⁻¹⁶ while the neutral fraction runs from 10⁻⁵ % to 82 %. The review's population table is reproduced. Model statement (ideal gas, ground-state weights only), not a new measurement. | [T] in the model; [V] | `s08_gas_carries_the_peel.py`, `fig02_boundary_and_gas.py` |
 
 Grades: [T] proved, [V] verified numerically with controls, [C] conjecture, [H] reading.
 
@@ -38,6 +40,11 @@ Kill conditions are written before each run. These are recorded in [`CLAIMS.md`]
 - The exit law for bands with a mass term (§6): what is constant at their exit?
 - A second non-unitary model of a different kind (Yang–Lee) for every section.
 - Convergence on the `v > w` side of the critical point (§3).
+- §8 with excited-state partition functions `U(T)`: how far does the read-back `Γ₀` move? (The opposite test of §8.)
+- Gas as opened matter: the kinetic generator `L = −νQ − ikM` is non-normal; place its modes on the disk and test the §5 exit law there.
+- Xe 4d channel pair (Zhong et al., Nat. Commun. 11, 5042, 2020): the two-channel amplitude ratio is a complex `z`, so its rotation is a phase. Needs the publisher source data locally.
+- Nuclear resonances placed by rotation from published energies and widths (the particle-side step).
+- Matter v5: the 3 Nov review reports an extra leading minus in the §5 derivative `dΔ/dlog₁₀C`, and a factor-two open question in the doubled (BdG) versus physical Majorana census counting. Both are noted here and still need checking against the paper's own text.
 
 ## Adding a section
 

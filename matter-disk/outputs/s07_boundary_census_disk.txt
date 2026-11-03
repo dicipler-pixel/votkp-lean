@@ -1,0 +1,21 @@
+(a) block identity, worst error on 32 random Hermitian contractions: 2.78e-16 PASS
+(b) disconnected C=0.3 I, region 32: raw count 32, boundary count 0, Tr X_A 0.000 PASS
+(d) ring N=128 antiperiodic, mu=0, region 64, eps=0.1   [ours | 3 Nov review]
+    uniform             T=0   raw   2|  2  boundary  2| 2  TrX 0.605657|0.605657  MI 3.923714|3.923714  MATCH
+        (c) T=0 disk check: max | |Gamma| - |Gamma_b| | = 4.0e-15
+    uniform             T=0.5 raw  24| 24  boundary  0| 0  TrX 0.170835|0.170835  MI 0.949562|0.949562  MATCH
+        warm: levels inside the window by raw Gamma 24, by boundary Gamma_b 0; innermost |Gamma| 0.047, innermost |Gamma_b| 0.817
+    uniform             T=2   raw  64| 64  boundary  0| 0  TrX 0.027779|0.027779  MI 0.116547|0.116547  MATCH
+        warm: levels inside the window by raw Gamma 64, by boundary Gamma_b 0; innermost |Gamma| 0.012, innermost |Gamma_b| 0.972
+    gapped alternating  T=0   raw   0|  0  boundary  0| 0  TrX 0.029017|0.029017  MI 0.345837|0.345837  MATCH
+        (c) T=0 disk check: max | |Gamma| - |Gamma_b| | = 4.2e-15
+    gapped alternating  T=0.5 raw  10| 10  boundary  0| 0  TrX 0.024935|0.024935  MI 0.188891|0.188891  MATCH
+        warm: levels inside the window by raw Gamma 10, by boundary Gamma_b 0; innermost |Gamma| 0.763, innermost |Gamma_b| 0.980
+    gapped alternating  T=2   raw  64| 64  boundary  0| 0  TrX 0.006484|0.006484  MI 0.028357|0.028357  MATCH
+        warm: levels inside the window by raw Gamma 64, by boundary Gamma_b 0; innermost |Gamma| 0.246, innermost |Gamma_b| 0.994
+(c) T=0 boundary census = original census on the disk: PASS
+(d) review table reproduced: PASS
+(e) opened chain, full ring of 200 cells (C is the whole system), block of 40 cells
+    v=0.3 u=0.5 (opened, inside the disk): |C^2 - C| = 9.0e-15, identity error 1.8e-16, |X_A - C_A(1-C_A)| = 3.8e-15
+    v=0.5 u=0.5 (opened, critical): |C^2 - C| = 2.8e-14, identity error 6.9e-15, |X_A - C_A(1-C_A)| = 1.3e-14
+(e) opened matter keeps the boundary identity: PASS
