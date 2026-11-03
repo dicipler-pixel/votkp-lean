@@ -1,0 +1,12 @@
+Hermitian critical control   N=1000: c from Renyi-2 = +1.007   max|Im S2|=7.7e-15   S2=[1.321 1.497 1.671 1.843 2.008]
+Hermitian critical control   N=2000: c from Renyi-2 = +1.007   max|Im S2|=2.2e-15   S2=[1.321 1.497 1.671 1.845 2.016]
+EP critical, v<w             N=1000: c from Renyi-2 = -1.792   max|Im S2|=6.3e+00   S2=[-1.942 -2.351 -2.69  -2.963 -3.166]
+EP critical, v<w             N=2000: c from Renyi-2 = -1.956   max|Im S2|=6.3e+00   S2=[-2.209 -2.633 -2.997 -3.307 -3.56 ]
+EP critical, v>w             N=1000: c from Renyi-2 = -0.876   max|Im S2|=3.7e-14   S2=[-0.901 -1.074 -1.238 -1.383 -1.495]
+EP critical, v>w             N=2000: c from Renyi-2 = -1.089   max|Im S2|=1.1e-13   S2=[-1.055 -1.257 -1.455 -1.641 -1.803]
+NH gapped control            N=1000: c from Renyi-2 = +0.000   max|Im S2|=2.7e-15   S2=[1.778 1.778 1.778 1.778 1.778]
+NH gapped control            N=2000: c from Renyi-2 = +0.000   max|Im S2|=1.6e-14   S2=[1.778 1.778 1.778 1.778 1.778]
+
+real	0m26.878s
+user	0m26.613s
+sys	0m0.024s

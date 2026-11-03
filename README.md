@@ -51,6 +51,8 @@ What is not proved is listed in [`LIMITATIONS.md`](LIMITATIONS.md).
 
 [`peel-atlas/`](peel-atlas/) records a separate proposal (30 October 2026) that uses the peel coordinate. It is not part of the Lean build.
 
+[`matter-disk/`](matter-disk/) is a growing working record (started 3 November 2026) that reads the boundary count of *Matter at a Scale* in the peel coordinate, follows it into opened (non-Hermitian) matter, and measures where it leaves the Smith disk. It is not part of the Lean build.
+
 [`two-trees/`](two-trees/) holds the paper *Two Trees in One Ball* (version 4, 30 October 2026, [10.5281/zenodo.23847114](https://doi.org/10.5281/zenodo.23847114)) that grew from it, with five core-Lean files (159 theorems, no Mathlib) checked by their own workflow. It is not part of the Mathlib build either.
 
 ## Start here: the showcase

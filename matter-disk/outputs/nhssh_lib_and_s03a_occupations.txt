@@ -1,0 +1,9 @@
+B1/B2: biorthogonal occupations -> Gamma=1-2nu, entropy slope
+  Hermitian gapped control             max|Gamma|=1.000e+00 max|Im Gamma|=6.08e-16  c=3*slope=-0.000  S(Im)~9.7e-13
+  Hermitian critical control (c=1)     max|Gamma|=1.000e+00 max|Im Gamma|=5.69e-16  c=3*slope=+1.000  S(Im)~1.4e-13
+  NH gapped (|v-w|>u)                  max|Gamma|=1.000e+00 max|Im Gamma|=4.20e-01  c=3*slope=+0.000  S(Im)~3.1e-13
+  NH critical |v-w|=u (EP)             max|Gamma|=3.057e+00 max|Im Gamma|=3.06e+00  c=3*slope=+1.321  S(Im)~2.6e-01
+
+real	0m15.243s
+user	0m15.037s
+sys	0m0.036s

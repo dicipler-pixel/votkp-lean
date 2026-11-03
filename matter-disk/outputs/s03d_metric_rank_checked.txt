@@ -1,0 +1,21 @@
+u=0.0: Lorentzian 0.000  definite 0.000  degenerate 1.000
+u=0.5: Lorentzian 0.932  definite 0.068  degenerate 0.000
+   Lorentzian: k in [0.02,6.26] v in [0.05,1.95]; nearest to EP 0.020
+   fraction of Lorentzian cells in PT-broken zone 0.000; PT-broken cells Lorentzian 0.000
+along k=pi:
+  v=0.20 a=+6.410e-01 b=-3.608e-16 c=-4.109e-01 det=-2.634e-01
+  v=0.40 a=+2.273e+00 b=-2.220e-16 c=-5.165e+00 det=-1.174e+01
+  v=0.45 a=+4.762e+00 b=+3.553e-15 c=-2.268e+01 det=-1.080e+02
+  v=0.49 a=+2.475e+01 b=-5.684e-14 c=-6.127e+02 det=-1.517e+04
+  v=0.51 a=-2.525e+01 b=-5.684e-14 c=-6.377e+02 det=+1.610e+04
+  v=0.55 a=-5.263e+00 b=+7.105e-15 c=-2.770e+01 det=+1.458e+02
+  v=0.60 a=-2.778e+00 b=+0.000e+00 c=-7.716e+00 det=+2.143e+01
+  v=0.80 a=-1.190e+00 b=+2.220e-16 c=-1.417e+00 det=+1.687e+00
+  v=1.20 a=-1.190e+00 b=+4.441e-16 c=-1.417e+00 det=+1.687e+00
+  v=1.49 a=-2.525e+01 b=+2.842e-13 c=-6.377e+02 det=+1.610e+04
+  v=1.51 a=+2.475e+01 b=+2.274e-13 c=-6.127e+02 det=-1.517e+04
+  v=1.80 a=+6.410e-01 b=+2.776e-17 c=-4.109e-01 det=-2.634e-01
+
+real	0m3.778s
+user	0m3.739s
+sys	0m0.016s

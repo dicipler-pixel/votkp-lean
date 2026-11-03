@@ -1,0 +1,10 @@
+u=0.0: Lorentzian fraction 0.338  definite fraction 0.525
+   Lorentzian cells span k in [0.02,6.26], v in [0.05,1.95]; nearest to EP (pi,0.5): 0.020
+   Lorentzian cells inside PT-broken zone: 0.000;  PT-broken cells that are Lorentzian: nan
+u=0.5: Lorentzian fraction 0.932  definite fraction 0.000
+   Lorentzian cells span k in [0.02,6.26], v in [0.05,1.95]; nearest to EP (pi,0.5): 0.020
+   Lorentzian cells inside PT-broken zone: 0.000;  PT-broken cells that are Lorentzian: 0.000
+
+real	0m2.668s
+user	0m2.656s
+sys	0m0.008s

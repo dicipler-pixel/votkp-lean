@@ -1,0 +1,10 @@
+xi=   20.5 eps0=1.9346 Gamma levels=[0.74751 0.99398 0.99987 1.     ] peel step tanh(eps0)=0.95910
+   ladder uniformity dev 0.0221 | max |Gamma_j+1 - (Gamma_j (+) step)| = 7.99e-06  (rel to step 8.33e-06)
+xi=   50.5 eps0=1.6440 Gamma levels=[0.67615 0.98567 0.99946 0.99998] peel step tanh(eps0)=0.92803
+   ladder uniformity dev 0.0113 | max |Gamma_j+1 - (Gamma_j (+) step)| = 5.45e-06  (rel to step 5.87e-06)
+xi=  125.5 eps0=1.4275 Gamma levels=[0.61302 0.97276 0.99841 0.99991] peel step tanh(eps0)=0.89115
+   ladder uniformity dev 0.0062 | max |Gamma_j+1 - (Gamma_j (+) step)| = 3.23e-06  (rel to step 3.63e-06)
+
+real	0m3.388s
+user	0m3.255s
+sys	0m0.052s

@@ -1,0 +1,53 @@
+# Matter on the Smith disk: where closed matter ends and opened matter begins
+
+Jeromie Beasley. Working record, started 3 November 2026. Made with AI assistance (see [`AI_USE.md`](AI_USE.md)).
+
+This folder is the growing home of one line of work. It joins three of my papers:
+
+- *Matter at a Scale* (August 2026): matter has no absolute size; the only place scale returns is a logarithmic boundary count with coefficient `A = 2c/π²`, where `c` is the central charge.
+- *VOTKP: The Vector of Traits Kept under Peeling* (v2.9, 13 October 2026, [10.5281/zenodo.23340757](https://doi.org/10.5281/zenodo.23340757)): each peel step becomes the Smith coordinate `Γ = (z − 1)/(z + 1)`; bound steps sit inside the unit disk, steps add like velocities, and the unbound nuclei ⁵He, ⁵Li, ⁸Be sit outside it (§15.4).
+- *A Measured Lorentzian Cone in Non-Hermitian Quantum Geometry* (August 2026): opening a system (non-Hermitian generator) can turn the geometry of its states Lorentzian; at a Hermitian point it never does.
+
+It is a working record, not a finished paper. Every claim carries a grade, and every number comes from a script in [`scripts/`](scripts/) whose output is kept in [`outputs/`](outputs/). It is not part of the Lean build.
+
+## Sections
+
+| § | What it does | Grade | Scripts |
+| :-: | :--- | :-: | :--- |
+| 1 | **The bridge.** A boundary-count level with occupation `ν` has odds `z = (1 − ν)/ν`, and its Smith coordinate is `Γ = tanh(ε/2) = 1 − 2ν`, where `ε = ln z`. The counting window `ν ∈ [δ, 1 − δ]` is the Smith disk `\|Γ\| ≤ 1 − 2δ`. The binary entropy integrated over the peel rapidity is `π²/3`. | [T] (identity standard; reading new) | `s01_bridge.py` |
+| 2 | **Matter's ladder is a peel ladder.** On the transverse-field Ising chain (c = ½), consecutive levels differ by one constant peel step under `⊕` (VOTKP Theorem 15.1); the rapidity spacing error falls 0.022, 0.011, 0.006 as ξ grows. | [V] | `s02_ladder.py` |
+| 3 | **Opened matter.** Non-Hermitian SSH chain `h(k) = [[iu, q̄],[q, −iu]]`, `q = v + w e^{ik}`. Closed: Γ real. Opened and gapped: Γ complex, inside the disk. At the critical point `\|v − w\| = u`: Γ leaves the disk (`\|Γ\|` ≈ 3). Rényi-2 central charge: −1.79 → −1.96 on the `v < w` side (literature: −2); −0.88 → −1.09 on `v > w`, not converged. Band metric: Lorentzian over 93% of the opened plane, `(−,−)` in the PT-broken zone, signature change exactly at the critical points; the closed plane is degenerate. | [V] / open | `s03*` |
+| 4 | **Across the Cayley pole.** With `Γ = tanh(W/2)`, `W = ln z`: `\|Γ\| < 1` iff `\|Im W\| < π/2`; a negative ratio has `Im W = π`. At every opened critical point tested (u = 0.2 … 0.7) a level sits at exactly `Im W = π`, the signature of the unbound nuclei in VOTKP §15.4. | [T] + [V] | `s04*` |
+| 5 | **The disk-exit law.** The levels leave the disk where the band-averaged Petermann factor equals 2. For this chain the Petermann factor is `K(k) = 1 + u²/E(k)²` and its band average is `1 + u²/(E(0)E(π))`, so the exit line is `E(0)·E(π) = u²`. Predicted at three unseen `u` and measured to within 4 × 10⁻⁸. | [T] for the average; [V] for exit ⇔ average = 2 | `s05*` |
+| 6 | **Is the exit law universal?** Second band: the cone paper's family in one dimension, `d = (t₁ + cos k, sin k, m + iγ)`. The general Petermann factor is `K = ½(1 + \|d\|²/\|E\|²)` (exact). With no mass (`m = 0`, the SSH class) the exit is again at `⟨K⟩ = 2.000000`. With a mass term the census leaves the disk much earlier, at `⟨K⟩` ≈ 1.015–1.022, and the exit does not move under a fourfold larger block. So `E(0)E(π) = u²` is the law of the PT-symmetric class, not of all opened bands; what sets the massive exit is open. | [T] for K; [V]; open | `s06_second_model_exit_law.py` |
+
+Grades: [T] proved, [V] verified numerically with controls, [C] conjecture, [H] reading.
+
+## What is killed, and what replaced it
+
+Kill conditions are written before each run. These are recorded in [`CLAIMS.md`](CLAIMS.md):
+
+- "The negative-`c` region is the Lorentzian region." Killed: the opened gapped chain is Lorentzian with `c = 0`. Rebuilt: negative `c` sits on the wall where the cone closes.
+- "The levels leave the disk at the critical point." Killed: they leave earlier, inside the gapped phase, with no change under a fourfold larger block. Rebuilt: a quarter turn marks the exit line `E(0)E(π) = u²`; a half turn marks the critical point.
+- "The exit is set by the peak Petermann factor." Killed: 81 down to 2.4 along the line. Rebuilt: the band average, exactly 2.
+- "`⟨K⟩ = 2` is the exit law for every opened two-band chain." Killed on the massive band (§6). Rebuilt: it is the law of the PT-symmetric (massless) class.
+
+## Open
+
+- A proof that the block levels leave the disk exactly when the band-averaged Petermann factor reaches 2.
+- The exit law for bands with a mass term (§6): what is constant at their exit?
+- A second non-unitary model of a different kind (Yang–Lee) for every section.
+- Convergence on the `v > w` side of the critical point (§3).
+
+## Adding a section
+
+Each new piece of work gets the next number `§n`: scripts named `sNN*_*.py`, each carrying `# SCRIPT: NAME` and its kill condition in the header; the verbatim output in `outputs/`; one row in the table above; and one entry in `CLAIMS.md`. Nothing earlier is rewritten. A section that changes an earlier one says so in its own row.
+
+## Run
+
+```bash
+cd scripts
+python3 s01_bridge.py      # and so on; numpy, scipy, matplotlib
+```
+
+`s03d` writes the signature map that `fig01_signature_and_disk.py` draws.

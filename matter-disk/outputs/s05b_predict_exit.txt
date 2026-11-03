@@ -1,0 +1,8 @@
+ u     predicted (mean K = 2)   measured census exit   difference
+ 0.25   0.7474014            0.7474015          +4.04e-08
+ 0.45   0.5291503            0.5291503          -1.53e-09
+ 0.65   0.2357262            0.2357262          -3.70e-08
+
+real	1m14.012s
+user	1m13.157s
+sys	0m0.042s

@@ -1,0 +1,43 @@
+block Lc=40, ring N=2000
+   v=0.300  max rotation=0.3734 pi   max|Gamma|=1.0000 in
+   v=0.400  max rotation=0.4218 pi   max|Gamma|=1.0000 in
+   v=0.450  max rotation=0.4703 pi   max|Gamma|=1.0000 in
+   v=0.470  max rotation=0.5036 pi   max|Gamma|=1.0115 OUT
+   v=0.480  max rotation=0.5282 pi   max|Gamma|=1.0927 OUT
+   v=0.490  max rotation=0.5686 pi   max|Gamma|=1.2326 OUT
+   v=0.495  max rotation=0.6105 pi   max|Gamma|=1.3724 OUT
+   v=0.500  max rotation=1.0000 pi   max|Gamma|=2.8380 OUT
+   v=1.505  max rotation=0.5468 pi   max|Gamma|=1.0301 OUT
+   v=1.510  max rotation=0.5014 pi   max|Gamma|=1.0008 OUT
+   v=1.520  max rotation=0.4616 pi   max|Gamma|=1.0000 in
+   v=1.550  max rotation=0.4005 pi   max|Gamma|=1.0000 in
+block Lc=80, ring N=2000
+   v=0.300  max rotation=0.3734 pi   max|Gamma|=1.0000 in
+   v=0.400  max rotation=0.4218 pi   max|Gamma|=1.0000 in
+   v=0.450  max rotation=0.4703 pi   max|Gamma|=1.0000 in
+   v=0.470  max rotation=0.5036 pi   max|Gamma|=1.0115 OUT
+   v=0.480  max rotation=0.5282 pi   max|Gamma|=1.0927 OUT
+   v=0.490  max rotation=0.5661 pi   max|Gamma|=1.2326 OUT
+   v=0.495  max rotation=0.5992 pi   max|Gamma|=1.3724 OUT
+   v=0.500  max rotation=1.0000 pi   max|Gamma|=2.9595 OUT
+   v=1.505  max rotation=0.5376 pi   max|Gamma|=1.0301 OUT
+   v=1.510  max rotation=0.5012 pi   max|Gamma|=1.0009 OUT
+   v=1.520  max rotation=0.4616 pi   max|Gamma|=1.0000 in
+   v=1.550  max rotation=0.4005 pi   max|Gamma|=1.0000 in
+block Lc=160, ring N=4000
+   v=0.300  max rotation=0.3734 pi   max|Gamma|=1.0000 in
+   v=0.400  max rotation=0.4218 pi   max|Gamma|=1.0000 in
+   v=0.450  max rotation=0.4703 pi   max|Gamma|=1.0000 in
+   v=0.470  max rotation=0.5036 pi   max|Gamma|=1.0115 OUT
+   v=0.480  max rotation=0.5282 pi   max|Gamma|=1.0927 OUT
+   v=0.490  max rotation=0.5661 pi   max|Gamma|=1.2326 OUT
+   v=0.495  max rotation=0.5991 pi   max|Gamma|=1.3724 OUT
+   v=0.500  max rotation=1.0000 pi   max|Gamma|=3.2318 OUT
+   v=1.505  max rotation=0.5357 pi   max|Gamma|=1.0301 OUT
+   v=1.510  max rotation=0.5012 pi   max|Gamma|=1.0009 OUT
+   v=1.520  max rotation=0.4616 pi   max|Gamma|=1.0000 in
+   v=1.550  max rotation=0.4005 pi   max|Gamma|=1.0000 in
+
+real	1m21.279s
+user	1m20.663s
+sys	0m0.049s

@@ -1,0 +1,31 @@
+theorem check, mismatches: 0
+ negative ratio z= -28.0  Im W= 1.0 pi   Gamma= (1.0740740740740737+9.407437688923424e-18j)
+approach from v<w side (critical at v=0.5): v, max|Im W|/pi, max|Gamma|
+  v=0.000  rot=0.9998 pi   |Gamma|max=1.0000  in
+  v=0.100  rot=0.9993 pi   |Gamma|max=1.0000  in
+  v=0.200  rot=0.9981 pi   |Gamma|max=1.0000  in
+  v=0.300  rot=1.0000 pi   |Gamma|max=1.0000  in
+  v=0.400  rot=0.9995 pi   |Gamma|max=1.0000  in
+  v=0.450  rot=0.9997 pi   |Gamma|max=1.0000  in
+  v=0.480  rot=1.0000 pi   |Gamma|max=1.0927  OUT
+  v=0.490  rot=0.9978 pi   |Gamma|max=1.2326  OUT
+  v=0.495  rot=0.9954 pi   |Gamma|max=1.3724  OUT
+  v=0.500  rot=1.0000 pi   |Gamma|max=2.9595  OUT
+opposite: approach from v>w side (critical at v=1.5)
+  v=2.500  rot=1.0000 pi   |Gamma|max=1.0000  in
+  v=2.000  rot=0.9994 pi   |Gamma|max=1.0000  in
+  v=1.700  rot=1.0000 pi   |Gamma|max=1.0000  in
+  v=1.600  rot=0.9998 pi   |Gamma|max=1.0000  in
+  v=1.550  rot=0.9990 pi   |Gamma|max=1.0000  in
+  v=1.520  rot=0.9993 pi   |Gamma|max=1.0000  in
+  v=1.510  rot=1.0000 pi   |Gamma|max=1.0009  OUT
+  v=1.505  rot=1.0000 pi   |Gamma|max=1.0301  OUT
+  v=1.500  rot=1.0000 pi   |Gamma|max=1.4681  OUT
+inside the PT-broken zone (0.5<v<1.5):
+  v=0.600  rot=0.9995 pi   |Gamma|max=1.0000  in
+  v=1.000  rot=0.9982 pi   |Gamma|max=1.0000  in
+  v=1.400  rot=0.9992 pi   |Gamma|max=1.0000  in
+
+real	0m17.028s
+user	0m16.805s
+sys	0m0.020s
