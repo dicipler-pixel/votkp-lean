@@ -60,8 +60,8 @@ theorem idempotent_cross {m n : Type*} [Fintype m] [Fintype n] [DecidableEq m] [
     B * E = A - A * A := by
   have h := congrArg Matrix.toBlocks₁₁ hC
   rw [topleft_sq, Matrix.toBlocks_fromBlocks₁₁] at h
-  rw [← h]
-  abel
+  calc B * E = (A * A + B * E) - A * A := by abel
+    _ = A - A * A := by rw [h]
 
 /-- **The exit line.** With `⟨K⟩ = 1 + u²/p` and `p = E(0)E(π) > 0`, `⟨K⟩ = 2 ↔ p = u²`. -/
 theorem exit_line (u p : ℝ) (hp : 0 < p) : 1 + u ^ 2 / p = 2 ↔ p = u ^ 2 := by
@@ -109,21 +109,18 @@ theorem saha_ratio (n₀ n₁ n₂ x S₀ S₁ : ℝ) (h₀ : n₀ ≠ 0) (h₁ 
   have b : n₂ = S₁ / x * n₁ := by rw [← e₁]; field_simp
   rw [b, a]
   field_simp
-  ring
 
 /-- **The last peel step at first order.** With `I_H = Z²/2` and `I_He = Z²/2 − 5Z/8`
 (Hartree), the ratio `z = I_H / I_He` has `Γ = 5/(8Z − 5)`. -/
 theorem last_step (Z : ℝ) (hZ : 2 ≤ Z) :
     g ((Z ^ 2 / 2) / (Z ^ 2 / 2 - 5 * Z / 8)) = 5 / (8 * Z - 5) := by
-  have h1 : Z ^ 2 / 2 - 5 * Z / 8 ≠ 0 := by nlinarith
+  have p1 : 0 < Z ^ 2 / 2 - 5 * Z / 8 := by nlinarith
+  have h1 : Z ^ 2 / 2 - 5 * Z / 8 ≠ 0 := p1.ne'
   have h2 : 8 * Z - 5 ≠ 0 := by linarith
-  have h3 : (Z ^ 2 / 2) / (Z ^ 2 / 2 - 5 * Z / 8) + 1 ≠ 0 := by
-    have : 0 < (Z ^ 2 / 2) / (Z ^ 2 / 2 - 5 * Z / 8) := by
-      apply div_pos <;> nlinarith
-    linarith
+  have p3 : 0 < Z ^ 2 / 2 + (Z ^ 2 / 2 - 5 * Z / 8) := by nlinarith
   unfold g
-  rw [div_eq_div_iff h3 h2]
-  field_simp
+  rw [div_sub_one h1, div_add_one h1, div_div_div_cancel_right₀ h1]
+  rw [div_eq_div_iff p3.ne' h2]
   ring
 
 end VOTKP.MatterDisk
