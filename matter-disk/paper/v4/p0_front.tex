@@ -1,0 +1,43 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx,booktabs,xcolor,longtable,array}
+\usepackage{listings}
+\usepackage[section]{placeins}
+\usepackage[hidelinks]{hyperref}
+\renewcommand{\labelitemi}{$\bullet$}
+\emergencystretch=3em
+\lstset{basicstyle=\ttfamily\scriptsize,breaklines=true,columns=fullflexible,frame=single,framerule=0.3pt,rulecolor=\color{gray},upquote=false}
+\input{v4/literate.tex}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newcommand{\grade}[1]{\textsf{\small[#1]}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Log}{\operatorname{Log}}
+\newcommand{\Rea}{\operatorname{Re}}
+\newcommand{\Ima}{\operatorname{Im}}
+\newcommand{\rank}{\operatorname{rank}}
+\title{Matter, Then On Down\\[4pt]\large One coordinate from bulk matter to the nucleus}
+\author{Jeromie Beasley}
+\date{4 November 2026 \quad Edition 4}
+\begin{document}
+\maketitle
+
+\noindent\emph{Prepared with AI assistance (Claude, Anthropic; and OpenAI tools for parts of the formal development): the ideas and research direction are the author's; computation, drafting, formal checking and typesetting were done with AI tools, and every number is produced by a script printed in Appendix C.}
+
+\begin{abstract}
+Matter has no absolute size. The zero and the span of every operator description are free, and the one place scale returns is a logarithmic boundary count whose coefficient is fixed by the central charge, $A=2c/\pi^2$ for an interval. This paper follows that boundary downward through one coordinate, $\Gamma=(z-1)/(z+1)=\tanh(\tfrac12\ln z)$, which reads a ratio at every scale: occupation odds at a cut of bulk matter, successive removal energies of an atom, populations of a gas, separation energies of a nucleus, and the complex odds of opened, non-Hermitian matter. The boundary census is the gauge without its sign; the signed offset $\tau=\log\det(I-C)-\log\det C$ is its clock face. The weight between, the cross block $X_A=C_{AB}C_{BA}$, is positive, bounded by $\tfrac14$, two-sided, stable under perturbation with a certified margin, bounded above by four times the Gaussian mutual information, and recovers the occupation census exactly on a pure state. The offset moves no faster than $\dot\tau^2\le4gS$, and two preparations with the same census, offset and coupling can saturate that bound in opposite directions. The same chart is a reflection chart: a step in spectral gap reflects with the peel coordinate $\tanh(\tfrac12\ln\Delta_2/\Delta_1)$, a matched load sits at the centre, total reflection on the rim, and the outside record of a Hawking fermion pair at $\Gamma=\tanh(\hbar\omega/2k_BT_H)$. Helium's two thresholds give $\Gamma_0=0.377575$; an anchored threshold vector is an exact coordinate change of the ladder; a finite Saha gas has one neutral state, and its populations carry the peel back out once the partition functions and $n_e\lambda_e^3$ are supplied. The unbound nuclei ${}^5$He, ${}^5$Li and ${}^8$Be sit outside the disk at $|\Gamma|=1.074$, $1.220$, $1.025$, at a rim distance $2s/(S_{\mathrm{next}}-s)$ exactly. Finite present records, from a moment list to density, flow and stress, do not fix later response, and exact witnesses show which distinction is lost and where it returns. Opened matter leaves the disk before its critical point; on the PT-symmetric chain the opened band metric is Lorentzian exactly where $E(k)^2>0$ and $\cos k\neq0$, with $\det Q=-u^2w^2\cos^2k/(16E(k)^6)$, and the exit line is $E(0)E(\pi)=u^2$, a band-averaged Petermann factor of 2 and a quarter turn of the continued endpoint offset, stated with its filter, partition and counterexamples. Every claim carries a grade and every number a script.
+\end{abstract}
+
+\paragraph{Grades.} \grade{T} proved here (or proved in Appendix A from the author's earlier papers); \grade{L} checked in Lean (Appendix B); \grade{V} verified numerically with stated controls; \grade{R} a reproduction of a known result in this coordinate; \grade{C} conjecture; \grade{H} a reading; \grade{lit} comparison with other people's published data; \grade{S} a structural comparison between different objects that share a form, with no identification of the objects.
+
+\tableofcontents
+\newpage

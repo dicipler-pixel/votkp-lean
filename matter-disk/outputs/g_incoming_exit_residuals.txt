@@ -1,0 +1,97 @@
+{
+  "classification": "Diagnostic added after observing endpoint-filter sensitivity; not a preregistered new decision test",
+  "caveat": "Small residuals in a nonnormal eigenproblem do not certify small eigenvalue errors or a continuum-limit threshold.",
+  "maximum_normalized_eigenpair_residual": 4.406378670976857e-15,
+  "rows": [
+    {
+      "m": 0.4,
+      "cut": 1e-06,
+      "exit_gamma": 0.2716369288976192,
+      "normalized_max_eigenpair_residual": 3.182735498977942e-15,
+      "eigenvector_condition_number": 135.08185523602376,
+      "retained_eigenvalues": 6,
+      "compression_norm": 1.0507874021697408
+    },
+    {
+      "m": 0.4,
+      "cut": 1e-08,
+      "exit_gamma": 0.2716369288976192,
+      "normalized_max_eigenpair_residual": 3.182735498977942e-15,
+      "eigenvector_condition_number": 135.08185523602376,
+      "retained_eigenvalues": 8,
+      "compression_norm": 1.0507874021697408
+    },
+    {
+      "m": 0.4,
+      "cut": 1e-09,
+      "exit_gamma": 0.16916993247628215,
+      "normalized_max_eigenpair_residual": 4.322929209051072e-15,
+      "eigenvector_condition_number": 574.9088072508466,
+      "retained_eigenvalues": 10,
+      "compression_norm": 1.0207050696097535
+    },
+    {
+      "m": 0.4,
+      "cut": 1e-10,
+      "exit_gamma": 0.16916993247628215,
+      "normalized_max_eigenpair_residual": 4.322929209051072e-15,
+      "eigenvector_condition_number": 574.9088072508466,
+      "retained_eigenvalues": 10,
+      "compression_norm": 1.0207050696097535
+    },
+    {
+      "m": 0.4,
+      "cut": 1e-12,
+      "exit_gamma": 0.1227913656055927,
+      "normalized_max_eigenpair_residual": 4.406378670976857e-15,
+      "eigenvector_condition_number": 351.93147861449006,
+      "retained_eigenvalues": 14,
+      "compression_norm": 1.0110432285326036
+    },
+    {
+      "m": 0.0,
+      "cut": 1e-06,
+      "exit_gamma": 0.4743416490950296,
+      "normalized_max_eigenpair_residual": 1.4423660472602578e-15,
+      "eigenvector_condition_number": 145.42622327140032,
+      "retained_eigenvalues": 10,
+      "compression_norm": 3.041024145848934
+    },
+    {
+      "m": 0.0,
+      "cut": 1e-08,
+      "exit_gamma": 0.4743416490950296,
+      "normalized_max_eigenpair_residual": 1.4423660472602578e-15,
+      "eigenvector_condition_number": 145.42622327140032,
+      "retained_eigenvalues": 14,
+      "compression_norm": 3.041024145848934
+    },
+    {
+      "m": 0.0,
+      "cut": 1e-09,
+      "exit_gamma": 0.4743416490950296,
+      "normalized_max_eigenpair_residual": 1.4423660472602578e-15,
+      "eigenvector_condition_number": 145.42622327140032,
+      "retained_eigenvalues": 14,
+      "compression_norm": 3.041024145848934
+    },
+    {
+      "m": 0.0,
+      "cut": 1e-10,
+      "exit_gamma": 0.4743414673329256,
+      "normalized_max_eigenpair_residual": 1.2382937166700015e-15,
+      "eigenvector_condition_number": 162.37158134723273,
+      "retained_eigenvalues": 18,
+      "compression_norm": 3.04101441355121
+    },
+    {
+      "m": 0.0,
+      "cut": 1e-12,
+      "exit_gamma": 0.47422795577696786,
+      "normalized_max_eigenpair_residual": 1.8840893883918226e-15,
+      "eigenvector_condition_number": 330.2849945171612,
+      "retained_eigenvalues": 22,
+      "compression_norm": 3.0349556693697504
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "class": "Gauge-invariant Gaussian covariance implementation checks",
+  "natural_log_units": true,
+  "cases": 64,
+  "minimum_lower_bound_margin": 9.114944760997903e-06,
+  "minimum_upper_bound_margin": 5.852263636260853e-05,
+  "sharp_lower_family": [
+    {
+      "r": 0.01,
+      "ratio": 4.000266709340838
+    },
+    {
+      "r": 0.001,
+      "ratio": 4.000002666648683
+    },
+    {
+      "r": 0.0001,
+      "ratio": 4.000000020099037
+    }
+  ],
+  "pure_upper_counterfamily": [
+    {
+      "p": 0.01,
+      "cross_trace": 0.0099,
+      "information": 0.11200306870969469,
+      "ratio": 11.313441283807544
+    },
+    {
+      "p": 0.0001,
+      "cross_trace": 9.999000000000001e-05,
+      "information": 0.0020420580740618645,
+      "ratio": 20.422623002918936
+    },
+    {
+      "p": 1e-06,
+      "cross_trace": 9.99999e-07,
+      "information": 2.9631020115985722e-05,
+      "ratio": 29.631049747035473
+    }
+  ],
+  "protocol_sha256": "cffe0462b988385eb4c6761d707866cd2dcba1390650f81e26d008bae118207a"
+}

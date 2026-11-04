@@ -1,0 +1,90 @@
+{
+  "status": "PASS",
+  "protocol_sha256": "8637b0fc68f65f3a0b6efde5f1d63bfd6df02d8fa90a4b7f9cde151bb9aa5590",
+  "python": "3.13.18",
+  "scope": "Finite implementation checks and explicit counterexamples; not substitutes for analytic proofs.",
+  "perturbation_pairs": 128,
+  "max_random_lipschitz_ratio": 0.6042534415334075,
+  "certified_margin_cases": 455,
+  "near_projector_cases": 64,
+  "minimum_ordering_eigenvalue": 0.00025492682239148677,
+  "smallest_near_threshold_margin": 4.9588167872274824e-05,
+  "sharp_lipschitz_family": [
+    {
+      "epsilon": 0.01,
+      "ratio": 0.9900000000000011,
+      "exact_ratio": 0.99
+    },
+    {
+      "epsilon": 0.0001,
+      "ratio": 0.9999000000000526,
+      "exact_ratio": 0.9999
+    },
+    {
+      "epsilon": 1e-06,
+      "ratio": 0.9999989999943661,
+      "exact_ratio": 0.999999
+    }
+  ],
+  "discontinuous_threshold_family": [
+    {
+      "epsilon": 0.001,
+      "input_distance": 0.0020000000000000018,
+      "counts": [
+        0,
+        1
+      ]
+    },
+    {
+      "epsilon": 1e-06,
+      "input_distance": 1.999999999946489e-06,
+      "counts": [
+        0,
+        1
+      ]
+    },
+    {
+      "epsilon": 1e-09,
+      "input_distance": 2.0000000544584395e-09,
+      "counts": [
+        0,
+        1
+      ]
+    }
+  ],
+  "nonGaussian_counterexample": {
+    "covariance_error": 1.1102230246251565e-16,
+    "cross_gram_trace": 0.0,
+    "number_covariance": -0.9999999999999996,
+    "bipartite_entropy": 0.6931471805599454,
+    "fixed_total_number": 1.9999999999999996
+  },
+  "full_spectrum_response_witness": [
+    {
+      "weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "mean": 0.0,
+      "second_moment": 5.0,
+      "third_moment": 0.0,
+      "coupling_square": 5.0,
+      "survival_probability": 1.232595164407831e-32
+    },
+    {
+      "weights": [
+        0.1875,
+        0.4375,
+        0.0625,
+        0.3125
+      ],
+      "mean": 0.0,
+      "second_moment": 5.0,
+      "third_moment": 3.0,
+      "coupling_square": 5.000000000000001,
+      "survival_probability": 0.03125000000000002
+    }
+  ]
+}

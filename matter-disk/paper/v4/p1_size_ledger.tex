@@ -1,0 +1,168 @@
+\section{Matter has no absolute size}\label{sec:size}
+Every instrument needs a zero and a span. In the operator framework of \emph{Matter at a Scale} (v5) and \emph{Foundational Operator Field Theory}, the zero is free and so is the span: difference observables are unchanged by $K\mapsto K+cI$, and spectral projectors, principal angles and the infrared boundary census are unchanged by $K\mapsto cK$ with $c>0$ \grade{T} (A.1). Within this framework only ratios are observable, and the equivalence that says so is the affine one, $K\mapsto cK+dI$ with $c>0$, carried together with the sector it fills: a shift moves every eigenvalue together, so a fixed numerical Fermi level must move with it.
+
+Two consequences fix how a ratio may be read. First, the ratio must be taken between quantities that have a physical zero. The eigenvalues $(1,2)$ have ratio $2$ and coordinate $\Gamma=1/3$; shifted by $-\tfrac54$ they become $(-\tfrac14,\tfrac34)$, ratio $-3$ and $\Gamma=2$, with the same gap \grade{T}. Removal energies are measured from the continuum and separation energies from the next threshold, so their ratios mean something; a raw eigenenergy ratio does not. Second, the invariance belongs to the generator. Rescaling the generator leaves the filled projector, and so the correlation matrix $C$, unchanged; rescaling $C$ itself is a different operation, under which the cross block of §\ref{sec:cross} scales as $X\mapsto a^2X$ and a census taken at a fixed numerical threshold changes.
+
+The single failure is ultraviolet. For a region $A$ with $|\partial A|$ boundary points in a substrate of correlation length $\xi$ and central charge $c$, the number $N$ of eigenvalues of the restricted correlation matrix in $[\varepsilon,1-\varepsilon]$ grows as
+\begin{equation}
+N=|\partial A|\,\frac{c}{\pi^2}\,\log\frac{\xi}{a}\,\log\frac{1-\varepsilon}{\varepsilon}+\dots
+\label{eq:census}
+\end{equation}
+so a two-endpoint interval carries $A=2c/\pi^2$ (A.2: an asymptotic derivation from an equally spaced entanglement ladder and the Calabrese–Cardy entropy, exact given those two inputs) \grade{T}. The window enters as $\Lambda=\log((1-\varepsilon)/\varepsilon)$, which becomes $\log(1/\varepsilon)$ only for small $\varepsilon$. The coefficient was measured at $c=1$ as $0.202692$ against $2/\pi^2=0.202642$. At $c=\tfrac12$, on the transverse-field Ising chain, two correction families for the interval entropy coefficient give $0.1693$ and $0.1586$, bracketing $1/6$ from both sides, and the census coefficient reads $0.103689$, $2.3\%$ above $1/\pi^2$ and $41.8$ times closer to it than to the $c=1$ value \grade{V} (\emph{Matter at a Scale}, ISING-A-03 and ROBUST-01). \emph{The Angle Between the Rails} derives the same coefficient from the spacing $\Delta=4\pi K(\tilde u)/K'(\tilde u)$ of the entanglement ladder, $N=4\Lambda/\Delta$ for two cuts \grade{T}. A rescaling of the substrate is registered only as a running, never as a power.
+
+The physical reading of \emph{Matter at a Scale} is the starting point of everything below: matter is a gap wearing a boundary. A gapped substrate keeps a finite, area-law census; gas, the gapless phase, floods it.
+
+\section{The boundary keeps a ledger}\label{sec:ledger}
+\subsection{Census, offset and one chart}
+Let $C$ be the one-body correlation matrix of a region, with eigenvalues $\nu\in(0,1)$. Each level has odds $z=(1-\nu)/\nu$ and a rapidity $\varepsilon=\ln z$. Write $\Gamma=(z-1)/(z+1)$.
+
+\begin{proposition}[the bridge] \label{prop:bridge}
+$\Gamma=\tanh(\varepsilon/2)=1-2\nu$, and the window $\nu\in[\delta,1-\delta]$ is the disk $|\Gamma|\le1-2\delta$. The binary entropy integrated over the rapidity is $\int_{-\infty}^{\infty}H(\nu(\varepsilon))\,d\varepsilon=\pi^2/3$. \grade{T}\grade{L}
+\end{proposition}
+\begin{proof}
+With $z=(1-\nu)/\nu$: $z-1=(1-2\nu)/\nu$ and $z+1=1/\nu$, so $\Gamma=1-2\nu$. Also $(e^\varepsilon-1)/(e^\varepsilon+1)=\tanh(\varepsilon/2)$. The window statement is $|1-2\nu|\le1-2\delta$. For the integral, $\nu=1/(1+e^\varepsilon)$ and $d\nu=-\nu(1-\nu)\,d\varepsilon$, so $\int H\,d\varepsilon=\int_0^1 H(\nu)/(\nu(1-\nu))\,d\nu=2\int_0^1(-\ln\nu)/(1-\nu)\,d\nu=2\zeta(2)=\pi^2/3$ (A.3).
+\end{proof}
+Checked to $1.1\times10^{-16}$ and $6.7\times10^{-15}$ (script \texttt{s01}). The identity $1-2\nu=\tanh(\varepsilon/2)$ is standard in entanglement-spectrum work; the reading is the author's. \emph{The Offset Speed Limit} names the same function four ways at once: the Smith-chart reflection $(z-1)/(z+1)$, the two-level Gibbs population gap $\tanh(\beta\Delta/2)$, the asymmetry $1-2\nu$ of an occupation against its log-odds, and the peel coordinate of VOTKP. Section~\ref{sec:reflection} adds a fifth: the reflection of a wave at a change of spectral gap.
+
+Summed over the levels of the region, the rapidity is the author's signed offset,
+\begin{equation}
+\tau=\sum_\nu \varepsilon_\nu=\Tr[\log(I-C)-\log C]=\log\frac{\det(I-C)}{\det C}=\log\frac{P(N_A=0)}{P(N_A=|A|)},
+\label{eq:offset}
+\end{equation}
+the log-odds of the region being empty against full (\emph{The Offset Belongs to the Boundary}, v31, Theorem 2). The last equality holds for a number-conserving Gaussian (quasi-free) fermion state, where the reduced state is a product over the eigenmodes of $C$ (A.4) \grade{T}; for a general state the one-body matrix does not fix the configuration probabilities, and \eqref{eq:offset} is read as the trace formula alone. The census counts levels inside a window of $\nu(1-\nu)$, and $\nu(1-\nu)=(1-\Gamma^2)/4$ is blind to the sign of $\Gamma$. In the author's words: ``The offset is the clock face; the census is the gauge without its sign.'' The matrices $\mathrm{diag}(0.2,0.8)$ and $\mathrm{diag}(0.2,0.2)$ have the same defect $C-C^2=0.16I$, so every census window counts them alike; their offsets are $0$ and $\log16$.
+
+\begin{theorem}[the Cayley domain, branch explicit]\label{thm:cayley}
+For $z\in\mathbb C\setminus\{-1\}$, $|z+1|^2-|z-1|^2=4\Rea z$, so $|\Gamma|<1\iff\Rea z>0$, $|\Gamma|=1\iff\Rea z=0$, $|\Gamma|>1\iff\Rea z<0$. For $z=e^W$ the Cayley expression is $\tanh(W/2)$, and $|\tanh(W/2)|<1\iff\cos(\Ima W)>0$; on the principal branch $\Ima W\in(-\pi,\pi]$ this is $|\Ima W|<\pi/2$. \grade{T}\grade{L}
+\end{theorem}
+\begin{proof}
+Expand the squared moduli and divide their difference by $|z+1|^2>0$; then $\Rea e^W=e^{\Rea W}\cos(\Ima W)$. Cosine is positive on the principal branch exactly in the open interval stated.
+\end{proof}
+Three statements are kept apart. A negative real ratio has principal phase $\Ima W=\pi$, a half turn, and lies outside the disk. Only the single ratio $z=-1$ is the Cayley pole, where $\Gamma$ is undefined rather than large; $z=-2$, for instance, gives the finite $\Gamma=3$. And a complex ratio does not by itself leave the disk: $z=1-i\gamma$ gives $|\Gamma|^2=\gamma^2/(4+\gamma^2)<1$ for every $\gamma$. Leaving needs a ratio whose real part changes sign. Without the branch restriction the interval statement is false, since the criterion is periodic in $\Ima W$ modulo $2\pi$.
+
+\subsection{The weight between}\label{sec:cross}
+Split the space into the region $A$ and the rest $B$, of dimensions $a$ and $b$, and let $C=C^*$ with $0\le C\le I$. Write
+\[
+C=\begin{pmatrix}A_C&B_C\\B_C^*&D_C\end{pmatrix},\qquad F_A=A_C-A_C^2,\qquad T_A=(C-C^2)_{AA},\qquad X_A=B_CB_C^*=C_{AB}C_{BA},
+\]
+and $X_B=B_C^*B_C$. Fix $0<\varepsilon<\tfrac12$ and $\theta=\varepsilon(1-\varepsilon)$. The \emph{raw census} $N^{\mathrm{raw}}_\varepsilon=\rank\mathbf 1_{[\varepsilon,1-\varepsilon]}(A_C)$ counts intermediate local occupations; the \emph{boundary census} $N^\partial_\varepsilon=\rank\mathbf 1_{[\theta,\infty)}(X_A)$ counts squared cross-block singular values at or above $\theta$. Counts include multiplicity and equality at the threshold, and the partition is part of the definition.
+
+\begin{theorem}[the weight between]\label{thm:weight}
+For every such $C$:
+\begin{enumerate}
+\item (defect split) $F_A=T_A+X_A$. This needs only block multiplication; with $C^2=C$ it gives $X_A=A_C-A_C^2$ with no Hermiticity used. \grade{T}\grade{L}
+\item (order and size) $0\le X_A\le F_A\le\tfrac14I_A$, $0\le T_A\le F_A$, and $\|B_C\|\le\tfrac12$, attained by $C=\tfrac12\begin{pmatrix}1&1\\1&1\end{pmatrix}$. \grade{T}\grade{L}
+\item (two-sided) $X_A$ and $X_B$ have the same positive eigenvalues with multiplicity, so $N^\partial_\varepsilon(A)=N^\partial_\varepsilon(B)\le\rank B_C\le\min(a,b)$ and $\Tr X_A=\Tr X_B=\|B_C\|_F^2\le\tfrac14\min(a,b)$. A finite census cannot diverge at fixed $a,b$; a divergent census needs a declared sequence of spaces. \grade{T}
+\item (comparison and recovery) $N^\partial_\varepsilon\le N^{\mathrm{raw}}_\varepsilon$, with equality when $C^2=C$. \grade{T}
+\item (trace estimate) $\theta N^\partial_\varepsilon\le\Tr X_A=\sum_{i\in A,j\in B}|C_{ij}|^2$, and $\Tr X_A=0\iff B_C=0$. A census of zero allows nonzero strengths below $\theta$; it is not a certificate of no correlation. \grade{T}\grade{L}
+\item (local unitaries) For $U=U_A\oplus U_B$ unitary, $C\mapsto UCU^*$ conjugates $A_C$, $X_A$, $T_A$ by $U_A$ and leaves both censuses and every displayed spectrum and trace unchanged. A unitary that mixes the regions changes the observable. \grade{T}
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+(1) The $AA$ block of $C^2$ is $A_C^2+B_CB_C^*$, so $T_A=A_C-A_C^2-B_CB_C^*$. (2) Compression preserves order, so $0\le A_C\le I$; the spectral theorem gives $C-C^2\ge0$ (eigenvalues $c(1-c)\ge0$), so $T_A\ge0$; $X_A=B_CB_C^*\ge0$; (1) gives $X_A\le F_A$ and $T_A\le F_A$; and $F_A=\tfrac14I-(A_C-\tfrac12I)^2\le\tfrac14I$, so $\|B_C\|^2=\|X_A\|\le\tfrac14$. (3) If $B_CB_C^*u=\lambda u$ with $\lambda>0$ then $B_C^*u\neq0$ and $B_C^*B_C(B_C^*u)=\lambda B_C^*u$; the reverse map is $B_C/\lambda$, so the eigenspaces have equal dimension; sum and count. (4) For $\nu\in[0,1]$, $\nu(1-\nu)-\varepsilon(1-\varepsilon)=(\nu-\varepsilon)(1-\varepsilon-\nu)$, so $\nu(1-\nu)\ge\theta\iff\nu\in[\varepsilon,1-\varepsilon]$ and $\rank\mathbf 1_{[\theta,\infty)}(F_A)=N^{\mathrm{raw}}_\varepsilon$. By (2) and the min–max principle $\lambda_j(X_A)\le\lambda_j(F_A)$ for each ordered eigenvalue. If $C^2=C$ then $T_A=0$ and $X_A=F_A$. (5) Each counted eigenvalue contributes at least $\theta$ to the trace and the rest are nonnegative; $\Tr B_CB_C^*=\sum|(B_C)_{ij}|^2$. (6) Block multiplication; conjugation preserves spectra and trace.
+\end{proof}
+
+\paragraph{The boundary coordinate.} Each eigenvalue $\lambda$ of $X_A$ lies in $[0,\tfrac14]$, so
+\begin{equation}
+\Gamma_b(\lambda)=\sqrt{1-4\lambda}\in[0,1],\qquad \lambda=\frac{1-\Gamma_b^2}{4},\qquad \lambda\ge\varepsilon(1-\varepsilon)\iff\Gamma_b\le1-2\varepsilon
+\label{eq:gammab}
+\end{equation}
+is a real, unsigned coordinate \grade{T}. On a pure state, item (4) identifies $\lambda=\nu(1-\nu)$ and $\Gamma_b=|1-2\nu|$: the boundary coordinate is the modulus of the census point, not the signed point; the map forgets the difference between $\nu$ and $1-\nu$ \grade{T}\grade{L}. For mixed states $X_A$ need not commute with $A_C$, its eigenvalues cannot in general be paired level by level with $\nu(1-\nu)$, and the order comparisons of Theorem~\ref{thm:weight} are what remain.
+
+\paragraph{One block, many jobs.} The same positive square of an off-diagonal block appears wherever a space is cut \grade{T}\grade{S} (\emph{Beyond the Event Horizon}, ed.~10, §5.4). For an orthogonal projector $P=\begin{pmatrix}C&B\\B^\dagger&C'\end{pmatrix}$, $C-C^2=BB^\dagger$ and $\Tr(C^2-C)=-\Tr BB^\dagger\le0$: the boundary census of \emph{Light Keeps the Ledger} and the negative quadratic form of the gravity edition. For a Hamiltonian $H=\begin{pmatrix}A&B\\B^\dagger&D\end{pmatrix}$, the memory kernel $K(t)=Be^{-iDt}B^\dagger$ has footprint $K(0)=BB^\dagger$ (§\ref{sec:records}), and $PH^2P-(PHP)^2=PHQHP=BB^\dagger$ is exit and return. Applied to the correlation matrix, the block is $X_A$; applied to the generator, $\|PH(1-P)\|_F^2=E_H$ is the coupling energy of \emph{The Weight Between}. These are the same functional on different operators and different cuts. They are not one quantity, and §\ref{sec:speed} shows a pair of states where they differ by a factor that grows without bound.
+
+\subsection{Stability and a certified count}\label{sec:stability}
+\begin{theorem}[operator-norm stability]\label{thm:stab}
+Let $C,\tilde C$ be positive contractions on the same partition, $\delta=\|C-\tilde C\|$. Then $\|X_A(C)-X_A(\tilde C)\|\le\delta$, and for $\delta<\theta$,
+\[
+\mathcal N_{X_A(C)}(\theta+\delta)\le N^\partial_\varepsilon(\tilde C)\le\mathcal N_{X_A(C)}(\theta-\delta),
+\]
+where $\mathcal N_Y(s)=\rank\mathbf 1_{[s,\infty)}(Y)$. If $\mathrm{dist}(\theta,\mathrm{spec}\,X_A(C))>\delta$ the two counts are equal. \grade{T}
+\end{theorem}
+\begin{proof}
+Compression gives $\|B-\tilde B\|\le\delta$ and Theorem~\ref{thm:weight}(2) gives $\|B\|,\|\tilde B\|\le\tfrac12$, so $\|BB^*-\tilde B\tilde B^*\|=\|(B-\tilde B)B^*+\tilde B(B^*-\tilde B^*)\|\le(\|B\|+\|\tilde B\|)\delta\le\delta$. Weyl's inequality moves each ordered eigenvalue by at most $\delta$; the strict margin keeps every eigenvalue on its side of $\theta$.
+\end{proof}
+A floating-point residual is not by itself an operator-norm error bound; a certified count needs a validated bound and a margin larger than it.
+
+\begin{theorem}[near-projector comparison]\label{thm:nearproj}
+Put $\eta=\|C-C^2\|\in[0,\tfrac14]$. Then $X_A\le F_A\le X_A+\eta I_A$, hence $\mathcal N_{F_A}(\theta+\eta)\le N^\partial_\varepsilon\le N^{\mathrm{raw}}_\varepsilon$. If $\theta+\eta\le\tfrac14$ the lower count is $N^{\mathrm{raw}}_{\varepsilon_\eta}$ with $\varepsilon_\eta=\tfrac12(1-\sqrt{1-4(\theta+\eta)})$; otherwise it is zero. \grade{T}
+\end{theorem}
+\begin{proof}
+$0\le C-C^2\le\eta I$ compresses to $0\le T_A\le\eta I_A$; apply the defect split and ordered-eigenvalue monotonicity, then solve $\nu(1-\nu)\ge\theta+\eta$.
+\end{proof}
+This measures the distance between local occupation counting and cross-boundary counting without assuming that the matrices commute, and returns item (4) at $\eta=0$.
+
+\begin{proposition}[the coordinate is Hölder, and the bound is Hermitian]\label{prop:holder}
+For $\lambda,\tilde\lambda\in[0,\tfrac14]$, $|\Gamma_b(\lambda)-\Gamma_b(\tilde\lambda)|\le2\sqrt{|\lambda-\tilde\lambda|}$, and if both radii are at least $g>0$, $|\Gamma_b(\lambda)-\Gamma_b(\tilde\lambda)|\le(2/g)|\lambda-\tilde\lambda|$. Combined with Theorem~\ref{thm:stab}, ordered boundary coordinates move by at most $2\sqrt\delta$. The eigenvalue step does not transfer to nonnormal matrices: $J_0=\begin{pmatrix}0&1\\0&0\end{pmatrix}$ and $J_\delta=\begin{pmatrix}0&1\\\delta&0\end{pmatrix}$ differ by $\delta$ in norm while their eigenvalues move from $0,0$ to $\pm\sqrt\delta$. \grade{T}
+\end{proposition}
+\begin{proof}
+$|\sqrt x-\sqrt y|\le\sqrt{|x-y|}$ for $x,y\ge0$ with $x=1-4\lambda$; rationalising, $|\Gamma_b(\lambda)-\Gamma_b(\tilde\lambda)|=4|\lambda-\tilde\lambda|/(\Gamma_b(\lambda)+\Gamma_b(\tilde\lambda))$.
+\end{proof}
+The square-root loss at the centre is real: moving $\lambda=\tfrac14$ to $\tfrac14-h$ moves the radius from $0$ to $2\sqrt h$. A computed non-Hermitian residual therefore needs a conditioning or pseudospectral analysis before it becomes a certified disk count; idempotence does not supply one (§\ref{sec:opened}).
+
+\subsection{What the local record cannot say}\label{sec:cannot}
+\begin{proposition}[same local block, different weight between]\label{prop:extension}
+Every positive contraction $A$ on $\mathcal H_A$ has the projector extension
+\[
+P_A=\begin{pmatrix}A&\sqrt{A-A^2}\\\sqrt{A-A^2}&I-A\end{pmatrix}
+\]
+on $\mathcal H_A\oplus\mathcal H_A$, with the same $AA$ block as the disconnected $C_0=A\oplus(I-A)$, yet $X_A(P_A)=A-A^2$ while $X_A(C_0)=0$. \grade{T}
+\end{proposition}
+\begin{proof}
+The square root commutes with $A$. The diagonal blocks of $P_A^2$ are $A^2+(A-A^2)=A$ and $(A-A^2)+(I-A)^2=I-A$; the off-diagonal block is $A\sqrt{A-A^2}+\sqrt{A-A^2}(I-A)=\sqrt{A-A^2}$. So $P_A^2=P_A=P_A^*$.
+\end{proof}
+The local occupation spectrum therefore does not decide how much of its defect is boundary correlation and how much is global mixing. Three further exact examples mark the edge of the census \grade{T}:
+\begin{itemize}
+\item \emph{Disconnected thermal state.} $C=pI$ with $\varepsilon\le p\le1-\varepsilon$ has $N^{\mathrm{raw}}_\varepsilon=a$, $X_A=0$, $N^\partial_\varepsilon=0$; its Gaussian state is a product with zero mutual information and local number variance $ap(1-p)$. Every boundary coordinate is $1$ while every raw coordinate is $1-2p$.
+\item \emph{Classical correlation invisible to $C$.} On two modes $\rho_{\mathrm{cl}}=\tfrac12|10\rangle\langle10|+\tfrac12|01\rangle\langle01|$ has $C=\tfrac12I_2$, so $X_A=0$, yet $\mathrm{Cov}(n_1,n_2)=-\tfrac14$ and mutual information $\log2$. The Gaussian state $I_4/4$ has the same $C$ and neither.
+\item \emph{Entanglement invisible to $C$.} On four modes split $\{1,2\}|\{3,4\}$, $|\Psi\rangle=(|1100\rangle+|0011\rangle)/\sqrt2$ has fixed particle number two, $C=\tfrac12I_4$ and $X_A=0$, and entanglement entropy $\log2$. No one-body operator connects the two configurations.
+\end{itemize}
+The census is therefore a statement about the one-body record, and it reads correlation faithfully inside the quasi-free class of §\ref{sec:info}, not outside it.
+
+\subsection{Number variance and mutual information}\label{sec:info}
+\begin{proposition}[number covariance]\label{prop:variance}
+For a gauge-invariant quasi-free fermion state with $C_{ij}=\langle a_j^\dagger a_i\rangle$, $N_A=\sum_{i\in A}n_i$ and $N_B=\sum_{j\in B}n_j$,
+\[
+\mathrm{Var}(N_A)=\Tr(A_C-A_C^2),\qquad\mathrm{Cov}(N_A,N_B)=-\Tr X_A,\qquad\mathrm{Var}(N_A)=\Tr T_A-\mathrm{Cov}(N_A,N_B). \quad\grade{T}
+\]
+\end{proposition}
+\begin{proof}
+For $i\neq j$ Wick factorisation with no anomalous pairing gives $\langle n_in_j\rangle=C_{ii}C_{jj}-|C_{ij}|^2$; for $i=j$, $n_i^2=n_i$. So $\mathrm{Cov}(n_i,n_j)=\delta_{ij}C_{ii}-|C_{ij}|^2$. Sum over $A\times A$ and $A\times B$, then use the defect split.
+\end{proof}
+On a pure Slater state $\mathrm{Var}(N_A)=\Tr X_A$: the weight between is the number fluctuation of the region.
+
+\begin{theorem}[the weight between bounds the information across the cut]\label{thm:info}
+For the state of Proposition~\ref{prop:variance}, with $h(x)=-x\log x-(1-x)\log(1-x)$ and $I_G(A:B)=\Tr h(A_C)+\Tr h(D_C)-\Tr h(C)$,
+\[
+4\Tr X_A\le I_G(A:B),
+\]
+and the constant $4$ is sharp. If in addition $\delta I\le C\le(1-\delta)I$ with $0<\delta\le\tfrac12$, then $I_G(A:B)\le\Tr X_A/(\delta(1-\delta))$. Consequently $N^\partial_\varepsilon\le I_G(A:B)/(4\varepsilon(1-\varepsilon))$, and within this class $I_G=0\iff X_A=0$. \grade{T}
+\end{theorem}
+\begin{proof}
+Diagonalising a quasi-free covariance gives independent modes with Bernoulli occupations, so $S(\rho)=\Tr h(C)$, and reduced states are quasi-free with the compressed covariances. Let $S=I_A\oplus(-I_B)$ and $C_0=A_C\oplus D_C=\tfrac12(C+SCS)$. \emph{Trace Jensen:} if $f$ is concave on an interval containing the spectra of Hermitian $H,K$, then $\Tr f(tH+(1-t)K)\ge t\Tr f(H)+(1-t)\Tr f(K)$; diagonalise $tH+(1-t)K$ in an orthonormal basis $u_i$, apply scalar concavity to $\langle u_i,Hu_i\rangle,\langle u_i,Ku_i\rangle$, then $f(\langle u_i,Hu_i\rangle)\ge\langle u_i,f(H)u_i\rangle$, and sum. \emph{Lower bound:} $f(x)=h(x)+2x^2$ has $f''=4-1/(x(1-x))\le0$ on $(0,1)$, so $\Tr f(C_0)\ge\Tr f(C)$ (unitary invariance of $\Tr f(SCS)$), i.e. $I_G\ge2[\Tr C^2-\Tr C_0^2]=4\Tr B_CB_C^*$. \emph{Upper bound:} on $[\delta,1-\delta]$, $g(x)=h(x)+x^2/(2\delta(1-\delta))$ is convex, so $\Tr g(C_0)\le\Tr g(C)$, which rearranges with $\Tr C^2-\Tr C_0^2=2\Tr X_A$. \emph{Sharpness:} $C=\tfrac12I_2+r\sigma_x$ has $\Tr X_A=r^2$ and $I_G=2\log2-2h(\tfrac12+r)=4r^2+O(r^4)$. The census bound combines this with Theorem~\ref{thm:weight}(5).
+\end{proof}
+Sixty-four random covariances respect both bounds with minimum margins $9.1\times10^{-6}$ (lower) and $5.9\times10^{-5}$ (upper); the ratio $I_G/\Tr X_A$ tends to $4.000000020$ on the sharp family; and on pure states with an occupation $p\to0$ the upper ratio runs $11.3$, $20.4,\dots$ without bound, so no upper constant exists without a spectral margin \grade{V} (script \texttt{g\_gaussian\_information\_checks}). The bound holds for fermionic Gaussian states; it does not transfer a bosonic theorem, and outside the class the counterexamples above decide.
+
+\subsection{The speed of the record}\label{sec:speed}
+\begin{theorem}[the offset speed limit; \emph{The Offset Speed Limit}, Thm 1 and Cor.~3]\label{thm:speed}
+Let $P(t)$ be a smooth family of orthogonal projectors on $\mathbb C^n$, $E$ an $n\times m$ isometry onto the region, $C=E^\dagger PE$ with $0<C<I$, $\tau=\Tr[\log(I-C)-\log C]$, $g=\tfrac12\|\dot P\|_F^2$ and $S=\Tr[(C(I-C))^{-1}]$. Then
+\begin{equation}
+\dot\tau^2\le4gS,
+\end{equation}
+with equality iff $\dot P$ is a real multiple of $[P,[P,F]]$, $F=EWE^\dagger$, $W=-(C(I-C))^{-1}$. If $\dot P=-i[H,P]$ then $g=E_H=\|PH(1-P)\|_F^2$ and $|\dot\tau|\le2\sqrt{E_HS}$. \grade{T}
+\end{theorem}
+The proof is A.7. The generator coupling $E_H$ is taken on the moving projector $P$ and the generator $H$; the cross weight $\Tr X_A$ is taken on a fixed spatial cut of $C$. The bound is a statement about the first, and the following exact pair shows that the second cannot stand in for it.
+
+\begin{proposition}[the speed budget does not choose the future]\label{prop:joint}
+Set $\hbar=1$, $H=\omega\sigma_x$ with $\omega>0$, and $P_\pm(0)=\tfrac12(I\pm\sigma_y)$, read through the first basis vector. Both are orthogonal rank-one projectors with $\nu=\tfrac12$, $\Gamma=0$, $\tau=0$, $X=\tfrac14$ and $E_H=\omega^2$ at $t=0$. Under the same evolution
+\[
+\nu_\pm(t)=\tfrac12(1\pm\sin2\omega t),\qquad \tau_\pm(t)=\mp2\operatorname{artanh}(\sin2\omega t),
+\]
+and both saturate $\dot\tau^2=4gS$ at every time while their offsets move in opposite directions. At $t=0$, $|\dot\tau|=4\omega=2\sqrt{E_HS}$, whereas $2\sqrt{\Tr X\cdot S}=2$; for $\omega>\tfrac12$ the cross weight would understate the speed. \grade{T}\grade{V}
+\end{proposition}
+\begin{proof}
+$e^{-i\omega t\sigma_x}$ rotates the Bloch vector $(0,\pm1,0)$ in the $y$–$z$ plane at rate $2\omega$, so $\nu_\pm=\tfrac12(1+r_z)$ is as stated and $\tau=\log((1-\nu)/\nu)$ follows. The state stays orthogonal to the $x$ axis, so $E_H=\omega^2$ throughout and $\|\dot P\|_F^2=\tfrac12|\dot r|^2=2\omega^2$, $g=\omega^2$. With $s=\sin2\omega t$, $S=4/(1-s^2)$ and $\dot\tau=\mp4\omega\cos(2\omega t)/(1-s^2)$, so $\dot\tau^2=16\omega^2/(1-s^2)=4gS$.
+\end{proof}
+The two preparations share census, offset, cross weight and coupling; they differ in the relative phase to the fixed generator, the same datum that decides the matched-boundary example $C_\pm=\tfrac12I\pm r\sigma_y$ (B12 of the formal development; here at $r=\tfrac12$). Script \texttt{s13} checks saturation to $1.4\times10^{-13}$ over three frequencies, both signs and 31 times, and confirms $|\dot\tau|=4,8>2$ at $\omega=1,2$. If $PH(1-P)=0$ the projector, and with it the offset, is frozen in that evolution: no weight between in the generator, no motion of the record. A frozen offset is a statement about this motion; it does not say the record holds no memory.
+
+\subsection{Warm matter: heat moves the gauge, the cut keeps its strengths}
+At finite temperature $C^2\neq C$. The first term of the defect split is mixing inside the region; only $X_A$ crosses the cut. Counting $\lambda(X_A)\ge\varepsilon(1-\varepsilon)$ instead of $\nu\in[\varepsilon,1-\varepsilon]$ separates the two. On a ring of 128 sites (antiperiodic, $\mu=0$, half-ring region, $\varepsilon=0.1$) the raw count rises from 2 to 24 to 64 as $T$ goes $0\to0.5\to2$, while the boundary count goes $2\to0\to0$; disconnected sites $C=0.3I$ give raw 32, boundary 0 \grade{V} (script \texttt{s07}, Figure~\ref{fig:boundary}, left). A boundary count of zero means every cross-cut strength is below the threshold, not that the cut is uncorrelated: $\Tr X_A=0.170835$ in the warm uniform ring at $T=0.5$, and the boundary strengths themselves change with temperature. Heat separates local mixing from cross-cut correlation; it does not leave the cut untouched. The disconnected control is the exact case $X_A=0$, $\Gamma_b=1$ for every level.

@@ -1,0 +1,51 @@
+\section{The Lean files}
+Two separately built suites check the algebraic core.
+
+\paragraph{VOTKP.MatterDisk.} Module \texttt{VOTKP.MatterDisk} of the repository \texttt{dicipler-pixel/votkp-lean} (Lean 4 with Mathlib v4.34.1). Its twelve theorems are: \texttt{bridge}, \texttt{census\_square}, \texttt{census\_complement} (A.3, A.6); \texttt{rapidities\_add} (A.8); \texttt{topleft\_sq}, \texttt{idempotent\_cross} (A.5, A.6); \texttt{exit\_line} (A.14); \texttt{outside\_rim}, \texttt{rim\_distance}, \texttt{cayley\_pole} (A.12); \texttt{saha\_ratio} (A.11); \texttt{last\_step} (A.10). The build record is GitHub Actions run 41729732315 at commit \texttt{0e5792a} (152 theorems across the repository; the axiom audit finds only \texttt{propext}, \texttt{Classical.choice} and \texttt{Quot.sound}). False controls live in \texttt{FalseControls/}, outside the positive build globs, and are run separately, where each must fail on a mathematical goal.
+
+\lstinputlisting{../../VOTKP/MatterDisk.lean}
+
+\paragraph{MatterGas.} The formal suite of the 3 November development: 34 positive declarations compiled under Lean 4.34.1 and Mathlib commit \texttt{d13f23b723b8a846827a245b89c10fc7d3f11612}, with no \texttt{sorry}, \texttt{admit}, custom axiom or \texttt{native\_decide}; five false controls (a common scale changes the Cayley ratio; disconnected thermal variance is zero; the maximum covariance defect is at most $1/5$; the first three moments fix the third; mean charge rises with electron density) are rejected on unsolved mathematical goals. Coverage: \texttt{Boundary} gives the defect split, positivity, $0\le BB^*\le A-A^2\le I/4$, the projector reduction, the disconnected zero and the trace-zero criterion (Theorem~\ref{thm:weight}), and the complex identity $1-4\nu(1-\nu)=(1-2\nu)^2$ with the idempotent embedding $\mathcal P(A)$ (Theorem~\ref{thm:open}); \texttt{Scalar} gives Cayley scale invariance, bounds, inverse and anchored reconstruction (Theorem~\ref{thm:anchor}); \texttt{Saha} gives three-charge uniqueness, monotone mean charge and the population cancellations (Theorems~\ref{thm:saha}, \ref{thm:inverse}); \texttt{Witness} gives the $m=3$ moment witness, with weights $(7,11,5,9)/32$, a different amplitude of the same construction as the text's $(3,7,1,5)/16$. Ordered spectral comparisons, stability, the information bounds, general-$Z$ Saha, the response laws, the kinetic witness and the Petermann statements are proved by hand in this paper and are not machine-checked.
+
+\lstinputlisting{../external/gpt_formal_20261103/lean/MatterGas.lean}
+\lstinputlisting{../external/gpt_formal_20261103/lean/MatterGas/Boundary.lean}
+\lstinputlisting{../external/gpt_formal_20261103/lean/MatterGas/Scalar.lean}
+\lstinputlisting{../external/gpt_formal_20261103/lean/MatterGas/Saha.lean}
+\lstinputlisting{../external/gpt_formal_20261103/lean/MatterGas/Witness.lean}
+
+\section{Scripts and outputs}
+Every script below is printed whole, followed by its verbatim output. They run with Python 3, numpy, scipy, sympy and matplotlib; the nuclear script also needs pynucastro (for the NUBASE2020 file). Repository: \texttt{dicipler-pixel/votkp-lean}, folder \texttt{matter-disk/}. Scripts \texttt{s06}, \texttt{s07}, \texttt{s08}, \texttt{s11}, \texttt{s12} and \texttt{s13} carry a kill condition written before their run; the others are observational scans or figure builders and carry none. \texttt{s03c} is the raw metric scan that \texttt{s03d} repeats with a rank check. The \texttt{g} scripts are the formal development's own checks, rerun for this edition from \texttt{external/gpt\_formal\_20261103}; the gas checks follow a protocol fixed before their execution. \texttt{s09} reads the formal package from a local checkout path and its printed output is the record of that run.
+
+\newcommand{\scr}[3]{\subsection*{\texttt{\detokenize{#2}}}\lstinputlisting{#1#2}\noindent Output:\lstinputlisting{../outputs/#3}}
+\scr{../scripts/}{s01_bridge.py}{s01_bridge.txt}
+\scr{../scripts/}{s02_ladder.py}{s02_ladder.txt}
+\scr{../scripts/}{nhssh_lib_and_s03a_occupations.py}{nhssh_lib_and_s03a_occupations.txt}
+\scr{../scripts/}{s03b_renyi_central_charge.py}{s03b_renyi_central_charge.txt}
+\scr{../scripts/}{s03c_metric_raw.py}{s03c_metric_raw.txt}
+\scr{../scripts/}{s03d_metric_rank_checked.py}{s03d_metric_rank_checked.txt}
+\scr{../scripts/}{s04a_rotation_unwindowed.py}{s04a_rotation_unwindowed.txt}
+\scr{../scripts/}{s04b_rotation_windowed.py}{s04b_rotation_windowed.txt}
+\scr{../scripts/}{s05a_exit_line.py}{s05a_exit_line.txt}
+\scr{../scripts/}{s05b_predict_exit.py}{s05b_predict_exit.txt}
+\scr{../scripts/}{s06_second_model_exit_law.py}{s06_second_model_exit_law.txt}
+\scr{../scripts/}{s07_boundary_census_disk.py}{s07_boundary_census_disk.txt}
+\scr{../scripts/}{s08_gas_carries_the_peel.py}{s08_gas_carries_the_peel.txt}
+\scr{../scripts/}{s09_check_gpt_formal.py}{s09_check_gpt_formal.txt}
+\scr{../scripts/}{s10_nuclear_gaps_his_script.py}{s10_nuclear_gaps_his_script.txt}
+\scr{../scripts/}{s11_exit_quarter_turn.py}{s11_exit_quarter_turn.txt}
+\scr{../scripts/}{s12_nuclear_rim_identity.py}{s12_nuclear_rim_identity.txt}
+\scr{../scripts/}{s13_v4_bridges.py}{s13_v4_bridges.txt}
+\scr{../scripts/}{s14_v4_coverage.py}{s14_v4_coverage.txt}
+\scr{../external/gpt_formal_20261103/gas/}{verify_formal_gas.py}{g01_verify_formal_gas.txt}
+\scr{../external/gpt_formal_20261103/review/}{adversarial_checks.py}{g_adversarial_checks.txt}
+\scr{../external/gpt_formal_20261103/review/}{gaussian_information_checks.py}{g_gaussian_information_checks.txt}
+\scr{../external/gpt_formal_20261103/review/}{incoming_exit_filter.py}{g_incoming_exit_filter.txt}
+\scr{../external/gpt_formal_20261103/review/}{incoming_exit_residuals.py}{g_incoming_exit_residuals.txt}
+\scr{../scripts/}{fig02_boundary_and_gas.py}{fig02_boundary_and_gas.txt}
+\scr{../scripts/}{fig03v4_one_chart.py}{fig03v4_one_chart.txt}
+\scr{../scripts/}{fig04_reflection_chart.py}{fig04_reflection_chart.txt}
+\scr{../scripts/}{fig05_metric_signature.py}{fig05_metric_signature.txt}
+\scr{../scripts/}{fig06_records_and_futures.py}{fig06_records_and_futures.txt}
+\scr{../scripts/}{fig07_exit_and_filter.py}{fig07_exit_and_filter.txt}
+\scr{../scripts/}{fig08_angular_chain.py}{fig08_angular_chain.txt}
+\end{document}

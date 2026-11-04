@@ -1,0 +1,6 @@
+uniform $(1,1,1,1)/4$ moments [1.0, 0.0, 5.0, 0.0]
+$(3,7,1,5)/16$ moments [1.0, 0.0, 5.0, 3.0]
+reflected $(5,1,7,3)/16$ moments [1.0, 0.0, 5.0, -3.0]
+uniform $(1,1,1,1)/4$ survival at pi/4 0.0
+$(3,7,1,5)/16$ survival at pi/4 0.03125
+reflected $(5,1,7,3)/16$ survival at pi/4 0.03125
