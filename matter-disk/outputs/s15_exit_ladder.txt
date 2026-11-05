@@ -1,0 +1,8 @@
+points: 200 (w=1, seed 15, gap E(pi)>=0.2, block 90 cells), of which 16 lie past the exit line E0*Epi<u^2
+(a) max eigen-residual of C_R on T_R edge eigenvectors (levels j=0,+-1): 8.37e-12
+(b) max relative spacing error |Re(eps_(j+1)-eps_j)-Delta|/Delta:          1.67e-08
+(c) max phase error |Im eps_j - theta_pred| (j=0,+-1):                    4.21e-07
+(d) inside/outside verdict agrees with sign(E0*Epi-u^2): 200/200
+v=0 dimer limit: max |theta_pred - 2 arcsin(u/w)| over 7 values of u: 2.22e-16
+exit line: max |theta_pred - pi/2| on E0*Epi=u^2 at 6 values of v: 6.66e-16
+domain: max s = u*w/(w^2-v'^2) over the 200 points: 0.9131 (< 1)

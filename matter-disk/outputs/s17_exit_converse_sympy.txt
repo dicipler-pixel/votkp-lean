@@ -1,0 +1,4 @@
+F(D)F(-D) factors as: W*r**2*u**2*(-W + r)*(W + r)**2*(r - u)*(r + u)
+F(D)F(-D) - W r^2 u^2 (W+r)^2 (W-r)(u^2-r^2) = 0
+F on the line u=r (D=2Wu): 0
+w^2 satisfies the quadratic: 0
