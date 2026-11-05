@@ -3,3 +3,7 @@ build.log
 verification/
 __pycache__/
 lake-manifest.json
+*.aux
+*.log
+*.out
+*.toc
