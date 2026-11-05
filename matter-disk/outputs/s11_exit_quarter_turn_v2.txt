@@ -1,0 +1,11 @@
+u=0.3 v=0.4171 pred=0.22032 opposite=0.34418 gaps by block 20,40,80,160: +9.81e-03 +9.81e-03 +9.81e-03 +9.81e-03  FAIL
+u=0.3 v=0.5562 pred=0.25556 opposite=0.47249 gaps by block 20,40,80,160: +2.13e-02 +2.13e-02 +2.13e-02 +2.13e-02  FAIL
+u=0.3 v=0.6604 pred=0.33867 opposite=0.68960 gaps by block 20,40,80,160: +3.35e-02 +3.35e-02 +3.35e-02 +3.35e-02  FAIL
+u=0.5 v=0.2809 pred=0.36265 opposite=0.48949 gaps by block 20,40,80,160: +4.90e-03 +4.90e-03 +4.90e-03 +4.90e-03  FAIL
+u=0.5 v=0.3746 pred=0.39764 opposite=0.58975 gaps by block 20,40,80,160: +8.02e-03 +8.02e-03 +8.02e-03 +8.02e-03  FAIL
+u=0.5 v=0.4448 pred=0.45733 opposite=0.71372 gaps by block 20,40,80,160: +6.25e-03 +6.25e-03 +6.25e-03 +6.25e-03  FAIL
+u=0.7 v=0.0492 pred=0.49587 opposite=0.52679 gaps by block 20,40,80,160: +9.73e-06 +9.73e-06 +9.73e-06 +9.73e-06  PASS
+u=0.7 v=0.0656 pred=0.49765 opposite=0.53908 gaps by block 20,40,80,160: +9.93e-06 +9.93e-06 +9.93e-06 +9.93e-06  PASS
+u=0.7 v=0.0779 pred=0.49936 opposite=0.54877 gaps by block 20,40,80,160: +3.87e-06 +3.87e-06 +3.87e-06 +3.87e-06  PASS
+VERDICT: KILLED at the stated bar
+OPPOSITE (Hermitian-form guess must fail): fails as required

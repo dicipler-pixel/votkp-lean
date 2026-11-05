@@ -1,0 +1,13 @@
+(for order and stability lines, a negative maximum means the bound holds with that margin)
+400 random contractions (a=4,b=5): max[stability ||X-X~||/delta - 1] = -5.66e-01
+400 random contractions (a=4,b=5): max[ordered lambda_j(X)-lambda_j(F)] = -2.54e-02
+400 random contractions (a=4,b=5): max[two-sided |spec X_A - spec X_B|] = 1.39e-16
+400 random contractions (a=4,b=5): max[order: min eig(F-X)] = -2.26e-02
+400 random contractions (a=4,b=5): max[order: max eig X - 1/4] = -5.72e-02
+400 random contractions (a=4,b=5): max[defect split |F-T-X|] = 1.87e-16
+info bound, 64 covariances with spectrum in [0.05,0.95]: min(I_G-4TrX)=2.106e-03, min(TrX/(d(1-d))-I_G)=3.318e-01
+sharp family C=1/2 I+r sigma_x, r=0.01: I_G/TrX=4.000266709
+sharp family C=1/2 I+r sigma_x, r=0.001: I_G/TrX=4.000002667
+sharp family C=1/2 I+r sigma_x, r=0.0001: I_G/TrX=4.000000020
+orthogonal projectors (pure Slater states) (100): max |X_A-(A_C-A_C^2)| = 6.80e-16
+offset speed limit, pair P+-: max |taudot^2/(4gS)-1| over 3 omegas, 2 signs, 31 times = 5.9e-15
