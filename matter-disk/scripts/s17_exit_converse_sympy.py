@@ -1,3 +1,4 @@
+# SCRIPT: s17_exit_converse_sympy
 """s17: symbolic check of Theorem 5.4(b). W=w', r=sqrt(E0*Epi), D=sqrt(4W^2u^2+(u^2-r^2)^2).
 F = u^2 w^2 (W+r) - W (w^2-v'^2)^2 vanishes iff theta = pi/2."""
 import sympy as sp

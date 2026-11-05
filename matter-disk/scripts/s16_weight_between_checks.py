@@ -1,3 +1,4 @@
+# SCRIPT: s16_weight_between_checks
 """s16: numerical controls for the weight-between theorems (journal edition).
 Random positive contractions C on a=4, b=5 (seed 16)."""
 import numpy as np

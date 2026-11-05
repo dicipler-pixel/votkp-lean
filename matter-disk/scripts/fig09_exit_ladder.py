@@ -1,3 +1,4 @@
+# SCRIPT: fig09_exit_ladder
 """fig09: the exit ladder. Left: theta(v) from the Abel formula, measured edge phases, quarter-turn continuation.
 Right: the ladder Gamma_j = tanh((j*Delta + i*theta)/2) in the disk, inside / on / past the exit line."""
 import numpy as np, mpmath as mp, matplotlib

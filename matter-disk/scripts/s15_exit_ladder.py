@@ -1,3 +1,4 @@
+# SCRIPT: s15_exit_ladder
 """s15: the exit ladder on the opened PT-symmetric SSH chain.
 Checks, at 200 random gapped parameter points (w=1, seed 15):
   (a) T_R = 1/2{X+1/2,H} restricted to the right half commutes with the biorthogonal block C_R
