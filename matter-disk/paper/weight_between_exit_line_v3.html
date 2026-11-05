@@ -1,0 +1,1148 @@
+<title>The Weight Between and the Exit Line</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Spectral:ital,wght@0,300;0,400;0,500;1,300;1,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<script>
+window.MathJax={tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']],tags:'none'},svg:{fontCache:'global'},options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-svg-full.js" async></script>
+<style>
+/* Layout: one reading column on a night field; instruments (disk, plane, phase) break wider; evidence folds at the end. */
+:root{
+  --night:#060a13; --panel:#0b1322; --panel-2:#0f1a2e;
+  --gold:#e3ad55; --gold-hi:#f7d891; --gold-dim:rgba(227,173,85,.28);
+  --blue:#6fa6ff; --blue-hi:#a9cbff; --blue-dim:rgba(111,166,255,.25);
+  --text:#ebe5d6; --muted:#a8a493; --faint:#6f6c62; --rule:rgba(227,173,85,.22);
+  --display:"Cinzel","Trajan Pro",Georgia,serif;
+  --head:"Cormorant Garamond","Garamond",Georgia,serif;
+  --body:"Spectral",Georgia,"Times New Roman",serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{background:var(--night)}
+body{background:var(--night);color:var(--text);font-family:var(--body);font-weight:300;font-size:17.5px;line-height:1.68;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 64px}
+#field{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:.9}
+main{position:relative;z-index:1;max-width:1120px;margin:0 auto}
+.col{max-width:700px;margin:0 auto}
+a{color:var(--blue-hi)}
+:focus-visible{outline:2px solid var(--gold-hi);outline-offset:3px}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:40px;align-items:center;padding-block:56px 28px}
+.eyebrow{font-family:var(--display);letter-spacing:.32em;font-size:12.5px;color:var(--gold);text-transform:uppercase}
+h1{font-family:var(--display);font-weight:500;color:#f3ecdc;font-size:clamp(38px,5.4vw,64px);line-height:1.02;letter-spacing:.04em;margin:14px 0 6px;text-wrap:balance}
+h1 .sub{display:block;font-size:.46em;letter-spacing:.3em;color:var(--gold);margin-top:14px;font-weight:400}
+.ornament{display:flex;align-items:center;gap:10px;margin:22px 0;color:var(--gold)}
+.ornament::before,.ornament::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.ornament span{width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 12px var(--gold)}
+.lede{font-family:var(--head);font-size:23px;line-height:1.4;color:#efe7d3;font-style:italic}
+.byline{font-family:var(--display);letter-spacing:.22em;font-size:13px;color:var(--muted);margin-top:18px}
+.thesis{margin-top:22px;padding-block:14px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);text-align:center;color:var(--gold-hi);font-size:19px;overflow-x:auto}
+.thesis small{display:block;font-family:var(--display);letter-spacing:.24em;font-size:11px;color:var(--muted);margin-top:6px}
+
+.instrument{background:radial-gradient(120% 90% at 50% 40%,rgba(20,34,62,.85),rgba(6,10,19,.4));border:1px solid var(--rule);border-radius:6px;padding:16px;min-width:0}
+.instrument canvas{display:block;width:100%;height:auto;aspect-ratio:1/1;max-width:100%}
+.ctrls{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:6px 12px;align-items:center;margin-top:10px;font-family:var(--mono);font-size:13px;color:var(--muted)}
+.ctrls input[type=range]{width:100%;accent-color:var(--gold)}
+.ctrls output{color:var(--gold-hi);font-variant-numeric:tabular-nums;min-width:4.5ch;text-align:right}
+.readout{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:12px}
+.readout div{border-top:1px solid var(--rule);padding-top:6px;min-width:0}
+.readout b{display:block;font-family:var(--display);font-weight:400;letter-spacing:.16em;font-size:10.5px;color:var(--muted)}
+.readout span{font-family:var(--mono);font-size:15px;color:var(--text);font-variant-numeric:tabular-nums}
+.verdict{margin-top:10px;font-family:var(--display);letter-spacing:.2em;font-size:12px;text-align:center}
+.verdict.in{color:var(--blue-hi)} .verdict.on{color:#fff} .verdict.out{color:var(--gold-hi)}
+.legend-line{font-size:13px;color:var(--muted);margin-top:8px;line-height:1.45}
+
+/* text */
+.disclaimer{font-size:14.5px;color:var(--muted);font-style:italic;border-left:1px solid var(--gold-dim);padding-left:14px;margin:34px 0 22px}
+.abstract{background:linear-gradient(180deg,rgba(15,26,46,.75),rgba(11,19,34,.55));border:1px solid var(--rule);border-radius:6px;padding:22px 26px}
+.abstract h2{margin-top:0}
+h2{font-family:var(--display);font-weight:500;letter-spacing:.14em;font-size:22px;color:var(--gold-hi);margin:64px 0 14px;text-wrap:balance}
+h2 .n{color:var(--gold);margin-right:14px;font-size:.8em}
+h3{font-family:var(--head);font-weight:600;font-size:24px;color:#f2ead7;margin:38px 0 8px;text-wrap:balance}
+p{margin:0 0 14px}
+p,li,.thm{overflow-wrap:anywhere}
+mjx-container[display="true"]{display:block;overflow-x:auto;overflow-y:hidden;max-width:100%;padding-block:2px}
+mjx-container svg{max-width:none}
+mjx-assistive-mml{max-width:100%!important}
+main{overflow-x:clip}
+.math-d{overflow-x:auto;overflow-y:hidden;margin:6px 0 16px;padding-block:4px}
+.thm{margin:22px 0;padding:16px 20px;background:rgba(11,19,34,.72);border:1px solid var(--blue-dim);border-radius:5px}
+.thm.gold{border-color:var(--gold-dim)}
+.thm .tag{font-family:var(--display);letter-spacing:.14em;font-size:13.5px;color:var(--blue-hi);margin-bottom:6px;display:block}
+.thm.gold .tag{color:var(--gold-hi)}
+.thm ol,.thm ul{margin:6px 0 4px;padding-left:22px}
+.thm li{margin-bottom:6px}
+.proof{margin:-8px 0 22px;padding:2px 20px 4px;color:#d9d3c3;font-size:16px}
+.proof::before{content:"Proof.";font-style:italic;color:var(--muted);margin-right:6px}
+.proof .qed{float:right;color:var(--gold)}
+.g{font-family:var(--mono);font-size:11.5px;letter-spacing:.04em;padding:1px 6px;border-radius:3px;border:1px solid var(--gold-dim);color:var(--gold-hi);white-space:nowrap;margin-left:4px}
+.g.v{border-color:var(--blue-dim);color:var(--blue-hi)}
+.g.c{border-color:rgba(255,255,255,.25);color:#ddd}
+.grades{font-size:15px;color:var(--muted)}
+.evidence{font-size:15.5px;color:#d6d0bf}
+.evidence ul{padding-left:20px;margin:6px 0 14px}
+.num{font-family:var(--mono);color:var(--gold-hi);font-variant-numeric:tabular-nums}
+
+/* figures */
+figure{margin:34px auto;max-width:1000px}
+figure .plate{background:rgba(9,15,28,.85);border:1px solid var(--rule);border-radius:6px;padding:14px;overflow-x:auto}
+.plate>svg{display:block;width:100%;height:auto;min-width:520px}
+figcaption{max-width:700px;margin:10px auto 0;font-size:14.5px;color:var(--muted);line-height:1.55}
+figcaption b{font-family:var(--display);font-weight:500;letter-spacing:.14em;color:var(--gold);font-size:12px;margin-right:6px}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px}
+
+/* checks band */
+.checks{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:26px 0}
+.checks div{border-top:1px solid var(--gold);padding-top:10px;min-width:0}
+.checks b{font-family:var(--mono);font-weight:500;font-size:24px;color:var(--gold-hi);display:block;font-variant-numeric:tabular-nums}
+.checks span{font-size:13.5px;color:var(--muted);line-height:1.4;display:block}
+
+table{border-collapse:collapse;width:100%;font-size:15px}
+.tablewrap{overflow-x:auto;margin:16px 0}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid rgba(227,173,85,.14);vertical-align:top}
+th{font-family:var(--display);font-weight:500;letter-spacing:.14em;font-size:12px;color:var(--gold)}
+td:last-child{white-space:nowrap}
+
+.refs{font-size:14.5px;color:#cfc8b6;padding-left:22px}
+.refs li{margin-bottom:6px}
+details{border:1px solid var(--rule);border-radius:5px;margin:12px 0;background:rgba(9,15,28,.8)}
+summary{cursor:pointer;padding:12px 16px;font-family:var(--display);letter-spacing:.14em;font-size:13px;color:var(--gold-hi)}
+details pre{margin:0;padding:14px 16px;overflow-x:auto;font-family:var(--mono);font-size:12px;line-height:1.5;color:#d8e3f5;border-top:1px solid var(--rule)}
+details pre.out{color:var(--gold-hi);background:rgba(227,173,85,.05)}
+footer{text-align:center;margin-top:70px;font-family:var(--display);letter-spacing:.3em;font-size:11px;color:var(--faint)}
+
+@media (max-width:860px){.hero{grid-template-columns:minmax(0,1fr);padding-top:32px}.two{grid-template-columns:minmax(0,1fr)}.checks{grid-template-columns:repeat(2,minmax(0,1fr))}.readout{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){body{font-size:16.5px}.plate>svg{min-width:460px}.abstract{padding:18px 16px}.thm{padding:14px}}
+@media (prefers-reduced-motion:reduce){#field{display:none}}
+</style>
+
+<canvas id="field" aria-hidden="true"></canvas>
+<main>
+<header class="hero">
+  <div>
+    <div class="eyebrow">Opened matter · the boundary census</div>
+    <h1>The Weight Between<span class="sub">AND THE EXIT LINE</span></h1>
+    <div class="ornament"><span></span></div>
+    <p class="lede">Cross-block bounds for the boundary census, and where opened matter leaves the disk.</p>
+    <div class="byline">JEROMIE BEASLEY · 4 NOVEMBER 2026</div>
+    <div class="thesis">$$\begin{gathered}\theta=\frac{\pi}{2}\iff E(0)\,E(\pi)=u^2\\ \iff(w^2-v^2)^2=2u^2(w^2+v^2)\end{gathered}$$<small>THE WHOLE LADDER CROSSES THE RIM AT ONCE</small></div>
+  </div>
+  <div class="instrument" aria-label="Live ladder on the Cayley disk">
+    <canvas id="disk" width="900" height="900"></canvas>
+    <div class="ctrls">
+      <label for="vs">$v$</label><input id="vs" type="range" min="0" max="0.79" step="0.001" value="0.30"><output id="vo">0.300</output>
+      <label for="us">$u$</label><input id="us" type="range" min="0.02" max="0.9" step="0.001" value="0.50"><output id="uo">0.500</output>
+    </div>
+    <div class="readout">
+      <div><b>PHASE θ/π</b><span id="r-th">–</span></div>
+      <div><b>SPACING Δ</b><span id="r-de">–</span></div>
+      <div><b>E(0)E(π) − u²</b><span id="r-ex">–</span></div>
+      <div><b>⟨K⟩</b><span id="r-k">–</span></div>
+    </div>
+    <div id="verdict" class="verdict in">INSIDE THE DISK</div>
+    <p class="legend-line">Points are the ladder $\Gamma_j=\tanh\big((j\Delta+i\theta)/2\big)$, $j=-3,\dots,3$, with $w=1$, computed live from the elliptic formulas of §5. The arc carries every level. Grey arc: the unit circle. Drag $v$ toward the exit line and the whole arc reaches the rim together.</p>
+  </div>
+</header>
+
+<div class="col">
+<p class="disclaimer">Prepared with AI assistance (Claude, Anthropic; and OpenAI tools for parts of the formal development). The ideas and research direction are the author's. Computation, drafting, formal checking and typesetting were done with AI tools, and every number is produced by a script printed at the end of this page.</p>
+
+<section class="abstract">
+<h2>Abstract</h2>
+<p>Cut a fermionic system into a region $A$ and its complement $B$. The one-body correlation matrix $C$ then has a cross block, and $X_A=C_{AB}C_{BA}$ is the weight between the two sides. We prove that $X_A$ is positive and bounded by $\tfrac14$. It is two-sided: $X_A$ and $X_B$ share their positive spectrum. It is stable in operator norm with a certified margin. It lies below the local defect $C_A-C_A^2$, and equals it on a pure state. Four times its trace bounds the Gaussian mutual information from below, with a sharp constant and no upper constant without a spectral margin. The signed boundary offset $\tau=\log\det(I-C_A)/\det C_A$ moves no faster than $\dot\tau^2\le4gS$. Two preparations with the same census, offset, cross weight and coupling saturate this bound in opposite directions.</p>
+<p>On the PT-symmetric Su–Schrieffer–Heeger chain the correlation matrix is a biorthogonal idempotent. There the radial census survives and positivity does not. The band-averaged Petermann factor equals $2$ exactly on the line $E(0)E(\pi)=u^2$, equivalently $(w^2-v^2)^2=2u^2(w^2+v^2)$.</p>
+<p>We construct an operator $T_R=\tfrac12\{X+\tfrac12,H\}_R$ that commutes exactly with the half-chain correlation block. The proof uses only $H(k)^2=E(k)^2I$, so it holds without Hermiticity. On its eigenvectors the entanglement levels form a ladder $\varepsilon_j=j\Delta+i\theta$. The spacing is $\Delta=2\pi K'(k)/K(k)$, with modulus $k=v'/w'$ taken from the Hermitian band hidden in the opened one. The single shared phase is $\theta=\pi F(\arcsin s\,|\,k)/K(k)$, with $s=uw/(w^2-v'^2)$. We prove that a ladder of this form crosses the unit circle of the Cayley chart all at once, and that its phase reaches $\pi/2$ exactly on the Petermann line. Both directions are proved, the converse through an explicit factorisation. The ladder form and the phase formula are verified at 200 random parameter points: commutation to $8\times10^{-12}$, spacing to $2\times10^{-8}$, phase to $4\times10^{-7}$, and the inside/outside verdict 200 of 200. They are proved in the dimer limit. Deriving them analytically from the commuting operator is the one step left open, and it is stated as such.</p>
+</section>
+
+<p class="grades" style="margin-top:18px"><b style="font-family:var(--display);letter-spacing:.14em;font-weight:500;color:var(--gold)">GRADES</b> &nbsp;<span class="g">T</span> proved here; <span class="g">L</span> also checked in Lean in the author's formal suite; <span class="g v">V</span> verified numerically with the stated controls; <span class="g">R</span> a known result in this coordinate; <span class="g c">C</span> open.</p>
+
+<h2><span class="n">1</span>Introduction</h2>
+<p>Every finite record of a cut has two readings. One is unsigned: it counts how many boundary levels are partially occupied. The other is signed: it says which way each level leans. Both readings live on one chart,</p>
+<div class="math-d">$$\Gamma=\frac{z-1}{z+1}=\tanh\frac{\varepsilon}{2}=1-2\nu,\qquad z=\frac{1-\nu}{\nu}=e^{\varepsilon},$$</div>
+<p>for an occupation $\nu$ of the region's correlation matrix. The census is the gauge without its sign. The offset is the clock face. This paper proves two things about this chart.</p>
+<p>The first is about the <em>weight between</em> the two sides of a cut, the cross block $X_A=C_{AB}C_{BA}$. Section 3 proves its order, size, symmetry, stability and information bounds. It also gives exact examples marking where the one-body record stops speaking, and proves the speed limit of the signed offset.</p>
+<p>The second is about where <em>opened</em> matter leaves the disk. Opening means a non-Hermitian generator. On the PT-symmetric dimerized chain the levels leave $|\Gamma|&lt;1$ inside the gapped phase, before the critical point. Measured on finite blocks, that exit sits on the line $E(0)E(\pi)=u^2$, where the band-averaged Petermann factor equals $2$ (Section 4), and the question is why it happens there. Section 5 gives the mechanism. An operator commutes exactly with the half-chain block, and its eigenvectors organise the levels into a ladder with one shared phase. A ladder with one phase crosses the rim all at once, and its phase reaches a quarter turn exactly on the Petermann line. The exact commutation, the simultaneous crossing, the location of the crossing and a closed dimer case are proved. The ladder form and the elliptic phase formula are measured at 200 random points. Deriving them analytically is the remaining step.</p>
+
+<h2><span class="n">2</span>The chart</h2>
+<div class="thm gold"><span class="tag">PROPOSITION 2.1 · THE BRIDGE</span>
+$\Gamma=\tanh(\varepsilon/2)=1-2\nu$, and $\nu(1-\nu)=(1-\Gamma^2)/4$. The window $\nu\in[\delta,1-\delta]$ is the disk $|\Gamma|\le1-2\delta$. <span class="g">T</span><span class="g">L</span></div>
+<p class="proof">$z-1=(1-2\nu)/\nu$ and $z+1=1/\nu$; $(e^\varepsilon-1)/(e^\varepsilon+1)=\tanh(\varepsilon/2)$; $1-(1-2\nu)^2=4\nu(1-\nu)$. <span class="qed">∎</span></p>
+<p>Summed over the levels of the region, the rapidity is the signed offset</p>
+<div class="math-d">$$\tau=\sum_\nu\varepsilon_\nu=\operatorname{Tr}[\log(I-C)-\log C]=\log\frac{\det(I-C)}{\det C},$$</div>
+<p>which for a number-conserving Gaussian state is $\log P(N_A=0)/P(N_A=|A|)$. The reduced state is a product over the eigenmodes of $C$, so $P(0)=\prod(1-\nu)$ and $P(|A|)=\prod\nu$ <span class="g">T</span>. The census counts levels with $\nu(1-\nu)$ above a threshold, and is blind to the sign of $\Gamma$. For example, $\mathrm{diag}(0.2,0.8)$ and $\mathrm{diag}(0.2,0.2)$ have the same defect $C-C^2=0.16I$ and offsets $0$ and $\log16$.</p>
+<div class="thm gold"><span class="tag">THEOREM 2.2 · THE CAYLEY DOMAIN</span>
+For $z\ne-1$, $|z+1|^2-|z-1|^2=4\operatorname{Re}z$, so $|\Gamma|&lt;1\iff\operatorname{Re}z&gt;0$ and $|\Gamma|=1\iff\operatorname{Re}z=0$. For $z=e^W$, $|\tanh(W/2)|&lt;1\iff\cos(\operatorname{Im}W)&gt;0$; on the principal branch this is $|\operatorname{Im}W|&lt;\pi/2$. <span class="g">T</span></div>
+<p class="proof">Expand the moduli; $\operatorname{Re}e^W=e^{\operatorname{Re}W}\cos\operatorname{Im}W$. <span class="qed">∎</span></p>
+<p>The real cases are checked in Lean: a positive ratio lands strictly inside, a negative ratio $S/(-s)$ with $S&gt;s&gt;0$ lands outside at rim distance $2s/(S-s)$, and $z=-1$ is the pole. A complex ratio does not by itself leave the disk: $z=1-i\gamma$ has $|\Gamma|^2=\gamma^2/(4+\gamma^2)&lt;1$. Leaving needs the real part of the ratio to change sign. In the rapidity this is a quarter turn of the phase.</p>
+
+<h2><span class="n">3</span>The weight between</h2>
+<p>Let $C=C^*$ with $0\le C\le I$ on $\mathcal H_A\oplus\mathcal H_B$, of dimensions $a,b$, and write</p>
+<div class="math-d">$$C=\begin{pmatrix}A_C&amp;B_C\\B_C^*&amp;D_C\end{pmatrix},\quad F_A=A_C-A_C^2,\quad T_A=(C-C^2)_{AA},\quad X_A=B_CB_C^*,\quad X_B=B_C^*B_C.$$</div>
+</div>
+
+<figure>
+  <div class="plate"><svg id="blocks" viewBox="0 0 1000 330" role="img" aria-label="Block diagram of the correlation matrix and the defect split"></svg></div>
+  <figcaption><b>FIGURE 1</b> The weight between. Left: the cut splits $C$ into four blocks, and the cross blocks $B_C$, $B_C^*$ carry everything that crosses it. Right: the local defect splits into mixing inside the region plus the weight between, $F_A=T_A+X_A$ (Theorem 3.1(1)). On a pure state $T_A=0$ and the census reads the boundary alone. On the disconnected thermal state $C=pI$ the split is all $T_A$ and $X_A=0$. The middle bar's proportions are schematic.</figcaption>
+</figure>
+
+<div class="col">
+<p>Fix $0&lt;\varepsilon&lt;\tfrac12$ and put $\vartheta=\varepsilon(1-\varepsilon)$. The <em>raw census</em> is $N^{\mathrm{raw}}_\varepsilon=\operatorname{rank}\mathbf 1_{[\varepsilon,1-\varepsilon]}(A_C)$. The <em>boundary census</em> is $N^\partial_\varepsilon=\operatorname{rank}\mathbf 1_{[\vartheta,\infty)}(X_A)$. Counts include multiplicity and equality at the threshold.</p>
+<div class="thm"><span class="tag">THEOREM 3.1 · THE WEIGHT BETWEEN</span>
+For every such $C$:
+<ol>
+<li><em>Defect split.</em> $F_A=T_A+X_A$; with $C^2=C$, $X_A=A_C-A_C^2$, and this needs no Hermiticity. <span class="g">T</span><span class="g">L</span></li>
+<li><em>Order and size.</em> $0\le X_A\le F_A\le\tfrac14I$, $0\le T_A\le F_A$, $\|B_C\|\le\tfrac12$, attained by $C=\tfrac12\begin{pmatrix}1&amp;1\\1&amp;1\end{pmatrix}$. <span class="g">T</span><span class="g">L</span></li>
+<li><em>Two-sided.</em> $X_A$ and $X_B$ have the same positive eigenvalues with multiplicity. So $N^\partial_\varepsilon(A)=N^\partial_\varepsilon(B)\le\operatorname{rank}B_C\le\min(a,b)$, and $\operatorname{Tr}X_A=\operatorname{Tr}X_B=\|B_C\|_F^2\le\tfrac14\min(a,b)$. <span class="g">T</span></li>
+<li><em>Comparison and recovery.</em> $N^\partial_\varepsilon\le N^{\mathrm{raw}}_\varepsilon$, with equality when $C^2=C$. <span class="g">T</span></li>
+<li><em>Trace.</em> $\vartheta N^\partial_\varepsilon\le\operatorname{Tr}X_A=\sum_{i\in A,j\in B}|C_{ij}|^2$, and $\operatorname{Tr}X_A=0\iff B_C=0$. <span class="g">T</span><span class="g">L</span></li>
+<li><em>Local unitaries.</em> Conjugation by $U_A\oplus U_B$ leaves every census, spectrum and trace above unchanged. <span class="g">T</span></li>
+</ol></div>
+<div class="proof">
+<p>(1) $(C^2)_{AA}=A_C^2+B_CB_C^*$.</p>
+<p>(2) Compression preserves order. $C-C^2\ge0$ by the spectral theorem, hence $T_A\ge0$. Then (1) gives the two comparisons, and $F_A=\tfrac14I-(A_C-\tfrac12)^2\le\tfrac14I$, so $\|B_C\|^2=\|X_A\|\le\tfrac14$.</p>
+<p>(3) If $B_CB_C^*u=\lambda u$ with $\lambda&gt;0$, then $B_C^*u\ne0$ is an eigenvector of $B_C^*B_C$ with eigenvalue $\lambda$. The inverse map is $B_C/\lambda$, so the multiplicities agree.</p>
+<p>(4) $\nu(1-\nu)-\vartheta=(\nu-\varepsilon)(1-\varepsilon-\nu)$, so $\operatorname{rank}\mathbf 1_{[\vartheta,\infty)}(F_A)=N^{\mathrm{raw}}_\varepsilon$. By min–max, $\lambda_j(X_A)\le\lambda_j(F_A)$. If $C^2=C$ then $T_A=0$.</p>
+<p>(5) Each counted eigenvalue contributes at least $\vartheta$ to the trace.</p>
+<p>(6) Block multiplication. <span class="qed">∎</span></p>
+</div>
+<p><strong style="font-family:var(--head);font-size:19px;color:#f2ead7">The boundary coordinate.</strong> Each eigenvalue $\lambda\in[0,\tfrac14]$ of $X_A$ has the radius $\Gamma_b=\sqrt{1-4\lambda}\in[0,1]$. On a pure state $\lambda=\nu(1-\nu)$, so $\Gamma_b=|1-2\nu|$: the boundary coordinate is the modulus of the census point and forgets its sign <span class="g">T</span><span class="g">L</span>. For mixed states $X_A$ need not commute with $A_C$, and only the order comparisons remain.</p>
+
+<div class="thm"><span class="tag">THEOREM 3.2 · STABILITY WITH A CERTIFIED COUNT</span>
+Let $C,\tilde C$ be positive contractions on the same partition, with $\delta=\|C-\tilde C\|$. Then $\|X_A(C)-X_A(\tilde C)\|\le\delta$. With $\mathcal N_Y(s)=\operatorname{rank}\mathbf 1_{[s,\infty)}(Y)$, for $\delta&lt;\vartheta$,
+<div class="math-d">$$\mathcal N_{X_A(C)}(\vartheta+\delta)\le N^\partial_\varepsilon(\tilde C)\le\mathcal N_{X_A(C)}(\vartheta-\delta).$$</div>
+If $\mathrm{dist}(\vartheta,\mathrm{spec}\,X_A(C))&gt;\delta$ the two counts are equal. <span class="g">T</span></div>
+<p class="proof">$\|BB^*-\tilde B\tilde B^*\|\le(\|B\|+\|\tilde B\|)\|B-\tilde B\|\le\delta$ by Theorem 3.1(2). Then apply Weyl's inequality. <span class="qed">∎</span></p>
+
+<div class="thm"><span class="tag">THEOREM 3.3 · NEAR-PROJECTOR COMPARISON</span>
+With $\eta=\|C-C^2\|$, $X_A\le F_A\le X_A+\eta I$. Hence $\mathcal N_{F_A}(\vartheta+\eta)\le N^\partial_\varepsilon\le N^{\mathrm{raw}}_\varepsilon$. <span class="g">T</span></div>
+<p class="proof">$0\le C-C^2\le\eta I$ compresses to $0\le T_A\le\eta I$. Then use (1) and ordered-eigenvalue monotonicity. <span class="qed">∎</span></p>
+
+<div class="thm"><span class="tag">PROPOSITION 3.4 · THE COORDINATE IS HÖLDER</span>
+$|\Gamma_b(\lambda)-\Gamma_b(\tilde\lambda)|\le2\sqrt{|\lambda-\tilde\lambda|}$. If both radii are at least $g&gt;0$, the bound is $(2/g)|\lambda-\tilde\lambda|$. The eigenvalue step does not transfer to nonnormal matrices: $\begin{pmatrix}0&amp;1\\0&amp;0\end{pmatrix}$ and $\begin{pmatrix}0&amp;1\\\delta&amp;0\end{pmatrix}$ differ by $\delta$, while their eigenvalues move by $\sqrt\delta$. <span class="g">T</span></div>
+<p class="proof">$|\sqrt x-\sqrt y|\le\sqrt{|x-y|}$; rationalise for the second bound. <span class="qed">∎</span></p>
+
+<h3>What the one-body record cannot say</h3>
+<div class="thm"><span class="tag">PROPOSITION 3.5 · SAME LOCAL BLOCK, DIFFERENT WEIGHT BETWEEN</span>
+Every positive contraction $A$ has the projector extension $P_A=\begin{pmatrix}A&amp;\sqrt{A-A^2}\\\sqrt{A-A^2}&amp;I-A\end{pmatrix}$, with $X_A(P_A)=A-A^2$. The disconnected $A\oplus(I-A)$ has the same local block and $X_A=0$. <span class="g">T</span></div>
+<p class="proof">The square root commutes with $A$. Multiplying the blocks gives $P_A^2=P_A=P_A^*$. <span class="qed">∎</span></p>
+<p>Three more exact cases mark the edge of the record <span class="g">T</span>:</p>
+<ul>
+<li>$C=pI$ has full raw census and zero boundary census.</li>
+<li>$\tfrac12(|10\rangle\langle10|+|01\rangle\langle01|)$ has $C=\tfrac12I_2$ and $X_A=0$, yet covariance $-\tfrac14$ and mutual information $\log2$.</li>
+<li>$(|1100\rangle+|0011\rangle)/\sqrt2$ split $\{1,2\}|\{3,4\}$ has $X_A=0$ and entanglement entropy $\log2$.</li>
+</ul>
+<p>The census reads correlation faithfully inside the quasi-free class, and only there.</p>
+
+<div class="thm"><span class="tag">PROPOSITION 3.6 · NUMBER COVARIANCE</span>
+For a gauge-invariant quasi-free state, $\mathrm{Var}(N_A)=\operatorname{Tr}F_A$ and $\mathrm{Cov}(N_A,N_B)=-\operatorname{Tr}X_A$. On a pure Slater state, $\mathrm{Var}(N_A)=\operatorname{Tr}X_A$. <span class="g">T</span></div>
+<p class="proof">By Wick's theorem, $\mathrm{Cov}(n_i,n_j)=\delta_{ij}C_{ii}-|C_{ij}|^2$. Sum over $A\times A$ and over $A\times B$. <span class="qed">∎</span></p>
+
+<div class="thm"><span class="tag">THEOREM 3.7 · THE WEIGHT BETWEEN BOUNDS THE INFORMATION ACROSS THE CUT</span>
+For the same states, with $h(x)=-x\log x-(1-x)\log(1-x)$ and $I_G=\operatorname{Tr}h(A_C)+\operatorname{Tr}h(D_C)-\operatorname{Tr}h(C)$:
+<div class="math-d">$$4\operatorname{Tr}X_A\le I_G(A:B),$$</div>
+and the constant is sharp. If $\delta I\le C\le(1-\delta)I$, then $I_G\le\operatorname{Tr}X_A/(\delta(1-\delta))$. Without such a margin there is no upper constant. <span class="g">T</span></div>
+<div class="proof">
+<p>Let $S=I_A\oplus(-I_B)$ and $C_0=\tfrac12(C+SCS)=A_C\oplus D_C$. Trace Jensen states that for concave $f$, $\operatorname{Tr}f(\tfrac12(H+K))\ge\tfrac12\operatorname{Tr}f(H)+\tfrac12\operatorname{Tr}f(K)$. To prove it, diagonalise the mean in a basis $u_i$, then use scalar concavity and $f(\langle u,Hu\rangle)\ge\langle u,f(H)u\rangle$.</p>
+<p>Apply it to $f=h+2x^2$, which has $f''=4-1/(x(1-x))\le0$. With unitary invariance under $S$, this gives $I_G\ge2(\operatorname{Tr}C^2-\operatorname{Tr}C_0^2)=4\operatorname{Tr}X_A$. On $[\delta,1-\delta]$ the function $h+x^2/(2\delta(1-\delta))$ is convex, and the same argument gives the upper bound.</p>
+<p>Sharpness: $C=\tfrac12I+r\sigma_x$ has $I_G=4r^2+O(r^4)$ and $\operatorname{Tr}X_A=r^2$. For the failure without a margin, pure states with an occupation tending to $0$ have $I_G/\operatorname{Tr}X_A$ unbounded. <span class="qed">∎</span></p>
+</div>
+
+<div class="thm gold"><span class="tag">THEOREM 3.8 · THE OFFSET SPEED LIMIT</span>
+Let $P(t)$ be a smooth family of orthogonal projectors and $E$ an isometry onto the region. Set $C=E^\dagger PE$ with $0&lt;C&lt;I$, $g=\tfrac12\|\dot P\|_F^2$ and $S=\operatorname{Tr}[(C(I-C))^{-1}]$. Then
+<div class="math-d">$$\dot\tau^2\le4gS,$$</div>
+with equality iff $\dot P\propto[P,[P,F]]$, where $F=EWE^\dagger$ and $W=-(C(I-C))^{-1}$. For $\dot P=-i[H,P]$, $g=\|PH(1-P)\|_F^2$. <span class="g">T</span></div>
+<p class="proof">$\dot\tau=\operatorname{Tr}[W\dot C]=\operatorname{Tr}[F\dot P]$. Differentiating $P^2=P$ shows that $\dot P$ is block off-diagonal, so only $T=[P,[P,F]]$ pairs with it. Cauchy–Schwarz gives $\dot\tau^2\le\|T\|_F^2\|\dot P\|_F^2$. Finally, $\|T\|_F^2=2\operatorname{Tr}[W(I-C)WC]=2S$, because $W$ and $C$ commute. For the corollary, $[H,P]$ has two adjoint blocks. <span class="qed">∎</span></p>
+
+<div class="thm gold"><span class="tag">PROPOSITION 3.9 · THE SPEED BUDGET DOES NOT CHOOSE THE FUTURE</span>
+Take $H=\omega\sigma_x$ and $P_\pm(0)=\tfrac12(I\pm\sigma_y)$, read through the first basis vector. Both have $\nu=\tfrac12$, $\tau=0$, $X=\tfrac14$ and $g=\omega^2$. Then $\tau_\pm(t)=\mp2\operatorname{artanh}(\sin2\omega t)$: both saturate $\dot\tau^2=4gS$ at all times, in opposite directions. <span class="g">T</span><span class="g v">V</span></div>
+<p class="proof">The Bloch vector $(0,\pm1,0)$ rotates in the $y$–$z$ plane at rate $2\omega$. With $s=\sin2\omega t$, $S=4/(1-s^2)$ and $\dot\tau^2=16\omega^2/(1-s^2)=4gS$. <span class="qed">∎</span></p>
+<p class="evidence">The cross weight of a fixed cut is not the generator coupling of the moving projector. At $t=0$, $2\sqrt{\operatorname{Tr}X\cdot S}=2$ while $|\dot\tau|=4\omega$. Script <code>s16</code> checks the saturation to <span class="num">5.9e-15</span>. It also checks every inequality of this section on 400 random contractions and 64 interior covariances. All bounds hold, the sharp ratio runs <span class="num">4.00027</span>, <span class="num">4.0000027</span>, <span class="num">4.00000002</span>, and the pure-state recovery holds to <span class="num">6.8e-16</span> <span class="g v">V</span>.</p>
+
+<h2><span class="n">4</span>Opened matter</h2>
+<p>Take the PT-symmetric SSH chain, cells $c\in\mathbb Z$, two sites $a,b$ per cell:</p>
+<div class="math-d">$$h(k)=\begin{pmatrix}iu&amp;v+we^{-ik}\\ v+we^{ik}&amp;-iu\end{pmatrix},\qquad E(k)^2=v^2+w^2-u^2+2vw\cos k,$$</div>
+<p>with $u,v,w&gt;0$, $v&lt;w$, and the gap condition $E(\pi)^2=(w-v)^2-u^2&gt;0$. In real space $H$ has $\pm iu$ on the $a$ and $b$ sites, $v$ inside a cell and $w$ from $(c,b)$ to $(c+1,a)$. Then $H^T=H$, but $H^\dagger\ne H$. Fill the lower band with the biorthogonal projector $P(k)=\tfrac12(I-h(k)/E(k))$, $E&gt;0$, and let $C_R$ be its block on the half-chain $c\ge0$.</p>
+<div class="thm"><span class="tag">THEOREM 4.1 · WHAT SURVIVES OPENING</span>
+For any idempotent $C=\begin{pmatrix}A&amp;B\\E&amp;D\end{pmatrix}$, $Y_A=BE=A-A^2$, and its eigenvalues are $\nu_j(1-\nu_j)$ with algebraic multiplicity. So the radial census $\#\{|1-2\nu_j|\le r\}$ survives for every $r$. Positivity does not: $\begin{pmatrix}2&amp;1\\-2&amp;-1\end{pmatrix}$ is idempotent with $Y_A=-2$. <span class="g">T</span><span class="g">L</span></div>
+<p class="proof">The $AA$ block of $C^2=C$ gives the first identity. Triangularising $A$ gives the eigenvalues. <span class="qed">∎</span></p>
+<div class="thm gold"><span class="tag">PROPOSITION 4.2 · THE PETERMANN LINE</span>
+The band projectors have $K(k)=\operatorname{Tr}P^\dagger P=1+u^2/E(k)^2$. The band average is
+<div class="math-d">$$\langle K\rangle=1+\frac{u^2}{E(0)E(\pi)},$$</div>
+so $\langle K\rangle=2$ iff $E(0)E(\pi)=u^2$, iff
+<div class="math-d">$$(w^2-v^2)^2=2u^2(w^2+v^2).$$</div>
+<span class="g">T</span><span class="g">L</span></div>
+<p class="proof">$\operatorname{Tr}P^\dagger P=\tfrac12(1+\sum|d_j|^2/|E|^2)$ for $h=d\cdot\sigma$. Here $\sum|d_j|^2=|v+we^{ik}|^2+u^2$ and $|E|^2=|v+we^{ik}|^2-u^2$. The average is $\frac1{2\pi}\int dk/(A+B\cos k)=(A^2-B^2)^{-1/2}$ with $A^2-B^2=E(0)^2E(\pi)^2$. Squaring $E(0)^2E(\pi)^2=u^4$ gives $((v+w)^2-u^2)((w-v)^2-u^2)=u^4$, that is $(w^2-v^2)^2-2u^2(w^2+v^2)=0$. <span class="qed">∎</span></p>
+<p>At $w=1$ the line reads $u_{\mathrm{exit}}=(1-v^2)/\sqrt{2(1+v^2)}$. At $u=0.5$ this gives $v_{\mathrm{exit}}=0.4682$. Predicted from $\langle K\rangle=2$ before the run, the exits at $u=0.25$, $0.45$, $0.65$ are $v=0.7474014$, $0.5291503$, $0.2357262$. The measured census exits of a 40-cell block are $0.7474015$, $0.5291503$, $0.2357262$, differences $4\times10^{-8}$ and below <span class="g v">V</span> (script <code>s05b</code>). The measurement uses whole-cell blocks and an endpoint filter that discards levels with $\nu$ within $10^{-9}$ of $0$ or $1$. Why the census leaves there is the question the next section answers.</p>
+</div>
+
+<figure>
+  <div class="plate"><svg id="plane" viewBox="0 0 1000 560" role="img" aria-label="The opened parameter plane with the exit line and the 200 test points"></svg></div>
+  <figcaption><b>FIGURE 2</b> The opened plane at $w=1$. Gold curve: the exit line $(1-v^2)^2=2u^2(1+v^2)$. Grey dashed: the critical line $u=1-v$, where the gap closes. The 200 points of the ladder test (script <code>s15</code>) are drawn where they were taken, blue inside the disk and gold past the exit. Each point's verdict comes from the sign of $E(0)E(\pi)-u^2$, and the measured verdict agreed at all 200.</figcaption>
+</figure>
+
+<div class="col">
+<h2><span class="n">5</span>The exit ladder</h2>
+<h3>5.1 The Hermitian band inside the opened one</h3>
+<div class="thm"><span class="tag">LEMMA 5.1</span>
+Put $E_0=E(0)$, $E_\pi=E(\pi)$, $w'=\tfrac12(E_0+E_\pi)$, $v'=\tfrac12(E_0-E_\pi)$. Then $v'^2+w'^2=v^2+w^2-u^2$, $v'w'=vw$ and
+<div class="math-d">$$E(k)^2=|v'+w'e^{ik}|^2,$$</div>
+the band of a Hermitian dimerized chain with hoppings $v'&lt;w'$. Its modulus is $k=v'/w'$, and $k'=\sqrt{1-k^2}=\sqrt{E_0E_\pi}/w'$. <span class="g">T</span></div>
+<p class="proof">$E_0^2+E_\pi^2=2(v^2+w^2-u^2)$ and $E_0^2-E_\pi^2=4vw$. Then $v'^2+w'^2=\tfrac12(E_0^2+E_\pi^2)$, $v'w'=\tfrac14(E_0^2-E_\pi^2)$ and $w'^2-v'^2=E_0E_\pi$. <span class="qed">∎</span></p>
+
+<h3>5.2 An operator that commutes with the half-chain block</h3>
+<p>Let $X$ be the cell-position operator, $X_{(c,\alpha),(c',\beta)}=c\,\delta_{cc'}\delta_{\alpha\beta}$.</p>
+<div class="thm"><span class="tag">THEOREM 5.2 · THE COMMUTING OPERATOR</span>
+Let $T=\tfrac12\{X+\tfrac12,H\}$. Then $[P,T]=0$, and $T=T_L\oplus T_R$ has no entries across the cut between cells $-1$ and $0$. Consequently
+<div class="math-d">$$[C_R,T_R]=0,$$</div>
+entrywise, as an identity of infinite matrices. $T_R$ is tridiagonal, with
+<div class="math-d">$$T_R\big|_{(c,a),(c,a)}=iu(c+\tfrac12),\quad T_R\big|_{(c,b),(c,b)}=-iu(c+\tfrac12),\quad T_R\big|_{(c,a),(c,b)}=v(c+\tfrac12),\quad T_R\big|_{(c,b),(c+1,a)}=w(c+1),$$</div>
+and it is symmetric. <span class="g">T</span></div>
+<div class="proof">
+<p>The gap condition gives $E(k)^2\ge E_\pi^2&gt;0$, so $P(k)$ is analytic and periodic. The real-space entries $P_{cc'}=\frac1{2\pi}\int e^{ik(c-c')}P(k)\,dk$ therefore decay exponentially, and every product below is an absolutely convergent sum. Integration by parts gives $[X,P]_{cc'}=(c-c')P_{cc'}=\frac{i}{2\pi}\int e^{ik(c-c')}\partial_kP(k)\,dk$. Since $[P,H]=0$,</p>
+<div class="math-d">$$[P,\{X,H\}]=\{[P,X],H\}\;\longleftrightarrow\;-i\{\partial_kP,h\}=\tfrac i2\{\partial_k(h/E),h\}.$$</div>
+<p>Differentiating $(h/E)^2=I$ gives $\{\partial_k(h/E),h/E\}=0$, so the right side vanishes. The shift by $\tfrac12$ commutes with $P$ trivially, so $[P,T]=0$.</p>
+<p>The entry $T_{ij}=\tfrac12(x_i+x_j+1)H_{ij}$ crosses the cut only for $i=(-1,b)$, $j=(0,a)$, where $x_i+x_j+1=0$. So $T=T_L\oplus T_R$. Then $(PT)_{RR}=C_RT_R+P_{RL}T_{LR}=C_RT_R$ and $(TP)_{RR}=T_RC_R$. The listed entries follow from those of $H$. <span class="qed">∎</span></p>
+</div>
+<p>The construction is that of Peschel and of Eisler and Peschel for Hermitian chains [1–4]. What is new here is that it uses only $h(k)^2=E(k)^2I$. That relation survives the non-Hermitian opening, so the commuting operator survives with it. Since $C_R$ is bounded and $T_R$ is banded, $C_R$ maps each eigenspace of $T_R$ into itself. A simple eigenvector of $T_R$ is therefore an eigenvector of $C_R$, and the levels of $C_R$ can be indexed by those of $T_R$.</p>
+</div>
+
+<figure>
+  <div class="plate"><svg id="chain" viewBox="0 0 1000 250" role="img" aria-label="The opened chain, the cut, and the weights of the commuting operator"></svg></div>
+  <figcaption><b>FIGURE 3</b> Where the commuting operator lives. Each cell holds sites $a$ (gain $+iu$, gold) and $b$ (loss $-iu$, blue), joined by $v$ inside the cell and by $w$ between cells. $T$ weights every bond by the mean position of its ends, shifted by $\tfrac12$. The one bond that crosses the cut, $(-1,b)$ to $(0,a)$, gets weight $\tfrac12(-1+0+1)=0$, so $T$ splits exactly at the cut. The labels on the right half give the entries of $T_R$ from Theorem 5.2.</figcaption>
+</figure>
+
+<div class="col">
+<h3>5.3 The ladder</h3>
+<div class="thm"><span class="tag">MEASURED STATEMENT 5.3 · THE EDGE LADDER</span>
+Let $K=K(k)$ and $K'=K(k')$ be the complete elliptic integrals of the first kind for the modulus of Lemma 5.1. Put
+<div class="math-d">$$s=\frac{uw}{w^2-v'^2}\in(0,1),\qquad \theta=\frac{\pi}{K}\,F(\arcsin s\,|\,k)\in(0,\pi),\qquad \Delta=\frac{2\pi K'}{K}.$$</div>
+Equivalently, $\operatorname{sn}(\theta K/\pi\,|\,k)=s$. Then the levels of $C_R$ on the eigenvectors of $T_R$ localised at the cut are
+<div class="math-d">$$\varepsilon_j=\log\frac{1-\nu_j}{\nu_j}=j\Delta+i\theta,\qquad j\in\mathbb Z.$$</div>
+All levels share one phase, and there is no real offset. <span class="g v">V</span></div>
+<p class="evidence"><em>Evidence</em> (script <code>s15</code>). The test uses 200 random points with $w=1$, $v\in(0.02,0.7)$, $u\in(0.02,0.9)$ and gap $E_\pi\ge0.2$, of which 16 lie past the exit line. The block has 90 cells, inside a 6000-momentum chain.</p>
+</div>
+
+<div class="col">
+<div class="checks">
+  <div><b>8.4e-12</b><span>largest eigen-residual of $C_R$ on the edge eigenvectors of $T_R$</span></div>
+  <div><b>1.7e-8</b><span>largest relative error of the spacing $\Delta=2\pi K'/K$</span></div>
+  <div><b>4.2e-7</b><span>largest phase error against the Abel formula, levels $j=0,\pm1$</span></div>
+  <div><b>200/200</b><span>inside/outside verdicts matching the sign of $E(0)E(\pi)-u^2$</span></div>
+</div>
+<p class="evidence">The domain condition $s&lt;1$ holds, with maximum <span class="num">0.913</span> at the test points and <span class="num">1 − 4e-8</span> on a 400×400 grid of the whole gapped region, where $s\to1$ only at the critical line. Deeper levels have $\nu$ within $10^{-10}$ of $0$ or $1$. There the nonnormal eigenproblem is ill-conditioned, and they are not used. At $u=0$, $k=v/w$ and the spacing is the elliptic spacing of the Hermitian dimerized chain known from corner-transfer-matrix methods [2,3], with the protected $\nu=\tfrac12$ edge level at $j=0$ <span class="g">R</span>. Opening the chain keeps the spacing of the hidden Hermitian band and rotates the whole ladder by one phase.</p>
+</div>
+
+<figure>
+  <div class="plate"><svg id="phase" viewBox="0 0 1000 560" role="img" aria-label="Edge phase against v at three values of u"></svg></div>
+  <figcaption><b>FIGURE 4</b> The shared edge phase. Solid: $\theta$ from Statement 5.3 against $v$ at $u=0.3$, $0.5$, $0.7$ ($w=1$). Rings: the measured $\operatorname{Im}\varepsilon_0$ on a block of 90 cells. Faint dashed: the quarter-turn continuation $2\arctan\!\big(u/\sqrt{E_0E_\pi}\big)$, which meets the true phase only at $v=0$ and on the exit line. Stars: the exit line, where every solid curve crosses $\pi/2$.</figcaption>
+</figure>
+
+<div class="col">
+<h3>5.4 The exit theorem</h3>
+<div class="thm gold"><span class="tag">THEOREM 5.4 · THE EXIT LADDER</span>
+<ol type="a">
+<li><em>One phase, one crossing.</em> If $\varepsilon_j=j\Delta+i\theta$ with $\theta\in(0,\pi)$, then every $\Gamma_j=\tanh(\varepsilon_j/2)$ lies on the circular arc through $-1$, $i\tan(\theta/2)$ and $1$. Either all $|\Gamma_j|&lt;1$, or all $|\Gamma_j|=1$, or all $|\Gamma_j|&gt;1$, according as $\theta&lt;\pi/2$, $\theta=\pi/2$ or $\theta&gt;\pi/2$.</li>
+<li><em>The crossing is the Petermann line.</em> For $\theta$ as in Statement 5.3,
+<div class="math-d">$$\theta=\frac\pi2\iff E(0)E(\pi)=u^2\iff\langle K\rangle=2\iff(w^2-v^2)^2=2u^2(w^2+v^2).$$</div>
+Moreover $\theta&lt;\pi/2$ on the side $E(0)E(\pi)&gt;u^2$ and $\theta&gt;\pi/2$ on the other.</li>
+<li><em>The dimer limit, exact.</em> At $v=0$ the half-chain block has exactly one level off $\{0,1\}$, with $\varepsilon=2i\arcsin(u/w)$. This equals the formula of Statement 5.3 at $v=0$. That level leaves the disk exactly at $w^2=2u^2$, which is the exit line at $v=0$.</li>
+</ol>
+<span class="g">T</span></div>
+<div class="proof">
+<p>(a) By Theorem 2.2, $|\tanh(W/2)|&lt;1\iff\cos\operatorname{Im}W&gt;0$. Here $\operatorname{Im}\varepsilon_j=\theta$ for every $j$, in the principal range. The image of the line $\{x+i\theta\}$ under $W\mapsto\tanh(W/2)$ is a circle arc. Its endpoints are $\pm1$ as $x\to\pm\infty$, and $x=0$ gives $\tanh(i\theta/2)=i\tan(\theta/2)$.</p>
+<p>(b) On $(0,K)$, $\operatorname{sn}(\cdot\,|\,k)$ increases strictly from $0$ to $1$, and $\operatorname{sn}(K/2\,|\,k)^2=1/(1+k')$ [5]. So $\theta=\pi/2$ iff $s^2(1+k')=1$. Put $W=w'$ and $r=\sqrt{E_0E_\pi}$, so that $k'=r/W$ (Lemma 5.1). Then</p>
+<div class="math-d">$$\mathcal F:=u^2w^2(W+r)-W(w^2-v'^2)^2=0.$$</div>
+<p>Lemma 5.1 makes $w^2$ and $v^2$ the roots of $x^2-(2W^2-r^2+u^2)x+W^2(W^2-r^2)=0$. With $\delta=u^2-r^2$ and $D=\sqrt{4W^2u^2+\delta^2}$, the larger root ($w&gt;v$) is $w^2=W^2+\tfrac12(\delta+D)$, and $w^2-v'^2=\tfrac12(u^2+r^2+D)$. So $\mathcal F=\mathcal F(D)$ is a polynomial in $D$. Multiplying by its conjugate $\mathcal F(-D)$ and reducing with $D^2=4W^2u^2+\delta^2$ gives the identity</p>
+<div class="math-d">$$\mathcal F(D)\,\mathcal F(-D)=W\,r^2u^2\,(W+r)^2\,(W-r)\,(u^2-r^2).$$</div>
+<p>Since $0&lt;r&lt;W$ and $u&gt;0$, $\mathcal F(D)=0$ forces $u^2=r^2=E(0)E(\pi)$.</p>
+<p>Conversely, on $u^2=r^2$ we have $\delta=0$, $D=2Wu$, $w^2=W(W+u)$ and $w^2-v'^2=u(W+u)$. Then $s^2=w^2/(W+u)^2=W/(W+u)=1/(1+k')$. The remaining equivalences are Proposition 4.2.</p>
+<p>For the sides: $\theta$ is continuous in $(v,u)$ on the gapped region and equals $\pi/2$ only on the line. Each side of the line is connected, since for fixed $v$ it is an interval in $u$ with continuous endpoints. As $u\to0$, $s\to0$ and $\theta\to0$; at $v=0$, $\theta=2\arcsin(u/w)&gt;\pi/2$ for $u^2&gt;w^2/2$.</p>
+<p>(c) At $v=0$, $H$ is a direct sum of dimers on $\{(c,b),(c+1,a)\}$ with matrix $\begin{pmatrix}-iu&amp;w\\w&amp;iu\end{pmatrix}$ and $E=\sqrt{w^2-u^2}$. The half-chain $c\ge0$ contains whole dimers, whose blocks are idempotent with $\nu\in\{0,1\}$, and the single site $(0,a)$ of the cut dimer. For that site, $\nu=\tfrac12(1-iu/E)$, so $z=(E+iu)/(E-iu)$ has $|z|=1$ and $\varepsilon=2i\arctan(u/E)=2i\arcsin(u/w)$. At $v=0$ we have $v'=0$, $k=0$, $K=\pi/2$ and $F(\phi\,|\,0)=\phi$, so $s=u/w$ and $\theta=2\arcsin(u/w)$. The level leaves where $2\arcsin(u/w)=\pi/2$, that is $w^2=2u^2$, and $E(0)E(\pi)=w^2-u^2=u^2$ there. <span class="qed">∎</span></p>
+</div>
+<p class="evidence">Sympy confirms that $\mathcal F$ vanishes on the line, and that the product reduces to the factored form above (script <code>s17</code>). Script <code>s15</code> returns $|\theta-\pi/2|\le$ <span class="num">6.7e-16</span> on the line at six values of $v$, and the dimer limit to <span class="num">2.2e-16</span> <span class="g v">V</span>.</p>
+
+<h3>5.5 What the theorem explains, and its scope</h3>
+<ol>
+<li><em>Why the exit is filter-independent on this chain.</em> The levels nearest the endpoints, $\operatorname{Re}\varepsilon_j\to\pm\infty$, cross with the centre level. A filter that discards them does not move the crossing until it begins to discard ill-conditioned levels it should keep. The filter audit bears this out (ring $2000$, block $40$, $v=0.5$, $w=1$). The massless exit holds at $u=0.4743416$, with $\langle K\rangle=2.000000002$, for every filter from $10^{-6}$ through $10^{-9}$. It moves only in the seventh digit at $10^{-10}$ and in the fourth at $10^{-12}$, where the filter keeps levels within $10^{-10}$ of the endpoints, whose eigenvalues are ill-conditioned <span class="g v">V</span> (script <code>incoming_exit_filter</code>).</li>
+<li><em>Why the quarter-turn continuation fits only at the exit.</em> The continued endpoint offset $\Gamma_{\mathrm{end}}=i\gamma$, $\gamma=u/\sqrt{E_0E_\pi}$, is the apex $i\tan(\theta/2)$ of the arc only at $v=0$ and on the exit line. Elsewhere $\tan(\theta/2)\ne\gamma$ (Figure 4, dashed). At nine points on the approach to the exit ($u=0.3,0.5,0.7$), plain finite blocks measure a census rotation above the continuation by $4\times10^{-6}$ to $3.4\times10^{-2}$, independent of block size (script <code>s11</code>). That rotation is the Abel phase: at the same nine points and blocks of $40$ and $80$ cells, the largest census rotation equals $\theta/\pi$ to $7.2\times10^{-7}$ (script <code>s18</code>). This is a check on Statement 5.3 that does not use the commuting operator <span class="g v">V</span>.</li>
+<li><em>Partition.</em> The cut runs between cells. With $w=0$ every whole-cell block is idempotent and nothing leaves, even where $\langle K\rangle=2$. That is consistent with (c): the level that exits belongs to a dimer cut in two.</li>
+<li><em>Other bands.</em> Theorem 5.2 uses only $h(k)^2=E(k)^2I$ and nearest-cell hopping, so the commuting operator exists for any such two-band chain. Statement 5.3 and part (b) are stated for real $u$ only, where the on-site term is purely imaginary. The massive band $d=(t_1+\cos k,\sin k,m+i\gamma)$ has a complex on-site term. At $m=0.4$ its census exits far earlier, at $\langle K\rangle\approx1.02$ (script <code>s06</code>), and the exit moves with the filter, from $\gamma=0.2716$ at $10^{-6}$ to $0.1228$ at $10^{-12}$ (script <code>incoming_exit_filter</code>). Whether its ladder still carries a single phase is not tested here.</li>
+</ol>
+<p><strong style="font-family:var(--head);font-size:19px;color:#f2ead7">The open step.</strong> Theorem 5.2 fixes the eigenvectors. Theorem 5.4 turns any ladder of the measured form into the exit law. What remains is to derive the ladder form and the elliptic phase of Statement 5.3 from $T_R$ analytically. In the Hermitian case this is done by the corner transfer matrix. Here the natural route is the Wiener–Hopf factorisation of the band symbol on the elliptic curve $y^2=-z(v'+w'z)(v'z+w')$. On that curve the phase appears as the Abel image of the point $z=-v/w$, where the opened eigenvector $(E-iu,\,-(v+wz))$ degenerates. That derivation is open <span class="g c">C</span>. With it, the exit law on the coupled PT-symmetric chain would be a theorem end to end.</p>
+
+<h2><span class="n">6</span>Status</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Result</th><th>Grade</th></tr></thead>
+<tbody>
+<tr><td>Bridge</td><td><span class="g">T</span><span class="g">L</span></td></tr>
+<tr><td>Cayley domain (real cases also in Lean)</td><td><span class="g">T</span></td></tr>
+<tr><td>Weight between: split, order, two-sidedness, comparison, trace, local unitaries</td><td><span class="g">T</span><span class="g">L</span></td></tr>
+<tr><td>Operator-norm stability, near-projector comparison, Hölder radius</td><td><span class="g">T</span></td></tr>
+<tr><td>Projector extension and three exact limits of the one-body record</td><td><span class="g">T</span></td></tr>
+<tr><td>$4\operatorname{Tr}X_A\le I_G$, sharp; upper bound with margin, none without</td><td><span class="g">T</span><span class="g v">V</span></td></tr>
+<tr><td>Offset speed limit and the opposite-direction saturating pair</td><td><span class="g">T</span><span class="g v">V</span></td></tr>
+<tr><td>Radial census survives opening; positivity does not</td><td><span class="g">T</span><span class="g">L</span></td></tr>
+<tr><td>Petermann line $\langle K\rangle=2\iff(w^2-v^2)^2=2u^2(w^2+v^2)$</td><td><span class="g">T</span><span class="g">L</span></td></tr>
+<tr><td>Hidden Hermitian band; commuting operator $[C_R,T_R]=0$</td><td><span class="g">T</span></td></tr>
+<tr><td>Ladder crosses the rim all at once; its phase is $\pi/2$ exactly on the Petermann line (both directions); dimer limit</td><td><span class="g">T</span></td></tr>
+<tr><td>Ladder form $\varepsilon_j=j\Delta+i\theta$, elliptic spacing and Abel phase, 200 random points</td><td><span class="g v">V</span></td></tr>
+<tr><td>Finite-block census exit on the line, to $4\times10^{-8}$; filter audit</td><td><span class="g v">V</span></td></tr>
+<tr><td>Census rotation of plain blocks equals the Abel phase, to $7.2\times10^{-7}$</td><td><span class="g v">V</span></td></tr>
+<tr><td>Analytic derivation of the ladder from $T_R$</td><td><span class="g c">C</span></td></tr>
+</tbody></table></div>
+
+<h2>References</h2>
+<ol class="refs">
+<li>I. Peschel, Calculation of reduced density matrices from correlation functions, <em>J. Phys. A</em> 36 (2003) L205.</li>
+<li>I. Peschel, On the reduced density matrix for a chain of free electrons, <em>J. Stat. Mech.</em> (2004) P06004.</li>
+<li>I. Peschel and V. Eisler, Reduced density matrices and entanglement entropy in free lattice models, <em>J. Phys. A</em> 42 (2009) 504003.</li>
+<li>V. Eisler and I. Peschel, Free-fermion entanglement and spheroidal functions, <em>J. Stat. Mech.</em> (2013) P04028; Analytical results for the entanglement Hamiltonian of a free-fermion chain, <em>J. Phys. A</em> 50 (2017) 284003.</li>
+<li>P. F. Byrd and M. D. Friedman, <em>Handbook of Elliptic Integrals for Engineers and Scientists</em>, 2nd ed., Springer (1971).</li>
+</ol>
+
+<h2>Conventions</h2>
+<p class="evidence">Logarithms are natural. $K(k)=F(\pi/2\,|\,k)$ with $F(\phi\,|\,k)=\int_0^\phi(1-k^2\sin^2t)^{-1/2}dt$; the scripts call <code>mpmath</code> with parameter $m=k^2$, and this page computes the same integrals in the browser by Carlson's $R_F$, matching the scripts to $10^{-15}$. The biorthogonal projector uses the principal square root $E(k)&gt;0$, valid throughout the gapped region. The cut lies between cells $-1$ and $0$, and the region is $c\ge0$; in the scripts it is the left edge of a finite block of 90 cells. The phases $\operatorname{Im}\varepsilon$ use the principal logarithm.</p>
+
+<h2>Scripts and outputs</h2>
+<p class="evidence">Each script prints the numbers quoted above. Open a panel to read it in full.</p>
+<details><summary>s15_exit_ladder.py · the 200-point ladder test</summary><pre># SCRIPT: s15_exit_ladder
+&quot;&quot;&quot;s15: the exit ladder on the opened PT-symmetric SSH chain.
+Checks, at 200 random gapped parameter points (w=1, seed 15):
+  (a) T_R = 1/2{X+1/2,H} restricted to the right half commutes with the biorthogonal block C_R
+      (measured as the eigen-residual of C_R on edge-localised eigenvectors of T_R);
+  (b) the edge levels are eps_j = j*Delta + i*theta with Delta = 2*pi*K&#x27;(k)/K(k), k = v&#x27;/w&#x27;;
+  (c) theta = pi*F(arcsin s | k^2)/K(k), s = u*w/(w^2 - v&#x27;^2);
+  (d) the ladder is inside the disk iff E(0)E(pi) &gt; u^2 (sign of cos theta).
+Also the exact dimer case v=0, theta = 2 arcsin(u/w).&quot;&quot;&quot;
+import numpy as np, mpmath as mp
+rng=np.random.default_rng(15)
+def block(v,w,u,Lc,N=6000):
+    ks=2*np.pi*(np.arange(N)+0.5)/N
+    E=np.sqrt(v*v+w*w-u*u+2*v*w*np.cos(ks)+0j)
+    q=v+w*np.exp(-1j*ks)                          # h = [[iu, q],[conj-in-k q~, -iu]]
+    qt=v+w*np.exp(1j*ks)
+    P=np.empty((N,2,2),complex)                    # lower band P = (I - h/E)/2
+    P[:,0,0]=0.5*(1-1j*u/E); P[:,1,1]=0.5*(1+1j*u/E)
+    P[:,0,1]=-0.5*q/E; P[:,1,0]=-0.5*qt/E
+    d=np.arange(-(Lc-1),Lc)
+    G=np.einsum(&#x27;dk,kab-&gt;dab&#x27;,np.exp(1j*np.outer(d,ks)),P)/N
+    C=np.zeros((2*Lc,2*Lc),complex)
+    for c in range(Lc):
+        for cp in range(Lc):
+            C[2*c:2*c+2,2*cp:2*cp+2]=G[c-cp+Lc-1]
+    return C
+def Tmat(v,w,u,L):
+    T=np.zeros((2*L,2*L),complex)
+    for c in range(L):
+        a,b=2*c,2*c+1; x=c+0.5
+        T[a,a]=1j*u*x; T[b,b]=-1j*u*x; T[a,b]=T[b,a]=v*x
+        if c&lt;L-1: T[b,a+2]=T[a+2,b]=w*(c+1)
+    return T
+def predict(v,w,u):
+    E0=np.sqrt((v+w)**2-u*u); Ep=np.sqrt((w-v)**2-u*u)
+    wp=(E0+Ep)/2; vp=(E0-Ep)/2; k=vp/wp
+    K=float(mp.ellipk(k*k)); Kp=float(mp.ellipk(1-k*k))
+    s=u*w/(w*w-vp*vp)
+    th=np.pi*float(mp.ellipf(mp.asin(s),k*k))/K
+    return 2*np.pi*Kp/K, th, E0*Ep
+def measure(v,w,u,L=90):
+    C=block(v,w,u,L); T=Tmat(v,w,u,L)
+    ev,R=np.linalg.eig(T); lv=[]
+    for i in np.argsort(abs(ev))[:12]:
+        r=R[:,i]/np.linalg.norm(R[:,i])
+        if np.abs(r[-30:]).max()&gt;1e-9: continue
+        nu=(r.conj()@C@r)
+        if abs(nu)&lt;1e-14 or abs(1-nu)&lt;1e-14: continue
+        res=np.linalg.norm(C@r-nu*r)
+        lv.append((ev[i].real,np.log((1-nu)/nu),res))
+    lv.sort(key=lambda x:x[0])
+    return lv
+out=[]
+pts=[]
+while len(pts)&lt;200:
+    v=rng.uniform(0.02,0.7); u=rng.uniform(0.02,0.9)
+    Ep2=(1-v)**2-u*u
+    if Ep2&lt;0.2**2 : continue
+    pts.append((v,u))
+worst={&#x27;res&#x27;:0,&#x27;phase&#x27;:0,&#x27;spacing&#x27;:0}; agree=0; outside=0
+for (v,u) in pts:
+    D,th,p=predict(v,1.0,u)
+    lv=measure(v,1.0,u)
+    if not lv:
+        print(&#x27;no edge levels at&#x27;,v,u); continue
+    j0=min(range(len(lv)),key=lambda i:abs(lv[i][1].real))
+    use=[x for x in lv if abs(x[1].real)&lt;1.5*D+1e-9 and x[2]&lt;1e-6]   # j=0,+-1
+    for t,e,res in use:
+        worst[&#x27;res&#x27;]=max(worst[&#x27;res&#x27;],res)
+        worst[&#x27;phase&#x27;]=max(worst[&#x27;phase&#x27;],abs(np.angle(np.exp(1j*(e.imag-th)))))
+    re=sorted(x[1].real for x in use)
+    for a,b in zip(re,re[1:]):
+        if D&lt;40: worst[&#x27;spacing&#x27;]=max(worst[&#x27;spacing&#x27;],abs((b-a)-D)/D)
+    meas_in=np.cos(lv[j0][1].imag)&gt;0; pred_in=p&gt;u*u
+    agree+= (meas_in==pred_in); outside+= (not pred_in)
+lines=[f&#x27;points: 200 (w=1, seed 15, gap E(pi)&gt;=0.2, block 90 cells), of which {outside} lie past the exit line E0*Epi&lt;u^2&#x27;,
+ f&#x27;(a) max eigen-residual of C_R on T_R edge eigenvectors (levels j=0,+-1): {worst[&quot;res&quot;]:.2e}&#x27;,
+ f&#x27;(b) max relative spacing error |Re(eps_(j+1)-eps_j)-Delta|/Delta:          {worst[&quot;spacing&quot;]:.2e}&#x27;,
+ f&#x27;(c) max phase error |Im eps_j - theta_pred| (j=0,+-1):                    {worst[&quot;phase&quot;]:.2e}&#x27;,
+ f&#x27;(d) inside/outside verdict agrees with sign(E0*Epi-u^2): {agree}/200&#x27;]
+# exact dimer case v=0
+md=0
+for u in [0.1,0.3,0.5,0.6,0.7,0.75,0.9]:
+    D,th,p=predict(0.0,1.0,u)
+    md=max(md,abs(th-2*np.arcsin(u)))
+lines.append(f&#x27;v=0 dimer limit: max |theta_pred - 2 arcsin(u/w)| over 7 values of u: {md:.2e}&#x27;)
+# exit line: theta_pred at E0*Epi=u^2 equals pi/2
+mx=0
+for v in [0.05,0.1,0.2,0.3,0.4,0.5]:
+    uu=(1-v*v)/np.sqrt(2*(1+v*v))   # closed form of E0*Epi=u^2 at w=1
+    mx=max(mx,abs(predict(v,1.0,uu)[1]-np.pi/2))
+lines.append(f&#x27;exit line: max |theta_pred - pi/2| on E0*Epi=u^2 at 6 values of v: {mx:.2e}&#x27;)
+smax=0
+for (v,u) in pts:
+    E0=np.sqrt((1+v)**2-u*u); Ep=np.sqrt((1-v)**2-u*u); vp=(E0-Ep)/2
+    smax=max(smax,u/(1-vp*vp))
+lines.append(f&#x27;domain: max s = u*w/(w^2-v\&#x27;^2) over the 200 points: {smax:.4f} (&lt; 1)&#x27;)
+print(&#x27;\n&#x27;.join(lines))
+open(&#x27;../outputs/s15_exit_ladder.txt&#x27;,&#x27;w&#x27;).write(&#x27;\n&#x27;.join(lines)+&#x27;\n&#x27;)
+</pre><pre class="out">points: 200 (w=1, seed 15, gap E(pi)&gt;=0.2, block 90 cells), of which 16 lie past the exit line E0*Epi&lt;u^2
+(a) max eigen-residual of C_R on T_R edge eigenvectors (levels j=0,+-1): 8.37e-12
+(b) max relative spacing error |Re(eps_(j+1)-eps_j)-Delta|/Delta:          1.67e-08
+(c) max phase error |Im eps_j - theta_pred| (j=0,+-1):                    4.21e-07
+(d) inside/outside verdict agrees with sign(E0*Epi-u^2): 200/200
+v=0 dimer limit: max |theta_pred - 2 arcsin(u/w)| over 7 values of u: 2.22e-16
+exit line: max |theta_pred - pi/2| on E0*Epi=u^2 at 6 values of v: 6.66e-16
+domain: max s = u*w/(w^2-v&#x27;^2) over the 200 points: 0.9131 (&lt; 1)
+</pre></details>
+<details><summary>s16_weight_between_checks.py · controls for §3</summary><pre># SCRIPT: s16_weight_between_checks
+&quot;&quot;&quot;s16: numerical controls for the weight-between theorems (journal edition).
+Random positive contractions C on a=4, b=5 (seed 16).&quot;&quot;&quot;
+import numpy as np
+rng=np.random.default_rng(16); a,b=4,5; n=a+b
+def rand_contraction(n,pure=False):
+    Z=rng.normal(size=(n,n))+1j*rng.normal(size=(n,n)); U,_=np.linalg.qr(Z)
+    lam=(rng.integers(0,2,n).astype(float) if pure else rng.uniform(0,1,n))
+    return U@np.diag(lam)@U.conj().T
+h=lambda x: -(x*np.log(x)+(1-x)*np.log(1-x))
+def trh(M): e=np.linalg.eigvalsh(M); e=np.clip(e,1e-300,1-1e-16); return np.sum(h(e))
+L=[]; w={}
+def upd(k,x): w[k]=max(w.get(k,-np.inf),x)
+for _ in range(400):
+    C=rand_contraction(n); A=C[:a,:a]; B=C[:a,a:]; D=C[a:,a:]
+    X=B@B.conj().T; XB=B.conj().T@B; F=A-A@A
+    TA=(C-C@C)[:a,:a]
+    upd(&#x27;defect split |F-T-X|&#x27;,np.abs(F-TA-X).max())
+    ex=np.linalg.eigvalsh(X); ef=np.linalg.eigvalsh(F)
+    upd(&#x27;order: max eig X - 1/4&#x27;,ex.max()-0.25); upd(&#x27;order: min eig(F-X)&#x27;,-np.linalg.eigvalsh(F-X).min())
+    pos=lambda e: np.sort(e[e&gt;1e-12])
+    upd(&#x27;two-sided |spec X_A - spec X_B|&#x27;,np.abs(pos(ex)-pos(np.linalg.eigvalsh(XB))).max())
+    # min-max comparison
+    upd(&#x27;ordered lambda_j(X)-lambda_j(F)&#x27;,(np.sort(ex)-np.sort(ef)).max())
+    # stability
+    E=rng.normal(size=(n,n))+1j*rng.normal(size=(n,n)); E=(E+E.conj().T)/2; E*=1e-3/np.linalg.norm(E,2)
+    Ct=C+E; ev,V=np.linalg.eigh(Ct); Ct=V@np.diag(np.clip(ev,0,1))@V.conj().T
+    dl=np.linalg.norm(C-Ct,2); Xt=Ct[:a,a:]@Ct[:a,a:].conj().T
+    upd(&#x27;stability ||X-X~||/delta - 1&#x27;,np.linalg.norm(X-Xt,2)/dl-1)
+# information bound on 64 interior covariances
+lo=np.inf; up=np.inf
+for _ in range(64):
+    C=rand_contraction(n); ev,V=np.linalg.eigh(C); dlt=0.05; ev=dlt+(1-2*dlt)*ev; C=V@np.diag(ev)@V.conj().T
+    A=C[:a,:a]; D=C[a:,a:]; X=C[:a,a:]@C[:a,a:].conj().T
+    I=trh(A)+trh(D)-trh(C); tx=np.trace(X).real
+    lo=min(lo,I-4*tx); up=min(up,tx/(dlt*(1-dlt))-I)
+L.append(f&#x27;info bound, 64 covariances with spectrum in [0.05,0.95]: min(I_G-4TrX)={lo:.3e}, min(TrX/(d(1-d))-I_G)={up:.3e}&#x27;)
+for r in [1e-2,1e-3,1e-4]:
+    I=2*np.log(2)-2*h(0.5+r); L.append(f&#x27;sharp family C=1/2 I+r sigma_x, r={r:g}: I_G/TrX={I/r**2:.9f}&#x27;)
+# pure states: census recovery
+mx=0
+for _ in range(100):
+    C=rand_contraction(n,pure=True); A=C[:a,:a]; X=C[:a,a:]@C[:a,a:].conj().T
+    mx=max(mx,np.abs(X-(A-A@A)).max())
+L.append(f&#x27;pure states (100): max |X_A-(A_C-A_C^2)| = {mx:.2e}&#x27;)
+# speed-limit saturating pair
+sx=np.array([[0,1],[1,0]],complex); sy=np.array([[0,-1j],[1j,0]])
+worst=0
+for om in [0.5,1.0,2.0]:
+    H=om*sx
+    for sgn in [+1,-1]:
+        P0=0.5*(np.eye(2)+sgn*sy)
+        for t in np.linspace(0.01,0.7/om,31):
+            if abs(np.sin(2*om*t))&gt;0.95: continue
+            U=np.cos(om*t)*np.eye(2)-1j*np.sin(om*t)*sx; P=U@P0@U.conj().T
+            Pd=-1j*(H@P-P@H); nu=P[0,0].real; nud=Pd[0,0].real
+            taud=-nud/(nu*(1-nu)); g=0.5*np.linalg.norm(Pd)**2; S=1/(nu*(1-nu))
+            worst=max(worst,abs(taud**2/(4*g*S)-1))
+L.append(f&#x27;offset speed limit, pair P+-: max |taudot^2/(4gS)-1| over 3 omegas, 2 signs, 31 times = {worst:.1e}&#x27;)
+for k,x in w.items(): L.insert(0,f&#x27;400 random contractions (a=4,b=5): max[{k}] = {x:.2e}&#x27;)
+L.insert(0,&#x27;(for order and stability lines, a negative maximum means the bound holds with that margin)&#x27;)
+print(&#x27;\n&#x27;.join(L)); open(&#x27;../outputs/s16_weight_between_checks.txt&#x27;,&#x27;w&#x27;).write(&#x27;\n&#x27;.join(L)+&#x27;\n&#x27;)
+</pre><pre class="out">(for order and stability lines, a negative maximum means the bound holds with that margin)
+400 random contractions (a=4,b=5): max[stability ||X-X~||/delta - 1] = -5.66e-01
+400 random contractions (a=4,b=5): max[ordered lambda_j(X)-lambda_j(F)] = -2.54e-02
+400 random contractions (a=4,b=5): max[two-sided |spec X_A - spec X_B|] = 1.39e-16
+400 random contractions (a=4,b=5): max[order: min eig(F-X)] = -2.26e-02
+400 random contractions (a=4,b=5): max[order: max eig X - 1/4] = -5.72e-02
+400 random contractions (a=4,b=5): max[defect split |F-T-X|] = 1.87e-16
+info bound, 64 covariances with spectrum in [0.05,0.95]: min(I_G-4TrX)=2.106e-03, min(TrX/(d(1-d))-I_G)=3.318e-01
+sharp family C=1/2 I+r sigma_x, r=0.01: I_G/TrX=4.000266709
+sharp family C=1/2 I+r sigma_x, r=0.001: I_G/TrX=4.000002667
+sharp family C=1/2 I+r sigma_x, r=0.0001: I_G/TrX=4.000000020
+pure states (100): max |X_A-(A_C-A_C^2)| = 6.80e-16
+offset speed limit, pair P+-: max |taudot^2/(4gS)-1| over 3 omegas, 2 signs, 31 times = 5.9e-15
+</pre></details>
+<details><summary>s17_exit_converse_sympy.py · symbolic check of Theorem 5.4(b)</summary><pre># SCRIPT: s17_exit_converse_sympy
+&quot;&quot;&quot;s17: symbolic check of Theorem 5.4(b). W=w&#x27;, r=sqrt(E0*Epi), D=sqrt(4W^2u^2+(u^2-r^2)^2).
+F = u^2 w^2 (W+r) - W (w^2-v&#x27;^2)^2 vanishes iff theta = pi/2.&quot;&quot;&quot;
+import sympy as sp
+W,r,u,D=sp.symbols(&#x27;W r u D&#x27;,positive=True)
+d=u**2-r**2
+w2=W**2+(d+D)/2; vp2=W**2-r**2
+F=sp.expand(u**2*w2*(W+r)-W*(w2-vp2)**2)
+prod=sp.expand(sp.expand(F*F.subs(D,-D)).subs(D**2,4*W**2*u**2+d**2))
+fac=sp.factor(prod)
+target=W*r**2*u**2*(W+r)**2*(W-r)*(u**2-r**2)
+lines=[f&#x27;F(D)F(-D) factors as: {fac}&#x27;,
+       f&#x27;F(D)F(-D) - W r^2 u^2 (W+r)^2 (W-r)(u^2-r^2) = {sp.simplify(prod-sp.expand(target))}&#x27;,
+       f&#x27;F on the line u=r (D=2Wu): {sp.simplify(F.subs(D,2*W*u).subs(r,u))}&#x27;]
+# root-check: w^2 is the larger root of x^2-(2W^2-r^2+u^2)x+W^2(W^2-r^2)
+x=sp.symbols(&#x27;x&#x27;); q=x**2-(2*W**2-r**2+u**2)*x+W**2*(W**2-r**2)
+lines.append(f&#x27;w^2 satisfies the quadratic: {sp.simplify(sp.expand(q.subs(x,w2)).subs(D**2,4*W**2*u**2+d**2))}&#x27;)
+print(&#x27;\n&#x27;.join(lines)); open(&#x27;../outputs/s17_exit_converse_sympy.txt&#x27;,&#x27;w&#x27;).write(&#x27;\n&#x27;.join(lines)+&#x27;\n&#x27;)
+</pre><pre class="out">F(D)F(-D) factors as: W*r**2*u**2*(-W + r)*(W + r)**2*(r - u)*(r + u)
+F(D)F(-D) - W r^2 u^2 (W+r)^2 (W-r)(u^2-r^2) = 0
+F on the line u=r (D=2Wu): 0
+w^2 satisfies the quadratic: 0
+</pre></details>
+<details><summary>s18_census_rotation_vs_abel.py · plain blocks against the Abel phase</summary><pre># SCRIPT: s18_census_rotation_vs_abel
+&quot;&quot;&quot;s18: independent check of the Abel phase. Plain finite blocks (no commuting operator):
+the largest census rotation max|Im eps|/pi over the block&#x27;s levels, at the nine (u,v) points of s11,
+against theta/pi from the elliptic formula. Endpoint filter |nu|,|1-nu| &gt; 1e-9, principal log.&quot;&quot;&quot;
+import numpy as np
+exec(open(&#x27;s15_exit_ladder.py&#x27;).read().split(&#x27;out=[]&#x27;)[0])
+pts=[(0.3,0.4171),(0.3,0.5562),(0.3,0.6604),(0.5,0.2809),(0.5,0.3746),(0.5,0.4448),(0.7,0.0492),(0.7,0.0656),(0.7,0.0779)]
+lines=[&#x27; u     v       block   census max|Im eps|/pi   Abel theta/pi    difference&#x27;]
+worst=0
+for u,v in pts:
+    th=predict(v,1.0,u)[1]/np.pi
+    for L in (40,80):
+        nu=np.linalg.eigvals(block(v,1.0,u,L))
+        nu=nu[(np.abs(nu)&gt;1e-9)&amp;(np.abs(1-nu)&gt;1e-9)]
+        rot=np.max(np.abs(np.log((1-nu)/nu).imag))/np.pi
+        worst=max(worst,abs(rot-th))
+        lines.append(f&#x27;{u:.1f}  {v:.4f}   {L:4d}      {rot:.9f}          {th:.9f}     {rot-th:+.2e}&#x27;)
+lines.append(f&#x27;largest |difference| over 9 points and 2 block sizes: {worst:.2e}&#x27;)
+print(&#x27;\n&#x27;.join(lines)); open(&#x27;../outputs/s18_census_rotation_vs_abel.txt&#x27;,&#x27;w&#x27;).write(&#x27;\n&#x27;.join(lines)+&#x27;\n&#x27;)
+</pre><pre class="out"> u     v       block   census max|Im eps|/pi   Abel theta/pi    difference
+0.3  0.4171     40      0.230133206          0.230133206     +4.02e-12
+0.3  0.4171     80      0.230133216          0.230133206     +1.01e-08
+0.3  0.5562     40      0.276925773          0.276925154     +6.19e-07
+0.3  0.5562     80      0.276925356          0.276925154     +2.02e-07
+0.3  0.6604     40      0.372154619          0.372154620     -1.34e-09
+0.3  0.6604     80      0.372154622          0.372154620     +2.54e-09
+0.5  0.2809     40      0.367545806          0.367545731     +7.43e-08
+0.5  0.2809     80      0.367545731          0.367545731     +8.71e-12
+0.5  0.3746     40      0.405669425          0.405669425     +1.12e-12
+0.5  0.3746     80      0.405669425          0.405669425     +8.97e-13
+0.5  0.4448     40      0.463575343          0.463574889     +4.54e-07
+0.5  0.4448     80      0.463575609          0.463574889     +7.21e-07
+0.7  0.0492     40      0.495879103          0.495879103     +4.44e-16
+0.7  0.0492     80      0.495879103          0.495879103     -1.11e-16
+0.7  0.0656     40      0.497660473          0.497660472     +1.32e-09
+0.7  0.0656     80      0.497660474          0.497660472     +1.92e-09
+0.7  0.0779     40      0.499359220          0.499359218     +1.96e-09
+0.7  0.0779     80      0.499359218          0.499359218     +3.89e-16
+largest |difference| over 9 points and 2 block sizes: 7.21e-07
+</pre></details>
+<details><summary>s05b_predict_exit.py · exits predicted from ⟨K⟩ = 2, then measured</summary><pre># SCRIPT: MATTER-PEEL-03c  locate the disk-exit line v_exit(u) and the rotation at the critical point
+import numpy as np
+exec(open(&#x27;nhssh_lib_and_s03a_occupations.py&#x27;).read().split(&#x27;w=1.0&#x27;)[0]); w=1.0
+def census(v,u,N=2000,Lc=40,d=1e-9):
+    nu=np.linalg.eigvals(corr(v,w,u,N,Lc)).astype(complex)
+    keep=(np.abs(nu)&gt;d)&amp;(np.abs(1-nu)&gt;d); nu=nu[keep]
+    W=np.log((1-nu)/nu); return np.max(np.abs(W.imag))/np.pi
+def vexit(u):
+    lo,hi=0.0,1-u      # rotation &lt;1/2 at v=0 (check), critical at v=1-u
+    if census(lo,u)&gt;=0.5: return None
+    for _ in range(30):
+        m=(lo+hi)/2
+        if census(m,u)&lt;0.5: lo=m
+        else: hi=m
+    return (lo+hi)/2
+print(&#x27; u      v_exit     crit=1-u   gap at exit |v-w|-u   ratio u/(w-v_exit)   rot at critical&#x27;)
+for u in [0.2,0.3,0.4,0.5,0.6,0.7]:
+    ve=vexit(u); rc=census(1-u,u)
+    if ve is None: print(f&#x27; {u:.2f}  rotation already &gt;= 1/2 at v=0; rot at critical {rc:.4f}&#x27;); continue
+    print(f&#x27; {u:.2f}  {ve:.6f}   {1-u:.3f}     {abs(ve-w)-u:.6f}          {u/(w-ve):.6f}          {rc:.5f} pi&#x27;)
+</pre><pre># SCRIPT: MATTER-PEEL-03d  predict the disk-exit line from mean Petermann = 2, then measure
+import numpy as np
+exec(open(&#x27;s05a_exit_line.py&#x27;).read().split(&quot;print(&#x27; u &quot;)[0])
+def P(v,u,k):
+    H=np.array([[1j*u, v+w*np.exp(-1j*k)],[v+w*np.exp(1j*k), -1j*u]])
+    ev,R=np.linalg.eig(H); o=np.argsort(ev.real); R=R[:,o]; L=np.linalg.inv(R).conj().T
+    return np.outer(R[:,0],L[:,0].conj())
+ks=2*np.pi*(np.arange(4000)+0.5)/4000
+def meanK(v,u): return np.mean([np.linalg.norm(P(v,u,k),2)**2 for k in ks])
+def vpred(u):
+    lo,hi=0.0,1-u-1e-9
+    for _ in range(40):
+        m=(lo+hi)/2
+        if meanK(m,u)&lt;2: lo=m
+        else: hi=m
+    return (lo+hi)/2
+print(&#x27; u     predicted (mean K = 2)   measured census exit   difference&#x27;)
+for u in [0.25,0.45,0.65]:
+    vp=vpred(u); vm=vexit(u)
+    print(f&#x27; {u:.2f}   {vp:.7f}            {vm:.7f}          {vm-vp:+.2e}&#x27;)
+</pre><pre class="out"> u     predicted (mean K = 2)   measured census exit   difference
+ 0.25   0.7474014            0.7474015          +4.04e-08
+ 0.45   0.5291503            0.5291503          -1.53e-09
+ 0.65   0.2357262            0.2357262          -3.70e-08
+</pre></details>
+<details><summary>s06_second_model_exit_law.py · the massive band</summary><pre># SCRIPT: MATTER-DISK-S06  is the disk-exit law universal? second model: the cone paper&#x27;s band in 1D
+# WHY THIS CHECK PROVES WHAT IT CLAIMS
+# Section 5 found, on the PT-symmetric SSH chain, that the census levels leave the Smith disk exactly
+# where the band-averaged Petermann factor &lt;K&gt; equals 2. For any two-band h(k) = d(k).sigma the
+# Petermann factor of the lower band is K(k) = (1 + |d|^2/|E|^2)/2 with E^2 = d.d (checked below).
+# A law that belongs to the SSH chain alone would fail on a different band. Here the band is the cone
+# paper&#x27;s family made one-dimensional, d = (t1 + cos k, sin k, m + i*gamma): a mass term, no PT symmetry.
+# Path: start closed (gamma = 0, census real, inside the disk) and raise gamma until the census leaves
+# the disk (largest rotation |Im ln z| reaches pi/2, census window 1e-9 &lt; nu &lt; 1-1e-9).
+# KILL (written before the run): at any of the four (t1, m) settings, &lt;K&gt; at the measured exit differs
+# from 2 by more than 1e-4. Control: gamma = 0 must give a real census inside the disk.
+import numpy as np
+sx=np.array([[0,1],[1,0]],complex); sy=np.array([[0,-1j],[1j,0]]); sz=np.array([[1,0],[0,-1]],complex)
+def H(t1,m,g,k): return (t1+np.cos(k))*sx+np.sin(k)*sy+(m+1j*g)*sz
+def lower(t1,m,g,k):
+    ev,R=np.linalg.eig(H(t1,m,g,k)); o=np.argsort(ev.real); ev,R=ev[o],R[:,o]
+    L=np.linalg.inv(R).conj().T; return ev,R,L
+def corr(t1,m,g,N,Lc):
+    ks=2*np.pi*(np.arange(N)+0.5)/N; C=np.zeros((2*Lc,2*Lc),complex)
+    for k in ks:
+        ev,R,L=lower(t1,m,g,k); P=np.outer(R[:,0],L[:,0].conj())
+        ph=np.exp(1j*k*np.arange(Lc)); C+=np.kron(np.outer(ph,ph.conj()),P)
+    return C/N
+def rotation(t1,m,g,N=2000,Lc=40,d=1e-9):
+    nu=np.linalg.eigvals(corr(t1,m,g,N,Lc)).astype(complex)
+    keep=(np.abs(nu)&gt;d)&amp;(np.abs(1-nu)&gt;d); nu=nu[keep]
+    if len(nu)==0: return 0.0, 0.0
+    W=np.log((1-nu)/nu); return np.max(np.abs(W.imag))/np.pi, np.max(np.abs(1-2*nu))
+ks=2*np.pi*(np.arange(4000)+0.5)/4000
+def meanK(t1,m,g):
+    out=[]
+    for k in ks:
+        ev,R,L=lower(t1,m,g,k); out.append(np.vdot(L[:,0],L[:,0]).real*np.vdot(R[:,0],R[:,0]).real)
+    return np.mean(out)
+# check the general Petermann formula on random points
+rng=np.random.default_rng(5); worst=0
+for _ in range(300):
+    t1,m,g,k=rng.uniform(0.2,2),rng.uniform(-1,1),rng.uniform(0,1.5),rng.uniform(0,2*np.pi)
+    ev,R,L=lower(t1,m,g,k); d=np.array([t1+np.cos(k),np.sin(k),m+1j*g]); E2=np.sum(d*d)
+    if abs(E2)&lt;1e-3: continue
+    Kn=np.vdot(L[:,0],L[:,0]).real*np.vdot(R[:,0],R[:,0]).real; Kf=(1+np.sum(abs(d)**2)/abs(E2))/2
+    worst=max(worst,abs(Kn-Kf))
+print(&#x27;general Petermann formula K=(1+|d|^2/|E|^2)/2, worst error on 300 random points:&#x27;,worst)
+print(&#x27;settings (t1, m): control at gamma=0, measured exit gamma, &lt;K&gt; at exit&#x27;)
+ok=True
+for t1,m in [(0.5,0.4),(1.5,0.4),(0.5,0.0),(1.5,0.8)]:
+    r0,G0=rotation(t1,m,0.0)
+    lo,hi=0.0,None; g=0.05
+    while hi is None and g&lt;4:
+        if rotation(t1,m,g)[0]&gt;=0.5: hi=g
+        else: lo=g; g*=1.4
+    if hi is None: print(f&#x27;  ({t1},{m}): census never left the disk up to gamma=4&#x27;); ok=False; continue
+    for _ in range(28):
+        mid=(lo+hi)/2
+        if rotation(t1,m,mid)[0]&lt;0.5: lo=mid
+        else: hi=mid
+    ge=(lo+hi)/2; K=meanK(t1,m,ge)
+    ok&amp;=abs(K-2)&lt;1e-4
+    print(f&#x27;  ({t1},{m}): control rot={r0:.3f} pi max|Gamma|={G0:.4f} | exit gamma={ge:.7f} | &lt;K&gt;={K:.6f}  {&quot;PASS&quot; if abs(K-2)&lt;1e-4 else &quot;FAIL&quot;}&#x27;)
+print(&#x27;VERDICT:&#x27;, &#x27;exit law &lt;K&gt; = 2 holds on the second model&#x27; if ok else &#x27;KILLED on the second model at the stated bar&#x27;)
+</pre><pre class="out">general Petermann formula K=(1+|d|^2/|E|^2)/2, worst error on 300 random points: 1.4921397450962104e-13
+settings (t1, m): control at gamma=0, measured exit gamma, &lt;K&gt; at exit
+  (0.5,0.4): control rot=0.000 pi max|Gamma|=1.0000 | exit gamma=0.1691699 | &lt;K&gt;=1.022352  FAIL
+  (1.5,0.4): control rot=0.000 pi max|Gamma|=1.0000 | exit gamma=0.1956728 | &lt;K&gt;=1.018838  FAIL
+  (0.5,0.0): control rot=0.000 pi max|Gamma|=1.0000 | exit gamma=0.4743416 | &lt;K&gt;=2.000000  PASS
+  (1.5,0.8): control rot=0.000 pi max|Gamma|=1.0000 | exit gamma=0.2518871 | &lt;K&gt;=1.015041  FAIL
+VERDICT: KILLED on the second model at the stated bar
+</pre></details>
+<details><summary>s11_exit_quarter_turn.py · census rotation against the quarter-turn continuation</summary><pre># SCRIPT: MATTER-PEEL-02B  opened matter: NH SSH  h(k)=[[iu, v+w e^{-ik}],[v+w e^{ik}, -iu]]
+import numpy as np
+def bands(v,w,u,k):
+    H=np.array([[1j*u, v+w*np.exp(-1j*k)],[v+w*np.exp(1j*k), -1j*u]])
+    ev,R=np.linalg.eig(H); o=np.argsort(ev.real); ev,R=ev[o],R[:,o]
+    L=np.linalg.inv(R).conj().T          # columns: left vectors with &lt;L_m|R_n&gt;=delta
+    return ev,R,L
+def corr(v,w,u,N,Lc):
+    ks=2*np.pi*(np.arange(N)+0.5)/N
+    C=np.zeros((2*Lc,2*Lc),complex)
+    for k in ks:
+        ev,R,L=bands(v,w,u,k)
+        P=np.outer(R[:,0],L[:,0].conj())   # occupied lower band, biorthogonal projector
+        ph=np.exp(1j*k*np.arange(Lc))
+        C+=np.kron(np.outer(ph,ph.conj()),P)
+    return C/N
+def S_of(nu):
+    nu=nu.astype(complex); return -np.sum(nu*np.log(nu)+(1-nu)*np.log(1-nu))
+w=1.0
+print(&#x27;B1/B2: biorthogonal occupations -&gt; Gamma=1-2nu, entropy slope&#x27;)
+for (v,u,tag) in [(0.5,0.0,&#x27;Hermitian gapped control&#x27;),(1.0,0.0,&#x27;Hermitian critical control (c=1)&#x27;),(0.5,0.3,&#x27;NH gapped (|v-w|&gt;u)&#x27;),(0.5,0.5,&#x27;NH critical |v-w|=u (EP)&#x27;)]:
+    N=2000; Ls=[20,40,80,160]; Ss=[]; worst=0; maxim=0
+    for Lc in Ls:
+        nu=np.linalg.eigvals(corr(v,w,u,N,Lc)); G=1-2*nu
+        worst=max(worst,np.max(np.abs(G))); maxim=max(maxim,np.max(np.abs(G.imag)))
+        Ss.append(S_of(nu))
+    x=np.log(N/np.pi*np.sin(np.pi*np.array(Ls)/N))
+    sl=np.polyfit(x,np.real(Ss),1)[0]
+    print(f&#x27;  {tag:36s} max|Gamma|={worst:9.3e} max|Im Gamma|={maxim:8.2e}  c=3*slope={3*sl:+.3f}  S(Im)~{np.max(np.abs(np.imag(Ss))):.1e}&#x27;)
+</pre><pre># SCRIPT: MATTER-DISK-S11  is the disk exit the quarter-turn of the author&#x27;s offset?
+# WHY THIS CHECK PROVES WHAT IT CLAIMS
+# The Offset Belongs to the Boundary gives the endpoint offset of a gapped chain in closed form,
+# 2 artanh(v/sqrt(E_min E_max)). Continued to the opened SSH chain it predicts a complex level offset
+# whose imaginary part is Im tau_inf = 2 arctan(u/sqrt(E(0)E(pi))). Then &lt;K&gt; = 1 + u^2/(E(0)E(pi))
+# = sec^2(Im tau_inf/2) exactly, so &lt;K&gt; = 2 is the same statement as Im tau_inf = pi/2: a quarter turn.
+# If the census rotation (max over block levels of |Im Log((1-nu)/nu)|/pi) is this offset, then the gap
+# between measured rotation and 2 arctan(u/sqrt(E0 Epi))/pi must shrink as the block grows.
+# KILL (written before the run): at u = 0.3, 0.5, 0.7 and v at 60%, 80%, 95% of the way to the exit,
+# the gap at block 160 is not smaller than at block 20, or exceeds 2e-3 at block 160.
+# OPPOSITE: the same comparison against the plain Hermitian-form guess 2 arctan(u/E(pi))/pi must NOT pass.
+import numpy as np
+src=open(&#x27;nhssh_lib_and_s03a_occupations.py&#x27;).read().split(&#x27;w=1.0&#x27;)[0]; ns={}; exec(src,ns)
+w=1.0
+def rot(v,u,Lc,N=4000,d=1e-9):
+    nu=np.linalg.eigvals(ns[&#x27;corr&#x27;](v,w,u,N,Lc)); nu=nu[(abs(nu)&gt;d)&amp;(abs(1-nu)&gt;d)]
+    return np.max(np.abs(np.log((1-nu)/nu).imag))/np.pi
+def vexit(u): # E(0)E(pi)=u^2 with E0^2=(v+w)^2-u^2, Epi^2=(w-v)^2-u^2, v&lt;w-u
+    from scipy.optimize import brentq
+    return brentq(lambda v: np.sqrt(((v+w)**2-u**2)*((w-v)**2-u**2))-u**2, 0.0, w-u-1e-12)
+ok=True; okopp=True
+for u in [0.3,0.5,0.7]:
+    ve=vexit(u)
+    for f in [0.6,0.8,0.95]:
+        v=f*ve; E0=np.sqrt((v+w)**2-u**2); Ep=np.sqrt((w-v)**2-u**2)
+        pred=2*np.arctan(u/np.sqrt(E0*Ep))/np.pi; opp=2*np.arctan(u/Ep)/np.pi
+        gaps=[]
+        for Lc in [20,40,80,160]:
+            gaps.append(rot(v,u,Lc)-pred)
+        g=np.abs(gaps); good=(g[-1]&lt;g[0]) and g[-1]&lt;2e-3; ok&amp;=good
+        okopp&amp;= not (abs(gaps[-1]+pred-opp)&lt;2e-3)
+        print(f&#x27;u={u} v={v:.4f} pred={pred:.5f} opposite={opp:.5f} gaps by block 20,40,80,160: &#x27;+&#x27; &#x27;.join(f&#x27;{x:+.2e}&#x27; for x in gaps)+(&#x27;  PASS&#x27; if good else &#x27;  FAIL&#x27;))
+print(&#x27;VERDICT:&#x27;,&#x27;census rotation converges to the offset quarter-turn form&#x27; if ok else &#x27;KILLED at the stated bar&#x27;)
+print(&#x27;OPPOSITE (Hermitian-form guess must fail):&#x27;,&#x27;fails as required&#x27; if okopp else &#x27;ALSO PASSES - test does not discriminate&#x27;)
+</pre><pre class="out">u=0.3 v=0.4171 pred=0.22032 opposite=0.34418 gaps by block 20,40,80,160: +9.81e-03 +9.81e-03 +9.81e-03 +9.81e-03  FAIL
+u=0.3 v=0.5562 pred=0.25556 opposite=0.47249 gaps by block 20,40,80,160: +2.13e-02 +2.13e-02 +2.13e-02 +2.13e-02  FAIL
+u=0.3 v=0.6604 pred=0.33867 opposite=0.68960 gaps by block 20,40,80,160: +3.35e-02 +3.35e-02 +3.35e-02 +3.35e-02  FAIL
+u=0.5 v=0.2809 pred=0.36265 opposite=0.48949 gaps by block 20,40,80,160: +4.90e-03 +4.90e-03 +4.90e-03 +4.90e-03  FAIL
+u=0.5 v=0.3746 pred=0.39764 opposite=0.58975 gaps by block 20,40,80,160: +8.02e-03 +8.02e-03 +8.02e-03 +8.02e-03  FAIL
+u=0.5 v=0.4448 pred=0.45733 opposite=0.71372 gaps by block 20,40,80,160: +6.25e-03 +6.25e-03 +6.25e-03 +6.25e-03  FAIL
+u=0.7 v=0.0492 pred=0.49587 opposite=0.52679 gaps by block 20,40,80,160: +9.73e-06 +9.73e-06 +9.73e-06 +9.73e-06  FAIL
+u=0.7 v=0.0656 pred=0.49765 opposite=0.53908 gaps by block 20,40,80,160: +9.93e-06 +9.93e-06 +9.93e-06 +9.93e-06  FAIL
+u=0.7 v=0.0779 pred=0.49936 opposite=0.54877 gaps by block 20,40,80,160: +3.87e-06 +3.87e-06 +3.87e-06 +3.87e-06  FAIL
+VERDICT: KILLED at the stated bar
+OPPOSITE (Hermitian-form guess must fail): fails as required
+</pre></details>
+<details><summary>incoming_exit_filter.py · endpoint-filter audit (imported, prepared with OpenAI tools)</summary><pre>&quot;&quot;&quot;Independent endpoint-filter audit of preserved incoming matter-disk scripts.&quot;&quot;&quot;
+from pathlib import Path
+import json, math, hashlib
+import numpy as np
+from scipy.linalg import eigvals
+
+ROOT=Path(__file__).resolve().parent
+N=2000;L=40;t1=.5
+k=2*np.pi*(np.arange(N)+.5)/N
+lags=np.arange(-(L-1),L)
+ph=np.exp(1j*np.outer(lags,k))/N
+disp=np.arange(L)[:,None]-np.arange(L)[None,:]+L-1
+
+def band(m,g):
+    dz=m+1j*g
+    q=t1+np.exp(1j*k)
+    E=np.sqrt(abs(q)**2+dz*dz+0j)
+    P=np.zeros((N,2,2),complex)
+    P[:,0,0]=(1-dz/E)/2;P[:,1,1]=(1+dz/E)/2
+    P[:,0,1]=-q.conj()/(2*E);P[:,1,0]=-q/(2*E)
+    return P,E
+
+def spectrum(m,g):
+    P,E=band(m,g)
+    coeff=np.einsum(&#x27;lk,kab-&gt;lab&#x27;,ph,P,optimize=True)
+    c=coeff[disp].transpose(0,2,1,3).reshape(2*L,2*L)
+    return eigvals(c,check_finite=False)
+
+def rotation(m,g,cut):
+    nu=spectrum(m,g)
+    nu=nu[(np.abs(nu)&gt;cut)&amp;(np.abs(1-nu)&gt;cut)]
+    return float(np.max(np.abs(np.log((1-nu)/nu).imag))/np.pi) if len(nu) else 0.
+
+def exit_at(m,cut):
+    lo=0.;g=.05
+    while g&lt;.8:
+        if rotation(m,g,cut)&gt;=.5:
+            hi=g;break
+        lo=g;g*=1.4
+    else:
+        return None
+    for _ in range(26):
+        mid=(lo+hi)/2
+        if rotation(m,mid,cut)&lt;.5:lo=mid
+        else:hi=mid
+    g=(lo+hi)/2
+    _,E=band(m,g)
+    dnorm=(t1+np.cos(k))**2+np.sin(k)**2+abs(m+1j*g)**2
+    K=float(np.mean((1+dnorm/abs(E)**2)/2))
+    return dict(m=m,cut=cut,exit_gamma=g,mean_Petermann=K)
+
+# Independent eigensolver cross-check for projector selection.
+errors=[]
+for m,g in ((.4,.1),(.4,.2),(0.,.4)):
+    P,E=band(m,g)
+    for ix in (0,137,999,1567):
+        q=t1+np.exp(1j*k[ix]);h=np.array([[m+1j*g,q.conjugate()],[q,-m-1j*g]])
+        e,R=np.linalg.eig(h);order=np.argsort(e.real);R=R[:,order]
+        inverse=np.linalg.inv(R)
+        errors.append(float(np.max(abs(P[ix]-np.outer(R[:,0],inverse[0,:])))))
+assert max(errors)&lt;1e-12
+rows=[]
+for m in (.4,0.):
+    for cut in (1e-6,1e-8,1e-9,1e-10,1e-12):
+        row=exit_at(m,cut);rows.append(row);print(row,flush=True)
+oblique=np.array([[2.,1.],[-2.,-1.]])
+assert np.array_equal(oblique@oblique,oblique)
+report={&#x27;classification&#x27;:&#x27;Endpoint-filter sensitivity, not a new physical measurement&#x27;,
+        &#x27;N&#x27;:N,&#x27;region_cells&#x27;:L,&#x27;t1&#x27;:t1,&#x27;max_projector_crosscheck_error&#x27;:max(errors),
+        &#x27;rows&#x27;:rows,&#x27;oblique_projector&#x27;:{&#x27;C&#x27;:oblique.tolist(),&#x27;X_A&#x27;:-2.,&#x27;Gamma_b&#x27;:3.},
+        &#x27;protocol_sha256&#x27;:hashlib.sha256((ROOT/&#x27;INCOMING_EXIT_FILTER_PROTOCOL.md&#x27;).read_bytes()).hexdigest()}
+(ROOT/&#x27;incoming_exit_filter_results.json&#x27;).write_text(json.dumps(report,indent=2)+&#x27;\n&#x27;)
+</pre><pre class="out">{&#x27;m&#x27;: 0.4, &#x27;cut&#x27;: 1e-06, &#x27;exit_gamma&#x27;: 0.2716369288976192, &#x27;mean_Petermann&#x27;: 1.0579728462043967}
+{&#x27;m&#x27;: 0.4, &#x27;cut&#x27;: 1e-08, &#x27;exit_gamma&#x27;: 0.2716369288976192, &#x27;mean_Petermann&#x27;: 1.0579728462043967}
+{&#x27;m&#x27;: 0.4, &#x27;cut&#x27;: 1e-09, &#x27;exit_gamma&#x27;: 0.16916993247628215, &#x27;mean_Petermann&#x27;: 1.0223524908929857}
+{&#x27;m&#x27;: 0.4, &#x27;cut&#x27;: 1e-10, &#x27;exit_gamma&#x27;: 0.16916993247628215, &#x27;mean_Petermann&#x27;: 1.0223524908929857}
+{&#x27;m&#x27;: 0.4, &#x27;cut&#x27;: 1e-12, &#x27;exit_gamma&#x27;: 0.1227913656055927, &#x27;mean_Petermann&#x27;: 1.0117452195516827}
+{&#x27;m&#x27;: 0.0, &#x27;cut&#x27;: 1e-06, &#x27;exit_gamma&#x27;: 0.4743416490950296, &#x27;mean_Petermann&#x27;: 2.000000001634376}
+{&#x27;m&#x27;: 0.0, &#x27;cut&#x27;: 1e-08, &#x27;exit_gamma&#x27;: 0.4743416490950296, &#x27;mean_Petermann&#x27;: 2.000000001634376}
+{&#x27;m&#x27;: 0.0, &#x27;cut&#x27;: 1e-09, &#x27;exit_gamma&#x27;: 0.4743416490950296, &#x27;mean_Petermann&#x27;: 2.000000001634376}
+{&#x27;m&#x27;: 0.0, &#x27;cut&#x27;: 1e-10, &#x27;exit_gamma&#x27;: 0.4743414673329256, &#x27;mean_Petermann&#x27;: 1.9999957440096103}
+{&#x27;m&#x27;: 0.0, &#x27;cut&#x27;: 1e-12, &#x27;exit_gamma&#x27;: 0.47422795577696786, &#x27;mean_Petermann&#x27;: 1.9973451918175165}
+</pre></details>
+<details><summary>fig09_exit_ladder.py · the paper's PDF figure</summary><pre># SCRIPT: fig09_exit_ladder
+&quot;&quot;&quot;fig09: the exit ladder. Left: theta(v) from the Abel formula, measured edge phases, quarter-turn continuation.
+Right: the ladder Gamma_j = tanh((j*Delta + i*theta)/2) in the disk, inside / on / past the exit line.&quot;&quot;&quot;
+import numpy as np, mpmath as mp, matplotlib
+matplotlib.use(&#x27;Agg&#x27;); import matplotlib.pyplot as plt
+exec(open(&#x27;s15_exit_ladder.py&#x27;).read().split(&#x27;out=[]&#x27;)[0])
+plt.rcParams.update({&#x27;font.size&#x27;:9,&#x27;axes.spines.top&#x27;:False,&#x27;axes.spines.right&#x27;:False,&#x27;pdf.fonttype&#x27;:42})
+cols=[&#x27;#2a78d6&#x27;,&#x27;#eb6834&#x27;,&#x27;#1baf7a&#x27;]
+fig,ax=plt.subplots(1,2,figsize=(9.2,3.9),gridspec_kw={&#x27;width_ratios&#x27;:[1.35,1]})
+a=ax[0]
+for u,c in zip([0.3,0.5,0.7],cols):
+    vmax=1-u-1e-4; vs=np.concatenate([np.linspace(0.0,vmax-0.05,150),vmax-np.geomspace(0.05,1e-4,150)])
+    th=[predict(v,1,u)[1] for v in vs]
+    gam=[2*np.arctan(u/np.sqrt(np.sqrt((1+v)**2-u*u)*np.sqrt((1-v)**2-u*u))) for v in vs]
+    a.plot(vs,th,color=c,lw=2,label=f&#x27;$u={u}$, Abel phase $\\theta$&#x27;)
+    a.plot(vs,gam,color=c,lw=1,ls=&#x27;--&#x27;)
+    vm=np.linspace(0.05,1-u-0.2,5)
+    for v in vm:
+        lv=measure(v,1,u); e=min(lv,key=lambda x:abs(x[1].real))[1]
+        a.plot(v,e.imag,&#x27;o&#x27;,ms=5,mfc=&#x27;white&#x27;,mec=c,mew=1.5)
+    ve=float(mp.findroot(lambda x:(1-x*x)/mp.sqrt(2*(1+x*x))-u,0.4))
+    a.plot(ve,np.pi/2,&#x27;*&#x27;,color=&#x27;0.15&#x27;,ms=9,zorder=5)
+a.axhline(np.pi/2,color=&#x27;0.55&#x27;,lw=0.8); a.text(0.56,np.pi/2-0.13,&#x27;rim: $\\theta=\\pi/2$&#x27;,color=&#x27;0.35&#x27;,fontsize=8)
+a.set_xlabel(&#x27;$v$  ($w=1$)&#x27;); a.set_ylabel(&#x27;edge phase  Im $\\varepsilon_j$&#x27;)
+a.set_yticks([0,np.pi/4,np.pi/2,3*np.pi/4,np.pi]); a.set_yticklabels([&#x27;0&#x27;,&#x27;$\\pi/4$&#x27;,&#x27;$\\pi/2$&#x27;,&#x27;$3\\pi/4$&#x27;,&#x27;$\\pi$&#x27;])
+a.plot([],[],&#x27;o&#x27;,mfc=&#x27;white&#x27;,mec=&#x27;0.3&#x27;,label=&#x27;measured, block 90 cells&#x27;); a.plot([],[],&#x27;--&#x27;,color=&#x27;0.3&#x27;,lw=1,label=&#x27;quarter-turn continuation&#x27;)
+a.plot([],[],&#x27;*&#x27;,color=&#x27;0.15&#x27;,label=&#x27;exit line $E(0)E(\\pi)=u^2$&#x27;)
+a.legend(frameon=False,fontsize=7.5,loc=&#x27;upper left&#x27;); a.set_ylim(0,np.pi*1.02); a.set_xlim(-0.02,0.72)
+b=ax[1]; t=np.linspace(0,2*np.pi,400); b.plot(np.cos(t),np.sin(t),color=&#x27;0.3&#x27;,lw=1)
+u=0.5
+for v,c,lab in [(0.3,cols[0],&#x27;$v=0.30$: inside&#x27;),(0.4682,cols[1],&#x27;$v=0.468$: on the rim&#x27;),(0.48,cols[2],&#x27;$v=0.48$: past the exit&#x27;)]:
+    D,th,p=predict(v,1,u); x=np.linspace(-12,12,400)
+    G=np.tanh((x+1j*th)/2); b.plot(G.real,G.imag,color=c,lw=1,alpha=0.6)
+    j=np.arange(-3,4); Gj=np.tanh((j*D+1j*th)/2)
+    b.plot(Gj.real,Gj.imag,&#x27;o&#x27;,color=c,ms=6,mec=&#x27;white&#x27;,mew=1,label=lab)
+b.set_aspect(&#x27;equal&#x27;); b.set_xlim(-1.15,1.15); b.set_ylim(-0.75,1.25)
+b.set_xlabel(&#x27;Re $\\Gamma$&#x27;); b.set_ylabel(&#x27;Im $\\Gamma$&#x27;); b.legend(frameon=False,fontsize=7.5,loc=&#x27;lower center&#x27;,ncol=1)
+b.set_title(&#x27;ladder $\\Gamma_j=\\tanh((j\\Delta+i\\theta)/2)$, $u=0.5$&#x27;,fontsize=9)
+plt.tight_layout(); plt.savefig(&#x27;../figures/fig09_exit_ladder.png&#x27;,dpi=220); plt.savefig(&#x27;../figures/fig09_exit_ladder.pdf&#x27;)
+</pre></details>
+</div>
+<footer>JEROMIE BEASLEY · THE WEIGHT BETWEEN AND THE EXIT LINE · 2026</footer>
+</main>
+
+<script>
+(function(){
+const PTS=[[0.2542, 0.0595], [0.4087, 0.1487], [0.5088, 0.3239], [0.0325, 0.8025], [0.285, 0.2239], [0.2658, 0.5373], [0.189, 0.7241], [0.1958, 0.6119], [0.0712, 0.2372], [0.2635, 0.1714], [0.197, 0.1976], [0.047, 0.3217], [0.3384, 0.3873], [0.6317, 0.0982], [0.4443, 0.3269], [0.0377, 0.7002], [0.4049, 0.3188], [0.2608, 0.6582], [0.3311, 0.1966], [0.1956, 0.3559], [0.0686, 0.6299], [0.0587, 0.4292], [0.1632, 0.3796], [0.1977, 0.1978], [0.1974, 0.2896], [0.3309, 0.2691], [0.0364, 0.4294], [0.4393, 0.438], [0.4694, 0.2006], [0.2119, 0.511], [0.357, 0.2045], [0.1995, 0.164], [0.4153, 0.424], [0.0331, 0.2052], [0.4239, 0.3047], [0.2143, 0.5663], [0.0314, 0.601], [0.3734, 0.3177], [0.4056, 0.0422], [0.1404, 0.1952], [0.2764, 0.1741], [0.5005, 0.1624], [0.41, 0.1034], [0.1925, 0.7376], [0.3726, 0.4587], [0.3291, 0.349], [0.3869, 0.2724], [0.5915, 0.2311], [0.5157, 0.3486], [0.3902, 0.1503], [0.6736, 0.1649], [0.2404, 0.572], [0.0663, 0.4076], [0.391, 0.4859], [0.3997, 0.3695], [0.6912, 0.189], [0.2344, 0.417], [0.6735, 0.2398], [0.1754, 0.4903], [0.3807, 0.4416], [0.2719, 0.6126], [0.4397, 0.2114], [0.3614, 0.3976], [0.1246, 0.5528], [0.4499, 0.4885], [0.4787, 0.1945], [0.2446, 0.333], [0.0257, 0.8535], [0.2566, 0.1913], [0.3523, 0.4914], [0.062, 0.3409], [0.4436, 0.4287], [0.579, 0.1271], [0.2268, 0.1376], [0.5062, 0.3047], [0.693, 0.1839], [0.3157, 0.4244], [0.5797, 0.2882], [0.029, 0.318], [0.4238, 0.2286], [0.4384, 0.2403], [0.2937, 0.1586], [0.0373, 0.5718], [0.2842, 0.2801], [0.2753, 0.5872], [0.6891, 0.1481], [0.2186, 0.6512], [0.4432, 0.1169], [0.0268, 0.6912], [0.3541, 0.1746], [0.6603, 0.2428], [0.3294, 0.5404], [0.4386, 0.2562], [0.4188, 0.5071], [0.1241, 0.7212], [0.3556, 0.0336], [0.3847, 0.2052], [0.1299, 0.8455], [0.1531, 0.1143], [0.2963, 0.1295], [0.2368, 0.1784], [0.5375, 0.3657], [0.1528, 0.1036], [0.4102, 0.2029], [0.1321, 0.3967], [0.2004, 0.1523], [0.0293, 0.8101], [0.4264, 0.5044], [0.3185, 0.1665], [0.0426, 0.0662], [0.4497, 0.3661], [0.4407, 0.25], [0.2089, 0.0967], [0.5819, 0.1095], [0.5059, 0.1252], [0.1731, 0.0668], [0.1937, 0.0245], [0.0462, 0.612], [0.4149, 0.2094], [0.4377, 0.5186], [0.3376, 0.3758], [0.4066, 0.3634], [0.0564, 0.1118], [0.1903, 0.3082], [0.2027, 0.543], [0.3021, 0.0444], [0.1097, 0.4541], [0.0666, 0.2053], [0.531, 0.3254], [0.2674, 0.2444], [0.383, 0.1014], [0.112, 0.4418], [0.2619, 0.1717], [0.2521, 0.1072], [0.5467, 0.1839], [0.4339, 0.1643], [0.5003, 0.0437], [0.5696, 0.1711], [0.3254, 0.387], [0.0551, 0.5522], [0.58, 0.1519], [0.4792, 0.1339], [0.4521, 0.377], [0.4579, 0.1211], [0.1329, 0.2836], [0.1123, 0.6356], [0.148, 0.597], [0.6059, 0.0856], [0.4579, 0.4455], [0.187, 0.6149], [0.0468, 0.7121], [0.4584, 0.243], [0.4771, 0.4612], [0.0967, 0.3382], [0.3499, 0.542], [0.0653, 0.5093], [0.1737, 0.757], [0.6246, 0.0707], [0.1691, 0.1559], [0.2955, 0.3451], [0.2133, 0.6124], [0.0522, 0.4168], [0.0531, 0.7882], [0.0451, 0.112], [0.1841, 0.4899], [0.2277, 0.7035], [0.0445, 0.4946], [0.4008, 0.5642], [0.2136, 0.426], [0.3806, 0.101], [0.3411, 0.3854], [0.0795, 0.4054], [0.4174, 0.1602], [0.1379, 0.2071], [0.4933, 0.2517], [0.3593, 0.0262], [0.2767, 0.3303], [0.5214, 0.2329], [0.1291, 0.2405], [0.0671, 0.7217], [0.0218, 0.5497], [0.0902, 0.0931], [0.2863, 0.6648], [0.2443, 0.6762], [0.2173, 0.637], [0.0659, 0.6251], [0.6365, 0.0206], [0.6582, 0.2102], [0.165, 0.4681], [0.2967, 0.3185], [0.322, 0.3902], [0.6308, 0.2933], [0.3677, 0.5123], [0.5225, 0.0576], [0.4525, 0.1399], [0.111, 0.6703], [0.3569, 0.2561], [0.5584, 0.3454], [0.0958, 0.3849], [0.6209, 0.2652]];
+const MEAS={"0.3": [[0.05, 0.610685], [0.1625, 0.6235011], [0.275, 0.652348], [0.3875, 0.7039393], [0.5, 0.795413]], "0.5": [[0.05, 1.0500976], [0.1125, 1.0621614], [0.175, 1.0847042], [0.2375, 1.120141], [0.3, 1.1732075]], "0.7": [[0.05, 1.5580841], [0.0625, 1.5622579], [0.075, 1.5674342], [0.0875, 1.5736615], [0.1, 1.5810014]]};
+const GOLD='#e3ad55',GOLDHI='#f7d891',BLUE='#6fa6ff',BLUEHI='#a9cbff',TXT='#ebe5d6',MUT='#a8a493',GRID='rgba(227,173,85,0.13)';
+/* elliptic integrals by Carlson RF */
+function RF(x,y,z){for(let i=0;i<60;i++){const a=Math.sqrt(x),b=Math.sqrt(y),c=Math.sqrt(z),l=a*b+b*c+c*a;x=(x+l)/4;y=(y+l)/4;z=(z+l)/4;}return 1/Math.sqrt((x+y+z)/3);}
+function Fk(phi,k){const s=Math.sin(phi),c=Math.cos(phi);return s*RF(c*c,1-k*k*s*s,1);}
+function Kk(k){return RF(0,1-k*k,1);}
+function model(v,u){const w=1,E0=Math.sqrt((v+w)**2-u*u),Ep2=(w-v)**2-u*u;if(!(Ep2>0))return null;const Ep=Math.sqrt(Ep2);
+  const wp=(E0+Ep)/2,vp=(E0-Ep)/2,k=vp/wp,kp=Math.sqrt(1-k*k),K=Kk(k),Kp=k>0?Kk(kp):Infinity,s=u*w/(w*w-vp*vp);
+  return{E0,Ep,k,K,s,theta:Math.PI*Fk(Math.asin(Math.min(s,1)),k)/K,Delta:k>0?2*Math.PI*Kp/K:Infinity,Kav:1+u*u/(E0*Ep)};}
+const uExit=v=>(1-v*v)/Math.sqrt(2*(1+v*v));
+function vExit(u){let a=0,b=1;for(let i=0;i<80;i++){const m=(a+b)/2;if(uExit(m)>u)a=m;else b=m;}return (a+b)/2;}
+const NS='http://www.w3.org/2000/svg';
+function el(svg,tag,at,txt){const e=document.createElementNS(NS,tag);for(const k in at)e.setAttribute(k,at[k]);if(txt!=null)e.textContent=txt;svg.appendChild(e);return e;}
+function mono(svg,x,y,t,o={}){return el(svg,'text',Object.assign({x,y,fill:MUT,'font-family':'JetBrains Mono,monospace','font-size':14},o),t);}
+function serif(svg,x,y,t,o={}){return el(svg,'text',Object.assign({x,y,fill:TXT,'font-family':'Spectral,Georgia,serif','font-size':17,'font-style':'italic'},o),t);}
+function lab(svg,x,y,parts,o={}){const t=el(svg,'text',Object.assign({x,y,fill:TXT,'font-family':'Spectral,Georgia,serif','font-size':20,'font-style':'italic'},o));
+  parts.forEach(pt=>{const sp=document.createElementNS(NS,'tspan');if(Array.isArray(pt)){sp.setAttribute('baseline-shift','sub');sp.setAttribute('font-size','0.68em');sp.textContent=pt[0];}else sp.textContent=pt;t.appendChild(sp);});return t;}
+function defs(svg){const d=el(svg,'defs',{});const f=document.createElementNS(NS,'filter');f.setAttribute('id',svg.id+'g');f.setAttribute('x','-50%');f.setAttribute('y','-50%');f.setAttribute('width','200%');f.setAttribute('height','200%');
+  f.innerHTML='<feGaussianBlur stdDeviation="3.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>';d.appendChild(f);return 'url(#'+svg.id+'g)';}
+
+/* ---------- hero disk ---------- */
+const cv=document.getElementById('disk'),cx=cv.getContext('2d');
+const vs=document.getElementById('vs'),us=document.getElementById('us');
+function clampV(){const u=+us.value,vmax=Math.max(0,1-u-0.002);if(+vs.value>vmax)vs.value=vmax.toFixed(3);vs.max=Math.min(0.79,vmax).toFixed(3);}
+function drawDisk(){
+  clampV();const v=+vs.value,u=+us.value,m=model(v,u);
+  document.getElementById('vo').textContent=v.toFixed(3);document.getElementById('uo').textContent=u.toFixed(3);
+  const W=cv.width,H=cv.height,R=W*0.36,ox=W/2,oy=H*0.6;cx.clearRect(0,0,W,H);
+  const P=(x,y)=>[ox+R*x,oy-R*y];
+  /* grid: Smith-like constant-modulus rings */
+  cx.lineWidth=1.2;for(const r of [0.25,0.5,0.75]){cx.strokeStyle='rgba(111,166,255,0.12)';cx.beginPath();cx.arc(ox,oy,R*r,0,2*Math.PI);cx.stroke();}
+  cx.strokeStyle='rgba(227,173,85,0.12)';cx.beginPath();cx.moveTo(ox-R*1.25,oy);cx.lineTo(ox+R*1.25,oy);cx.moveTo(ox,oy+R*1.05);cx.lineTo(ox,oy-R*1.5);cx.stroke();
+  /* rim */
+  cx.save();cx.shadowColor=BLUE;cx.shadowBlur=26;cx.strokeStyle='rgba(169,203,255,0.85)';cx.lineWidth=2.4;cx.beginPath();cx.arc(ox,oy,R,0,2*Math.PI);cx.stroke();cx.restore();
+  cx.fillStyle=MUT;cx.font='26px JetBrains Mono, monospace';cx.fillText('|Γ| = 1',ox+R*0.74,oy+R*0.86);
+  cx.fillText('Re Γ',ox+R*1.02,oy-12);cx.fillText('Im Γ',ox+10,oy-R*1.42);
+  if(!m){return;}
+  const th=m.theta;
+  /* arc tanh((x+i th)/2) */
+  const pts=[];for(let i=0;i<=600;i++){const x=-14+28*i/600;const a=x/2,b=th/2;const den=Math.cosh(2*a)+Math.cos(2*b);pts.push([Math.sinh(2*a)/den,Math.sin(2*b)/den]);}
+  const col=Math.abs(th-Math.PI/2)<0.004?'#ffffff':(th<Math.PI/2?BLUEHI:GOLDHI);
+  cx.save();cx.shadowColor=th<Math.PI/2?BLUE:GOLD;cx.shadowBlur=30;cx.strokeStyle=col;cx.lineWidth=3;cx.beginPath();pts.forEach((p,i)=>{const q=P(p[0],p[1]);i?cx.lineTo(q[0],q[1]):cx.moveTo(q[0],q[1]);});cx.stroke();cx.restore();
+  /* ladder points */
+  const D=isFinite(m.Delta)?m.Delta:1e9;
+  for(let j=-3;j<=3;j++){const a=j*D/2,b=th/2;const den=Math.cosh(2*a)+Math.cos(2*b);const g=[Math.sinh(2*a)/den,Math.sin(2*b)/den];const q=P(g[0],g[1]);
+    cx.save();cx.shadowColor=GOLD;cx.shadowBlur=40;cx.fillStyle=j===0?'#fff7e0':GOLDHI;cx.beginPath();cx.arc(q[0],q[1],j===0?15:10,0,2*Math.PI);cx.fill();cx.restore();}
+  /* apex label */
+  const ap=P(0,Math.tan(th/2));cx.fillStyle=TXT;cx.font='italic 28px Spectral, Georgia, serif';cx.fillText('i tan(θ/2)',ap[0]+22,ap[1]-14);
+  cx.fillStyle=MUT;cx.font='24px JetBrains Mono, monospace';cx.fillText('−1',ox-R-46,oy+34);cx.fillText('+1',ox+R+12,oy+34);
+  /* readouts */
+  const ex=m.E0*m.Ep-u*u;
+  document.getElementById('r-th').textContent=(th/Math.PI).toFixed(4);
+  document.getElementById('r-de').textContent=isFinite(m.Delta)&&m.Delta<1e6?m.Delta.toFixed(3):'∞ (dimer)';
+  document.getElementById('r-ex').textContent=(ex>=0?'+':'')+ex.toFixed(4);
+  document.getElementById('r-k').textContent=m.Kav.toFixed(4);
+  const vd=document.getElementById('verdict');
+  if(Math.abs(th-Math.PI/2)<0.004){vd.className='verdict on';vd.textContent='ON THE RIM · THE EXIT LINE';}
+  else if(th<Math.PI/2){vd.className='verdict in';vd.textContent='EVERY LEVEL INSIDE THE DISK';}
+  else{vd.className='verdict out';vd.textContent='EVERY LEVEL PAST THE RIM';}
+}
+vs.addEventListener('input',drawDisk);us.addEventListener('input',()=>{drawDisk();});
+
+/* ---------- figure 1: blocks ---------- */
+(function(){const s=document.getElementById('blocks'),glow=defs(s);
+  const x0=60,y0=40,S=240;
+  el(s,'rect',{x:x0,y:y0,width:S*0.55,height:S*0.55,fill:'rgba(227,173,85,0.14)',stroke:GOLD,'stroke-width':1.5});
+  el(s,'rect',{x:x0+S*0.55,y:y0,width:S*0.45,height:S*0.55,fill:'rgba(111,166,255,0.20)',stroke:BLUEHI,'stroke-width':1.5,filter:glow});
+  el(s,'rect',{x:x0,y:y0+S*0.55,width:S*0.55,height:S*0.45,fill:'rgba(111,166,255,0.20)',stroke:BLUEHI,'stroke-width':1.5,filter:glow});
+  el(s,'rect',{x:x0+S*0.55,y:y0+S*0.55,width:S*0.45,height:S*0.45,fill:'rgba(227,173,85,0.08)',stroke:GOLD,'stroke-width':1.5});
+  lab(s,x0+S*0.2,y0+S*0.3,['A',['C']],{'font-size':24});lab(s,x0+S*0.68,y0+S*0.3,['B',['C']],{'font-size':24,fill:BLUEHI});
+  lab(s,x0+S*0.18,y0+S*0.8,['B',['C'],'*'],{'font-size':24,fill:BLUEHI});lab(s,x0+S*0.68,y0+S*0.8,['D',['C']],{'font-size':24});
+  el(s,'line',{x1:x0+S*0.55,y1:y0-14,x2:x0+S*0.55,y2:y0+S+14,stroke:GOLDHI,'stroke-width':2,'stroke-dasharray':'5 5'});
+  mono(s,x0+S*0.55-18,y0-20,'cut',{fill:GOLDHI});
+  mono(s,x0+8,y0+S+30,'region A');mono(s,x0+S*0.6,y0+S+30,'region B');
+  /* arrow */
+  el(s,'path',{d:'M340 160 L420 160',stroke:GOLD,'stroke-width':2,fill:'none'});el(s,'path',{d:'M420 160 l-10 -6 l0 12 z',fill:GOLD});
+  lab(s,326,140,['X',['A'],' = B',['C'],'B',['C'],'*'],{fill:BLUEHI,'font-size':19});
+  /* defect bars */
+  const bx=470,bw=470;
+  const rows=[['pure state  (C² = C)',0,1],['typical mixed state',0.42,0.58],['disconnected  C = pI',1,0]];
+  rows.forEach((r,i)=>{const y=70+i*80;mono(s,bx,y-12,r[0],{fill:TXT,'font-size':14});
+    const tw=bw*r[1],xw=bw*r[2];
+    if(tw>0)el(s,'rect',{x:bx,y,width:tw-(xw>0?2:0),height:26,rx:3,fill:'rgba(227,173,85,0.55)'});
+    if(xw>0)el(s,'rect',{x:bx+tw,y,width:xw,height:26,rx:3,fill:'rgba(111,166,255,0.75)',filter:glow});
+  });
+  lab(s,bx,302,['F',['A'],' = A',['C'],' − A',['C'],'²  ='],{fill:TXT,'font-size':18});el(s,'rect',{x:bx+152,y:289,width:16,height:14,rx:2,fill:'rgba(227,173,85,0.55)'});lab(s,bx+174,302,['T',['A'],'  mixing inside  +'],{fill:TXT,'font-size':18});
+  el(s,'rect',{x:bx+352,y:289,width:16,height:14,rx:2,fill:'rgba(111,166,255,0.75)'});lab(s,bx+374,302,['X',['A'],'  across the cut'],{fill:BLUEHI,'font-size':18});
+})();
+
+/* ---------- figure 2: plane ---------- */
+(function(){const s=document.getElementById('plane'),glow=defs(s);
+  const L=90,R=960,T=30,B=490,xs=v=>L+(R-L)*v/1,ys=u=>B-(B-T)*u/1;
+  for(let t=0;t<=10;t+=2){const v=t/10;el(s,'line',{x1:xs(v),y1:T,x2:xs(v),y2:B,stroke:GRID});mono(s,xs(v)-12,B+24,v.toFixed(1));
+    el(s,'line',{x1:L,y1:ys(v),x2:R,y2:ys(v),stroke:GRID});mono(s,L-40,ys(v)+5,v.toFixed(1));}
+  serif(s,(L+R)/2,B+54,'v   (w = 1)');serif(s,20,T+8,'u');
+  /* broken region shading */
+  let d='M'+xs(0)+' '+ys(1);for(let i=0;i<=100;i++){const v=i/100;d+=' L'+xs(v)+' '+ys(1-v);}d+=' L'+xs(1)+' '+ys(1)+' Z';
+  el(s,'path',{d,fill:'rgba(255,255,255,0.035)'});
+  serif(s,xs(0.7),ys(0.6),'gap closed: E(π)² < 0',{fill:MUT,'font-size':15});
+  /* past-exit shading */
+  let d2='M'+xs(0)+' '+ys(uExit(0));for(let i=0;i<=200;i++){const v=i/200;d2+=' L'+xs(v)+' '+ys(Math.min(uExit(v),1-v));}
+  for(let i=200;i>=0;i--){const v=i/200;d2+=' L'+xs(v)+' '+ys(1-v);}d2+=' Z';el(s,'path',{d:d2,fill:'rgba(227,173,85,0.10)'});
+  el(s,'path',{d:'M'+xs(0)+' '+ys(1)+' L'+xs(1)+' '+ys(0),stroke:MUT,'stroke-width':1.5,'stroke-dasharray':'6 6',fill:'none'});
+  let d3='';for(let i=0;i<=200;i++){const v=i/200;d3+=(i?' L':'M')+xs(v)+' '+ys(uExit(v));}
+  el(s,'path',{d:d3,stroke:GOLDHI,'stroke-width':3,fill:'none',filter:glow});
+  PTS.forEach(([v,u])=>{const m=model(v,u);const inside=m.E0*m.Ep>u*u;
+    el(s,'circle',{cx:xs(v),cy:ys(u),r:4.6,fill:inside?BLUE:GOLD,stroke:'#060a13','stroke-width':1.2,opacity:0.95});});
+  /* legend */
+  const lx=R-330;
+  el(s,'line',{x1:lx-8,y1:T+20,x2:lx+18,y2:T+20,stroke:GOLDHI,'stroke-width':3});lab(s,lx+28,T+26,['exit line  (w² − v²)² = 2u²(w² + v²)'],{fill:GOLDHI,'font-size':16});
+  el(s,'line',{x1:lx-8,y1:T+46,x2:lx+18,y2:T+46,stroke:MUT,'stroke-width':1.5,'stroke-dasharray':'6 6'});lab(s,lx+28,T+52,['critical line  u = 1 − v'],{fill:MUT,'font-size':16});
+  el(s,'circle',{cx:lx+5,cy:T+72,r:5,fill:BLUE});mono(s,lx+28,T+77,'inside the disk (184)',{fill:TXT});
+  el(s,'circle',{cx:lx+5,cy:T+98,r:5,fill:GOLD});mono(s,lx+28,T+103,'past the exit (16)',{fill:TXT});
+})();
+
+/* ---------- figure 3: chain ---------- */
+(function(){const s=document.getElementById('chain'),glow=defs(s);
+  const cells=[-2,-1,0,1,2],y=110,dx=190,x0=60;
+  const pos=(c,site)=>x0+(c+2)*dx+(site==='b'?90:0);
+  el(s,'line',{x1:pos(-1,'b')+48,y1:30,x2:pos(-1,'b')+48,y2:210,stroke:GOLDHI,'stroke-width':2,'stroke-dasharray':'6 6'});
+  mono(s,pos(-1,'b')+56,40,'the cut',{fill:GOLDHI});
+  cells.forEach(c=>{const a=pos(c,'a'),b=pos(c,'b');
+    el(s,'line',{x1:a,y1:y,x2:b,y2:y,stroke:'rgba(235,229,214,0.6)','stroke-width':2});
+    serif(s,(a+b)/2-6,y-14,'v',{fill:MUT,'font-size':16});
+    if(c<2){const a2=pos(c+1,'a');const cross=(c===-1);el(s,'line',{x1:b,y1:y,x2:a2,y2:y,stroke:cross?GOLDHI:'rgba(235,229,214,0.35)','stroke-width':cross?2.5:2,'stroke-dasharray':cross?'2 5':'none'});
+      serif(s,(b+a2)/2-6,y-14,'w',{fill:MUT,'font-size':16});}
+    el(s,'circle',{cx:a,cy:y,r:13,fill:GOLD,filter:glow});el(s,'circle',{cx:b,cy:y,r:13,fill:BLUE,filter:glow});
+    mono(s,a-24,y+40,'+iu',{fill:GOLDHI,'font-size':13});mono(s,b-14,y+40,'−iu',{fill:BLUEHI,'font-size':13});
+    mono(s,a+18,y+70,'cell '+c,{fill:MUT,'font-size':13});
+  });
+  mono(s,pos(-1,'b')+40,y-48,'crossing bond weight ½(−1+0+1) = 0',{fill:GOLDHI,'font-size':13,'text-anchor':'end'});
+  lab(s,pos(0,'a')-10,y+104,['T',['R'],':  v(c+½) inside a cell,  w(c+1) between cells,  ±iu(c+½) on site'],{fill:TXT,'font-size':16});
+})();
+
+/* ---------- figure 4: phase ---------- */
+(function(){const s=document.getElementById('phase'),glow=defs(s);
+  const L=100,R=960,T=30,B=490,xs=v=>L+(R-L)*v/0.72,ys=t=>B-(B-T)*t/Math.PI;
+  for(let t=0;t<=4;t++){const y=ys(t*Math.PI/4);el(s,'line',{x1:L,y1:y,x2:R,y2:y,stroke:GRID});mono(s,L-62,y+5,['0','π/4','π/2','3π/4','π'][t]);}
+  for(let v=0;v<=0.71;v+=0.1){el(s,'line',{x1:xs(v),y1:T,x2:xs(v),y2:B,stroke:GRID});mono(s,xs(v)-12,B+24,v.toFixed(1));}
+  serif(s,(L+R)/2,B+54,'v   (w = 1)');
+  el(s,'line',{x1:L,y1:ys(Math.PI/2),x2:R,y2:ys(Math.PI/2),stroke:'rgba(255,255,255,0.45)','stroke-width':1.2});
+  mono(s,R-170,ys(Math.PI/2)-10,'rim: θ = π/2',{fill:TXT});
+  const series=[[0.3,'#6fa6ff'],[0.5,'#e3ad55'],[0.7,'#5fd3b0']];
+  series.forEach(([u,c])=>{const vmax=1-u-1e-4;let d='',dq='';const N=500;
+    for(let i=0;i<=N;i++){const t=i/N;const v=vmax*(1-Math.pow(1-t,3));const m=model(v,u);if(!m)continue;const th=m.theta;
+      const q=2*Math.atan(u/Math.sqrt(m.E0*m.Ep));if(th>Math.PI*0.97)continue;
+      d+=(d?' L':'M')+xs(v).toFixed(1)+' '+ys(th).toFixed(1);if(q<Math.PI*0.97)dq+=(dq?' L':'M')+xs(v).toFixed(1)+' '+ys(q).toFixed(1);}
+    el(s,'path',{d:dq,stroke:c,'stroke-width':1.3,'stroke-dasharray':'5 5',fill:'none',opacity:0.6});
+    el(s,'path',{d,stroke:c,'stroke-width':3,fill:'none',filter:glow});
+    (MEAS[String(u)]||[]).forEach(([v,t])=>el(s,'circle',{cx:xs(v),cy:ys(t),r:6.5,fill:'#060a13',stroke:c,'stroke-width':2.2}));
+    const ve=vExit(u);const sx=xs(ve),sy=ys(Math.PI/2);
+    el(s,'path',{d:star(sx,sy,11,4.6),fill:'#ffffff',filter:glow});
+    mono(s,L+12,T+22+series.findIndex(z=>z[0]===u)*24,'u = '+u.toFixed(1),{fill:c});
+  });
+  mono(s,L+120,T+22,'solid: Abel phase θ',{fill:MUT});mono(s,L+120,T+46,'rings: measured, 90 cells',{fill:MUT});mono(s,L+120,T+70,'dashed: quarter-turn continuation',{fill:MUT});mono(s,L+120,T+94,'stars: exit line',{fill:MUT});
+  function star(x,y,r1,r2){let p='';for(let i=0;i<10;i++){const r=i%2?r2:r1,a=-Math.PI/2+i*Math.PI/5;p+=(i?'L':'M')+(x+r*Math.cos(a)).toFixed(1)+' '+(y+r*Math.sin(a)).toFixed(1);}return p+'Z';}
+})();
+
+/* ---------- ambient field (decorative) ---------- */
+const f=document.getElementById('field'),fx=f.getContext('2d');let stars=[];
+function sizeField(){f.width=innerWidth;f.height=innerHeight;stars=Array.from({length:Math.round(innerWidth*innerHeight/9000)},()=>({x:Math.random()*f.width,y:Math.random()*f.height,r:Math.random()*1.3+0.2,g:Math.random()<0.55,p:Math.random()*6.28}));}
+function drawField(t){fx.clearRect(0,0,f.width,f.height);
+  const gr=fx.createRadialGradient(f.width*0.78,f.height*0.18,10,f.width*0.78,f.height*0.18,f.width*0.6);gr.addColorStop(0,'rgba(227,173,85,0.10)');gr.addColorStop(1,'rgba(6,10,19,0)');fx.fillStyle=gr;fx.fillRect(0,0,f.width,f.height);
+  const gb=fx.createRadialGradient(f.width*0.1,f.height*0.7,10,f.width*0.1,f.height*0.7,f.width*0.5);gb.addColorStop(0,'rgba(111,166,255,0.08)');gb.addColorStop(1,'rgba(6,10,19,0)');fx.fillStyle=gb;fx.fillRect(0,0,f.width,f.height);
+  for(const s of stars){const a=0.35+0.35*Math.sin(s.p+t/1400);fx.fillStyle=s.g?`rgba(247,216,145,${a})`:`rgba(169,203,255,${a})`;fx.beginPath();fx.arc(s.x,s.y,s.r,0,6.283);fx.fill();}
+}
+const still=matchMedia('(prefers-reduced-motion: reduce)').matches;
+sizeField();addEventListener('resize',()=>{sizeField();drawField(0);});
+if(still)drawField(0);else{(function loop(t){drawField(t);requestAnimationFrame(loop);})(0);}
+drawDisk();
+})();
+</script>
