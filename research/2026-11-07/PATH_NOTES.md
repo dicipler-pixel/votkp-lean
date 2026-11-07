@@ -224,3 +224,24 @@ Grades: the rigid-body facts and Montgomery's formula are known (reproductions i
 ## FILM-GEO-LINK-01 (film_geo_link_01.py)
 - The film writes back the phase gap as colour gap ~ (phase gap)^0.34. Pairs that under-read are pairs where both elements ride the rim: residual vs pair min|turn|, rho = -0.52, p = 0.0007. (Mg-Na, K-Mg, K-Na, Ag-Na; Lu-Mn is a tiny-gap pair.)
 - Reading: near the ground the phase is present but pinned. |Gamma| ~ 1 makes the film reflection all-phase, and the two rim tracks move together, so the film can't pull them apart. "Present but not loaded."
+
+## VOTKP first meaning: volume of the knot potential (Jeromie's hypothesis, held as his stance)
+Hypothesis as he said it: the old VOTKP tried to map the volume from a HOMFLY / coloured Jones mix; the vectors now used may be what creates space and volume as we follow light. A space made by light strings would hold a vacuum.
+
+## KNOT-VOLUME-01/02/03, the Jones string as light (knot_volume_01..03.py), 2970 hyperbolic knots, 3-12 crossings
+- Setup: t = e^{i theta} runs once around the circle, the way colour runs violet to red; the Jones polynomial V(t) traces a closed string that leaves V(1) = 1 and comes back.
+- Climb book = Mahler measure (mean log|V|). It carries volume: rho 0.854 overall and 0.66-0.84 within each crossing number. After log det (Dunfield's baseline, rho 0.925) is taken out, the climb still carries the rest: rho 0.50.
+  - Fits: log det alone R^2 0.708; Jones climb alone 0.734; together 0.810; adding the Alexander climb 0.826.
+- Turn book, counted as roots inside the circle (vacuum enclosed): nothing for volume (rho -0.02) and nothing for signature.
+- Opposite count, turn = signed area swept / size: nothing for volume (-0.07), but it carries the handedness, |signature| rho 0.83.
+- So the two books split cleanly: climb = volume (space made), turn = handedness. This is the same split as Q = g - (i/2) Omega in the IQGT (real part metric / size, imaginary part curvature / turn). Structural match, flagged; not a mapping of one onto the other.
+- Torus knots (the Dirac paper's knots) have zero hyperbolic volume: they make no space in this sense. Worth keeping in mind for the Dirac-to-VOTKP bridge.
+- Prior art to check before leaning on this: Mahler measure of the Jones polynomial vs volume (Champanerkar-Kofman line); determinant density (Champanerkar-Kofman-Purcell).
+
+## HANDEDNESS-01 (handedness_01.py)
+- Drude metals (9 cases) and single Lorentz oscillators (6 cases, including a line inside the visible band) all wind the same way as frequency rises, the same sense as the element tracks.
+- So the one-way winding is not just normal dispersion: it holds through absorption lines. Likely cause: causality plus passivity (the family of Foster's reactance theorem), which is prior art.
+- The exceptions (As2Se3 etc.) would need overlapping oscillators. Open.
+
+## Pending
+- Gases (O 96, Xe 130 GPa, Cl) in PRESSURE-LINE: need low-temperature solid densities. Br out of order.
