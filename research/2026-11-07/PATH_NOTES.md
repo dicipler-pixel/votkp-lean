@@ -289,3 +289,14 @@ Papers: Hidden zeros 2312.16282 (JHEP 10 (2024) 231); Scalar-scaffolded gluons 2
 - Zeros first: her shift was found from the zeros. Next we look for universal zeros and fixed values of our polynomials.
 - Hyperbolic knots are glued from ideal tetrahedra whose shapes are cross-ratios (u-like, Mobius-invariant). Complex volume Vol + i CS is a sum of dilogarithms of those shapes. So both books (volume and the Chern-Simons twist) come from u-type variables. This is the holonomy route.
 - Prior art: the A-polynomial (Cooper-Culler-Gillet-Long-Shalen) is built from holonomy; Boyd / Rodriguez-Villegas relate its Mahler measure to volume. Check where ours differs.
+
+## SHAPE-DISK-01/02, what VOTKP seeks: volume as distance from the vacuum point (shape_disk_01.py, shape_disk_02.py)
+- Setup: each ideal tetrahedron of a hyperbolic knot complement has shape z (a cross-ratio). Put it on a Smith disk centred on the regular tetrahedron w = e^{i pi/3}: G = (z - w)/(z - conj w).
+- Racket check: the three axis labels z, 1/(1-z), 1-1/z sit at the same radius, exactly 120 deg apart, with identical volume (0.9832288623). The axis switches; the volume stays.
+- Vacuum and rim: the regular tetrahedron (D = 1.014942, the maximum) is exactly the centre G = 0; flat tetrahedra are the rim.
+- Per piece (2777 tetrahedra, 243 knots with 4-10 crossings): distance from the vacuum point vs volume, rho -0.998.
+- The vacuum well (numerical, matches to 4 digits; derivation pending): near the centre D = V0 - (3 sqrt3/4)|G|^2 + (3-fold term). Measured (V0-D)/|G|^2 = 1.2990 vs 3 sqrt3/4 = 1.29904.
+- Knot level, no fitting: Vol ~ sum over pieces [V0 - (3 sqrt3/4)|G|^2]. Median error 0.27%, 90th percentile 0.96%, worst 13% (10_1). Counting pieces at full volume alone: 10.9%.
+- Reading: a knot's volume is its pieces at full volume, minus a squared penalty for how far each sits from the vacuum. Real knots keep most pieces near the vacuum (1391 of 2777 within distance 0.5).
+- What is recognised: volume = sum of Bloch-Wigner D(z) is standard (Thurston, Milnor). The disk centred on the regular tetrahedron, the racket rotations and the well law are this session's reading; check prior art on expansions about the regular ideal tetrahedron.
+- The turn half (Chern-Simons): the summed 3-fold angle of G gives nothing (rho 0.02). Expected: CS is not a sum of local shape terms; it needs the branch/winding data of log z (flattenings, Neumann's extended Bloch group). The turn book should live in those winding integers. Next.
