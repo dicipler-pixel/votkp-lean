@@ -252,3 +252,24 @@ Background: Friedl-Jackson 2011 left open whether the arguments of Alexander zer
 - Alexander zero angles vs CS: r 0.07. Jones zero angles: r 0.08. Faint at most.
 - Opposite, the turn read at single points t = e^{2 pi i/N}, N = 3..10: CS-angle r 0.16 at N=3 (V(e^{2pi i/3}) is a special mod-3 value), ~0.03 elsewhere. arg V vs signature runs -0.1 to -0.3, +0.33 at N=3.
 - Reading: in the uncoloured Jones, the turn holds handedness (signature), not the Chern-Simons half. CS comes from the knot's geometric (holonomy) data, so a polynomial that carries both halves of complex volume needs the holonomy route (Mobius / Smith moves around the knot's loops), not the diagram alone.
+
+## RIFE deep dive (agent report, 7 Nov). Kept for the light work only; medical claims are history, not results.
+- Solid: the prism microscopes (Science Museum London holds No. 5, 1938, plus a beam ray tube); Kendall-Rife 1931; Rosenow in Science 1932; Smithsonian report 1944.
+- Rife's illumination modes (monochromatic, polarized, dark-field, slit-ultra) can make particles below the Abbe limit visible as bright points (Zsigmondy). That is detection, not resolution.
+- Kendall's filterable-forms claim failed replication 1932-33 (Craig & Johns; Swingle & Kiser).
+- 1934 clinic: no records seen. "14/16 cured" traces to later recollection and Lynes 1987. The AMA plot story is undocumented. The lawsuit (1939), the FDA seizure (1960) and the Crane trial (1961) are real.
+- Modern "Rife machines" are not his RF plasma-tube design. His own configuration has never been tested in any published study.
+- Link to our work: "coordinative colour" = staining by light = dispersion staining (Christiansen). At the matched wavelength the index matches, the reflection crosses the Smith centre (vacuum, Gamma = 0) and its phase flips. Rife's colour is the wavelength where a thing's track passes through the vacuum point.
+
+## CIRCUIT-POLY-01/02, first attempt at our own knot polynomial (circuit_poly_01.py, circuit_poly_02.py)
+- The diagram as a circuit. Nodes = shaded regions; branches = crossings; right-handed crossing = admittance z, left-handed = 1. Q(z) = sum over spanning trees of z^(right-handed branches). Light leads: z = e^{i phi}.
+- Kirchhoff check: Q(1) = det on 1846/1846 alternating knots.
+- Redrawn diagrams in general: Q changes (3/50 unchanged), so for non-reduced diagrams it is a diagram quantity.
+- Repair: on reduced alternating diagrams, 180/180 comparisons equal (up to the shading flip, Q -> reversed).
+  - Reason (sketch, not a proof yet): by Tait's flyping theorem (Menasco-Thistlethwaite) reduced alternating diagrams differ by flypes. A flype acts on the Tait graph as a Whitney twist, which keeps the cycle matroid, so it keeps every spanning tree with its branches. A flype is rigid on the tangle, so it keeps each crossing's handedness. So Q is an invariant of alternating knots.
+  - Caveat: some of the 180 may be the same diagram; the argument carries the weight.
+- What it carries: it is coarse. Knots with all crossings one hand (3_1, 5_2) give a constant = det.
+  - Climb vs volume rho 0.34, but it adds to log det: residual rho 0.44, R^2 0.708 -> 0.773 (Jones climb gave 0.810).
+  - |turn| vs |signature| rho -0.51.
+- Reading: on the diagram alone, the weights that survive every Reidemeister move are the Kauffman bracket ones (the Jones polynomial through the Tutte/Potts route). So "circuit + light, made fully invariant" leads back to Jones. Something better has to bring in what the diagram lacks: the holonomy (Smith/Mobius moves around the loops), which is also where Chern-Simons lives.
+- Prior-art check pending: tree enumerators by crossing sign (Kauffman's clock states, Crowell), whether Q is already known.
