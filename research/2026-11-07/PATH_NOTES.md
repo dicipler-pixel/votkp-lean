@@ -311,3 +311,16 @@ New arXiv work on the same object: State integrals for the quantized SL2(C) Cher
   - Volume = the shapes' distance from the vacuum (continuous).
   - Twist = the winding integers, how many half-turns each piece's logarithm wraps. That is phase winding, the language of his pre-June work, and the curvature (Omega) half of Q = g - (i/2) Omega.
 - The racket ties in here too: the axis labels rotate the shapes, and their logarithms pick up the windings. The windings are where the "climb of the switching" is counted. Structural reading, untested.
+
+## The knot potential (prior art for the VOTKP name) and OUR POLYNOMIAL, first form
+- Yokota (2011): a potential function V(z_1..z_n) built crossing by crossing from the knot diagram. Its hyperbolicity equations are exp(z_k dV/dz_k) = 1, and at the geometric solution Im V_0 = vol(K); the full value gives i(vol + i cs) mod pi^2. Cho (arXiv 1005.3094): over all essential solutions, the maximum imaginary part is the volume of the complete structure. Cho-Murakami (arXiv 1009.3137) do the coloured-Jones version. "Volume of the knot potential" is a real, named object.
+- Direction and decay: quantum invariants grow like exp(N(Vol + i CS)/2pi). Vol = decay/growth, CS = direction/rotation; one complex number carries both books.
+- Our polynomial (design): the knot's shape polynomial, whose roots are all solutions of the hyperbolicity equations from the potential, read on the Smith disk centred at the regular tetrahedron. Per root: decay = volume (the climb, distance from vacuum), direction = Chern-Simons (the turn, winding integers). The knot's geometry = the root nearest the vacuum.
+
+## ROOTS-DISK-01/02 (roots_disk_01.py, roots_disk_02.py)
+- Every solution of the gluing equations (edges + meridian), found by damped Newton from 3000 random starts. Knots 4_1 to 7_x: 2-10 solutions each (median 6).
+- True geometry = nearest the vacuum (smallest sum |G|^2): 11/11 (31/31 in the weaker first pass), always with a wide gap (5_2: 0.17 vs the next 3.0).
+- Mirrors outside the disk: 11/11. Flat (all-real) solutions exactly on the rim: sum |G|^2 = number of tetrahedra (5_2: 3.0).
+- Ladder: moving out from the vacuum, volume steps down (6_1: 0.74 -> 3.16, 5.1 -> 1.42, 28.9 -> -1.42, 47.3 -> -3.16). Seen in the examples, not yet scored across all knots.
+- Agrees with the known result that max volume picks the geometric solution (Francaviglia; Cho). New here is the reading: nearest the vacuum on the disk, with the bowl law as the reason.
+- Next: (1) build the polynomial straight from a diagram via Yokota's potential, so it is drawn from the knot picture; (2) add each root's direction (CS) using the winding integers; (3) score the ladder ordering across all knots; (4) the parity rule to clear pi^2/6.
