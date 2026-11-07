@@ -374,3 +374,15 @@ New arXiv work on the same object: State integrals for the quantized SL2(C) Cher
   - Within-knot Spearman(sum|G|^2, vol): median -0.905.
   - All 136 rung inversions involve a flat solution (on the rim) or a mixed-orientation one (pieces on both sides of the rim). None between two fully-inside solutions.
   - Orientation-aware law (each piece eps [V0 - k2 |G~|^2], G~ = 1/conj G outside the disk): Spearman vs vol median 0.995, +1 on 14 knots. Accurate for fully-inside and fully-mirror solutions (median error 0.012), weaker for mixed ones (0.20).
+
+## DRAWING POLYNOMIAL AT SCALE (helper run; drawing_robust_01..04, drawing_indep_02, drawing_torus_02/03, mirror_check_01)
+- From the drawing: top value = SnapPy complex volume on 79/79 hyperbolic knots, 4-9 crossings (vol 1e-6, cs mod pi^2 1e-5).
+  - Solver: vectorised, analytic Jacobian, conjugate solutions added.
+  - The geometric family is hit by ~0.1% of random starts on hard knots, so matching is a budget issue (9_5, 9_38, 9_42 needed up to 5800 starts).
+- Diagram independence: 13/13 knots (4_1 ... 8_3) give the same full spectrum from 3 drawings, including one with 2 extra crossings. Kinked crossings X[i,j,j,l] are singular and must be removed. Evidence that the spectrum is a knot invariant read off any drawing (expected, since the values are complex volumes of representations).
+- Chirality caveat: SnapPy Manifold(name) is the mirror of the KnotInfo PD for 42 of 79 knots (cs flips). Signed comparisons must use Link(PD).exterior(). Earlier signed CS-vs-diagram tests (KNOT-CS) may be affected; their |CS| versions were convention-free and were also null.
+- Torus knots, pure direction confirmed: every valid solution has decay Im V0 = 0 (1e-15), and every direction Re V0 is an exact rational multiple of pi^2.
+  - 3_1: 5/6.  5_1: 1/10, 9/10.  7_1: 3/14, 5/14, 13/14.  8_19: 11/12.  10_124: 14/15 (mod 1).
+  - Pattern consistent with Re V0/pi^2 = -k^2/(pq) mod 1 (k odd for T(2,q); (q-1)/2 values found). For T(3,4) and T(3,5) only k = 1 was found so far.
+  - Prior art to check: Chern-Simons invariants of torus-knot representations (Kirk-Klassen style formulas); this is likely known.
+- For the polynomial: the self-assembling knots (3_1, 5_1, 8_19, 10_124, 15n_41185) are exactly the pure-direction cases. Zero decay, direction = -k^2/(pq) of a turn.
