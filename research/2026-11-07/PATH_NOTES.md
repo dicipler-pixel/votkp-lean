@@ -324,3 +324,19 @@ New arXiv work on the same object: State integrals for the quantized SL2(C) Cher
 - Ladder: moving out from the vacuum, volume steps down (6_1: 0.74 -> 3.16, 5.1 -> 1.42, 28.9 -> -1.42, 47.3 -> -3.16). Seen in the examples, not yet scored across all knots.
 - Agrees with the known result that max volume picks the geometric solution (Francaviglia; Cho). New here is the reading: nearest the vacuum on the disk, with the bowl law as the reason.
 - Next: (1) build the polynomial straight from a diagram via Yokota's potential, so it is drawn from the knot picture; (2) add each root's direction (CS) using the winding integers; (3) score the ladder ordering across all knots; (4) the parity rule to clear pi^2/6.
+
+## STEP 1 DONE: the knot potential read straight off the drawing (drawing_poly_01..05.py)
+- Source formula: Cho-Kim-Kim, arXiv 1301.6219, Sec. 2. One variable per side of the diagram; each crossing adds Li2(z_b/z_a) - Li2(z_b/z_c) + Li2(z_d/z_c) - Li2(z_d/z_a). The hyperbolicity equations exp(z_k dV/dz_k) = 1 are branch-free products of (1 - ratio)^(+-1). V0 = V - sum (z_k dV/dz_k) log z_k.
+- Check on the paper's own figure-eight V: vol 2.029883, cs 0, mirror -2.029883.
+- Reading any KnotInfo PD drawing: the paper's corner placement is in a figure we lack, so all 64 placements were tested. 8 reproduce 4_1 and 5_2 exactly, and they reduce to one rule by the term's symmetry (a<->c with b<->d). Rule: (b,d) = under-strand pair, (a,c) = over pair, same for both crossing signs.
+- Exact from the drawing (top value vs SnapPy): 4_1, 5_2, 6_1, 6_2, 6_3, with vol to 1e-6 and cs to ~1e-15. 7_2 missed only because the random search did not reach its geometric family; more starts or homotopy needed.
+- Finite object: the solutions form continuous families (no per-crossing ratio or cross-ratio is fixed along them; measured spreads 4..6000). Only V0 is constant on a family (CKK Thm 1.2). So the drawing gives one complex number per family = per boundary-parabolic geometry: decay = Im V0 (volume), direction = Re V0 (-cs).
+- The spectrum from the drawing (decay, direction):
+  - 4_1: (2.02988, 0), (-2.02988, 0)
+  - 5_2: (2.82812, -3.0241), (0, 1.1135), (-2.82812, -3.0241)
+  - 6_1: (3.16396, 3.0789), (1.4151, 0.211), (-1.4151, 0.211), (-3.16396, 3.0789)
+  - 6_2: (4.40083, -3.997), (1.53058, 0.3291), (0, 2.4011), mirrors
+  - 6_3: (5.69302, 0), (0.9243, +-1.8906) twice, mirrors
+  The volumes match the ROOTS-DISK ladder exactly; now each geometry has its direction too.
+- Prior art: the set of these values is Cho's Borel-regulator / parabolic complex-volume spectrum (arXiv 1005.3094). New here is the reading on the vacuum disk with decay and direction, and reading it off KnotInfo PD drawings with the placement rule found by exhaustive test.
+- Our polynomial, next form: P_K(x) = product over geometries rho of (x - exp(lambda V0(rho))), a knot invariant read off the drawing, roots = decay and direction. Choose lambda (pi^2 period -> 2 pi), and check whether the coefficients have a nice arithmetic form via the trace field (LMFDB).
