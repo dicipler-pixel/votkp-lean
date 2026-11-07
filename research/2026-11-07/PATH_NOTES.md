@@ -340,3 +340,18 @@ New arXiv work on the same object: State integrals for the quantized SL2(C) Cher
   The volumes match the ROOTS-DISK ladder exactly; now each geometry has its direction too.
 - Prior art: the set of these values is Cho's Borel-regulator / parabolic complex-volume spectrum (arXiv 1005.3094). New here is the reading on the vacuum disk with decay and direction, and reading it off KnotInfo PD drawings with the placement rule found by exhaustive test.
 - Our polynomial, next form: P_K(x) = product over geometries rho of (x - exp(lambda V0(rho))), a knot invariant read off the drawing, roots = decay and direction. Choose lambda (pi^2 period -> 2 pi), and check whether the coefficients have a nice arithmetic form via the trace field (LMFDB).
+
+## COLOUR BRIDGE (helper run; scripts colknot_*.py, outputs in out/)
+- One frame, both sides: knot tetrahedra sit in the disk interior (median distance 0.50 from the vacuum); metals sit near the rim (median 2.79, 96% beyond the |G|^2 = 1/2 line); non-metals in between (1.28). The bowl region is barely sampled by the 41 elements (only C, Se, Cs-blue reach |G|^2 < 0.25).
+- No fixed-coefficient bowl law in the elements. The film quantities are near-linear in |G|^2 for metals, but that is analytic from the film formula. The turn and climb grow toward the rim like hyperbolic area (R^2 ~0.7 vs cosh d - 1), and the turn goes to ~0 at the vacuum (B, C, Se, Si).
+- Thin-film winding = an integer topological index of the substrate's Smith point. It is exact (1e-15), it equals thickness/247 nm for n_f = 1.5 (theory 2 n_f d (1/380 - 1/780)), and it jumps across the circle |r12| = |r01| = 0.2 around the film match point (0 mismatches on a 3660-point grid). Se is the one element inside, with W = 0.
+  - Colour split: lightness follows bulk |Gamma| (continuous, rho 0.97-0.99); chroma follows the integer order (rises to order 1, falls by 3-4); hue follows the fractional phase. Newton's colour orders: recognised physics. The parallel to volume vs CS is structural only, an integer label beside a continuous part.
+- Knots as colours (Jones string rendered CIE D65, 2970 knots): volume is carried only through |V|. The real Smith map of |V| (= tanh(1/2 log|V|), the distance of log|V| from the vacuum |V| = 1) gives L* vs volume rho 0.959, and colour lifts R^2 for volume 0.707 -> 0.878 beyond log det. But colour is a compression of |V| (log det + 4 moments of |V| gives 0.905). Handedness is weak (|sig| R^2 <= 0.14; signed sig rho -0.47 only with phase maps). Poles of Gamma at theta = pi/2 match Arf = 1 on 2970/2970 (known).
+- Next on colour: dielectrics (oxides, halides, glasses) to fill the disk interior, where the knot bowl lives.
+
+## SELF-ASSEMBLY PREDICTION CONFIRMED ON NEW KNOTS (torus_check_02.py)
+- Prediction, made before the lookup: self-assembly favours knots that make no space (zero hyperbolic volume = torus knots), so Micheletti's two new privileged knots (10 and 15 crossings) should be torus knots.
+- Marenda, Orlandini, Micheletti, Nat. Commun. 2018 name them 10_124 and 15n_41185 (earlier: 3_1, 4_1, 5_1, 8_19). The paper does not call the new two torus knots.
+- Checks: 10_124 vs T(3,5) braid and 15n_41185 vs T(4,5) braid. Both non-hyperbolic (volume 0); identical homology of the 2..6-fold cyclic covers. T(4,5) is the only non-alternating 15-crossing torus knot. Strong fingerprint match, not a formal identification.
+- So 5 of the 6 privileged topologies are torus knots, with 4_1 the exception (and 4_1 has the smallest hyperbolic volume of any knot, 2.03).
+- Reading: knots that make little or no space are the ones that build themselves. In the polynomial these are the zero-decay, pure-direction roots. Untested as a law beyond these six.
