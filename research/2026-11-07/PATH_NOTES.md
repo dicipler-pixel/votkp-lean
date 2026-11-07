@@ -273,3 +273,19 @@ Background: Friedl-Jackson 2011 left open whether the arguments of Alexander zer
   - |turn| vs |signature| rho -0.51.
 - Reading: on the diagram alone, the weights that survive every Reidemeister move are the Kauffman bracket ones (the Jones polynomial through the Tutte/Potts route). So "circuit + light, made fully invariant" leads back to Jones. Something better has to bring in what the diagram lacks: the holonomy (Smith/Mobius moves around the loops), which is also where Chern-Simons lives.
 - Prior-art check pending: tree enumerators by crossing sign (Kauffman's clock states, Crowell), whether Q is already known.
+
+## Carolina Figueiredo's work (with Arkani-Hamed, Cao, Dong, He, Backus; surfaceology with Frost, Salvatori)
+Papers: Hidden zeros 2312.16282 (JHEP 10 (2024) 231); Scalar-scaffolded gluons 2401.00041; NLSM in Tr(phi^3) 2401.05483; Circles and Triangles 2403.04826; All-order splits 2405.09608; Tropical amplitudes 2402.06719; Backus-Figueiredo surface gauge invariance 2505.17179; Strings 2024 talk.
+- The "numerator vs denominator" point: combinatorial geometry (associahedron, surfaces) gave the denominators (poles) of amplitudes, but real theories need numerators. Her clue was the hidden zeros: loci where the whole amplitude vanishes though no Feynman term does, with splits into products of smaller amplitudes near them. The one kinematic shift that keeps the zeros (even-even X up by delta, odd-odd X down) turns the denominator-only scalar theory into pions (and, from the stringy form, gluons). Numerators come out of shifted denominators.
+- u-variables: one per curve on the surface, binary relations u_C + prod u_D = 1; curve words are products of 2x2 matrices (Mobius moves along the curve).
+
+## SURFACEOLOGY-01, reproduction (surfaceology_01.py)
+- Hidden zero, n=6: the 14 Feynman terms sum to exactly 0 on c_13 = c_14 = c_15 = 0.
+- Delta shift: the leading term is -(X13+X24) at n=4, and exactly NLSM_6 at n=6 (ratio 1 at three random points). The numerator appears from shifted denominators.
+- u-equations as Mobius cross-ratios: |u_C + prod u_D - 1| <= 4e-16 for n=5..8; Mobius change in u ~1e-15. The u's are Smith-chart invariants.
+
+## Mapping onto VOTKP (structural, untested)
+- Our circuit polynomial (Kirchhoff tree sum) is a denominator-only object, like Tr(phi^3): positive counts of trees. Jones carries signs, numerator-like. Her move suggests a parity shift on the checkerboard (shaded vs unshaded = even/odd) or on handedness, to find which shift keeps the polynomial's zeros and what appears at leading order.
+- Zeros first: her shift was found from the zeros. Next we look for universal zeros and fixed values of our polynomials.
+- Hyperbolic knots are glued from ideal tetrahedra whose shapes are cross-ratios (u-like, Mobius-invariant). Complex volume Vol + i CS is a sum of dilogarithms of those shapes. So both books (volume and the Chern-Simons twist) come from u-type variables. This is the holonomy route.
+- Prior art: the A-polynomial (Cooper-Culler-Gillet-Long-Shalen) is built from holonomy; Boyd / Rodriguez-Villegas relate its Mahler measure to volume. Check where ours differs.
