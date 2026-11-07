@@ -300,3 +300,14 @@ Papers: Hidden zeros 2312.16282 (JHEP 10 (2024) 231); Scalar-scaffolded gluons 2
 - Reading: a knot's volume is its pieces at full volume, minus a squared penalty for how far each sits from the vacuum. Real knots keep most pieces near the vacuum (1391 of 2777 within distance 0.5).
 - What is recognised: volume = sum of Bloch-Wigner D(z) is standard (Thurston, Milnor). The disk centred on the regular tetrahedron, the racket rotations and the well law are this session's reading; check prior art on expansions about the regular ideal tetrahedron.
 - The turn half (Chern-Simons): the summed 3-fold angle of G gives nothing (rho 0.02). Expected: CS is not a sum of local shape terms; it needs the branch/winding data of log z (flattenings, Neumann's extended Bloch group). The turn book should live in those winding integers. Next.
+
+## WINDING-CS-01, the turn book lives in the winding integers (winding_cs_01.py). Reproduction of Neumann 2004 in our two-book frame.
+New arXiv work on the same object: State integrals for the quantized SL2(C) Chern-Simons invariant, arXiv 2601.05136 (Jan 2026, v2 May 2026), which uses flattenings; Lee, arXiv 2502.11950 (2025), Chern-Simons as a mixed Tate motive / Bloch regulator. Older: Neumann, Geom. Topol. 2004 (math/0307092); Zickert, arXiv 0710.2049.
+- Method: solved the integer windings (p, q) of every tetrahedron exactly (PARI matsolvemod) so each edge and both cusp curves have zero total log-parameter. Then i(Vol + i CS) = sum R(z; p, q). 79 hyperbolic knots, 4-9 crossings; a flattening was found for all 79.
+- Volume: matches snappy to 5e-14. It needs no integers; that is the climb book, the continuous part, the distance from the vacuum point.
+- Chern-Simons with the winding integers: matches snappy to 2.4e-14 on all 79, up to the known pi^2/6 ambiguity of a weak flattening (exact with no allowance on 25). Imposing Neumann's parity condition (strong flattening) should remove the ambiguity. Next.
+- Chern-Simons from the continuous part only (windings dropped): median miss 0.40, matched on 1 of 79.
+- Reading: the two books separate cleanly in the knot's own geometry.
+  - Volume = the shapes' distance from the vacuum (continuous).
+  - Twist = the winding integers, how many half-turns each piece's logarithm wraps. That is phase winding, the language of his pre-June work, and the curvature (Omega) half of Q = g - (i/2) Omega.
+- The racket ties in here too: the axis labels rotate the shapes, and their logarithms pick up the windings. The windings are where the "climb of the switching" is counted. Structural reading, untested.
