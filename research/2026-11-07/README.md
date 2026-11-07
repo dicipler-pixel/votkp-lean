@@ -14,5 +14,8 @@ Author: Jeromie Beasley. This is a research-direction pass, not a final test: th
 | P3 Schottky line | optics_01.py | Above \|Γ\|² = ½: metals 35/35, non-metals 0/6 (41 elements). |
 | X02 localization integral | optics_01.py | IR slope is nonzero for metals and ~0 for C and Si. Coverage stops before the Drude regime. |
 | P1 film phase | film_phase_01.py | 39 bulk-matched metal pairs. The Smith-phase gap predicts the colour split under a film: Spearman ρ = 0.64. |
+| 2/3 vacuum line under pressure | pressure_line_01.py | Molecular solids: the squeeze needed to reach 2/3 ranks the measured metallization pressure, rho 0.89 (n=6). Network solids (Si, Ge, B) already sit on the line and need a flip (a structural change), not a squeeze. |
+| Geometric vs dynamic turn of the Smith track | geo_phase_01.py | One handedness across all 41 elements. Free-electron metals ride the rim (the ground); there turn and climb merge. |
+| Why rim pairs hide their phase under film | film_geo_link_01.py | The film under-reads pairs that both ride the rim: rho -0.52, p 0.0007. |
 
 The optics scripts read the refractiveindex.info database (CC0), cloned locally to `/home/claude/data_ri/ri`; change the path in `ri_load.py` to match your clone.

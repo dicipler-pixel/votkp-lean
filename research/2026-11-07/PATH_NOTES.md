@@ -205,3 +205,22 @@ Grades: the rigid-body facts and Montgomery's formula are known (reproductions i
 - Biggest: Rb-Ta (phase gap 58.5 deg) -> film dE up to 16; Fe-Mo, Lu-Mo (13-14 deg) -> 11-12. Smallest: Lu-Mn (0.8 deg) -> 0.84.
 - Outliers: the alkali pairs (Ag-Na, K-Na, Mg-Na, K-Mg) have large phase gaps but small film shifts. Likely the Gamma magnitude near 1 (|r12| ~ 1), so the film interference reads the phase only weakly. Worth a look: phase that is present but not "loaded."
 - Reading: the Smith phase is a hidden record that bulk colour throws away and a film writes back out. This is P1's claim, seen on real data.
+
+## PRESSURE-LINE-01, the 2/3 vacuum line under squeeze (pressure_line_01.py)
+- Squeezing shrinks the room and leaves the atom alone, so an element crosses E = 2/3 at V/V0 = 3(1 - E0). Measured metallization pressures: Wikipedia table, experimental rows (B 160, Si 12, P 4.8, S 83, Ge 11, Se 23, Br 25, Te 4, I 16 GPa).
+- Two families appear.
+  - Molecular/chain solids (Te, P, I, Se, Br, S) have open, vacuum-like room. The squeeze needed to reach 2/3 ranks their metallization pressure, Spearman 0.89 (p = 0.02, n = 6). Order: Te 0.07 -> 4 GPa, P 0.10 -> 4.8, Se 0.28 -> 23, I 0.31 -> 16, S 0.46 -> 83, Br 0.57 -> 25.
+  - Network solids (Si, Ge, B) already sit on the line (0.665-0.673) and still need 11-160 GPa. Their room is filled with bond charge, not vacuum: they sit on the wall and need a rearrangement (a coordination change, diamond -> beta-tin) rather than a squeeze. That is the same shape as the saddle in FLIP-KEY: on the wall, the change is a flip. Structural reading, untested.
+- Absolute pressures from the Murnaghan EOS (B0' = 4, pymatgen B0) come out 2-4x low; the bulk-modulus data is rough. Rank only.
+- Next: add gases (O 96, Xe 130 GPa; Cl) with low-temperature solid densities; Br is the one molecular out-of-order point.
+
+## GEO-PHASE-01, the two books of the Smith track (geo_phase_01.py)
+- Climb = hyperbolic length of Gamma(lambda) on the Smith/Poincare disk. Turn = signed hyperbolic area enclosed with the closing geodesic (the Bargmann/Berry term, the same object as Montgomery's solid angle). Area routine checked on a geodesic triangle: 0.76682 vs pi minus angle sum 0.76647.
+- Every element turns the same way: the area is negative for 38/41, and the other three (C, Be, Nb) are ~0. One handedness across the whole table. Possible cause: causality (Kramers-Kronig) fixing the direction the track runs. Untested.
+- Free-electron metals ride the rim, the ground at Gamma = -1: K -32.7, Na -31.4, Rb, Ag, Ti, Mg ~ -10 to -12. Bonded transition metals and non-metals sit at ~0. The turn does not split metal/non-metal cleanly (Te, Ge overlap Zr, Cr, Fe).
+- Near the rim, turn and climb merge (rho = -0.99 among metals). That is hyperbolic geometry near the ideal boundary, where enclosed area tracks perimeter.
+- Among metals, more space between -> more turn (rho -0.43), the same direction as the earlier space-between vs arg N result.
+
+## FILM-GEO-LINK-01 (film_geo_link_01.py)
+- The film writes back the phase gap as colour gap ~ (phase gap)^0.34. Pairs that under-read are pairs where both elements ride the rim: residual vs pair min|turn|, rho = -0.52, p = 0.0007. (Mg-Na, K-Mg, K-Na, Ag-Na; Lu-Mn is a tiny-gap pair.)
+- Reading: near the ground the phase is present but pinned. |Gamma| ~ 1 makes the film reflection all-phase, and the two rim tracks move together, so the film can't pull them apart. "Present but not loaded."
