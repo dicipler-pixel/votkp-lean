@@ -13,5 +13,5 @@ for name,eye,_ in SEGMENTS:
          '-map','[v]','-map','[a]','-t',f'{D:.2f}','-c:v','libx264','-preset','veryfast','-crf','21','-c:a','aac','-b:a','160k',f'seg_{name}.mp4']
     subprocess.run(cmd,check=True); parts.append(f'seg_{name}.mp4'); off+=D; print('composed',name,round(D,1),flush=True)
 open('parts.txt','w').write(''.join(f"file {p}\n" for p in parts))
-subprocess.run(['ffmpeg','-v','error','-y','-f','concat','-i','parts.txt','-c','copy','-movflags','+faststart','VOTKP_Vacuum_Disk_Film_v1.mp4'],check=True)
+subprocess.run(['ffmpeg','-v','error','-y','-f','concat','-i','parts.txt','-c','copy','-movflags','+faststart','VOTKP_Vacuum_Disk_Film_v2.mp4'],check=True)
 print('done')
