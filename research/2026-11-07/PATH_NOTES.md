@@ -245,3 +245,10 @@ Hypothesis as he said it: the old VOTKP tried to map the volume from a HOMFLY / 
 
 ## Pending
 - Gases (O 96, Xe 130 GPa, Cl) in PRESSURE-LINE: need low-temperature solid densities. Br out of order.
+
+## KNOT-CS-01/02, does the turn book carry Chern-Simons? (knot_cs_01.py, knot_cs_02.py)
+Background: Friedl-Jackson 2011 left open whether the arguments of Alexander zeros relate to CS. KnotInfo 'volume_imaginary_part' is defined mod pi^2.
+- The whole-string turn (swept area) vs CS: nothing. Signed rho 0.04; |turn| vs |CS| 0.09; as an angle r 0.01 (shuffled null 0.02).
+- Alexander zero angles vs CS: r 0.07. Jones zero angles: r 0.08. Faint at most.
+- Opposite, the turn read at single points t = e^{2 pi i/N}, N = 3..10: CS-angle r 0.16 at N=3 (V(e^{2pi i/3}) is a special mod-3 value), ~0.03 elsewhere. arg V vs signature runs -0.1 to -0.3, +0.33 at N=3.
+- Reading: in the uncoloured Jones, the turn holds handedness (signature), not the Chern-Simons half. CS comes from the knot's geometric (holonomy) data, so a polynomial that carries both halves of complex volume needs the holonomy route (Mobius / Smith moves around the knot's loops), not the diagram alone.
