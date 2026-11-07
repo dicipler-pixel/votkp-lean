@@ -355,3 +355,22 @@ New arXiv work on the same object: State integrals for the quantized SL2(C) Cher
 - Checks: 10_124 vs T(3,5) braid and 15n_41185 vs T(4,5) braid. Both non-hyperbolic (volume 0); identical homology of the 2..6-fold cyclic covers. T(4,5) is the only non-alternating 15-crossing torus knot. Strong fingerprint match, not a formal identification.
 - So 5 of the 6 privileged topologies are torus knots, with 4_1 the exception (and 4_1 has the smallest hyperbolic volume of any knot, 2.03).
 - Reading: knots that make little or no space are the ones that build themselves. In the polynomial these are the zero-decay, pure-direction roots. Untested as a law beyond these six.
+
+## WINDINGS, BOWL SERIES, LADDER (helper run; scripts FLAT-LIB-01, STRONG-FLAT-01..07, FLAT-CYCLIC-CHECK-01, BOWL-CUBIC-01, BOWL-LAW-KNOTS-01/02, BOWL-LAW-TETRA-01, ROOTS-LADDER-01/02)
+- Chern-Simons exact: the pi^2/6 leftover came from SnapPy's unordered triangulations, not missing parity. This supersedes the earlier note that parity would fix it.
+  - Neumann's R is not invariant under relabelling a tetrahedron's edge pairs: R(z'; q, r) - R(z; p, q) = (1+3q) pi^2/6.
+  - Fix: find a branching (vertex order with order-preserving gluings; found on all 79), re-read each tetrahedron in that order (odd permutation: invert the shape, negate the integers, sign eps = -1), sum eps R.
+  - Result: CS exact on 454/454 runs (79 knots x up to 6 branchings), max 2.7e-14, mod pi^2/2 (SnapPy's period). Mod-pi^2 exactness untested; the exact mod-2 parity rule is pinned by test only.
+- The bowl as an exact series (sympy):
+  D = V0 - (3 sqrt3/4)|G|^2 + (sqrt3/8)(G^3 + conj G^3) + (3 sqrt3/16)|G|^4 + O(|G|^5).
+  - Knot law, no fitting, 12,954 knots to 13 crossings.
+    - Bowl only: median 0.21%, 90th 0.62%, worst 19.9% (12a_803).
+    - Bowl + cubic: worse (median 0.39%). The cubic alone over-corrects.
+    - Bowl + cubic + quartic: median 0.076%, 90th 0.31%, worst 11.4% (11a_247); 12a_803 from -19.9% to -4.5%.
+    - Opposite (hyperbolic distance): far worse (diverges at the rim).
+  - The threefold term (the racket symmetry) only helps once the next radial term is included.
+- Ladder, 31 hyperbolic knots to 8 crossings, 291 solutions:
+  - Nearest vacuum = geometric = max volume, 31/31, no exceptions.
+  - Within-knot Spearman(sum|G|^2, vol): median -0.905.
+  - All 136 rung inversions involve a flat solution (on the rim) or a mixed-orientation one (pieces on both sides of the rim). None between two fully-inside solutions.
+  - Orientation-aware law (each piece eps [V0 - k2 |G~|^2], G~ = 1/conj G outside the disk): Spearman vs vol median 0.995, +1 on 14 knots. Accurate for fully-inside and fully-mirror solutions (median error 0.012), weaker for mixed ones (0.20).
