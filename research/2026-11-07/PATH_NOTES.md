@@ -386,3 +386,18 @@ New arXiv work on the same object: State integrals for the quantized SL2(C) Cher
   - Pattern consistent with Re V0/pi^2 = -k^2/(pq) mod 1 (k odd for T(2,q); (q-1)/2 values found). For T(3,4) and T(3,5) only k = 1 was found so far.
   - Prior art to check: Chern-Simons invariants of torus-knot representations (Kirk-Klassen style formulas); this is likely known.
 - For the polynomial: the self-assembling knots (3_1, 5_1, 8_19, 10_124, 15n_41185) are exactly the pure-direction cases. Zero decay, direction = -k^2/(pq) of a turn.
+
+## PRIOR ART: torus-knot directions are known
+- SL(2,C) Chern-Simons invariants of torus-knot representations: Kirk-Klassen formula; computed explicitly by Dubois-Kashaev (math/0510607) and Murakami (arXiv 1001.2680; survey 0802.0039).
+- The non-abelian components of T(a,b) are indexed by (k,l), 1 <= k <= a-1, 1 <= l <= b-1, k = l mod 2: (a-1)(b-1)/2 of them. For T(2,q) that is (q-1)/2, as we found.
+- Prediction from this: 8_19 = T(3,4) has 3 directions and 10_124 = T(3,5) has 4; the drawing search found only 1 each, so 2 and 3 roots were missed. The pure-direction part is a REPRODUCTION in our frame.
+
+## HOMFLY-BOOKS-01/02, HOMFLY read with light (homfly_books_01.py, homfly_books_02.py)
+- Parsing check: the Jones line inside HOMFLY (v = t^-1, z = t^1/2 - t^-1/2) reproduces the Jones climb to 3e-13.
+- The plain torus |v| = |z| = 1 carries nothing: climb vs vol 0.036, no gain over log det + Jones; turn vs signature ~0.
+- Opposite: the knot-theory surface. The sl(N) lines v = t^(-N/2), z = t^1/2 - t^-1/2, and the light surface they sweep (v on the circle, z = 2i sin(b/2)). 12,955 knots to 13 crossings.
+  - Climb vs volume by N: N=0 (Alexander) 0.60; N=2 (Jones) 0.86; N=3..8 0.78-0.86, rising to 0.858 at N=8.
+  - R^2 for volume: log det + Jones 0.795; adding a higher line (N=8) 0.830; all lines N=0..8 with log det 0.838.
+  - The light-surface climb: rho 0.864; R^2 with log det 0.819, with log det + Jones 0.835.
+- Reading: HOMFLY does hold more of the space than Jones alone, but only where light really runs (the sl(N) lines), not on the plain two-phase torus. The higher-N lines each carry a slice the Jones line misses. Prior art to check: sl(N) / coloured HOMFLY volume conjectures; Mahler measures of sl(N) specialisations.
+- VOTKP's first meaning ("the HOMFLY and coloured Jones mix to map the volume") is back in the picture: the mix of sl(N) lines carries volume beyond the determinant and Jones.
