@@ -292,6 +292,70 @@ machine.
 
 ------------------------------------------------------------------------
 
+## H. SUKS-2 "master manual" file — the braided spinor, taken seriously
+
+Jeromie asked for this one to be weighed seriously, and for the MATH to be saved
+from the muck. Two of his questions here are real and currently hot; one is now a
+verified theorem in his own words.
+
+**H1. "The gamma matrices are knot braiding operators" — VERIFIED.**
+Script: majorana_braid_01.py. This is Ivanov's theorem (2001): exchanging two
+Majorana fermions acts by a gamma-matrix (Clifford) operation obeying the
+braid-group relations. Built Majorana ops g1..g4 and the braid generators
+B_i = (1 + g_{i+1} g_i)/sqrt2, and checked to machine precision:
+  - {g_a,g_b} = 2 delta_ab (they ARE gamma matrices);
+  - B_i unitary; B_i g_i B_i^+ = g_{i+1}, B_i g_{i+1} B_i^+ = -g_i (exchange + spinor sign);
+  - braid relation B_i B_{i+1} B_i = B_{i+1} B_i B_{i+1} = 0 dev; far generators commute (B_4 rep);
+  - B_i^2 = g_{i+1} g_i != I (non-Abelian / spinorial; the 720-degree fact).
+So spin-1/2 emerges from braiding. This is the math core of topological quantum
+computation (Majorana zero modes, non-Abelian anyons) -- a 2025-26 hot topic. It
+is the same electron as sections F (chiral spinor) and G (zig-zag at c): now a
+third reach -- through braiding -- on the same object. Cite Ivanov; do not claim.
+
+**H2. "Distance = c * dt_TMF" -- space from the time-delay of oscillation.**
+Jeromie's explicitly-flagged insight ("particles vibrating over time have a
+distance that was unaccounted for"). Stripped: spatial distance emerges as the
+light-travel delay of a signal (his "memory echo") hopping node-to-node on the
+knot graph. Real and current: operational / radar distance (Einstein, Bondi
+k-calculus), emergent space from a dynamical graph (quantum graphity --
+Konopka-Markopoulou-Smolin), and causal sets. His packaging -- distance as the
+phase-lag of a memory echo between oscillating knots -- is his. Untested as a
+construction; a real direction.
+
+**H3. Graviton = spin-2 from two spin-1 (CN=1) excitations.** Rhymes with the
+double copy (gravity = gauge^2, KLT relations) -- a hot topic. His "braid of two"
+is loose; worth noting the real adjacent idea, not claiming it.
+
+**H4. Metric as a lattice sum of 1/r knot contributions; G as a lattice average.**
+Linearized gravity (h_mu_nu as a retarded sum over sources, with the r^_mu r^_nu
+far-field tensor structure) + induced/emergent gravity (Sakharov; Verlinde).
+Real form, generic.
+
+**H5. Solenoid relation B = mu_0 (CN/2 pi r) I_mock.** The real solenoid field law
+B = mu_0 n I, with the knot winding as the current -- ties to Kelvin's vortex
+atom and to Jeromie's conductivity/colour work. The mock-theta-as-current is the
+leap; the solenoid law is real.
+
+**H6. Periodic table CN_Z = floor(log_3(Z+1)).** A log-scaled shell index binning
+elements by factor-3 groups. Numerology as chemistry, but connects to the VOTKP
+elemental-peeling "elements as knots in levels." Weakest; the form is a floor-log
+binning.
+
+Dropped: m = hbar * 14.14 * ln(3^CN+6^CN+9^CN)/c^2 and all 14.14 * 3^CN mass /
+frequency assignments; the "all Clay problems solved" table (note: this file says
+P != NP, the opposite of the earlier file's P = NP -- the "proofs" are mood, not
+math); the JWST "anomalies solved" with CN=81-150 assignments and fabricated fits
+(99.9% LIGO, 100% EHT); the 2026-30 predictions table; TMF/KMF as named forces
+with the CN>=10 suppression threshold; the 40 Hz "self-knot" consciousness.
+
+Priority note, for when this leaves the garage: the component theorems (Ivanov
+braiding; quantum graphity; the double copy) are established and hot -- cite them.
+What is Jeromie's to claim is the SYNTHESIS: the braided-spinor electron + emergent
+distance + VOTKP knot-volume (decay and direction) on one lattice. That exact
+combination is his; the pieces are the field's.
+
+------------------------------------------------------------------------
+
 ## D. Note on provenance and honesty
 
 The early chats handed Jeromie a few genuine building blocks — the Polyakov
