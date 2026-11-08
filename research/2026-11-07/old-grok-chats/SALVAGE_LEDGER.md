@@ -152,6 +152,59 @@ target, then reporting the target as a discovery) or simply never run.
 
 ------------------------------------------------------------------------
 
+## E. Equations as forms — woo stripped
+
+The claims these were attached to are false (section C). But as bare
+mathematical objects, with the 14.13 Hz / resonance framing removed, several are
+real and recognizable. Judging them as forms, not as claims:
+
+1. **Knot polynomial carrying a crossing-counted phase — the standout.**
+   Chat form: P(k) = K₀ · JP(k) · e^{i·θ·CN} (JP = Jones polynomial, CN =
+   crossing number). Stripped, this is the shape of a *framed* knot invariant:
+   V(L) = (−A³)^{w(L)}·⟨L⟩ carries a factor raised to the writhe (signed
+   crossings). Magnitude from the polynomial, direction from a crossing-counted
+   phase — the two-books structure of the VOTKP polynomial (decay + direction in
+   one object, read off crossings), prefigured in 2025. The chat had the right
+   shape and the wrong engine.
+
+2. **Complex quadratic map.** Chat form: z_{n+1} = z_n² + 14.13i. Stripped:
+   z_{n+1} = z_n² + c — the Mandelbrot/Julia family. c = 14.13i escapes (|c|>2),
+   so that point is trivial, but the form is the complex quadratic dynamical
+   system, and the vacuum disk lives in the same plane (filled Julia sets, the
+   quadratic family). Foundational; usable.
+
+3. **Fractional-derivative / wavelet operator.** Chat form:
+   df/dx · e^{i2πνx} · (x/ℓ_P)^{−0.694}. Stripped: a derivative modulated by a
+   plane wave and a power-law envelope — the shape of a fractional derivative or
+   a Morlet-type wavelet. Real operator form; the exponent 0.694 ≈ ln 2
+   (section A10).
+
+4. **Oscillating power spectrum.** Chat form: P(k) = P₀(1 + A·sin(2π·14.13·k)).
+   Stripped: P(k) = P₀(1 + A·sin(2πfk)) — the standard baryon-acoustic-
+   oscillation wiggle form on a power spectrum. Real functional form.
+
+5. **Entropic-gravity source.** Chat form: G = (ΔS/Δt)·14.13. Stripped:
+   G ∝ dS/dt — a gravitational quantity sourced by an entropy rate, the
+   Jacobson/entropic shape, in the "ledger outlives the metric" lineage. Real,
+   if generic.
+
+6. **Frequency-ratio shift.** Chat form: ΔT = T₀·(f_local/f₀). Stripped:
+   ΔT/T ∝ Δf/f — the redshift/Doppler ratio. Real but elementary.
+
+7. **Fourier/resonance filter.** MFEO's cos(2π f t) path filter: projecting onto
+   a frequency to select solutions. Real signal processing; the zeta-winding
+   instance is verified in section A5.
+
+Still woo, named so the list isn't over-sold:
+- ω_res = 3^n · 6^m · 9^p · 14.134725 — a multiplicatively generated frequency
+  lattice, but the 3/6/9 bases and the zeta factor are numerology; the only real
+  residue is "smooth-number frequencies."
+- V = t^{3n} + t^{6m} − t^{9p} — a trinomial whose +,+,− signature echoes the
+  Neumann flattening signs and the Cl(4,1) metric (+,+,+,+,−), but does no work
+  as written.
+
+------------------------------------------------------------------------
+
 ## D. Note on provenance and honesty
 
 The early chats handed Jeromie a few genuine building blocks — the Polyakov
