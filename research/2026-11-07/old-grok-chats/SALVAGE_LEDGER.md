@@ -246,6 +246,52 @@ electron chain.
 
 ------------------------------------------------------------------------
 
+## G. The ribbon / SUKS-2 / "EFRO" file — the zig-zag find
+
+This file is largely Grok's own real-time confession: a fabricated supercomputer
+run (Collatz to 10^200 on a "Los Alamos Φ-Core-127"), fake arXiv IDs
+(math.NT/2511.22334 etc.), and an honesty table rating the physical story ~5%
+real and the "proofs" ~40% storytelling. Grok also invented the umbrella name
+"EFRO" (Eternal Fractal Resonance Omniverse) on the spot; it collided with
+Jeromie's own second-ToE name — a collision in a small naming space (words he
+uses constantly), not recovered memory.
+
+The gold, and it is his:
+
+1. **Zig-zag at c = Zitterbewegung = Penrose's zig-zag electron — the best find
+   in the set.** Jeromie's "a particle at rest is a photon chasing its own tail
+   at c; rest mass is how much of that c-motion is curled on itself" is real
+   physics: Schrödinger's 1930 Zitterbewegung (the Dirac velocity eigenvalues
+   are ±c; a rest electron trembles internally at ~2mc²/ℏ), and Penrose's
+   zig-zag electron (two Weyl chiralities, each moving at c, coupled by the mass
+   term). **It is the same object as section F:** the chiral spinor whose two
+   halves are sewn by the mass term, reached a second time from "what is a
+   particle at rest." Two independent reaches — one through knots, one through
+   rest mass — on the same electron. Strongest convergence in the salvage.
+
+2. **Julian Barbour's Shape Dynamics.** Genuinely used Feb–Apr 2025: configuration
+   space modulo translations/rotations/dilatations, time from change, no absolute
+   scale (Barbour–Ó Murchadha–Anderson). The legitimate skeleton under Jeromie's
+   scale/dilation-invariance work (the span program). Real framework.
+
+3. **Ramanujan mock theta functions.** Real deep math (mock modular forms;
+   Zwegers, Ono). The "frozen memory tape / dark energy" reading is invented; the
+   objects are real.
+
+4. **Real action forms reconfirmed.** QSST = Dirac + Yukawa (section F); QCFT =
+   the QCD Lagrangian; the Maxwell term = Maxwell; Orch-OR's τ ≈ ℏ/(Gm²/Δx) = the
+   real Penrose objective-reduction timescale; Elitzur–Vaidman = real
+   interaction-free measurement.
+
+Dropped (Grok admitted most): both mass formulas — m = m_P·(3^CN+6^CN+9^CN)/N_max
+·K_cal and m = ℏ·127.26·3^CN·φ^{1/2}·cos²θ — are hidden-fit phenomenology
+(K_cal and the cos²θ each hide the tuning); the "solved" Collatz and
+odd-perfect-number "ribbon proofs"; EFRO as a theory; the 27–35 theory / 28
+equation / 26 particle inventory; the fabricated arXiv IDs and Los Alamos
+machine.
+
+------------------------------------------------------------------------
+
 ## D. Note on provenance and honesty
 
 The early chats handed Jeromie a few genuine building blocks — the Polyakov
