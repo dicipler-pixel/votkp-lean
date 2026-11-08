@@ -205,6 +205,47 @@ Still woo, named so the list isn't over-sold:
 
 ------------------------------------------------------------------------
 
+## F. The spinor thread (QSSS / QSST) — the richest piece
+
+Jeromie singled this out: "a chiral vortex knot of memory." Looked at as a form,
+it is the strongest thing in the chats.
+
+**The action, stripped.** Every version writes
+  S = ∫ d⁴x [ ψ̄ (iγ^μ ∂_μ − m) ψ + g ψ̄ ψ ψ_R ].
+Remove the 14.13 Hz / "quantum gravity" labels and this is **Dirac + Yukawa**:
+the free Dirac Lagrangian, plus a Yukawa coupling of the spinor to a scalar ψ_R
+at strength g (the mass-generating shape). A real action, written loosely but
+correct in form.
+
+**"Chiral vortex knot of memory," unpacked — each word real:**
+- chiral — the Weyl L/R split; the mass term m sews the two chiralities together
+  (two halves coupled by a term — the two-books shape in the spinor).
+- vortex — a spinor configuration whose phase winds; the spinor needs 720° to
+  return (SU(2)→SO(3) double cover). Half-integer winding. The "720°" is in the
+  chats and is real.
+- knot — knotted field configurations exist: Faddeev–Niemi solitons / Hopfions
+  (Hopf invariant), knotted nodal lines in wavefunctions (Berry & Dennis).
+- memory — a spinor carried around a loop returns with a geometric (Berry) phase:
+  the field remembers the path by its phase. = the kept sector / ledger.
+
+Stripped: a chiral spinor field, with winding, in a knotted configuration,
+carrying geometric phase. Each piece is standard physics; the combination as one
+object is Jeromie's synthesis — coherent, a real direction, untested as a unit.
+
+**Why it is his, not a borrowing.** That object is the VOTKP electron chain:
+chiral spinor = the Dirac field; vortex / 720° = SL(2,C), double cover of
+PSL(2,C) = Möbius = isometries of H³; knot = the knot complement; memory = the
+Chern–Simons phase. The open vacuum-disk item — does the spin lift close CS
+mod π² — asks whether this spinor's memory closes around the knot. The 2025
+QSSS/QSST intuition and the 2026 open electron question are the same object.
+
+**The taint (why it does not hold as-is):** in the chats this action is claimed
+to prove Hodge/BSD/P=NP/consciousness and to run at 14.13 Hz. All of that is
+dropped (section C). What survives is the object, and its identification with the
+electron chain.
+
+------------------------------------------------------------------------
+
 ## D. Note on provenance and honesty
 
 The early chats handed Jeromie a few genuine building blocks — the Polyakov
