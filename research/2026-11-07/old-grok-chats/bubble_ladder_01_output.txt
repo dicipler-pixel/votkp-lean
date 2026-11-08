@@ -1,0 +1,24 @@
+
+== boundary choice A: influence / pressure-balance boundary
+  boundary radius                    log10:    7.80   13.26   21.79   26.14   steps from planet   5.46  13.99  18.33   ratios  2.56  3.36  
+  boundary / body radius             log10:    1.00    4.42    1.12    0.00   steps from planet   3.42   0.12  -1.00   ratios  0.04 -0.29  
+  mass                               log10:   24.78   30.30   42.41   52.96   steps from planet   5.52  17.64  28.19   ratios  3.19  5.10  
+  mean density in boundary           log10:    0.74  -10.10  -23.58  -26.07   steps from planet -10.84 -24.32 -26.81   ratios  2.24  2.47  
+  dynamical time at boundary         log10:    4.41    9.83   16.57   17.81   steps from planet   5.42  12.16  13.40   ratios  2.24  2.47  
+  surface gravity G M / R^2 at body  log10:    0.99    2.44   -9.09   -9.48   steps from planet   1.45 -10.09 -10.48   ratios -6.97 -7.24  
+
+== boundary choice B: gravitational-reach boundary
+  boundary radius                    log10:    9.18   16.54   22.49   26.64   steps from planet   7.36  13.31  17.47   ratios  1.81  2.37  
+  boundary / body radius             log10:    2.37    7.69    1.82    0.51   steps from planet   5.32  -0.55  -1.86   ratios -0.10 -0.35  
+  mass                               log10:   24.78   30.30   42.41   52.96   steps from planet   5.52  17.64  28.19   ratios  3.19  5.10  
+  mean density in boundary           log10:   -3.37  -19.93  -25.68  -27.59   steps from planet -16.56 -22.30 -24.21   ratios  1.35  1.46  
+  dynamical time at boundary         log10:    6.46   14.74   17.62   18.57   steps from planet   8.28  11.15  12.11   ratios  1.35  1.46  
+  surface gravity G M / R^2 at body  log10:    0.99    2.44   -9.09   -9.48   steps from planet   1.45 -10.09 -10.48   ratios -6.97 -7.24  
+  dynamical time at boundary         log10:    6.46   14.74   17.62   18.57   steps from planet   8.28  11.15  12.11   ratios  1.35  1.46  
+  surface gravity G M / R^2 at body  log10:    0.99    2.44   -9.09   -9.48   steps from planet   1.45 -10.09 -10.48   ratios -6.97 -7.24  
+
+== OPPOSITE: base = universe, steps down to galactic, local, planet (want 1 : 2 : 3)
+  planet=Earth   boundary A  mass                               ratios  2.15  2.67  <-- FITS
+  planet=Earth   boundary B  mass                               ratios  2.15  2.67  <-- FITS
+  planet=Jupiter boundary A  mass                               ratios  2.15  2.43  
+  planet=Jupiter boundary B  mass                               ratios  2.15  2.43  
