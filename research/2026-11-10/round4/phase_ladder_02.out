@@ -1,0 +1,12 @@
+E = 1.5 eV: 41 elements; beyond-line atoms present: ['Cs', 'K', 'Li', 'Na', 'Rb']
+   phase: beyond-line [np.float64(56.5), np.float64(44.4), np.float64(28.5), np.float64(31.3), np.float64(50.0)]   rest median 14.8 max 28.6   one-sided p = 2.7e-06
+   top seven phases: [('Cs', np.float64(56.5)), ('Rb', np.float64(50.0)), ('K', np.float64(44.4)), ('Na', np.float64(31.3)), ('Ca', np.float64(28.6)), ('Li', np.float64(28.5)), ('C', np.float64(24.6))]
+   even reading |G|^2: beyond-line [np.float64(0.762), np.float64(0.974), np.float64(0.928), np.float64(0.984), np.float64(0.924)]   rest median 0.778   two-sided p = 0.091
+E = 2.0 eV: 41 elements; beyond-line atoms present: ['Cs', 'K', 'Li', 'Na', 'Rb']
+   phase: beyond-line [np.float64(78.6), np.float64(61.2), np.float64(38.4), np.float64(42.5), np.float64(69.1)]   rest median 19.3 max 39.5   one-sided p = 2.7e-06
+   top seven phases: [('Cs', np.float64(78.6)), ('Rb', np.float64(69.1)), ('K', np.float64(61.2)), ('Na', np.float64(42.5)), ('Ca', np.float64(39.5)), ('Li', np.float64(38.4)), ('Cu', np.float64(34.1))]
+   even reading |G|^2: beyond-line [np.float64(0.649), np.float64(0.945), np.float64(0.908), np.float64(0.972), np.float64(0.871)]   rest median 0.764   two-sided p = 0.099
+E = 2.5 eV: 41 elements; beyond-line atoms present: ['Cs', 'K', 'Li', 'Na', 'Rb']
+   phase: beyond-line [np.float64(100.6), np.float64(77.6), np.float64(49.2), np.float64(52.6), np.float64(88.8)]   rest median 24.2 max 52.0   one-sided p = 2.7e-06
+   top seven phases: [('Cs', np.float64(100.6)), ('Rb', np.float64(88.8)), ('K', np.float64(77.6)), ('Na', np.float64(52.6)), ('Ca', np.float64(52.0)), ('Li', np.float64(49.2)), ('Au', np.float64(43.0))]
+   even reading |G|^2: beyond-line [np.float64(0.494), np.float64(0.93), np.float64(0.858), np.float64(0.95), np.float64(0.823)]   rest median 0.688   two-sided p = 0.099
