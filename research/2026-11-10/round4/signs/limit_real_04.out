@@ -1,0 +1,101 @@
+WHY: the exact limit polynomials (LIMIT-M2-01) list every candidate limit; a candidate is a limit of the real
+slice only if its branch is real. Real branches are found at x = 12 with 200 digits and exact coefficients; the limit
+is approached to ~e^-24, so agreement to 8 digits is the test.  Control: 17/3 must show 1/9 (printed in the paper).
+KILL: the control fails; or a real branch with 1e-6 < k < 4 that is not at an exact limit value.
+17/3 cf [5, 1, 2]  roots 8, real 4, real with k in (1e-6,4): 1
+      B: 4 sin^2(1 pi/6)/3^2 = 0.11111111   multiplicity 1 : REAL x1
+      real band branches not at an exact limit value: []
+23/3 cf [7, 1, 2]  roots 11, real 5, real with k in (1e-6,4): 1
+      B: 4 sin^2(1 pi/6)/4^2 = 0.0625       multiplicity 1 : REAL x1
+      real band branches not at an exact limit value: []
+29/5 cf [5, 1, 4]  roots 14, real 6, real with k in (1e-6,4): 2
+      B: 4 sin^2(1 pi/10)/3^2 = 0.042440668  multiplicity 1 : REAL x1
+      B: 4 sin^2(3 pi/10)/3^2 = 0.29089267   multiplicity 1 : REAL x1
+      real band branches not at an exact limit value: []
+27/7 cf [3, 1, 6]  roots 13, real 7, real with k in (1e-6,4): 3
+      B: 4 sin^2(1 pi/14)/2^2 = 0.049515566  multiplicity 1 : REAL x1
+      B: 4 sin^2(3 pi/14)/2^2 = 0.38873953   multiplicity 1 : REAL x1
+      B: 4 sin^2(5 pi/14)/2^2 = 0.8117449    multiplicity 1 : REAL x1
+      real band branches not at an exact limit value: []
+41/7 cf [5, 1, 6]  roots 20, real 8, real with k in (1e-6,4): 0
+      B: 4 sin^2(1 pi/14)/3^2 = 0.022006918  multiplicity 1 : no real branch
+      B: 4 sin^2(3 pi/14)/3^2 = 0.17277313   multiplicity 1 : no real branch
+      B: 4 sin^2(5 pi/14)/3^2 = 0.36077551   multiplicity 1 : no real branch
+      real band branches not at an exact limit value: []
+23/17 cf [1, 2, 1, 5]  roots 11, real 7, real with k in (1e-6,4): 2
+      A: 4 sin^2(1 pi/3)/2^2 = 0.75         multiplicity 1 : REAL x1
+      A: 4 sin^2(1 pi/6)/2^2 = 0.25         multiplicity 1 : REAL x1
+      real band branches not at an exact limit value: []
+35/29 cf [1, 4, 1, 5]  roots 17, real 9, real with k in (1e-6,4): 2
+      A: 4 sin^2(1 pi/3)/3^2 = 0.33333333   multiplicity 1 : REAL x1
+      A: 4 sin^2(1 pi/6)/3^2 = 0.11111111   multiplicity 1 : REAL x1
+      real band branches not at an exact limit value: []
+39/29 cf [1, 2, 1, 9]  roots 19, real 11, real with k in (1e-6,4): 4
+      A: 4 sin^2(1 pi/5)/2^2 = 0.3454915    multiplicity 1 : REAL x1
+      A: 4 sin^2(2 pi/5)/2^2 = 0.9045085    multiplicity 1 : REAL x1
+      A: 4 sin^2(1 pi/10)/2^2 = 0.095491503  multiplicity 1 : REAL x1
+      A: 4 sin^2(3 pi/10)/2^2 = 0.6545085    multiplicity 1 : REAL x1
+      real band branches not at an exact limit value: []
+13/5 cf [2, 1, 1, 2]  roots 6, real 2, real with k in (1e-6,4): 0
+      A: 4 sin^2(1 pi/6)/1^2 = 1.0          multiplicity 2 : no real branch
+      real band branches not at an exact limit value: []
+25/9 cf [2, 1, 3, 2]  roots 12, real 4, real with k in (1e-6,4): 0
+      A: 4 sin^2(1 pi/6)/1^2 = 1.0          multiplicity 2 : no real branch
+      real band branches not at an exact limit value: []
+31/13 cf [2, 2, 1, 1, 2]  roots 15, real 7, real with k in (1e-6,4): 4
+      A: 4 sin^2(1 pi/6)/1^2 = 1.0          multiplicity 2 : REAL x3
+      A: 4 sin^2(1 pi/4)/1^2 = 2.0          multiplicity 3 : REAL x1
+      B: 4 sin^2(1 pi/6)/1^2 = 1.0          multiplicity 3 : REAL x3
+      real band branches not at an exact limit value: []
+21/13 cf [1, 1, 1, 1, 1, 2]  roots 10, real 4, real with k in (1e-6,4): 1
+      B: 4 sin^2(1 pi/6)/1^2 = 1.0          multiplicity 3 : REAL x1
+      real band branches not at an exact limit value: []
+47/3 cf [15, 1, 2]  roots 23, real 3, real with k in (1e-6,4): 0
+      B: 4 sin^2(1 pi/6)/8^2 = 0.015625     multiplicity 1 : no real branch
+      real band branches not at an exact limit value: []
+59/29 cf [2, 29]  roots 29, real 15, real with k in (1e-6,4): 14
+      A: 4 sin^2(1 pi/3)/1^2 = 3.0          multiplicity 1 : REAL x1
+      A: 4 sin^2(1 pi/6)/1^2 = 1.0          multiplicity 1 : REAL x1
+      A: 4 sin^2(1 pi/5)/1^2 = 1.381966     multiplicity 1 : REAL x1
+      A: 4 sin^2(2 pi/5)/1^2 = 3.618034     multiplicity 1 : REAL x1
+      A: 4 sin^2(1 pi/10)/1^2 = 0.38196601   multiplicity 1 : REAL x1
+      A: 4 sin^2(3 pi/10)/1^2 = 2.618034     multiplicity 1 : REAL x1
+      A: 4 sin^2(1 pi/30)/1^2 = 0.043704799  multiplicity 1 : REAL x1
+      A: 4 sin^2(7 pi/30)/1^2 = 1.7909431    multiplicity 1 : REAL x1
+      A: 4 sin^2(11 pi/30)/1^2 = 3.3382612    multiplicity 1 : REAL x1
+      A: 4 sin^2(13 pi/30)/1^2 = 3.8270909    multiplicity 1 : REAL x1
+      A: 4 sin^2(1 pi/15)/1^2 = 0.17290908   multiplicity 1 : REAL x1
+      A: 4 sin^2(2 pi/15)/1^2 = 0.66173879   multiplicity 1 : REAL x1
+      A: 4 sin^2(4 pi/15)/1^2 = 2.2090569    multiplicity 1 : REAL x1
+      A: 4 sin^2(7 pi/15)/1^2 = 3.9562952    multiplicity 1 : REAL x1
+      B: 4 sin^2(1 pi/58)/1^2 = 0.011724086  multiplicity 1 : no real branch
+      B: 4 sin^2(3 pi/58)/1^2 = 0.10469366   multiplicity 1 : no real branch
+      B: 4 sin^2(5 pi/58)/1^2 = 0.28628565   multiplicity 1 : no real branch
+      B: 4 sin^2(7 pi/58)/1^2 = 0.54800902   multiplicity 1 : no real branch
+      B: 4 sin^2(9 pi/58)/1^2 = 0.87762587   multiplicity 1 : no real branch
+      B: 4 sin^2(11 pi/58)/1^2 = 1.2597237    multiplicity 1 : no real branch
+      B: 4 sin^2(13 pi/58)/1^2 = 1.676436     multiplicity 1 : no real branch
+      B: 4 sin^2(15 pi/58)/1^2 = 2.1082778    multiplicity 1 : no real branch
+      B: 4 sin^2(17 pi/58)/1^2 = 2.5350567    multiplicity 1 : no real branch
+      B: 4 sin^2(19 pi/58)/1^2 = 2.9368169    multiplicity 1 : no real branch
+      B: 4 sin^2(21 pi/58)/1^2 = 3.2947726    multiplicity 1 : no real branch
+      B: 4 sin^2(23 pi/58)/1^2 = 3.5921861    multiplicity 1 : no real branch
+      B: 4 sin^2(25 pi/58)/1^2 = 3.8151508    multiplicity 1 : no real branch
+      B: 4 sin^2(27 pi/58)/1^2 = 3.9532411    multiplicity 1 : no real branch
+      real band branches not at an exact limit value: []
+11/7 cf [1, 1, 1, 3]  roots 5, real 3, real with k in (1e-6,4): 1
+      B: 4 sin^2(1 pi/6)/1^2 = 1.0          multiplicity 1 : REAL x1
+      real band branches not at an exact limit value: []
+17/7 cf [2, 2, 3]  roots 8, real 6, real with k in (1e-6,4): 2
+      A: 4 sin^2(1 pi/4)/1^2 = 2.0          multiplicity 1 : REAL x1
+      A: 4 sin^2(1 pi/6)/1^2 = 1.0          multiplicity 2 : REAL x1
+      B: 4 sin^2(1 pi/6)/1^2 = 1.0          multiplicity 1 : REAL x1
+      real band branches not at an exact limit value: []
+23/13 cf [1, 1, 3, 3]  roots 11, real 5, real with k in (1e-6,4): 3
+      A: 4 sin^2(1 pi/4)/1^2 = 2.0          multiplicity 1 : REAL x1
+      A: 4 sin^2(1 pi/6)/1^2 = 1.0          multiplicity 2 : no real branch
+      B: 4 sin^2(1 pi/4)/1^2 = 2.0          multiplicity 2 : REAL x1
+      B: 4 sin^2(1 pi/10)/1^2 = 0.38196601   multiplicity 1 : REAL x1
+      B: 4 sin^2(3 pi/10)/1^2 = 2.618034     multiplicity 1 : REAL x1
+      real band branches not at an exact limit value: []
+exact limit values tested: 62 ; reached by a real branch: 41

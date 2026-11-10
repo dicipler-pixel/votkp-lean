@@ -1,0 +1,199 @@
+WHY THIS CHECK DECIDES IT
+ The label equal/opposite is read from KnotInfo's signature function (jump -+4 or 0 at a nullity-2 double root).
+ Each candidate separator is computed from a DIFFERENT column (Alexander polynomials, symmetry, Seifert matrix,
+ V + V^T) and cross-tabulated against the label on the full list of 199. A separator is a candidate whose every
+ value holds one label only.
+ Part A (definition check): the label is recomputed from the Seifert matrix: eigenvalues of H(w)=(1-w)V+(1-w*)V^T
+ just before and just after the root. Must agree 199/199 or the list itself is wrong.
+ Part B: the simple candidates. Part C: an arithmetic candidate written before the run:
+   for the factor f = t^2-t+1 (193 of 199) the two levels form a rank-2 Hermitian form over Q(zeta6); equal sign iff its
+   discriminant d > 0. Hilbert reciprocity for the pair (d, -3) says sign(d) = chi3(unit part of d) * prod over primes
+   p = 2 mod 3 of (-1)^(v_p(d)).  PREDICTION: |d| is fixed by the cofactor g = Delta/f^2 at zeta6 (so the prime part
+   comes from the Alexander polynomial), and the mod-3 part is the linking form of the DOUBLE BRANCHED COVER on its
+   3-part (from V + V^T alone). So: label = chi3(3-part linking discriminant) * prod_{p=2 mod 3} (-1)^(v_p(g(zeta6))).
+KILL CONDITIONS (written before the run)
+ A: any disagreement between the Seifert-matrix label and the KnotInfo label.
+ B: a candidate is a separator only if no value of it holds both labels; otherwise it is reported as NOT a separator.
+ C: within the clean stratum (3 does not divide g(zeta6)) any knot on the wrong side kills the prediction as a rule.
+
+nullity-2 double roots: 199 {'opp': 118, 'equal': 81}
+(nullity-2 roots of multiplicity 3-5, outside this list: (multiplicity, jump) -> {(4, 0): 5, (4, -4): 3, (3, -2): 9, (4, 4): 1, (3, 2): 3, (5, 2): 1} )
+
+===== PART A: label recomputed from the Seifert matrix
+agree 199 of 199; disagreements: []
+
+===== PART B: simple candidates
+
+-- root of the second Alexander polynomial, with multiplicity
+   value                                        equal   opp
+   multiplicity 1                                  81   118
+   VERDICT: constant, cannot separate
+
+-- root of unity and its order
+   value                                        equal   opp
+   not a root of unity: f = 2*t**2 - 3*t + 2        2     0
+   not a root of unity: f = 3*t**2 - 5*t + 3        1     0
+   not a root of unity: f = t**4 - 2*t**3 + t**     0     1
+   not a root of unity: f = t**4 - 3*t**3 + 3*t     0     1
+   not a root of unity: f = t**4 - 5*t**3 + 7*t     0     1
+   root of unity, order 6                          78   115
+   VERDICT: NOT a separator: 78 of 199 on the minority side of their value
+
+-- factor f
+   value                                        equal   opp
+   2*t**2 - 3*t + 2                                 2     0
+   3*t**2 - 5*t + 3                                 1     0
+   t**2 - t + 1                                    78   115
+   t**4 - 2*t**3 + t**2 - 2*t + 1                   0     1
+   t**4 - 3*t**3 + 3*t**2 - 3*t + 1                 0     1
+   t**4 - 5*t**3 + 7*t**2 - 5*t + 1                 0     1
+   VERDICT: NOT a separator: 78 of 199 on the minority side of their value
+
+-- signature just before the root, mod 4
+   value                                        equal   opp
+   0                                               50    84
+   2                                               31    34
+   VERDICT: NOT a separator: 81 of 199 on the minority side of their value
+
+-- signature just before the root
+   value                                        equal   opp
+   -2                                              31    23
+   0                                               50    84
+   2                                                0    11
+   VERDICT: NOT a separator: 73 of 199 on the minority side of their value
+
+-- signature AT the root minus signature before (definitional: +-2 iff equal)
+   value                                        equal   opp
+   -2                                              73     0
+   0                                                0   118
+   2                                                8     0
+   VERDICT: SEPARATES (no mixed value)
+
+-- knot signature (at -1)
+   value                                        equal   opp
+   -10                                              2     0
+   -2                                               5    14
+   -4                                              31    11
+   -6                                              19     1
+   -8                                              16     0
+   0                                                0    62
+   2                                                1    21
+   4                                                5     7
+   6                                                2     2
+   VERDICT: NOT a separator: 25 of 199 on the minority side of their value
+
+-- cofactor g = Delta / f^2 is trivial (Delta = f^2)
+   value                                        equal   opp
+   False                                           80   107
+   True                                             1    11
+   VERDICT: NOT a separator: 81 of 199 on the minority side of their value
+
+-- number of unit-circle roots of the cofactor g
+   value                                        equal   opp
+   0                                               34    62
+   2                                               27    35
+   4                                               18    18
+   6                                                2     3
+   VERDICT: NOT a separator: 81 of 199 on the minority side of their value
+
+-- alternating
+   value                                        equal   opp
+   N                                               38    55
+   Y                                               43    63
+   VERDICT: NOT a separator: 81 of 199 on the minority side of their value
+
+-- symmetry type (amphichiral kinds)
+   value                                        equal   opp
+   chiral                                          23    38
+   fully amphicheiral                               0     6
+   negative amphicheiral                            0     4
+   positive amphicheiral                            0     1
+   reversible                                      58    69
+   VERDICT: NOT a separator: 81 of 199 on the minority side of their value
+
+-- algebraic concordance order
+   value                                        equal   opp
+   1                                                0    13
+   2                                                0     7
+   4                                                0     1
+   infty                                           21    16
+   not listed                                      60    81
+   VERDICT: NOT a separator: 76 of 199 on the minority side of their value
+
+-- smooth four-genus
+   value                                        equal   opp
+   0                                                0    31
+   1                                                0    66
+   2                                               40    18
+   3                                               18     3
+   4                                               18     0
+   5                                                5     0
+   VERDICT: NOT a separator: 21 of 199 on the minority side of their value
+
+-- fibered
+   value                                        equal   opp
+   N                                               51    44
+   Y                                               30    74
+   VERDICT: NOT a separator: 74 of 199 on the minority side of their value
+
+-- crossing number
+   value                                        equal   opp
+   10                                               1     1
+   11                                               6    11
+   12                                              14    24
+   13                                              60    81
+   8                                                0     1
+   VERDICT: NOT a separator: 81 of 199 on the minority side of their value
+
+-- number of walls of the knot
+   value                                        equal   opp
+   1                                               34    62
+   2                                               27    35
+   3                                               18    18
+   4                                                2     3
+   VERDICT: NOT a separator: 81 of 199 on the minority side of their value
+
+-- signature function identically zero away from this root
+   value                                        equal   opp
+   False                                           81    56
+   True                                             0    62
+   VERDICT: NOT a separator: 56 of 199 on the minority side of their value
+
+connected sums: every knot in KnotInfo is prime, so "connected sum K#K against K#mirror K" has no instance here.
+
+===== PART C: arithmetic candidate for f = t^2 - t + 1 (193 of 199)
+exact discriminant d of the Seifert form V+V^T on the zeta6 eigenspace (basis-dependent up to norms; sign is invariant):
+   {('opp', 'd<0'): 115, ('equal', 'd>0'): 78}  (equal iff d>0 is the definition, re-checked exactly)
+primes p = 2 mod 3 at odd power in d agree with those in g(zeta6): 178 of 193
+
+contingency: stratum v_3(g(zeta6)), 3-part of the double-cover linking form [(exponent, unit mod 3)], number of odd inert primes of g(zeta6), label
+   v3(g)=0  3-part [(1, 1), (1, 1)]             odd inert primes mod 2 = 0   equal   6  opp   0
+   v3(g)=0  3-part [(1, 1), (1, 1)]             odd inert primes mod 2 = 1   equal   0  opp   2
+   v3(g)=0  3-part [(1, 1), (1, 2)]             odd inert primes mod 2 = 0   equal   0  opp  77
+   v3(g)=0  3-part [(1, 1), (1, 2)]             odd inert primes mod 2 = 1   equal  19  opp  10
+   v3(g)=0  3-part [(1, 2), (1, 2)]             odd inert primes mod 2 = 0   equal  18  opp   0
+   v3(g)=0  3-part [(1, 2), (1, 2)]             odd inert primes mod 2 = 1   equal   0  opp   5
+   v3(g)=1  3-part [(1, 1), (2, 1)]             odd inert primes mod 2 = 0   equal   0  opp   2
+   v3(g)=1  3-part [(1, 1), (2, 2)]             odd inert primes mod 2 = 0   equal   0  opp   2
+   v3(g)=1  3-part [(1, 1), (3, 2)]             odd inert primes mod 2 = 0   equal   1  opp   4
+   v3(g)=1  3-part [(1, 1), (4, 2)]             odd inert primes mod 2 = 0   equal   1  opp   0
+   v3(g)=1  3-part [(1, 2), (2, 1)]             odd inert primes mod 2 = 0   equal   6  opp   4
+   v3(g)=1  3-part [(1, 2), (2, 1)]             odd inert primes mod 2 = 1   equal   2  opp   0
+   v3(g)=1  3-part [(1, 2), (2, 2)]             odd inert primes mod 2 = 0   equal   7  opp   4
+   v3(g)=1  3-part [(1, 2), (2, 2)]             odd inert primes mod 2 = 1   equal   3  opp   0
+   v3(g)=1  3-part [(1, 2), (3, 1)]             odd inert primes mod 2 = 0   equal   3  opp   1
+   v3(g)=1  3-part [(1, 2), (3, 2)]             odd inert primes mod 2 = 0   equal   5  opp   1
+   v3(g)=1  3-part [(1, 2), (3, 2)]             odd inert primes mod 2 = 1   equal   0  opp   2
+   v3(g)=1  3-part [(1, 2), (4, 1)]             odd inert primes mod 2 = 1   equal   1  opp   0
+   v3(g)=1  3-part [(1, 2), (4, 2)]             odd inert primes mod 2 = 0   equal   1  opp   0
+   v3(g)=1  3-part [(2, 1), (2, 2)]             odd inert primes mod 2 = 0   equal   0  opp   1
+   v3(g)=1  3-part [(2, 1), (2, 2)]             odd inert primes mod 2 = 1   equal   2  opp   0
+   v3(g)=1  3-part [(2, 2), (3, 2)]             odd inert primes mod 2 = 1   equal   1  opp   0
+   v3(g)=2  3-part [(1, 1), (2, 1)]             odd inert primes mod 2 = 0   equal   1  opp   0
+   v3(g)=2  3-part [(1, 1), (2, 2)]             odd inert primes mod 2 = 0   equal   1  opp   0
+
+PREDICTION label = chi3(product of 3-part units) * (-1)^(number of odd inert primes), by stratum:
+   v3(g)=0: n=137   pred=+1: equal  43 opp  10 | pred=-1: equal   0 opp  84   -> one fixed sign convention fits 127 of 137
+      exceptions in the clean stratum: [('13a_1232', 'opp', 2, [(1, 1), (1, 2)]), ('13a_1238', 'opp', 2, [(1, 1), (1, 2)]), ('13a_1638', 'opp', 2, [(1, 1), (1, 2)]), ('13a_3072', 'opp', 2, [(1, 1), (1, 2)]), ('13n_2407', 'opp', -2, [(1, 1), (1, 2)]), ('13n_2408', 'opp', 2, [(1, 1), (1, 2)]), ('13n_2410', 'opp', -2, [(1, 1), (1, 2)]), ('13n_2411', 'opp', 2, [(1, 1), (1, 2)]), ('13n_2412', 'opp', -2, [(1, 1), (1, 2)]), ('13n_2414', 'opp', -2, [(1, 1), (1, 2)])]
+   v3(g)=1: n= 54   pred=+1: equal  18 opp   7 | pred=-1: equal  15 opp  14   -> one fixed sign convention fits 32 of 54
+   v3(g)=2: n=  2   pred=+1: equal   1 opp   0 | pred=-1: equal   1 opp   0   -> one fixed sign convention fits 1 of 2
