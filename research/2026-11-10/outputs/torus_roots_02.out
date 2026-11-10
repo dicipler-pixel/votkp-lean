@@ -1,0 +1,8 @@
+/usr/local/lib/python3.13/site-packages/plink/gui.py:33: UserWarning: Plink failed to import tkinter, GUI will not be available
+  warnings.warn('Plink failed to import tkinter, GUI will not be available')
+8_19 KnotInfo PD converged 411
+   kept (non-degenerate): {'11/12': 209}
+   dropped (degenerate) : {'irrational': 21, 'Im V0 != 0': 171, '1': 8, '0': 2}
+10_124 KnotInfo PD converged 120
+   kept (non-degenerate): {'14/15': 77}
+   dropped (degenerate) : {'Im V0 != 0': 34, '2/3': 3, 'irrational': 2, '5/6': 1, '9/10': 2, '2/5': 1}

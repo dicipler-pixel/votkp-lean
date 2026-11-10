@@ -1,0 +1,21 @@
+/usr/local/lib/python3.13/site-packages/plink/gui.py:33: UserWarning: Plink failed to import tkinter, GUI will not be available
+  warnings.warn('Plink failed to import tkinter, GUI will not be available')
+8_19 KnotInfo PD, 8 crossings: 16 sides, 6000 starts, 402s, converged(polished) 1558, non-degenerate 881, degenerate 677
+  non-degenerate distinct (Im V0, Re V0 mod pi^2) [count], Re V0/pi^2 as p/q (|err| in Re V0):
+    (+1.33e-15, 9.047137368) x881   Re/pi^2 = 11/12  err 2.2e-15  RATIONAL
+  degenerate (non-constant-family / run-away) solutions: 677, Im V0 range [-6.431, 6.431]
+8_19 braid (s1 s2)^4, 8 crossings: 16 sides, 6000 starts, 404s, converged(polished) 1355, non-degenerate 685, degenerate 670
+  non-degenerate distinct (Im V0, Re V0 mod pi^2) [count], Re V0/pi^2 as p/q (|err| in Re V0):
+    (-2.18e-15, 6.579736267) x106   Re/pi^2 = 2/3  err 3.3e-15  RATIONAL
+    (-1.15e-15, 9.047137368) x579   Re/pi^2 = 11/12  err 1.1e-15  RATIONAL
+  degenerate (non-constant-family / run-away) solutions: 670, Im V0 range [-0.000, 0.000]
+10_124 KnotInfo PD, 10 crossings: 20 sides, 5000 starts, 510s, converged(polished) 511, non-degenerate 267, degenerate 244
+  non-degenerate distinct (Im V0, Re V0 mod pi^2) [count], Re V0/pi^2 as p/q (|err| in Re V0):
+    (-1.08e-14, 7.237709894) x1     Re/pi^2 = 11/15  err 1.1e-15  RATIONAL
+    (-1.34e-16, 9.211630774) x266   Re/pi^2 = 14/15  err 2.2e-15  RATIONAL
+  degenerate (non-constant-family / run-away) solutions: 244, Im V0 range [-6.948, 6.948]
+10_124 braid (s1 s2)^5, 10 crossings: 20 sides, 5000 starts, 445s, converged(polished) 602, non-degenerate 283, degenerate 319
+  non-degenerate distinct (Im V0, Re V0 mod pi^2) [count], Re V0/pi^2 as p/q (|err| in Re V0):
+    (+1.06e-15, 7.237709894) x45    Re/pi^2 = 11/15  err 3.3e-15  RATIONAL
+    (+1.56e-15, 9.211630774) x238   Re/pi^2 = 14/15  err 0.0e+00  RATIONAL
+  degenerate (non-constant-family / run-away) solutions: 319, Im V0 range [-2.828, 3.664]
