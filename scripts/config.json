@@ -59,10 +59,26 @@
   {
    "module": "VOTKP.Witnesses",
    "path": "VOTKP/Witnesses.lean"
+  },
+  {
+   "module": "VOTKP.ThetaStructure",
+   "path": "VOTKP/ThetaStructure.lean"
+  },
+  {
+   "module": "VOTKP.ThetaGrid",
+   "path": "VOTKP/ThetaGrid.lean"
+  },
+  {
+   "module": "VOTKP.Colour",
+   "path": "VOTKP/Colour.lean"
+  },
+  {
+   "module": "VOTKP.MultiObserver",
+   "path": "VOTKP/MultiObserver.lean"
   }
  ],
- "expected_theorems": 140,
- "expected_false_controls": 15,
+ "expected_theorems": 180,
+ "expected_false_controls": 20,
  "root_imports": [
   "VOTKP.Smith",
   "VOTKP.Film",
@@ -78,7 +94,11 @@
   "VOTKP.Scaling",
   "VOTKP.Directed",
   "VOTKP.Channels",
-  "VOTKP.Witnesses"
+  "VOTKP.Witnesses",
+  "VOTKP.ThetaStructure",
+  "VOTKP.ThetaGrid",
+  "VOTKP.Colour",
+  "VOTKP.MultiObserver"
  ],
  "showcase": {
   "statements": "Showcase.lean",

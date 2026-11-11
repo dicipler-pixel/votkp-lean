@@ -13,7 +13,9 @@ exactly the statements written, under exactly the hypotheses written.
   computed by the scripts in its package; Lean checks none of them.
 - 5.6 is proved per channel in `Peel` and in matrix form in `Channels` for real symmetric forms
   `Kₘ`; complex Hermitian forms are not stated.
-- 6.2's "surviving matches" equivalences and the oblique-incidence statements.
+- 6.2's oblique-incidence statements. The finite linear "surviving matches"
+  equivalences are now covered by `Colour`, including bounded input witnesses;
+  measured gold spectra and optical-constant computations remain outside Lean.
 - The hyperbolic-disk reading of Corollary 15.2 is proved as the identity
   `(1 + Γ)/(1 − Γ) = z`; the Poincaré metric itself is not formalized.
 - Theorem 8.2 is an exact split of the hydrogenic form `IE = Ry Z²/n²`, with `Z` the effective
@@ -80,3 +82,30 @@ VOTKP/Energy.lean proves finite real-arithmetic identities conditional on suppli
   the paper, not in Lean. The signed offset is stated through the determinant ratio; entropies
   are not formalized.
 - **§8.7's in-shell stagger** is a computation on the archived ladders, not a Lean statement.
+
+## Theta and colour extension (November 2026)
+
+See [the source and scope record](docs/theta-colour-formalization.md).
+
+- `ThetaStructure` is algebra over supplied functions and laws. It does not
+  construct a knot invariant, prove its connected-sum formula, or prove
+  Conjectures 21 or 22. Mirror cancellation is equivalent to antisymmetry
+  only with a nonzero weight and no zero divisors. The `(Delta^2, 0)` record
+  is conditional and applies to the mirror-composite family, not every knot.
+- `ThetaGrid` checks the general completeness argument for a distinct
+  rectangular grid. It does not derive the degree bounds from the theta
+  algorithm or import the 78 reported rows, 66,728 grid cells, or the 21
+  resolved sign cases. Its denominator-clearing bridge requires an explicit
+  polynomial identity and a nonzero clearing multiplier at the point used.
+- `Colour` uses a declared finite linear receiver and operation. The bounded
+  witness lies in the componentwise unit cube; this does not establish that
+  an arbitrary sampled vector is the reflectance of a realizable material.
+  The normalized mixture theorems concern additive amounts, not a calibrated
+  paint law. Nonzero total is required to reconstruct the input. Formulas
+  involving division use Lean's totalized division; the physical mixture
+  reading requires nonnegative channels and positive relevant totals.
+- `MultiObserver` permits arbitrary ordered words in the declared linear
+  actions. It does not infer a restricted native grammar from colour names,
+  prime residues, or knot pictures. The finite stabilization bound uses
+  finite-dimensionality; it is not a claim about arbitrary nonlinear or
+  infinite-dimensional dynamics.

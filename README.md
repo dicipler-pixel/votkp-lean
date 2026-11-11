@@ -6,7 +6,7 @@
 
 [![Lean proof check](https://github.com/dicipler-pixel/votkp-lean/actions/workflows/build.yml/badge.svg)](https://github.com/dicipler-pixel/votkp-lean/actions/workflows/build.yml)
 ![Lean](https://img.shields.io/badge/Lean-v4.34.1-blue)
-![Theorems](https://img.shields.io/badge/theorems-140-2EA043)
+![Theorems](https://img.shields.io/badge/theorems-180-2EA043)
 ![sorry](https://img.shields.io/badge/sorry-0-2EA043)
 [![Paper v2.9 DOI](https://img.shields.io/badge/paper%20v2.9-10.5281%2Fzenodo.23340757-blue)](https://doi.org/10.5281/zenodo.23340757)
 ![Code: MIT](https://img.shields.io/badge/code-MIT-lightgrey)
@@ -43,9 +43,13 @@ forms of its numbered results. The library was first written from version 1.1, 2
 | [`VOTKP/Directed.lean`](VOTKP/Directed.lean) | 22 | §19 | Prop. 19.1: the directed coordinate in `(−1, 1)` without ordering, reversal, `⊕` as a group law on `(−1, 1)`, the telescoping composite, when a step shrinks the distance; Prop. 19.2: `L_rec − D_end = 4 min(R₊, R₋)` and its equality case; Prop. 19.3: lifts `U_b D U_bᵀ` share the spectrum and gap coordinate `tanh ρ` while the ground projector moves at metric `b²`; Prop. 19.4: `𝓛 ≥ a·TV`, Cauchy–Schwarz, `W ≥ w* 𝓛²/T ≥ w* a² L_rec²/4T`; §19.6: equal weights iff `de = 1/τ²`, the `1`/`4` example, equal populations give no friction |
 | [`VOTKP/Channels.lean`](VOTKP/Channels.lean) | 8 | 5.6, §20.3, §20.5.1 | 5.6 in matrix form for real symmetric forms: `D = Σ cₘ δsₘ Kₘ`, `β₋ L ≼ D ≼ β₊ L`, `ker D = ker L` when `β₋ > 0`, and `ker L` the intersection of the active kernels; the retained block of `(z − H)⁻¹` is `(z − A − B(z − D)⁻¹B†)⁻¹` (Schur complement); `(2πi)⁻¹∮ f(z) Σₖ Wₖ/(z − eₖ) dz = Σ_{eₖ inside} f(eₖ)Wₖ` (Cauchy's formula); `Tr [H,P]² = −2 Tr BB†`; the footprint `0.58` |
 | [`VOTKP/Witnesses.lean`](VOTKP/Witnesses.lean) | 7 | §20.5 | The readout `⟨Z⟩_t = sin(2gt) sin φ`; `φ = ±π/2` share norm and exchange expectation and give opposite readouts; `U(t)` is unitary and the dephased state reads `0`; the signed offset by Schur elimination, `det(I − C_A)/det C_A = det s₀/det s₁` when the interior determinants agree, and its sign change under `C ↦ I − C` |
-| | **140** | | |
+| [`VOTKP/ThetaStructure.lean`](VOTKP/ThetaStructure.lean) | 9 | Theta research extension | Conditional equivalence of mirror-composite cancellation and antisymmetry; mirror-family `(Delta²,0)` record; self-sum comparison; direct mirror and reverse-mirror witnesses with assumptions explicit |
+| [`VOTKP/ThetaGrid.lean`](VOTKP/ThetaGrid.lean) | 9 | Theta certificate method | Complete distinct rectangular-grid zero/equality certificates; `(2n+5)(2n+4)` specialization; nonzero clearing-multiplier bridge; counterexample to three-point extrapolation |
+| [`VOTKP/Colour.lean`](VOTKP/Colour.lean) | 12 | §6.2; Prime Colour CO04 | Surviving-match/kernel/factorization equivalences; bounded metamer witnesses; normalized mixture plus amount reconstructs the state; normalized colour alone cannot predict absolute addition |
+| [`VOTKP/MultiObserver.lean`](VOTKP/MultiObserver.lean) | 10 | Prime Colour OP01 | Ordered noncommuting actions; minimal all-word predictive quotient; finite horizon `dim(ker R)`; pure-action silence that a mixed word breaks |
+| | **180** | | |
 
-The last nine rows follow the section numbering of version 2.7 (12 October 2026).
+The rows from `Observer` through `Witnesses` follow the section numbering of version 2.7 (12 October 2026). The four November additions are described in [the theta/colour source and scope record](docs/theta-colour-formalization.md).
 
 What is not proved is listed in [`LIMITATIONS.md`](LIMITATIONS.md).
 
@@ -64,8 +68,9 @@ unit-circle ratio, and control 41.
 
 [`Showcase_WithProofs.lean`](Showcase_WithProofs.lean) proves `MainTheorem` from the library.
 Lean accepts that proof only if each library theorem's statement is the showcase statement, so
-the 692 lines of the library cannot be proving something weaker than the one page that states
-them.
+the linked library results cannot prove weaker statements than the showcase specifies.
+The showcase covers its original twelve headlines; the later additions are stated in their
+individual modules and included in the same kernel and axiom audits.
 
 ## How it is checked
 
@@ -78,7 +83,7 @@ Every push runs [the proof check](.github/workflows/build.yml) on GitHub:
 4. **Showcase**: `Showcase.lean` imports only Mathlib and holds no proofs, axioms, `sorry`,
    notation, macros or options; `example : Showcase.MainTheorem := Showcase.main_theorem`
    compiles, so the proved theorem carries exactly the showcase statement.
-5. **False controls**: fifteen deliberately wrong claims must fail to compile, for a mathematical
+5. **False controls**: twenty deliberately wrong claims must fail to compile, for a mathematical
    reason: the shell part at the first shell wall (the Smith reflection of the ratio `4`) being
    `1/2` (it is `3/5`); the ladders `1, 2, 6` and `1, 3, 6` having the same first step; the echo
    `x = −1/5` raising the reflectance; the two channel sets sharing a third cumulant; the shared
@@ -88,7 +93,10 @@ Every push runs [the proof check](.github/workflows/build.yml) on GitHub:
    thresholds asserted to imply equal total binding; the gaps `1` and `3` sharing a friction
    weight; an out-and-back record whose endpoint distance equals its length; the five-site
    shift's fifth Markov parameter being `0`; the curvature vanishing at half filling; the footprint
-   `0.58` claimed as `0.59`; and a negative channel coefficient giving a positive semidefinite form.
+   `0.58` claimed as `0.59`; a negative channel coefficient giving a positive semidefinite form;
+   cancellation with zero weight; cancellation in a ring with zero divisors; extrapolating from
+   three polynomial samples; normalized colour predicting the same absolute addition; and
+   separate-action silence asserted to survive a mixed word.
 
 ```bash
 lake exe cache get

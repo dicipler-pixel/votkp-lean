@@ -51,7 +51,19 @@ checksums the record lists:
 7760d68710e9cc60d407eb52a5c15fc8  VOTKP_Mixer_v1_3_20261013_standalone.html
 ```
 
-The library on `main` now holds 140 theorems in 15 modules (commit `bbe5b9e`, 31 October 2026,
+At 31 October 2026, the library held 140 theorems in 15 modules (commit `bbe5b9e`,
 checked by GitHub Actions and by an independent cold-clone rebuild on SAIR's Open Math OS). The
 folder `two-trees/` (commit `f26efd2`) adds the separate paper *Two Trees in One Ball*, version 4,
 with its own core-Lean check.
+
+## Theta and colour extension (November 2026)
+
+The next extension starts from commit
+`e3611fe31e3fdcf2a8f132078ab8776135fba541`. It reads the 1 November Prime
+Colour Transport research edition, the 223-page theta record, and the
+separate resolved-sign-case output. [The extension record](docs/theta-colour-formalization.md)
+identifies those inputs by SHA-256 and separates formal statements from
+external data checks. It adds conditional theta structure, rectangular-grid
+soundness, bounded surviving-match criteria, amount retention, and the
+multi-action predictive quotient. These are newly formalized parts of the
+research record; no claim of literature novelty follows from formalization.
