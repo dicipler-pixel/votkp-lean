@@ -1,0 +1,17 @@
+graph        girth  (4/3)*girth
+two              4  5.3333
+strip            4  5.3333
+corner           4  5.3333
+cube             4  5.3333
+double_cube      4  5.3333
+
+strip transfer: mu, trace 4-mu, evanescent?, kappa, z, Gamma, Gamma^2
+ 0.0   4.00  yes  kappa=1.316958 z=3.732051 Gamma=0.577350 Gamma^2=0.333333
+ 0.5   3.50  yes  kappa=1.158810 z=3.186141 Gamma=0.522233 Gamma^2=0.272727
+ 1.0   3.00  yes  kappa=0.962424 z=2.618034 Gamma=0.447214 Gamma^2=0.200000
+ 1.5   2.50  yes  kappa=0.693147 z=2.000000 Gamma=0.333333 Gamma^2=0.111111
+ 2.0   2.00  no (propagating, |trace|<=2)
+ 3.0   1.00  no (propagating, |trace|<=2)
+ 4.0   0.00  no (propagating, |trace|<=2)
+ 6.0  -2.00  no (propagating, |trace|<=2)
+ 7.0  -3.00  yes  kappa=0.962424 z=2.618034 Gamma=0.447214 Gamma^2=0.200000
