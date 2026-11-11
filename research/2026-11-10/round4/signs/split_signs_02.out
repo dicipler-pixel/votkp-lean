@@ -1,0 +1,30 @@
+WHY THIS CHECK DECIDES IT
+ Reciprocity needs the parity of v_p(d) at primes p = 2 mod 3, where d is the discriminant of the two levels.
+ SPLIT-SIGNS-01 assumed v_p(d) = v_p(g(zeta6)), g = Delta/(t^2-t+1)^2. That holds when the factor of p sits INSIDE the
+ two levels. REPAIR (made AFTER seeing the 10 misses, so it is a fit on those and a test only on the rest):
+ count the generators of the Alexander module at the prime (2, t^2+t+1): corank of V^T - w V over the field F_4.
+ corank 2 -> the 2 sits inside the two levels, use (-1)^(v_2(g)); corank 3 -> it sits in a third summand, use +1.
+ RULE: equal sign  iff  chi3(product of the two units of the 3-part of the double cover linking form)
+                        * (-1)^(number of odd primes p = 2 mod 3 at odd power in g(zeta6))
+                        * (-1)^(v_2(g(zeta6)) if corank_F4 = 2 else 0)   = +1.
+ Inputs: Alexander polynomial, V + V^T (double branched cover), V mod 2. The signature function is not used.
+KILL: any knot of the clean stratum (3 not dividing g(zeta6)) on the wrong side.
+OPPOSITE run under the same kill: the rule with the F_4 correction inverted (corank 3 -> use v_2, corank 2 -> +1).
+SECOND SETUP: the same rule on the strata where 3 divides g(zeta6) (no claim made there before the run).
+
+F_4 corank against v_2(g(zeta6)): {(1, 2): 16, (0, 2): 146, (2, 2): 14, (1, 3): 15, (3, 2): 2}
+
+REPAIRED RULE:
+   v_3(g(zeta6)) = 0 (n = 137):  rule +1: equal  43 opp   0 | rule -1: equal   0 opp  94   correct 137 of 137
+   v_3(g(zeta6)) = 1 (n =  54):  rule +1: equal  17 opp   7 | rule -1: equal  16 opp  14   correct 31 of 54
+   v_3(g(zeta6)) = 2 (n =   2):  rule +1: equal   1 opp   0 | rule -1: equal   1 opp   0   correct 1 of 2
+
+OPPOSITE (F_4 correction inverted):
+   v_3(g(zeta6)) = 0 (n = 137):  rule +1: equal  36 opp  15 | rule -1: equal   7 opp  79   correct 115 of 137
+   v_3(g(zeta6)) = 1 (n =  54):  rule +1: equal  18 opp   9 | rule -1: equal  15 opp  12   correct 30 of 54
+   v_3(g(zeta6)) = 2 (n =   2):  rule +1: equal   1 opp   0 | rule -1: equal   1 opp   0   correct 1 of 2
+
+clean stratum, the knots the repair was NOT fitted on (g(zeta6) odd, or v_2 even):  115 of 115
+clean stratum, the knots with v_2(g) odd (the repair was read off these):  22 of 22  split by corank: {(2, 'opp', 1): 5, (2, 'equal', -1): 7, (3, 'opp', -1): 10}
+
+full list of 199: rule applies and is correct on 137; 3 divides g(zeta6) (rule not valid) 56; other factor f 6

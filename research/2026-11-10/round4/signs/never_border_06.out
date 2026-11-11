@@ -1,0 +1,7 @@
+WHY: if the pair were a real double root blurred by round-off, its imaginary part would shrink with the digits.
+If it is a true complex pair, the relative imaginary part is the same at 80 and 160 digits.
+KILL (for the verdict NEVER): a real root in the half band at 160 digits at any grid x, or an imaginary part that
+drops by more than a factor 10 between 80 and 160 digits.
+37/13 cf [2, 1, 5, 2]: 80 digits: real band roots 0, smallest log10 relative |Im| in the half band (-8.685525377459458, 4.0) ; 160 digits: real band roots 0, smallest (-8.685525377459458, 4.0)
+61/21 cf [2, 1, 9, 2]: 80 digits: real band roots 0, smallest log10 relative |Im| in the half band (-15.634237087911487, 4.0) ; 160 digits: real band roots 0, smallest (-15.634237087911487, 4.0)
+63/13 cf [4, 1, 5, 2]: 80 digits: real band roots 0, smallest log10 relative |Im| in the half band (-8.685525450785955, 4.0) ; 160 digits: real band roots 0, smallest (-8.685525450785955, 4.0)

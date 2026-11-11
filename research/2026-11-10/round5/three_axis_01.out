@@ -1,0 +1,5 @@
+g=0.6667 (32/13): floor 2.46153846 | smallest eigenvalue 2.46153846 | spectrum [2.46154, 2.46154, 2.46154, 5.11243, 5.11243, 5.86982, 5.86982, 5.86982] | smallest sampled ratio 2.471684 | one axis: smallest eigenvalue 1.3e-32
+g=0.7500 (72/25): floor 2.88000000 | smallest eigenvalue 2.88000000 | spectrum [2.88, 2.88, 2.88, 5.5296, 5.5296, 6.5664, 6.5664, 6.5664] | smallest sampled ratio 2.894702 | one axis: smallest eigenvalue 0.0e+00
+g=0.3333 (k=1): floor 0.80000000 | smallest eigenvalue 0.80000000 | spectrum [0.8, 0.8, 0.8, 2.16, 2.16, 2.24, 2.24, 2.24] | smallest sampled ratio 0.804411 | one axis: smallest eigenvalue 0.0e+00
+g=0.2000 (k=2): floor 0.30769231 | smallest eigenvalue 0.30769231 | spectrum [0.30769, 0.30769, 0.30769, 0.88757, 0.88757, 0.89941, 0.89941, 0.89941] | smallest sampled ratio 0.310324 | one axis: smallest eigenvalue 4.2e-17
+g=1.0000 (g=1): floor 4.00000000 | smallest eigenvalue 4.00000000 | spectrum [4.0, 4.0, 4.0, 6.0, 6.0, 8.0, 8.0, 8.0] | smallest sampled ratio 4.012370 | one axis: smallest eigenvalue 0.0e+00

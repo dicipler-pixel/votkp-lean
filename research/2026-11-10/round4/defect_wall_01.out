@@ -1,0 +1,9 @@
+A  k = v*(s**4 - s**2*v - 2*s**2 + 1)/s**2    remainder k + v(v+dM) = 0
+B  dM + 4G^2/(1-G^2) = 0    dM + 4 sinh^2(tau/2) = 0
+   turn: dM - 4 sin^2(theta/2) = 0
+C  solve |dM| = 4 for z: [3 - 2*sqrt(2), 2*sqrt(2) + 3]   G^2 there: [1/2, 1/2]
+   max over real v of k =  d**2/4  at v = -dM/2;  k=4 has real v iff disc = (d - 4)*(d + 4) >= 0
+   numeric guard: k > dM^2/4 in 0 of 200000 random real (s,v)
+   unit-circle meridian: max k found = 3.999508  (cap 4 only at theta=pi); k>=4 count: 0
+D  positive 2x2 maps with discriminant <= 0 (would turn or sit on the wall): 0 of 200000    [exact: (a-d)^2+4bc > 0]
+   crossed-port fraction at the trefoil walls (alpha=1/12,5/12; omega=M^2):  [0.24999999999999994, 0.24999999999999994]  = defect/4 with defect 1 (clock d=6)

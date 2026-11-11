@@ -1,0 +1,76 @@
+WHY: every exact limit value (LIMIT-M2-01) is compared with the real branches at x = 12, 200 digits, exact
+integer coefficients, in the variable where that branch is small (v for type A, w for type B).
+PREDICTION (elementary): a limit value that is a SIMPLE root of its limit polynomial is always reached by a real
+branch; a repeated root may or may not be.
+KILL: a simple-root value with no real branch within 1e-8; or a real branch with 1e-6 < k < 4 away from every exact value.
+5/3 cf [1,1,2] : B (6,1,1)^1:real x1
+7/3 cf [2,3] : A (4,1,1)^1:real x1; B (6,1,1)^1:real x1
+7/5 cf [1,2,2] : no nonzero limit value
+9/5 cf [1,1,4] : A (4,1,1)^1:real x1; B (10,1,1)^1:real x1; B (10,1,3)^1:real x1
+9/7 cf [1,3,2] : no nonzero limit value
+11/3 cf [3,1,2] : B (6,2,1)^1:real x1
+11/5 cf [2,5] : A (3,1,1)^1:real x1; A (6,1,1)^1:real x1; B (10,1,1)^1:real x1; B (10,1,3)^1:real x1
+11/7 cf [1,1,1,3] : B (6,1,1)^1:real x1
+11/9 cf [1,4,2] : no nonzero limit value
+13/3 cf [4,3] : B (6,2,1)^1:real x1
+13/5 cf [2,1,1,2] : A (6,1,1)^2:NOT real
+13/7 cf [1,1,6] : A (3,1,1)^1:real x1; A (6,1,1)^1:real x1; B (14,1,1)^1:real x1; B (14,1,3)^1:real x1; B (14,1,5)^1:real x1
+13/9 cf [1,2,4] : no nonzero limit value
+13/11 cf [1,5,2] : no nonzero limit value
+15/7 cf [2,7] : A (4,1,1)^1:real x1; A (8,1,1)^1:real x1; A (8,1,3)^1:real x1; B (14,1,1)^1:real x1; B (14,1,3)^1:real x1; B (14,1,5)^1:real x1
+15/11 cf [1,2,1,3] : A (4,2,1)^1:real x1
+15/13 cf [1,6,2] : no nonzero limit value
+17/3 cf [5,1,2] : B (6,3,1)^1:real x1
+17/5 cf [3,2,2] : no nonzero limit value
+17/7 cf [2,2,3] : A (4,1,1)^1:real x1; A (6,1,1)^2:NOT real; B (6,1,1)^1:real x1
+17/9 cf [1,1,8] : A (4,1,1)^1:real x1; A (8,1,1)^1:real x1; A (8,1,3)^1:real x1; B (6,1,1)^1:real x1; B (18,1,1)^1:real x1; B (18,1,5)^1:real x1; B (18,1,7)^1:real x1
+17/11 cf [1,1,1,5] : B (6,1,1)^1:real x1
+17/13 cf [1,3,4] : A (4,2,1)^1:real x1
+17/15 cf [1,7,2] : no nonzero limit value
+19/3 cf [6,3] : B (6,3,1)^1:real x1
+19/5 cf [3,1,4] : B (10,2,1)^1:real x1; B (10,2,3)^1:real x1
+19/7 cf [2,1,2,2] : A (6,1,1)^2:real x2
+19/9 cf [2,9] : A (5,1,1)^1:real x1; A (5,1,2)^1:real x1; A (10,1,1)^1:real x1; A (10,1,3)^1:real x1; B (6,1,1)^1:real x1; B (18,1,1)^1:real x1; B (18,1,5)^1:real x1; B (18,1,7)^1:real x1
+19/11 cf [1,1,2,1,2] : A (6,1,1)^2:NOT real; B (6,1,1)^1:real x1; B (4,1,1)^2:NOT real
+19/13 cf [1,2,6] : no nonzero limit value
+19/15 cf [1,3,1,3] : no nonzero limit value
+19/17 cf [1,8,2] : no nonzero limit value
+21/5 cf [4,5] : B (10,2,1)^1:real x1; B (10,2,3)^1:real x1
+21/11 cf [1,1,10] : A (5,1,1)^1:real x1; A (5,1,2)^1:real x1; A (10,1,1)^1:real x1; A (10,1,3)^1:real x1; B (22,1,1)^1:real x1; B (22,1,3)^1:real x1; B (22,1,5)^1:real x1; B (22,1,7)^1:real x1; B (22,1,9)^1:real x1
+21/13 cf [1,1,1,1,1,2] : B (6,1,1)^3:real x1
+21/17 cf [1,4,4] : no nonzero limit value
+21/19 cf [1,9,2] : no nonzero limit value
+23/3 cf [7,1,2] : B (6,4,1)^1:real x1
+23/5 cf [4,1,1,2] : no nonzero limit value
+23/7 cf [3,3,2] : no nonzero limit value
+23/9 cf [2,1,1,4] : A (6,1,1)^4:NOT real
+23/11 cf [2,11] : A (3,1,1)^1:real x1; A (4,1,1)^1:real x1; A (6,1,1)^1:real x1; A (12,1,1)^1:real x1; A (12,1,5)^1:real x1; B (22,1,1)^1:real x1; B (22,1,3)^1:real x1; B (22,1,5)^1:real x1; B (22,1,7)^1:real x1; B (22,1,9)^1:real x1
+23/13 cf [1,1,3,3] : A (4,1,1)^1:real x1; A (6,1,1)^2:NOT real; B (4,1,1)^2:NOT real; B (10,1,1)^1:real x1; B (10,1,3)^1:real x1
+23/15 cf [1,1,1,7] : B (6,1,1)^1:real x1
+23/17 cf [1,2,1,5] : A (3,2,1)^1:real x1; A (6,2,1)^1:real x1
+23/19 cf [1,4,1,3] : A (4,3,1)^1:real x1
+23/21 cf [1,10,2] : no nonzero limit value
+25/3 cf [8,3] : B (6,4,1)^1:real x1
+25/7 cf [3,1,1,3] : B (6,2,1)^1:real x1
+25/9 cf [2,1,3,2] : A (6,1,1)^2:NOT real
+25/11 cf [2,3,1,2] : A (4,1,1)^1:real x1; A (10,1,1)^2:NOT real; A (10,1,3)^2:NOT real; B (6,1,1)^1:real x1; B (4,1,1)^2:NOT real
+25/13 cf [1,1,12] : A (3,1,1)^1:real x1; A (4,1,1)^1:real x1; A (6,1,1)^1:real x1; A (12,1,1)^1:real x1; A (12,1,5)^1:real x1; B (26,1,1)^1:real x1; B (26,1,3)^1:real x1; B (26,1,5)^1:real x1; B (26,1,7)^1:real x1; B (26,1,9)^1:real x1; B (26,1,11)^1:real x1
+25/17 cf [1,2,8] : no nonzero limit value
+25/19 cf [1,3,6] : A (3,2,1)^1:real x1; A (6,2,1)^1:real x1
+25/21 cf [1,5,4] : A (4,3,1)^1:real x1
+25/23 cf [1,11,2] : no nonzero limit value
+29/17 cf [1,1,2,2,2] : A (6,1,1)^2:real x2; B (4,1,1)^2:real x2; B (6,1,1)^3:real x1
+31/13 cf [2,2,1,1,2] : A (6,1,1)^2:real x2; A (4,1,1)^3:real x1; B (6,1,1)^3:real x1
+35/29 cf [1,4,1,5] : A (3,3,1)^1:real x1; A (6,3,1)^1:real x1
+39/29 cf [1,2,1,9] : A (5,2,1)^1:real x1; A (5,2,2)^1:real x1; A (10,2,1)^1:real x1; A (10,2,3)^1:real x1
+time cap reached before 41/7
+
+TALLY (type, root kind, branch): count
+   ('A', 'repeated', 'not real') 8
+   ('A', 'repeated', 'real') 4
+   ('A', 'simple', 'real') 47
+   ('B', 'repeated', 'not real') 3
+   ('B', 'repeated', 'real') 4
+   ('B', 'simple', 'real') 55
+simple-root values with no real branch (kill list): []
+real band branches away from every exact value: []

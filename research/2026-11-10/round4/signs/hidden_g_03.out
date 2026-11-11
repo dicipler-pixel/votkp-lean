@@ -1,0 +1,29 @@
+WHY: HIDDEN-G-02 fitted |a| = 3..40. If g or d found there were artefacts of the small fillings, they would move when
+only large fillings |a| = 20..100 are used.  If they stay put, the complex g and the per-tetrahedron pole are properties
+of the family, and both kills stand.
+KILL (for "the kills were artefacts"): g and d from |a| = 20..100 agree with those from |a| = 3..40 to 5% of |g| and 0.1 in d.
+Also printed: -g * tau/(2 pi i), which is dz/du at the cusp if z = kappa + (dz/du) u + ..., u = 2 pi i/(1 + a tau).
+
+L5a1 cusp 1, tau = 2.0000+2.0000i, -1/tau = -0.2500+0.2500i
+   tet 0: g +0.0005+1.5830i | +0.0000+1.5711i   d -1.082-0.271i | -1.037-0.250i   stable True   dz/du = -0.5001-0.5001i
+   tet 1: g +0.7936+0.0004i | +0.7856+0.0000i   d -0.266+0.525i | -0.250+0.535i   stable True   dz/du = -0.2501+0.2501i
+   tet 2: g -0.7934-0.0001i | -0.7856+0.0000i   d -0.264-1.062i | -0.250-1.036i   stable True   dz/du = +0.2501-0.2501i
+   tet 3: g +0.0009-1.5867i | +0.0000-1.5711i   d 0.554-0.268i | 0.536-0.250i   stable True   dz/du = +0.5001+0.5001i
+
+L7a6 cusp 0, tau = 3.4656+1.5851i, -1/tau = -0.2386+0.1091i
+   tet 0: g +0.6469+0.8916i | +0.6449+0.8922i   d -0.707+0.146i | -0.703+0.140i   stable True   dz/du = -0.6548+0.1306i
+   tet 1: g +0.0423+0.7504i | +0.0409+0.7500i   d -0.635-0.049i | -0.632-0.055i   stable True   dz/du = -0.4240-0.1666i
+   tet 2: g +0.6153-0.0549i | +0.6150-0.0537i   d -0.118+0.393i | -0.117+0.391i   stable True   dz/du = -0.1256+0.3528i
+   tet 3: g -0.0055+0.0007i | +0.0005-0.0003i   d -2.761+0.051i | 18.527+0.273i   stable False   dz/du = +0.0001+0.0004i
+   tet 4: g -0.6153+0.0549i | -0.6150+0.0537i   d -0.364-0.607i | -0.360-0.609i   stable True   dz/du = +0.1256-0.3528i
+
+L7a5 cusp 1, tau = 0.5698+2.6143i, -1/tau = -0.0796+0.3652i
+   tet 0: g +0.0342+0.8770i | +0.0454+0.8849i   d -0.311-0.890i | -0.328-0.898i   stable True   dz/du = -0.0992-0.3641i
+   tet 1: g +0.0604+0.8699i | +0.0460+0.8848i   d -0.206+0.306i | -0.204+0.227i   stable True   dz/du = -0.0994-0.3640i
+   tet 2: g -0.5542-1.4381i | -0.5731-1.4456i   d 0.796-1.084i | 0.818-1.146i   stable True   dz/du = +0.3695+0.5495i
+   tet 3: g +0.9671-0.6474i | +0.9646-0.6490i   d 0.451+0.555i | 0.445+0.552i   stable True   dz/du = -0.3425+0.3575i
+   tet 4: g +0.1265-0.4808i | +0.1367-0.4860i   d 0.421+0.334i | 0.459+0.301i   stable True   dz/du = -0.0128+0.2146i
+   tet 5: g -0.7939+0.4099i | -0.8017+0.4116i   d -0.643-0.983i | -0.652-1.018i   stable True   dz/du = +0.2962-0.2440i
+   tet 6: g -0.7070-0.9484i | -0.7105-0.9594i   d 0.333-0.760i | 0.357-0.782i   stable True   dz/du = +0.3826+0.3347i
+
+stable fits: 15 of 16

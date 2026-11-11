@@ -1,0 +1,13 @@
+WHY: exact integer coefficients; a sign change of the exact polynomial along the half band, evaluated at 200 and again
+at 400 digits, proves a real root in the band (TURN) without any root finder.  The band point of NEVER-TURN-05 for
+233/89 (x = 0.8, v = 1.1301089, k = 2.288) is tested directly: sign of the polynomial at v (1 -+ 1e-4).
+GUESS UNDER TEST (the one that "failed" earlier): n = 2, 5, 8 never; n = 0, 3, 6 turn.
+KILL: a sign change for n = 5 or 8 (they would turn), or no sign change at any x for n = 3 or 6 (weak: silence is
+not proof of never; a silent knot is passed to the root finder where the degree allows, and is otherwise "not decided").
+n=2  13/5 (as 13/5), degree 6: no sign change on the grid points reached (200 digits)   [1 s]
+n=3  21/13 (as 21/13), degree 10: TURN: sign change at x=0.8 in w (200 digits: 2 changes, 400 digits: 2), first bracket r in (0.0289202, 0.0315493), k ~ 0.09854   [0 s]
+n=5  55/21 (as 55/21), degree 27: no sign change on the grid points reached (200 digits)   [3 s]
+n=6  89/34 (as 89/55), degree 44: TURN: sign change at x=0.8 in w (200 digits: 3 changes, 400 digits: 3), first bracket r in (0.00210358, 0.00262911), k ~ 0.008288   [0 s]
+n=8  233/89 (as 233/89), degree 116: no sign change on the grid points reached (200 digits)   [16 s]
+233/89, x=0.8, sign of the exact Riley polynomial at v(1-1e-4), v(1+1e-4), 200 digits: 1.0 1.0
+233/89, x=0.8, sign of the exact Riley polynomial at v(1-1e-4), v(1+1e-4), 400 digits: 1.0 1.0
