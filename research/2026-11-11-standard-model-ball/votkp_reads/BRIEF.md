@@ -17,3 +17,6 @@ WRITE /home/claude/sm/votkp_reads/READ_<label>.md with:
 5. Connections to today's frame: any place the version already has the wall (Γ² = ½, z ≈ 5.83, 3+2√2, √2, 1/√2), phase-at-a-wall, cancel/lock/convert, two books, a tree/ball, Lorentz/rapidity, neutrinos, Koide, spin. Quote the line.
 6. Anything that contradicts today's frame.
 Return a short report (under 300 words): coverage, the 3–5 strongest element results, the 2–3 boldest moves, and any connection to the wall. Do not edit any other file; do not push anything.
+
+## Round 2 addendum (Full Table package, 11 Nov)
+Files are local, under /home/claude/sm/fulltable_src/VOTKP_Full_Table_Research_20261111/ (read-only copies; do not edit). Already-extracted text is given; read it in chunks (e.g. 400 lines at a time with sed -n) and append notes to your output file as you go, so nothing is lost if you stop. Read EVERY line; record the last line number read in Coverage. If you cannot finish, say exactly where you stopped.
