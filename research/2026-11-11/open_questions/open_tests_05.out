@@ -1,0 +1,37 @@
+T1  B75 + Ky Fan on one plaquette, H(kappa) = kappa C2 + lam(3 - Re chi), lam = 8.
+    Kill: E0 not concave in kappa, or E0+E1 not concave (both are theorems for H linear in kappa).
+    Question: is E1 alone concave? B75 says the middle level need not be.
+    max d2 E0 = -5.721e-01   max d2 (E0+E1) = -1.464e+00   max d2 E1 = -8.916e-01   min d2 E1 = -3.450e+01
+T2  Ky Fan secant gap bound on one plaquette: gap(k) >= chord(E0+E1)(k) - 2 E0(k), endpoints k=0.5 and k=2.
+    (Uses exact E0 here as the 'upper bound'; it measures how much the chord loses.) Kill: bound > true gap anywhere.
+    k=0.75 true gap 4.3932  Ky Fan chord bound 3.2158
+    k=1.00 true gap 4.9729  Ky Fan chord bound 3.3304
+    k=1.25 true gap 5.4583  Ky Fan chord bound 3.8078
+    k=1.50 true gap 5.8757  Ky Fan chord bound 4.5435
+    k=1.75 true gap 6.2404  Ky Fan chord bound 5.4753
+    violations: 0
+T3  B160 scaling window, one plaquette (kappa=1): ratio r=(E2-E0)/(E1-E0) vs lam.
+    Prediction (oscillator, class functions): singlet levels at 2w (2 quanta), 3w (d_abc), 4w ... so r -> 3/2.
+    Kill: r not settling as lam grows.
+    lam=    2  r=1.61183
+    lam=    8  r=1.54142
+    lam=   32  r=1.51837
+    lam=  128  r=1.50871
+    lam=  512  r=1.50425
+T4  B189 boost reading: gap at fixed kappa*lam = 64 across kappa (rapidity 0.5 ln(kappa/lam)).
+    Prediction: gap = 2 sqrt(kappa lam) - c*kappa + ...; kill if gap - 2sqrt(kappa lam) is not ~ linear in kappa at small kappa.
+    kappa= 0.25 lam= 256.00  gap=15.84268  gap-16=-0.15732  (gap-16)/kappa=-0.62929
+    kappa= 0.50 lam= 128.00  gap=15.68314  gap-16=-0.31686  (gap-16)/kappa=-0.63371
+    kappa= 1.00 lam=  64.00  gap=15.35696  gap-16=-0.64304  (gap-16)/kappa=-0.64304
+    kappa= 2.00 lam=  32.00  gap=14.67226  gap-16=-1.32774  (gap-16)/kappa=-0.66387
+    kappa= 4.00 lam=  16.00  gap=13.12532  gap-16=-2.87468  (gap-16)/kappa=-0.71867
+T5  U(1) two squares and U(1) 1x3 strip: large-lam gap vs the small-field box gap sqrt(2 lam mu_min).
+    E = n^T (B B^T) n (integer plaquette fluxes), magnetic lam sum (1 - cos theta_p). Kill: ratio not -> 1.
+    two squares mu_min=3.0000 lam=   4 M=11  gap=4.60291  sqrt(2 lam mu)=4.89898  ratio=0.93956
+    two squares mu_min=3.0000 lam=  16 M=13  gap=8.85898  sqrt(2 lam mu)=9.79796  ratio=0.90417
+    two squares mu_min=3.0000 lam=  64 M=16  gap=18.69496  sqrt(2 lam mu)=19.59592  ratio=0.95402
+    two squares mu_min=3.0000 lam= 256 M=20  gap=38.31314  sqrt(2 lam mu)=39.19184  ratio=0.97758
+    1x3 strip   mu_min=2.5858 lam=   4 M= 7  gap=4.32959  sqrt(2 lam mu)=4.54822  ratio=0.95193
+    1x3 strip   mu_min=2.5858 lam=  16 M= 9  gap=8.22957  sqrt(2 lam mu)=9.09644  ratio=0.90470
+    1x3 strip   mu_min=2.5858 lam=  64 M=10  gap=17.36059  sqrt(2 lam mu)=18.19287  ratio=0.95425
+    1x3 strip   mu_min=2.5858 lam= 256 M=13  gap=35.57370  sqrt(2 lam mu)=36.38575  ratio=0.97768
