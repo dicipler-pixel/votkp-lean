@@ -3,8 +3,12 @@
    and the byline footer. Drops the Frame PNG button (downloads do not work on a live page). */
 (function(){
 "use strict";
-const MIXER = window.PHX.MIXER;
-window.Mixer3D.run(MIXER);
+const MIXER = window.PHX && window.PHX.MIXER;
+function fail(msg){ document.body.insertAdjacentHTML('beforeend', '<div style="position:fixed;inset:0;display:grid;place-items:center;padding:24px;color:#cfd6dd;font:15px/1.5 system-ui,sans-serif;text-align:center;background:#000">'+msg+'</div>'); }
+let gl = null; try { const c = document.createElement('canvas'); gl = c.getContext('webgl2') || c.getContext('webgl'); } catch(e){}
+if(!window.THREE || !window.Mixer3D || !MIXER){ fail('The 3D library did not load. Reload the page; if it stays blank, the network blocked cdn.jsdelivr.net.'); return; }
+if(!gl){ fail('This browser has 3D graphics (WebGL) turned off, so the scenes cannot draw. Open the page in Chrome, Safari or Firefox with hardware acceleration on.'); return; }
+try { window.Mixer3D.run(MIXER); } catch(e){ fail('The mixer stopped while starting: '+String(e && e.message || e)); return; }
 const png = document.getElementById('m_png'); if(png) png.remove();
 const css = document.createElement('style');
 css.textContent = `

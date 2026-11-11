@@ -67,5 +67,11 @@ const MIXER = {
 
 window.PHX = { M, T, K, V3, f, sci, TAU, hue, lamRGB, lamName, cloud, clearCloud, fill, ringLine, LE, MIXER,
   S3: null, base(){ const s = window.PHX.S3; s.scene.background = new T.Color(0x000000); s.scene.fog = null; },
-  add(eye){ const mk = eye.make; eye.make = function(G, st){ window.PHX.S3 = st; return mk.call(this, G, st); }; MIXER.eyes.push(eye); } };
+  add(eye){ const mk = eye.make, en = eye.enter;
+    /* build each scene only when it is first shown, so the page paints at once instead of building all eight up front */
+    eye.make = function(G, st){ this._G = G; this._built = false; window.PHX.S3 = st; };
+    eye.enter = function(S){ window.PHX.S3 = window.PHX.S3 || null; if(!this._built){ this._built = true; mk.call(this, this._G, window.PHX.S3); } if(en) return en.call(this, S); };
+    const sp = eye.step; if(sp) eye.step = function(dt, S){ if(!this._built) return []; return sp.call(this, dt, S); };
+    const ch = eye.change; if(ch) eye.change = function(S){ if(!this._built) return; return ch.call(this, S); };
+    MIXER.eyes.push(eye); } };
 })();
