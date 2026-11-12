@@ -1,0 +1,9 @@
+PASS Q1 F_Q = 4 g (so F_Q = 8 x shape kinetic energy at unit inertia) F_Q/g over 200 random curves: 3.999999999988 .. 4.000000000002
+PASS Q2 wall distance arcsin sqrt(eps) = Bures angle arccos sqrt(F) max difference 3.0e-14
+PASS Q3 mirror pair: fidelity 1, cover distance 2 arcsin|sigma3| > 0 F = 0.999999999999994, sign det X = -1 vs +1, cover distance on the fold path 2 arcsin|sigma3| = 0.2327
+PASS P1 disk potential: min over orientation of sum m z^2 = w3 = sigma3^2 (frequency nu exactly) max |min - w3| 2.2e-16; Jacobi identity 0.0e+00
+   grav: dV/dw3 at the wall over 400 planar configurations: min +1.8926, max +53472.1508, fraction stiffening (>0) 1.000
+   coul: dV/dw3 at the wall over 400 planar configurations: min -53472.1508, max -1.8926, fraction stiffening (>0) 0.000
+PASS P2 measured: equal-mass gravity stiffens toward coplanarity at every sampled planar configuration; like charges do the opposite square control dU/dw3 = 1.82842699 vs 2 sqrt2 - 1 = 1.82842712; transverse omega = sqrt(2 dU/dw3) = 1.912290 (G = m = I = 1)
+PASS C1 cone slope closed form 2|t1-t2| sqrt(1-delta^2) 1.833030278 vs measured 1.833030278
+ALL PASS

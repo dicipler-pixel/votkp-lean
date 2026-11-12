@@ -1,0 +1,15 @@
+   N=  50: (2pi/N) log<4_1> = 2.734201   corrected = 2.031316   (Vol = 2.029883)
+   N= 100: (2pi/N) log<4_1> = 2.447006   corrected = 2.030236   (Vol = 2.029883)
+   N= 200: (2pi/N) log<4_1> = 2.271020   corrected = 2.029971   (Vol = 2.029883)
+   N= 400: (2pi/N) log<4_1> = 2.166761   corrected = 2.029905   (Vol = 2.029883)
+   N= 800: (2pi/N) log<4_1> = 2.106483   corrected = 2.029889   (Vol = 2.029883)
+PASS K1 volume conjecture, figure-eight error at N=800: 5.45e-06
+   N= 100: |F|/N^1.5 = 1.000976   arg F = -0.084103 pi
+   N= 200: |F|/N^1.5 = 1.000102   arg F = -0.416976 pi
+   N= 400: |F|/N^1.5 = 0.999879   arg F = +0.916449 pi
+   N= 800: |F|/N^1.5 = 1.000012   arg F = -0.416757 pi
+PASS K2 trefoil Kontsevich-Zagier growth N^{3/2} 0.999879 -> 1.000012
+PASS K3 4_1 invariant is real (amphichiral) Im/Re = 1.0e-13
+PASS K3 trefoil: mirror conjugates, invariant not real F = 729.4725-2733.0380j, mirror = 729.4725+2733.0380j
+PASS K3 signatures sigma(4_1)=0, mirror 0; sigma(3_1)=-2, mirror 2
+ALL PASS

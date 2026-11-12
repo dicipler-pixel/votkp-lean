@@ -1,0 +1,9 @@
+3D: h_NN * N  -> 4*m**2  (expect 4 m^2 = 1/(4 kappa^2), kappa=1/(4m))
+3D: h_lam_lam = 16*m**2/(lam**2 - 1)**4 | at lam=0: 16*m**2  (expect kappa^-2 = 16 m^2)
+3D: even in lam: True
+3D: proper distance ~  4*lam*m + O(lam**2)
+4D: h_NN * N -> m/2  (expect 1/(4 kappa^2) = m/2)
+4D: h_lam_lam at 0 = 2*m  even: True
+Bures: g_ww * w -> 1/4  ; in sigma: g_ss = 1
+3D Kruskal Q(0) = sqrt(e): True
+4D D*(0) = e/2: True

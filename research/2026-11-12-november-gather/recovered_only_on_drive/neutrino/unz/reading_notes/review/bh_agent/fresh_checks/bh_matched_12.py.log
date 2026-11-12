@@ -1,0 +1,4 @@
+R_H = 376.7303135 ohm, Z_0 = mu_0 c = 376.7303135 ohm
+PASS M1 horizon resistivity equals the vacuum impedance ratio 1.000000000
+PASS M2 zero reflection exactly at the matched value S(1) = 0.0, S(1/2) = -0.3333, S(2) = 0.3333
+ALL PASS

@@ -1,0 +1,101 @@
+AREA-SYM [area_sym.py] ON REPO: votkp-lean:origin:two-trees/scripts/area_sym.py
+AREA-SYM2 [area_sym2.py] ON REPO: votkp-lean:origin:two-trees/scripts/area_sym2.py
+ATLAS-NEXT-CENSUSLIB [census_lib.py] ON REPO: votkp-lean:origin:two-trees/scripts/census_lib.py
+BEYOND-STEVE-BISECT  threshold bisection with gradual decoupling, profile alpha and rate exponent as inputs [bisect_beyond.py] ON REPO: neutrinos-leave-lean:origin:paper/code/bisect_beyond.py
+BEYOND-STEVE-TRISECT  two trial amplitudes per round in parallel (thirds of the bracket) [trisect_beyond.py] ON REPO: neutrinos-leave-lean:origin:paper/code/trisect_beyond.py
+BRIDGE-CHECKS-01 [bridge_checks.py] ON REPO: neutrinos-leave-lean:origin:paper/code/wb_checks/src/bridge_checks.py
+COMMUTATOR_TYPE [commutator_type.py] ON REPO: votkp-lean:origin:two-trees/scripts/commutator_type.py
+CONJ_INVARIANTS_EXACT [inv.py] ON REPO: votkp-lean:origin:two-trees/scripts/inv.py
+CONJ_PADIC_TREE [padic.py] ON REPO: votkp-lean:origin:two-trees/scripts/padic.py
+CONN-ENERGY-STEVE-02  viscous-side repair, forms fixed before the run [repair.py] ON REPO: neutrinos-leave-lean:origin:paper/code/repair.py
+CONN-ENERGY-STEVE-04  corrected scaling k/(aH) = k r_m * eps [fixed.py] ON REPO: neutrinos-leave-lean:origin:paper/code/fixed.py
+GRASSMANN-MIXER-CORE-V2 [core_v2.js] FILE-NAME ON REPO: iqgt-grassmannian-lean:origin:paper/mixer/core_v2.js
+GRASSMANN-MIXER-CORE-V2-TEST [core_v2_test.js] FILE-NAME ON REPO: iqgt-grassmannian-lean:origin:paper/mixer/core_v2_test.js
+IQGT-MIXER-V5-MATH [iqgt_math_v5.js] ONLY ON DRIVE
+IQGT-MIXER-V5-MATH-TEST [iqgt_math_v5_test.js] ONLY ON DRIVE
+K0-STEVE-ARITHMETIC [k0_consistency.py] ON REPO: neutrinos-leave-lean:origin:paper/code/csl_checks/k0_consistency.py
+K1-THEOREM2-HYPOTHESIS-AUDIT [k1_hypothesis_audit.py] ON REPO: neutrinos-leave-lean:origin:paper/code/csl_checks/k1_hypothesis_audit.py
+K2-RATE-VS-DIRECTION-IN-R_NU [k2_rate_vs_direction.py] ON REPO: neutrinos-leave-lean:origin:paper/code/csl_checks/k2_rate_vs_direction.py
+K3-EP-CROSSING-AND-G [k3_ep_crossing.py] ON REPO: neutrinos-leave-lean:origin:paper/code/csl_checks/k3_ep_crossing.py
+K4-KINEMATIC-LEAKY-TRANSPORT [k4_kinematic_transport.py] ON REPO: neutrinos-leave-lean:origin:paper/code/csl_checks/k4_kinematic_transport.py
+K5-SHAPE-AND-TABLE3 [k5_shape_and_table3.py] ON REPO: neutrinos-leave-lean:origin:paper/code/csl_checks/k5_shape_and_table3.py
+K6-DIFFUSIVE-LEADER-G-CURVE [k6_diffusion_leader.py] ON REPO: neutrinos-leave-lean:origin:paper/code/csl_checks/k6_diffusion_leader.py
+K7-SPLIT-RATE-NONNORMALITY [k7_split_rate_connection_energy.py] ON REPO: neutrinos-leave-lean:origin:paper/code/csl_checks/k7_split_rate_connection_energy.py
+KNOT-COMM-8_8 — k = v(t-2) on 8_8's real branches with t near 2, x = 3..12 (200 digits); scaled by s^6 [k88.py] ON REPO: votkp-lean:origin:two-trees/scripts/k88.py
+KNOT-COMM-ASYM — limits of k = v(tr ab - 2) on every real branch as x -> infinity (x = 6, 9, 12; 200 digits) [asym.py] ON REPO: votkp-lean:origin:two-trees/scripts/asym.py
+KNOT-COMM-BAND [band.py] ON REPO: votkp-lean:origin:two-trees/scripts/band.py
+KNOT-COMM-BAND-HP [band_hp.py] ON REPO: votkp-lean:origin:two-trees/scripts/band_hp.py
+KNOT-COMM-BAND-HP2 [band_hp2.py] ON REPO: votkp-lean:origin:two-trees/scripts/band_hp2.py
+KNOT-COMM-FIRSTX — 80-digit check of the float scan's first band entry x1 for every knot: [firstx.py] ON REPO: votkp-lean:origin:two-trees/scripts/firstx.py
+KNOT-COMM-SIGNS  — per knot, at sample x: each real Riley root v with t = tr(ab) and k = v(t-2) (60 digits) [signs.py] ON REPO: votkp-lean:origin:two-trees/scripts/signs.py
+LIN-FS-01  linear free-streaming + relaxation collisions, radiation era, Newtonian gauge (Ma-Bertschinger) [lin.py] ON REPO: neutrinos-leave-lean:origin:paper/code/linear_solver/lin.py
+LIN-FS-02  central density first-maximum factor for the Gaussian profile, vs decoupling time [centre.py] ON REPO: neutrinos-leave-lean:origin:paper/code/linear_solver/centre.py
+LIN-FS-03  central first-max factor vs gradual decoupling kappa=H(eps_dec/eps)^3 (linear theory, Gaussian profile) [grad.py] ON REPO: neutrinos-leave-lean:origin:paper/code/linear_solver/grad.py
+LN7_PARTA_BOUNDS [partA.py] ON REPO: votkp-lean:origin:two-trees/scripts/partA.py
+LN7_PARTA_COMMUTATOR [partA2.py] ON REPO: votkp-lean:origin:two-trees/scripts/partA2.py
+LN7_PLANE_GAPS [planes.py] ON REPO: votkp-lean:origin:two-trees/scripts/planes.py
+MKGENS [mkgens.py] ON REPO: votkp-lean:origin:two-trees/scripts/mkgens.py
+NAME` and states its kill condition in its header before the run. [POW2_REPORT.md] FILE-NAME ON REPO: votkp-lean:origin:two-trees/scripts/POW2_REPORT.md
+NAME`, states its kill condition in its header where it has one, and sits next to [README.md] FILE-NAME ON REPO: -connection-energy-lean:origin:README.md
+OSL-STEVE-A-BOUND-ON-STREAMING [osl_a_bound_on_streaming.py] ON REPO: neutrinos-leave-lean:origin:paper/code/osl_checks/osl_a_bound_on_streaming.py
+OSL-STEVE-B-EP-FULL-OPERATOR [osl_b_ep_full_operator.py] ON REPO: neutrinos-leave-lean:origin:paper/code/osl_checks/osl_b_ep_full_operator.py
+OSL-STEVE-C-SPEED-CONTEST-EOS [osl_c_speed_contest_eos.py] ON REPO: neutrinos-leave-lean:origin:paper/code/osl_checks/osl_c_speed_contest_eos.py
+OSL-STEVE-D-G-CURVE-TESTS [osl_d_G_curve_tests.py] ON REPO: neutrinos-leave-lean:origin:paper/code/osl_checks/osl_d_G_curve_tests.py
+OSL-STEVE-D2-ONE-PARAMETER-SCAN [osl_d2_one_parameter_scan.py] ON REPO: neutrinos-leave-lean:origin:paper/code/osl_checks/osl_d2_one_parameter_scan.py
+OSL-STEVE-E-LINEAR-TWO-CLOCK [osl_e_linear_two_clock.py] ON REPO: neutrinos-leave-lean:origin:paper/code/osl_checks/osl_e_linear_two_clock.py
+OSL-STEVE-E2-SCAN-OTHER-TIMES [osl_e2_scan_other_times.py] ON REPO: neutrinos-leave-lean:origin:paper/code/osl_checks/osl_e2_scan_other_times.py
+OSL-STEVE-F-RAPIDITY-IDENTITY [osl_f_rapidity_identity.py] ON REPO: neutrinos-leave-lean:origin:paper/code/osl_checks/osl_f_rapidity_identity.py
+PBH-NU-FIGURES  draws the three figures from the run results and the memory curves [make_figures.py] ON REPO: neutrinos-leave-lean:origin:paper/code/main/make_figures.py
+PBH-NU-IDENTITIES  checks of every derived identity used in the paper [identities.py] ON REPO: neutrinos-leave-lean:origin:paper/code/main/identities.py
+PBH-NU-LONE-PASS  the one rate-ratio form that passed (1 of 32) tested on Test B, which it never saw [lone_pass_check.py] ON REPO: neutrinos-leave-lean:origin:paper/code/main/lone_pass_check.py
+PBH-NU-MEMORY-CURVE  kept-sector survival (memory form) curves for the figures; same object as WB-STEVE-07 [memory_curve.py] ON REPO: neutrinos-leave-lean:origin:paper/code/main/memory_curve.py
+PEEL-TREES-FIG7 [fig7.py] ON REPO: votkp-lean:origin:two-trees/scripts/fig7.py
+PINGPONG_CHECK [pingpong_check.py] ON REPO: votkp-lean:origin:two-trees/scripts/pingpong_check.py
+PINGPONG_CONTROLS [pingpong_controls.py] ON REPO: votkp-lean:origin:two-trees/scripts/pingpong_controls.py
+Q2-LIB [q2_lib.py] ON REPO: votkp-lean:origin:two-trees/scripts/q2_lib.py
+RELATION_SEARCH [relation_search.c] FILE-NAME ON REPO: votkp-lean:origin:two-trees/scripts/relation_search.c
+RESIDUE_PRIMES [residue_primes.py] ON REPO: votkp-lean:origin:two-trees/scripts/residue_primes.py
+STEVE-TABLES-01  consistency checks on McCormick's published tables (no new physics) [steve_checks.py] ON REPO: neutrinos-leave-lean:origin:paper/code/linear_solver/steve_checks.py
+TWO-TREES-CORE-CHECK [check_core.py] ON REPO: votkp-lean:origin:two-trees/check_core.py
+WB-LIN-MODULE (solver copied verbatim from WB-STEVE-02-LINEAR) [wb_lin.py] ON REPO: neutrinos-leave-lean:origin:paper/code/wb_checks/wb_lin.py
+WB-STEVE-01-ALGEBRA [wb_steve_01_algebra.py] ON REPO: neutrinos-leave-lean:origin:paper/code/wb_checks/wb_steve_01_algebra.py
+WB-STEVE-02-LINEAR [wb_steve_02_linear.py] ON REPO: neutrinos-leave-lean:origin:paper/code/wb_checks/wb_steve_02_linear.py
+WB-STEVE-03-PAPER-OBJECTS [wb_steve_03_paper_objects.py] ON REPO: neutrinos-leave-lean:origin:paper/code/wb_checks/wb_steve_03_paper_objects.py
+WB-STEVE-04-CHANNELS [wb_steve_04_channels.py] ON REPO: neutrinos-leave-lean:origin:paper/code/wb_checks/wb_steve_04_channels.py
+WB-STEVE-05-MIXTURE [wb_steve_05_mixture.py] ON REPO: neutrinos-leave-lean:origin:paper/code/wb_checks/wb_steve_05_mixture.py
+WB-STEVE-06-OPPOSITES [wb_steve_06_opposites.py] ON REPO: neutrinos-leave-lean:origin:paper/code/wb_checks/wb_steve_06_opposites.py
+WB-STEVE-07-HISTORY [wb_steve_07_history.py] ON REPO: neutrinos-leave-lean:origin:paper/code/wb_checks/wb_steve_07_history.py
+WEIGHT-BETWEEN-CORE-01 [weight_between_core_checks.py] ON REPO: neutrinos-leave-lean:origin:paper/code/wb_checks/src/weight_between_core_checks.py
+WEIGHT-BETWEEN-FIGURES-01 [make_figures.py] ON REPO: neutrinos-leave-lean:origin:paper/code/wb_checks/src/make_figures.py
+` and its kill conditions); outputs `area_sym_out.txt`, `area_sym2_out.txt`. [AREA_REPORT.md] FILE-NAME ON REPO: votkp-lean:origin:two-trees/scripts/AREA_REPORT.md
+assemble_iqgt_mixer_v51 [assemble_v51.py] ONLY ON DRIVE
+iqgt_mixer_3d_v5_body — IQGT Mixer 3D v5 eyes, written for this paper (v7.3.1) on 3D Mixer Parts v3. [iqgt_v51_body_a.js] ONLY ON DRIVE
+iqgt_mixer_3d_v5_body_c1 — IQGT Mixer 3D v5 eyes 12 to 14 (v7.3.1 §9, §10, §12) on 3D Mixer Parts v3. [iqgt_v51_body_c1.js] ONLY ON DRIVE
+iqgt_mixer_3d_v5_body_c2 — IQGT Mixer 3D v5 eyes 15 to 18 (cards, the bigger house, the ring, no light cone), paper v7.3.1, on 3D Mixer Parts v3. [iqgt_v51_body_c2.js] ONLY ON DRIVE
+mixer3d_parts_v3 [parts_v31.js] ONLY ON DRIVE
+shot_iqgt_v5_phone — phone width, then the app's sandboxed preview frame [shot_phone.js] ONLY ON DRIVE
+shot_iqgt_v5b — explainer page, stage eyes, self-test, errors [shot_v5b.js] ONLY ON DRIVE
+77
+--- files without SCRIPT name, basename lookup
+checks.py -> ONLY ON DRIVE
+decode_stream.py -> ONLY ON DRIVE
+iqgt_v51_body_b.js -> ONLY ON DRIVE
+iqgt_v51_main.js -> ONLY ON DRIVE
+run_nuc_n.py -> neutrinos-leave-lean:origin:paper/code/run_nuc_n.py (4)
+simulation__ms_nuc.py -> ONLY ON DRIVE
+simulation__run_nuc.py -> ONLY ON DRIVE
+nonnormality_independent_checks.py -> ONLY ON DRIVE
+two_book_flow_check.py -> ONLY ON DRIVE
+02_run_tests.py -> ONLY ON DRIVE
+05_run_tests_amended.py -> ONLY ON DRIVE
+gauss_check.py -> ONLY ON DRIVE
+holdout.py -> ONLY ON DRIVE
+switch_controls.py -> ONLY ON DRIVE
+theta_diagram.py -> ONLY ON DRIVE
+PeelTrees.lean -> votkp-lean:origin:two-trees/lean/PeelTrees.lean (1)
+PeelTrees2.lean -> votkp-lean:origin:two-trees/lean/PeelTrees2.lean (1)
+PeelTrees3.lean -> votkp-lean:origin:two-trees/lean/PeelTrees3.lean (1)
+PeelTrees4.lean -> votkp-lean:origin:two-trees/lean/PeelTrees4.lean (1)
+PingPong7.lean -> votkp-lean:origin:two-trees/lean/PingPong7.lean (1)
+Controls1.lean -> votkp-lean:origin:two-trees/lean/controls/Controls1.lean (1)
+Controls4.lean -> votkp-lean:origin:two-trees/lean/controls/Controls4.lean (1)

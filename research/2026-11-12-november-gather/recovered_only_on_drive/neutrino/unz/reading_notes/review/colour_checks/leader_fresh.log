@@ -1,0 +1,10 @@
+(a) colour converges to the Perron eigenvector: fitted per-pass shrink / |lambda2/lambda1|
+    median 1.0000, 5th-95th percentile 0.9793 .. 1.0154 over 111 random positive M
+(b) brightness rate after 200 passes vs ln lambda1: worst difference 1.9e-15
+(c) exact tie, final colours from three starts: [array([0.8687, 0.1313, 0.    ]), array([0.2092, 0.7908, 0.    ]), array([0.5695, 0.4305, 0.    ])]
+    spread between them (Schrodinger distance): 1.450, 0.690
+    near tie, relative gap 0.500: colour settles (distance < 1e-3) after 24 passes
+    near tie, relative gap 0.100: colour settles (distance < 1e-3) after 154 passes
+    near tie, relative gap 0.010: colour settles (distance < 1e-3) after 1605 passes
+    near tie, relative gap 0.001: colour settles (distance < 1e-3) after 16119 passes
+Opposite: one pass makes two colours FARTHER apart in Schrodinger metric in 955 of 20000 cases (worst stretch x4.48); in Hilbert projective metric in 0 of 20000

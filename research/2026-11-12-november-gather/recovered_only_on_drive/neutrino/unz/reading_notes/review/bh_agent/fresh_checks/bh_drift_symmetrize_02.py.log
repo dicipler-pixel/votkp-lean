@@ -1,0 +1,3 @@
+exact drift: e^{-psi} L e^{psi} - [-Δ + (Q+|∇psi|^2-Δpsi)] = 0
+rotational drift, first-order coefficients after conjugation: -2*y - 2*Derivative(psi(x, y), x) , 2*x - 2*Derivative(psi(x, y), y)
+curl of (-y,x) = 2  (nonzero => no psi can remove both)

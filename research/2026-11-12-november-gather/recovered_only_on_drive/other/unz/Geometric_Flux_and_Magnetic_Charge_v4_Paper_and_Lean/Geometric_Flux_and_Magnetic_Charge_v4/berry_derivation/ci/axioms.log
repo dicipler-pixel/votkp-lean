@@ -1,0 +1,111 @@
+'IqgtGrassmannian.tangent_offdiag' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IqgtGrassmannian.trace_sq_offdiag' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IqgtGrassmannian.Q_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IqgtGrassmannian.frob_herm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IqgtGrassmannian.frob_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IqgtGrassmannian.gram_entries' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IqgtGrassmannian.gram_det_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IqgtGrassmannian.metric_control' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IqgtGrassmannian.rigidity_kills_curvature' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IqgtGrassmannian.lagrange_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IqgtGrassmannian.partial_fraction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IqgtGrassmannian.Core.sub_def' does not depend on any axioms
+'IqgtGrassmannian.Core.zero_add'' does not depend on any axioms
+'IqgtGrassmannian.Core.add_zero'' does not depend on any axioms
+'IqgtGrassmannian.Core.neg_add'' does not depend on any axioms
+'IqgtGrassmannian.Core.add_neg'' does not depend on any axioms
+'IqgtGrassmannian.Core.one_mul'' does not depend on any axioms
+'IqgtGrassmannian.Core.mul_one'' does not depend on any axioms
+'IqgtGrassmannian.Core.add_left_cancel'' does not depend on any axioms
+'IqgtGrassmannian.Core.eq_zero_of_self_add' does not depend on any axioms
+'IqgtGrassmannian.Core.mul_zero'' does not depend on any axioms
+'IqgtGrassmannian.Core.zero_mul'' does not depend on any axioms
+'IqgtGrassmannian.Core.neg_eq_of_add' does not depend on any axioms
+'IqgtGrassmannian.Core.neg_mul'' does not depend on any axioms
+'IqgtGrassmannian.Core.mul_neg'' does not depend on any axioms
+'IqgtGrassmannian.Core.neg_neg'' does not depend on any axioms
+'IqgtGrassmannian.Core.neg_add_distrib' does not depend on any axioms
+'IqgtGrassmannian.Core.sub_mul'' does not depend on any axioms
+'IqgtGrassmannian.Core.mul_sub'' does not depend on any axioms
+'IqgtGrassmannian.Core.sub_self'' does not depend on any axioms
+'IqgtGrassmannian.Core.eq_of_sub_eq_zero' does not depend on any axioms
+'IqgtGrassmannian.Core.idem_left' does not depend on any axioms
+'IqgtGrassmannian.Core.add_left_comm'' does not depend on any axioms
+'IqgtGrassmannian.Core.tangent_PVP' depends on axioms: [propext]
+'IqgtGrassmannian.Core.compl_sandwich' depends on axioms: [propext]
+'IqgtGrassmannian.Core.tangent_QVQ' depends on axioms: [propext]
+'IqgtGrassmannian.Core.tangent_of_blocks' depends on axioms: [propext]
+'IqgtGrassmannian.Core.tangent_compl' depends on axioms: [propext]
+'IqgtGrassmannian.Core.redist_sum_form' depends on axioms: [propext]
+'IqgtGrassmannian.Core.redist_double_bracket' depends on axioms: [propext]
+'IqgtGrassmannian.Core.proj_mul_compl' does not depend on any axioms
+'IqgtGrassmannian.Core.compl_mul_proj' does not depend on any axioms
+'IqgtGrassmannian.Core.redist_tangent' does not depend on any axioms
+'IqgtGrassmannian.Core.redist_eq_zero_iff' depends on axioms: [propext]
+'IqgtGrassmannian.Core.sld_two_tangent' depends on axioms: [propext]
+'IqgtGrassmannian.Rebuild.tangent_of_blocks' depends on axioms: [propext]
+'IqgtGrassmannian.Rebuild.tangent_compl' depends on axioms: [propext]
+'IqgtGrassmannian.Rebuild.redist_double_bracket' depends on axioms: [propext]
+'IqgtGrassmannian.Rebuild.proj_mul_compl' does not depend on any axioms
+'IqgtGrassmannian.Rebuild.compl_mul_proj' does not depend on any axioms
+'IqgtGrassmannian.Rebuild.proj_mul_redist' depends on axioms: [propext]
+'IqgtGrassmannian.Rebuild.redist_mul_proj' depends on axioms: [propext]
+'IqgtGrassmannian.Rebuild.redist_tangent' depends on axioms: [propext]
+'IqgtGrassmannian.Rebuild.redist_eq_zero_iff' depends on axioms: [propext]
+'IqgtGrassmannian.Rebuild.sld_two_tangent' depends on axioms: [propext, Quot.sound]
+'IqgtGrassmannian.Rebuild.trace_remark_2_3' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IqgtGrassmannian.Rebuild.two_trace_PVV' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IqgtGrassmannian.Rebuild.hs_dist_proj' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IqgtGrassmannian.Rebuild.friction_band' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IqgtGrassmannian.Rebuild.length_sq_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IqgtGrassmannian.Rebuild.friction_response_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IqgtGrassmannian.Rebuild.eta_regularised_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IqgtGrassmannian.Rebuild.reflection_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IqgtGrassmannian.Rebuild.stratum_needs_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IqgtGrassmannian.Rebuild.sld_kernel_block' depends on axioms: [propext]
+'IqgtGrassmannian.Rebuild.gap_identity' depends on axioms: [propext]
+'IqgtGrassmannian.Rebuild.tip_free_at_tie' does not depend on any axioms
+'IqgtGrassmannian.Rebuild.second_resolvent' does not depend on any axioms
+'IqgtGrassmannian.Rebuild.gap_bound_hs_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IqgtGrassmannian.Rebuild.sin_sq_le_angle_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IqgtGrassmannian.Rebuild.angle_sq_le_jordan' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IqgtGrassmannian.Rebuild.sofic_sandwich' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IqgtGrassmannian.Rebuild.cycle_gram_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IqgtGrassmannian.Rebuild.curvature_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IqgtGrassmannian.Rebuild.gap_term_eq_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IqgtGrassmannian.Rebuild.gap_bound_hs_step_eq_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IqgtGrassmannian.Rebuild.am_gm_eq_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IqgtGrassmannian.Rebuild.length_gap_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IqgtGrassmannian.Rebuild.constant_speed_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IqgtGrassmannian.Rebuild.saturation_iff_complex_line' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IqgtGrassmannian.Rebuild.constant_of_silent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IqgtGrassmannian.Rebuild.silent_second_order' depends on axioms: [propext]
+'IqgtGrassmannian.Rebuild.mirror_same_distance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IqgtGrassmannian.Rebuild.sin_sq_eq_angle_sq_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IqgtGrassmannian.Rebuild.jordan_eq_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IqgtGrassmannian.Rebuild.sandwich_upper_eq_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IqgtGrassmannian.Rebuild.half_phase_right_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IqgtGrassmannian.Rebuild.involution_eigenvalue' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IqgtGrassmannian.Rebuild.doubling_keeps_gcd' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IqgtGrassmannian.Rebuild.doubling_six_returns' does not depend on any axioms
+'IqgtGrassmannian.trace_ge_two_sqrt_det' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IqgtGrassmannian.trace_eq_two_sqrt_det_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IqgtGrassmannian.deficit_eq_sq_norm_sub_projection' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IqgtGrassmannian.deficit_eq_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MonopoleStance.pauli_comm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MonopoleStance.proj_affine' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MonopoleStance.curvature_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MonopoleStance.hasDerivAt_nvec_θ1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MonopoleStance.hasDerivAt_nvec_θ2' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MonopoleStance.hasDerivAt_nvec_θ3' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MonopoleStance.hasDerivAt_nvec_φ1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MonopoleStance.hasDerivAt_nvec_φ2' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MonopoleStance.hasDerivAt_nvec_φ3' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MonopoleStance.hasDerivAt_proj_comp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MonopoleStance.hasDerivAt_proj_θ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MonopoleStance.hasDerivAt_proj_φ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MonopoleStance.triple_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MonopoleStance.berry_curvature' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MonopoleStance.berry_curvature_from_derivatives' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MonopoleStance.berry_curvature_eq_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MonopoleStance.complement_curvature' depends on axioms: [propext, Classical.choice, Quot.sound]

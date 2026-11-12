@@ -1,0 +1,21 @@
+PASS P1 map Q -> quartic invertible det = 3072
+PASS P2 type I (1111): Jordan structure [(np.complex128(-0.406667-0j), [1]), (np.complex128(0.358333-0j), [1]), (np.complex128(0.048333+0j), [1])]
+PASS P2 type II (211): Jordan structure [(np.complex128(-0.425+0j), [1]), (np.complex128(0.2125+0j), [2])]
+PASS P2 type D (22): Jordan structure [(np.complex128(0.666667+0j), [1]), (np.complex128(-0.333333+0j), [1, 1])] eigenvalue ratio (-2-0j)
+PASS P2 type III (31): Jordan structure [(np.complex128(0j), [3])]
+PASS P2 type N (4): Jordan structure [(np.complex128(-0+0j), [2, 1])]
+P3  split a double star of type II by delta
+    delta=0.1: gap=8.000000e-02  gap/delta=0.800000  gap/sqrt(eps)=1.600000
+    delta=0.01: gap=8.000000e-03  gap/delta=0.800000  gap/sqrt(eps)=1.600000
+    delta=0.001: gap=8.000000e-04  gap/delta=0.800000  gap/sqrt(eps)=1.600000
+    delta=0.0001: gap=8.000000e-05  gap/delta=0.800000  gap/sqrt(eps)=1.600000
+PASS P3 gap linear in star separation (II) gap/delta -> 0.800000
+P4  split both double stars of type D by delta
+    delta=0.1: gap=2.500000e-03  gap/delta^2=0.250000  gap/delta=0.025000
+    delta=0.01: gap=2.500000e-05  gap/delta^2=0.250000  gap/delta=0.002500
+    delta=0.001: gap=2.500000e-07  gap/delta^2=0.250000  gap/delta=0.000250
+PASS P4 gap quadratic in star separation (D) gap/delta^2 -> 0.250000
+PASS P5 Kerr r=2.5, th=0.4: type D, ratio (1,1,-2) [(np.complex128(0.021115+0.019957j), [1, 1]), (np.complex128(-0.042231-0.039913j), [1])]
+PASS P5 Kerr r=1.9, th=1.2: type D, ratio (1,1,-2) [(np.complex128(0.065438+0.027524j), [1, 1]), (np.complex128(-0.130876-0.055048j), [1])]
+PASS P5 Kerr r=6.0, th=2.8: type D, ratio (1,1,-2) [(np.complex128(0.002152-0.000733j), [1, 1]), (np.complex128(-0.004304+0.001467j), [1])]
+ALL PASS

@@ -1,0 +1,20 @@
+# SCRIPT: PREDICT-AMP  POST-HOC diagnostic (not preregistered): K2 formula with the amplitude ledger L_A = -dA/deps, A = sum w Re a0,
+# W_A(eps_b) = Ddc_full(eps_b) / L_A,b ; same placement / extrapolation rules as PREDICT.
+import json, numpy as np
+LA = json.load(open('ledger_amp.json')); g = np.array(LA['grid']); B = LA['bursts']
+F = {json.loads(l)['tag']: json.loads(l) for l in open('full_results.jsonl')}; b0 = F['F_base']['dc']
+ebs = (0.25, 0.5, 1, 1.5, 2, 3, 4)
+probes = [(eb, F['F_burst_%g' % eb]['dc'] - b0) for eb in ebs]
+pe = [eb*np.sqrt(1.25) for eb in ebs] + [6*np.sqrt(1.25)]; pw = [d/B['%g' % eb] for eb, d in probes] + [0.0]
+for (eb, d), w in zip(probes, pw): print('  eps_b %.2f  L_A,b %.5f  Ddc %.6f  W_A %.5f' % (eb, B['%g' % eb], d, w))
+em = np.sqrt(g[1:]*g[:-1]); W = np.interp(np.log(em), np.log(pe), pw, left=pw[0], right=0.0)
+rd = lambda k: float(np.sum(W*(np.array(LA[k]['A'])[:-1]-np.array(LA[k]['A'])[1:])))
+Ri = rd('inst'); print('int W_A L_A,inst = %.5f  (measured 0.03059)' % Ri)
+meas = {'n3_0.25': .959, 'n3_0.5': .867, 'n3_1': .683, 'n3_2': .431, 'n3_4': .190, 'n3_8': .063, 'n6_1': .648, 'n6_2': .317, 'n6_3': .154}
+worst = 0; res = {}
+for k, m in meas.items():
+    r = rd(k); gp = r/Ri; worst = max(worst, abs(gp-m)); res[k] = (m, gp, r)
+    print('  %-8s G_meas %.3f G_pred %.3f diff %+.3f   Ddc_pred %.5f Ddc_meas %.5f' % (k, m, gp, gp-m, r, m*0.03059))
+print('worst %.3f' % worst)
+d13 = F['F_burst_1+3']['dc'] - b0; print('K1 amplitude-ledger check: Ddc(1+3)=%.6f, W_A(1) L_A(1)+W_A(3)(L_A(1+3)-L_A(1)) = %.6f' % (d13, pw[2]*B['1'] + pw[5]*(B['1+3']-B['1'])))
+json.dump(dict(W_eps=pe, W=pw, inst=Ri, res=res, worst=worst), open('predict_amp.json', 'w'), indent=1)

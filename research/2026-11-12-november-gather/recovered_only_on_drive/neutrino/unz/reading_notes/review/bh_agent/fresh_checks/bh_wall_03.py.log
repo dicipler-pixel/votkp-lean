@@ -1,0 +1,13 @@
+C9 D(w3) coefficients [w3^2, w3^1, w3^0]:
+     (t1 + t2 - 2*t3)**2
+     -2*(dl*t1**2 - 2*dl*t1*t3 - dl*t2**2 + 2*dl*t2*t3 - t1**2 + 6*t1*t2 - 4*t1*t3 - t2**2 - 4*t2*t3 + 4*t3**2)
+     (dl*t1 - dl*t2 - t1 - t2 + 2*t3)**2
+    sampled 50000 (t, delta): roots inside the physical segment: 0; largest real root seen: 1.998e+00
+    D at the wall (w3=0) = (dl*t1 - dl*t2 - t1 - t2 + 2*t3)**2   -> zero exactly on the joint condition
+    slope dD/dw3 at w3 = 0 on the joint condition: -4*(dl - 1)*(dl + 1)*(t1 - t2)**2
+C10 Schur-Cayley: max identity error 5.86e-15; max ||S|| over 200 passive samples 0.945022
+     matched load Z = I gives S = [0. 0. 0. 0.]
+C11 k=0.0: projector metric g_kk at N=1: 0.249999999975; at N=1e-8: 0.249999999975; exact m^2/(4(k^2+m^2)^2) = 0.250000000000
+C11 k=0.7: projector metric g_kk at N=1: 0.112607540199; at N=1e-8: 0.112607540199; exact m^2/(4(k^2+m^2)^2) = 0.112607540201
+     local proper-time gap 2 sqrt(k^2+m^2) stays open; coordinate gap 2 N sqrt(k^2+m^2) -> 0 is the lapse, not the projector
+RESULT PASS
