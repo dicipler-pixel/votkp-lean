@@ -1,0 +1,38 @@
+# T3_cap_fill: at what n does N(n,eps) reach the cap?
+
+## Result in one paragraph
+No law tested passes its kill line. What does hold, rigorously and in every case run (330 own-frame and 291 lab-frame targets, 0 exceptions), is a sufficient condition and a second, exact class:
+1. N(n,eps) >= m as soon as (m-1) g_n <= 2pi - m d  (g_n = largest gap of the n points, d = 2 arcsin(sqrt(eps/2)/sin phi)). So the first n reaching m is never later than the first n with g_n <= (2pi - m d)/(m-1). For m = cap this is "g_n below (about 1 times) the slack per slot, 2pi/cap - d_min". This is the candidate you proposed, made sharp; it is true but pessimistic: the measured first-reach n is about 4 times smaller at the median, up to 66 times (kill line "within a factor 2": 177 of 230 base and 138 of 196 fresh targets fail).
+2. "Never within 0" IS a real class. If 2pi/d is an exact integer (slack = 0; happens at sin phi = 1, eps = 1/2: d = pi/3, cap = 6, and at z = 3 with sin^2 phi = 2 Gamma^2 = 1/2, eps = 1/2: d = pi/2, cap = 4) then N = cap would need cap points exactly 2pi/cap apart, i.e. k alpha = 1/cap mod 1, impossible for irrational alpha. So N <= cap - 1 for all n and the cap is a supremum never attained. Measured: 34 such cases (both frames, z = 2, 2.2, 2.5, 3, 3.3, 3.5, 4, 4.4, 4.5, 5, 5.1, 5.2, 5.5, 5.6, 5.7, 5.8), 0 reached cap up to n = 200000, all reached cap - 1.
+3. Apart from that class every target reached the cap and cap - 1 by n = 200000 (own 157 and 173 targets, lab 145 and 146; none censored). Typical first-reach n/m^2: own cap median 1.2 (range 0.08 to 46), own cap - 1 median 0.48 (0.07 to 6.0); lab cap median 1.9 (0.33 to 36), lab cap - 1 median 0.69 (0.19 to 24). So "n of order cap^2" is the right scale, and the spread around it is arithmetic (continued fraction of theta/2pi against d), not a smooth function of (theta, eps, phi).
+
+## 1. The 19 failures (N(2000) < cap - 1), reproduced exactly
+Instrument check: new exact orbit (angles from 100-bit integers of theta/2pi, mpmath 50 digits; lab frame by pushing the exact own points through S) equals the old matrix orbit to 1e-11; 144 cases, 8 own + 11 lab = 19 failures, 0 mismatches against the stored N(2000) and cap in all 144. Table: t3_a_failures.out.
+- Own frame (8): only z = 2, 3, 5.5. These are exactly the three z whose theta/2pi has a large partial quotient straddling n = 2000: z=2 [0;12,1,1,6,1,25,...] denominators 188 -> 4863 (a = 25); z=3 [0;4,1,1,1,1,1,4,1,30] denominators 208 -> 6411 (a = 30); z=5.5 [0;1,2,1,10,2,1,34,...] denominators 133 -> 4612 (a = 34). Inside such a block the largest gap stays large (g_2000 = 0.0223 to 0.0291 rad, about 2pi/270 to 2pi/215) while the slack per slot is 1e-3 to 2.4e-3, so g/T = 9 to 35. z = 4 (all partial quotients <= 4 up to q = 1433) and z = 5 (<= 4) have no own-frame failure. z = 5.8 (largest quotient 12) has none.
+- Which (phi, eps): eps = 0.005 (5 of 8) or 0.02 (3 of 8); sin^2 phi = 1 (4), 2 Gamma^2 (3), 0.301 (1); cap between 22 and 62, so many slots.
+- Lab frame (11): z = 2, 3, 5, 5.5, 5.8, always eps = 0.02 or 0.005 (cap 22 to 62). Here the Moebius map S crowds the points (not equally spaced), so g_2000 is 0.037 to 0.28 rad, 2 to 10 times the own-frame value at the same z; g/T from 22 to 213.
+- Every failure has slack/d between 0.12 and 0.92 (not tiny), so it is the gap, not a zero-slack effect.
+- Context: in the 144 cases, 14 are zero-slack (cap exact, N = cap - 1 = "within 1" counts as a pass in the old law but can never be cap).
+
+## 2. Laws tested against kill lines written first (STATE.md)
+| law | statement | kill line | outcome |
+|---|---|---|---|
+| A (largest gap, your candidate, made rigorous) | first n with g_n <= (2pi - m d)/(m-1); n_meas <= n_A proven | n_A/n_meas in [1,2] everywhere, 144 + 120 fresh | KILLED: 177/230 base and 138/196 fresh targets above 2; median ratio 3.9, p90 12, max 66. Proof side holds: min ratio 1.08, no violation, none censored wrongly |
+| B (mean overshoot) | first n with (m-1) e_n <= 2pi - m d, e_n = sum g^2/(4pi) | ratio in [0.5, 2] | KILLED: 41/230 base, 28/196 fresh outside; about 85% inside, median 1.14, p90 2.2, range 0.08 to 18; errs both ways |
+| E = min(A, D) (D: arithmetic chain k = 1 + i j with frac(+-j alpha) - d/2pi in [0, sigma/(2pi(m-1))]) | n_E = min(n_A, 1 + (m-1) j_min); sufficient | ratio in [1,2], own frame, base + fresh + third fresh set (z = 2.2, 3.3, 4.4, 5.1, 5.6) | KILLED: 57/123 base, 39/104 fresh, 51/103 third set fail; median 1.89, max 12; D beat A in 100 targets. Proof side holds: min ratio 1.00 |
+| K-0 zero-slack class | N <= cap - 1 for all n | any N = cap | HOLDS (34 cases, 0 violations) |
+"within 1 of cap by n = 2000" (the original law) remains dead; B and E are better (E and A are guaranteed upper bounds on the first n; B is only a trend).
+Opposite readings run under the same budget: B (typical rather than worst-case gap), D/E (arithmetic of d against alpha rather than gap size), K-0 (cap never reached). The last of these is a real class; the first two did not pass.
+
+## 3. What this says about the law
+The sufficient statement (largest gap against slack) is the three-gap structure speaking: in the own frame g_n is a step function that is constant on blocks of q_k consecutive n (largest gap eta_{k-1} - (j-1) eta_k for n = j q_k + q_{k-1} + r, 0 <= r < q_k), so the pessimistic n_A is set by convergent denominators exactly as proposed. The measured n is smaller because the optimal chain does not pay the largest gap at every step: it can use the slots where d lands almost exactly on a multiple of alpha (resonances: e.g. z = 5.8, sin^2 phi = 1, eps = 0.1 reaches cap = 13 at n = 13, a convergent denominator). So the true first-reach n depends jointly on the continued fraction of theta/2pi and on d/2pi expressed against the lattice {k alpha}, which is an inhomogeneous Diophantine statement, not a function of g_n alone. Not found among the three laws tried. Untested: the exact optimum via the integer-skip combinatorics on the three-gap word (the clear next step); any lab-frame arithmetic law (the lab points are a Moebius image, not a uniform rotation, so D does not apply; only A and B were run there).
+
+## 4. Where it sits in his work (grepped, not imported)
+- Atlas B16 "A direction costs one channel": (1/2)||Pu - Pv||^2 = sin^2(theta), Lambda_delta = 2 log(1/sin delta), Price of a Direction v4 Lemma 2.1. This is the same pairwise distinguishability measure the cap uses (the cap formula is the Frobenius-distance condition 2 sin^2(phi) sin^2(D/2) >= eps).
+- B18 "A capped capacity forces full dimension": n - d <= log C0/log(1/a), Price of a Direction v4 Thm 4.1: a statement that a capped number of distinguishable directions bounds the dimension. The cap here is the same kind of count on one circle; the new fill law would be the finite-n (passes) companion: how many passes the loop needs before the circle's cap is realised.
+- B133 "The off-diagonal block counts the mixed channels": N_eps(A) <= ||B||_F^2/[eps(1-eps)], Light ed. 7.2 Thm 5.1: another upper count of channels; the loop's cap is a tighter count for the single circle of passes.
+- Extract nov/light notes the pairwise-sin^2 vs span-dimension counterexample as the one-line test for any "directional capacity" statement; the zero-slack class (cap an integer, never attained) is the same kind of statement on the circle.
+No outside Kakeya theorem used.
+
+## Files
+/home/claude/harness/workers/T3_cap_fill/: STATE.md (derivation, kill lines written before runs), t3_common.py, t3_validate.py, t3_a_failures.py (.out/.json), t3_b_law.py (t3_b_BASE/FRESH/Z3.jsonl), t3_c_judge.py (t3_c_judge_rerun.out), t3_d_law_e.py (t3_d_law_e_rerun.out).
