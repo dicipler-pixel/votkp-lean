@@ -46,3 +46,9 @@ DONE 2026-11-13T01:26Z: Mathlib 8923 jobs, project 8942 jobs OK, verify 140 thm/
 2026-11-12 20:32 lead: T9 done - past the wall = the five alkalis, all bcc; R2 artefact; level carries absolute spacing (-0.789)
 2026-11-12 T10_arms: DONE - REPORT.md (arms: 5 oct/6, 7 cube/8 only in LPS-8 not his six-axis ln7, 11 NOT cuboctahedron in parity form (a=3 shell only), 13 = 6+14; depth-2 no lattice shells; (5,7) join impossible; B99 triple in paper s8.7)
 2026-11-12 20:45 lead: T10 done - arms: 5 octahedron, 13 = 6+8, 11 not cuboctahedron in his form; integer pairs across wall only (5,7),(4,11)
+2026-11-12 20:55 lead: T11 (many-ball assembly, exploration) and T12 (sharper data lines) started
+2026-11-12 T11_many_balls: step1 done - 6 axes->sc, 8 diag->bcc, 12 face->fcc close under every rule; 14-set (axes+diagonals) rank 4 no lattice unless d_diag/d_axis=sqrt3/2
+2026-11-12 T12_lattice_sharper: table built (lattice_table_ext.csv), lines S1-S5 + A1-A3 registered in STATE.md before running
+2026-11-12 T11_many_balls: step2 done - rule b contacts reproduce rock-salt/CsCl/ZnS closing ratios sqrt2-1, sqrt3-1, sqrt6/2-1 (classical numbers, structural); no rational pair hits exactly
+2026-11-12 T12_lattice_sharper DONE: S5 met (-0.461); S1-S4 not met (level IE1 beats peel shape on resistivity/melting); REPORT.md in workers/T12_lattice_sharper
+2026-11-12 21:05 lead: T12 done - S5 met (shape adds to spacing beyond level, -0.461); S1-S4 not met in this setup

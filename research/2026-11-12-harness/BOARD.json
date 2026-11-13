@@ -75,6 +75,18 @@
    "status": "done (5 axes true; 7 cube only in LPS form; 11 false in his form; 13 = 5 set + 7 set; depth 2 not lattice shells)",
    "question": "Are the arms of the trees on 5, 7, 11, 13 the coordination shells of the cubic lattices, and how do two balls join?",
    "artifact": "workers/T10_arms/REPORT.md"
+  },
+  {
+   "id": "T11_many_balls",
+   "status": "running",
+   "question": "Many balls joined arm to arm with the forced gap: which lattices come out; rotation between layers; wall and locked step in the join; pressure balance",
+   "artifact": "workers/T11_many_balls/REPORT.md"
+  },
+  {
+   "id": "T12_lattice_sharper",
+   "status": "done (S5 met: partial -0.461; S1-S4 not met; level carries conductivity and melting)",
+   "question": "Second probing pass on published element data: B99 split, composition across the wall, conductivity, melting point",
+   "artifact": "workers/T12_lattice_sharper/REPORT.md"
   }
  ]
 }
