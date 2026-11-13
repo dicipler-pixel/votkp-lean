@@ -11,7 +11,7 @@
   },
   {
    "id": "T2_twin_turn",
-   "status": "running",
+   "status": "done (not settled at 1e9: 12.2695 deg; kill line fired, drift 0.197)",
    "question": "Does the twin-chain frame turn settle (9.87, 11.62, 12.07, 12.08 degrees so far)?",
    "artifact": "workers/T2_twin_turn/REPORT.md",
    "done_when": "value at 1e9 (or the largest reached, stated) with the sequence of values and a stated settle test"
@@ -53,7 +53,7 @@
   },
   {
    "id": "T7_lean_full",
-   "status": "running",
+   "status": "done (Mathlib built; 140 theorems, 15 false controls rejected; two-trees 159 theorems; 0 errors)",
    "question": "Build all of Mathlib from source (no cache) and then the votkp-lean project: do the 140 theorems and the two-trees files compile?",
    "artifact": "workers/T7_lean_full/REPORT.md",
    "done_when": "lake build of the project finished, or exact stopping point with resume command"

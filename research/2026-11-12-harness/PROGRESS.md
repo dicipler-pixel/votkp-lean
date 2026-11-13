@@ -22,3 +22,11 @@
 2026-11-12 15:12 lead: T1 done - knot side reproduces; pair count 353/251 vs printed 354/253
 2026-11-12 T6_lean: toolchain from GitHub OK; cache.mathlib.org 403; narrow closure built; NewProps.lean compiles (43 theorems, no sorry)
 2026-11-12 15:40 lead: T6 done - NewProps.lean 43 theorems compile; T7 started on full build
+2026-11-12T21:55Z T7: Mathlib build 4253/8884 jobs, ~1h in, no errors
+2026-11-12T22:41Z T7: Mathlib build 6199/8918, ~2h in, no errors
+2026-11-12T23:32Z T7: Mathlib 7708/8923, cut off, restarted
+2026-11-12 T2: done, 1e9 reached, 12.2695 deg, kill line fired (0.197>0.1)
+2026-11-12 18:25 lead: T2 done - twin-chain turn 12.2695 deg at 1e9, not settled; axis settled
+2026-11-13T01:07Z T7: Mathlib FULL built (8923 jobs, EXIT 0). next: lake build project
+DONE 2026-11-13T01:26Z: Mathlib 8923 jobs, project 8942 jobs OK, verify 140 thm/15 controls OK, two-trees 159 thm OK. REPORT.md written.
+2026-11-12 19:30 lead: T7 done - full Lean build passes: 140 theorems + 15 false controls, two-trees 159; all board tasks done
