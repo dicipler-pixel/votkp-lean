@@ -52,3 +52,7 @@ DONE 2026-11-13T01:26Z: Mathlib 8923 jobs, project 8942 jobs OK, verify 140 thm/
 2026-11-12 T11_many_balls: step2 done - rule b contacts reproduce rock-salt/CsCl/ZnS closing ratios sqrt2-1, sqrt3-1, sqrt6/2-1 (classical numbers, structural); no rational pair hits exactly
 2026-11-12 T12_lattice_sharper DONE: S5 met (-0.461); S1-S4 not met (level IE1 beats peel shape on resistivity/melting); REPORT.md in workers/T12_lattice_sharper
 2026-11-12 21:05 lead: T12 done - S5 met (shape adds to spacing beyond level, -0.461); S1-S4 not met in this setup
+2026-11-12 T11_many_balls: step3 closed forms (z for theta=60,72,90,120,180 ...), C1 element test not met; step4: omega=90 at golden-ratio z, W^m=I at crystal-angle z, wall changes kind of holonomy not size
+2026-11-12 T11_many_balls: step5 done - pressure balance P1+P2=1 has one integer solution: z=3,n=m=1 (K=2); pushes-equal trivial only
+2026-11-12 T11_many_balls: DONE - REPORT.md (sc/bcc/fcc close per arm set, 13-set rank 4; rock-salt/CsCl/ZnS closing ratios; special z for theta=60..180; omega=90 at golden z; pressure balance only z=3 n=m=1)
+2026-11-12 21:20 lead: T11 done - assemblies, special turn steps (wall = full turn), square defect changes kind at the wall, P1+P2=1 only at z=3

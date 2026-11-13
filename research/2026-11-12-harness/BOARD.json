@@ -78,7 +78,7 @@
   },
   {
    "id": "T11_many_balls",
-   "status": "running",
+   "status": "done (6/8/12 arms close to sc/bcc/fcc; 13 set does not close; crystal turn steps exact; square of four joins is the loop)",
    "question": "Many balls joined arm to arm with the forced gap: which lattices come out; rotation between layers; wall and locked step in the join; pressure balance",
    "artifact": "workers/T11_many_balls/REPORT.md"
   },
