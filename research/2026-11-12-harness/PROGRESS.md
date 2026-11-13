@@ -37,3 +37,12 @@ DONE 2026-11-13T01:26Z: Mathlib 8923 jobs, project 8942 jobs OK, verify 140 thm/
 2026-11-12 T8 step5 done: no lattice/nn table on disk; metallic-radius proxy only passes the wall filter for 6 elements (<25 registered) -> untested. next: REPORT.md
 2026-11-12 T8 DONE: REPORT.md written
 2026-11-12 20:15 lead: T8 done - gap and decay share the law e^(-2L); steps equal only at z*=6.26913 (y^3-4y-2=0)
+2026-11-12 20:25 lead: T9 (lattice data) and T10 (tree arms, two-ball joins) started
+2026-11-12 T9_lattice: registered R1-R4 written in STATE.md before computing
+2026-11-12 T10_arms: conventions read (PeelTrees.lean:45,88,235; paper l.167: ln7 uses 6 axes, not LPS-8); step 1 kill lines written
+2026-11-12 T9_lattice: table built (84 elements, 65 with CN); IE cross-check 0 disagreements (same NIST source)
+2026-11-12 T9_lattice: R1-R4 run (s2_out.txt)
+2026-11-12 T9_lattice: REPORT.md done (R1 met, R2 artefact-flagged, R3 meaningless n=5, R4 met)
+2026-11-12 20:32 lead: T9 done - past the wall = the five alkalis, all bcc; R2 artefact; level carries absolute spacing (-0.789)
+2026-11-12 T10_arms: DONE - REPORT.md (arms: 5 oct/6, 7 cube/8 only in LPS-8 not his six-axis ln7, 11 NOT cuboctahedron in parity form (a=3 shell only), 13 = 6+14; depth-2 no lattice shells; (5,7) join impossible; B99 triple in paper s8.7)
+2026-11-12 20:45 lead: T10 done - arms: 5 octahedron, 13 = 6+8, 11 not cuboctahedron in his form; integer pairs across wall only (5,7),(4,11)

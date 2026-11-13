@@ -63,6 +63,18 @@
    "status": "done (same law in length; equal step only at z*=6.2691, cubic y^3-4y-2)",
    "question": "Is the gap between two balls the decay depth past the critical angle?",
    "artifact": "workers/T8_gap_depth/REPORT.md"
+  },
+  {
+   "id": "T9_lattice",
+   "status": "done (R1, R4 met on the five alkalis; R2 pass is an artefact; R3 n=5)",
+   "question": "Do lattice type and spacing of the elements follow from their peel steps? (published lattice table; four lines registered first)",
+   "artifact": "workers/T9_lattice/REPORT.md"
+  },
+  {
+   "id": "T10_arms",
+   "status": "done (5 axes true; 7 cube only in LPS form; 11 false in his form; 13 = 5 set + 7 set; depth 2 not lattice shells)",
+   "question": "Are the arms of the trees on 5, 7, 11, 13 the coordination shells of the cubic lattices, and how do two balls join?",
+   "artifact": "workers/T10_arms/REPORT.md"
   }
  ]
 }
