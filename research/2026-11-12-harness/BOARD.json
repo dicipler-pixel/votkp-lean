@@ -57,6 +57,12 @@
    "question": "Build all of Mathlib from source (no cache) and then the votkp-lean project: do the 140 theorems and the two-trees files compile?",
    "artifact": "workers/T7_lean_full/REPORT.md",
    "done_when": "lake build of the project finished, or exact stopping point with resume command"
+  },
+  {
+   "id": "T8_gap_depth",
+   "status": "done (same law in length; equal step only at z*=6.2691, cubic y^3-4y-2)",
+   "question": "Is the gap between two balls the decay depth past the critical angle?",
+   "artifact": "workers/T8_gap_depth/REPORT.md"
   }
  ]
 }

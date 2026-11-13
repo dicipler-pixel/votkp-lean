@@ -30,3 +30,10 @@
 2026-11-13T01:07Z T7: Mathlib FULL built (8923 jobs, EXIT 0). next: lake build project
 DONE 2026-11-13T01:26Z: Mathlib 8923 jobs, project 8942 jobs OK, verify 140 thm/15 controls OK, two-trees 159 thm OK. REPORT.md written.
 2026-11-12 19:30 lead: T7 done - full Lean build passes: 140 theorems + 15 false controls, two-trees 159; all board tasks done
+2026-11-12 T8 step1 done: lambda closed in chi (tanh(lambda/8)=sinh chi), not proportional; real arm angle past wall pinned at pi/2. next: step 2-3
+2026-11-12 T8 steps 2-3 done: gap/depth rates equal at exactly one z*=6.2691276608523 (cubic: y^3-4y-2=0, y=z^(1/4)+z^(-1/4)); next: step 4 length reading
+2026-11-12 T8 step4 done: in length both decay as e^-2L (e-fold 1/2); per-pass lengths equal only at z*. next: step 5 data search
+2026-11-12 20:05 lead: v3.3 built and pushed (paper/votkp_v3_3); T8 running
+2026-11-12 T8 step5 done: no lattice/nn table on disk; metallic-radius proxy only passes the wall filter for 6 elements (<25 registered) -> untested. next: REPORT.md
+2026-11-12 T8 DONE: REPORT.md written
+2026-11-12 20:15 lead: T8 done - gap and decay share the law e^(-2L); steps equal only at z*=6.26913 (y^3-4y-2=0)
