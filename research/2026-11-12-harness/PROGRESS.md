@@ -56,3 +56,8 @@ DONE 2026-11-13T01:26Z: Mathlib 8923 jobs, project 8942 jobs OK, verify 140 thm/
 2026-11-12 T11_many_balls: step5 done - pressure balance P1+P2=1 has one integer solution: z=3,n=m=1 (K=2); pushes-equal trivial only
 2026-11-12 T11_many_balls: DONE - REPORT.md (sc/bcc/fcc close per arm set, 13-set rank 4; rock-salt/CsCl/ZnS closing ratios; special z for theta=60..180; omega=90 at golden z; pressure balance only z=3 n=m=1)
 2026-11-12 21:20 lead: T11 done - assemblies, special turn steps (wall = full turn), square defect changes kind at the wall, P1+P2=1 only at z=3
+2026-11-13 02:55 lead: neutrino v6 body read in full; T13 started on seven bridges
+2026-11-13 T13_neutrino_wall: read all inputs; STATE.md pre-registration written (hand derivations B1,B2,B3,B5)
+2026-11-13 T13_neutrino_wall: B1 holds (identity, exact), B2 holds (x^2=2G^2 both sides, 5e-50), B3 done (full-chain wall 2/pi, K=4phi^2/sin^2 2phi)
+2026-11-13 T13_neutrino_wall: DONE - REPORT.md (B1 exact, B2 exact x^2=2G^2, B3 wall 2/pi, B4 door peak within 25% of wall only at T=4 and per-mode k-scaling killed, B5 defect always run, B6 described, B7 list)
+2026-11-13 03:35 lead: T13 done - two-moment EP is the loop wall exactly (2G^2=x^2); full-chain wall kappa=2k/pi; door not a wall crossing

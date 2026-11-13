@@ -87,6 +87,12 @@
    "status": "done (S5 met: partial -0.461; S1-S4 not met; level carries conductivity and melting)",
    "question": "Second probing pass on published element data: B99 split, composition across the wall, conductivity, melting point",
    "artifact": "workers/T12_lattice_sharper/REPORT.md"
+  },
+  {
+   "id": "T13_neutrino_wall",
+   "status": "done (B1,B2 exact; B3 full-chain wall 2k/pi; B4 door is not a wall crossing; B5 order defect = loop, always a run; B6 described)",
+   "question": "Join the neutrino paper v6 and the loop: speed limit, two-moment exceptional point as the wall, the door as a wall crossing, order of history as the loop, flux-shear link in the peel coordinate",
+   "artifact": "workers/T13_neutrino_wall/REPORT.md"
   }
  ]
 }
