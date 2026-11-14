@@ -1,0 +1,7 @@
+closing n=5 z 2.890054 distinct 2643 words 4687 min dist 1.061275 ln z 1.061275 closed
+closing n=6 z 3.732051 distinct 3667 words 4687 min dist 1.316958 ln z 1.316958 closed
+z=3 z 3 distinct 4687 words 4687 min dist 0.023279 ln z 1.098612 falls
+z=5 z 5 distinct 4687 words 4687 min dist 0.425792 ln z 1.609438 falls
+z=6 z 6 distinct 4687 words 4687 min dist 1.791759 ln z 1.791759 holds(no closure)
+line 3+2sqrt2 z 5.828427 distinct 4687 words 4687 min dist 1.762747 ln z 1.762747 holds(no closure)
+z=7 z 7 distinct 4687 words 4687 min dist 1.94591 ln z 1.94591 holds(no closure)

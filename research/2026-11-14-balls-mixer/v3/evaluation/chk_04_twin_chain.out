@@ -1,0 +1,9 @@
+twin starts a>=11, a<=4e5: 3802 (R4 says 3802)
+end digits (a>5) set: [1, 7, 9]
+pairs from a=5 up to 3125: 82 (R4 says 82)
+path length sum ln(a'/a) over 11..last = 10.501102028534952  ln(last/11)= 10.501102028534952
+step a->a+2 : Gamma=1/(a+1)? a=11: 0.08333333333333337 0.08333333333333333  length ln(1+2/a) 0.16705408466316624
+z 5 mean frame turn (rad) over all pairs 0.9838514175635371  last-in-window only: 1.250382187816822
+z 7 mean frame turn (rad) over all pairs 1.0882492386461395  last-in-window only: 1.3781368570893264
+82-pair chain z=5 mean turn 1.0955205168067867
+next-end-digit shares: {(1, 1): 0.291, (1, 7): 0.386, (1, 9): 0.322, (7, 1): 0.324, (7, 7): 0.294, (7, 9): 0.382, (9, 1): 0.397, (9, 7): 0.321, (9, 9): 0.282}

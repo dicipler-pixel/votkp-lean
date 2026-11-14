@@ -1,0 +1,22 @@
+# SCRIPT: CHK-12-IDENTITIES (exact rational checks of Lean-statement arithmetic and shell/rung terms, Yang-Mills floors, particles crossing, Koide mod-4)
+from fractions import Fraction as F
+import math, itertools
+gam=lambda z:(z-1)/(z+1)
+print("J2 gam((k+1)/k)=1/(2k+1):",all(gam(F(k+1,k))==F(1,2*k+1) for k in range(1,200)))
+print("B99 shell terms (2n-1)/(n^2+(n-1)^2) n=2..6:",[F(2*n-1,n*n+(n-1)**2) for n in range(2,7)],"= gam(n^2/(n-1)^2):",all(F(2*n-1,n*n+(n-1)**2)==gam(F(n*n,(n-1)**2)) for n in range(2,60)))
+oplus=lambda u,v:(u+v)/(1+u*v)
+print("oplus(2/3,2/3)=",oplus(F(2,3),F(2,3)),"gam(25)=",gam(F(25)),"; gam_mul z=3,7:",oplus(gam(F(3)),gam(F(7)))==gam(F(21)))
+print("garrett_pair: gam5^2",gam(F(5))**2,"triple",(81-16,2*9*4,81+16))
+print("thomas_half_angle:",72*9==4*(97+65),288*16==9*(337+175),"; schottky_ratio:",(5-3)**2<8<(7-3)**2)
+t=F(4,9); print("tan(theta/2)=G^2 integer triple z=5 (a,b,c)/gcd:",((6**4-4**4),2*16*36,(6**4+4**4)))
+for z in (5,7,2,3,4):
+    a=(z+1)**4-(z-1)**4; b=2*(z-1)**2*(z+1)**2; c=(z+1)**4+(z-1)**4; g=math.gcd(math.gcd(a,b),c); print("z",z,"triple",(a//g,b//g,c//g),"sq check",(a//g)**2+(b//g)**2==(c//g)**2)
+print("commutator 2x2 trace z=2,3,5,6,7 exact 2-(z-1)^4/(4z^2):",[ (z,2-F((z-1)**4,4*z*z)) for z in (2,3,5,6,7)])
+print("z=4 T=47/64 ?",2-F(81,64)," z=8 T=-1889/256 ?",2-F(7**4,4*64)," z=16:",2-F(15**4,4*256))
+print("YM floors 8g^2/(1+g^2): g=2/3",8*F(4,9)/(1+F(4,9)),"g=3/4",8*F(9,16)/(1+F(9,16)))
+print("particles: radius^2=Gamma(E/m) at E/m=3:",gam(F(3)),"; cosh eta =3 -> tanh^2(eta/2)",(3-1)/(3+1))
+print("Koide mod 4: any primitive integer triple with sum x^2 = 4 sum_{i<j} x_i x_j (|x|<=60):",[t for t in itertools.product(range(-60,61),repeat=3) if t!=(0,0,0) and math.gcd(math.gcd(abs(t[0]),abs(t[1])),abs(t[2]))==1 and sum(x*x for x in t)==4*(t[0]*t[1]+t[0]*t[2]+t[1]*t[2])][:3])
+print("norm-5 quaternion count (a^2+b^2+c^2+d^2=5):",sum(1 for q in itertools.product(range(-2,3),repeat=4) if sum(x*x for x in q)==5)," six with a odd>0, others even:",sum(1 for q in itertools.product(range(-2,3),repeat=4) if sum(x*x for x in q)==5 and q[0]>0 and q[0]%2==1 and all(x%2==0 for x in q[1:])))
+print("level shells Gamma_L (z=5) exact:",[gam(F(5)**L) for L in range(1,5)],"; balls to level 4: 1+6*(5**4-1)//4 =",1+6*(5**4-1)//4,"; per level 1,6,30,150,750:",[1]+[6*5**(L-1) for L in range(1,5)])
+print("Smith bridge page: r=(hi-lo)/(hi+lo) vs 3/4(G-1/3) max diff:",max(abs(((lambda X:( (X/(1+X))/2-(2/(3*(1+X))+X/(6*(1+X))) )/((X/(1+X))/2+(2/(3*(1+X))+X/(6*(1+X)))))(math.exp(L)))-0.75*((math.exp(L)-1)/(math.exp(L)+1)-1/3)) for L in [i/100 for i in range(-400,401)]))
+print("page bridge Gamma(ln2)=1/3:",gam(F(2)))
