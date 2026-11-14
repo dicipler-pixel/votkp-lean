@@ -1,0 +1,98 @@
+{
+ "updated": "2026-11-12",
+ "tasks": [
+  {
+   "id": "T1_knots",
+   "status": "done (28 scripts ran; pair count 353/251 vs paper 354/253)",
+   "owner": "ac013efd5a08e54ef",
+   "question": "Do the v2.9 knot-side scripts reproduce (11 and 12 crossing scans in pieces)?",
+   "artifact": "/home/claude/closure/knot_v29/REPORT.md",
+   "done_when": "scan_11_12 finished in pieces and compared with stored rows; final section written"
+  },
+  {
+   "id": "T2_twin_turn",
+   "status": "done (not settled at 1e9: 12.2695 deg; kill line fired, drift 0.197)",
+   "question": "Does the twin-chain frame turn settle (9.87, 11.62, 12.07, 12.08 degrees so far)?",
+   "artifact": "workers/T2_twin_turn/REPORT.md",
+   "done_when": "value at 1e9 (or the largest reached, stated) with the sequence of values and a stated settle test"
+  },
+  {
+   "id": "T3_cap_fill",
+   "status": "done (no law passed; bound + never-class hold)",
+   "question": "At what rate does the direction cap N(n,eps) fill? The first law failed its kill line in 19 of 144 cases.",
+   "artifact": "workers/T3_cap_fill/REPORT.md",
+   "done_when": "the 19 failures characterised; opposite law run; one law that passes a kill line written first, or the statement that none tested passes"
+  },
+  {
+   "id": "T4_opposites",
+   "status": "done (24 run: 13 fired, 11 not; 5 could not run; 4 skipped)",
+   "question": "The kills never retried (ledger report section C2): run the single most natural opposite of each, kill line as written there.",
+   "artifact": "workers/T4_opposites/REPORT.md",
+   "done_when": "every C2 item has a row: run / could not run and why; outputs kept"
+  },
+  {
+   "id": "T5_band_mean",
+   "status": "done",
+   "question": "The loop is one k-point of the exit-line band (K = 1 + u^2/E(k)^2). What in the tree is the band mean <K> = 2, and which k does each z pick?",
+   "artifact": "workers/T5_band_mean/REPORT.md",
+   "done_when": "k(z) in closed form checked to 1e-12; the mean identified with a tree quantity or stated as not found among the readings tried (list them)"
+  },
+  {
+   "id": "T6_lean",
+   "status": "done (Lean 4.34.1 runs; NewProps.lean 43 theorems compiled; full project not built)",
+   "question": "Can Lean be built here by another route (toolchain from GitHub releases instead of release.lean-lang.org)? If yes build votkp-lean; either way write Lean statements for Props 22.1-22.3, 24.1, 25.1, 25.2.",
+   "artifact": "workers/T6_lean/REPORT.md",
+   "done_when": "build result or the exact blocking host; statements file, marked compiled / not compiled"
+  },
+  {
+   "id": "T3b_cap_word",
+   "status": "done (no exact law; proven lower bound F1, 0 violations in 330)",
+   "question": "Exact first-reach n for the direction cap from the three-gap word",
+   "artifact": "workers/T3b_cap_word/REPORT.md",
+   "done_when": "derived law run against the factor-2 kill line on base, fresh and new z sets"
+  },
+  {
+   "id": "T7_lean_full",
+   "status": "done (Mathlib built; 140 theorems, 15 false controls rejected; two-trees 159 theorems; 0 errors)",
+   "question": "Build all of Mathlib from source (no cache) and then the votkp-lean project: do the 140 theorems and the two-trees files compile?",
+   "artifact": "workers/T7_lean_full/REPORT.md",
+   "done_when": "lake build of the project finished, or exact stopping point with resume command"
+  },
+  {
+   "id": "T8_gap_depth",
+   "status": "done (same law in length; equal step only at z*=6.2691, cubic y^3-4y-2)",
+   "question": "Is the gap between two balls the decay depth past the critical angle?",
+   "artifact": "workers/T8_gap_depth/REPORT.md"
+  },
+  {
+   "id": "T9_lattice",
+   "status": "done (R1, R4 met on the five alkalis; R2 pass is an artefact; R3 n=5)",
+   "question": "Do lattice type and spacing of the elements follow from their peel steps? (published lattice table; four lines registered first)",
+   "artifact": "workers/T9_lattice/REPORT.md"
+  },
+  {
+   "id": "T10_arms",
+   "status": "done (5 axes true; 7 cube only in LPS form; 11 false in his form; 13 = 5 set + 7 set; depth 2 not lattice shells)",
+   "question": "Are the arms of the trees on 5, 7, 11, 13 the coordination shells of the cubic lattices, and how do two balls join?",
+   "artifact": "workers/T10_arms/REPORT.md"
+  },
+  {
+   "id": "T11_many_balls",
+   "status": "done (6/8/12 arms close to sc/bcc/fcc; 13 set does not close; crystal turn steps exact; square of four joins is the loop)",
+   "question": "Many balls joined arm to arm with the forced gap: which lattices come out; rotation between layers; wall and locked step in the join; pressure balance",
+   "artifact": "workers/T11_many_balls/REPORT.md"
+  },
+  {
+   "id": "T12_lattice_sharper",
+   "status": "done (S5 met: partial -0.461; S1-S4 not met; level carries conductivity and melting)",
+   "question": "Second probing pass on published element data: B99 split, composition across the wall, conductivity, melting point",
+   "artifact": "workers/T12_lattice_sharper/REPORT.md"
+  },
+  {
+   "id": "T13_neutrino_wall",
+   "status": "done (B1,B2 exact; B3 full-chain wall 2k/pi; B4 door is not a wall crossing; B5 order defect = loop, always a run; B6 described)",
+   "question": "Join the neutrino paper v6 and the loop: speed limit, two-moment exceptional point as the wall, the door as a wall crossing, order of history as the loop, flux-shear link in the peel coordinate",
+   "artifact": "workers/T13_neutrino_wall/REPORT.md"
+  }
+ ]
+}

@@ -1,0 +1,15 @@
+1. One tree edge is a boost of rapidity ln 5.  gamma = cosh(ln5) = 2.6  (13/5 = 2.6 )  v/c = tanh(ln5) = 0.9230769230769230769230769230769230769231  (12/13 = 0.9230769230769230769230769230769230769231 )
+   ball radius of one step tanh(ln5/2) = 0.6666666666666666666666666666666666666667  = Gamma(5) = (5-1)/(5+1) = 2/3
+2. Koide Q = 0.666664463415   (2/3 = 0.666666666667)   cos^2 of the angle between (sqrt m) and (1,1,1) = 1/(3Q) = 0.500001652445  (the half line is 1/2)
+   change in Q from one sigma of the tau mass: 5.08e-6   distance of Q from 2/3: 2.2e-6
+3. e->mu: z =   206.768  Gamma = 0.990374  Garrett levels ln z/ln5 = 3.313  beyond the wall z>5.828: True
+3. mu->tau: z =   16.8177  Gamma = 0.887752  Garrett levels ln z/ln5 = 1.754  beyond the wall z>5.828: True
+3. u->c: z =   589.352  Gamma = 0.996612  Garrett levels ln z/ln5 = 3.964  beyond the wall z>5.828: True
+3. c->t: z =   135.562  Gamma = 0.985355  Garrett levels ln z/ln5 = 3.05  beyond the wall z>5.828: True
+3. d->s: z =   19.8936  Gamma = 0.904277  Garrett levels ln z/ln5 = 1.858  beyond the wall z>5.828: True
+3. s->b: z =    44.738  Gamma = 0.956273  Garrett levels ln z/ln5 = 2.362  beyond the wall z>5.828: True
+4. electron neutrino (m ~ 0.05 eV) at 1 MeV: rapidity 17.5044 = 10.88 tree levels, ball radius 1 - 5.0e-8
+4. electron at 1 MeV total energy: rapidity 1.29174 = 0.8026 tree levels, ball radius 1 - 0.4311
+4. muon from a pion decay (E=109.8 MeV): rapidity 0.278417 = 0.173 tree levels, ball radius 1 - 0.8617
+5. Lipschitz quaternions of norm 5: 48  = 6 tree arms x 8 units;  Weyl fermion states per Standard Model with right-handed neutrinos: 3 x 16 = 48 ; without them 3 x 15 = 45
+6. commutator of two equal perpendicular boosts reaches the wall at rapidity 1.76274717403909  = ln(3+2sqrt2) = 1.76274717403909 ; boost speed there v/c = 0.942809041582 (= 2sqrt2/3) 0.942809041582

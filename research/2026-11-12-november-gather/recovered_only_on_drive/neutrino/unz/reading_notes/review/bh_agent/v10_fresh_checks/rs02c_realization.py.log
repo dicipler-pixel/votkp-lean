@@ -1,0 +1,7 @@
+(1) two-level family: max error in a=k^2 sin^2(beta)/4, b=beta'^2/4, g_xy=0 over 50 draws: 1.6e-09
+   m +0.00 -> +1.00: gaps 2.0000 -> 2.8284; Gamma(n=sqrt g_par) = +0.17157288; tanh(0.5 ln(gap2/gap1)) = +0.17157288
+   m +0.50 -> +2.00: gaps 2.2361 -> 4.4721; Gamma(n=sqrt g_par) = +0.33333333; tanh(0.5 ln(gap2/gap1)) = +0.33333333
+   m -1.00 -> +3.00: gaps 2.8284 -> 6.3246; Gamma(n=sqrt g_par) = +0.38196601; tanh(0.5 ln(gap2/gap1)) = +0.38196601
+   m +0.20 -> +0.25: gaps 2.0396 -> 2.0616; Gamma(n=sqrt g_par) = +0.00535093; tanh(0.5 ln(gap2/gap1)) = +0.00535093
+(2) max |a*gap^2 - 9| = 2.7e-09; max |Gamma - peel| = 8.7e-13
+Realization: PASS

@@ -1,0 +1,547 @@
+﻿2026-11-05T05:47:12.4024839Z Current runner version: '2.338.2'
+2026-11-05T05:47:12.4061194Z ##[group]Runner Image Provisioner
+2026-11-05T05:47:12.4062514Z Hosted Compute Agent
+2026-11-05T05:47:12.4063734Z Version: 20261021.618
+2026-11-05T05:47:12.4064994Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+2026-11-05T05:47:12.4066301Z Build Date: 2026-10-21T00:45:21Z
+2026-11-05T05:47:12.4067718Z Worker ID: {71f61de7-794a-4073-8f6b-ea4873430452}
+2026-11-05T05:47:12.4069049Z Region: centralus
+2026-11-05T05:47:12.4070188Z Cloud: Azure
+2026-11-05T05:47:12.4071539Z ##[endgroup]
+2026-11-05T05:47:12.4074495Z ##[group]Operating System
+2026-11-05T05:47:12.4075766Z Ubuntu
+2026-11-05T05:47:12.4076832Z 26.04.1
+2026-11-05T05:47:12.4077703Z LTS
+2026-11-05T05:47:12.4078763Z ##[endgroup]
+2026-11-05T05:47:12.4079778Z ##[group]Runner Image
+2026-11-05T05:47:12.4081391Z Image: ubuntu-26.04
+2026-11-05T05:47:12.4082478Z Version: 20261025.179.1
+2026-11-05T05:47:12.4085287Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261025.179/images/ubuntu/Ubuntu2604-Readme.md
+2026-11-05T05:47:12.4088208Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261025.179
+2026-11-05T05:47:12.4090118Z ##[endgroup]
+2026-11-05T05:47:12.4092670Z ##[group]GITHUB_TOKEN Permissions
+2026-11-05T05:47:12.4095848Z Contents: read
+2026-11-05T05:47:12.4096898Z Metadata: read
+2026-11-05T05:47:12.4097786Z ##[endgroup]
+2026-11-05T05:47:12.4100016Z Secret source: Actions
+2026-11-05T05:47:12.4101386Z Cache mode: write
+2026-11-05T05:47:12.4102496Z Prepare workflow directory
+2026-11-05T05:47:12.4503542Z Prepare all required actions
+2026-11-05T05:47:12.4577410Z Getting action download info
+2026-11-05T05:47:12.6929419Z Download action repository 'actions/checkout@v5' (SHA:fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09)
+2026-11-05T05:47:12.7859739Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-11-05T05:47:12.9713465Z Complete job name: check
+2026-11-05T05:47:13.0615808Z ##[group]Run actions/checkout@v5
+2026-11-05T05:47:13.0616714Z with:
+2026-11-05T05:47:13.0617170Z   persist-credentials: false
+2026-11-05T05:47:13.0617788Z   repository: dicipler-pixel/iqgt-grassmannian-lean
+2026-11-05T05:47:13.0622091Z   token: ***
+2026-11-05T05:47:13.0622547Z   ssh-strict: true
+2026-11-05T05:47:13.0622988Z   ssh-user: git
+2026-11-05T05:47:13.0623415Z   clean: true
+2026-11-05T05:47:13.0623863Z   sparse-checkout-cone-mode: true
+2026-11-05T05:47:13.0624388Z   fetch-depth: 1
+2026-11-05T05:47:13.0624873Z   fetch-tags: false
+2026-11-05T05:47:13.0625326Z   show-progress: true
+2026-11-05T05:47:13.0625781Z   lfs: false
+2026-11-05T05:47:13.0626220Z   submodules: false
+2026-11-05T05:47:13.0626671Z   set-safe-directory: true
+2026-11-05T05:47:13.0627182Z   allow-unsafe-pr-checkout: false
+2026-11-05T05:47:13.0627984Z ##[endgroup]
+2026-11-05T05:47:13.3205194Z Syncing repository: dicipler-pixel/iqgt-grassmannian-lean
+2026-11-05T05:47:13.3208156Z ##[group]Getting Git version info
+2026-11-05T05:47:13.3209156Z Working directory is '/home/runner/work/iqgt-grassmannian-lean/iqgt-grassmannian-lean'
+2026-11-05T05:47:13.3211122Z [command]/usr/bin/git version
+2026-11-05T05:47:13.3212204Z git version 2.56.0
+2026-11-05T05:47:13.3216166Z ##[endgroup]
+2026-11-05T05:47:13.3231516Z Temporarily overriding HOME='/home/runner/work/_temp/542bc12f-02b9-4070-a9fe-a0e13053f720' before making global git config changes
+2026-11-05T05:47:13.3234600Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-05T05:47:13.3238715Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/iqgt-grassmannian-lean/iqgt-grassmannian-lean
+2026-11-05T05:47:13.3302349Z Deleting the contents of '/home/runner/work/iqgt-grassmannian-lean/iqgt-grassmannian-lean'
+2026-11-05T05:47:13.3305608Z ##[group]Initializing the repository
+2026-11-05T05:47:13.3310682Z [command]/usr/bin/git init /home/runner/work/iqgt-grassmannian-lean/iqgt-grassmannian-lean
+2026-11-05T05:47:13.3414914Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-05T05:47:13.3416304Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-05T05:47:13.3417355Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-05T05:47:13.3418175Z hint: call:
+2026-11-05T05:47:13.3418640Z hint:
+2026-11-05T05:47:13.3419235Z hint: 	git config --global init.defaultBranch <name>
+2026-11-05T05:47:13.3419919Z hint:
+2026-11-05T05:47:13.3421211Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-05T05:47:13.3422667Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-05T05:47:13.3423480Z hint:
+2026-11-05T05:47:13.3423952Z hint: 	git branch -m <name>
+2026-11-05T05:47:13.3424492Z hint:
+2026-11-05T05:47:13.3425183Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-05T05:47:13.3431509Z Initialized empty Git repository in /home/runner/work/iqgt-grassmannian-lean/iqgt-grassmannian-lean/.git/
+2026-11-05T05:47:13.3444271Z [command]/usr/bin/git remote add origin https://github.com/dicipler-pixel/iqgt-grassmannian-lean
+2026-11-05T05:47:13.3495291Z ##[endgroup]
+2026-11-05T05:47:13.3496955Z ##[group]Disabling automatic garbage collection
+2026-11-05T05:47:13.3498277Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-05T05:47:13.3533691Z ##[endgroup]
+2026-11-05T05:47:13.3535300Z ##[group]Setting up auth
+2026-11-05T05:47:13.3541342Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-05T05:47:13.3578829Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-05T05:47:13.4084388Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-05T05:47:13.4090209Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-05T05:47:13.4397338Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-05T05:47:13.4443115Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-05T05:47:13.4741250Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-05T05:47:13.4787692Z ##[endgroup]
+2026-11-05T05:47:13.4789372Z ##[group]Fetching the repository
+2026-11-05T05:47:13.4800299Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +88724607d7ca69029344c235e5fc95f2e0ee9c57:refs/remotes/origin/monopole-berry
+2026-11-05T05:47:15.4256961Z From https://github.com/dicipler-pixel/iqgt-grassmannian-lean
+2026-11-05T05:47:15.4260930Z  * [new ref]         88724607d7ca69029344c235e5fc95f2e0ee9c57 -> origin/monopole-berry
+2026-11-05T05:47:15.4264819Z ##[endgroup]
+2026-11-05T05:47:15.4266185Z ##[group]Determining the checkout info
+2026-11-05T05:47:15.4267959Z ##[endgroup]
+2026-11-05T05:47:15.4270858Z [command]/usr/bin/git sparse-checkout disable
+2026-11-05T05:47:15.4320599Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-05T05:47:15.4352335Z ##[group]Checking out the ref
+2026-11-05T05:47:15.4362317Z [command]/usr/bin/git checkout --progress --force -B monopole-berry refs/remotes/origin/monopole-berry
+2026-11-05T05:47:15.5738926Z Switched to a new branch 'monopole-berry'
+2026-11-05T05:47:15.5743761Z branch 'monopole-berry' set up to track 'origin/monopole-berry'.
+2026-11-05T05:47:15.5776026Z ##[endgroup]
+2026-11-05T05:47:15.5822174Z [command]/usr/bin/git log -1 --format=%H
+2026-11-05T05:47:15.5847911Z 88724607d7ca69029344c235e5fc95f2e0ee9c57
+2026-11-05T05:47:15.5858987Z ##[group]Removing auth
+2026-11-05T05:47:15.5863569Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-05T05:47:15.5896579Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-05T05:47:15.6169719Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-05T05:47:15.6192765Z http.https://github.com/.extraheader
+2026-11-05T05:47:15.6202941Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-05T05:47:15.6239048Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-05T05:47:15.6503261Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-05T05:47:15.6533715Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-05T05:47:15.6793842Z ##[endgroup]
+2026-11-05T05:47:15.7056576Z ##[group]Run set -euo pipefail
+2026-11-05T05:47:15.7058002Z [36;1mset -euo pipefail[0m
+2026-11-05T05:47:15.7059240Z [36;1mdf -h /[0m
+2026-11-05T05:47:15.7061536Z [36;1msudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL || true[0m
+2026-11-05T05:47:15.7063937Z [36;1mdf -h /[0m
+2026-11-05T05:47:15.7099644Z shell: /usr/bin/bash -e {0}
+2026-11-05T05:47:15.7101146Z ##[endgroup]
+2026-11-05T05:47:15.7204543Z Filesystem      Size  Used Avail Use% Mounted on
+2026-11-05T05:47:15.7206384Z /dev/root       145G   57G   88G  40% /
+2026-11-05T05:48:38.3203275Z Filesystem      Size  Used Avail Use% Mounted on
+2026-11-05T05:48:38.3203924Z /dev/root       145G   39G  106G  27% /
+2026-11-05T05:48:38.3334217Z ##[group]Run set -euo pipefail
+2026-11-05T05:48:38.3334576Z [36;1mset -euo pipefail[0m
+2026-11-05T05:48:38.3335145Z [36;1mcurl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -o "$RUNNER_TEMP/elan-init.sh"[0m
+2026-11-05T05:48:38.3335931Z [36;1mbash "$RUNNER_TEMP/elan-init.sh" -y --default-toolchain "$(cat lean-toolchain)"[0m
+2026-11-05T05:48:38.3336398Z [36;1mecho "$HOME/.elan/bin" >> "$GITHUB_PATH"[0m
+2026-11-05T05:48:38.3367400Z shell: /usr/bin/bash -e {0}
+2026-11-05T05:48:38.3367673Z ##[endgroup]
+2026-11-05T05:48:38.4181352Z info: downloading installer
+2026-11-05T05:48:38.9857796Z info: default toolchain set to 'leanprover/lean4:v4.34.1'
+2026-11-05T05:48:38.9979797Z ##[group]Run set -euo pipefail
+2026-11-05T05:48:38.9980130Z [36;1mset -euo pipefail[0m
+2026-11-05T05:48:38.9980676Z [36;1mlean --version[0m
+2026-11-05T05:48:38.9980937Z [36;1mlake update[0m
+2026-11-05T05:48:38.9981154Z [36;1mlake exe cache get[0m
+2026-11-05T05:48:38.9981374Z [36;1mdf -h /[0m
+2026-11-05T05:48:39.0012538Z shell: /usr/bin/bash -e {0}
+2026-11-05T05:48:39.0012797Z ##[endgroup]
+2026-11-05T05:48:39.6049988Z info: downloading https://releases.lean-lang.org/lean4/v4.34.1/lean-4.34.1-linux.tar.zst
+2026-11-05T05:48:43.1252599Z info: installing /home/runner/.elan/toolchains/leanprover--lean4---v4.34.1
+2026-11-05T05:48:50.0126266Z Lean (version 4.34.1, x86_64-unknown-linux-gnu, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)
+2026-11-05T05:48:50.0568165Z info: iqgt-grassmannian-lean: no previous manifest, creating one from scratch
+2026-11-05T05:48:50.0569253Z info: mathlib: cloning https://github.com/leanprover-community/mathlib4.git
+2026-11-05T05:49:18.0658290Z info: mathlib: checking out revision 'd13f23b723b8a846827a245b89c10fc7d3f11612'
+2026-11-05T05:49:19.0527883Z info: toolchain not updated; already up-to-date
+2026-11-05T05:49:20.0969400Z info: plausible: cloning https://github.com/leanprover-community/plausible
+2026-11-05T05:49:20.4365675Z info: plausible: checking out revision '118aa17ee84656b8bd727fef7c458ee8c833385c'
+2026-11-05T05:49:20.4492230Z info: LeanSearchClient: cloning https://github.com/leanprover-community/LeanSearchClient
+2026-11-05T05:49:20.7881912Z info: LeanSearchClient: checking out revision 'ddf04cf3949fa556442341e87d47f9f6e6074707'
+2026-11-05T05:49:20.8002094Z info: importGraph: cloning https://github.com/leanprover-community/import-graph
+2026-11-05T05:49:21.1466505Z info: importGraph: checking out revision 'e928b72544873815af278d38681b31c0293588e3'
+2026-11-05T05:49:21.1667850Z info: proofwidgets: cloning https://github.com/leanprover-community/ProofWidgets4
+2026-11-05T05:49:21.6864483Z info: proofwidgets: checking out revision '106ff4fafc74ef4ac99d81dbf3ab399118f497a5'
+2026-11-05T05:49:22.3348400Z info: aesop: cloning https://github.com/leanprover-community/aesop
+2026-11-05T05:49:22.9183110Z info: aesop: checking out revision '355695d523e41d0554926416cba2a2b3544fbbc9'
+2026-11-05T05:49:22.9377482Z info: Qq: cloning https://github.com/leanprover-community/quote4
+2026-11-05T05:49:23.3303543Z info: Qq: checking out revision '6a489d9af5d0c47e5b259e2e8bcdfc1811b5a259'
+2026-11-05T05:49:23.3431991Z info: batteries: cloning https://github.com/leanprover-community/batteries
+2026-11-05T05:49:25.6035411Z info: batteries: checking out revision 'f2effa3d803fda822b1f97b806c47cf2adfbcbc2'
+2026-11-05T05:49:25.6413985Z info: Cli: cloning https://github.com/leanprover/lean4-cli
+2026-11-05T05:49:25.9337791Z info: Cli: checking out revision 'e92c9f15fdfacc8536f31cfb3b7ad26c3c8cd204'
+2026-11-05T05:49:25.9472683Z info: mathlib: running post-update hooks
+2026-11-05T05:49:26.3499567Z ✔ [4/42] Built Cache.Cli (379ms)
+2026-11-05T05:49:26.4569222Z ✔ [5/42] Built Cache.Lean (494ms)
+2026-11-05T05:49:26.6572883Z ✔ [6/42] Built Cache.Cli:c.o (229ms)
+2026-11-05T05:49:26.7603217Z ✔ [7/42] Built Cache.Env (480ms)
+2026-11-05T05:49:26.7604184Z ✔ [8/42] Built Cache.Lean:c.o (222ms)
+2026-11-05T05:49:27.0611889Z ✔ [9/42] Built Cache.Env:c.o (263ms)
+2026-11-05T05:49:27.2611560Z ✔ [10/42] Built Cache.Infra (459ms)
+2026-11-05T05:49:27.4621785Z ✔ [11/42] Built Batteries.Tactic.OpenPrivate (1.2s)
+2026-11-05T05:49:27.4622434Z ✔ [12/42] Built Cache.Infra:c.o (253ms)
+2026-11-05T05:49:28.7620649Z ✔ [13/42] Built Batteries.Tactic.OpenPrivate:c.o (1.4s)
+2026-11-05T05:49:28.8654877Z ✔ [14/42] Built Cache.IO (1.5s)
+2026-11-05T05:49:29.6681792Z ✔ [15/42] Built Cache.Hashing (763ms)
+2026-11-05T05:49:30.1692097Z ✔ [16/42] Built Cache.Hashing:c.o (471ms)
+2026-11-05T05:49:30.8678165Z ✔ [17/42] Built Cache.IO:c.o (1.0s)
+2026-11-05T05:49:31.6711732Z ✔ [18/42] Built Cache.Requests (2.0s)
+2026-11-05T05:49:32.2694204Z ✔ [19/42] Built Cache.Marker (535ms)
+2026-11-05T05:49:32.3695959Z ✔ [20/42] Built Cache.Marker:c.o (182ms)
+2026-11-05T05:49:33.0762000Z ✔ [21/42] Built Cache.Query (847ms)
+2026-11-05T05:49:33.2734763Z ✔ [22/42] Built Cache.Upload.Dest (1.0s)
+2026-11-05T05:49:33.4752135Z ✔ [23/42] Built Cache.Upload.Dest:c.o (222ms)
+2026-11-05T05:49:33.6791630Z ✔ [24/42] Built Cache.Query:c.o (548ms)
+2026-11-05T05:49:34.1783160Z ✔ [25/42] Built Cache.Warning (1.1s)
+2026-11-05T05:49:34.5791778Z ✔ [26/42] Built Cache.Upload.Curl (961ms)
+2026-11-05T05:49:34.5831395Z ✔ [27/42] Built Cache.Upload.Rclone (1.1s)
+2026-11-05T05:49:34.6805156Z ✔ [28/42] Built Cache.Warning:c.o (441ms)
+2026-11-05T05:49:34.8791643Z ✔ [29/42] Built Cache.Upload.Curl:c.o (329ms)
+2026-11-05T05:49:34.8811035Z ✔ [30/42] Built Cache.Upload.Rclone:c.o (336ms)
+2026-11-05T05:49:35.3795129Z ✔ [31/42] Built Cache.Upload.Azure (699ms)
+2026-11-05T05:49:35.4798847Z ✔ [32/42] Built Cache.Upload.Azure:c.o (179ms)
+2026-11-05T05:49:35.6801794Z ✔ [33/42] Built Cache.Requests:c.o (3.9s)
+2026-11-05T05:49:35.7812069Z ✔ [34/42] Built Cache.Upload.S3 (906ms)
+2026-11-05T05:49:36.1808007Z ✔ [35/42] Built Cache.Upload.S3:c.o (342ms)
+2026-11-05T05:49:36.3810566Z ✔ [36/42] Built Cache.Upload.Defs (572ms)
+2026-11-05T05:49:36.5813220Z ✔ [37/42] Built Cache.Upload.Defs:c.o (167ms)
+2026-11-05T05:49:36.8816187Z ✔ [38/42] Built Cache.Upload (523ms)
+2026-11-05T05:49:37.0818691Z ✔ [39/42] Built Cache.Upload:c.o (134ms)
+2026-11-05T05:49:37.9827482Z ✔ [40/42] Built Cache.Main (1.1s)
+2026-11-05T05:49:38.9828536Z ✔ [41/42] Built Cache.Main:c.o (958ms)
+2026-11-05T05:49:39.6846585Z ✔ [42/42] Built cache:exe (751ms)
+2026-11-05T05:49:42.3650214Z Current branch: HEAD
+2026-11-05T05:49:42.3651033Z Using cache from origin: (some leanprover-community/mathlib4)
+2026-11-05T05:49:42.3651863Z Attempting to download 8908 file(s) from leanprover-community/mathlib4 cache at https://cache.mathlib.org/mathlib4-master
+2026-11-05T05:49:42.6200781Z 
+2026-11-05T05:49:42.7228102Z Downloaded: 1 file(s) [attempted 1/8908 = 0%, 95 KB/s], Decompressed: 0
+2026-11-05T05:49:42.8268415Z Downloaded: 110 file(s) [attempted 110/8908 = 1%, 1885 KB/s], Decompressed: 24
+2026-11-05T05:49:42.9277485Z Downloaded: 222 file(s) [attempted 222/8908 = 2%, 1541 KB/s], Decompressed: 24
+2026-11-05T05:49:43.0268242Z Downloaded: 357 file(s) [attempted 357/8908 = 4%, 933 KB/s], Decompressed: 24
+2026-11-05T05:49:43.1283002Z Downloaded: 506 file(s) [attempted 506/8908 = 5%, 1392 KB/s], Decompressed: 106
+2026-11-05T05:49:43.2308271Z Downloaded: 630 file(s) [attempted 630/8908 = 7%, 1617 KB/s], Decompressed: 106
+2026-11-05T05:49:43.3332314Z Downloaded: 751 file(s) [attempted 751/8908 = 8%, 1658 KB/s], Decompressed: 106
+2026-11-05T05:49:43.4410945Z Downloaded: 897 file(s) [attempted 897/8908 = 10%, 885 KB/s], Decompressed: 106
+2026-11-05T05:49:43.5469042Z Downloaded: 1014 file(s) [attempted 1014/8908 = 11%, 778 KB/s], Decompressed: 106
+2026-11-05T05:49:43.6582132Z Downloaded: 1133 file(s) [attempted 1133/8908 = 12%, 899 KB/s], Decompressed: 106
+2026-11-05T05:49:43.7571810Z Downloaded: 1254 file(s) [attempted 1254/8908 = 14%, 432 KB/s], Decompressed: 106
+2026-11-05T05:49:43.8605725Z Downloaded: 1321 file(s) [attempted 1321/8908 = 14%, 217 KB/s], Decompressed: 106
+2026-11-05T05:49:43.9582393Z Downloaded: 1408 file(s) [attempted 1408/8908 = 15%, 1621 KB/s], Decompressed: 106
+2026-11-05T05:49:44.0611817Z Downloaded: 1568 file(s) [attempted 1568/8908 = 17%, 3038 KB/s], Decompressed: 106
+2026-11-05T05:49:44.1635286Z Downloaded: 1664 file(s) [attempted 1664/8908 = 18%, 1107 KB/s], Decompressed: 106
+2026-11-05T05:49:44.2777102Z Downloaded: 1801 file(s) [attempted 1801/8908 = 20%, 4608 KB/s], Decompressed: 106
+2026-11-05T05:49:44.3790258Z Downloaded: 1933 file(s) [attempted 1933/8908 = 21%, 1311 KB/s], Decompressed: 106
+2026-11-05T05:49:44.4815272Z Downloaded: 2066 file(s) [attempted 2066/8908 = 23%, 1309 KB/s], Decompressed: 506
+2026-11-05T05:49:44.5951809Z Downloaded: 2192 file(s) [attempted 2192/8908 = 24%, 5820 KB/s], Decompressed: 506
+2026-11-05T05:49:44.6961845Z Downloaded: 2324 file(s) [attempted 2324/8908 = 26%, 845 KB/s], Decompressed: 506
+2026-11-05T05:49:44.7953214Z Downloaded: 2446 file(s) [attempted 2446/8908 = 27%, 289 KB/s], Decompressed: 506
+2026-11-05T05:49:44.8948787Z Downloaded: 2548 file(s) [attempted 2548/8908 = 28%, 1213 KB/s], Decompressed: 506
+2026-11-05T05:49:44.9958364Z Downloaded: 2658 file(s) [attempted 2658/8908 = 29%, 218 KB/s], Decompressed: 506
+2026-11-05T05:49:45.0962795Z Downloaded: 2761 file(s) [attempted 2761/8908 = 30%, 227 KB/s], Decompressed: 506
+2026-11-05T05:49:45.1998990Z Downloaded: 2866 file(s) [attempted 2866/8908 = 32%, 622 KB/s], Decompressed: 506
+2026-11-05T05:49:45.3041924Z Downloaded: 2939 file(s) [attempted 2939/8908 = 32%, 324 KB/s], Decompressed: 506
+2026-11-05T05:49:45.4032274Z Downloaded: 3077 file(s) [attempted 3077/8908 = 34%, 2484 KB/s], Decompressed: 506
+2026-11-05T05:49:45.5030811Z Downloaded: 3193 file(s) [attempted 3193/8908 = 35%, 184 KB/s], Decompressed: 506
+2026-11-05T05:49:45.6127120Z Downloaded: 3329 file(s) [attempted 3329/8908 = 37%, 324 KB/s], Decompressed: 506
+2026-11-05T05:49:45.7136440Z Downloaded: 3449 file(s) [attempted 3449/8908 = 38%, 814 KB/s], Decompressed: 506
+2026-11-05T05:49:45.8122302Z Downloaded: 3579 file(s) [attempted 3579/8908 = 40%, 3226 KB/s], Decompressed: 506
+2026-11-05T05:49:45.9142556Z Downloaded: 3704 file(s) [attempted 3704/8908 = 41%, 4311 KB/s], Decompressed: 506
+2026-11-05T05:49:46.0176768Z Downloaded: 3820 file(s) [attempted 3820/8908 = 42%, 1814 KB/s], Decompressed: 506
+2026-11-05T05:49:46.1243622Z Downloaded: 3961 file(s) [attempted 3961/8908 = 44%, 3068 KB/s], Decompressed: 506
+2026-11-05T05:49:46.2251665Z Downloaded: 4099 file(s) [attempted 4099/8908 = 46%, 161 KB/s], Decompressed: 506
+2026-11-05T05:49:46.3251885Z Downloaded: 4270 file(s) [attempted 4270/8908 = 47%, 1929 KB/s], Decompressed: 506
+2026-11-05T05:49:46.4319717Z Downloaded: 4387 file(s) [attempted 4387/8908 = 49%, 706 KB/s], Decompressed: 506
+2026-11-05T05:49:46.5328273Z Downloaded: 4515 file(s) [attempted 4515/8908 = 50%, 7729 KB/s], Decompressed: 506
+2026-11-05T05:49:46.6371743Z Downloaded: 4679 file(s) [attempted 4679/8908 = 52%, 7082 KB/s], Decompressed: 506
+2026-11-05T05:49:46.7353141Z Downloaded: 4812 file(s) [attempted 4812/8908 = 54%, 2799 KB/s], Decompressed: 506
+2026-11-05T05:49:46.8356777Z Downloaded: 4941 file(s) [attempted 4941/8908 = 55%, 114 KB/s], Decompressed: 506
+2026-11-05T05:49:46.9416316Z Downloaded: 5055 file(s) [attempted 5055/8908 = 56%, 533 KB/s], Decompressed: 506
+2026-11-05T05:49:47.0421239Z Downloaded: 5189 file(s) [attempted 5189/8908 = 58%, 2762 KB/s], Decompressed: 506
+2026-11-05T05:49:47.1421846Z Downloaded: 5379 file(s) [attempted 5379/8908 = 60%, 1773 KB/s], Decompressed: 506
+2026-11-05T05:49:47.2453904Z Downloaded: 5559 file(s) [attempted 5559/8908 = 62%, 3735 KB/s], Decompressed: 506
+2026-11-05T05:49:47.3923873Z Downloaded: 5699 file(s) [attempted 5699/8908 = 63%, 369 KB/s], Decompressed: 506
+2026-11-05T05:49:47.4925328Z Downloaded: 5850 file(s) [attempted 5850/8908 = 65%, 8832 KB/s], Decompressed: 506
+2026-11-05T05:49:47.5924734Z Downloaded: 6000 file(s) [attempted 6000/8908 = 67%, 993 KB/s], Decompressed: 506
+2026-11-05T05:49:47.6938714Z Downloaded: 6157 file(s) [attempted 6157/8908 = 69%, 898 KB/s], Decompressed: 506
+2026-11-05T05:49:47.7933023Z Downloaded: 6330 file(s) [attempted 6330/8908 = 71%, 200 KB/s], Decompressed: 506
+2026-11-05T05:49:47.9006703Z Downloaded: 6467 file(s) [attempted 6467/8908 = 72%, 1427 KB/s], Decompressed: 506
+2026-11-05T05:49:48.0118059Z Downloaded: 6630 file(s) [attempted 6630/8908 = 74%, 2530 KB/s], Decompressed: 506
+2026-11-05T05:49:48.1111606Z Downloaded: 6790 file(s) [attempted 6790/8908 = 76%, 932 KB/s], Decompressed: 506
+2026-11-05T05:49:48.2133099Z Downloaded: 6959 file(s) [attempted 6959/8908 = 78%, 295 KB/s], Decompressed: 506
+2026-11-05T05:49:48.3201983Z Downloaded: 7142 file(s) [attempted 7142/8908 = 80%, 605 KB/s], Decompressed: 506
+2026-11-05T05:49:48.4371876Z Downloaded: 7290 file(s) [attempted 7290/8908 = 81%, 849 KB/s], Decompressed: 506
+2026-11-05T05:49:48.5476633Z Downloaded: 7382 file(s) [attempted 7382/8908 = 82%, 463 KB/s], Decompressed: 506
+2026-11-05T05:49:48.6568870Z Downloaded: 7551 file(s) [attempted 7551/8908 = 84%, 5482 KB/s], Decompressed: 506
+2026-11-05T05:49:48.7566266Z Downloaded: 7697 file(s) [attempted 7697/8908 = 86%, 8706 KB/s], Decompressed: 506
+2026-11-05T05:49:48.8599477Z Downloaded: 7864 file(s) [attempted 7864/8908 = 88%, 174 KB/s], Decompressed: 506
+2026-11-05T05:49:48.9611226Z Downloaded: 7988 file(s) [attempted 7988/8908 = 89%, 1328 KB/s], Decompressed: 506
+2026-11-05T05:49:49.0642632Z Downloaded: 8139 file(s) [attempted 8139/8908 = 91%, 412 KB/s], Decompressed: 506
+2026-11-05T05:49:49.1763732Z Downloaded: 8264 file(s) [attempted 8264/8908 = 92%, 525 KB/s], Decompressed: 506
+2026-11-05T05:49:49.2786200Z Downloaded: 8424 file(s) [attempted 8424/8908 = 94%, 609 KB/s], Decompressed: 506
+2026-11-05T05:49:49.3796251Z Downloaded: 8596 file(s) [attempted 8596/8908 = 96%, 3947 KB/s], Decompressed: 506
+2026-11-05T05:49:49.4810737Z Downloaded: 8763 file(s) [attempted 8763/8908 = 98%, 3262 KB/s], Decompressed: 506
+2026-11-05T05:49:49.5057072Z Downloaded: 8879 file(s) [attempted 8879/8908 = 99%, 239 KB/s], Decompressed: 506
+2026-11-05T05:49:49.5081411Z Downloaded: 8908 file(s) [attempted 8908/8908 = 100%, 239 KB/s], Decompressed: 506
+2026-11-05T05:50:10.4641165Z Decompressed 8908 file(s)
+2026-11-05T05:50:10.4641582Z Already decompressed 8908 file(s)
+2026-11-05T05:50:15.1676894Z Current branch: HEAD
+2026-11-05T05:50:15.1677427Z Using cache from origin: (some leanprover-community/mathlib4)
+2026-11-05T05:50:15.1677846Z No files to download
+2026-11-05T05:50:15.1678616Z Already decompressed 8908 file(s)
+2026-11-05T05:50:15.2088887Z Filesystem      Size  Used Avail Use% Mounted on
+2026-11-05T05:50:15.2089460Z /dev/root       145G   50G   95G  35% /
+2026-11-05T05:50:15.2136775Z ##[group]Run set +e -uo pipefail
+2026-11-05T05:50:15.2137122Z [36;1mset +e -uo pipefail[0m
+2026-11-05T05:50:15.2137391Z [36;1mlake build 2>&1 | tee build.log[0m
+2026-11-05T05:50:15.2137678Z [36;1mstatus=${PIPESTATUS[0]}[0m
+2026-11-05T05:50:15.2137948Z [36;1mif [ "$status" -ne 0 ]; then[0m
+2026-11-05T05:50:15.2138214Z [36;1m  echo "--- errors ---"[0m
+2026-11-05T05:50:15.2138520Z [36;1m  grep -A 8 -E "error" build.log | head -200 || true[0m
+2026-11-05T05:50:15.2138846Z [36;1m  python3 - <<'PY'[0m
+2026-11-05T05:50:15.2139127Z [36;1mlines = open("build.log").read().splitlines()[0m
+2026-11-05T05:50:15.2139499Z [36;1mhits = [i for i, l in enumerate(lines) if "error:" in l][0m
+2026-11-05T05:50:15.2139846Z [36;1mtail = "\n".join(lines[-40:])[0m
+2026-11-05T05:50:15.2140587Z [36;1mprint("::error title=build tail::" + tail.replace("%", "%25").replace("\r", "").replace("\n", "%0A")[:4000])[0m
+2026-11-05T05:50:15.2141146Z [36;1mfor i in hits[:15]:[0m
+2026-11-05T05:50:15.2141440Z [36;1m    block = "\n".join(lines[i:i + 12])[0m
+2026-11-05T05:50:15.2141831Z [36;1m    flat = block.replace("%", "%25").replace("\r", "").replace("\n", "%0A")[0m
+2026-11-05T05:50:15.2142261Z [36;1m    print("::error title=lean build::" + flat[:4000])[0m
+2026-11-05T05:50:15.2142563Z [36;1mPY[0m
+2026-11-05T05:50:15.2142752Z [36;1m  exit "$status"[0m
+2026-11-05T05:50:15.2142962Z [36;1mfi[0m
+2026-11-05T05:50:15.2173302Z shell: /usr/bin/bash -e {0}
+2026-11-05T05:50:15.2173568Z ##[endgroup]
+2026-11-05T05:50:19.6791590Z ℹ [8924/8929] Built IqgtGrassmannian.Core (631ms)
+2026-11-05T05:50:19.6801315Z info: IqgtGrassmannian/Core.lean:219:0: 'IqgtGrassmannian.Core.tangent_PVP' depends on axioms: [propext]
+2026-11-05T05:50:19.6802594Z info: IqgtGrassmannian/Core.lean:220:0: 'IqgtGrassmannian.Core.tangent_QVQ' depends on axioms: [propext]
+2026-11-05T05:50:19.6804017Z info: IqgtGrassmannian/Core.lean:221:0: 'IqgtGrassmannian.Core.tangent_of_blocks' depends on axioms: [propext]
+2026-11-05T05:50:19.6805325Z info: IqgtGrassmannian/Core.lean:222:0: 'IqgtGrassmannian.Core.tangent_compl' depends on axioms: [propext]
+2026-11-05T05:50:19.6806590Z info: IqgtGrassmannian/Core.lean:223:0: 'IqgtGrassmannian.Core.redist_sum_form' depends on axioms: [propext]
+2026-11-05T05:50:19.6807911Z info: IqgtGrassmannian/Core.lean:224:0: 'IqgtGrassmannian.Core.redist_double_bracket' depends on axioms: [propext]
+2026-11-05T05:50:19.6809246Z info: IqgtGrassmannian/Core.lean:225:0: 'IqgtGrassmannian.Core.redist_tangent' does not depend on any axioms
+2026-11-05T05:50:19.6810721Z info: IqgtGrassmannian/Core.lean:226:0: 'IqgtGrassmannian.Core.sld_two_tangent' depends on axioms: [propext]
+2026-11-05T05:50:19.6812023Z info: IqgtGrassmannian/Core.lean:227:0: 'IqgtGrassmannian.Core.redist_eq_zero_iff' depends on axioms: [propext]
+2026-11-05T05:50:30.4071241Z ✔ [8925/8929] Built IqgtGrassmannian.Bounds (10s)
+2026-11-05T05:50:31.4091767Z ⚠ [8926/8929] Built IqgtGrassmannian.Basic (11s)
+2026-11-05T05:50:31.4131305Z warning: IqgtGrassmannian/Basic.lean:56:13: This simp argument is unused:
+2026-11-05T05:50:31.4132192Z   zero_mul
+2026-11-05T05:50:31.4190751Z 
+2026-11-05T05:50:31.4202947Z Hint: Omit it from the simp argument list.
+2026-11-05T05:50:31.4203528Z   [apply] simp only [zero_add, mul_zero, add_zero]
+2026-11-05T05:50:31.4203908Z 
+2026-11-05T05:50:31.4204312Z Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+2026-11-05T05:50:31.4205565Z warning: IqgtGrassmannian/Basic.lean:70:0: automatically included section variable(s) unused in theorem `IqgtGrassmannian.Q_eq`:
+2026-11-05T05:50:31.4206548Z   [DecidableEq n]
+2026-11-05T05:50:31.4207398Z consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+2026-11-05T05:50:31.4208317Z   omit [DecidableEq n] in theorem ...
+2026-11-05T05:50:31.4209070Z 
+2026-11-05T05:50:31.4209458Z Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+2026-11-05T05:50:31.4211302Z warning: IqgtGrassmannian/Basic.lean:77:0: automatically included section variable(s) unused in theorem `IqgtGrassmannian.frob_herm`:
+2026-11-05T05:50:31.4212307Z   [DecidableEq n]
+2026-11-05T05:50:31.4213104Z consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+2026-11-05T05:50:31.4213990Z   omit [DecidableEq n] in theorem ...
+2026-11-05T05:50:31.4214287Z 
+2026-11-05T05:50:31.4214656Z Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+2026-11-05T05:50:31.4215880Z warning: IqgtGrassmannian/Basic.lean:81:0: automatically included section variable(s) unused in theorem `IqgtGrassmannian.frob_sum`:
+2026-11-05T05:50:31.4216912Z   [DecidableEq n]
+2026-11-05T05:50:31.4217701Z consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+2026-11-05T05:50:31.4218596Z   omit [DecidableEq n] in theorem ...
+2026-11-05T05:50:31.4218888Z 
+2026-11-05T05:50:31.4219267Z Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+2026-11-05T05:50:33.5134942Z ⚠ [8927/8929] Built IqgtGrassmannian.Rebuild (13s)
+2026-11-05T05:50:33.5135836Z warning: IqgtGrassmannian/Rebuild.lean:125:4: this tactic is never executed
+2026-11-05T05:50:33.5136382Z 
+2026-11-05T05:50:33.5136769Z Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+2026-11-05T05:50:33.5138078Z warning: IqgtGrassmannian/Rebuild.lean:125:4: Unused tactic linter: `(simp [trace_add, trace_sub, trace_mul_comm Q P]; ring)` does nothing
+2026-11-05T05:50:33.5139045Z 
+2026-11-05T05:50:33.5139446Z Note: This linter can be disabled with `set_option linter.unusedTactic false`
+2026-11-05T05:50:33.5140801Z warning: IqgtGrassmannian/Rebuild.lean:171:56: Variable name `hs` is not explicitly referenced.
+2026-11-05T05:50:33.5141582Z 
+2026-11-05T05:50:33.5142406Z Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+2026-11-05T05:50:33.5143548Z   [apply] _hs
+2026-11-05T05:50:33.5143753Z 
+2026-11-05T05:50:33.5144160Z Note: This linter can be disabled with `set_option linter.unusedVariables false`
+2026-11-05T05:50:33.5145116Z warning: IqgtGrassmannian/Rebuild.lean:231:4: this tactic is never executed
+2026-11-05T05:50:33.5145688Z 
+2026-11-05T05:50:33.5146103Z Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+2026-11-05T05:50:33.5147338Z warning: IqgtGrassmannian/Rebuild.lean:231:4: Unused tactic linter: `(simp [hv, hw, smul_smul, mul_comm])` does nothing
+2026-11-05T05:50:33.5148177Z 
+2026-11-05T05:50:33.5148547Z Note: This linter can be disabled with `set_option linter.unusedTactic false`
+2026-11-05T05:50:33.5149497Z warning: IqgtGrassmannian/Rebuild.lean:258:4: this tactic is never executed
+2026-11-05T05:50:33.5150110Z 
+2026-11-05T05:50:33.5150840Z Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+2026-11-05T05:50:33.5151832Z warning: IqgtGrassmannian/Rebuild.lean:258:4: Unused tactic linter: `(
+2026-11-05T05:50:33.5152552Z   rw [div_eq_mul_inv, div_eq_mul_inv]
+2026-11-05T05:50:33.5156505Z   exact mul_le_mul_of_nonneg_left ((inv_le_inv₀ (lt_of_lt_of_le h2 h1) h2).mpr h1) (sq_nonneg (a i)))` does nothing
+2026-11-05T05:50:33.5157258Z 
+2026-11-05T05:50:33.5157633Z Note: This linter can be disabled with `set_option linter.unusedTactic false`
+2026-11-05T05:50:33.5158597Z warning: IqgtGrassmannian/Rebuild.lean:277:6: this tactic is never executed
+2026-11-05T05:50:33.5159198Z 
+2026-11-05T05:50:33.5159612Z Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+2026-11-05T05:50:33.5160866Z warning: IqgtGrassmannian/Rebuild.lean:282:6: this tactic is never executed
+2026-11-05T05:50:33.5161426Z 
+2026-11-05T05:50:33.5161886Z Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+2026-11-05T05:50:33.5163260Z warning: IqgtGrassmannian/Rebuild.lean:283:6: this tactic is never executed
+2026-11-05T05:50:33.5163857Z 
+2026-11-05T05:50:33.5164572Z Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+2026-11-05T05:50:33.5165841Z warning: IqgtGrassmannian/Rebuild.lean:277:6: Unused tactic linter: `exact Real.two_div_pi_mul_le_sin h0 h1` does nothing
+2026-11-05T05:50:33.5166718Z 
+2026-11-05T05:50:33.5167124Z Note: This linter can be disabled with `set_option linter.unusedTactic false`
+2026-11-05T05:50:33.5168155Z warning: IqgtGrassmannian/Rebuild.lean:281:19: Unused tactic linter: `done` does nothing
+2026-11-05T05:50:33.5168806Z 
+2026-11-05T05:50:33.5169192Z Note: This linter can be disabled with `set_option linter.unusedTactic false`
+2026-11-05T05:50:33.5170301Z warning: IqgtGrassmannian/Rebuild.lean:282:6: Unused tactic linter: `(field_simp; ring)` does nothing
+2026-11-05T05:50:33.5171316Z 
+2026-11-05T05:50:33.5171708Z Note: This linter can be disabled with `set_option linter.unusedTactic false`
+2026-11-05T05:50:33.5173370Z warning: IqgtGrassmannian/Rebuild.lean:283:6: Unused tactic linter: `(rw [← mul_assoc, div_mul_div_comm, mul_comm Real.pi 2, div_self (by positivity),
+2026-11-05T05:50:33.5174582Z     one_mul])` does nothing
+2026-11-05T05:50:33.5174868Z 
+2026-11-05T05:50:33.5175263Z Note: This linter can be disabled with `set_option linter.unusedTactic false`
+2026-11-05T05:50:33.5176221Z warning: IqgtGrassmannian/Rebuild.lean:310:6: this tactic is never executed
+2026-11-05T05:50:33.5176802Z 
+2026-11-05T05:50:33.5177226Z Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+2026-11-05T05:50:33.5178285Z warning: IqgtGrassmannian/Rebuild.lean:311:6: this tactic is never executed
+2026-11-05T05:50:33.5178850Z 
+2026-11-05T05:50:33.5179249Z Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+2026-11-05T05:50:33.5180322Z warning: IqgtGrassmannian/Rebuild.lean:309:19: Unused tactic linter: `done` does nothing
+2026-11-05T05:50:33.5181292Z 
+2026-11-05T05:50:33.5181684Z Note: This linter can be disabled with `set_option linter.unusedTactic false`
+2026-11-05T05:50:33.5182814Z warning: IqgtGrassmannian/Rebuild.lean:310:6: Unused tactic linter: `(field_simp; ring)` does nothing
+2026-11-05T05:50:33.5183565Z 
+2026-11-05T05:50:33.5183960Z Note: This linter can be disabled with `set_option linter.unusedTactic false`
+2026-11-05T05:50:33.5185276Z warning: IqgtGrassmannian/Rebuild.lean:311:6: Unused tactic linter: `(rw [mul_sub, sub_div, mul_div_assoc, div_self hl, mul_one])` does nothing
+2026-11-05T05:50:33.5186212Z 
+2026-11-05T05:50:33.5186590Z Note: This linter can be disabled with `set_option linter.unusedTactic false`
+2026-11-05T05:50:33.5187550Z warning: IqgtGrassmannian/Rebuild.lean:387:8: this tactic is never executed
+2026-11-05T05:50:33.5188151Z 
+2026-11-05T05:50:33.5188578Z Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+2026-11-05T05:50:33.5189565Z warning: IqgtGrassmannian/Rebuild.lean:388:8: this tactic is never executed
+2026-11-05T05:50:33.5190131Z 
+2026-11-05T05:50:33.5190814Z Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+2026-11-05T05:50:33.5192190Z warning: IqgtGrassmannian/Rebuild.lean:387:8: Unused tactic linter: `exact pow_eq_zero_iff (n := 2) (by norm_num) |>.mp h2` does nothing
+2026-11-05T05:50:33.5193126Z 
+2026-11-05T05:50:33.5193509Z Note: This linter can be disabled with `set_option linter.unusedTactic false`
+2026-11-05T05:50:33.5194673Z warning: IqgtGrassmannian/Rebuild.lean:388:8: Unused tactic linter: `nlinarith [sq_nonneg (a - b)]` does nothing
+2026-11-05T05:50:33.5195479Z 
+2026-11-05T05:50:33.5195862Z Note: This linter can be disabled with `set_option linter.unusedTactic false`
+2026-11-05T05:50:33.5196795Z warning: IqgtGrassmannian/Rebuild.lean:418:8: this tactic is never executed
+2026-11-05T05:50:33.5197376Z 
+2026-11-05T05:50:33.5197805Z Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+2026-11-05T05:50:33.5199354Z warning: IqgtGrassmannian/Rebuild.lean:418:8: Unused tactic linter: `nlinarith [sq_nonneg (x i - x j)]` does nothing
+2026-11-05T05:50:33.5200701Z 
+2026-11-05T05:50:33.5201128Z Note: This linter can be disabled with `set_option linter.unusedTactic false`
+2026-11-05T05:50:33.5202083Z warning: IqgtGrassmannian/Rebuild.lean:454:6: this tactic is never executed
+2026-11-05T05:50:33.5202675Z 
+2026-11-05T05:50:33.5203101Z Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+2026-11-05T05:50:33.5204526Z warning: IqgtGrassmannian/Rebuild.lean:454:6: Unused tactic linter: `(have e2 := congrArg (fun z => z - P * A * P) e1; simpa using e2.symm)` does nothing
+2026-11-05T05:50:33.5205522Z 
+2026-11-05T05:50:33.5205911Z Note: This linter can be disabled with `set_option linter.unusedTactic false`
+2026-11-05T05:50:33.5206866Z warning: IqgtGrassmannian/Rebuild.lean:465:4: this tactic is never executed
+2026-11-05T05:50:33.5207443Z 
+2026-11-05T05:50:33.5207869Z Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+2026-11-05T05:50:33.5208867Z warning: IqgtGrassmannian/Rebuild.lean:466:4: this tactic is never executed
+2026-11-05T05:50:33.5209458Z 
+2026-11-05T05:50:33.5209886Z Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+2026-11-05T05:50:33.5211399Z warning: IqgtGrassmannian/Rebuild.lean:465:4: Unused tactic linter: `exact RCLike.norm_conj (z - w)` does nothing
+2026-11-05T05:50:33.5212238Z 
+2026-11-05T05:50:33.5212631Z Note: This linter can be disabled with `set_option linter.unusedTactic false`
+2026-11-05T05:50:33.5213754Z warning: IqgtGrassmannian/Rebuild.lean:466:4: Unused tactic linter: `simp` does nothing
+2026-11-05T05:50:33.5214356Z 
+2026-11-05T05:50:33.5214702Z Note: This linter can be disabled with `set_option linter.unusedTactic false`
+2026-11-05T05:50:33.5215797Z warning: IqgtGrassmannian/Rebuild.lean:489:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+2026-11-05T05:50:33.5217035Z If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+2026-11-05T05:50:33.5217813Z ```
+2026-11-05T05:50:33.5218169Z open Lean.Parser.Tactic in
+2026-11-05T05:50:33.5218711Z macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+2026-11-05T05:50:33.5219344Z   `(tactic| push $cfg:optConfig Not $[$loc]?)
+2026-11-05T05:50:33.5219821Z ```
+2026-11-05T05:50:33.5220785Z warning: IqgtGrassmannian/Rebuild.lean:496:8: this tactic is never executed
+2026-11-05T05:50:33.5221405Z 
+2026-11-05T05:50:33.5221834Z Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+2026-11-05T05:50:33.5222919Z warning: IqgtGrassmannian/Rebuild.lean:495:21: Unused tactic linter: `done` does nothing
+2026-11-05T05:50:33.5223599Z 
+2026-11-05T05:50:33.5223994Z Note: This linter can be disabled with `set_option linter.unusedTactic false`
+2026-11-05T05:50:33.5225105Z warning: IqgtGrassmannian/Rebuild.lean:496:8: Unused tactic linter: `(field_simp; ring)` does nothing
+2026-11-05T05:50:33.5225876Z 
+2026-11-05T05:50:33.5226275Z Note: This linter can be disabled with `set_option linter.unusedTactic false`
+2026-11-05T05:50:36.7168116Z ⚠ [8928/8929] Built IqgtGrassmannian.Monopole (16s)
+2026-11-05T05:50:36.7168896Z warning: IqgtGrassmannian/Monopole.lean:63:24: This simp argument is unused:
+2026-11-05T05:50:36.7169535Z   Matrix.mul_apply
+2026-11-05T05:50:36.7169728Z 
+2026-11-05T05:50:36.7169884Z Hint: Omit it from the simp argument list.
+2026-11-05T05:50:36.7170720Z   [apply] simp [pauli, cross, Fin.sum_univ_two]
+2026-11-05T05:50:36.7171044Z 
+2026-11-05T05:50:36.7171371Z Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+2026-11-05T05:50:36.7172130Z warning: IqgtGrassmannian/Monopole.lean:63:42: This simp argument is unused:
+2026-11-05T05:50:36.7172724Z   Fin.sum_univ_two
+2026-11-05T05:50:36.7172908Z 
+2026-11-05T05:50:36.7173056Z Hint: Omit it from the simp argument list.
+2026-11-05T05:50:36.7173509Z   [apply] simp [pauli, cross, Matrix.mul_apply]
+2026-11-05T05:50:36.7174200Z 
+2026-11-05T05:50:36.7174514Z Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+2026-11-05T05:50:36.7175433Z warning: IqgtGrassmannian/Monopole.lean:79:47: This simp argument is unused:
+2026-11-05T05:50:36.7175972Z   Matrix.mul_apply
+2026-11-05T05:50:36.7176132Z 
+2026-11-05T05:50:36.7176275Z Hint: Omit it from the simp argument list.
+2026-11-05T05:50:36.7176753Z   [apply] simp [proj, dproj, dot, cross, Matrix.trace, Fin.sum_univ_two]
+2026-11-05T05:50:36.7177170Z 
+2026-11-05T05:50:36.7177498Z Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+2026-11-05T05:50:36.7265058Z Build completed successfully (8929 jobs).
+2026-11-05T05:50:36.7755358Z ##[group]Run set -euo pipefail
+2026-11-05T05:50:36.7755686Z [36;1mset -euo pipefail[0m
+2026-11-05T05:50:36.7756207Z [36;1mmods=$(python3 -c "import json; print(' '.join(m['module'] for m in json.load(open('scripts/config.json'))['modules']))")[0m
+2026-11-05T05:50:36.7756766Z [36;1mfor m in $mods; do[0m
+2026-11-05T05:50:36.7757001Z [36;1m  echo "== $m"[0m
+2026-11-05T05:50:36.7757232Z [36;1m  lake env leanchecker "$m"[0m
+2026-11-05T05:50:36.7757485Z [36;1mdone[0m
+2026-11-05T05:50:36.7870026Z shell: /usr/bin/bash -e {0}
+2026-11-05T05:50:36.7898776Z ##[endgroup]
+2026-11-05T05:50:36.8261920Z == IqgtGrassmannian.Basic
+2026-11-05T05:50:45.3158913Z == IqgtGrassmannian.Core
+2026-11-05T05:50:50.7707169Z == IqgtGrassmannian.Rebuild
+2026-11-05T05:50:59.1936044Z == IqgtGrassmannian.Bounds
+2026-11-05T05:51:07.4917734Z == IqgtGrassmannian.Monopole
+2026-11-05T05:51:16.0666259Z ##[group]Run python3 scripts/verify.py
+2026-11-05T05:51:16.0666622Z [36;1mpython3 scripts/verify.py[0m
+2026-11-05T05:51:16.0698005Z shell: /usr/bin/bash -e {0}
+2026-11-05T05:51:16.0698262Z ##[endgroup]
+2026-11-05T05:51:51.6497140Z OK: 110 theorems, axioms used: ['Classical.choice', 'Quot.sound', 'propext'], 7 false controls rejected
+2026-11-05T05:51:51.6624275Z ##[group]Run actions/upload-artifact@v4
+2026-11-05T05:51:51.6624607Z with:
+2026-11-05T05:51:51.6624805Z   name: lean-evidence
+2026-11-05T05:51:51.6625080Z   path: build.log
+verification/
+lake-manifest.json
+
+2026-11-05T05:51:51.6625413Z   if-no-files-found: warn
+2026-11-05T05:51:51.6625653Z   retention-days: 90
+2026-11-05T05:51:51.6625872Z   compression-level: 6
+2026-11-05T05:51:51.6626086Z   overwrite: false
+2026-11-05T05:51:51.6626299Z   include-hidden-files: false
+2026-11-05T05:51:51.6626539Z ##[endgroup]
+2026-11-05T05:51:51.8346643Z (node:3990) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-05T05:51:51.8347543Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-05T05:51:51.8456327Z Multiple search paths detected. Calculating the least common ancestor of all paths
+2026-11-05T05:51:51.8459608Z The least common ancestor is /home/runner/work/iqgt-grassmannian-lean/iqgt-grassmannian-lean. This will be the root directory of the artifact
+2026-11-05T05:51:51.8461454Z With the provided path, there will be 12 files uploaded
+2026-11-05T05:51:51.8462557Z Artifact name is valid!
+2026-11-05T05:51:51.8463096Z Root directory input is valid!
+2026-11-05T05:51:52.1428192Z Beginning upload of artifact content to blob storage
+2026-11-05T05:51:52.1794053Z (node:3990) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-11-05T05:51:52.3232090Z Uploaded bytes 8455
+2026-11-05T05:51:52.3651237Z Finished uploading artifact content to blob storage!
+2026-11-05T05:51:52.3652407Z SHA256 digest of uploaded artifact zip is f7249e25a06e9c847aa00b9c3459f16dd41ecb10e2419cffbe7685dc1ab00ed6
+2026-11-05T05:51:52.3654014Z Finalizing artifact upload
+2026-11-05T05:51:52.7752426Z Artifact lean-evidence.zip successfully finalized. Artifact ID 13391448880
+2026-11-05T05:51:52.7753502Z Artifact lean-evidence has been successfully uploaded! Final size is 8455 bytes. Artifact ID is 13391448880
+2026-11-05T05:51:52.7759104Z Artifact download URL: https://github.com/dicipler-pixel/iqgt-grassmannian-lean/actions/runs/41976186504/artifacts/13391448880
+2026-11-05T05:51:52.7995226Z Post job cleanup.
+2026-11-05T05:51:52.8850063Z [command]/usr/bin/git version
+2026-11-05T05:51:52.8896136Z git version 2.56.0
+2026-11-05T05:51:52.8936437Z Temporarily overriding HOME='/home/runner/work/_temp/596e5925-bd64-4528-922e-4ed40b670357' before making global git config changes
+2026-11-05T05:51:52.8937744Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-05T05:51:52.8943087Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/iqgt-grassmannian-lean/iqgt-grassmannian-lean
+2026-11-05T05:51:52.8984879Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-05T05:51:52.9021540Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-05T05:51:52.9350127Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-05T05:51:52.9387678Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-05T05:51:52.9705690Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-05T05:51:52.9744488Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-05T05:51:53.0188949Z Cleaning up orphan processes
+2026-11-05T05:51:53.0829303Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+

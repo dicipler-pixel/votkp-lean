@@ -1,0 +1,107 @@
+special steps:  E=2/3 -> z=3.0000 G=0.5000 K=2.000 ; wall G^2=1/2 -> E=0.82843 ; z*=6.26913 -> E=0.84049
+  loop turn  60 deg at z=2.65923  <->  E=0.62395
+  loop turn  72 deg at z=2.89005  <->  E=0.65399
+  loop turn  90 deg at z=3.22019  <->  E=0.68946
+  loop turn 120 deg at z=3.73205  <->  E=0.73205
+  loop turn 180 deg at z=4.61158  <->  E=0.78315
+
+el   E      z_E    G_E    G_E^2  K      turn   lattice / nonmetal
+Nb  0.2609  1.353 0.1500 0.0225  1.047    5.3  BCC 
+V   0.2720  1.374 0.1574 0.0248  1.052    5.8  BCC 
+Ta  0.2759  1.381 0.1600 0.0256  1.054    6.0  BCC 
+Mo  0.2897  1.408 0.1694 0.0287  1.061    6.8  BCC 
+W   0.3208  1.472 0.1910 0.0365  1.079    8.7  BCC 
+Zr  0.3415  1.519 0.2059 0.0424  1.093   10.2  HCP/hexagonal 
+Os  0.3569  1.555 0.2172 0.0472  1.104   11.4  HCP/hexagonal 
+Cr  0.3701  1.588 0.2271 0.0516  1.115   12.5  BCC 
+Lu  0.3968  1.658 0.2475 0.0613  1.140   15.0  HCP/hexagonal 
+Ti  0.4027  1.674 0.2521 0.0636  1.146   15.6  HCP/hexagonal 
+Rh  0.4059  1.683 0.2546 0.0648  1.149   15.9  FCC 
+Mn  0.4421  1.792 0.2838 0.0805  1.192   20.1  complex cubic  
+Fe  0.4458  1.804 0.2869 0.0823  1.197   20.6  BCC 
+Be  0.4505  1.820 0.2907 0.0845  1.203   21.2  HCP/hexagonal 
+Ir  0.4624  1.860 0.3007 0.0904  1.221   22.8  FCC 
+Co  0.4790  1.919 0.3149 0.0992  1.247   25.3  HCP/hexagonal 
+Pt  0.4839  1.937 0.3191 0.1018  1.256   26.0  FCC 
+Ag  0.4855  1.944 0.3206 0.1028  1.259   26.3  FCC 
+Ni  0.4904  1.962 0.3249 0.1055  1.268   27.1  FCC 
+Al  0.4951  1.980 0.3290 0.1082  1.276   27.9  FCC 
+Cu  0.5003  2.001 0.3336 0.1113  1.286   28.8  FCC 
+Pd  0.5075  2.031 0.3401 0.1156  1.301   30.1  FCC 
+Ca  0.5122  2.050 0.3443 0.1185  1.311   30.9  FCC 
+Mg  0.5156  2.064 0.3473 0.1206  1.318   31.5  HCP/hexagonal 
+Au  0.5287  2.122 0.3594 0.1292  1.348   34.1  FCC 
+In  0.5402  2.175 0.3700 0.1369  1.377   36.5  tetragonal 
+Cs  0.5426  2.186 0.3723 0.1386  1.384   37.0  BCC 
+Li  0.5434  2.190 0.3730 0.1391  1.386   37.2  BCC 
+Zn  0.5474  2.209 0.3768 0.1420  1.397   38.1  HCP/hexagonal 
+K   0.5676  2.313 0.3963 0.1571  1.458   43.0  BCC 
+Rb  0.5813  2.388 0.4097 0.1678  1.505   46.5  BCC 
+Pb  0.5878  2.426 0.4162 0.1732  1.530   48.4  FCC 
+Bi  0.5936  2.460 0.4220 0.1781  1.553   50.1  rhombohedral 
+Hg  0.5996  2.497 0.4281 0.1833  1.579   51.9  liquid at 298  
+Na  0.6045  2.528 0.4332 0.1876  1.601   53.4  BCC 
+B   0.6647  2.982 0.4977 0.2478  1.982   76.9  rhombohedral b NONMETAL
+Ge  0.6725  3.053 0.5066 0.2566  2.054   80.8  diamond NONMETAL
+Si  0.6733  3.061 0.5075 0.2576  2.063   81.2  diamond cubic NONMETAL
+C   0.6887  3.213 0.5253 0.2759  2.231   89.6  diamond cubic NONMETAL
+Te  0.6897  3.223 0.5264 0.2771  2.243   90.1  HCP/hexagonal NONMETAL
+Se  0.7602  4.170 0.6131 0.3759  4.030  148.2  HCP/hexagonal NONMETAL
+L1 wrong side of G_E=1/2: ['B']  n= 41
+
+Switch points (E from C_edges.csv computed rows):
+1_expanded_fluid_metal Hg  E=0.683 z= 3.155 G_E=0.519 G^2=0.269  at MNM metallic nanodomain 10.7; rho=10.7 g/cm3; V=31.130 
+1_expanded_fluid_metal Hg  E=0.675 z= 3.077 G_E=0.509 G^2=0.260  at nanoemulsion onset 11; rho=11 g/cm3; V=30.281 A^3/atom
+1_expanded_fluid_metal Hg  E=0.734 z= 3.759 G_E=0.580 G^2=0.336  at M-I onset 9.0 (Tamura 2004); rho=9 g/cm3; V=37.010 A^3/
+1_expanded_fluid_metal Hg  E=0.726 z= 3.650 G_E=0.570 G^2=0.325  at M-NM transition state 9.25; rho=9.25 g/cm3; V=36.009 A^
+1_expanded_fluid_metal Hg  E=0.754 z= 4.065 G_E=0.605 G^2=0.366  at NM nanodomain 8.3; rho=8.3 g/cm3; V=40.131 A^3/atom
+1_expanded_fluid_metal Hg  E=0.763 z= 4.219 G_E=0.617 G^2=0.380  at MNM lower edge 8; rho=8 g/cm3; V=41.636 A^3/atom
+1_expanded_fluid_metal Hg  E=0.828 z= 5.814 G_E=0.706 G^2=0.499  at critical point 5.8; rho=5.8 g/cm3; V=57.429 A^3/atom
+1_expanded_fluid_metal Hg  E=0.598 z= 2.488 G_E=0.427 G^2=0.182  at liquid 25 C; rho=13.6 g/cm3; V=24.492 A^3/atom
+1_expanded_fluid_metal Cs  E=0.910 z=11.111 G_E=0.835 G^2=0.697  at critical 0.38; rho=0.38 g/cm3; V=580.774 A^3/atom
+1_expanded_fluid_metal Cs  E=0.713 z= 3.484 G_E=0.554 G^2=0.307  at 1373 K sat. liquid; rho=1.21049 g/cm3; V=182.317 A^3/at
+1_expanded_fluid_metal Cs  E=0.724 z= 3.623 G_E=0.567 G^2=0.322  at 1400 K sat. liquid; rho=1.16296 g/cm3; V=189.769 A^3/at
+1_expanded_fluid_metal Cs  E=0.743 z= 3.891 G_E=0.591 G^2=0.349  at 1500 K sat. liquid; rho=1.08496 g/cm3; V=203.413 A^3/at
+1_expanded_fluid_metal K   E=0.913 z=11.494 G_E=0.840 G^2=0.705  at critical 0.18; rho=0.18 g/cm3; V=360.688 A^3/atom
+1_expanded_fluid_metal Rb  E=0.921 z=12.658 G_E=0.854 G^2=0.729  at critical 0.29; rho=0.29 g/cm3; V=489.389 A^3/atom
+2_fluid_hydrogen_deute H   E=0.949 z=19.608 G_E=0.903 G^2=0.815  at Weir 1996 metallization; V=2.678 A^3/atom (rho=0.625 g/
+2_fluid_hydrogen_deute D   E=0.918 z=12.195 G_E=0.848 G^2=0.720  at Knudson 2015 transition 2.0; rho=2 g/cm3; V=1.672 A^3/a
+2_fluid_hydrogen_deute D   E=0.914 z=11.628 G_E=0.842 G^2=0.708  at Knudson 2015 transition 2.1; rho=2.1 g/cm3; V=1.593 A^3
+2_fluid_hydrogen_deute D   E=0.924 z=13.158 G_E=0.859 G^2=0.737  at Desjarlais theory transition V=1.8; V=1.800 A^3/atom (r
+2_fluid_hydrogen_deute D   E=0.923 z=12.987 G_E=0.857 G^2=0.734  at Desjarlais theory transition V=1.78; V=1.780 A^3/atom (
+2_fluid_hydrogen_deute H   E=0.923 z=12.987 G_E=0.857 G^2=0.734  at QMC gap closure r_s=1.42 (900 K); V=1.777 A^3/atom (rho
+2_fluid_hydrogen_deute H   E=0.941 z=16.949 G_E=0.889 G^2=0.790  at QMC gap closure r_s=1.55 (3000 K); V=2.311 A^3/atom (rh
+3_pressure_metallizati I   E=0.668 z= 3.012 G_E=0.502 G^2=0.252  at Cmce (I) 9.9 GPa; V=29.644 A^3/atom (rho=7.109 g/cm3)
+3_pressure_metallizati I   E=0.643 z= 2.801 G_E=0.474 G^2=0.225  at Cmce (I) 15.0 GPa; V=27.617 A^3/atom (rho=7.630 g/cm3)
+3_pressure_metallizati I   E=0.634 z= 2.732 G_E=0.464 G^2=0.215  at Cmc21 (VI) 17.0 GPa; V=26.913 A^3/atom (rho=7.830 g/cm3
+3_pressure_metallizati I   E=0.625 z= 2.667 G_E=0.455 G^2=0.207  at Cmc21 (VI) 19.0 GPa; V=26.300 A^3/atom (rho=8.013 g/cm3
+3_pressure_metallizati I   E=0.616 z= 2.604 G_E=0.445 G^2=0.198  at Fmmm(00g) VII 20.8 GPa; V=25.675 A^3/atom (rho=8.208 g/
+3_pressure_metallizati I   E=0.601 z= 2.506 G_E=0.430 G^2=0.185  at Fmmm(00g) V 24.0 GPa; V=24.720 A^3/atom (rho=8.525 g/cm
+3_pressure_metallizati I   E=0.591 z= 2.445 G_E=0.419 G^2=0.176  at Fmmm(00g) V 26.4 GPa; V=24.102 A^3/atom (rho=8.743 g/cm
+3_pressure_metallizati I   E=0.572 z= 2.336 G_E=0.401 G^2=0.160  at Immm (II) 32.0 GPa; V=23.050 A^3/atom (rho=9.142 g/cm3)
+3_pressure_metallizati P   E=0.595 z= 2.469 G_E=0.423 G^2=0.179  at black P ~10 GPa (approx.); V=14.149 A^3/atom (rho=3.635
+3_pressure_metallizati P   E=0.700 z= 3.333 G_E=0.538 G^2=0.290  at black P ambient (2.69 g/cm3 handbook); V=19.120 A^3/ato
+3_pressure_metallizati S   E=0.466 z= 1.873 G_E=0.304 G^2=0.092  at S beta-Po 160 GPa (theory); V=8.570 A^3/atom (rho=6.212
+3_pressure_metallizati Se  E=0.527 z= 2.114 G_E=0.358 G^2=0.128  at Se beta-Po 60 GPa (theory); V=13.830 A^3/atom (rho=9.48
+3_pressure_metallizati Si  E=0.673 z= 3.058 G_E=0.507 G^2=0.257  at ambient diamond; V=20.000 A^3/atom (rho=2.332 g/cm3)
+3_pressure_metallizati Ge  E=0.672 z= 3.049 G_E=0.506 G^2=0.256  at ambient diamond; V=22.600 A^3/atom (rho=5.337 g/cm3)
+3_pressure_metallizati Xe  E=0.460 z= 1.852 G_E=0.299 G^2=0.089  at Xe metallization V_m=10.5 cm3/mol; V=17.436 A^3/atom (r
+3_pressure_metallizati Xe  E=0.470 z= 1.887 G_E=0.307 G^2=0.094  at Xe metallization V_m=10.7 cm3/mol; V=17.768 A^3/atom (r
+3_pressure_metallizati Xe  E=0.447 z= 1.808 G_E=0.288 G^2=0.083  at Xe metallization V_m=10.26 (152 GPa) cm3/mol; V=17.037 
+4_tin                  Sn  E=0.664 z= 2.976 G_E=0.497 G^2=0.247  at grey 5.77; rho=5.77 g/cm3; V=34.163 A^3/atom
+4_tin                  Sn  E=0.574 z= 2.347 G_E=0.403 G^2=0.162  at white 7.31; rho=7.31 g/cm3; V=26.966 A^3/atom
+4_tin                  Sn  E=0.662 z= 2.959 G_E=0.495 G^2=0.245  at alpha-Sn lattice V=34.0; V=34.000 A^3/atom (rho=5.798 g
+4_tin                  Sn  E=0.570 z= 2.326 G_E=0.399 G^2=0.159  at beta-Sn lattice V=26.7; V=26.700 A^3/atom (rho=7.383 g/
+5_Si_Ge_melting        Si  E=0.638 z= 2.762 G_E=0.468 G^2=0.219  at liquid at Tm; rho=2.58 g/cm3; V=18.077 A^3/atom
+5_Si_Ge_melting        Si  E=0.676 z= 3.086 G_E=0.511 G^2=0.261  at solid at Tm; rho=2.311 g/cm3; V=20.181 A^3/atom
+5_Si_Ge_melting        Si  E=0.673 z= 3.058 G_E=0.507 G^2=0.257  at solid ambient; rho=2.33 g/cm3; V=20.016 A^3/atom
+5_Si_Ge_melting        Ge  E=0.656 z= 2.907 G_E=0.488 G^2=0.238  at liquid at Tm; rho=5.585 g/cm3; V=21.594 A^3/atom
+5_Si_Ge_melting        Ge  E=0.672 z= 3.049 G_E=0.506 G^2=0.256  at solid 25 C; rho=5.3234 g/cm3; V=22.656 A^3/atom
+6_helium               He4 E=0.991 z=111.111 G_E=0.982 G^2=0.965  at liquid He-4 SVP; Vm=27.6041 cm3/mol; V=45.838 A^3/atom
+6_helium               He4 E=0.989 z=90.909 G_E=0.978 G^2=0.957  at liquid He-4 at 25.3 bar; Vm=23.2709 cm3/mol; V=38.642 A
+6_helium               He4 E=0.988 z=83.333 G_E=0.976 G^2=0.953  at solid He-4 melting line; Vm=21.02 cm3/mol; V=34.905 A^3
+6_helium               He3 E=0.993 z=142.857 G_E=0.986 G^2=0.972  at liquid He-3 SVP; Vm=36.846 cm3/mol; V=61.184 A^3/atom
+L3 Hg: wall predicts rho_c = 5.799 ; measured 5.80 ; z at measured = 5.83
+L3 Cs: wall predicts rho_c = 0.724 ; measured 0.38 ; z at measured = 11.10
+L3 Rb: wall predicts rho_c = 0.628 ; measured 0.29 ; z at measured = 12.62
+L3 K: wall predicts rho_c = 0.353 ; measured 0.18 ; z at measured = 11.43

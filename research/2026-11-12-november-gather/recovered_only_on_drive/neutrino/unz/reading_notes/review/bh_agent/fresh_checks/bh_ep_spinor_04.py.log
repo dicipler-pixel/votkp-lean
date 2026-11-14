@@ -1,0 +1,12 @@
+H1  Q(sigma3) = (sigma3**2 + 21)/25   Q(0) = 21/25   A12 = 7*sqrt(3)/25
+    u.v - 2 sigma3^2 sqrt(Q) p = 0    residue of a at the wall = 1/2
+H2  one w3 loop: M = [[0j, -1.0594j], [-0.9441j, 0j]]   M[0,1]*M[1,0] = (-1.0001-0j)
+    M1^2 = [[(-1.0001-0j), -0j], [-0j, (-1.0001-0j)]]   two loops = [[(-1.0001-0j), -0j], [-0j, (-1.0001+0j)]]   four loops = [[(1.0002+0j), (-0+0j)], [(-0+0j), (1.0002-0j)]]
+    one sigma3 loop = [[(-1.0001+0j), -0j], [-0j, (-1.0001-0j)]]   control (loop off the wall point) = [[(1-0j), 0j], [0j, (1+0j)]]
+    off the joint condition t3=1.25: small sigma3 loop = [[(1+0j), (-0+0j)], [(-0+0j), (1+0j)]]
+IV  B^2 = g1 g2: True   (B^2)^2 = -I: True   B^8 = I: True
+TR  handed part Tr(P+[dP/dsigma3, dP/ddelta]) at t=(2,1,1.3), delta=0.4:
+    sigma3=+-0.1: -27.257764 / +27.257764  sum 0.0e+00   symmetrised operator: 0.0e+00
+    sigma3=+-0.2: -6.799872 / +6.799872  sum 0.0e+00   symmetrised operator: 2.5e-12
+    sigma3=+-0.4: -1.685527 / +1.685527  sum 0.0e+00   symmetrised operator: 3.7e-13
+RESULT PASS

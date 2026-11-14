@@ -1,0 +1,39 @@
+C1 matrix of A in E1..E5 (rows a, cols b), with w2 = 1 - w1 - w3:
+   A[11] claim residual: 0
+   A[22] claim residual: 0
+   A[12] claim residual: 0
+   A[21] claim residual: 0
+   A[33] claim residual: 0
+   A[44] claim residual: 0
+   A[55] claim residual: 0
+   shape-shear coupling entries: {0}  shear off-diagonal: {0}
+C2 A21 at w3=0: 0
+C3 min discriminant over 20000 interior samples: 2.886e-04
+C4 (A11 - A22) at w3=0 = -2*(t1*w1 - t1 - t2*w1 + t3)  ; claim residual: 0
+C5 joint point: w1-w2 = 0.3999999999999999, A12 at wall = 0.484974
+C5a one loop in w3: swapped=True; two loops: returned=True
+C5b discriminant winding per loop: 1.000000
+C5c ledger log det(cI+A_pair): start 2.561913986149+0.000000000000j, after loop 2.561913986149-0.000000000000j, drift 1.13e-20, max step 3.64e-08
+C5d Riesz pair projector: Tr = 2.000000000000; drift after loop 2.45e-18; half-loop differs by 6.66e-16 (moves, but returns)
+C5e one loop in fold coordinate sigma3 (w3 = sigma3^2, encircles w3 twice): swapped=False
+     sigma3=+0.02: eigenvalues [2.58174952 2.61841048], |cos angle between eigenvectors| = 0.997147
+     sigma3=-0.02: eigenvalues [2.58174952 2.61841048], |cos angle between eigenvectors| = 0.997147
+     gap / |sigma3| at sigma3 = 1e-2, 1e-3, 1e-4: [np.float64(1.83303464), np.float64(1.83303032), np.float64(1.83303028)]  (constant => gap linear in sigma3, square-root in w3)
+C6 ledger table t=(2,1,1.3), w1-w2=0.4 (joint point):
+   w3=  1e-02: pair [2.51032667 2.69367333], count 2, Tr P_pair 2.000000000000, ledger log det(1+A) 2.562330546753, ||P_single||*gap = 0.502311
+   w3=  1e-03: pair [2.57121656 2.62918344], count 2, Tr P_pair 2.000000000000, ledger log det(1+A) 2.561913986149, ||P_single||*gap = 0.486706
+   w3=  1e-04: pair [2.59085483 2.60918517], count 2, Tr P_pair 2.000000000000, ledger log det(1+A) 2.561872320543, ||P_single||*gap = 0.485147
+   w3=  1e-06: pair [2.59908368 2.60091672], count 2, Tr P_pair 2.000000000000, ledger log det(1+A) 2.561867737220, ||P_single||*gap = 0.484976
+   w3=  0e+00: pair [2.6 2.6], count 2, Tr P_pair 2.000000000000, ledger log det(1+A) 2.561867690924, ||P_single||*gap = nan
+   |A12| at wall = 0.484974  (individual projector norm x gap -> |A12|)
+C7 T=G^-1 at w3=1e-6: relative asymmetry of G-metric * A = 1.10e-22  (0 => self-adjoint => diagonalisable, no Jordan block)
+     w3=1e-02: |eigenvalues| = [  4.2308   4.4211 101.6667 102.5641 198.0404]  (x w3: [0.0423 0.0442 1.0167 1.0256 1.9804])
+     w3=1e-04: |eigenvalues| = [4.16730000e+00 4.33420000e+00 1.00016667e+04 1.00025006e+04
+ 1.99980004e+04]  (x w3: [4.0000e-04 4.0000e-04 1.0002e+00 1.0003e+00 1.9998e+00])
+     w3=1e-06: |eigenvalues| = [4.16670000e+00 4.33330000e+00 1.00000167e+06 1.00000250e+06
+ 1.99999800e+06]  (x w3: [0. 0. 1. 1. 2.])
+C8 t=0.1: ||exp(-Jt)|| = 0.789975240034, formula 0.789975240034
+C8 t=1.0: ||exp(-Jt)|| = 0.094436407453, formula 0.094436407453
+C8 t=3.0: ||exp(-Jt)|| = 0.000804747797, formula 0.000804747797
+   growth ratio kappa = |mu|/b = 0.1865 (transient growth above 1 needs kappa > 2)
+RESULT PASS

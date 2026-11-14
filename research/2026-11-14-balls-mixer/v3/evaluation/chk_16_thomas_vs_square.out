@@ -1,0 +1,6 @@
+z 1.05 Thomas theta deg 0.0682  square turn phi deg 359.8636  phi/theta 5279.0167  1-cos(theta)=2G4/(1+G4) 1e-06 1e-06
+z 1.2 Thomas theta deg 0.947  square turn phi deg 358.0901  phi/theta 378.1246  1-cos(theta)=2G4/(1+G4) 0.000137 0.000137
+z 2 Thomas theta deg 12.6804  square turn phi deg 331.277  phi/theta 26.1252  1-cos(theta)=2G4/(1+G4) 0.02439 0.02439
+z 3 Thomas theta deg 28.0725  square turn phi deg 282.1151  phi/theta 10.0495  1-cos(theta)=2G4/(1+G4) 0.117647 0.117647
+z 5 Thomas theta deg 47.925  square turn phi deg 147.4796  phi/theta 3.0773  1-cos(theta)=2G4/(1+G4) 0.329897 0.329897
+z 7 Thomas theta deg 58.7155  square turn phi deg nan  phi/theta nan  1-cos(theta)=2G4/(1+G4) 0.480712 0.480712

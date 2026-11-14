@@ -1,0 +1,8 @@
+PASS S1 closed form = finite-difference lift max rel diff 4.0e-06
+PASS S2 square 1.828427124746188 vs 1.828427124746190
+PASS S3 rhombus sign change k* = 0.144557 (1/k* = 6.9177); stiffness at k=1 +1.828427, k=0.2 +0.6651, k=0.1 -1.0801
+   exact rhombus formula at k* : -3.1086244689504383e-15  and at k=0.5: 1.642573002183047 1.6425730021830462
+PASS S4 negative stiffness exists away from collisions min found -7.5253 with min pair distance 0.0500
+PASS S5 rhombus root from (1+k^2)(1+k)^2 = 64k^2 k* = 0.144556694814
+   fraction of 20000 Gaussian flat shapes that stiffen: 1.0000
+ALL PASS

@@ -1,0 +1,11 @@
+  PDG low: mean distance to whole level 0.192  |  e->mu z=  206.77 L=3.313 past  mu->tau z=   16.82 L=1.754 past  u->c z=  589.35 L=3.964 past  c->t z=  135.56 L=3.050 past  d->s z=   19.89 L=1.858 past  s->b z=   44.74 L=2.362 past
+      M_Z: mean distance to whole level 0.329  |  e->mu z=  210.59 L=3.324 past  mu->tau z=   16.99 L=1.760 past  u->c z=  388.96 L=3.705 past  c->t z=  283.14 L=3.508 past  d->s z=   18.39 L=1.809 past  s->b z=   50.35 L=2.435 past
+ GUT 2e16: mean distance to whole level 0.280  |  u->c z=  487.40 L=3.846 past  c->t z=  316.94 L=3.578 past  d->s z=   18.97 L=1.828 past  s->b z=   45.62 L=2.374 past
+
+quark step u->c: levels across scales [3.964, 3.705, 3.846]  spread 0.258
+quark step c->t: levels across scales [3.05, 3.508, 3.578]  spread 0.528
+quark step d->s: levels across scales [1.858, 1.809, 1.828]  spread 0.049
+quark step s->b: levels across scales [2.362, 2.435, 2.374]  spread 0.073
+
+H1 whole Garrett levels: largest scale shift 0.528, mean distances [0.192, 0.329, 0.28] -> KILL FIRED
+H2 every generation step past the wall at every scale -> survives

@@ -1,0 +1,1 @@
+max |det - (g_par - C)| = 1.6e-11;  max (|Omega(V,dx)| - 2 sqrt(det)) = 3.1e-15 (must be <= 0)

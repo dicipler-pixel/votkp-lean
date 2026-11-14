@@ -1,0 +1,101 @@
+PART A  identity z = z_sh*z_scr  (max relative error over all core-line steps)
+   max |Gsh (+) Gscr - G| = 2.22e-16
+
+PART B  effective charges; wall at Zc/Zv = (1+sqrt2)(n-1)/n
+ core 2  n=2  wall ratio 1.2071  s*=0.1860  charge step r*=0.0938
+   Li q=0  z= 14.029 Gscr=0.5563  Zv= 1.259 Zc= 2.358  Zc/Zv=1.8728 PAST  sig_v= 1.741 sig_c= 0.642  [T]
+   Be q=1  z=  8.451 Gscr=0.3575  Zv= 2.314 Zc= 3.363  Zc/Zv=1.4535 PAST  sig_v= 1.686 sig_c= 0.637  [T]
+   B  q=2  z=  6.838 Gscr=0.2619  Zv= 3.339 Zc= 4.366  Zc/Zv=1.3075 PAST  sig_v= 1.661 sig_c= 0.634  [T]
+   C  q=3  z=  6.080 Gscr=0.2063  Zv= 4.354 Zc= 5.368  Zc/Zv=1.2328 PAST  sig_v= 1.646 sig_c= 0.632  [T]
+   N  q=4  z=  5.640 Gscr=0.1701  Zv= 5.365 Zc= 6.370  Zc/Zv=1.1874 in    sig_v= 1.635 sig_c= 0.630  [T]
+   O  q=5  z=  5.353 Gscr=0.1446  Zv= 6.372 Zc= 7.372  Zc/Zv=1.1568 in    sig_v= 1.628 sig_c= 0.628  [T]
+   F  q=6  z=  5.151 Gscr=0.1258  Zv= 7.379 Zc= 8.373  Zc/Zv=1.1348 in    sig_v= 1.621 sig_c= 0.627  [T]
+   Ne q=7  z=  5.001 Gscr=0.1112  Zv= 8.384 Zc= 9.375  Zc/Zv=1.1182 in    sig_v= 1.616 sig_c= 0.625  [T]
+   Na q=8  z=  4.886 Gscr=0.0997  Zv= 9.389 Zc=10.377  Zc/Zv=1.1052 in    sig_v= 1.611 sig_c= 0.623  [T]
+   Mg q=9  z=  4.794 Gscr=0.0903  Zv=10.394 Zc=11.379  Zc/Zv=1.0948 in    sig_v= 1.606 sig_c= 0.621  [T]
+   Al q=10 z=  4.719 Gscr=0.0825  Zv=11.399 Zc=12.382  Zc/Zv=1.0862 in    sig_v= 1.601 sig_c= 0.618  [T]
+ core 10  n=3  wall ratio 1.6095  s*=0.4430  charge step r*=0.2336
+   Na q=0  z=  9.201 Gscr=0.6070  Zv= 1.844 Zc= 3.729  Zc/Zv=2.0222 PAST  sig_v= 9.156 sig_c= 7.271  [E]
+   Mg q=1  z=  5.330 Gscr=0.4064  Zv= 3.154 Zc= 4.854  Zc/Zv=1.5392 in    sig_v= 8.846 sig_c= 7.146  [E]
+   Al q=2  z=  4.218 Gscr=0.3043  Zv= 4.338 Zc= 5.939  Zc/Zv=1.3692 in    sig_v= 8.662 sig_c= 7.061  [E]
+   Si q=3  z=  3.694 Gscr=0.2430  Zv= 5.464 Zc= 7.002  Zc/Zv=1.2814 in    sig_v= 8.536 sig_c= 6.998  [E]
+   P  q=4  z=  3.390 Gscr=0.2021  Zv= 6.558 Zc= 8.050  Zc/Zv=1.2274 in    sig_v= 8.442 sig_c= 6.950  [S]
+   S  q=5  z=  3.191 Gscr=0.1729  Zv= 7.632 Zc= 9.088  Zc/Zv=1.1908 in    sig_v= 8.368 sig_c= 6.912  [E]
+   Cl q=6  z=  3.050 Gscr=0.1509  Zv= 8.692 Zc=10.119  Zc/Zv=1.1643 in    sig_v= 8.308 sig_c= 6.881  [E]
+   Ar q=7  z=  2.946 Gscr=0.1339  Zv= 9.741 Zc=11.146  Zc/Zv=1.1442 in    sig_v= 8.259 sig_c= 6.854  [S]
+   K  q=8  z=  2.865 Gscr=0.1202  Zv=10.784 Zc=12.169  Zc/Zv=1.1284 in    sig_v= 8.216 sig_c= 6.831  [S]
+   Ca q=9  z=  2.800 Gscr=0.1089  Zv=11.822 Zc=13.188  Zc/Zv=1.1156 in    sig_v= 8.178 sig_c= 6.812  [S]
+   Sc q=10 z=  2.752 Gscr=0.1003  Zv=12.855 Zc=14.215  Zc/Zv=1.1059 in    sig_v= 8.145 sig_c= 6.785  [E]
+ core 18  n=4  wall ratio 1.8107  s*=0.5325  charge step r*=0.2884
+   K  q=0  z=  7.286 Gscr=0.6077  Zv= 2.259 Zc= 4.574  Zc/Zv=2.0244 PAST  sig_v=16.741 sig_c=14.426  [E]
+   Ca q=1  z=  4.289 Gscr=0.4139  Zv= 3.736 Zc= 5.803  Zc/Zv=1.5532 in    sig_v=16.264 sig_c=14.197  [E]
+   Sc q=2  z=  2.968 Gscr=0.2509  Zv= 5.396 Zc= 6.972  Zc/Zv=1.2922 in    sig_v=15.604 sig_c=14.028  [E]
+   Ti q=3  z=  2.295 Gscr=0.1270  Zv= 7.133 Zc= 8.105  Zc/Zv=1.1362 in    sig_v=14.867 sig_c=13.895  [E]
+   V  q=4  z=  1.963 Gscr=0.0494  Zv= 8.762 Zc= 9.206  Zc/Zv=1.0507 in    sig_v=14.238 sig_c=13.794  [E]
+   Cr q=5  z=  1.769 Gscr=-0.0026  Zv=10.324 Zc=10.297  Zc/Zv=0.9974 in    sig_v=13.676 sig_c=13.703  [S]
+   Mn q=6  z=  1.640 Gscr=-0.0403  Zv=11.840 Zc=11.372  Zc/Zv=0.9605 in    sig_v=13.160 sig_c=13.628  [S]
+   Fe q=7  z=  1.546 Gscr=-0.0696  Zv=13.328 Zc=12.431  Zc/Zv=0.9327 in    sig_v=12.672 sig_c=13.569  [S]
+   Co q=8  z=  1.480 Gscr=-0.0916  Zv=14.795 Zc=13.497  Zc/Zv=0.9123 in    sig_v=12.205 sig_c=13.503  [S]
+   Ni q=9  z=  1.422 Gscr=-0.1112  Zv=16.256 Zc=14.538  Zc/Zv=0.8943 in    sig_v=11.744 sig_c=13.462  [S]
+   Cu q=10 z=  1.383 Gscr=-0.1248  Zv=17.664 Zc=15.581  Zc/Zv=0.8821 in    sig_v=11.336 sig_c=13.419  [S]
+ core 36  n=5  wall ratio 1.9314  s*=0.5772  charge step r*=0.3177
+   Rb q=0  z=  6.533 Gscr=0.6140  Zv= 2.770 Zc= 5.665  Zc/Zv=2.0448 PAST  sig_v=34.230 sig_c=31.335  [E]
+   Sr q=1  z=  3.888 Gscr=0.4266  Zv= 4.502 Zc= 7.101  Zc/Zv=1.5774 in    sig_v=33.498 sig_c=30.899  [E]
+   Y  q=2  z=  2.953 Gscr=0.3079  Zv= 6.141 Zc= 8.442  Zc/Zv=1.3747 in    sig_v=32.859 sig_c=30.558  [S]
+   Zr q=3  z=  2.334 Gscr=0.1981  Zv= 7.953 Zc= 9.720  Zc/Zv=1.2223 in    sig_v=32.047 sig_c=30.280  [S]
+   Nb q=4  z=  2.018 Gscr=0.1273  Zv= 9.640 Zc=10.956  Zc/Zv=1.1365 in    sig_v=31.360 sig_c=30.044  [S]
+   Mo q=5  z=  1.825 Gscr=0.0776  Zv=11.246 Zc=12.155  Zc/Zv=1.0809 in    sig_v=30.754 sig_c=29.845  [S]
+   Tc q=6  z=  1.705 Gscr=0.0435  Zv=12.716 Zc=13.281  Zc/Zv=1.0445 in    sig_v=30.284 sig_c=29.719  [T]
+   Ru q=7  z=  1.622 Gscr=0.0187  Zv=14.217 Zc=14.485  Zc/Zv=1.0188 in    sig_v=29.783 sig_c=29.515  [S]
+   Rh q=8  z=  1.537 Gscr=-0.0082  Zv=15.750 Zc=15.621  Zc/Zv=0.9918 in    sig_v=29.250 sig_c=29.379  [S]
+   Pd q=9  z=  1.492 Gscr=-0.0231  Zv=17.141 Zc=16.750  Zc/Zv=0.9772 in    sig_v=28.859 sig_c=29.250  [S]
+   Ag q=10 z=  1.444 Gscr=-0.0394  Zv=18.586 Zc=17.867  Zc/Zv=0.9613 in    sig_v=28.414 sig_c=29.133  [S]
+ core 54  n=6  wall ratio 2.0118  s*=0.6038  charge step r*=0.3360
+   Cs q=0  z=  5.947 Gscr=0.6101  Zv= 3.210 Zc= 6.523  Zc/Zv=2.0322 PAST  sig_v=51.790 sig_c=48.477  [E]
+   Ba q=1  z=  3.583 Gscr=0.4266  Zv= 5.145 Zc= 8.116  Zc/Zv=1.5774 in    sig_v=50.855 sig_c=47.884  [E]
+   La q=2  z=  2.605 Gscr=0.2879  Zv= 7.123 Zc= 9.580  Zc/Zv=1.3449 in    sig_v=49.877 sig_c=47.420  [S]
+   Ce q=3  z=  1.776 Gscr=0.1045  Zv= 9.882 Zc=10.975  Zc/Zv=1.1106 in    sig_v=48.118 sig_c=47.025  [S]
+   Pr q=4  z=  1.425 Gscr=-0.0051  Zv=12.338 Zc=12.275  Zc/Zv=0.9949 in    sig_v=46.662 sig_c=46.725  [T]
+   Nd q=5  z=  1.179 Gscr=-0.0998  Zv=14.908 Zc=13.487  Zc/Zv=0.9047 in    sig_v=45.092 sig_c=46.513  [T]
+   Pm q=6  z=  1.149 Gscr=-0.1126  Zv=16.348 Zc=14.600  Zc/Zv=0.8931 in    sig_v=44.652 sig_c=46.400  [T]
+   Sm q=7  z=  1.195 Gscr=-0.0930  Zv=17.670 Zc=16.096  Zc/Zv=0.9109 in    sig_v=44.330 sig_c=45.904  [T]
+   Eu q=8  z=  1.118 Gscr=-0.1259  Zv=19.520 Zc=17.200  Zc/Zv=0.8812 in    sig_v=43.480 sig_c=45.800  [T]
+   Gd q=9  z=  1.109 Gscr=-0.1298  Zv=20.895 Zc=18.337  Zc/Zv=0.8776 in    sig_v=43.105 sig_c=45.663  [T]
+   Tb q=10 z=  1.161 Gscr=-0.1071  Zv=22.184 Zc=19.922  Zc/Zv=0.8980 in    sig_v=42.816 sig_c=45.078  [T]
+ core 86  n=7  wall ratio 2.0693  s*=0.6214  charge step r*=0.3484
+   Fr q=0  z=  5.500 Gscr=0.6032  Zv= 3.830 Zc= 7.699  Zc/Zv=2.0102 in    sig_v=83.170 sig_c=79.301  [S]
+   Ra q=1  z=  3.055 Gscr=0.3836  Zv= 6.045 Zc= 9.057  Zc/Zv=1.4982 in    sig_v=81.955 sig_c=78.943  [T]
+   Ac q=2  z=  2.569 Gscr=0.3074  Zv= 7.924 Zc=10.888  Zc/Zv=1.3739 in    sig_v=81.076 sig_c=78.112  [S]
+   Th q=3  z=  2.025 Gscr=0.1960  Zv=10.157 Zc=12.388  Zc/Zv=1.2196 in    sig_v=79.843 sig_c=77.612  [T]
+   Pa q=4  z=  1.625 Gscr=0.0885  Zv=12.631 Zc=13.802  Zc/Zv=1.0927 in    sig_v=78.369 sig_c=77.198  [T]
+   U  q=5  z=  1.435 Gscr=0.0266  Zv=14.943 Zc=15.346  Zc/Zv=1.0270 in    sig_v=77.057 sig_c=76.654  [T]
+   Np q=6  z=  1.163 Gscr=-0.0785  Zv=18.203 Zc=16.826  Zc/Zv=0.9244 in    sig_v=74.797 sig_c=76.174  [T]
+   Pu q=7  z=  1.138 Gscr=-0.0894  Zv=19.813 Zc=18.113  Zc/Zv=0.9142 in    sig_v=74.187 sig_c=75.887  [T]
+   Am q=8  z=  1.128 Gscr=-0.0937  Zv=21.217 Zc=19.315  Zc/Zv=0.9103 in    sig_v=73.783 sig_c=75.685  [T]
+   Cm q=9  z=  1.160 Gscr=-0.0799  Zv=22.773 Zc=21.021  Zc/Zv=0.9231 in    sig_v=73.227 sig_c=74.979  [T]
+   Bk q=10 z=  1.140 Gscr=-0.0883  Zv=24.816 Zc=22.715  Zc/Zv=0.9153 in    sig_v=72.184 sig_c=74.285  [T]
+
+PART C  He core from the 1/Z series (no fit)
+   Z= 3 Li  z meas 14.0289  series 15.2823 (+8.93%)  no-5/8 24.7138  PAST
+   Z= 4 Be  z meas 8.4507  series 8.5816 (+1.55%)  no-5/8 12.1345  PAST
+   Z= 5 B   z meas 6.8381  series 6.8755 (+0.55%)  no-5/8 9.0157  PAST
+   Z= 6 C   z meas 6.0795  series 6.0955 (+0.26%)  no-5/8 7.6153  PAST
+   Z= 7 N   z meas 5.6397  series 5.6484 (+0.16%)  no-5/8 6.8229  in
+   Z= 8 O   z meas 5.3528  series 5.3586 (+0.11%)  no-5/8 6.3141  in
+   Z= 9 F   z meas 5.1510  series 5.1555 (+0.09%)  no-5/8 5.9600  in
+   Z=10 Ne  z meas 5.0014  series 5.0052 (+0.08%)  no-5/8 5.6997  in
+   Z=11 Na  z meas 4.8860  series 4.8895 (+0.07%)  no-5/8 5.5002  in
+   Z=12 Mg  z meas 4.7942  series 4.7977 (+0.07%)  no-5/8 5.3425  in
+   series crossing Z* = 6.538   (measured line crosses between 6 and 7, interpolated 6.57)
+   opposite, core unscreened: Z* = 9.470
+   KILL: crossing in (6,7): yes ; misses over 2% for Z=5..10: 0
+
+PART D  alkali column
+   Na n=3  Zc/Zv=2.0222  wall ratio 1.6095  margin +0.4128
+   K  n=4  Zc/Zv=2.0244  wall ratio 1.8107  margin +0.2137
+   Rb n=5  Zc/Zv=2.0448  wall ratio 1.9314  margin +0.1134
+   Cs n=6  Zc/Zv=2.0322  wall ratio 2.0118  margin +0.0204
+   Fr n=7  Zc/Zv=2.0102  wall ratio 2.0693  margin -0.0592
+   spread Na..Cs: 2.0222 to 2.0448 (1.11%)  KILL (over 2%): not fired
+   largest n with wall ratio below 2.0222: n < 6.16 ; below 2.0448: n < 6.54
+   Fr: IE1 = 4.07274 eV ; wall needs IE2 > 23.738 eV ; ratio reading IE2 = 22.67 to 23.18 eV ; archived 22.4 +/- 1.9 [S]

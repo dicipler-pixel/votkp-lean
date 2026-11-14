@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "counts": {
+    "element_slots": 118,
+    "with_thresholds": 110,
+    "thresholds": 5847,
+    "complete_ladders": 103,
+    "bare_reference_edge_checks": 5370,
+    "local_segment_edge_checks": 5847,
+    "complete_total_checks": 103,
+    "peel_inverse_checks": 5714
+  }
+}

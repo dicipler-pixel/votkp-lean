@@ -1,0 +1,4 @@
+PASS K1 one pair: outside record Fermi-Dirac, tau = w/T for every phase max off-diagonal 0.0e+00, max |tau - w/T| 5.6e-16
+PASS K2 four pairs: tau from covariance = log P(empty)/P(full) = sum w_k/T tau_C = 13.260000000000, tau_Fock = 13.260000000000, sum w/T = 13.260000000000; outside Fock off-diagonal 0.0e+00
+PASS K3 the offset is the ratio w/T; a common rescaling leaves it unchanged max change 0.0e+00
+ALL PASS

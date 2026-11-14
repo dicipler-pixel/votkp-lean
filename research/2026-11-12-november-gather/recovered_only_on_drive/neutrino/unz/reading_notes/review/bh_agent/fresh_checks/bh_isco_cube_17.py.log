@@ -1,0 +1,6 @@
+PASS C1 omega_r^2/Omega^2 = 1 - 6M/r, so p = 2 + 6M/r ratio = (r - 6)/r, p = 2 + 6/r, p(6M) = 3
+PASS C2 R = -2 N''/N; linear lapse is flat R = -2*Derivative(N(x), (x, 2))/N(x)
+PASS C2 Schwarzschild lapse = rho/(4M) near the horizon lapse ~ sqrt(2)/(2*sqrt(M)) sqrt(eps), rho ~ 2*sqrt(2)*sqrt(M) sqrt(eps)
+PASS C3 extremal RN: proper distance diverges like -M log(eps); lapse ~ eps/M ~ exp(-rho/M) distance ~ M * log(1/eps)
+PASS C4 Lamb: psi'' + (omega^2 - omega_ac^2)/c^2 psi = 0, omega_ac = c/2H; generator nilpotent at the cutoff 
+ALL PASS
