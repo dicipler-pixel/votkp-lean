@@ -1,0 +1,10 @@
+braid: signature 0 determinant 49 components 1
+Alexander(braid) / Alexander(7_1)^2 is a unit +-t^k: k = [-8.0, -8.0, -8.0, -8.0]
+after changing entries 0 and 1: ['K14a18636(0,0)']
+  its signature 0 determinant 261
+N4 not hit
+5 strands same hand -> signature, det, components (12, 0, 2)
+5 strands mirror -> signature, det, components (0, 0, 2)
+7_1 alone (6, 7, 1)
+N5 7_1 # 7_1 signature 12 determinant 49 components 1
+N5 7_1 # mirror signature 0 determinant 49 components 1
