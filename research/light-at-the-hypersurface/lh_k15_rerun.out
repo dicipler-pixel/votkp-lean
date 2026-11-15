@@ -1,0 +1,7 @@
+HOLDS   K15    0.00e+0  tol 1e-9  impulse total outflow = 1 (closed form)
+HOLDS   K15    0.00e+0  tol 1e-9  mean residence 6 (closed form)
+HOLDS   K15    0.00e+0  tol 1e-9  mean residence 51 (closed form)
+HOLDS   K15   8.88e-15  tol 1e-9  stepper after 300 steps equals exp(3M) applied to the impulse
+HOLDS   K15   2.28e-10  tol 1e-9  network ledger |in − out − stored| over 2000 frames (relative)
+note   K15-opposite-1  swapping a and b in the y equation gives mean 6.000000: the x-moment does not see that swap, so it is not a valid opposite
+HOLDS   K15-opposite-2  the wrong formula (1 + b/a)/κ = 1.2 is killed by the same line (closed form 6)

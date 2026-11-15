@@ -1,0 +1,5 @@
+HOLDS   K6     1.71e-15  tol 1e-12     recursion by ⊕ = transfer matrix in the same phase convention; flux in = flux out
+HOLDS   K6     1.71e-15  tol 1e-12     with the opposite convention the transfer matrix gives exactly the complex conjugate
+HOLDS   K6     1.98e+00  tol 1e-12     opposite: Γ ⊖ x must be killed
+HOLDS   K18    4.18e-14  tol 1e-08     minimum distance between separated planes = arccosh g (Nelder–Mead over both planes, 6 starts)
+HOLDS   K18    2.21e+00  tol 1e-08     opposite: arccosh(g²) must be killed

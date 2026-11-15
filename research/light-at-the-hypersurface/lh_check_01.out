@@ -1,0 +1,44 @@
+HOLDS   K1     8.88e-16  tol 1e-12     flux at a step, solved from the two matching conditions
+HOLDS   K2     4.44e-16  tol 1e-12     Smith form, reciprocity, matched, mirror, Γ(−z)Γ(z), |G(z̄)||G(z)|
+HOLDS   K3     7.38e-14  tol 1e-10     breathe: a1 sin²θ1 − a2 sin²θ2 at 123 transmitted hits, angles from the dumped tangents (relative)
+HOLDS   K3     4.34e-11  tol 1e-10     breathe: the dumped hit lies on the face and on the hyperboloid; refracted tangent is unit and tangent
+HOLDS   K3     1.37e-13  tol 1e-10     sweep: a1 sin²θ1 − a2 sin²θ2 at 451 transmitted hits, angles from the dumped tangents (relative)
+HOLDS   K3     9.93e-12  tol 1e-10     sweep: the dumped hit lies on the face and on the hyperboloid; refracted tangent is unit and tangent
+HOLDS   K3     2.07e-13  tol 1e-10     centre rays: sin θ = cosh h sin ψ (plane found by bisection)
+HOLDS   K4     8.88e-16  tol 1e-12     oblique flux, Y = ω√(a − C)
+HOLDS   K5     1.11e-16  tol 1e-09     κ = 4: threshold 30°
+HOLDS   K5     1.83e-15  tol 1e-12     ||Γ| − 1|, arg Γ, sin(π/2 + iu) − √κ sin θ1
+KILLED  K6     1.98e+00  tol 1e-12     recursion by ⊕ against an independent field/flux transfer matrix; flux in = flux out
+HOLDS   K6     1.12e-15  tol 1e-10     bounce sum of 400 echoes against Γ ⊕ x
+HOLDS   K6     3.33e-16  tol 1e-12     zero phase: D equal steps give tanh(D r/2)
+HOLDS   K6     0.00e+00  tol 0         echo circle sign exceptions
+HOLDS   K6     1.11e-16  tol 1e-15     witness 49/121, 1/9
+HOLDS   K7     1.11e-15  tol 1e-12     gap |r|² + |t|² = 1
+HOLDS   K7     7.44e-04  tol 0.001     slope of ln T against w = −2|k⊥| (relative)
+HOLDS   K8     1.11e-16  tol 1e-14     wall |R − ½|
+HOLDS   K8     1.33e-15  tol 1e-12     wall SL(2) trace + 2
+HOLDS   K8     8.27e-15  tol 1e-10     wall ‖(W + I)²‖
+HOLDS   K8     4.00e+00  tol 0.001     wall ‖W + I‖ > 1e-3
+HOLDS   K8     1.11e-16  tol 1e-14     R(5) = 4/9, R(7) = 9/16
+HOLDS   K8     8.42e-15  tol 1e-12     trace = 2 − 4(R/T)² on 500 ratios
+HOLDS   K9     4.56e-13  tol 1e-09     Thomas angle, 500 random pairs
+HOLDS   K9     5.44e-15  tol 1e-13     exact 65/97, 72/97; 175/337, 288/337
+HOLDS   K10    3.85e-11  tol 1e-08     ‖W − L R L⁻¹ R‖/‖W‖
+HOLDS   K10    2.29e-13  tol 1e-10     turn and run formulas from the 4x4 trace
+HOLDS   K11    1.72e-14  tol 1e-12     aberration = ⊕ and t′/t, from the 4x4 boost
+HOLDS   K11    0.00e+00  tol 0         ping-pong exceptions, 1e5 directions × 6 letters, z = 5.828433
+HOLDS   K11    0.00e+00  tol 0         ping-pong exceptions, 1e5 directions × 6 letters, z = 7.000000
+HOLDS   K11    0.00e+00  tol 0         ping-pong exceptions, 1e5 directions × 6 letters, z = 9.000000
+HOLDS   K11    0.00e+00  tol 0         ping-pong exceptions, 1e5 directions × 6 letters, z = 13.000000
+HOLDS   K11    2.58e+04  tol 1         z = 5 must show exceptions
+HOLDS   K11    1.42e-14  tol 1e-10     integer step at z = 7: (3,1,2,2) → (99,97,14,14), in its cap
+HOLDS   K12    2.09e-15  tol 1e-12     face meets the rim at cos ψ0 = Γ
+HOLDS   K12    7.11e-15  tol 1e-12     at the wall ψ0 = 45° (degrees)
+HOLDS   K13    1.81e-15  tol 1e-12     normal stress on a tilted plane = −u cos²θ (relative)
+HOLDS   K16    3.55e-15  tol 1e-12     route − endpoint = 4 min(R₊, R₋)
+HOLDS   K17    4.86e-16  tol 1e-14     1 − 2C = Γ; T = 4C(1 − C)
+HOLDS   K18    0.00e+00  tol 1e-12     <Na, Nb> = sinh ha sinh hb
+HOLDS   K18    1.37e-14  tol 1e-10     dihedral angle of the two drawn caps = arccos g
+KILLED  K18    4.97e-01  tol 1e-08     minimum distance between separated planes = arccosh g (grid search, 61 × 61)
+
+40 of 42 lines hold

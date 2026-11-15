@@ -1,0 +1,4 @@
+KILLED  K19  1.29e+00  page self-test values against node (24 lines, same ids: True)
+HOLDS   K14d  law readouts identical with the hypothesis layer shown and hidden, eyes A-H and J at tau 0, 7, 40 (differences: [])
+HOLDS   K20  console errors in any eye at tau 0, 7, 40: 0 []
+KILLED  K20  frame time 161.8 ms at default density, software WebGL (SwiftShader) at 1500x900; JavaScript share of a frame 4.2 ms

@@ -1,0 +1,86 @@
+HOLDS   PAGE    7.77e-16  tol 1e-12       K1/K2 step flux and Smith form
+HOLDS   PAGE    5.55e-16  tol 1e-12       K4 oblique flux / total return
+HOLDS   PAGE     0.00e+0  tol 1e-9        K5 critical angle at κ = 4 against 30°
+HOLDS   PAGE    8.40e-16  tol 1e-10       K6 ⊕ against the bounce sum
+HOLDS   PAGE    5.16e-15  tol 1e-12       K6 recursion = transfer matrix; equal net flux
+HOLDS   PAGE     0.00e+0  tol 0           K6 echo circle sign exceptions
+HOLDS   PAGE    1.11e-16  tol 1e-15       K6 witness 49/121 and 1/9
+HOLDS   PAGE    8.88e-16  tol 1e-12       K7 gap |r|² + |t|² = 1
+HOLDS   PAGE    1.11e-16  tol 1e-14       K8 wall: |R − ½|
+HOLDS   PAGE    1.78e-15  tol 1e-12       K8 wall: SL(2) trace + 2
+HOLDS   PAGE    7.11e-15  tol 1e-10       K8 wall: ‖(W + I)²‖ (with ‖W + I‖ > 1e-3)
+HOLDS   PAGE    2.08e-13  tol 1e-9        K9 Thomas angle 2 arctan(Γa Γb)
+HOLDS   PAGE    3.89e-15  tol 1e-13       K9 exact 65/97, 72/97, 175/337, 288/337
+HOLDS   PAGE    6.88e-12  tol 1e-8        K10 W = L R L⁻¹ R (relative)
+HOLDS   PAGE    4.29e-14  tol 1e-10       K10 turn cos φ = 8g⁴ − 8g² + 1; run 4 arccosh g
+HOLDS   PAGE    6.44e-15  tol 1e-12       K11 aberration is ⊕; Doppler factor
+HOLDS   PAGE     0.00e+0  tol 0           K11 ping-pong exceptions just above the wall and at 7, 9, 13
+HOLDS   PAGE     0.00e+0  tol 0           K11 ping-pong must fail at z = 5 (0 means it did)
+HOLDS   PAGE    1.78e-15  tol 1e-12       K12 face shadow cos ψ0 = Γ
+HOLDS   PAGE    1.39e-17  tol 1e-12       K13 Maxwell normal stress −u cos²θ
+HOLDS   PAGE     0.00e+0  tol 1e-9        K15 residence (1,1,0.2) → 6 and (1,1,0.02) → 51
+HOLDS   PAGE     0.00e+0  tol 1e-12       K16 route − endpoint = 4 min(R₊, R₋)
+HOLDS   PAGE    4.44e-16  tol 1e-14       K17 1 − 2C = Γ and 4C(1 − C) = T
+HOLDS   PAGE     0.00e+0  tol 1e-12       K18 <Na, Nb> = sinh ha sinh hb
+HOLDS   K1      7.77e-16  tol 1e-12       R + (Y2/Y1)t^2 - 1, 1e4 cases
+HOLDS   K2      6.66e-16  tol 1e-12       Smith form, reciprocity, matched, mirror, Γ(−z)Γ(z) = 1, |G(z̄)||G(z)| = 1
+HOLDS   K3      9.89e-13  tol 1e-10       breathe: a1 sin²θ1 − a2 sin²θ2 (relative), angles from drawn tangents, 2001 frames
+HOLDS   K3      4.33e-15  tol 1e-10       breathe: |sin θ − cosh h sin ψ| for centre rays
+HOLDS   K3      3.51e-12  tol 1e-10       sweep: a1 sin²θ1 − a2 sin²θ2 (relative), angles from drawn tangents, 2001 frames
+HOLDS   K3      3.39e-15  tol 1e-10       sweep: |sin θ − cosh h sin ψ| for centre rays
+HOLDS   K14a    6.66e-16  tol 1e-10       breathe: flux residual at every face and ray-tree node
+HOLDS   K14a    6.66e-16  tol 1e-10       sweep: flux residual at every face and ray-tree node
+HOLDS   K14b    9.89e-13  tol 1e-10       breathe: a sin²θ residual
+HOLDS   K14b    3.51e-12  tol 1e-10       sweep: a sin²θ residual
+HOLDS   K14c    1.96e-14  tol 1e-10       breathe: stack net-flux spread, |det W − 1|, null norm of carried direction
+HOLDS   K14c    9.95e-14  tol 1e-10       sweep: stack net-flux spread, |det W − 1|, null norm of carried direction
+HOLDS   K14e     0.00e+0  tol 0           breathe: pure quantities at step n equal feed(P, n dτ) cold (0 = identical)
+HOLDS   K14e     0.00e+0  tol 0           sweep: pure quantities at step n equal feed(P, n dτ) cold (0 = identical)
+HOLDS   K14f    2.22e-10  tol 0.000001    breathe: integrated quantities (record K, stocks, accumulated square) with dτ halved
+HOLDS   K14f    2.40e-10  tol 0.000001    sweep: integrated quantities (record K, stocks, accumulated square) with dτ halved
+K14_crossings_breathe: [{"n":11,"pair":1,"regimeFlip":true,"equalSteps":false},{"n":74,"arm":1,"Rflip":true,"shadowFlip":true},{"n":310,"arm":2,"Rflip":true,"shadowFlip":true},{"n":482,"pair":1,"regimeFlip":true,"equalSteps":false},{"n":562,"pair":2,"regimeFlip":true,"equalSteps":false},{"n":577,"arm":1,"Rflip":true,"shadowFlip":true},{"n":665,"pair":2,"regimeFlip":true,"equalSteps":false},{"n":854,"arm":1,"Rflip":true,"shadowFlip":true},{"n":963,"pair":1,"regimeFlip":true,"equalSteps":false},{"n":1161,"arm":2,"Rflip":true,"shadowFlip":true},{"n":1357,"arm":1,"Rflip":true,"shadowFlip":true},{"n":1434,"pair":1,"regimeFlip":true,"equalSteps":false},{"n":1570,"arm":2,"Rflip":true,"shadowFlip":true},{"n":1634,"arm":1,"Rflip":true,"shadowFlip":true},{"n":1716,"pair":1,"regimeFlip":true,"equalSteps":false},{"n":1959,"pair":1,"regimeFlip":true,"equalSteps":false},{"n":1972,"pair":2,"regimeFlip":true,"equalSteps":false}]
+K14_crossings_sweep: [{"n":73,"arm":2,"Rflip":true,"shadowFlip":true},{"n":286,"pair":0,"regimeFlip":true,"equalSteps":false},{"n":453,"arm":0,"Rflip":true,"shadowFlip":true},{"n":503,"pair":1,"regimeFlip":true,"equalSteps":false},{"n":825,"arm":1,"Rflip":true,"shadowFlip":true},{"n":923,"pair":0,"regimeFlip":true,"equalSteps":false},{"n":988,"arm":0,"Rflip":true,"shadowFlip":true},{"n":1893,"arm":0,"Rflip":true,"shadowFlip":true}]
+HOLDS   K14d     0.00e+0  tol 0           hypothesis layer has no input to LH-MATH (law state is computed without it); the browser comparison is in lh_page_check_v1.out
+HOLDS   K4      6.66e-16  tol 1e-12       oblique R + T − 1, Y = ω√(a − C)
+HOLDS   K5      1.11e-16  tol 1e-9        bisection threshold against arcsin√(a2/a1)
+HOLDS   K5      3.55e-15  tol 5.729577951308233e-8  κ = 4 gives 30° (degrees)
+HOLDS   K5      2.33e-15  tol 1e-12       ||Γ| − 1|, arg Γ + 2 arctan(κe/y), sin(π/2 + i arccosh(√κ sin θ1)) − √κ sin θ1
+HOLDS   K6      1.11e-15  tol 1e-10       ⊕ against the bounce sum, 400 terms
+HOLDS   K6      5.16e-15  tol 1e-12       recursion against transfer matrix (2 to 6 layers); net flux equal in every layer
+HOLDS   K6      3.33e-16  tol 1e-12       zero phase: telescoping r01 ⊕ r12 = r02; D equal steps give tanh(D r/2)
+HOLDS   K6       0.00e+0  tol 0           echo circle sign exceptions, 1e4 random complex cases
+HOLDS   K6      1.11e-16  tol 1e-15       witness a = ½, x = ±⅕
+HOLDS   K7      9.99e-16  tol 1e-12       |r|² + |t|² − 1; ⊕ form = transfer form
+HOLDS   K7       7.44e-4  tol 0.001       slope of ln T against w equals −2|k⊥| (relative), |k⊥|w in [3, 6]
+HOLDS   K8      1.11e-16  tol 1e-14       wall |R − ½|
+HOLDS   K8      1.78e-15  tol 1e-12       wall SL(2) trace + 2
+HOLDS   K8      7.11e-15  tol 1e-10       wall ‖(W + I)²‖
+HOLDS   K8       4.00e+0  tol v => v > 1e-3  wall ‖W + I‖ must exceed 1e-3 (W is not −I)
+HOLDS   K8      1.11e-16  tol 1e-14       z = 5: R = 4/9; z = 7: R = 9/16
+HOLDS   K8      1.31e-14  tol 1e-12       trace = 2 − 4(R/T)² on 500 ratios (relative for large R/T)
+HOLDS   K9      5.69e-13  tol 1e-9        Thomas angle from polar decomposition, 500 random pairs
+HOLDS   K9      3.89e-15  tol 1e-13       exact 65/97, 72/97; 175/337, 288/337
+HOLDS   K10     4.76e-11  tol 1e-8        ‖W − L R L⁻¹ R‖/‖W‖
+HOLDS   K10     1.40e-13  tol 1e-10       cos φ = 8g⁴ − 8g² + 1 (g < 1); run 4 arccosh g (g > 1, relative)
+HOLDS   K11     1.98e-14  tol 1e-12       aberration = ⊕; on-axis frequency ratio = z
+HOLDS   K11      0.00e+0  tol 0           ping-pong exceptions, 1e5 random null directions × 6 letters, z = 5.828432953173314
+HOLDS   K11      0.00e+0  tol 0           ping-pong exceptions, 1e5 random null directions × 6 letters, z = 7
+HOLDS   K11      0.00e+0  tol 0           ping-pong exceptions, 1e5 random null directions × 6 letters, z = 9
+HOLDS   K11      0.00e+0  tol 0           ping-pong exceptions, 1e5 random null directions × 6 letters, z = 13
+HOLDS   K11      2.59e+4  tol v => v >= 1  z = 5: at least one exception must be found
+HOLDS   K11      0.00e+0  tol 0           integer step at z = 7: (3, 1, 2, 2) → (99, 97, 14, 14), in the cap of its letter
+HOLDS   K12     1.78e-15  tol 1e-12       face meets rim at cos ψ0 = Γ
+HOLDS   K12     1.11e-16  tol 1e-12       at the wall ψ0 = 45°
+HOLDS   K13     3.22e-15  tol 1e-12       Maxwell normal stress on a tilted plane = −u cos²θ, 500 random frames (relative)
+HOLDS   K15     3.07e-11  tol 1e-9        impulse total outflow = 1 at (κ, a, b) = (1, 1, 0.2)
+HOLDS   K15     2.27e-10  tol 1e-9        mean residence 6
+KILLED  K15      2.35e-8  tol 1e-9        mean residence 51 at b = 0.02
+HOLDS   K15     6.61e-13  tol 1e-9        b = 0 keeps a/(κ + a) = 0.5
+KILLED  K15      1.91e-9  tol 1e-9        network ledger |in − out − stored| over 2000 frames (relative)
+HOLDS   K16      0.00e+0  tol 1e-12       route − endpoint = 4 min(R₊, R₋), 1e3 chains
+HOLDS   K17     4.72e-16  tol 1e-14       1 − 2C = Γ; T = 4C(1 − C)
+HOLDS   K18      0.00e+0  tol 1e-12       <Na, Nb> = sinh ha sinh hb
+HOLDS   K18     1.25e-14  tol 1e-10       dihedral angle from the two drawn caps = arccos g
+HOLDS   K18     1.27e-12  tol 1e-8        distance between separated planes (feet of the common perpendicular) = arccosh g
+
+80 of 82 lines hold

@@ -1,0 +1,51 @@
+check_surprise_v1   page: Light_at_the_Hypersurface_Surprise_v1.html   seed 20261115
+PASS C1a  (z-1)/(z+1) = tanh(ln z / 2), 1e4 ratios                                               value 2.22e-16   tol 1e-14
+PASS C1b  1 - tanh^2 t = 1/cosh^2 t                                                              value 4.44e-16   tol 1e-14
+PASS C2a  R + (Y2/Y1) t^2 = 1 at normal incidence, 1e4 random admittances                        value 6.66e-16   tol 1e-12
+PASS C2b  page split() at normal incidence = step law; reverse step has -r                       value 6.66e-16   tol 1e-9
+PASS C2c  matched load: equal admittances give r = 0                                             value 0.00e+0   tol 1e-15
+PASS C3   oblique step: R + T = 1 and a1 sin^2(th1) = a2 sin^2(th2), 1e4 cases                   value 5.55e-16   tol 1e-12
+PASS C4a  critical angle from bisection = arcsin(1/z) (rad)                                      value 3.75e-16   tol 1e-9
+PASS C4b  past it |(y - i k)/(y + i k)|^2 = 1 and its phase = -2 arctan(k/y)                     value 2.22e-16   tol 1e-12
+PASS C4c  R = 4 to 1 (Y 2 to 1): critical angle 30 degrees (card B39 witness)                    value 3.55e-15   tol 1e-9
+PASS C4d  R = 1 to 4 at 50 degrees leaves at 22.5210 degrees (card B30 witness, 4 decimals)      value 1.21e-5   tol 5e-5
+PASS C5a  [falls outward] 600 frames, 514446 hits (428364 whole returns): flux residual          value 4.44e-16   tol 1e-12
+PASS C5b  [falls outward] a sin^2(theta) across each crossing, angles measured from tangents     value 4.24e-13   tol 1e-10
+PASS C5c  [falls outward] centre rays: sin(theta) = cosh(r/2) sin(psi)                           value 1.21e-13   tol 1e-10
+PASS C5d  [falls outward] every ray: rim + still inside + below threshold = 1                    value 7.89e-16   tol 1e-12
+PASS C5e  [falls outward] hit points lie on their face <X,N> = 0                                 value 1.02e-12   tol 1e-9
+PASS C5f  [falls outward] rounding drift of <X,X> = 1, <v,v> = -1, <X,v> = 0 before it is removed value 1.66e-9   tol 1e-6
+PASS C5g  [falls outward] arm stacks: relative spread of net flux over the four layers           value 8.77e-14   tol 1e-10
+PASS C5h  [falls outward] arms crossed the wall during the run (count must be > 0)               value 1.30e+1   tol 
+PASS C5a  [rises outward] 600 frames, 2861781 hits (134798 whole returns): flux residual         value 5.55e-16   tol 1e-12
+PASS C5b  [rises outward] a sin^2(theta) across each crossing, angles measured from tangents     value 1.66e-12   tol 1e-10
+PASS C5c  [rises outward] centre rays: sin(theta) = cosh(r/2) sin(psi)                           value 1.21e-13   tol 1e-10
+PASS C5d  [rises outward] every ray: rim + still inside + below threshold = 1                    value 4.08e-15   tol 1e-12
+PASS C5e  [rises outward] hit points lie on their face <X,N> = 0                                 value 1.02e-12   tol 1e-9
+PASS C5f  [rises outward] rounding drift of <X,X> = 1, <v,v> = -1, <X,v> = 0 before it is removed value 2.10e-9   tol 1e-6
+PASS C5g  [rises outward] arm stacks: relative spread of net flux over the four layers           value 9.22e-14   tol 1e-10
+PASS C5h  [rises outward] arms crossed the wall during the run (count must be > 0)               value 1.30e+1   tol 
+PASS C5i  state at one clock value is reproducible bit for bit                                   value 0.00e+0   tol 0e+0
+PASS C6a  stack by Smith addition = characteristic-matrix product, 4000 random stacks of 2 to 6 faces value 9.22e-15   tol 1e-10
+PASS C6b  net flux is the same in every layer (relative spread)                                  value 2.70e-11   tol 1e-10
+PASS C6c  zero phase: the stack telescopes to its outer pair (stack_telescopes)                  value 4.62e-15   tol 1e-12
+PASS C6d  three equal steps at zero phase give tanh(3r/2) (tanh_add')                            value 1.11e-16   tol 1e-12
+PASS C6e  front reflection plus 600 echoes = g (+) x (echo_series, echo_resum)                   value 1.05e-15   tol 1e-10
+PASS C6f  witness a = 1/2, x = +1/5 and -1/5 give 49/121 and 1/9 (one_radius_cannot_decide)      value 1.11e-16   tol 1e-15
+PASS C7a  z = 3 + 2 sqrt 2 gives Gamma^2 = 1/2                                                   value 1.11e-16   tol 1e-14
+PASS C7b  z = 5 below, z = 7 above: Gamma^2 = 4/9, 9/16                                          value 0.00e+0   tol 1e-15
+PASS C7c  a face meets the rim on the circle cos(psi) = Gamma (null directions orthogonal to N)  value 3.24e-16   tol 1e-12
+PASS C7d  at the wall that circle is at 45 degrees                                               value 7.11e-15   tol 1e-12
+PASS C8a  <N_a, N_b> = sinh(r_a/2) sinh(r_b/2) for perpendicular arms                            value 0.00e+0   tol 1e-12
+PASS C8b  feet of the common perpendicular lie on their faces, on the hyperboloid                value 5.46e-12   tol 1e-9
+PASS C8c  distance between the feet = arccosh g                                                  value 1.11e-10   tol 1e-8
+PASS C9a  B_a B_b = (boost)(rotation); rotation angle = 2 arctan(G_a G_b), 500 random pairs      value 8.49e-13   tol 1e-9
+PASS C9b  z = 5: cos, sin = 65/97, 72/97;  z = 7: 175/337, 288/337 (thomas5, thomas7)            value 3.89e-15   tol 1e-12
+PASS C10a square turns (g < 1): matrix trace gives cos(phi) = 8g^4 - 8g^2 + 1                    value 2.49e-14   tol 1e-9
+PASS C10b square runs (g > 1): matrix trace gives cosh of 4 arccosh g (relative)                 value 1.95e-14   tol 1e-9
+PASS C10c the square is a Lorentz matrix (relative)                                              value 9.21e-15   tol 1e-9
+PASS C10d equal steps at the wall: g = 1 and the 4x4 trace is 4 (the square locks)               value 1.24e-14   tol 1e-9
+PASS C11  normal stress on a plane tilted by theta = -u cos^2(theta); on the front itself = -u   value 7.65e-16   tol 1e-12
+PASS C12  1 - 2C = Gamma and T = 4C(1 - C) with C = 1/(z + 1)                                    value 4.86e-16   tol 1e-14
+PASS C13  single face: sin(theta) = cosh(h) sin(psi) and tanh(s) = tanh(h)/cos(psi), 2753 rays that meet face I first value 9.82e-13   tol 1e-10
+ALL 49 LINES HOLD
