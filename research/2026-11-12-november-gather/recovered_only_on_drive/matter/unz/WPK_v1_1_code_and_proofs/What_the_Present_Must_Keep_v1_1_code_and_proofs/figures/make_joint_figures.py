@@ -1,0 +1,112 @@
+# SCRIPT: JOINT-FIGURES-01
+# Builds the computed figures of "What the Present Must Keep". Every curve is computed from the stated object.
+import numpy as np, matplotlib, os
+matplotlib.use('Agg'); import matplotlib.pyplot as plt
+from scipy.linalg import expm
+from scipy.integrate import solve_ivp
+OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'figs')
+INK, INK2, MUTED, GRID = '#0b0b0b', '#52514e', '#8a8984', '#e4e3df'
+BLUE, ORANGE, AQUA, VIOLET, RED = '#2a78d6', '#eb6834', '#1baf7a', '#6250d6', '#c2333a'
+plt.rcParams.update({'font.family': 'DejaVu Serif', 'font.size': 9.5, 'axes.edgecolor': MUTED, 'axes.labelcolor': INK2,
+    'xtick.color': INK2, 'ytick.color': INK2, 'axes.spines.top': False, 'axes.spines.right': False, 'axes.grid': True,
+    'grid.color': GRID, 'grid.linewidth': 0.6, 'lines.linewidth': 2, 'savefig.dpi': 300, 'savefig.bbox': 'tight', 'mathtext.fontset': 'dejavuserif'})
+os.makedirs(OUT, exist_ok=True)
+def save(fig, name): fig.savefig(os.path.join(OUT, name)); plt.close(fig); print('wrote', name)
+rng = np.random.default_rng(6)
+
+# Fig 1: ground-row ladder, rungs -2,-1,0,+1 and the one-gap equality
+n = 7; d = np.sort(rng.uniform(0, 6, n)); K = rng.normal(size=(n, n)) + 1j*rng.normal(size=(n, n)); K = (K + K.conj().T)/2
+Dn = d[1:] - d[0]; k2 = np.abs(K[1:, 0])**2; S = lambda p: np.sum(k2*Dn**p)
+ks = np.linspace(-2.6, 1.6, 300)
+fig, axs = plt.subplots(1, 2, figsize=(7.4, 3.0), gridspec_kw={'width_ratios': [1.35, 1]})
+ax = axs[0]; ax.plot(ks, [np.log(S(p)) for p in ks], color=BLUE)
+for p, lab in [(-2, 'memory geometry\n$g=S_{-2}$'), (-1, 'light\n$\\alpha_0=2S_{-1}$'), (0, 'time\n$\\mathrm{Var}\\,K=S_0$'), (1, 'oscillator budget\n$F=S_{+1}$')]:
+    ax.plot([p], [np.log(S(p))], 'o', ms=7, color=ORANGE, mec='white', mew=1.4, zorder=3)
+    ax.annotate(lab, (p, np.log(S(p))), xytext=(0, 12), textcoords='offset points', ha='center', fontsize=7.8, color=INK)
+lo, hi = np.log(S(-2)), np.log(S(1)); ax.plot([-2, 1], [lo, hi], color=MUTED, lw=1, ls='--')
+ax.set_xlabel('gap power $k$'); ax.set_ylabel('$\\log S_k$'); ax.set_title('One weight read at four powers of the gap', fontsize=9, color=INK)
+ax.set_ylim(min(np.log(S(p)) for p in ks) - 0.3, max(np.log(S(p)) for p in ks) + 1.6)
+# right: alpha0 / (2 (g^2F)^(1/3)) over random spectra vs one gap
+r = []
+for _ in range(3000):
+    m = rng.integers(2, 8); dd = np.sort(rng.uniform(0, 5, m)); KK = rng.normal(size=m - 1)**2 + 1e-12
+    D_ = dd[1:] - dd[0]; D_ = D_[D_ > 1e-3]; KK = KK[:len(D_)]
+    if len(D_) == 0: continue
+    s = lambda p: np.sum(KK*D_**p); spread = np.log(D_.max()/D_.min()) if len(D_) > 1 else 0
+    r.append((spread, s(-1)/(s(-2)**(2/3)*s(1)**(1/3))))
+r = np.array(r); ax = axs[1]
+ax.scatter(r[:, 0], r[:, 1], s=3, color=BLUE, alpha=0.35, lw=0)
+ax.axhline(1, color=ORANGE, lw=1.4); ax.text(0.05, 1.015, 'single gap: equality (confined oscillator)', fontsize=7.6, color=ORANGE)
+ax.set_xlabel('spread of gaps, $\\log(\\Delta_{\\max}/\\Delta_{\\min})$'); ax.set_ylabel('$\\alpha_0\\,/\\,2(g^2F)^{1/3}$')
+ax.set_ylim(0, 1.08); ax.set_title('Light\'s bound is a ladder step', fontsize=9, color=INK)
+print('fig1: max ratio %.6f over %d spectra' % (r[:, 1].max(), len(r)))
+fig.tight_layout(); save(fig, 'jfig1_ladder.png')
+
+# Fig 2: the record's speed limit on the neutrino kept mode
+LM = 60; dd_ = np.array([l/np.sqrt(4*l*l - 1) for l in range(1, LM + 1)]); M = np.diag(dd_, 1) + np.diag(dd_, -1)
+Q = np.diag(np.r_[0.0, np.ones(LM)])
+k = 2.0; EB = k*k/3
+def run(sig):
+    f = lambda t, v: (-(1j*k*M + sig(t)*Q)) @ v
+    v0 = np.zeros(LM + 1, complex); v0[0] = 1
+    T = np.linspace(0.02, 8, 1600)
+    s = solve_ivp(f, (0.02, 8), v0, t_eval=T, method='BDF' if sig(1.0) > 0 else 'RK45', rtol=1e-10, atol=1e-12)
+    A = np.abs(s.y[0])**2; Ad = np.gradient(A, T)
+    rat = Ad**2/(4*EB*A*(1 - A)); return T, A, rat
+fig, axs = plt.subplots(1, 2, figsize=(7.4, 2.9))
+for lab, sig, col in [('free streaming', lambda t: 0.0, BLUE), ('gradual decoupling, $\\epsilon_{\\rm dec}=1$, $n=3$', lambda t: 1.0/t**4, ORANGE)]:
+    T, A, rat = run(sig); ok = (A > 1e-4) & (A < 1 - 1e-4)
+    axs[0].plot(T, A, color=col, label=lab); axs[1].plot(T[ok][3:-3], rat[ok][3:-3], color=col, lw=1.3)
+    print('fig2 %s: max ratio %.5f' % (lab, rat[ok][3:-3].max()))
+axs[0].set_xlabel('conformal time $\\epsilon$'); axs[0].set_ylabel('kept population $A=|a_0|^2$'); axs[0].legend(frameon=False, fontsize=7.4)
+axs[0].set_title('Light empties the kept sector ($k r_m=2$)', fontsize=9, color=INK)
+axs[1].axhline(1, color=RED, lw=1.2); axs[1].text(0.3, 1.03, 'the limit $\\dot A^2=4E_BA(1-A)$', fontsize=7.6, color=RED)
+axs[1].set_ylim(0, 1.15); axs[1].set_xlabel('conformal time $\\epsilon$'); axs[1].set_ylabel('$\\dot A^2/[4E_BA(1-A)]$')
+axs[1].set_title('The record moves at most as fast as $E_B$ allows', fontsize=9, color=INK)
+fig.tight_layout(); save(fig, 'jfig3_speed.png')
+
+# Fig 3: the sign wall and its three readers
+def Pc(x, y): z = x + 1j*y; w = x + 1j*y**2; return np.array([[1, w], [z, z*w]])/(1 + z*w)
+def gform(Pf, x, y, h=1e-6):
+    Dx = (Pf(x + h, y) - Pf(x - h, y))/(2*h); Dy = (Pf(x, y + h) - Pf(x, y - h))/(2*h); D = [Dx, Dy]
+    return np.array([[0.5*np.trace(a@b).real for b in D] for a in D])
+herm = lambda X: (X + X.conj().T)/2
+xs = np.linspace(-0.24, 0.24, 121); ys = np.linspace(-0.24, 0.24, 121)
+detg = np.array([[np.linalg.det(gform(Pc, x, y)) for x in xs] for y in ys])
+detR = np.array([[np.linalg.eigvalsh(gform(lambda a, b: herm(Pc(a, b)), x, y)).min() for x in xs] for y in ys])
+fig, axs = plt.subplots(1, 3, figsize=(7.6, 2.75), gridspec_kw={'width_ratios': [1.05, 1, 1]})
+ax = axs[0]; im = ax.pcolormesh(xs, ys, np.sign(detg)*np.abs(detg)**0.25, cmap='RdBu', shading='auto', vmin=-1.3, vmax=1.3)
+ax.axhline(0, color=INK, lw=1.4); ax.text(-0.23, 0.012, '$P=P^\\dagger$ only here', fontsize=7.2, color=INK)
+ax.text(-0.22, -0.2, 'det $g>0$', fontsize=7.6, color='white'); ax.text(-0.22, 0.19, 'det $g<0$', fontsize=7.6, color=INK)
+ax.set_xlabel('$x$'); ax.set_ylabel('$y$'); ax.set_title('the metric changes sign', fontsize=9, color=INK); ax.grid(False)
+yy = np.linspace(-0.24, 0.24, 400)
+ax = axs[1]; ax.plot(yy, np.log(2 + yy/10), color=AQUA, label='ledger $Z=\\log(2+y/10)$')
+ax.set_xlabel('$y$ (at $x=0$)'); ax.set_ylabel('$Z$'); ax.axvline(0, color=MUTED, lw=0.8, ls=':')
+ax.set_title('the ledger does not notice', fontsize=9, color=INK); ax.legend(frameon=False, fontsize=7.2, loc='lower right')
+ax = axs[2]
+gyy = -2*yy/(1 - yy**3)**2; gR = [np.linalg.eigvalsh(gform(lambda a, b: herm(Pc(a, b)), 0.0, y)).min() for y in yy]
+mA = [np.linalg.eigvalsh(herm(Pc(0.0, y))/(2 + y/10)).min() for y in yy]
+ax.plot(yy, gyy, color=RED, label='full source readout: $g_{yy}$')
+ax.plot(yy, gR, color=BLUE, label='real-only readout: min eig $g_R$')
+ax.plot(yy, 20*np.array(mA), color=VIOLET, lw=1.3, ls='--', label='real-only positivity (x20)')
+ax.axhline(0, color=MUTED, lw=0.8); ax.set_xlabel('$y$ (at $x=0$)'); ax.set_title('what a source can read', fontsize=9, color=INK)
+ax.set_ylim(-0.75, 0.6); ax.legend(frameon=False, fontsize=6.4, loc='lower left')
+fig.tight_layout(); save(fig, 'jfig2_wall.png')
+
+# Fig 4: the ledger is half the record (measured listening curve, 2026-11-01 runs)
+eb = np.array([0.25, 0.5, 1, 1.5, 2, 3, 4, 6]); W = np.array([0.0284, 0.0238, 0.0148, 0.0082, 0.0040, 0.0011, 0.00042, 0.0])
+lab = ['n3 0.25', 'n3 0.5', 'n3 1', 'n3 2', 'n3 4', 'n3 8', 'C', 'B', 'D']
+Gm = np.array([0.959, 0.867, 0.683, 0.431, 0.190, 0.063, 0.648, 0.317, 0.154]); Gp = np.array([0.917, 0.791, 0.607, 0.384, 0.185, 0.066, 0.547, 0.276, 0.147])
+fig, axs = plt.subplots(1, 3, figsize=(7.6, 2.8), gridspec_kw={'width_ratios': [1.1, 1.1, 0.8]})
+ax = axs[0]; ax.plot(eb[:-1]*np.sqrt(1.25), W[:-1], 'o-', color=BLUE); ax.plot([6*np.sqrt(1.25)], [0], 'o', mfc='white', mec=BLUE)
+ax.set_xscale('log'); ax.set_xticks([0.3, 1, 3, 7]); ax.set_xticklabels(['0.3', '1', '3', '7']); ax.minorticks_off()
+ax.set_xlabel('burst time $\\epsilon_b$'); ax.set_ylabel('listening weight $W$')
+ax.set_title('when the collapse listens', fontsize=9, color=INK)
+ax = axs[1]; ax.plot([0, 1], [0, 1], color=MUTED, lw=1); ax.fill_between([0, 1], [-0.05, 0.95], [0.05, 1.05], color=GRID, alpha=0.8, lw=0)
+ax.plot(Gm[:6], Gp[:6], 'o', color=BLUE, label='McCormick $n=3$'); ax.plot(Gm[6:], Gp[6:], 'D', color=ORANGE, label='Tests C, B, D')
+ax.set_xlabel('measured $G$'); ax.set_ylabel('$G$ from the ledger alone'); ax.legend(frameon=False, fontsize=7)
+ax.set_title('shape: misses early histories', fontsize=9, color=INK)
+ax = axs[2]; ax.bar([0, 1], [0.0157, 0.0306], color=[AQUA, INK2], width=0.6)
+ax.set_xticks([0, 1]); ax.set_xticklabels(['ledger\nreading', 'measured\nshift'], fontsize=8); ax.set_ylabel('instant-decoupling shift in $\\delta_c$')
+ax.set_title('size: about half', fontsize=9, color=INK); ax.grid(axis='x')
+fig.tight_layout(); save(fig, 'jfig4_ledger.png')

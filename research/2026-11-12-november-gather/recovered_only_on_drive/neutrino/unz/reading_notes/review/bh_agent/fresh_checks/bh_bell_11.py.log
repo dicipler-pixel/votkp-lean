@@ -1,0 +1,16 @@
+PASS E1 outside half is exactly thermal and blind to the pair phase off-diagonal 0.0e+00, phase change 3.5e-18
+   r=0.1: CHSH = 2.0385848200  formula 2 sqrt(1+tanh(2r)^2) = 2.0385848200
+   r=0.3: CHSH = 2.2701737708  formula 2 sqrt(1+tanh(2r)^2) = 2.2701737708
+   r=0.7: CHSH = 2.6712151100  formula 2 sqrt(1+tanh(2r)^2) = 2.6712151100
+   r=1.2: CHSH = 2.8054348865  formula 2 sqrt(1+tanh(2r)^2) = 2.8054348865
+PASS E2 CHSH above 2 at every squeezing, matching the formula 
+   omega/T_H =  0.5: squeezing r = 1.0423, CHSH = 2.785688
+   omega/T_H =    1: squeezing r = 0.7034, CHSH = 2.673161
+   omega/T_H =    2: squeezing r = 0.3860, CHSH = 2.383254
+   omega/T_H =    5: squeezing r = 0.0823, CHSH = 2.026418
+   omega/T_H =   10: squeezing r = 0.0067, CHSH = 2.000182
+PASS E3 same local record, opposite futures imbalances +0.531186, -0.531186; sin(2gt) = 0.531186
+PASS A1 anomaly flux equals the thermal flux (reproduction) flux = 1/(768*pi*M**2), T_H = 1/(8*pi*M)
+PASS A2 associator and compression defect identities max error 1.1e-14
+PASS A3 one-way books close only with the flux a x counted dx/dt = P - kappa x - a x
+ALL PASS

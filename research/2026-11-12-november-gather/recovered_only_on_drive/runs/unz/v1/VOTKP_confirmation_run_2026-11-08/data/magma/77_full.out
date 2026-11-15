@@ -1,0 +1,34 @@
+==KNOT==7_7
+==DIM== 2
+==COMP==
+==DIMC== 2
+==POLY== c_0011_0 - 1
+==POLY== c_0011_1
+==POLY== c_0011_4
+==POLY== c_0011_5
+==POLY== c_0011_6
+==POLY== c_0011_7
+==COMP==
+==DIMC== 2
+==POLY== c_0011_0 - 1
+==POLY== c_0011_1
+==POLY== c_0011_4
+==POLY== c_0011_5
+==POLY== c_0011_6
+==POLY== c_0101_0
+==COMP==
+==DIMC== 2
+==POLY== c_0011_0 - 1
+==POLY== c_0011_1
+==POLY== c_0011_4
+==POLY== c_0011_5
+==POLY== c_0011_7
+==POLY== c_0110_7
+==COMP==
+==DIMC== 2
+==POLY== c_0011_0 - 1
+==POLY== c_0011_1
+==POLY== c_0011_4
+==POLY== c_0011_5
+==POLY== c_0101_0
+==POLY== c_0110_7

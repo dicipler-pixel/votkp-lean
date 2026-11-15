@@ -1,0 +1,7 @@
+z 1.5 fixed point ball coords [ 0.102084  0.102084 -0.      ]  ball radius 0.144369  |C p - p| 2.7755575615628914e-17
+z 2 fixed point ball coords [ 0.177124  0.177124 -0.      ]  ball radius 0.250492  |C p - p| 7.850462293418876e-17
+z 3 fixed point ball coords [0.292893 0.292893 0.      ]  ball radius 0.414214  |C p - p| 1.2060109012779447e-15
+z 4 fixed point ball coords [0.392375 0.392375 0.      ]  ball radius 0.554902  |C p - p| 2.1413206232596582e-15
+z 5 fixed point ball coords [0.5 0.5 0. ]  ball radius 0.707107  |C p - p| 8.553762269273612e-15
+z 5.5 fixed point ball coords [ 0.575236  0.575236 -0.      ]  ball radius 0.813507  |C p - p| 5.4509124002454316e-14
+z 5.8 fixed point ball coords [ 0.666667  0.666667 -0.      ]  ball radius 0.942809  |C p - p| 2.116475316229082e-13

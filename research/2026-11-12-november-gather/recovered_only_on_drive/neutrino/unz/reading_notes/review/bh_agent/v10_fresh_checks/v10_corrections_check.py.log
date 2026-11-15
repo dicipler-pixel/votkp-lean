@@ -1,0 +1,13 @@
+C1 non-commuting T: g(AH,K) - g(H,AK) = +0.133333 (magnitude 2/15 = 0.133333); diagonal T, 200 random pairs: 1.4e-14  APPLY
+C1b Jacobian of the normalised flow = A(H) - 2Tr(TG)H symbolically: YES
+C2 Gaussian curvature of the eigenvalue block at three points: [1.0000000000000007, 0.9999999999999999, 0.9999999999999996]  APPLY (round, not flat)
+C3 real-qubit Bures = (1/4)(dchi^2 + sin^2 chi dphi^2), chi in [0, pi/2): max dev 2.0e-15; boundary circle length pi  APPLY
+C4 rank of P_W D_T Q_W D_T P_W: anisotropic 1, isotropic 0  APPLY (rank at most one)
+C5 rotation frame change adds oint = -6.283185 (exp = 535.5, not 1)  APPLY (claim false in general)
+C5b diagonal F: extra term = share-weighted dlog F_i: YES
+C6 ||P+||^2 = 1 + (b-c)^2/g^2 on 500 random real matrices: max dev 3.6e-14  APPLY
+C7 s, F_Q (SLD), 8K: 0.1: 4.040404, 4.040404; 0.01: 4.000400, 4.000400; 0.001: 4.000004, 4.000004; 0: 0.000000, 4.000000  APPLY (full rank only)
+C8 quartic coefficient -3*sqrt(2)/2 - 3/4 = -2.8713; at sigma3 = 0.3 exact rise 0.1420008842 vs harmonic 0.1645584412; energy 0.1420 reaches sigma3 = 0.3000, harmonic bound says 0.2787  APPLY (at most is false)
+C9 at N = 0 the symbol is zero (every vector an eigenvector); the N > 0 projector is constant, so its limit exists  APPLY
+
+SUMMARY: C1 apply, C1b apply, C2 apply, C3 apply, C4 apply, C5 apply, C5b apply, C6 apply, C7 apply, C8 apply, C9 apply

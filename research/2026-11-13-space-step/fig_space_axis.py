@@ -1,0 +1,31 @@
+# SCRIPT: FIG-SPACE-AXIS-01  (figure for the notes: elements and measured switch points on the space-step axis)
+import csv, math, matplotlib; matplotlib.use('Agg'); import matplotlib.pyplot as plt
+GE=lambda E: E/(2-E)
+rows=list(csv.DictReader(open('/home/claude/in_20261113/per_element.csv')))
+fig,ax=plt.subplots(figsize=(13,6.2),facecolor='#0b0f17'); ax.set_facecolor('#0b0f17')
+for s in ax.spines.values(): s.set_color('#55607a')
+ax.tick_params(colors='#c9d1e3'); ax.set_xlim(0.1,1.0); ax.set_ylim(-0.5,5.6)
+ax.set_xlabel(r'peel coordinate of the space step,  $\Gamma_E = E/(2-E)$,  with  $z_E = V_{room}/V_{own} = 1/(1-E)$',color='#c9d1e3',fontsize=11)
+ax.set_yticks([0,1,2,3,4,5]); ax.set_yticklabels(['elements at room\nconditions','Si, Ge melting\nSn grey / white','iodine, black P\nsqueezed','mercury\nexpanded','alkalis, hydrogen\nat their switch','xenon squeezed'],color='#c9d1e3',fontsize=9)
+for x,lab,c in [(0.5,r'$\Gamma_E=\frac{1}{2}$:  $E=\frac{2}{3}$, $z=3$, $K=2$','#ffd166'),(1/math.sqrt(2),r'wall $\Gamma_E^2=\frac{1}{2}$:  $z=3+2\sqrt{2}$','#ef476f'),(10/12,r'$z=11$','#9b8cff')]:
+    ax.axvline(x,color=c,lw=1.6,ls='--'); ax.text(x+0.006,5.33,lab,color=c,fontsize=9.5,va='center')
+for r in rows:
+    E=float(r['E']); nm=r['nonmetal']=='True'
+    ax.plot(GE(E),0,'o',ms=7,color='#ff8fa3' if nm else '#6ecbff',alpha=0.9)
+    if r['el'] in ('Nb','W','Fe','Cu','Cs','Na','B','C','Se'): ax.text(GE(E),-0.27,r['el'],color='#e8ecf5',fontsize=8,ha='center')
+def seg(y,a,b,la,lb,col='#e8ecf5',dy=0.13):
+    ax.annotate('',xy=(GE(b),y),xytext=(GE(a),y),arrowprops=dict(arrowstyle='->',color=col,lw=1.6))
+    ax.plot([GE(a)],[y],'o',color='#ff8fa3',ms=6); ax.plot([GE(b)],[y],'o',color='#6ecbff',ms=6)
+    ax.text(GE(a)+0.004,y+dy,la,color='#e8ecf5',fontsize=8,ha='left',va='center'); ax.text(GE(b)-0.004,y+dy,lb,color='#e8ecf5',fontsize=8,ha='right',va='center')
+seg(1.3,0.676,0.638,'Si solid','Si liquid',dy=0); seg(1.0,0.672,0.656,'Ge solid','Ge liquid',dy=0); seg(0.7,0.664,0.574,'Sn grey','Sn white',dy=0)
+seg(2.2,0.668,0.616,'I 9.9 GPa','I 20.8 GPa',dy=0); seg(1.85,0.700,0.595,'P ambient','P 10 GPa',dy=0)
+ax.plot([GE(0.598),GE(0.683)],[3,3],'o',color='#6ecbff',ms=6); ax.plot([GE(0.754)],[3],'o',color='#ff8fa3',ms=6); ax.plot([GE(0.828)],[3],'*',color='#ffd166',ms=14)
+ax.annotate('',xy=(GE(0.754),3),xytext=(GE(0.598),3),arrowprops=dict(arrowstyle='->',color='#e8ecf5',lw=1.2))
+for E,l in [(0.598,'liquid 25 C'),(0.683,'still metal'),(0.754,'non-metal'),(0.828,'critical point')]: ax.text(GE(E),3.17,l,color='#e8ecf5',fontsize=8,ha='center')
+for E,l in [(0.910,'Cs'),(0.913,'K'),(0.921,'Rb')]: ax.plot(GE(E),4,'*',color='#9b8cff',ms=11)
+for E in [0.916,0.923,0.949]: ax.plot(GE(E),3.75,'D',color='#9b8cff',ms=6)
+ax.text(0.826,4.0,'Cs, K, Rb at their critical points',color='#e8ecf5',fontsize=8,ha='right',va='center'); ax.text(0.826,3.75,'deuterium and hydrogen fluid turning metal',color='#e8ecf5',fontsize=8,ha='right',va='center')
+ax.plot(GE(0.46),5,'o',color='#6ecbff',ms=7); ax.text(GE(0.46),5.17,'Xe becomes metal only here',color='#e8ecf5',fontsize=8,ha='center')
+ax.plot([],[],'o',color='#6ecbff',label='metal'); ax.plot([],[],'o',color='#ff8fa3',label='non-metal'); ax.plot([],[],'*',color='#ffd166',ms=12,label='critical point'); ax.legend(loc='lower right',facecolor='#0b0f17',edgecolor='#55607a',labelcolor='#c9d1e3',fontsize=9)
+ax.set_title('The space between, written as one peel step: published densities and switch points',color='#e8ecf5',fontsize=12)
+plt.tight_layout(); plt.savefig('fig_space_axis.png',dpi=130,facecolor='#0b0f17')

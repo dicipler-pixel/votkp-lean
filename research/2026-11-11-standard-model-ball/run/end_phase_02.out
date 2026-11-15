@@ -1,0 +1,6 @@
+twin-prime chain: slope of ln(lab turn) vs rapidity = -1.0061  (prediction -1)
+   rest-frame turn per step: first 10 mean 0.8148 rad, last 10 mean 0.8145 rad, ratio 1.000  -> survives
+random reduced A: slope of ln(lab turn) vs rapidity = -0.9998  (prediction -1)
+   rest-frame turn per step: first 10 mean 1.0257 rad, last 10 mean 1.1251 rad, ratio 1.097  -> survives
+periodic i j k: slope of ln(lab turn) vs rapidity = -1.0002  (prediction -1)
+   rest-frame turn per step: first 10 mean 1.0621 rad, last 10 mean 1.1037 rad, ratio 1.039  -> survives

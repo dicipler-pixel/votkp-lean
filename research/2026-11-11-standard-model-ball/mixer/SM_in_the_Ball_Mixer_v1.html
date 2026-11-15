@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Standard Model in the Ball · Jeromie Beasley</title>
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.158.0/examples/jsm/"
+} }
+</script>
+<style>
+:root{color-scheme:dark}
+html,body{height:100%;margin:0;background:#05070b;color:#dfe7ef;font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;font-size:13.5px;overflow:hidden}
+#stage{position:fixed;inset:0;touch-action:none;cursor:grab}
+.panel{position:fixed;top:12px;left:12px;width:370px;max-height:calc(100% - 24px);overflow:auto;background:rgba(9,13,20,.9);border:1px solid #1f2a38;border-radius:8px;padding:14px;display:grid;gap:9px;box-sizing:border-box}
+@media(max-width:640px){.panel{top:auto;bottom:8px;left:8px;right:8px;width:auto;max-height:48%}}
+h1{font-size:15px;letter-spacing:.05em;text-transform:uppercase;margin:0}
+.by{font-size:10.5px;color:#7a8a9b}
+button{font:inherit;color:#dfe7ef;background:#101824;border:1px solid #1f2a38;border-radius:5px;padding:5px 8px;cursor:pointer}
+.ey{display:grid;gap:4px}.ey button{font-size:12px;text-align:left}.ey button.on{border-color:#f2c14e;color:#f2c14e}
+.tag{font-size:10.5px;color:#7a8a9b}.tag b{color:#63d3ff;font-weight:400}
+.eq{color:#f2c14e;font-size:12px;line-height:1.5;white-space:pre-line}
+.what{color:#a4b1bf;line-height:1.45;margin:0}
+.ctl label{display:grid;grid-template-columns:1fr auto;gap:2px 8px;font-size:12px;color:#a4b1bf}
+.ctl input{grid-column:1/-1;width:100%;accent-color:#63d3ff}
+.seg{display:flex;gap:4px}.seg button{flex:1;font-size:12px}.seg button.on{border-color:#63d3ff;color:#63d3ff}
+.rd{font-size:11.5px;line-height:1.6;border-top:1px solid #1f2a38;padding-top:7px;color:#a4b1bf;font-variant-numeric:tabular-nums}
+.rd div{display:flex;justify-content:space-between;gap:10px}.rd b{color:#dfe7ef;font-weight:400;text-align:right;overflow-wrap:anywhere;min-width:0}
+.key{font-size:10.5px;color:#a4b1bf;line-height:1.7}.key i{display:inline-block;width:9px;height:9px;border-radius:5px;margin:0 3px 0 8px}
+#chart{width:100%;height:120px;display:none;background:#070b12;border:1px solid #1f2a38;border-radius:5px}
+.lbl{position:fixed;pointer-events:none;font-size:11px;color:#e8f2ff;text-shadow:0 0 6px #000,0 0 3px #000;transform:translate(-50%,-130%);white-space:nowrap}
+</style>
+</head>
+<body>
+<canvas id="stage"></canvas>
+<div id="labels"></div>
+<div class="panel">
+  <div><h1>The Standard Model in the Ball</h1><div class="by">Garrett's ratio-5 tree of peel steps in the Poincaré ball, with every particle placed by its mass<br>Jeromie Beasley · 3D mixer</div></div>
+  <div class="ey" id="ey"></div>
+  <div class="tag" id="tag"></div>
+  <div class="eq" id="eq"></div>
+  <p class="what" id="what"></p>
+  <div class="ctl" id="modes"><div class="tag" style="margin-bottom:3px">What the three arms i, j, k mean</div><div class="seg"><button id="mA" class="on">A · arms are generations</button><button id="mB">B · arms are colours</button></div></div>
+  <div class="ctl" id="ctl"></div>
+  <canvas id="chart" width="680" height="240"></canvas>
+  <div class="rd" id="rd"></div>
+  <div class="key" id="key"></div>
+  <div class="by">Drag to turn, scroll or pinch to zoom.</div>
+</div>
+<script type="module">
+import * as T from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
+import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
+import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
+import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
+
+/* ============================== data ============================== */
+/* Particle masses in MeV (PDG 2024 central values; quarks: MSbar for u, d, s at 2 GeV, c, b at their own mass, t pole).
+   Neutrino masses are not measured; 0.05 eV is used only to draw them. Photon and gluon are massless. */
+const P = [
+ {n:'e',   m:0.51099895, kind:'lepton', gen:0, type:'l', c:0xbfe6ff},
+ {n:'μ',   m:105.6583755, kind:'lepton', gen:1, type:'l', c:0xbfe6ff},
+ {n:'τ',   m:1776.93, kind:'lepton', gen:2, type:'l', c:0xbfe6ff},
+ {n:'νe',  m:5e-8, kind:'lepton', gen:0, type:'n', c:0x9affc8, nu:true},
+ {n:'νμ',  m:5e-8, kind:'lepton', gen:1, type:'n', c:0x9affc8, nu:true},
+ {n:'ντ',  m:5e-8, kind:'lepton', gen:2, type:'n', c:0x9affc8, nu:true},
+ {n:'u',   m:2.16, kind:'quark', gen:0, type:'u', c:0xff9d7a},
+ {n:'c',   m:1273, kind:'quark', gen:1, type:'u', c:0xff9d7a},
+ {n:'t',   m:172570, kind:'quark', gen:2, type:'u', c:0xff9d7a},
+ {n:'d',   m:4.70, kind:'quark', gen:0, type:'d', c:0xffd27a},
+ {n:'s',   m:93.5, kind:'quark', gen:1, type:'d', c:0xffd27a},
+ {n:'b',   m:4183, kind:'quark', gen:2, type:'d', c:0xffd27a},
+ {n:'W±',  m:80369.2, kind:'boson', c:0xd6a8ff, ew:true},
+ {n:'Z',   m:91188.0, kind:'boson', c:0xd6a8ff, ew:true},
+ {n:'H',   m:125200, kind:'boson', c:0xffffff, higgs:true},
+ {n:'γ',   m:0, kind:'boson', c:0xfff3a0},
+ {n:'g',   m:0, kind:'boson', c:0x8affff, gluon:true}
+];
+/* the twin-prime chain end: per step (rapidity, lab turn of the travel direction, rest-frame turn), 80-digit run SM-END-PHASE-02 */
+const ROWS = [[2.598653876441405, 0.3671738338182192, 0.8364486591584582], [3.558871249391167, 0.13720144047726116, 1.042716155287771], [4.798587940178389, 0.0369838427456457, 0.8964995432924969], [5.974764316042137, 0.011757984713600724, 0.9865475539606943], [7.562274652025785, 0.0007413779315226654, 0.24022467061473887], [8.52008631409348, 0.0009572238220417165, 1.173511979672355], [10.092085749872519, 7.62658852535486e-05, 0.31399799796551364], [11.052051947823886, 7.61011085727818e-05, 1.1729484959940886], [12.624222825175131, 6.049198319642413e-06, 0.31335693640672385], [13.585552548562948, 6.0409056707655675e-06, 1.1721019156714252], [14.568648050708935, 2.2592190695302968e-06, 1.1571947266646276], [16.14263470394749, 1.7515868468931695e-07, 0.3057230261629157], [17.12506008835307, 1.7528001755820104e-07, 1.1576638186352122], [18.698994768176526, 1.359938717725037e-08, 0.30594464276828454], [19.659623756297187, 1.3904917456842233e-08, 1.1725792700684299], [21.23184729918621, 1.1044969919637879e-09, 0.3131441476192106], [22.193014416657665, 1.1038990035803185e-09, 1.1722173750389395], [23.176099444177144, 4.1284768657304663e-10, 1.1572042892115164], [24.255304958845272, 1.3894160975119428e-10, 1.0845851002317062], [25.8363710843343, 9.716078892739238e-12, 0.27381141933555425], [27.444657209732487, 4.002883486702235e-13, 0.05541030624153394], [28.412084378993224, 2.1978252104544342e-12, 1.167983950421594], [29.984845939689755, 1.733018513801047e-13, 0.31089930812853206], [30.94070965407954, 1.7533222204453115e-13, 1.1757702936223737], [31.923818828079632, 6.556970707061755e-14, 1.1571874525899206], [33.00364547357844, 2.2050985963429652e-14, 1.0840769531327126], [34.58475501983482, 1.540983923901502e-15, 0.27360372896795554], [35.59837165755037, 1.6601632367924254e-15, 1.1353749637143895], [36.56193606336065, 6.347131500551913e-16, 1.1706012757207724], [38.13439240369768, 5.025712955101153e-17, 0.31217489616734456], [39.15581228350802, 4.7304440778291884e-17, 1.1296181468597752], [40.120806841935476, 1.8070621042599793e-17, 1.16963415206221], [41.36015893513257, 4.891034821699917e-18, 0.9332033269439083], [42.53652331868876, 1.5549350670161634e-18, 0.998059842310132], [43.734235946442986, 4.65229647536363e-19, 0.976941783962508], [45.32308659931677, 2.8673342796393606e-20, 0.2335346413137186], [46.93169213986661, 1.1717656048530401e-21, 0.04710698638269036], [47.89801836708666, 7.574710398518257e-21, 1.1687316017269338], [48.85358272627524, 2.9133981320385346e-21, 1.1759699294710393]];
+
+/* ============================== scene ============================== */
+const RB = 4;
+const canvas = document.getElementById('stage');
+const renderer = new T.WebGLRenderer({ canvas, antialias: true }); renderer.setPixelRatio(Math.min(devicePixelRatio || 1, 2)); renderer.setSize(innerWidth, innerHeight);
+const scene = new T.Scene(); scene.background = new T.Color(0x05070b);
+const camera = new T.PerspectiveCamera(42, innerWidth/innerHeight, 0.05, 200); camera.position.set(8.6, 5.2, 10.6);
+const controls = new OrbitControls(camera, canvas); controls.enableDamping = true; controls.target.set(0, 0, 0);
+const composer = new EffectComposer(renderer); composer.addPass(new RenderPass(scene, camera));
+const bloom = new UnrealBloomPass(new T.Vector2(innerWidth, innerHeight), 0.55, 0.4, 0.55); composer.addPass(bloom); composer.addPass(new OutputPass());
+addEventListener('resize', () => { renderer.setSize(innerWidth, innerHeight); composer.setSize(innerWidth, innerHeight); camera.aspect = innerWidth/innerHeight; camera.updateProjectionMatrix(); });
+const dot = (() => { const c = document.createElement('canvas'); c.width = c.height = 64; const g = c.getContext('2d'); const gr = g.createRadialGradient(32,32,0,32,32,32);
+  gr.addColorStop(0,'rgba(255,255,255,1)'); gr.addColorStop(.3,'rgba(255,255,255,.7)'); gr.addColorStop(1,'rgba(255,255,255,0)'); g.fillStyle = gr; g.fillRect(0,0,64,64); const t = new T.CanvasTexture(c); t.colorSpace = T.SRGBColorSpace; return t; })();
+const glow = (c, s, o = 1) => { const sp = new T.Sprite(new T.SpriteMaterial({ map: dot, color: c, transparent: true, opacity: o, depthWrite: false, blending: T.AdditiveBlending })); sp.scale.set(s, s, 1); return sp; };
+const lineM = (c, o) => new T.LineBasicMaterial({ color: c, transparent: true, opacity: o, depthWrite: false });
+const circlePts = (r, n = 128, f = a => [Math.cos(a), 0, Math.sin(a)]) => { const p = []; for(let i=0;i<=n;i++){ const a = i/n*Math.PI*2, v = f(a); p.push(new T.Vector3(v[0]*r, v[1]*r, v[2]*r)); } return p; };
+
+/* the ball: arms i, j, k drawn as (x, -z, y) to match the One Tree, One Ball mixer */
+const AI = new T.Vector3(1,0,0), AJ = new T.Vector3(0,0,-1), AK = new T.Vector3(0,1,0), DIAG = AI.clone().add(AJ).add(AK).normalize();
+const ARMS = [AI, AJ, AK], AXC = [0xff8d7c, 0x63d3ff, 0xf2c14e], AXN = ['i','j','k'];
+const ball = new T.Mesh(new T.SphereGeometry(RB, 64, 40), new T.ShaderMaterial({ transparent: true, depthWrite: false, side: T.DoubleSide, blending: T.AdditiveBlending,
+  vertexShader: `varying vec3 vN; varying vec3 vV; void main(){ vec4 mv = modelViewMatrix*vec4(position,1.); vN = normalize(normalMatrix*normal); vV = normalize(-mv.xyz); gl_Position = projectionMatrix*mv; }`,
+  fragmentShader: `varying vec3 vN; varying vec3 vV; void main(){ float f = pow(1. - abs(dot(vN, vV)), 2.6); gl_FragColor = vec4(vec3(.45,.7,1.)*(0.015 + f*0.45), 1.); }` }));
+scene.add(ball);
+const levels = new T.Group(); scene.add(levels);
+for(let L=1;L<=4;L++){ const g = (5**L - 1)/(5**L + 1); levels.add(new T.Line(new T.BufferGeometry().setFromPoints(circlePts(RB*g)), lineM(0xf2c14e, 0.18))); }
+/* the half-line wall Gamma^2 = 1/2: the sphere of radius RB / sqrt 2 */
+const wall = new T.Mesh(new T.SphereGeometry(RB/Math.SQRT2, 48, 32), new T.MeshBasicMaterial({ color: 0xff5a6e, wireframe: true, transparent: true, opacity: 0.035, depthWrite: false, blending: T.AdditiveBlending })); scene.add(wall);
+
+/* Garrett's tree, depth 3, from the hyperboloid (same construction as One Tree, One Ball) */
+const rap = Math.log(5), O = [1,0,0,0];
+const bv = (v, ax, r) => { const c = Math.cosh(r), s = Math.sinh(r), o = v.slice(); o[0] = c*v[0] + s*v[ax+1]; o[ax+1] = s*v[0] + c*v[ax+1]; return o; };
+const Wb = v => { const k = RB/(1 + v[0]); return new T.Vector3(v[1]*k, v[3]*k, -v[2]*k); };
+const geoS = (p, q, S) => { const ip = -p[0]*q[0] + p[1]*q[1] + p[2]*q[2] + p[3]*q[3], d = Math.acosh(Math.max(1, -ip)), o = [];
+  for(let j=0;j<=S;j++){ const t = j/S; if(d < 1e-12){ o.push(p); continue; } const a = Math.sinh((1-t)*d)/Math.sinh(d), b = Math.sinh(t*d)/Math.sinh(d); o.push(p.map((x,i)=>a*x + b*q[i])); } return o; };
+const tree = new T.Group(); scene.add(tree);
+{ const pos = [], col = [], cc = AXC.map(c => new T.Color(c)); const pt = wd => { let v = O; for(let i=wd.length-1;i>=0;i--) v = bv(v, wd[i] >> 1, (wd[i] & 1 ? -1 : 1)*rap); return v; };
+  (function walk(wd){ if(wd.length === 3) return; const pp = pt(wd); for(let k=0;k<6;k++){ if(wd.length && (k ^ 1) === wd[wd.length-1]) continue; const w2 = wd.concat(k), g = geoS(pp, pt(w2), 6).map(Wb), c = cc[k >> 1], f = 0.55*Math.pow(0.7, wd.length);
+    for(let j=0;j<6;j++){ pos.push(g[j].x,g[j].y,g[j].z, g[j+1].x,g[j+1].y,g[j+1].z); col.push(c.r*f,c.g*f,c.b*f, c.r*f,c.g*f,c.b*f); } walk(w2); } })([]);
+  const g = new T.BufferGeometry(); g.setAttribute('position', new T.Float32BufferAttribute(pos,3)); g.setAttribute('color', new T.Float32BufferAttribute(col,3));
+  tree.add(new T.LineSegments(g, new T.LineBasicMaterial({ vertexColors: true, transparent: true, opacity: 0.8, depthWrite: false }))); }
+/* the three arms as axes */
+const axes = new T.Group(); scene.add(axes);
+ARMS.forEach((a, i) => { axes.add(new T.Line(new T.BufferGeometry().setFromPoints([a.clone().multiplyScalar(-RB), a.clone().multiplyScalar(RB)]), lineM(AXC[i], 0.35))); });
+axes.add(new T.Line(new T.BufferGeometry().setFromPoints([DIAG.clone().multiplyScalar(-RB*1.05), DIAG.clone().multiplyScalar(RB*1.05)]), lineM(0xffffff, 0.35)));
+
+/* labels in HTML, placed each frame */
+const labelHost = document.getElementById('labels'); let labels = [];
+function setLabels(list){ labelHost.innerHTML = ''; labels = list.map(([text, obj, col]) => { const d = document.createElement('div'); d.className = 'lbl'; d.textContent = text; if(col) d.style.color = col; labelHost.appendChild(d); return { d, obj }; }); }
+function placeLabels(){ const v = new T.Vector3(); for(const L of labels){ L.obj.getWorldPosition(v); v.project(camera); const vis = v.z < 1 && L.obj.visible !== false; L.d.style.display = vis ? 'block' : 'none'; L.d.style.left = ((v.x+1)/2*innerWidth) + 'px'; L.d.style.top = ((1-v.y)/2*innerHeight) + 'px'; } }
+
+/* ============================== eyes ============================== */
+const stage = new T.Group(); scene.add(stage);
+function clearStage(){ while(stage.children.length){ const c = stage.children.pop(); c.traverse(o => { if(o.geometry) o.geometry.dispose(); if(o.material && o.material.dispose) o.material.dispose(); }); } setLabels([]); }
+let mode = 'A';
+const rd = document.getElementById('rd'), ctl = document.getElementById('ctl'), chart = document.getElementById('chart');
+const readout = rows => { rd.innerHTML = rows.map(([a,b]) => `<div><span>${a}</span><b>${b}</b></div>`).join(''); };
+const fmt = (x, d = 4) => (Math.abs(x) < 1e-3 && x !== 0) ? x.toExponential(2) : x.toFixed(d);
+const etaOf = (E, m) => m <= 0 ? Infinity : (E <= m ? 0 : Math.acosh(E/m));
+const radiusOf = eta => eta === Infinity ? RB : RB*Math.tanh(eta/2);
+
+/* where each particle points, in each reading of the arms */
+function directionOf(p, anti){
+  const s = anti ? -1 : 1; const perp1 = new T.Vector3(), perp2 = new T.Vector3();
+  if(mode === 'A'){
+    if(p.kind === 'boson') return DIAG.clone().multiplyScalar(s);
+    const arm = ARMS[p.gen].clone(); perp1.copy(DIAG).sub(arm.clone().multiplyScalar(DIAG.dot(arm))).normalize(); perp2.crossVectors(arm, perp1).normalize();
+    const ang = { u: 0, d: Math.PI/2, l: Math.PI, n: 3*Math.PI/2 }[p.type];
+    return arm.add(perp1.multiplyScalar(0.28*Math.cos(ang))).add(perp2.multiplyScalar(0.28*Math.sin(ang))).normalize().multiplyScalar(s);
+  }
+  /* B: quarks along the colour arms (handled per colour by the caller), leptons and colour-neutral bosons on the (1,1,1) axis */
+  if(p.kind === 'lepton'){ perp1.set(1,0,0).sub(DIAG.clone().multiplyScalar(DIAG.x)).normalize(); perp2.crossVectors(DIAG, perp1); const ang = p.gen*2.094 + (p.type === 'n' ? 1.047 : 0);
+    return DIAG.clone().add(perp1.multiplyScalar(0.16*Math.cos(ang))).add(perp2.multiplyScalar(0.16*Math.sin(ang))).normalize().multiplyScalar(s); }
+  return DIAG.clone().multiplyScalar(s);
+}
+
+const E = {};
+/* ---------- Eye 1: the end becomes a phase ---------- */
+E.end = { title: 'The end becomes a phase', grade: 'CHECKED · run SM-END-PHASE-02 (80 digits) · reading B35',
+  eq: 'L_n = L_(n−1) · B(arm, ln 5)      L = B(p) · R\nlab turn of travel per step  α_n ∝ e^(−η_n)\nturn in the particle’s own frame  ω_n ≈ constant',
+  what: 'A spin climbs the twin-prime chain\'s word, one ln 5 boost per step, each along the next arm in its own frame (the tree is the same from every ball). Near the rim the direction it travels stops turning: the lab turn per step falls exactly as e^(−rapidity), slope −1.006. The turn in its own frame does not fall at all: it changes with each arm but averages 0.81 rad per step over the first ten steps and over the last ten alike. The amplitude dies at the wall; the phase goes on.',
+  enter(){ clearStage(); chart.style.display = 'block'; ctl.innerHTML = ''; document.getElementById('modes').style.display = 'none';
+    /* walker path in the ball from the hyperboloid, in float64 for the first 12 steps (the readouts use the 80-digit rows) */
+    const AXW = [[1,0,0],[-1,0,0],[0,1,0],[0,-1,0],[0,0,1],[0,0,-1]];
+    const N = 200000, sv = new Uint8Array(N+3); for(let i=2;i*i<=N+2;i++) if(!sv[i]) for(let j=i*i;j<=N+2;j+=i) sv[j] = 1; const TW = []; for(let a=11;a<N;a++) if(!sv[a] && !sv[a+2]) TW.push(a);
+    this.word = TW.slice(1, 41).map(a => ({1:0, 7:2, 9:4})[a % 10]);
+    const boost4 = (n, eta) => { const c = Math.cosh(eta), s = Math.sinh(eta), B = [[c, s*n[0], s*n[1], s*n[2]]]; for(let i=0;i<3;i++){ const r = [s*n[i]]; for(let j=0;j<3;j++) r.push((i===j?1:0) + (c-1)*n[i]*n[j]); B.push(r); } return B; };
+    const mul = (A, B) => A.map((r,i) => B[0].map((_,j) => r.reduce((s,_,k) => s + A[i][k]*B[k][j], 0)));
+    let L = [[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]; const pts = [[1,0,0,0]], spins = [];
+    for(let k=0;k<12;k++){ L = mul(L, boost4(AXW[this.word[k]], rap)); const p = L.map(r => r[0]); pts.push(p);
+      const q = [p[1],p[2],p[3]], pm = Math.hypot(...q), n = q.map(x => x/pm), B = boost4(n, Math.acosh(p[0]));
+      const Bi = boost4(n.map(x=>-x), Math.acosh(p[0])); const Rm = mul(Bi, L); const s0 = [0, Math.SQRT1_2, Math.SQRT1_2]; spins.push([0,1,2].map(i => Rm[i+1][1]*s0[0] + Rm[i+1][2]*s0[1] + Rm[i+1][3]*s0[2])); }
+    this.pts = pts; this.spins = spins; this.k = 0; this.t = 0;
+    const path = []; for(let k=0;k<pts.length-1;k++) geoS(pts[k], pts[k+1], 24).forEach(v => path.push(Wb(v)));
+    this.trail = new T.Line(new T.BufferGeometry().setFromPoints(path), lineM(0xf2c14e, 0.9)); stage.add(this.trail);
+    this.walker = glow(0xffffff, 0.35); stage.add(this.walker);
+    this.spinArrow = new T.ArrowHelper(new T.Vector3(0,1,0), new T.Vector3(), 0.8, 0xff6f91, 0.18, 0.1); stage.add(this.spinArrow);
+    this.travel = new T.ArrowHelper(new T.Vector3(1,0,0), new T.Vector3(), 0.9, 0x63d3ff, 0.18, 0.1); stage.add(this.travel);
+    setLabels([['spin', this.spinArrow.cone, '#ff9fb4'], ['direction of travel', this.travel.cone, '#9fe0ff']]);
+    drawChart(); camera.position.set(7.8, 4.4, 10);
+    document.getElementById('key').innerHTML = 'arms:' + AXC.map((c,i)=>`<i style="background:#${c.toString(16).padStart(6,'0')}"></i>${AXN[i]}`).join('') + '<br>gold path: the chain\'s end · rose: spin · blue: travel direction · red mesh: the half-line wall Γ² = ½';
+  },
+  step(dt){ this.t += dt/1.6; if(this.t >= 1){ this.t = 0; this.k = (this.k + 1) % 12; }
+    const k = this.k, f = this.t*this.t*(3 - 2*this.t), g = geoS(this.pts[k], this.pts[k+1], 40)[Math.round(f*40)], P = Wb(g); this.walker.position.copy(P);
+    const s = this.spins[k], sv = new T.Vector3(s[0], s[2], -s[1]).normalize(); this.spinArrow.position.copy(P); this.spinArrow.setDirection(sv);
+    const p = this.pts[k+1], tv = new T.Vector3(p[1], p[3], -p[2]).normalize(); this.travel.position.copy(P); this.travel.setDirection(tv);
+    const r = ROWS[Math.min(k, ROWS.length-1)];
+    return [['step on the chain', `${k+1} (of 40 in the run)`], ['rapidity η', fmt(r[0], 3)], ['ball radius tanh(η/2)', '1 − ' + fmt(1 - Math.tanh(r[0]/2))],
+      ['lab turn of travel this step', fmt(r[1]) + ' rad'], ['turn in its own frame this step', fmt(r[2]) + ' rad'],
+      ['at step 40', `η = ${ROWS[ROWS.length-1][0].toFixed(2)}, lab turn ${ROWS[ROWS.length-1][1].toExponential(1)}, own turn ${ROWS[ROWS.length-1][2].toFixed(2)}`],
+      ['slope ln(lab turn) / η, three ends', '−1.006 · −1.000 · −1.000'], ['own-frame turn, last 10 / first 10', '1.000 · 1.097 · 1.039']]; }
+};
+function drawChart(){ const g = chart.getContext('2d'), W = chart.width, H = chart.height; g.clearRect(0,0,W,H); g.fillStyle = '#070b12'; g.fillRect(0,0,W,H);
+  const x = e => 40 + (e - 2)/(50 - 2)*(W - 60), yL = v => 20 + (-Math.log10(v))/22*(H - 50), yO = v => H - 30 - v/1.6*(H - 60);
+  g.strokeStyle = '#1f2a38'; g.beginPath(); g.moveTo(40, H-30); g.lineTo(W-20, H-30); g.stroke();
+  g.fillStyle = '#7a8a9b'; g.font = '20px sans-serif'; g.fillText('rapidity η →', W-150, H-6);
+  g.strokeStyle = '#63d3ff'; g.lineWidth = 3; g.beginPath(); ROWS.forEach((r,i) => { if(r[1] > 0){ const X = x(r[0]), Y = yL(r[1]); i ? g.lineTo(X,Y) : g.moveTo(X,Y); } }); g.stroke();
+  g.strokeStyle = '#ff6f91'; g.beginPath(); ROWS.forEach((r,i) => { const X = x(r[0]), Y = yO(r[2]); i ? g.lineTo(X,Y) : g.moveTo(X,Y); }); g.stroke();
+  g.fillStyle = '#63d3ff'; g.fillText('lab turn of travel (log scale, falls as e^−η)', 46, 22); g.fillStyle = '#ff6f91'; g.fillText('turn in its own frame (linear, stays)', 46, 46); }
+
+/* ---------- Eye 2: every particle in the ball ---------- */
+E.particles = { title: 'Every particle in the ball', grade: 'ASSIGNMENT · positions exact for the chosen reading',
+  eq: 'radius = tanh(η/2),   η = arccosh(E / m)\nmassless: η = ∞, on the rim\nA: generation → arm     B: colour → arm',
+  what: 'Give every particle the same energy E. Its rapidity is arccosh(E/m) and its distance from the centre is tanh of half that, so heavy particles sit near the centre and light ones crowd the rim; the photon and the gluons are on the rim itself. The direction is the reading of the arms: in A the arm is the generation and generation-blind bosons sit on the (1,1,1) diagonal; in B the arm is the colour, every quark appears three times, and leptons and colour-neutral bosons sit on the diagonal. Antiparticles point the opposite way.',
+  enter(){ clearStage(); chart.style.display = 'none'; document.getElementById('modes').style.display = '';
+    ctl.innerHTML = '<label>common energy E <output id="oE"></output><input id="E" type="range" min="2.2" max="6.5" step="0.01" value="5.3"></label><label><span>show antiparticles</span><input id="anti" type="checkbox" style="grid-column:auto;width:auto"></label>';
+    this.Eel = document.getElementById('E'); this.anti = document.getElementById('anti'); this.anti.onchange = () => this.build(); this.Eel.oninput = () => this.place(); this.build(); camera.position.set(8.6, 5.2, 10.6);
+    document.getElementById('key').innerHTML = '<i style="background:#bfe6ff"></i>charged leptons<i style="background:#9affc8"></i>neutrinos<i style="background:#ff9d7a"></i>up-type<i style="background:#ffd27a"></i>down-type<br><i style="background:#d6a8ff"></i>W, Z<i style="background:#ffffff"></i>Higgs<i style="background:#fff3a0"></i>photon<i style="background:#8affff"></i>gluons';
+  },
+  build(){ clearStage(); this.items = []; const list = [];
+    const add = (p, dir, anti, tag) => { const s = glow(p.c, p.m > 0 ? 0.36 : 0.42); stage.add(s); const it = { p, dir, s }; this.items.push(it); list.push([(anti ? '‾' : '') + p.n + (tag || ''), s, '#' + p.c.toString(16).padStart(6,'0')]); };
+    for(const anti of this.anti.checked ? [false, true] : [false]) for(const p of P){
+      if(p.gluon){ if(anti) continue; /* the six charged gluons: colour differences, perpendicular to (1,1,1); the two neutral ones: zero colour vector */
+        if(mode === 'B'){ for(let a=0;a<3;a++) for(let b=0;b<3;b++) if(a !== b) add(p, ARMS[a].clone().sub(ARMS[b]).normalize(), false, ''); add(p, DIAG.clone(), false, ' ×2 neutral'); }
+        else add(p, DIAG.clone(), false, ' (8)'); continue; }
+      if(p.n === 'γ' || p.higgs){ if(anti) continue; add(p, directionOf(p, false), false); continue; }
+      if(mode === 'B' && p.kind === 'quark'){ for(let c=0;c<3;c++){ const d = ARMS[c].clone().multiplyScalar(anti ? -1 : 1); const off = new T.Vector3().crossVectors(d, DIAG).normalize().multiplyScalar(0.06*(p.gen-1)); add(p, d.add(off).normalize(), anti, ['r','g','b'][c]); } continue; }
+      add(p, directionOf(p, anti), anti);
+    }
+    /* B: the colour hexagon in the plane through the centre perpendicular to (1,1,1) */
+    if(mode === 'B'){ const hex = []; for(let a=0;a<3;a++) for(const sg of [1,-1]){ const v = ARMS[a].clone().multiplyScalar(sg); v.sub(DIAG.clone().multiplyScalar(v.dot(DIAG))).normalize().multiplyScalar(RB*0.98); hex.push(v); }
+      const order = [0,5,2,1,4,3,0]; stage.add(new T.Line(new T.BufferGeometry().setFromPoints(order.map(i => hex[i])), lineM(0x8affff, 0.5))); }
+    setLabels(list); this.place(); },
+  place(){ const E = Math.pow(10, +this.Eel.value); document.getElementById('oE').textContent = (E >= 1000 ? (E/1000).toFixed(E >= 1e4 ? 0 : 1) + ' GeV' : E.toFixed(0) + ' MeV');
+    for(const it of this.items){ const r = radiusOf(etaOf(E, it.p.m)); it.s.position.copy(it.dir).multiplyScalar(Math.min(r, RB*0.999)); } this.E = E; },
+  step(){ const E = this.E, row = n => { const p = P.find(q => q.n === n), eta = etaOf(E, p.m); return eta === Infinity ? 'rim' : (eta === 0 ? 'at rest (centre)' : `η ${eta.toFixed(2)} · r ${(Math.tanh(eta/2)).toFixed(4)}`); };
+    return [['reading of the arms', mode === 'A' ? 'A · generations' : 'B · colours'], ['top', row('t')], ['Higgs', row('H')], ['Z', row('Z')], ['b', row('b')], ['τ', row('τ')], ['μ', row('μ')], ['e', row('e')], ['ν (0.05 eV, drawing value)', row('νe')], ['photon, gluons', 'on the rim']]; }
+};
+
+/* ---------- Eye 3: the wall ---------- */
+E.wall = { title: 'The wall and the generations', grade: 'PROVED (BallJoins J4) · CHECKED (mass ratios) · known (Koide 1981, Foot)',
+  eq: 'loop of two equal perpendicular steps:  tr = 2 − 4 sinh⁴(r/2)\nwall: tr = −2 at z = 3 + 2√2,  Γ² = ½\nKoide:  cos²∠((√m_e, √m_μ, √m_τ), (1,1,1)) = 0.5000017',
+  what: 'Step out along one arm, out along another, back, back. Below the wall the loop closes as a pure turn; on the wall it is parabolic; past it the loop no longer closes even up to a turn. Garrett\'s step z = 5 is inside. Every step from one generation to the next is past it: z from 16.8 (μ→τ) to 589 (u→c). In reading A the lepton square-root mass vector sits on the 45° cone about (1,1,1), which is the wall value cos² = ½ (Koide\'s relation; the fact is old, the match to the wall line is the new reading, and a matching fraction does not make two invariants the same).',
+  enter(){ clearStage(); chart.style.display = 'none'; document.getElementById('modes').style.display = '';
+    ctl.innerHTML = '<label>loop step ratio z <output id="oz"></output><input id="z" type="range" min="1.05" max="20" step="0.01" value="5"></label>'; this.z = document.getElementById('z');
+    const hC = RB*0.99/Math.SQRT2; const geo = new T.ConeGeometry(hC, hC, 96, 1, true); geo.translate(0, -hC/2, 0); geo.rotateX(Math.PI);
+    this.cone = new T.Mesh(geo, new T.MeshBasicMaterial({ color: 0xff5a6e, wireframe: true, transparent: true, opacity: 0.12, depthWrite: false })); this.cone.quaternion.setFromUnitVectors(new T.Vector3(0,1,0), DIAG); stage.add(this.cone);
+    const me = 0.51099895, mm = 105.6583755, mt = 1776.93, kv = ARMS[0].clone().multiplyScalar(Math.sqrt(me)).add(ARMS[1].clone().multiplyScalar(Math.sqrt(mm))).add(ARMS[2].clone().multiplyScalar(Math.sqrt(mt))).normalize();
+    this.koide = new T.ArrowHelper(kv, new T.Vector3(), RB*0.98, 0xbfe6ff, 0.25, 0.12); stage.add(this.koide);
+    this.loop = new T.Line(new T.BufferGeometry(), lineM(0xffffff, 0.95)); stage.add(this.loop); this.end = glow(0xff5a6e, 0.4); stage.add(this.end);
+    setLabels([['(√m_e, √m_μ, √m_τ)', this.koide.cone, '#bfe6ff'], ['loop end', this.end, '#ff9fb4']]);
+    document.getElementById('key').innerHTML = 'red mesh sphere: the wall Γ² = ½ · red cone: 45° about (1,1,1) · white: the four-step loop from the centre · red dot: where it ends'; camera.position.set(8.4, 5.2, 10.4);
+  },
+  step(){ const z = +this.z.value; document.getElementById('oz').textContent = z.toFixed(2); const r = Math.log(z), tr = 2 - 4*Math.pow(Math.sinh(r/2), 4);
+    /* the loop B1 B2 B1^-1 B2^-1: its k-th corner is the prefix product applied to the centre (letters applied right to left) */
+    const word = [[0,1],[2,1],[0,-1],[2,-1]], corner = k => { let q = O; for(let i=k-1;i>=0;i--) q = bv(q, word[i][0], word[i][1]*r); return q; };
+    const pts = [Wb(O)]; for(let k=1;k<=4;k++) geoS(corner(k-1), corner(k), 20).slice(1).forEach(q => pts.push(Wb(q))); const w = corner(4);
+    this.loop.geometry.dispose(); this.loop.geometry = new T.BufferGeometry().setFromPoints(pts); this.end.position.copy(Wb(w));
+    this.koide.visible = this.cone.visible = (mode === 'A');
+    const kind = Math.abs(tr) < 2 - 1e-9 ? 'closes as a pure turn (elliptic)' : (Math.abs(Math.abs(tr) - 2) < 0.02 ? 'parabolic: on the wall' : 'does not close (hyperbolic)');
+    const steps = [['μ→τ', 16.8177], ['d→s', 19.8936], ['s→b', 44.738], ['c→t', 135.562], ['e→μ', 206.768], ['u→c', 589.352]];
+    return [['step ratio z', z.toFixed(3)], ['Γ² of the step', Math.pow(Math.tanh(r/2), 2).toFixed(4)], ['loop trace 2 − 4 sinh⁴(r/2)', tr.toFixed(4)], ['the loop', kind], ['the wall', 'z = 3 + 2√2 = 5.8284'], ['Garrett\'s step', 'z = 5 · inside'],
+      ['generation steps (all past the wall)', steps.map(s => s[0] + ' ' + s[1].toFixed(1)).join(' · ')], ['Koide cos² (reading A)', mode === 'A' ? '0.5000017 (wall: 0.5)' : 'not drawn in reading B']]; }
+};
+
+/* ---------- Eye 4: crossing the wall inward, the Higgs ---------- */
+E.higgs = { title: 'Crossing the wall inward: the Higgs', grade: 'RECOGNISED · Standard Model at tree level (m ∝ v)',
+  eq: 'm_W = g v / 2,   m_Z = √(g² + g′²) v / 2,   m_f = y_f v / √2\nv: 0 → 246 GeV\nmassless: 2 helicity states (a phase)   massive spin 1: 3 states',
+  what: 'Turn the Higgs field\'s value v up from zero at a fixed energy. At v = 0 every particle is massless and sits on the rim, where only the helicity phase is kept: W and Z have two states, like the photon. As v grows the W, the Z and every fermion leave the rim and move inward; the W and Z pick up a third, longitudinal state as they cross. The photon and the gluons stay on the rim with two. This is the wall crossed the other way: the phase becomes a full turn record again.',
+  enter(){ clearStage(); chart.style.display = 'none'; document.getElementById('modes').style.display = '';
+    ctl.innerHTML = '<label>Higgs value v <output id="ov"></output><input id="v" type="range" min="0" max="1" step="0.001" value="1"></label><label>common energy E <output id="oE2"></output><input id="E2" type="range" min="2.2" max="6.5" step="0.01" value="5.3"></label>';
+    this.v = document.getElementById('v'); this.E2 = document.getElementById('E2'); this.items = []; const list = [];
+    for(const p of P){ if(p.gluon || p.higgs) continue; const s = glow(p.c, 0.36); stage.add(s); const dir = mode === 'B' && p.kind === 'quark' ? ARMS[0].clone() : directionOf(p, false);
+      const states = []; const nState = p.ew ? 3 : 0; for(let i=0;i<nState;i++){ const d = glow(p.c, 0.13); stage.add(d); states.push(d); }
+      this.items.push({ p, dir, s, states }); list.push([p.n, s, '#' + p.c.toString(16).padStart(6,'0')]); }
+    setLabels(list); camera.position.set(8.6, 5.2, 10.6);
+    document.getElementById('key').innerHTML = 'small dots around W and Z: their spin states (two on the rim, three inside)';
+  },
+  step(dt, t){ const v = +this.v.value, E = Math.pow(10, +this.E2.value); document.getElementById('ov').textContent = (246*v).toFixed(1) + ' GeV'; document.getElementById('oE2').textContent = E >= 1000 ? (E/1000).toFixed(1) + ' GeV' : E.toFixed(0) + ' MeV';
+    let out = [];
+    for(const it of this.items){ const m = it.p.m*v, r = Math.min(radiusOf(etaOf(E, m)), RB*0.999); it.s.position.copy(it.dir).multiplyScalar(r);
+      if(it.states.length){ const onRim = m === 0 || r > RB*0.995; const n = onRim ? 2 : 3; const a = new T.Vector3().crossVectors(it.dir, new T.Vector3(0,1,0.3)).normalize(), b = new T.Vector3().crossVectors(it.dir, a);
+        it.states.forEach((d, i) => { d.visible = i < n; const ang = t*1.5 + i*2*Math.PI/n; d.position.copy(it.s.position).add(a.clone().multiplyScalar(0.22*Math.cos(ang))).add(b.clone().multiplyScalar(0.22*Math.sin(ang))); }); out.push([it.p.n + ' spin states', n === 2 ? '2 (helicity ±1, on the rim)' : '3 (inside)']); } }
+    return [['v', (246*v).toFixed(1) + ' GeV'], ['m_W', (80.369*v).toFixed(2) + ' GeV'], ['m_Z', (91.188*v).toFixed(2) + ' GeV'], ['m_top', (172.57*v).toFixed(2) + ' GeV'], ...out, ['photon', 'stays on the rim, 2 states']]; }
+};
+
+/* ============================== stage ============================== */
+const order = ['end', 'particles', 'wall', 'higgs']; let cur = null;
+const ey = document.getElementById('ey');
+order.forEach(k => { const b = document.createElement('button'); b.textContent = E[k].title; b.onclick = () => go(k); b.dataset.k = k; ey.appendChild(b); });
+function go(k){ cur = k; const e = E[k]; document.querySelectorAll('#ey button').forEach(b => b.classList.toggle('on', b.dataset.k === k));
+  document.getElementById('tag').innerHTML = '<b>' + e.grade + '</b>'; document.getElementById('eq').textContent = e.eq; document.getElementById('what').textContent = e.what; e.enter(); }
+const setMode = m => { mode = m; document.getElementById('mA').classList.toggle('on', m === 'A'); document.getElementById('mB').classList.toggle('on', m === 'B'); if(cur && cur !== 'end') E[cur].enter(); };
+document.getElementById('mA').onclick = () => setMode('A'); document.getElementById('mB').onclick = () => setMode('B');
+go(location.hash === '#particles' ? 'particles' : location.hash === '#wall' ? 'wall' : location.hash === '#higgs' ? 'higgs' : 'end');
+const clock = new T.Clock(); let t = 0;
+window.__sm = { go, setMode };
+(function frame(){ requestAnimationFrame(frame); const dt = Math.min(clock.getDelta(), 0.05); t += dt; controls.update(); tree.rotation.y += 0; readout(E[cur].step(dt, t)); placeLabels(); composer.render(); })();
+</script>
+</body>
+</html>

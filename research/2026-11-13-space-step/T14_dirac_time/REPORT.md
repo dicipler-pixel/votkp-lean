@@ -1,0 +1,35 @@
+# T14 REPORT: does Dirac Time already hold what the loop found? (13 Nov 2026)
+Read in full: his eleven 6 November statements (chat record section 3, 38 lines); all 4,622 lines of dirac_v31.txt (v3.1); the five 12-13 November reports (loop2 43 lines, T5 45, T8 59, T11 58, T13 71); plus the v3.1 change ledger, the Q16 / 17.1 parts of the independent review, its second pass, and the package README. Not read in full: INDEPENDENT_REVIEW_v31.md (only lines 1-27, 140-165) and INDEPENDENT_CHECK_v30.md (not opened). No computation done. Everything is in NOTES.md (sections A-E).
+
+## Results first
+1. Dirac Time holds the speed limit exactly, in his form. Section 10.5: "the kept population A = |v0|^2 obeys dot A^2 <= 4 E_B A(1-A) [T ...]"; section 9.4 gives the same shape for the offset, equality exactly when the motion is along the geodesic direction; section 16.4 the chirality version. T13 showed G = 1-2A turns this into (dG/dt)^2 <= 4 g (1-G^2). By hand, the offset form with C = (1+G)/2 gives the same inequality; that dictionary is untested for the peel.
+2. It holds the Smith/peel coordinate and the rim, and one place where K appears. Section 17.1: Gamma_S = (z-1)/(z+1) = tanh(eps/2), "|Gamma_S| < 1 exactly when Re z > 0"; on the PT-symmetric chain "the band-averaged Petermann factor equals 2 exactly" on the line E(0)E(pi) = u^2; the analytic derivation is marked open. That is the exit line of T5/loop2, but without G0^2 + G1^2 = 1/2, without K as a function of G, and without the loop as one k-point.
+3. It holds the Jordan block only as a control, not as the wall. Section 10.3: J = bI + mu N0: "the scalar analytic trace ledger therefore forgets the nilpotent parameter ... same scalar spectral ledger =/=> same dynamical history", with transient amplification. It does not say this is the wall of a loop or an exceptional point (the words Jordan and exceptional are not in the paper).
+4. It holds the architecture for "turn costs nothing, run costs something", but not the loop. Sections 12.5, 18, 25.3, 26: orientation and arrow are separate; "a physical arrow requires an additional asymmetric dynamical/resource condition"; "the arrow is the physical cost of making some of those histories effectively unrecoverable". The open item (T10, section 25.3) is exactly "a model in which orientation exists without dissipation, coupling to a declared environment transfers the record irreversibly". The loop (turn inside, run past the wall) is a candidate; the paper does not say so.
+5. It holds a turn as loop holonomy without scalar motion (section 5.2: eigenvalues fixed, holonomy -1, "half the unit flux lies inside the loop"), but only for unitary Hermitian-projector loops.
+6. Not in the paper at all: past-wall contraction e^(-lambda) from two perpendicular steps; K = 1/(1-2G^2); the order defect "always a run"; the gap 2/(z^n+1); the full-chain wall at 2k/pi; Snell / total reflection; the pair partner G G' = 1/2; the distinguishable-directions cap. Section 10.5 holds the neutrino setting (A = -ik mu, D = -kappa(I-P), E_B = k^2/3, kept-population bound, matched pair) but not the two-moment exceptional point.
+
+## Against his 6 November words
+"hypersurface", "branch cut", conductivity, vacuum, superfluidity: none of these words is in the paper. Closest hits: S8 (which branch is selected): section 16.4 lists three sources of the sign of a branch (fluctuation; boundary/topological, "fixes the sign of a record, not of a branch"; residual memory, [H]); and section 18 "the metric limits how fast a record can change and never which way it goes". S10/S11 (the vector decides the direction that may be decay): section 5.1 "The scalar magnitude forgets the direction phi. The projector retains it."; the paper says the metric does NOT give direction. S4: section 6.2 "the empty spacing between levels is part of the structure [T]" (spacing of levels, not of lattice sites). S1: peeling appears only as a boundary control (11.3) and as a Smith-coordinate step (17.1); nothing on how a hypersurface peels itself. S2, S3, S5, S6, S9 ("vectors create space and volume"): not in this paper.
+
+## Tensions (quoted in NOTES.md C, not resolved)
+- "does not come back" (loop) against section 16.2: "There is no contradiction between decay, transfer, and regeneration when they refer to different record maps."
+- Phase as clock against "time only past the wall": section 23.3 "the unwrapped phase is strictly monotone ... a real clock coordinate"; section 9.2 "A silent readout does not imply that the collective progression stopped."
+- Non-normality as history: section 14.1 "not automatically ... transient amplification"; App F "Non-normality implies history/entropy - FALSE without dynamics."
+No number or inequality in the paper differs from a 12-13 November number.
+
+## What in Dirac Time is most worth computing for the loop W(z) (NOTES.md section D, 14 items)
+1. Section 17.1 + 6.2: Riesz projector and contour trace-log of W(z) through G^2 = 1/2, against the gap-weighted tangent form (diverges at the exceptional point); the paper's own template for "the ledger survives a metric wall".
+2. Section 2.4 + Theorem P5 + 10.3: closure test and return criterion for a readout of the attracting direction; sup_n ||W^n|| against K; says where memory is needed (the Jordan block) and how soon a hidden difference returns.
+3. Section 12.6 + Theorem P6 + 23.2 (and App E, 12.1): the exact cost of an arrow. Needs a declared bath; would compare the relaxation factor c(Delta) and the fading factor e^(-nu u) with e^(-lambda) per pass.
+Also strong: Theorem P3 (is "time counting only past the wall" an order or only a path ledger?), sections 9.1-9.2 (the two eigenphases sum to 0, so one progression; where the phase readout goes silent), and 5.2/11.4 (theta(z) as enclosed curvature, read mod 2 pi; theta = 2 pi at the wall).
+
+## Conventions to watch (section E)
+- Projector: Dirac Time's is orthogonal (P = P^dag = P^2); the loop's is the oblique eigenidempotent with Tr P^dag P = K. Theorem P1 is not proved for oblique ones.
+- K means the amplitude memory kernel in Dirac Time and the Petermann factor in the loop work. G is a share in (0,1) in section 10.5 and the peel coordinate in (-1,1) elsewhere (G = 1-2A). r is kappa2/kappa1 in Dirac Time, ln z in the loop. Theta, F, rho each have two or three meanings.
+- "Wall" means three things: Alexander roots (13), |Gamma_S| = 1 (17.1), G^2 = 1/2 (loop; inside the disk).
+- Section 18's F and Theta, and bundling the three bounds under F, are Claude's proposed readings (text tag "[framework; proposed]"; the change ledger says "Claude's version"). Do not cite them as his.
+- Scope warning: T13's "defect always a run" is for damped neutrino pairs (tr W >= 2); the loop pair of perpendicular Hermitian boosts has tr W = 2-4q^2, a turn inside the wall.
+
+Untested: the dictionary C = (1+G)/2 for the peel speed limit; all "what computing it would mean" lines in section D.
+Files: /home/claude/harness/workers/T14_dirac_time_read/NOTES.md, REPORT.md, STATE.md

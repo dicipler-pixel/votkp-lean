@@ -1,0 +1,21 @@
+charge slots                                   got 7021                   printed 7021         OK
+numeric thresholds                             got 5847                   printed 5847         OK
+adjacent peels                                 got 5714                   printed 5714         OK
+three-threshold windows                        got 5584                   printed 5584         OK
+grades E / S / T                               got 311 / 919 / 4617       printed 311 / 919 / 4617 OK
+complete ladders                               got 103                    printed 103          OK
+partial ladders                                got 7                      printed 7            OK
+elements with none                             got 8                      printed 8            OK
+peels with both margins                        got 5691                   printed 5691         OK
+E-to-E pairs                                   got 156                    printed 156          OK
+elements holding an E-to-E pair                got 60                     printed 60           OK
+exact inversions failing                       got 0                      printed 0            OK
+exact compositions failing                     got 0                      printed 0            OK
+steps past the half line                       got 8                      printed 8            OK
+  of them at a closed-core opening             got 8                      printed 8            OK
+closed-core openings (adjacent, true index)    got 433                    printed 675          DIFFERS
+   crossings: Li q=0, Be q=1, B q=2, C q=3, Na q=0, K q=0, Rb q=0, Cs q=0
+Li: Gamma across 3 -> 2 electrons              got 0.8669235              printed 0.8669235    OK
+O:  Gamma across 3 -> 2 electrons              got 0.6851797              printed 0.6851797    OK
+count set {2,10,18,28,36,46,54,60,68,78,86}, N = Z-(q+1): adjacent steps in set 675 (printed 675); crossing 8 (printed 8)
+compressed across gaps: steps in set 682 (printed 694); nonadjacent pairs admitted 23 (printed 23)

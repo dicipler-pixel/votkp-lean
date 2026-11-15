@@ -1,0 +1,9 @@
+NO, m1 = 0: m2 = 8.654 meV, m3 = 50.34 meV, z = m3/m2 = 5.8165 +- 0.0787; wall 5.8284; off by -0.15 sigma -> survives
+   same in splittings: dm31/dm21 = 33.83 against (1+sqrt2)^4 = 33.97
+   NO, m1 =  0.0 meV: m3/m2 = 5.8165 (-0.15 sigma from the wall), m2/m1 = inf
+   NO, m1 =  0.5 meV: m3/m2 = 5.8071 (-0.27 sigma from the wall), m2/m1 = 17.34
+   NO, m1 =  1.0 meV: m3/m2 = 5.7792 (-0.63 sigma from the wall), m2/m1 = 8.71
+   NO, m1 =  2.0 meV: m3/m2 = 5.6716 (-1.99 sigma from the wall), m2/m1 = 4.44
+   NO, m1 =  5.0 meV: m3/m2 = 5.0612 (-9.74 sigma from the wall), m2/m1 = 2.00
+   NO, m1 = 10.0 meV: m3/m2 = 3.8807 (-24.73 sigma from the wall), m2/m1 = 1.32
+IO, m3 = 0: m2/m1 = 1.01526 (deep inside the wall; the two heavy states are almost one)

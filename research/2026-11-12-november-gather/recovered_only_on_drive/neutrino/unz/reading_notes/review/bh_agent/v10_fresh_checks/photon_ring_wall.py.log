@@ -1,0 +1,4 @@
+photon orbit r = 3*M ; generator eigenvalues +- L/(9*M**2) (affine), real: unstable wall
+Lyapunov rate (coordinate time) = sqrt(3)/(9*M) ; orbital rate = sqrt(3)/(9*M)
+echo demagnification per half orbit gamma = pi -> factor 0.0432139 ; delay = 3*sqrt(3)*pi*M
+PASS: reproduces gamma = pi and delay 3 sqrt(3) pi M

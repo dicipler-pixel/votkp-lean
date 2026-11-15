@@ -1,0 +1,7 @@
+z 1.5 plane fixed point radius 0.14436891  closed form rho 0.14436891  diff 2.7755575615628914e-17
+z 2 plane fixed point radius 0.25049165  closed form rho 0.25049165  diff 5.551115123125783e-17
+z 3 plane fixed point radius 0.41421356  closed form rho 0.41421356  diff 7.216449660063518e-16
+z 4 plane fixed point radius 0.55490174  closed form rho 0.55490174  diff 1.1102230246251565e-16
+z 5 plane fixed point radius 0.70710678  closed form rho 0.70710678  diff 2.1094237467877974e-15
+z 5.5 plane fixed point radius 0.81350661  closed form rho 0.81350661  diff 5.551115123125783e-15
+z 5.8 plane fixed point radius 0.94280904  closed form rho 0.94280904  diff 5.329070518200751e-15

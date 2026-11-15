@@ -1,0 +1,115 @@
+{
+  "cancellation": {
+    "net_gamma": 0.0,
+    "endpoint_distance": 0.0,
+    "traversed_hyperbolic_length": 1.6
+  },
+  "packaged_csv": {
+    "sha256": "792b70c9f825623b87e3e4ec009a2be8ff4dc3fed6ab8c73624a405f1fbbb3f8",
+    "stages": 5847,
+    "adjacent_pairs": 5714,
+    "nonincreasing_pairs": [],
+    "windows_at_most_10_steps": 56191,
+    "max_endpoint_error": 5.551115123125783e-16,
+    "pair_grades": {
+      "MT": 39,
+      "TT": 4363,
+      "MM": 156,
+      "MS": 116,
+      "SS": 678,
+      "SM": 54,
+      "ST": 187,
+      "TS": 118,
+      "TM": 3
+    }
+  },
+  "lifts": {
+    "same_reverse_gamma_start": 0.5370495669980353,
+    "same_reverse_gamma_end": 0.197375320224904,
+    "constant_projector_length": 0.0,
+    "rotating_projector_length": 0.27999999999999997,
+    "arbitrary_rotation_multiplier_allowed": true,
+    "max_metric_error": 1.1087575302326513e-10
+  },
+  "equal_weight_multigap": {
+    "gaps": [
+      1.0,
+      4.0
+    ],
+    "weights": [
+      0.8,
+      0.8
+    ],
+    "L": 0.5,
+    "leading_action_T1": 0.2,
+    "bound_T1": 0.2,
+    "slack": 0.0
+  },
+  "unequal_weight_multigap": {
+    "gaps": [
+      1.0,
+      3.0
+    ],
+    "weights": [
+      0.8,
+      0.9230769230769231
+    ],
+    "L": 0.5,
+    "leading_action_T1": 0.2196923076923077,
+    "bound_T1": 0.2,
+    "slack": 0.019692307692307676
+  },
+  "rank2_counterexample": {
+    "spectrum": [
+      0.0,
+      0.5,
+      3.0,
+      6.0
+    ],
+    "g": 0.09,
+    "zero_temperature_rotation_friction": 0.0
+  },
+  "bath_ODE": {
+    "beta": 5.0,
+    "tau": 0.5,
+    "precession": 1,
+    "initial_state": "instantaneous Gibbs",
+    "delta_F": 0.0,
+    "runs": [
+      {
+        "T": 20.0,
+        "exact_ODE_Wex": 0.00994927749708943,
+        "leading_Wex": 0.009908977194039402,
+        "relative_error": 0.004067049732869492
+      },
+      {
+        "T": 80.0,
+        "exact_ODE_Wex": 0.0024798459123212095,
+        "leading_Wex": 0.0024772442985098505,
+        "relative_error": 0.001050204783163286
+      },
+      {
+        "T": 320.0,
+        "exact_ODE_Wex": 0.0006194750047109858,
+        "leading_Wex": 0.0006193110746274626,
+        "relative_error": 0.00026469748441329484
+      }
+    ]
+  },
+  "polar_refraction": {
+    "k": 3.0,
+    "y0": 0.6,
+    "incidence_degrees": 40,
+    "C_squared_convention": 0.2963907177664226,
+    "p_x_unsquared": 0.5444177787016352,
+    "predicted_yturn": 0.3714266687624696,
+    "integrated_yturn": 0.37142666876236574,
+    "spectral_gap": 2.0
+  },
+  "checks": {
+    "total": 5725,
+    "passed": 5725,
+    "max_algebra_error": 5.4969917506753063e-14
+  },
+  "assumptions": "Assumptions A1-A7 are specified before test blocks in source. All operator tests synthetic."
+}

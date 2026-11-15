@@ -1,0 +1,15 @@
+twin-prime chain (40 steps): rapidity after 40 steps 48.854  helicity cosine start 0.70711 end 0.90421928
+   mean |dh| first 10 = 0.3308   last 10 = 0.355   ratio = 1.073   -> KILL FIRED
+   travel direction still turning: mean step angle first 10 = 0.0555 rad, last 10 = 1.226e-17 rad
+random reduced word A: rapidity after 40 steps 42.407  helicity cosine start 0.70711 end 0.34178285
+   mean |dh| first 10 = 0.4866   last 10 = 0.3805   ratio = 0.7821   -> KILL FIRED
+   travel direction still turning: mean step angle first 10 = 0.06813 rad, last 10 = 2.237e-15 rad
+random reduced word B: rapidity after 40 steps 44.586  helicity cosine start -0.70711 end -0.86470639
+   mean |dh| first 10 = 0.4859   last 10 = 0.3977   ratio = 0.8184   -> KILL FIRED
+   travel direction still turning: mean step angle first 10 = 0.05384 rad, last 10 = 1.185e-15 rad
+periodic i j k i j k ...: rapidity after 40 steps 42.628  helicity cosine start 0.0 end 0.31133654
+   mean |dh| first 10 = 0.427   last 10 = 0.4082   ratio = 0.9558   -> KILL FIRED
+   travel direction still turning: mean step angle first 10 = 0.05752 rad, last 10 = 2.993e-15 rad
+OPPOSITE: one arm only (i i i ...): rapidity after 40 steps 64.378  helicity cosine start 0.0 end 0.0
+   mean |dh| first 10 = 0.0   last 10 = 0.0   ratio = 0   -> survives
+   travel direction still turning: mean step angle first 10 = 0.0 rad, last 10 = 0.0 rad

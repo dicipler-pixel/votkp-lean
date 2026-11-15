@@ -1,0 +1,77 @@
+=== scripts/check_gravity.py
+        {
+          "offset": 1e-05,
+          "soft_eigenvalue": -2.2010462524422666e-07,
+          "h": 0.001,
+          "cap_excess": 2.5579538487363607e-13,
+          "predicted_excess": 2.2010462524422668e-13
+        },
+        {
+          "offset": 0.001,
+          "soft_eigenvalue": -2.2028327558666714e-05,
+          "h": 0.001,
+          "cap_excess": 2.206723692665946e-11,
+          "predicted_excess": 2.2028327558666713e-11
+        },
+        {
+          "offset": 0.01,
+          "soft_eigenvalue": -0.00022190778965815216,
+          "h": 0.001,
+          "cap_excess": 2.219717742946159e-10,
+          "predicted_excess": 2.2190778965815214e-10
+        }
+      ]
+    }
+  }
+}
+EXIT 0
+=== checks/independent_gravity_check.py
+g_xx = 1/((y - 1)**2*(y**2 + y + 1)**2)
+g_xy = 0
+g_yy = -2*y/((y - 1)**2*(y**2 + y + 1)**2)
+omega = -(2*y - 1)/((y - 1)**2*(y**2 + y + 1)**2)
+det proxy = -(2*y + 1)**2/(4*(y - 1)**4*(y**2 + y + 1)**4)
+overlap excess = h**2*(h + 2*y)/((y - 1)*(h + y - 1)*(y**2 + y + 1)*(h**2 + 2*h*y + h + y**2 + y + 1))
+positive-g finite-step excess = 25000/7980973
+ALL SYMBOLIC AND RATIONAL ASSERTIONS PASSED
+EXIT 0
+=== checks/gravity_full_recovery_stress_test.py
+y=-0.100  ΔZ=-0.00501254182  D=1.0293588e-07  D/(y²/98000)=1.00877162
+x=-0.2: g_xx=0.924556213; dZ/dx=0
+x=+0.0: g_xx=1; dZ/dx=0
+x=+0.2: g_xx=0.924556213; dZ/dx=0
+
+Flat density full-curve vs empirical RAR Eq 4 (matched deep scale):
+a_N/a0    a_screen/a0    a_RAR/a0    log10(screen/RAR)
+  0.0001           0.01    0.01005008    -0.0021697
+    0.01            0.1     0.1050833    -0.0215336
+     0.1      0.3197384     0.3688586    -0.0620651
+       1       1.356625      1.581977    -0.0667402
+      10       10.40401        10.442    -0.0015830
+     100       100.4105      100.0045    +0.0017593
+   10000       10000.41         10000    +0.0000179
+Largest |log deviation| on 801-point log grid: q=0.37153523, delta=-0.07953860 dex; model/RAR=0.83264791
+High-a additive screen residual = 4.9348022e-11 m/s² if a0=1.2e-10 m/s²; T_D=8.0042759e-31 K
+q=100: (a-aN)/a0=0.41048498; limit=π²/24=0.41123352
+q=1000: (a-aN)/a0=0.41115839; limit=π²/24=0.41123352
+q=10000: (a-aN)/a0=0.41122600; limit=π²/24=0.41123352
+
+Finite equally-spaced midpoint screen modes: f_m/f_continuum
+T/TD=0.1 m=10:0.987341 m=100:0.999873 m=1000:0.999999
+T/TD=0.01 m=10:0.206226 m=100:0.987335 m=1000:0.999873
+T/TD=0.001 m=10:5.8627e-19 m=100:0.206226 m=1000:0.987335
+PASS: exact chart-line identity, relative-entropy expansion, full screen/RAR comparison, finite-spectrum limit
+EXIT 0
+=== checks/edition6_probe_checks.py
+{
+  "edition": "gravity-6",
+  "selected_log_derivative": 0.335686515307021,
+  "predicted_source_response": 0.33568651538349364,
+  "derivative_abs_error": 7.647266153654186e-11,
+  "tomography_frobenius_error": 1.0613986371840278e-16,
+  "silent_probe": 6.03710423334364e-18,
+  "oblique_selected_log_derivative_exact": "-1",
+  "oblique_eigenvalue_derivative_exact": "-2",
+  "status": "PASS"
+}
+EXIT 0

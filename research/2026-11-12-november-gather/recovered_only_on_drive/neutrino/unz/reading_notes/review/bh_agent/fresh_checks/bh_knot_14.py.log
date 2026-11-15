@@ -1,0 +1,12 @@
+PASS K1 formula checks: unknot, Jones N=2, trefoil vs Kontsevich-Zagier, h-stability unknot 3.1e-51; Jones 3_1 5.0e-51, 8_19 3.8e-51 (formula gives 8_19 in variable 1/q); |J|/|F| trefoil 3.8e-30; h-stability 6.7e-17
+   N= 100: |J_N(8_19)|/N^1.5 = 2.061937   (2pi/N) log|J_N| = 0.479495   arg = +0.373410 pi
+   N= 200: |J_N(8_19)|/N^1.5 = 2.914559   (2pi/N) log|J_N| = 0.283284   arg = -0.058535 pi
+   N= 400: |J_N(8_19)|/N^1.5 = 0.085823   (2pi/N) log|J_N| = 0.102600   arg = -0.403829 pi
+   N= 800: |J_N(8_19)|/N^1.5 = 0.085744   (2pi/N) log|J_N| = 0.059459   arg = +0.922825 pi
+PASS K2 8_19 grows like N^{3/2}, no volume 0.085823 -> 0.085744
+PASS K3 mirror conjugates 8_19; invariant not real J = 8104.6272-1507.4055j, mirror = 8104.6272+1507.4055j
+PASS K4 Alexander, genus, Moser surgeries Delta = t**6 - t**5 + t**3 - t + 1, genus 3; Sigma(2,3,5), Sigma(2,3,7), Sigma(3,4,11), Sigma(3,4,13)
+   period test: max|c(N)-c(N+P)| = {8: 2.828468, 12: 1.975873, 16: 0.000104}
+   constants by N mod 16 (N = 640..655): [0.0858, 0.9713, 1.1181, 1.3073, 2.0616, 1.6707, 2.6926, 1.8859, 2.9142, 1.8858, 2.6925, 1.6706, 2.0615, 1.3072, 1.118, 0.9714]
+PASS K5 the N^{3/2} constant of 8_19 has period 16 in N range 0.0858 to 2.9142
+ALL PASS

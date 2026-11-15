@@ -1,0 +1,34 @@
+/workspace/scratch/4ea79d7a2197/review/bh_agent/fresh_checks/bh_isco_10.py:58: IntegrationWarning: The algorithm does not converge.  Roundoff error is detected
+  in the extrapolation table.  It is assumed that the requested tolerance
+  cannot be achieved, and that the returned result (if full_output = 1) is 
+  the best which can be obtained.
+  I,_=quad(g,rp,ra,limit=2000,epsabs=1e-12,epsrel=1e-12)
+circular orbits: L^2 = r**2/(r - 3)
+V''/2 on the circular family = (r - 6)/(r**3*(r - 3))
+zeros of V''/2: [6]
+PASS I1 simple sign change of V'' at r0 = 6 
+   r0=12.00: V''/2 = +3.858025e-04  eigenvalues = 0.00000+0.01964j, 0.00000-0.01964j
+   r0= 7.00: V''/2 = +7.288630e-04  eigenvalues = 0.00000+0.02700j, 0.00000-0.02700j
+   r0= 6.10: V''/2 = +1.421179e-04  eigenvalues = 0.00000+0.01192j, 0.00000-0.01192j
+   r0= 5.90: V''/2 = -1.678982e-04  eigenvalues = 0.01296, -0.01296
+   r0= 5.00: V''/2 = -4.000000e-03  eigenvalues = 0.06325, -0.06325
+   r0= 4.00: V''/2 = -3.125000e-02  eigenvalues = 0.17678, -0.17678
+PASS I2 Jordan block at the ISCO [[0.0, 1.0], [-0.0, 0.0]]
+   side outside d=0.01: gap/sqrt(d) = 0.078241  eigenvalues imaginary
+   side inside  d=0.01: gap/sqrt(d) = 0.078896  eigenvalues real
+   side outside d=0.001: gap/sqrt(d) = 0.078535  eigenvalues imaginary
+   side inside  d=0.001: gap/sqrt(d) = 0.078600  eigenvalues real
+   side outside d=0.0001: gap/sqrt(d) = 0.078564  eigenvalues imaginary
+   side inside  d=0.0001: gap/sqrt(d) = 0.078571  eigenvalues real
+   side outside d=1e-05: gap/sqrt(d) = 0.078567  eigenvalues imaginary
+   side inside  d=1e-05: gap/sqrt(d) = 0.078568  eigenvalues real
+PASS I3 square-root law, imaginary outside and real inside outside -> 0.078567, inside -> 0.078568
+unstable circular orbit r_u = 4.697224, E_s^2 = 0.912543520, lam = 0.086060, Omega = 0.163414, Omega/lam = 1.898829
+   dE=0.001: periapsis 5.126872, apoapsis 13.1100, azimuth per radial period 16.032207  (whirls ~ 2.552)
+   dE=0.0001: periapsis 4.818807, apoapsis 13.4378, azimuth per radial period 20.332523  (whirls ~ 3.236)
+   dE=1e-05: periapsis 4.734487, apoapsis 13.4704, azimuth per radial period 24.692552  (whirls ~ 3.930)
+   dE=1e-06: periapsis 4.708895, apoapsis 13.4737, azimuth per radial period 29.063022  (whirls ~ 4.626)
+   dE=1e-07: periapsis 4.700904, apoapsis 13.4740, azimuth per radial period 33.435010  (whirls ~ 5.321)
+   dE=1e-08: periapsis 4.698387, apoapsis 13.4741, azimuth per radial period 37.807195  (whirls ~ 6.017)
+PASS I4 whirl law: slope of azimuth vs ln(1/dE) equals Omega/lam slope 1.898773 vs Omega/lam 1.898829
+ALL PASS

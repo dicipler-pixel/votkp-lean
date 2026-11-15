@@ -1,0 +1,18 @@
+(a) first n with d(o,c^n o)<eps, z=5 (float64, renormalised): {0.1: (83, 0.0397864419684689), 0.01: (1345, 0.002435421888247559), 0.001: (7594, 0.0005375964299296018)}   R6-23: n=83 (d=3.979e-2), 1345 (2.435e-3), 7594 (5.376e-4)
+(b) pairs 10 path length ln(a/11) 2.7895 displacement 1.682 ratio 0.603
+(b) pairs 50 path length ln(a/11) 5.0209 displacement 3.0129 ratio 0.6001
+(b) pairs 200 path length ln(a/11) 6.7889 displacement 4.0316 ratio 0.5939
+(b) pairs 1221 path length ln(a/11) 9.1149 displacement 5.3717 ratio 0.5893
+(c) triple (5, 5, 5) distinct 4687 min dist depth5 0.425792 smallest ln z 1.609438 falls
+(c) triple (3, 5, 7) distinct 4687 min dist depth5 0.023565 smallest ln z 1.098612 falls
+(c) triple (2, 3, 5) distinct 4675 min dist depth5 0.040885 smallest ln z 0.693147 falls
+(c) triple (5, 7, 11) distinct 4687 min dist depth5 1.609438 smallest ln z 1.609438 holds
+(c) triple (7, 7, 7) distinct 4687 min dist depth5 1.94591 smallest ln z 1.94591 holds
+(d) z 2 words 4686 a00 divisible by z: 2640  (R6-11: z=2: 2640, z=4: 762, z=3,6: 0)
+(d) z 3 words 4686 a00 divisible by z: 0  (R6-11: z=2: 2640, z=4: 762, z=3,6: 0)
+(d) z 4 words 4686 a00 divisible by z: 762  (R6-11: z=2: 2640, z=4: 762, z=3,6: 0)
+(d) z 6 words 4686 a00 divisible by z: 0  (R6-11: z=2: 2640, z=4: 762, z=3,6: 0)
+(e) mu 0 tr 4 z=e^kappa 3.732051 Gamma^2 0.333333
+(e) mu 1 tr 3 z=e^kappa 2.618034 Gamma^2 0.2
+(e) mu 1.5 tr 2.5 z=e^kappa 2.0 Gamma^2 0.111111
+(e) 2+sqrt3, (3+sqrt5)/2, 2: 3.732050807568877 2.618033988749895

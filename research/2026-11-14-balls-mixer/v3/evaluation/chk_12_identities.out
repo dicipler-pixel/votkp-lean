@@ -1,0 +1,20 @@
+J2 gam((k+1)/k)=1/(2k+1): True
+B99 shell terms (2n-1)/(n^2+(n-1)^2) n=2..6: [Fraction(3, 5), Fraction(5, 13), Fraction(7, 25), Fraction(9, 41), Fraction(11, 61)] = gam(n^2/(n-1)^2): True
+oplus(2/3,2/3)= 12/13 gam(25)= 12/13 ; gam_mul z=3,7: True
+garrett_pair: gam5^2 4/9 triple (65, 72, 97)
+thomas_half_angle: True True ; schottky_ratio: True
+tan(theta/2)=G^2 integer triple z=5 (a,b,c)/gcd: (1040, 1152, 1552)
+z 5 triple (65, 72, 97) sq check True
+z 7 triple (175, 288, 337) sq check True
+z 2 triple (40, 9, 41) sq check True
+z 3 triple (15, 8, 17) sq check True
+z 4 triple (272, 225, 353) sq check True
+commutator 2x2 trace z=2,3,5,6,7 exact 2-(z-1)^4/(4z^2): [(2, Fraction(31, 16)), (3, Fraction(14, 9)), (5, Fraction(-14, 25)), (6, Fraction(-337, 144)), (7, Fraction(-226, 49))]
+z=4 T=47/64 ? 47/64  z=8 T=-1889/256 ? -1889/256  z=16: -48577/1024
+YM floors 8g^2/(1+g^2): g=2/3 32/13 g=3/4 72/25
+particles: radius^2=Gamma(E/m) at E/m=3: 1/2 ; cosh eta =3 -> tanh^2(eta/2) 0.5
+Koide mod 4: any primitive integer triple with sum x^2 = 4 sum_{i<j} x_i x_j (|x|<=60): []
+norm-5 quaternion count (a^2+b^2+c^2+d^2=5): 48  six with a odd>0, others even: 6
+level shells Gamma_L (z=5) exact: [Fraction(2, 3), Fraction(12, 13), Fraction(62, 63), Fraction(312, 313)] ; balls to level 4: 1+6*(5**4-1)//4 = 937 ; per level 1,6,30,150,750: [1, 6, 30, 150, 750]
+Smith bridge page: r=(hi-lo)/(hi+lo) vs 3/4(G-1/3) max diff: 3.3306690738754696e-16
+page bridge Gamma(ln2)=1/3: 1/3

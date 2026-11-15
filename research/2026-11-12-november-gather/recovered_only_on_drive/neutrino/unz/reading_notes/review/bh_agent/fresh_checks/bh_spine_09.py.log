@@ -1,0 +1,8 @@
+PASS S1 C - C^2 = BB^dagger and Tr(C^2 - C) = -Tr BB^dagger max error 6.7e-16
+PASS S2 K(0) = BB^dagger = PH^2P - (PHP)^2 = PHQHP max error 1.4e-14
+PASS S3 A = P_W D_T P_W; P D_T^2 P - A^2 = P D_T Q D_T P, rank one, kinetic-positive error 4.9e-15, ranks {np.int64(1)}, min eigenvalue -1.4e-16
+PASS S4 G*JG = I - S*S = 4(WV)* Herm L (WV), ||S|| <= 1 error 2.4e-15, max ||S|| 0.9011
+PASS S5 Q = g + (i/2) Omega >= 0, |Omega_12| <= 2 sqrt(det g) min slack 1.02e-03
+PASS S6 exterior signal independent of hidden rate and state; P(X+QYQ)P = PXP spread 9.5e-15
+PASS S7 retention: escaped fraction 1, mean residence (1+a/b)/kappa; b=0 keeps a/(kappa+a) mean = (a + b)/(b*kappa), retained(b=0) = E0*a/(a + kappa)
+ALL PASS

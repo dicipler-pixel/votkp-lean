@@ -1,0 +1,6 @@
+                     i j k: twist |theta| 0.6237383551298893  lap-20 turn 0.6237383551298893  |diff| 3.33e-27  spread laps 16-20 1.8e-22  climb per lap 3.1659147  -> survives
+                       i j: twist |theta| 0.0  lap-20 turn 3.105475715766612e-20  |diff| 3.11e-20  spread laps 16-20 4.33e-16  climb per lap 2.3858215  -> survives
+                  i j -i k: twist |theta| 1.706527579141324  lap-20 turn 1.706527579141324  |diff| 3.0e-28  spread laps 16-20 9.22e-23  climb per lap 3.3300751  -> survives
+                     i i j: twist |theta| 0.0  lap-20 turn 3.484297262603964e-32  |diff| 3.48e-32  spread laps 16-20 1.65e-25  climb per lap 3.842685  -> survives
+               i -j k -i j: twist |theta| 2.87103350585107  lap-20 turn 2.87103350585107  |diff| 2.54e-28  spread laps 16-20 1.65e-22  climb per lap 3.3672724  -> survives
+  twin chain, first 6 arms: twist |theta| 0.8625571466292449  lap-20 turn 0.8625571466292449  |diff| 9.56e-59  spread laps 16-20 7.95e-47  climb per lap 6.9990303  -> survives

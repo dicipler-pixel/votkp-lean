@@ -1,0 +1,9 @@
+P1 photon ring, nonlinear orbit: growth per radian 0.999983 (exact 1) -> per half orbit e^pi, echo factor 0.043216
+   opposite, charged hole Q = 0.5 M: growth per radian 0.968095 (formula 0.968119), echo factor 0.047770  PASS
+   half-orbit delay pi/Omega = 16.324194 M against 3 sqrt3 pi M = 16.324194 M
+P2 sine guard: Gram identity max dev 2.8e-14; two-level max(|Omega| - bound) = 4.7e-15 (median slack 0.0e+00: equality), three-level -7.8e-05 (median slack 0.37: strict)  PASS
+P3 fermion offset is a Smith coordinate: symbolic yes; partial trace over 6 frequencies x 7 phases max dev 2.8e-16; Gamma = 0 only at omega = 0  PASS
+P4 compression D(X) = PXP: Hermitian P idempotent 7.8e-16, self-adjoint 0.0e+00; oblique Riesz P (norm 1.44) idempotent 0.0e+00, NOT self-adjoint (0.94)  PASS
+P5 tip and tail, 2000 trials each: max DK ratio 0.904 (must be <= 1); tight cluster: median vector turn 73.72 deg vs subspace 0.272 deg; wide split (opposite): vector turn 2.653 deg  PASS
+
+SUMMARY: P1 pass, P2 pass, P3 pass, P4 pass, P5 pass

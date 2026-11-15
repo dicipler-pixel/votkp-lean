@@ -1,0 +1,92 @@
+[
+  {
+    "rerun": "bridge_checks_rerun.txt",
+    "saved_output": "code/wb_checks/src/bridge_checks_out.txt",
+    "byte_identical": true
+  },
+  {
+    "rerun": "fixed_rerun.txt",
+    "saved_output": "code/fixed_out.txt",
+    "byte_identical": true
+  },
+  {
+    "rerun": "history_rerun.txt",
+    "saved_output": "code/wb_checks/wb_steve_07_out.txt",
+    "byte_identical": true
+  },
+  {
+    "rerun": "identities_rerun.txt",
+    "saved_output": "code/main/identities_out.txt",
+    "byte_identical": true
+  },
+  {
+    "rerun": "k0_consistency_rerun.txt",
+    "saved_output": "code/csl_checks/k0_consistency_out.txt",
+    "byte_identical": true
+  },
+  {
+    "rerun": "k2_rate_vs_direction_rerun.txt",
+    "saved_output": "code/csl_checks/k2_rate_vs_direction_out.txt",
+    "byte_identical": true
+  },
+  {
+    "rerun": "k3_ep_crossing_rerun.txt",
+    "saved_output": "code/csl_checks/k3_ep_crossing_out.txt",
+    "byte_identical": true
+  },
+  {
+    "rerun": "k5_shape_and_table3_rerun.txt",
+    "saved_output": "code/csl_checks/k5_shape_and_table3_out.txt",
+    "byte_identical": false
+  },
+  {
+    "rerun": "k6_diffusion_leader_rerun.txt",
+    "saved_output": "code/csl_checks/k6_diffusion_leader_out.txt",
+    "byte_identical": true
+  },
+  {
+    "rerun": "k7_split_rate_connection_energy_rerun.txt",
+    "saved_output": "code/csl_checks/k7_split_rate_connection_energy_out.txt",
+    "byte_identical": true
+  },
+  {
+    "rerun": "lone_pass_check_rerun.txt",
+    "saved_output": "code/main/lone_pass_check_out.txt",
+    "byte_identical": true
+  },
+  {
+    "rerun": "osl_a_bound_on_streaming_rerun.txt",
+    "saved_output": null,
+    "byte_identical": false
+  },
+  {
+    "rerun": "osl_c_speed_contest_eos_rerun.txt",
+    "saved_output": null,
+    "byte_identical": false
+  },
+  {
+    "rerun": "osl_d2_one_parameter_scan_rerun.txt",
+    "saved_output": null,
+    "byte_identical": false
+  },
+  {
+    "rerun": "osl_d_G_curve_tests_rerun.txt",
+    "saved_output": null,
+    "byte_identical": false
+  },
+  {
+    "rerun": "osl_f_rapidity_identity_rerun.txt",
+    "saved_output": null,
+    "byte_identical": false
+  },
+  {
+    "rerun": "steve_checks_rerun.txt",
+    "saved_output": null,
+    "byte_identical": false
+  },
+  {
+    "rerun": "weight_between_core_checks_rerun.txt",
+    "saved_output": "code/wb_checks/src/weight_between_core_checks_out.txt",
+    "byte_identical": false
+  }
+]

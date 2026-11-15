@@ -1,0 +1,17 @@
+   eta=1e-01: gap=9.165e-01  |B+|=1.569e+00  |B-|=1.032e+00  |B+|*gap=1.437879  B++B-=0.560000-0.050000j  arg(B+/B-)=+0.957974 pi
+   eta=1e-02: gap=2.835e-01  |B+|=4.200e+00  |B-|=3.664e+00  |B+|*gap=1.190892  B++B-=0.560000-0.050000j  arg(B+/B-)=+0.986201 pi
+   eta=1e-03: gap=8.947e-02  |B+|=1.264e+01  |B-|=1.211e+01  |B+|*gap=1.131171  B++B-=0.560000-0.050000j  arg(B+/B-)=+0.995620 pi
+   eta=1e-04: gap=2.828e-02  |B+|=3.939e+01  |B-|=3.885e+01  |B+|*gap=1.114009  B++B-=0.560000-0.050000j  arg(B+/B-)=+0.998614 pi
+   eta=1e-05: gap=8.944e-03  |B+|=1.240e+02  |B-|=1.234e+02  |B+|*gap=1.108750  B++B-=0.560000-0.050000j  arg(B+/B-)=+0.999562 pi
+   eta=1e-06: gap=2.828e-03  |B+|=3.914e+02  |B-|=3.909e+02  |B+|*gap=1.107104  B++B-=0.560000-0.050000j  arg(B+/B-)=+0.999861 pi
+PASS K1 single excitation factors grow like |coupling|/gap |B+|*gap -> 1.107104 against |u.N v| = 1.106345; |B+| = 3.914e+02 at eta=1e-6
+PASS K2 B+ + B- = u.v (pair projector) and opposite phases u.v = 0.560000-0.050000j; arg(B+/B-) = +0.999861 pi
+   nilpotent check: |N0^2| = 0.0e+00, u.N0.v = -0.240000+1.080000j
+   eta=1e-02: max|h| = 1.058211   max|single mode term| = 4.200e+00
+   eta=1e-04: max|h| = 1.040295   max|single mode term| = 3.939e+01
+   eta=1e-06: max|h| = 1.040120   max|single mode term| = 3.914e+02
+   two-mode sum vs Jordan: 5.07e-04 at eta=1e-4, 5.06e-06 at eta=1e-6 (gap ratio 10)
+PASS K3 pair sum bounded through the EP; Jordan form t e^{-i w0 t} at the EP max|h| = 1.0582; exact-vs-Jordan 1.8e-15; modes(eta=1e-6)-vs-Jordan 5.1e-06
+PASS K4 contour integral equals the waveform, at and beside the EP max rel err 2.8e-13
+PASS K5 one loop exchanges the pair, two restore it; ledger single-valued after 1 turn |w-w_-| = 0.0e+00, after 2 |w-w_+| = 0.0e+00; ledger change 0.0e+00, 0.0e+00
+ALL PASS

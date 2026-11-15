@@ -1,0 +1,12 @@
+1. Gradient normalization under g(V,W)=Tr(VW)/2
+df[V]=2.0, g(F,V)=1.0, g(2F,V)=2.0
+
+2. Gauge-closed lower-band Berry loop
+open chain=-1.57079656903, closure=(-1-1.83697019872103e-16j), closed=1.57079608456, curvature integral=1.57079632679
+
+3. Interleaved-spectrum operator-norm counterexample to Eq. 10.5
+delta=1, lhs=0.000121676050679, rhs=9.99999999625e-05, ratio=1.21676050725
+
+4. Derived neutrino kept-population bound (random pointwise checks)
+2,000 contractive-flow states passed; maximal fraction of simple bound=0.43050057
+These are numerical probes plus explicit counterexamples, not a proof-system run.

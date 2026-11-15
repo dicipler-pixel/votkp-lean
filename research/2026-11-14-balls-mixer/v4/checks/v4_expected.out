@@ -1,0 +1,14 @@
+N1 worst 2.3817e-31 reversal 6.6843e-41 not hit
+N2 worst 2.82115033124925e-41 not hit
+N3 cases 360 mismatches 0 not hit
+/usr/local/lib/python3.13/site-packages/plink/gui.py:33: UserWarning: Plink failed to import tkinter, GUI will not be available
+  warnings.warn('Plink failed to import tkinter, GUI will not be available')
+Traceback (most recent call last):
+  File "/home/claude/balls_mixer/v4check/v4_expected.py", line 41, in <module>
+    L = spherogram.Link(braid_closure=W); sg = L.signature(); al = L.alexander_polynomial(); det = L.determinant()
+                                               ~~~~~~~~~~~^^
+  File "/usr/local/lib/python3.13/site-packages/decorator/__init__.py", line 247, in fun
+    return caller(func, *(extras + args), **kw)
+  File "/usr/local/lib/python3.13/site-packages/spherogram/sage_helper.py", line 37, in _sage_method
+    raise SageNotAvailable('Sorry, this feature requires using SnapPy inside Sage.')
+spherogram.sage_helper.SageNotAvailable: Sorry, this feature requires using SnapPy inside Sage.

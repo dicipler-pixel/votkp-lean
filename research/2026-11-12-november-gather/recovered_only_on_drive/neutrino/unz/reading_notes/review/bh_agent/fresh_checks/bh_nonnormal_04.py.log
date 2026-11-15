@@ -1,0 +1,4 @@
+both anisotropic             ||[A,A^T]||_F = 0.231425
+T isotropic                  ||[A,A^T]||_F = 0.000000
+W isotropic                  ||[A,A^T]||_F = 0.000000
+at the wall, joint point     ||[A,A^T]||_F = 0.332623

@@ -1,0 +1,3 @@
+[(10, True, np.float64(1.0000247035815985e-06)), (30, True, np.float64(1.0000882949598684e-06)), (50, True, np.float64(1.000071985085395e-06)), (70, True, np.float64(1.00008148023158e-06)), (85, True, np.float64(1.000062107939507e-06))]
+PASS all oblique geodesics reach the fold
+

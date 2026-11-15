@@ -1,0 +1,3 @@
+FalseControls/doubling_order_three.lean:3:57: error: Tactic `decide` proved that the proposition
+  ∀ (r : Fin 9), 8 * ↑r % 9 = ↑r % 9
+is false

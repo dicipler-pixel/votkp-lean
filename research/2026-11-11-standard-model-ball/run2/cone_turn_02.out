@@ -1,0 +1,3 @@
+turn axes counted: 23100;  within 1e-10 of cos^2 = 1/2: 0
+within 0.005 of 0.40, 0.45, 0.50, 0.55, 0.60: [276, 0, 24, 120, 0] ; on an arm (1/3): 4828  on the diagonal (1): 96  perpendicular to it (0): 312
+-> KILL FIRED
