@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Two Balls, Linked — Jeromie Beasley</title>
+<style>
+html,body{height:100%;margin:0;background:#05070b;color:#dfe7ef;font-family:"Inter Tight",system-ui,-apple-system,sans-serif;font-size:12.5px;overflow:hidden}
+#bar{position:fixed;top:0;left:0;right:0;height:38px;display:flex;flex-wrap:nowrap;gap:6px;align-items:center;padding:0 10px;background:rgba(9,13,20,.96);border-bottom:1px solid #1f2a38;z-index:10;overflow-x:auto;white-space:nowrap}
+#bar b{font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:12px;margin-right:6px}#bar span{color:#8a9aab;margin-left:8px}
+button{font:inherit;color:#dfe7ef;background:#101824;border:1px solid #1f2a38;border-radius:5px;padding:4px 9px;cursor:pointer}button[aria-pressed=true]{border-color:#f2c14e;color:#f2c14e}
+iframe{position:fixed;top:39px;left:0;width:100%;height:calc(100% - 39px);border:0;background:#05070b}
+#note{position:fixed;bottom:6px;left:50%;transform:translateX(-50%);font-size:10.5px;color:#55657a;z-index:9;pointer-events:none}
+</style></head><body>
+<!-- SCRIPT: LINKED-SHELL-V1 — Two Balls, Linked. Jeromie Beasley. 15 Nov 2026. AI-assisted.
+     Holds the Mixer v2 ball page and the white (Surprise) ball page whole, and keeps them linked: one clock, one camera, the same steps,
+     the same kick and placement. Ball type: either page alone, or both drawn over each other as one picture. Zoom: one ball or three. -->
+<div id="bar"><b>Two balls, linked</b>
+<span>Ball</span><button data-ball="mixer" aria-pressed="true">Mixer ball</button><button data-ball="white" aria-pressed="false">White ball</button><button data-ball="both" aria-pressed="false">Both as one</button>
+<span>Zoom</span><button data-zoom="1" aria-pressed="false">One ball</button><button data-zoom="3" aria-pressed="true">Three balls</button>
+<span>Kick</span><button data-kick="0" aria-pressed="true">A</button><button data-kick="1" aria-pressed="false">B</button><button data-kick="2" aria-pressed="false">C</button>
+<button id="pp">Pause</button><span id="tau">τ 0.00</span></div>
+<iframe id="f_mixer" title="Mixer ball"></iframe><iframe id="f_white" title="White ball"></iframe>
+<div id="note">one clock · one camera · the same steps and kick in both</div>
+<script>
+const PAGES = { mixer:/*MIXER_PAGE*/null, white:/*WHITE_PAGE*/null };
+const F = { mixer:document.getElementById('f_mixer'), white:document.getElementById('f_white') };
+F.mixer.srcdoc = PAGES.mixer; F.white.srcdoc = PAGES.white;
+const W = k => F[k].contentWindow, ready = k => { try { const w = W(k); return !!(w && w.__tb && (k === 'mixer' ? w.__lh && w.__S3 : w.__LHS)); } catch(e){ return false; } };
+const clock = k => k === 'mixer' ? W(k).__lh.CLOCK : W(k).__LHS.CLOCK, view = k => (k === 'mixer' ? W(k).__S3 : W(k).__LHS.S3).view;
+let mode = 'mixer';
+function layout(){ const both = mode === 'both';
+  F.mixer.style.display = (mode === 'white') ? 'none' : 'block'; F.white.style.display = (mode === 'mixer') ? 'none' : 'block';
+  F.white.style.mixBlendMode = both ? 'screen' : 'normal'; F.white.style.pointerEvents = both ? 'none' : 'auto'; F.white.style.zIndex = both ? 2 : 1;
+  if(ready('white')) W('white').document.body.classList.toggle('linked', both);
+  document.querySelectorAll('#bar button[data-ball]').forEach(b => b.setAttribute('aria-pressed', b.dataset.ball === mode)); }
+document.querySelectorAll('#bar button[data-ball]').forEach(b => b.addEventListener('click', () => { const from = master(); mode = b.dataset.ball; layout(); handTo(from); }));
+const master = () => mode === 'white' ? 'white' : 'mixer', follower = () => mode === 'white' ? 'mixer' : 'white';
+/* carry the state of one page to the other: clock, play, speed, steps, camera, kick, placement, zoom */
+function link(from, to){ if(!ready(from) || !ready(to)) return; const a = clock(from), b = clock(to); b.tau = a.tau; b.playing = a.playing; b.speed = a.speed; if('anim' in b && 'anim' in a) b.anim = a.anim;
+  const wf = W(from), wt = W(to);
+  if(from === 'mixer'){ const P = wf.__lh.PP, Q = wt.__LHS.P; Q.zbar[0] = P.zI; Q.zbar[1] = P.zJ; Q.zbar[2] = P.zK; Q.amp = P.drive === 'hold' ? 0 : P.A; Q.sigma = P.orient; }
+  else { const Q = wf.__LHS.P, P = wt.__lh.PP; P.zI = Q.zbar[0]; P.zJ = Q.zbar[1]; P.zK = Q.zbar[2]; P.A = Q.amp; P.orient = Q.sigma; if(P.drive === 'sweep') P.drive = 'breathe'; }
+  const va = view(from), vb = view(to); vb.yaw = va.yaw; vb.pitch = va.pitch; vb.dist = va.dist; vb.ty = va.ty; vb.auto = false;
+  const xa = wf.__tb.X, xb = wt.__tb.X; xb.src = xa.src; xb.eps = xa.eps; if(xb.on !== xa.on) wt.__tb.setOn(xa.on); }
+function handTo(prev){ const now = master(); if(prev !== now) link(prev, now); }
+document.querySelectorAll('#bar button[data-zoom]').forEach(b => b.addEventListener('click', () => { for(const k of ['mixer','white']) if(ready(k)) W(k).__tb.setOn(b.dataset.zoom === '3'); }));
+document.querySelectorAll('#bar button[data-kick]').forEach(b => b.addEventListener('click', () => { for(const k of ['mixer','white']) if(ready(k)){ const w = W(k); w.__tb.X.src = +b.dataset.kick; w.document.querySelectorAll('#tb button[data-kick]').forEach(q => q.setAttribute('aria-pressed', q.dataset.kick === b.dataset.kick)); } }));
+document.getElementById('pp').addEventListener('click', () => { const m = master(); if(ready(m)){ const c = clock(m); c.playing = !c.playing; } });
+function tick(){ const m = master(), f = follower(); if(ready(m)){ if(mode === 'both' || true) link(m, f); const c = clock(m), x = W(m).__tb.X;
+    document.getElementById('tau').textContent = 'τ ' + c.tau.toFixed(2); document.getElementById('pp').textContent = c.playing ? 'Pause' : 'Play';
+    document.querySelectorAll('#bar button[data-zoom]').forEach(b => b.setAttribute('aria-pressed', (b.dataset.zoom === '3') === x.on)); document.querySelectorAll('#bar button[data-kick]').forEach(b => b.setAttribute('aria-pressed', +b.dataset.kick === x.src));
+    if(mode === 'both' && ready('white') && !W('white').document.body.classList.contains('linked')) W('white').document.body.classList.add('linked'); }
+  requestAnimationFrame(tick); }
+layout(); requestAnimationFrame(tick);
+window.__link = { get mode(){ return mode; }, set(m){ const from = master(); mode = m; layout(); handTo(from); }, ready, W, clock, view };
+</script></body></html>
