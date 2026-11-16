@@ -1,0 +1,122 @@
+{
+ "perfect | admittance falls outward": [
+  {
+   "name": "Mercury",
+   "mean": 0.106,
+   "min": 0.0349,
+   "max": 0.144,
+   "open": 0.0493
+  },
+  {
+   "name": "Venus",
+   "mean": 0.000674,
+   "min": 0.0000265,
+   "max": 0.00129,
+   "open": 0.00424
+  },
+  {
+   "name": "Earth",
+   "mean": 0.0000109,
+   "min": 0,
+   "max": 0.0000607,
+   "open": 0.000459
+  },
+  {
+   "name": "Mars",
+   "mean": 3.6e-7,
+   "min": 0,
+   "max": 0.00000216,
+   "open": 0.0000508
+  }
+ ],
+ "perfect | admittance rises outward": [
+  {
+   "name": "Mercury",
+   "mean": 0.0581,
+   "min": 0.0452,
+   "max": 0.0682,
+   "open": 0.0493
+  },
+  {
+   "name": "Venus",
+   "mean": 0.00459,
+   "min": 0.00225,
+   "max": 0.0128,
+   "open": 0.00424
+  },
+  {
+   "name": "Earth",
+   "mean": 0.000467,
+   "min": 0.0000924,
+   "max": 0.0019,
+   "open": 0.000459
+  },
+  {
+   "name": "Mars",
+   "mean": 0.0000621,
+   "min": 7.19e-11,
+   "max": 0.000305,
+   "open": 0.0000508
+  }
+ ],
+ "measured steps | admittance falls outward": [
+  {
+   "name": "Mercury",
+   "mean": 2.93e-7,
+   "min": 0,
+   "max": 0.00000172,
+   "open": 0.0000481
+  },
+  {
+   "name": "Venus",
+   "mean": 1.79e-7,
+   "min": 0,
+   "max": 0.00000107,
+   "open": 0.0000138
+  },
+  {
+   "name": "Earth",
+   "mean": 6.18e-8,
+   "min": 0,
+   "max": 3.71e-7,
+   "open": 0.00000721
+  },
+  {
+   "name": "Mars",
+   "mean": 1.43e-9,
+   "min": 0,
+   "max": 8.56e-9,
+   "open": 0.0000031
+  }
+ ],
+ "measured steps | admittance rises outward": [
+  {
+   "name": "Mercury",
+   "mean": 0.0000597,
+   "min": 4.3e-11,
+   "max": 0.000295,
+   "open": 0.0000481
+  },
+  {
+   "name": "Venus",
+   "mean": 0.0000238,
+   "min": 7.08e-11,
+   "max": 0.000123,
+   "open": 0.0000138
+  },
+  {
+   "name": "Earth",
+   "mean": 0.0000149,
+   "min": 7.17e-11,
+   "max": 0.0000787,
+   "open": 0.00000721
+  },
+  {
+   "name": "Mars",
+   "mean": 0.00000758,
+   "min": 0,
+   "max": 0.000041,
+   "open": 0.0000031
+  }
+ ]
+}
