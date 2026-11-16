@@ -1,0 +1,23 @@
+{
+ "_about": "SF-RAW-OUTSIDE-V4. Raw data on what the Sun's bubble meets, exactly as fetched 16 Nov 2026. Jeromie Beasley. AI-assisted.",
+ "sources": {
+  "flow": "McComas et al. 2015, Local Interstellar Medium: Six Years of Direct Sampling by IBEX, ApJS 220, 22 (abstract 'working values'). https://ui.adsabs.harvard.edu/abs/2015ApJS..220...22M/abstract",
+  "field": "Local interstellar magnetic field determined from the IBEX ribbon, ApJL 818 (2016, date inferred from the OSTI record). https://www.osti.gov/biblio/1326081",
+  "ribbon": "Ribbon centre about (221, 39) ecliptic, adopted in the ApJS 215, 13 paper; Funsten et al. 2013 value garbled in the fetched text. https://iopscience.iop.org/article/10.1088/0067-0049/215/1/13",
+  "voyager_crossings": "Richardson et al. 2022, Observations of the Outer Heliosphere, Heliosheath, and Interstellar Medium, Space Sci Rev 218, 35. https://link.springer.com/10.1007/s11214-022-00899-y",
+  "voyager_now": "Heavens-Above Solar Escape page, fetched 16 Nov 2026 12:25 UT (the page shows no date). https://www.heavens-above.com/SolarEscape.aspx"
+ },
+ "flow": { "speed_km_s": 25.4, "inflow_ecl_lon_deg": 75.7, "inflow_ecl_lat_deg": -5.1, "inflow_note": "the direction the interstellar flow moves toward as seen from the Sun; it arrives from the opposite direction (255.7, +5.1), the nose", "temp_K": 7500, "where": "about 1000 AU upstream" },
+ "field": { "strength_uG": 2.93, "strength_err_uG": 0.08, "ecl_lon_deg": 227.28, "ecl_lat_deg": 34.62, "dir_err_deg": [0.69, 0.45], "ribbon_offset_deg": 8.3 },
+ "ribbon_centre_ecl_deg": [221, 39],
+ "beyond_heliopause": { "V1_field_nT": 0.4, "V2_field_peak_nT": 0.7, "V2_barrier_nT": [0.40, 0.06], "V1_density_cm3": [0.06, 0.08], "V2_density_cm3": 0.04,
+   "density_20AU_out_cm3": 0.12, "temp_K": [30000, 50000], "LISM_temp_K_quoted": 6400, "neutral_fraction": 0.667,
+   "note": "field direction did not change across the heliopause at either Voyager; V1 field about 20 deg off the Parker 270 deg azimuth, 18 deg elevation" },
+ "voyager": [
+  { "name": "Voyager 1", "shock_AU": 94, "shock_year": 2004.95, "heliopause_AU": 121.7, "heliopause_date": "2012 day 238", "sheath_AU": 28, "hemisphere": "north",
+    "now_AU": 172.428, "now_speed_km_s": 16.917, "now_ra": "17h16m", "now_dec": "+12d05m" },
+  { "name": "Voyager 2", "shock_AU": 84, "shock_year": 2007.49, "heliopause_AU": 119.0, "heliopause_date": "2018 day 318 (day 309 also given)", "sheath_AU": 36, "hemisphere": "south",
+    "now_AU": 144.445, "now_speed_km_s": 15.255, "now_ra": "20h06m", "now_dec": "-59d43m" } ],
+ "wind_inside": { "speed_beyond_50AU_km_s": "below 400", "slowdown_before_shock": 0.175, "sheath_speed_km_s": 145, "sheath_temp_K": [120000, 150000], "shock_compression": [2, 3] },
+ "models_said": { "sheath_thickness_MHD_AU": [55, 65], "tail": "unsettled: from a round heliopause to a long comet-like tail" }
+}

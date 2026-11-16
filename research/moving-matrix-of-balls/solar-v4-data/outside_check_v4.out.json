@@ -1,0 +1,49 @@
+{
+ "nose_ecl_sun_moves_toward": [
+  255.7,
+  5.1
+ ],
+ "flow_moves_toward_ecl": [
+  75.7,
+  -5.1
+ ],
+ "field_to_flow_deg": 39.5,
+ "field_to_flow_deg_other_sense": 140.5,
+ "V1_ecl": [
+  256.83,
+  35.02
+ ],
+ "V2_ecl": [
+  289.65,
+  -38.41
+ ],
+ "V1_from_nose_deg": 29.9,
+ "V2_from_nose_deg": 53.7,
+ "V1_V2_apart_deg": 79.5,
+ "V1_from_field_deg": 24.2,
+ "V2_from_field_deg": 93.1,
+ "pPa": {
+  "wind_ram_at_shock_V1_94AU": 0.2425,
+  "wind_ram_at_shock_V2_84AU": 0.3037,
+  "wind_ram_after_slowdown_94AU": 0.2001,
+  "field_pristine_293uG": 0.0342,
+  "field_V1_04nT": 0.0637,
+  "field_V2_07nT": 0.195,
+  "flow_ram_plasma_n004_to_012": [
+   0.0432,
+   0.1295
+  ],
+  "thermal_plasma_n004_to_012_T7500": [
+   0.0083,
+   0.0249
+  ],
+  "outside_total_low": 0.0856,
+  "outside_total_high": 0.3493
+ },
+ "balance_AU": [
+  78.3,
+  158.2
+ ],
+ "shock_ratio_V1_over_V2": 1.119,
+ "sheath_V2_minus_V1_AU": 8
+}
