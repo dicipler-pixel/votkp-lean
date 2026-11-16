@@ -1,0 +1,59 @@
+{
+ "bodies": [
+  {
+   "name": "Sun",
+   "size": 1,
+   "edge": 0,
+   "measured": null
+  },
+  {
+   "name": "Mercury",
+   "size": 0.42,
+   "edge": 1.283,
+   "measured": 1.45
+  },
+  {
+   "name": "Venus",
+   "size": 0.513,
+   "edge": 0,
+   "measured": null
+  },
+  {
+   "name": "Earth",
+   "size": 0.519,
+   "edge": 9.413,
+   "measured": 10
+  },
+  {
+   "name": "Mars",
+   "size": 0.454,
+   "edge": 0,
+   "measured": null
+  }
+ ],
+ "real": [
+  {
+   "name": "Sun",
+   "edge": 0
+  },
+  {
+   "name": "Mercury",
+   "edge": 1.316
+  },
+  {
+   "name": "Venus",
+   "edge": 0
+  },
+  {
+   "name": "Earth",
+   "edge": 9.462
+  },
+  {
+   "name": "Mars",
+   "edge": 0
+  }
+ ],
+ "table": "body\tradius km\tflattening\tdipole G·R³\ttilt\tedge calc\tmeas.\nSun\t695700\t0.00005\t1.5\t0°\t—\t—\nMercury\t2440.5\t0.0009\t0.002\t0°\t1.36 R\t1.45 R\nVenus\t6051.8\t0\tnone\t—\t—\t—\nEarth\t6378.137\t0.003353\t0.306\t9.35°\t9.45 R\t10 R\nMars\t3396.2\t0.00589\tnone\t—\t—\t—\nRadius, flattening, dipole, tilt: NASA fact sheets. Field edge computed from pressure balance, r₀/R = (2B²/(μ₀P))^(1/6), with the ram pressure MESSENGER measured at Mercury (14.3 nPa) scaled by the inverse square of the present distance; measured: MESSENGER 1.45 R for Mercury, typical 10 R for the Earth. Venus and Mars: no magnetic field listed, none drawn. In each ball the body’s surface sits at half the ball’s radius and a distance r is drawn at (3r/R − 1",
+ "fps": 4,
+ "errs": []
+}
