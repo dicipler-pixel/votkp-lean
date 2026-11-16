@@ -1,0 +1,28 @@
+{
+ "page": "/home/claude/balls/w/fl/Flock_of_Balls_on_the_Field_Mixer_v2_20261116.html",
+ "width": 1220,
+ "height": 834,
+ "fps": 15,
+ "mode": "page",
+ "clean": true,
+ "hide": [
+  ".fl",
+  ".flnum",
+  ".strip",
+  ".cleanexit"
+ ],
+ "seconds": 21.12,
+ "setup": "window.__FL.X.N=7; window.__FL.build(); window.__FL.goTo(-1); window.__FL.setZoom(150)",
+ "cues": [
+  {
+   "t": 0.2,
+   "js": "window.__FL.kick(0)"
+  },
+  {
+   "t": 2,
+   "js": "window.__FL.setZoom(110)"
+  }
+ ],
+ "frames_dir": "/home/claude/balls/film/v1/s6f",
+ "out": "/home/claude/balls/film/v1/s6.mp4"
+}

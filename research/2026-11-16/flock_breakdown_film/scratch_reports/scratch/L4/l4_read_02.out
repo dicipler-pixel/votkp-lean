@@ -1,0 +1,21 @@
+cells read: 384 {'grid': 216, 'torque-1': 24, 'kappa': 48, 'sinkA0.5': 24, 'sinkA2': 24, 'sinkLast0.5': 24, 'sinkLast2': 24}
+cells meeting kill line 1 on some pair: 1  cells LOCKED by kill line 2 (pair + weight + r over surrogate): 1
+  KL1 N=7 equal torque=1 gamma=0.1 gloss=0 sign=swap kappa=0.25 sink=(-1,0) tag=grid pairs [(2, 3), (2, 5), (3, 5)] KL2 pairs [(2, 5)] r-excess 4.25 sd rMean 0.866 sur 0.459 minheavy [0.82, 1.0, 0.94, 0.01, 1.0, 0.86, 0.03]
+r excess over surrogate (in surrogate s.d.): min -2.59  median 2.01  max 8.20 ; cells above +3: 133 ; cells below -3: 0
+top r-excess cells:
+   N=7 equal torque=1 gamma=2 gloss=0 sign=asis kappa=0.25 sink=(-1,0) tag=grid excess 8.2 rMean 0.547 sur 0.457 heavy [0.09, 0, 0, 0, 0, 0, 0]
+   N=7 z torque=1 gamma=1 gloss=0 sign=swap kappa=0.25 sink=(0,0.5) tag=sinkA0.5 excess 7.9 rMean 0.565 sur 0.469 heavy [0, 0, 0, 0, 0, 0, 0]
+   N=7 z torque=1 gamma=1 gloss=0 sign=asis kappa=1 sink=(-1,0) tag=kappa excess 7.8 rMean 0.553 sur 0.456 heavy [0.23, 0.0, 0.03, 0.01, 0.0, 0.07, 0.01]
+   N=7 equal torque=1 gamma=0.3 gloss=0 sign=swap kappa=0.25 sink=(6,0.5) tag=sinkLast0.5 excess 7.4 rMean 0.572 sur 0.485 heavy [0.23, 0, 0.01, 0, 0, 0, 0]
+   N=7 z torque=1 gamma=2 gloss=0 sign=asis kappa=0.25 sink=(-1,0) tag=grid excess 7.3 rMean 0.592 sur 0.512 heavy [0.26, 0, 0.0, 0.0, 0, 0.0, 0]
+   N=7 equal torque=-1 gamma=1 gloss=0 sign=swap kappa=0.25 sink=(-1,0) tag=torque-1 excess 7.3 rMean 0.651 sur 0.587 heavy [0.33, 0.0, 0, 0, 0.0, 0, 0]
+   N=7 equal torque=-1 gamma=0.3 gloss=0 sign=swap kappa=0.25 sink=(-1,0) tag=torque-1 excess 7.2 rMean 0.553 sur 0.469 heavy [0.39, 0.02, 0.1, 0, 0.02, 0.08, 0]
+   N=7 equal torque=1 gamma=1 gloss=0 sign=swap kappa=0.25 sink=(0,0.5) tag=sinkA0.5 excess 7.1 rMean 0.546 sur 0.464 heavy [0, 0, 0, 0, 0, 0, 0]
+lowest r-excess cells (anti-locking side):
+   N=4 z torque=1 gamma=0.3 gloss=0.05 sign=asis kappa=0.25 sink=(-1,0) tag=grid excess -2.6 rMean 0.542 sur 0.580
+   N=3 z torque=1 gamma=0.3 gloss=0 sign=swap kappa=1 sink=(-1,0) tag=kappa excess -2.2 rMean 0.614 sur 0.639
+   N=3 equal torque=1 gamma=0.1 gloss=0 sign=swap kappa=0.25 sink=(-1,0) tag=grid excess -1.8 rMean 0.807 sur 0.834
+   N=3 equal torque=0 gamma=1 gloss=0.05 sign=asis kappa=0.25 sink=(-1,0) tag=grid excess -1.7 rMean 0.661 sur 0.683
+   N=4 equal torque=1 gamma=0.1 gloss=0 sign=asis kappa=0.25 sink=(-1,0) tag=grid excess -1.4 rMean 0.515 sur 0.572
+worst books error over all cells 1.39e-11
+as-written vs swapped, same cell: |delta rMean| mean 0.081 max 0.290 over 192 pairs of cells

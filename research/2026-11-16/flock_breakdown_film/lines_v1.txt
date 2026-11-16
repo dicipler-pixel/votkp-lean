@@ -1,0 +1,18 @@
+Start with one step of light.
+A step is a boost of length r, and its size in the picture is gamma, the hyperbolic tangent of r over two.
+Halfway along the step stands a face. A share gamma squared turns back, and the rest passes on.
+The two shares make exactly one. Nothing is lost at the face.
+Two faces on arms at right angles are compared by one number, g.
+When g is below one, the faces cross. When g is above one, they stand apart, and the light between them can only tunnel.
+At the wall, where the step ratio is three plus two root two, the faces just touch.
+Now put three balls on the field, and kick the centre ball.
+Light does not jump. It crosses the gap at speed one, so the next ball stays dark until the light arrives.
+At each face a share returns and the rest passes. The light in the balls plus the light in the gaps is always exactly one.
+Every ball keeps its own clock. This is a hypothesis, and it is marked as one: a ball one step out ticks at one over z.
+With these clocks the faces carry a load even at rest. That number is computed, and the clock ratio is the hypothesis.
+Seven balls make a flock. Kick the centre, and light spreads through the gaps.
+Do the balls swing together, like clocks on one beam? In every run so far, they do not lock.
+That is an open question, and the page says so.
+Not done yet: the electron sea with travel time, and gaps that follow the breathing drive.
+The film uses the corrected sign on the faces between arms. The older sign is kept for comparison.
+Every number here comes from a run, and every hypothesis wears its label.

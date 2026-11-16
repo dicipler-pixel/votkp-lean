@@ -1,0 +1,8 @@
+N=3  t=0: level energy of light in balls 0.0000  anchor (face) energy 0.5511
+   to t=300: light count total 0.999999999998 | level energy range [-0.202, 0.220] | anchor energy change range [0.000, 0.086] | their sum range [-0.171, 0.257]  (energy of light in the gaps: not defined in the code)
+N=7  t=0: level energy of light in balls 0.0000  anchor (face) energy 2.0265
+   to t=300: light count total 0.999999999999 | level energy range [-0.109, 0.105] | anchor energy change range [0.000, 0.115] | their sum range [-0.062, 0.169]  (energy of light in the gaps: not defined in the code)
+retarded N=7 h=0.01: tilt at t=20,40,60 = 7.54e-8 1.69e-5 4.26e-3  growth rate per unit time ~ 0.276  rest residual 8.1e-10
+retarded N=7 h=0.005: tilt at t=20,40,60 = 7.13e-8 1.51e-5 3.58e-3  growth rate per unit time ~ 0.274  rest residual 8.1e-10
+retarded N=7 h=0.0025: tilt at t=20,40,60 = 6.92e-8 1.42e-5 3.27e-3  growth rate per unit time ~ 0.272  rest residual 8.1e-10
+static push, ball C field reversed by hand, no light, t=50: tilt A,B,C,D = 0.0e+0 0.0e+0 3.1e+0 2.1e-8

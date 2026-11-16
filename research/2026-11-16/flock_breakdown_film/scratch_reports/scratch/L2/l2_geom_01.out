@@ -1,0 +1,44 @@
+G1 ball one peel step out: hyperbolic distance from centre = r = ln z; Poincare radius = Gamma = (z-1)/(z+1)
+   largest residual over z = 1.5..13 (distance, radius, (1+G)/(1-G) = z): 5.47e-16
+G2 face = set of points equally far from centre and ball; unit normal N = (sinh h, cosh h u), h = r/2
+   largest residual (N unit, p - O = 2 sinh h N, plane points equidistant, foot at r/2): 7.11e-15
+G3 g = <N_a,N_b> = sinh h_a sinh h_b for perpendicular arms; interior angle of the centre cell at the edge = arccos g (g<1)
+   <Na,Nb> - sinh sinh: 0.00e+00 ; measured interior angle - arccos g on 254 crossing pairs: 6.02e-14
+   z = 3,5  g = 0.516398  alpha = 58.9091 deg  360/alpha = 6.1111
+   z = 3,3  g = 0.333333  alpha = 70.5288 deg  360/alpha = 5.1043
+   z = 5,5  g = 0.800000  alpha = 36.8699 deg  360/alpha = 9.7641
+G4 g > 1: faces stand apart; least distance between the two planes, minimised over both planes (4 parameters), against arccosh g
+   z = 5,7  g = 1.014185  least distance found = 0.168236118  arccosh g = 0.168236118  (arccosh g^2 = 0.238480)
+   z = 7,7  g = 1.285714  least distance found = 0.738997944  arccosh g = 0.738997944  (arccosh g^2 = 1.088342)
+   z = 7,9  g = 1.511858  least distance found = 0.972955075  arccosh g = 0.972955075  (arccosh g^2 = 1.468121)
+   z = 9,13  g = 2.218801  least distance found = 1.434959913  arccosh g = 1.434959913  (arccosh g^2 = 2.276603)
+   z = 13,13  g = 2.769231  least distance found = 1.677395879  arccosh g = 1.677395879  (arccosh g^2 = 2.726008)
+   z = 6,6  g = 1.041667  least distance found = 0.287682072  arccosh g = 0.287682072  (arccosh g^2 = 0.409609)
+   z = 5.9,5.9  g = 1.017373  least distance found = 0.186133341  arccosh g = 0.186133341  (arccosh g^2 = 0.263988)
+   largest |least distance - arccosh g|: 3.87e-13
+   ratio 7 equal steps: cosh delta = sinh^2(ln7/2) = 1.285714285714 ; 9/7 = 1.285714285714
+G5 the wall: Gamma^2 = 1/2 <=> z = 3 + 2 sqrt 2
+   z = 5.828427124746  Gamma^2 - 1/2 = -1.1e-16  sinh^2(r/2) - 1 = 0.0e+00  (z-3)^2 - 8 = -1.8e-15  R - T = -2.2e-16  2 - 4 sinh^4 + 2 = 0.0e+00  tanh r - 2sqrt2/3 = -1.1e-16
+   z = 5: Gamma^2 = 0.444444 (4/9), (5-3)^2 = 4 < 8 ; z = 7: Gamma^2 = 0.562500 (9/16), (7-3)^2 = 16 > 8
+G6 right triangle centre, ball I, ball J: cosh d = cosh r_I cosh r_J
+   largest relative residual on 500 pairs: 0.00e+00 ; z = 3,5: d = 2.1459 ; z = 5,5: cosh d = 6.760000 (169/25 = 6.760000)
+G7 Thomas turn of B_a B_b (polar decomposition) = area of that right triangle (angle defect) = 2 arctan(Gamma_a Gamma_b)
+   polar angle - formula: 2.71e-13 ; triangle area - formula: 3.66e-14 (500 random pairs)
+   z = 5: cos, sin = 0.670103092784, 0.742268041237 ; exact 65/97, 72/97 = 0.670103092784, 0.742268041237 ; tan(theta/2) = 0.444444444444, Gamma^2 = 0.444444444444 ; theta = 47.9250 deg
+   z = 7: cos, sin = 0.519287833828, 0.854599406528 ; exact 175/337, 288/337 = 0.519287833828, 0.854599406528 ; tan(theta/2) = 0.562500000000, Gamma^2 = 0.562500000000 ; theta = 58.7155 deg
+   z = 3,5: theta_T = 36.8699 deg ; z = 5,7: 53.1301 deg ; z = 3,7: 41.1121 deg
+G8 the square W = Ba Bb Ba^-1 Bb^-1 (4x4): g<1 turn with cos phi = 8g^4-8g^2+1; g>1 run 4 arccosh g; equal steps SL2 trace 2-4sinh^4 = comm_trace at v = 2 sinh^2
+   turn/run residual on 500 pairs: 1.50e-13 ; Riley form at v = 2 sinh^2 against 2 - 4 sinh^4 (200 cases): 2.21e-14
+   z = 5: g = 0.800000, cos phi = -0.843200000 (Two Trees Thm 5.4: -527/625 = -0.843200000)
+G9 incidence in the ball: centre ray at angle psi to the arm meets the face at h with sin theta = cosh h sin psi; meets it only if cos psi >= tanh h
+   largest |sin theta - cosh h sin psi|: 1.95e-12 ; cases against the meeting rule: 0
+G10 card witnesses: B30 50 deg in R=1 -> R=4: theta2 = 22.5210 deg ; B39 R=4->1: critical = 30.0000 deg ; with kappa = z^2, theta_crit = arcsin(1/z): z=3 19.4712, z=5 11.5370, z=7 8.2132 deg
+G11 pressure algebra: P = 2R, K = 1/(T-R) = 1/(1-P), sinh^2(r/2) = R/T
+   largest relative residual: 2.10e-14 ; z = 3,5,7: P = 0.500000, 0.888889, 1.125000 ; P = 1 exactly at the wall
+G12 rim: aberration cos psi' = cos psi (+) tanh r; frequency ratio t'/t = cosh r + sinh r cos psi (= z on the axis, 1/z against it); face shadow cos psi0 = Gamma
+   largest residual: 1.06e-13
+   z = 3: forward factor 3.000000, backward factor 0.333333 (1/z = 0.333333), time-dilation factor cosh r = 1.666667, mirror at speed Gamma two-way: (1+G)/(1-G) = 3.000000, one-way sqrt = 1.732051
+   z = 5: forward factor 5.000000, backward factor 0.200000 (1/z = 0.200000), time-dilation factor cosh r = 2.600000, mirror at speed Gamma two-way: (1+G)/(1-G) = 5.000000, one-way sqrt = 2.236068
+   z = 7: forward factor 7.000000, backward factor 0.142857 (1/z = 0.142857), time-dilation factor cosh r = 3.571429, mirror at speed Gamma two-way: (1+G)/(1-G) = 7.000000, one-way sqrt = 2.645751
+   ping-pong exceptions in 1e5 directions x 6 steps: z = 5: 25527 ; z = wall(1+1e-6): 0 ; z = 7: 0 ; z = 13: 0
+   z = 7 integer step of (3,1,2,2): [99, 97, 14, 14], null: True, in cap of +i (t^2 < 2 x^2): True

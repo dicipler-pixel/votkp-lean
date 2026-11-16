@@ -1,0 +1,29 @@
+PART A: two balls, a = 2 kappa D = 0.5
+  tau=0.000 (n=0)  predicted Re lambda = 0.0000e+0  (Im -1.0000; small-tau formula 2 a^2 tau = 0.000e+0)  measured rate = 2.5000e-3  KILLED
+  tau=0.050 (n=10)  predicted Re lambda = 2.4927e-2  (Im -0.9988; small-tau formula 2 a^2 tau = 2.500e-2)  measured rate = 2.7409e-2  KILLED
+  tau=0.100 (n=20)  predicted Re lambda = 4.9427e-2  (Im -0.9951; small-tau formula 2 a^2 tau = 5.000e-2)  measured rate = 5.1856e-2  agrees
+  tau=0.200 (n=40)  predicted Re lambda = 9.5636e-2  (Im -0.9811; small-tau formula 2 a^2 tau = 1.000e-1)  measured rate = 9.7894e-2  agrees
+  tau=0.500 (n=100)  predicted Re lambda = 1.9838e-1  (Im -0.9070; small-tau formula 2 a^2 tau = 2.500e-1)  measured rate = 1.9993e-1  agrees
+  tau=1.000 (n=200)  predicted Re lambda = 2.6742e-1  (Im -0.7737; small-tau formula 2 a^2 tau = 5.000e-1)  measured rate = 2.6822e-1  agrees
+  tau=2.000 (n=400)  predicted Re lambda = 2.7148e-1  (Im -0.6034; small-tau formula 2 a^2 tau = 1.000e+0)  measured rate = 2.7186e-1  agrees
+PART B: real code (scratch copy), 1e-6 tilt on every ball field, no light
+  N=3 retarded delayScale=0.02  link delays 0.02,0.03,0.04  growth rate (1/time) no growth window (peak tilt 6.5e-6)  peak tilt 6.52e-6
+  N=3 retarded delayScale=0.05  link delays 0.06,0.08,0.10  growth rate (1/time) 0.0173  peak tilt 2.07e-3
+  N=3 retarded delayScale=0.1  link delays 0.11,0.16,0.21  growth rate (1/time) 0.0332  peak tilt 5.13e-1
+  N=3 retarded delayScale=0.25  link delays 0.28,0.40,0.54  growth rate (1/time) 0.0756  peak tilt 5.25e-1
+  N=3 retarded delayScale=0.5  link delays 0.55,0.81,1.07  growth rate (1/time) 0.1248  peak tilt 5.62e-1
+  N=3 retarded delayScale=1  link delays 1.10,1.61,2.15  growth rate (1/time) 0.1601  peak tilt 5.18e-1
+  N=3 retarded delayScale=2  link delays 2.19,3.22,4.29  growth rate (1/time) 0.1451  peak tilt 5.34e-1
+  N=3 KILL B check: rate(0.05) = 0.017340796534665567, rate(1) = 0.1600669638411906, half of rate(1) = 0.0800334819205953 -> delay explanation stands; monotone on 0.05..0.5: true
+  N=3 control push static: peak tilt over t=200 9.21e-7  (no growth, as required)
+  N=3 control push off: peak tilt over t=200 8.06e-7  (no growth, as required)
+  N=7 retarded delayScale=0.02  link delays 0.02,0.03,0.04,0.02,0.03,0.04,0.04,0.05,0.04,0.05,0.06,0.04,0.06,0.05,0.06,0.04,0.05,0.06  growth rate (1/time) no growth window (peak tilt 2.7e-6)  peak tilt 2.66e-6
+  N=7 retarded delayScale=0.05  link delays 0.06,0.08,0.10,0.06,0.08,0.10,0.10,0.13,0.10,0.13,0.14,0.10,0.14,0.13,0.14,0.10,0.13,0.14  growth rate (1/time) 0.0328  peak tilt 3.86e-4
+  N=7 retarded delayScale=0.1  link delays 0.11,0.16,0.20,0.11,0.16,0.20,0.21,0.24,0.21,0.24,0.29,0.21,0.29,0.24,0.29,0.21,0.24,0.29  growth rate (1/time) 0.0594  peak tilt 5.01e-1
+  N=7 retarded delayScale=0.25  link delays 0.28,0.40,0.48,0.28,0.40,0.48,0.54,0.61,0.54,0.61,0.73,0.54,0.73,0.61,0.73,0.54,0.61,0.73  growth rate (1/time) 0.1295  peak tilt 5.59e-1
+  N=7 retarded delayScale=0.5  link delays 0.55,0.81,0.97,0.55,0.81,0.97,1.07,1.24,1.07,1.24,1.46,1.07,1.46,1.24,1.46,1.07,1.24,1.46  growth rate (1/time) 0.2104  peak tilt 5.33e-1
+  N=7 retarded delayScale=1  link delays 1.10,1.61,1.95,1.10,1.61,1.95,2.15,2.47,2.15,2.47,2.92,2.15,2.92,2.47,2.92,2.15,2.47,2.92  growth rate (1/time) 0.2718  peak tilt 5.13e-1
+  N=7 retarded delayScale=2  link delays 2.19,3.22,3.89,2.19,3.22,3.89,4.29,4.94,4.29,4.94,5.83,4.29,5.83,4.94,5.83,4.29,4.94,5.83  growth rate (1/time) 0.2447  peak tilt 5.45e-1
+  N=7 KILL B check: rate(0.05) = 0.03284248455385034, rate(1) = 0.2717679791717213, half of rate(1) = 0.13588398958586065 -> delay explanation stands; monotone on 0.05..0.5: true
+  N=7 control push static: peak tilt over t=200 2.23e-6  (no growth, as required)
+  N=7 control push off: peak tilt over t=200 8.06e-7  (no growth, as required)

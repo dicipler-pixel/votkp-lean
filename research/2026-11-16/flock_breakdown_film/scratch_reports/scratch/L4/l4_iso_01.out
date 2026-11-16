@@ -1,0 +1,14 @@
+torque 0 (t = 100)
+  ball A: omega*rate = 2.000000  |J| = 2.000000  measured turning rate of the spin about J = 2.000000  slope of FL.clockPhase = 2.000000  largest drift of s + 2d = 0.00e+0  largest tilt of the field 0.000
+  ball B: omega*rate = 0.666667  |J| = 0.666667  measured turning rate of the spin about J = 0.666667  slope of FL.clockPhase = 0.666667  largest drift of s + 2d = 0.00e+0  largest tilt of the field 0.000
+  ball C: omega*rate = 0.400000  |J| = 0.400000  measured turning rate of the spin about J = 0.400000  slope of FL.clockPhase = 0.400000  largest drift of s + 2d = 0.00e+0  largest tilt of the field 0.000
+  ball D: omega*rate = 0.285714  |J| = 0.285714  measured turning rate of the spin about J = 0.285714  slope of FL.clockPhase = 0.285714  largest drift of s + 2d = 0.00e+0  largest tilt of the field 0.000
+torque 1 (t = 100)
+  ball A: omega*rate = 2.000000  |J| = 2.236068  measured turning rate of the spin about J = 2.236045  slope of FL.clockPhase = 2.234462  largest drift of s + 2d = 1.00e-2  largest tilt of the field 0.889
+  ball B: omega*rate = 0.666667  |J| = 1.201850  measured turning rate of the spin about J = 1.201844  slope of FL.clockPhase = 1.200507  largest drift of s + 2d = 3.33e-3  largest tilt of the field 0.664
+  ball C: omega*rate = 0.400000  |J| = 1.077033  measured turning rate of the spin about J = 1.077024  slope of FL.clockPhase = 1.073104  largest drift of s + 2d = 2.00e-3  largest tilt of the field 0.822
+  ball D: omega*rate = 0.285714  |J| = 1.040016  measured turning rate of the spin about J = 1.039969  slope of FL.clockPhase = -0.013435  largest drift of s + 2d = 1.43e-3  largest tilt of the field 2.497
+
+real	0m2.370s
+user	0m2.846s
+sys	0m0.071s

@@ -1,0 +1,26 @@
+HOLDS  K1 travel time A->B  link length d = 1.0986, light in B before then = 0, first light at t = 1.1050
+HOLDS  K1 travel time A->C  link length d = 1.6094, light in C before then = 0, first light at t = 1.6150
+HOLDS  K2 books, N = 3  largest |balls + gaps - 1| to t = 200: 1.0e-12; least light ever held in the balls 0.087
+HOLDS  K2 books, N = 7  largest |balls + gaps - 1| to t = 200: 8.3e-13; least light ever held in the balls 0.017
+HOLDS  K3 face A|B (z = 3)  returned 0.250000000000 (Gamma^2 = 0.250000000000), passed 0.750000000000 (1 - Gamma^2 = 0.750000000000)
+HOLDS  K4 gap, z = 3.000,5.000  g = 0.5164, faces meet, link length 2.1459, faces at 0.706 and 1.273, passed first time 0.4166666667 (formula 0.4166666667)
+HOLDS  K4 gap, z = 5.000,7.000  g = 1.0142, gap delta = 0.1682, link length 2.9187, faces at 0.904 and 1.882, passed first time 0.2363040123 (formula 0.2363040123)
+HOLDS  K4 gap, z = 7.000,9.000  g = 1.5119, gap delta = 0.9730, link length 3.4815, faces at 1.045 and 2.329, passed first time 0.0689062500 (formula 0.0689062500)
+HOLDS  K4 gap, z = 9.000,13.000  g = 2.2188, gap delta = 1.4350, link length 4.0869, faces at 1.155 and 2.767, passed first time 0.0194005102 (formula 0.0194005102)
+HOLDS  K4 gap, z = 5.828,5.828  g = 1.0000, faces meet, link length 2.8873, faces at 0.962 and 1.925, passed first time 0.2500000000 (formula 0.2500000000)
+HOLDS  K5 clocks  measured rates A,B,C,D = 2.000000000, 0.666666667, 0.400000000, 0.285714286; omega/z = 2.000000000, 0.666666667, 0.400000000, 0.285714286; ratios A/B, A/C, A/D = 3.000000, 5.000000, 7.000000
+HOLDS  K6 rest, N = 7  largest turn with no light 0.0e+0, rest residual 8.1e-10
+NOTE   K6b retarded push, N = 7, no light: largest field turn  t=25: 2.5e-7  t=50: 2.3e-4  t=75: 2.2e-1  t=100: 2.3e+0
+HOLDS  K7 step size  light in B at t = 6 for h = 0.01, 0.005, 0.0025: 0.10301, 0.10176, 0.10206
+
+Exploration: kick A, run to t = 300. Most light ever in each ball; time-average share; order parameter r (Kuramoto, weighted) mean and spread over the last 100.
+  N = 3, clocks z     | most light 0.99 0.23 0.18 | mean share 0.24 0.06 0.05 | in gaps 0.65 | largest field turn 0.65 0.30 0.84 | r = 0.828 +- 0.152
+  N = 3, clocks equal | most light 0.99 0.36 0.27 | mean share 0.14 0.11 0.09 | in gaps 0.67 | largest field turn 0.69 0.35 0.23 | r = 0.621 +- 0.228
+  N = 4, clocks z     | most light 0.99 0.14 0.09 0.11 | mean share 0.13 0.05 0.02 0.02 | in gaps 0.77 | largest field turn 0.56 0.16 0.43 0.31 | r = 0.790 +- 0.163
+  N = 4, clocks equal | most light 0.99 0.13 0.15 0.15 | mean share 0.10 0.02 0.05 0.03 | in gaps 0.80 | largest field turn 1.27 0.24 0.42 0.61 | r = 0.659 +- 0.219
+  N = 7, clocks z     | most light 0.98 0.04 0.05 0.05 0.04 0.05 0.04 | mean share 0.06 0.01 0.01 0.01 0.01 0.01 0.01 | in gaps 0.88 | largest field turn 0.58 0.04 0.08 0.14 0.04 0.09 0.13 | r = 0.616 +- 0.224
+  N = 7, clocks equal | most light 0.98 0.02 0.09 0.05 0.02 0.07 0.05 | mean share 0.03 0.00 0.02 0.01 0.00 0.02 0.01 | in gaps 0.90 | largest field turn 3.13 0.30 0.29 2.14 0.30 0.26 2.05 | r = 0.603 +- 0.207
+
+Reference, instantaneous matrix on the same 7 balls: leading eigenvalue 2.0928, shares 0.422 0.122 0.092 0.075 0.122 0.092 0.075, margin 0.6714
+
+all kill lines hold

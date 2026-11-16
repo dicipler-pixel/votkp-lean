@@ -1,0 +1,35 @@
+F1 (a) order of crossings on the arm-arm link, grid z_a, z_b in [1.5, 13] step 0.25 (47 x 47 = 2209 pairs), arms +I and +J
+   pairs with 0 < s1 < s2 < d violated: 0 of 2209 ; bisection against closed form, largest difference: 2.22e-15
+   crossings that are not a single sign change: 0 ; sample points between s1 and s2 not nearest the centre: 0
+   shortest stretch inside the centre cell: s2 - s1 = 0.0226 at z = 1.5,1.5 (s1 = 0.2792, s2 = 0.3018, d = 0.5810)
+   where g > 1: least (s2 - s1) - delta = 0.1284 at z = 13,13 (stretch 1.8058, delta 1.6774)
+F2 the same for all 12 perpendicular arm pairs at z = (3,5,7), and the check file values
+   pairs out of order: 0 of 12
+   z = 3.000,5.000  d = 2.1459 (arccosh(cosh ra cosh rb) = 2.1459)  s1 = 0.7059  s2 = 1.2732  stretch in centre cell = 0.5673  g = 0.5164  delta = none
+   z = 5.000,7.000  d = 2.9187 (arccosh(cosh ra cosh rb) = 2.9187)  s1 = 0.9035  s2 = 1.8817  stretch in centre cell = 0.9781  g = 1.0142  delta = 0.1682
+   z = 7.000,9.000  d = 3.4815 (arccosh(cosh ra cosh rb) = 3.4815)  s1 = 1.0448  s2 = 2.3294  stretch in centre cell = 1.2846  g = 1.5119  delta = 0.9730
+   z = 9.000,13.000  d = 4.0869 (arccosh(cosh ra cosh rb) = 4.0869)  s1 = 1.1554  s2 = 2.7666  stretch in centre cell = 1.6112  g = 2.2188  delta = 1.4350
+   z = 5.828,5.828  d = 2.8873 (arccosh(cosh ra cosh rb) = 2.8873)  s1 = 0.9624  s2 = 1.9248  stretch in centre cell = 0.9624  g = 1.0000  delta = none
+   z = 7.000,7.000  d = 3.2375 (arccosh(cosh ra cosh rb) = 3.2375)  s1 = 1.0424  s2 = 2.1951  stretch in centre cell = 1.1527  g = 1.2857  delta = 0.7390
+F3 the gap mark: Flock uses rho = tanh(k delta), passes sech^2(k delta). Against LH.tunnelGap (M3 evanescent film) at kappa_e = Y1 (return phase pi/2)
+   |T_film - sech^2(k w)| at kappa_e = Y1: 6.66e-16 ; general |T_film - sin^2 phi/(sinh^2 kw + sin^2 phi)|, phi = arg of the face return: 5.55e-16
+   example z = 7,9, delta = 0.9730, k = 1: sech^2 = 0.437500 ; film at kappa_e = Y1/2: 0.332344 ; at kappa_e = 2 Y1: 0.332344
+F4 the arm-arm link rotation in the Flock (MM.linkRotation) and the Thomas turn: holonomy round centre, ball a, ball b against 2 arctan(Ga Gb)
+   holonomy angle - 2 arctan(Ga Gb): 8.04e-14 ; centre-arm link rotations are the identity and the arm-arm link rotation alone carries the angle: 9.42e-8
+F5 clocks: rate = exp(-r) = 1/z against (1-G)/(1+G) and against LH.doppler(-1, r)
+   largest residual: 3.75e-16
+F6 LH.selftest() (the page arithmetic, run from node, nothing written)
+   24 of 24 lines hold
+   HOLDS K8 wall: |R − ½|  value 1.11e-16  tol 1e-14
+   HOLDS K8 wall: SL(2) trace + 2  value 1.78e-15  tol 1e-12
+   HOLDS K8 wall: ‖(W + I)²‖ (with ‖W + I‖ > 1e-3)  value 7.11e-15  tol 1e-10
+   HOLDS K9 Thomas angle 2 arctan(Γa Γb)  value 2.08e-13  tol 1e-9
+   HOLDS K9 exact 65/97, 72/97, 175/337, 288/337  value 3.89e-15  tol 1e-13
+   HOLDS K10 W = L R L⁻¹ R (relative)  value 6.88e-12  tol 1e-8
+   HOLDS K10 turn cos φ = 8g⁴ − 8g² + 1; run 4 arccosh g  value 4.29e-14  tol 1e-10
+   HOLDS K11 aberration is ⊕; Doppler factor  value 6.44e-15  tol 1e-12
+   HOLDS K11 ping-pong exceptions just above the wall and at 7, 9, 13  value 0.00e+0  tol 0
+   HOLDS K11 ping-pong must fail at z = 5 (0 means it did)  value 0.00e+0  tol 0
+   HOLDS K12 face shadow cos ψ0 = Γ  value 1.78e-15  tol 1e-12
+   HOLDS K13 Maxwell normal stress −u cos²θ  value 1.39e-17  tol 1e-12
+   HOLDS K18 <Na, Nb> = sinh ha sinh hb  value 0.00e+0  tol 1e-12

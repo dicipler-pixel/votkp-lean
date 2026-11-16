@@ -1,0 +1,10 @@
+N=3 h=0.02 gamma=0.6 real dimension 1940 (scatterers per link: 1,1,2)  max|M^T M - I| = 6.66e-16  max departure from complex-linear = 0.00e+0  HOLDS
+N=3 h=0.02 gamma=2 real dimension 2596 (scatterers per link: 1,1,3)  max|M^T M - I| = 8.88e-16  max departure from complex-linear = 0.00e+0  HOLDS
+N=4 h=0.05 gamma=1.3 real dimension 2832 (scatterers per link: 1,1,1,3,3,3)  max|M^T M - I| = 2.23e-14  max departure from complex-linear = 0.00e+0  HOLDS
+N=7 h=0.2 gamma=0.6 real dimension 1628 (scatterers per link: 1,1,1,1,1,1,2,2,2,2,3,2,3,2,3,2,2,3)  max|M^T M - I| = 8.88e-15  max departure from complex-linear = 0.00e+0  HOLDS
+port block [[c,s],[-s,c]]: c^2+s^2-1 = 0.00e+0, theta = sqrt(gamma h) = 0.054772
+face block [[tau,-rho U],[rho U^dag,tau]]: tau^2+rho^2-1 = -2.22e-16; off-diagonal of S^dag S = tau rho U - rho U tau = 0 exactly
+
+real	0m46.643s
+user	0m46.443s
+sys	0m0.180s

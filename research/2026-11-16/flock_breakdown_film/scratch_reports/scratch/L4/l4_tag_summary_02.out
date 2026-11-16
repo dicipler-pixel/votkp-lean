@@ -1,0 +1,19 @@
+sweep.jsonl rows matched in sweep2.jsonl (sign asis): 108 of 108 ; largest |rMean difference| 0.00e+00
+('grid', 'asis') {'cells': 108, 'lossy cells': 48, 'cells with rate-agreeing pair': 6, '... and both heavy': 5, 'r > surrogate+3sd with a heavy ball': 10, 'r > surrogate+3sd, NO heavy ball': 19}
+('grid', 'swap') {'cells': 108, 'r > surrogate+3sd with a heavy ball': 23, 'lossy cells': 48, 'r > surrogate+3sd, NO heavy ball': 23, 'cells with rate-agreeing pair': 4, '... and both heavy': 3}
+('kappa', 'asis') {'cells': 24, 'r > surrogate+3sd, NO heavy ball': 3, 'r > surrogate+3sd with a heavy ball': 4}
+('kappa', 'swap') {'cells': 24, 'r > surrogate+3sd with a heavy ball': 11, 'r > surrogate+3sd, NO heavy ball': 1}
+('sinkA0.5', 'asis') {'cells': 12, 'lossy cells': 12, 'r > surrogate+3sd, NO heavy ball': 2}
+('sinkA0.5', 'swap') {'cells': 12, 'lossy cells': 12, 'r > surrogate+3sd, NO heavy ball': 4}
+('sinkA2', 'asis') {'cells': 12, 'lossy cells': 12, 'r > surrogate+3sd, NO heavy ball': 3}
+('sinkA2', 'swap') {'cells': 12, 'lossy cells': 12, 'r > surrogate+3sd, NO heavy ball': 4}
+('sinkLast0.5', 'asis') {'cells': 12, 'lossy cells': 12, 'r > surrogate+3sd, NO heavy ball': 3, 'r > surrogate+3sd with a heavy ball': 1}
+('sinkLast0.5', 'swap') {'cells': 12, 'lossy cells': 12, 'r > surrogate+3sd with a heavy ball': 4, 'r > surrogate+3sd, NO heavy ball': 2}
+('sinkLast2', 'asis') {'cells': 12, 'lossy cells': 12, 'r > surrogate+3sd with a heavy ball': 1, 'r > surrogate+3sd, NO heavy ball': 1}
+('sinkLast2', 'swap') {'cells': 12, 'lossy cells': 12, 'r > surrogate+3sd with a heavy ball': 2, 'r > surrogate+3sd, NO heavy ball': 2}
+('torque-1', 'asis') {'cells': 12, 'r > surrogate+3sd with a heavy ball': 2, 'r > surrogate+3sd, NO heavy ball': 2, 'cells with rate-agreeing pair': 1, '... and both heavy': 1}
+('torque-1', 'swap') {'cells': 12, 'r > surrogate+3sd with a heavy ball': 4, 'r > surrogate+3sd, NO heavy ball': 2}
+light left in system at t=400 in lossy cells (min, median, max): 0.018846427708014868 0.11716761368767667 0.8590423908939252
+lossy cells (gloss, no sink): 96  sink cells: 96
+worst book error incl. lost light: 1.39e-11
+z cells, heavy pairs: 108 ; measured rate gap smaller than free gap in 44 (0.41)

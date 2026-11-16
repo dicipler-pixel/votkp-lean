@@ -1,0 +1,14 @@
+SIGN swap
+  V0 (the original cell)   torque1: rate gaps 0.0006 0.0011, sd 0.244, heavy C 0.94 F 0.86 | torque0 sd 5.559 | r 0.866 surrogate 0.459 | MEETS
+  V1 T=800                 torque1: rate gaps 0.3906 0.3374, sd 29.963, heavy C 0.01 F 0.09 | torque0 sd 20.348 | r 0.606 surrogate 0.574 | fails
+  V2 gamma=0.08            torque1: rate gaps 0.1761 0.0900, sd 8.226, heavy C 0.76 F 0.77 | torque0 sd 3.874 | r 0.810 surrogate 0.470 | fails
+  V3 gamma=0.12            torque1: rate gaps 0.0005 0.0600, sd 2.179, heavy C 0.55 F 0.46 | torque0 sd 2.427 | r 0.835 surrogate 0.500 | fails
+  V4 kick in D             torque1: rate gaps 0.0135 0.1186, sd 6.576, heavy C 0.14 F 0.36 | torque0 sd 4.900 | r 0.481 surrogate 0.490 | fails
+  variants V1-V4 meeting the line: 0 of 4 -> NOT called locking
+SIGN asis
+  V0 (the original cell)   torque1: rate gaps 0.0198 0.2357, sd 6.475, heavy C 0.90 F 0.87 | torque0 sd 5.946 | r 0.576 surrogate 0.485 | fails
+  V1 T=800                 torque1: rate gaps 2.8386 1.1162, sd 207.464, heavy C 0.07 F 0.05 | torque0 sd 3.971 | r 0.509 surrogate 0.459 | fails
+  V2 gamma=0.08            torque1: rate gaps 0.0443 0.0042, sd 3.151, heavy C 0.88 F 0.86 | torque0 sd 12.004 | r 0.663 surrogate 0.477 | fails
+  V3 gamma=0.12            torque1: rate gaps 0.0288 0.0148, sd 2.437, heavy C 0.90 F 0.81 | torque0 sd 0.386 | r 0.646 surrogate 0.506 | fails
+  V4 kick in D             torque1: rate gaps 0.0305 0.4346, sd 16.563, heavy C 0.29 F 0.41 | torque0 sd 12.283 | r 0.511 surrogate 0.548 | fails
+  variants V1-V4 meeting the line: 0 of 4 -> NOT called locking

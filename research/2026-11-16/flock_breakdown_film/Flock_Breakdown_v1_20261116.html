@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Flock of Balls on the Field: where the math comes from and where it goes</title>
+<style>
+/* SCRIPT: FLOCK-BREAKDOWN-V1 page. Jeromie Beasley. 16 Nov 2026. AI-assisted. */
+:root{--bg:#070b14;--card:#0e1524;--ink:#e6ecf7;--dim:#93a1bd;--line:#22304d;--gold:#f2c14e;--cy:#5ad1e6;--gr:#7be0a1;--rd:#ff7a7a;--vi:#b79cff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 Georgia,'Times New Roman',serif}
+header{padding:48px 6vw 24px;border-bottom:1px solid var(--line);background:radial-gradient(900px 300px at 20% -10%,#14223f,transparent)}
+h1{font-size:2.1rem;margin:0 0 6px;font-weight:600}.sub{color:var(--dim);font-family:system-ui,sans-serif;font-size:.95rem}
+nav{position:sticky;top:0;z-index:5;background:#070b14ee;border-bottom:1px solid var(--line);padding:8px 6vw;font:14px system-ui,sans-serif;display:flex;flex-wrap:wrap;gap:6px 16px}
+nav a{color:var(--cy);text-decoration:none}
+main{max-width:980px;margin:0 auto;padding:10px 6vw 80px}
+h2{font-size:1.5rem;margin:48px 0 8px;color:var(--gold);font-weight:600}h3{font-size:1.15rem;margin:26px 0 6px;color:var(--cy)}
+p{margin:.6em 0}.k{font-family:ui-monospace,Consolas,monospace;font-size:.92em;color:#cfe3ff}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin:14px 0}
+.g{display:inline-block;font:600 11px system-ui,sans-serif;letter-spacing:.04em;padding:2px 8px;border-radius:99px;margin-right:6px;vertical-align:1px;border:1px solid}
+.LEAN,.PROVED{color:var(--gr);border-color:var(--gr)}.CHECKED{color:var(--cy);border-color:var(--cy)}.READING,.CARD{color:var(--vi);border-color:var(--vi)}
+.HYP{color:var(--gold);border-color:var(--gold)}.MODEL{color:#ffb86b;border-color:#ffb86b}.OPEN{color:var(--rd);border-color:var(--rd)}
+table{border-collapse:collapse;width:100%;font:14.5px/1.45 system-ui,sans-serif;margin:12px 0}th,td{border-bottom:1px solid var(--line);padding:7px 8px;text-align:left;vertical-align:top}th{color:var(--dim);font-weight:600}
+.spine{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:18px 0}
+.step{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:8px;padding:10px 12px;font:14px/1.45 system-ui,sans-serif}
+.step b{display:block;color:var(--gold);margin-bottom:3px}.step i{color:var(--dim)}
+.eq{font-family:ui-monospace,Consolas,monospace;color:#d8e8ff;background:#0a1120;border-left:3px solid var(--cy);padding:6px 12px;margin:10px 0;overflow-wrap:anywhere}
+.why{border-left:3px solid var(--vi);padding-left:12px;color:#d6d0f5}
+.kill{border-left:3px solid var(--rd);padding-left:12px;color:#ffd0d0}
+.flag{border:1px solid var(--rd);background:#1a0e12;border-radius:10px;padding:14px 18px;margin:16px 0}
+footer{color:var(--dim);font:13px system-ui,sans-serif;padding:20px 6vw 60px;border-top:1px solid var(--line)}
+</style></head><body>
+<header>
+<h1>The Flock of Balls on the Field</h1>
+<div class="sub">A breakdown: where each piece of the math comes from, why it is there, and where it goes · Jeromie Beasley · 16 November 2026 · AI-assisted</div>
+</header>
+<nav><a href="#spine">The spine</a><a href="#chain">Link by link</a><a href="#flock">What the Flock adds</a><a href="#found">What the checks found</a><a href="#checks">The checks</a><a href="#hyp">Hypotheses</a><a href="#not">Not claimed</a><a href="#film">Film plan</a><a href="#evidence">Evidence</a></nav>
+<main>
+
+<p>This page follows one idea from a single step of light up to a flock of balls with a clock each. Every statement carries a grade. A grade is never raised without a new check. Formulas are written in plain symbols. Numbers on this page come from runs listed under Evidence, or from a source file named with its line.</p>
+
+<div class="card"><span class="g LEAN">LEAN</span>machine-checked theorem &nbsp; <span class="g PROVED">PROVED</span>proved in a paper &nbsp; <span class="g CHECKED">CHECKED</span>run, with tolerance &nbsp; <span class="g CARD">CARD</span>atlas card &nbsp; <span class="g READING">READING</span>a reading of a result &nbsp; <span class="g HYP">HYPOTHESIS</span>a stated guess that the model needs &nbsp; <span class="g MODEL">MODEL CHOICE</span>a choice made to close the model &nbsp; <span class="g OPEN">OPEN</span>not decided</div>
+
+<h2 id="spine">1 · The spine, in eight steps</h2>
+<div class="spine">
+<div class="step"><b>1 · One step</b>The peel step B(u, r) is a boost of length r = ln z along an arm u. Its Smith coordinate is Γ = tanh(r/2) = (z − 1)/(z + 1).<br><i>All later parts are built from this one operator.</i></div>
+<div class="step"><b>2 · One face</b>A face stands halfway along the step, at r/2. Light splits there: Γ² returns, 1 − Γ² passes. From the other side the sign of the return flips.<br><i>Nothing is lost: the two shares add to one.</i></div>
+<div class="step"><b>3 · One ball</b>In the drawn ball the step lands at radius Γ. Refraction, total return, pressure 2R, the Thomas turn and the rim all follow from the same step.</div>
+<div class="step"><b>4 · Two faces and the gap</b>Two arms at right angles give g = sinh h<sub>a</sub> · sinh h<sub>b</sub> (h = r/2). If g &lt; 1 the faces cross. If g &gt; 1 they stand apart by δ = arccosh g. The wall is g = 1, z = 3 + 2√2.</div>
+<div class="step"><b>5 · Three balls and the matrix</b>One two-level block per ball, one rotation per link, added into H = D + A. A frame carried round a triangle comes back turned by the triangle's area.</div>
+<div class="step"><b>6 · The flock</b>Links become real stretches of field. Light takes time to cross, scatters at each face, and each ball keeps its own clock. The books stay exact: light in balls plus light in gaps equals one.</div>
+<div class="step"><b>7 · Swinging together</b>Your picture: the electron as a swing of chains moving with the universe, a flock of birds, a flock of clocks. Outside work on coupled clocks (Kuramoto with delay, Huygens) is the nearest known ground.</div>
+<div class="step"><b>8 · Where it goes</b>Open: the electron sea with travel time, gap lengths that follow the breathing drive, and what makes clocks lock. Listed under "Not claimed".</div>
+</div>
+
+<h2 id="chain">2 · The chain, link by link</h2>
+
+<h3>2.1 The peel step, the face and Smith addition</h3>
+<p>One operator feeds everything. A face at r/2 returns Γ² and passes 1 − Γ². Steps along one line add like velocities, by Smith addition ⊕: the sum of a layer's echoes equals the ⊕-sum of its steps.</p>
+<div class="eq">Γ = tanh(r/2) = (z − 1)/(z + 1) &nbsp;·&nbsp; return R = Γ² &nbsp;·&nbsp; pass T = 1 − Γ² &nbsp;·&nbsp; reverse side: return sign flips</div>
+<table><tr><th>Statement</th><th>Source</th><th>Grade</th></tr>
+<tr><td>Matching at a face, reflection r = (Y₁ − Y₂)/(Y₁ + Y₂)</td><td class="k">Edition10.lean:47 step_matching</td><td><span class="g LEAN">LEAN</span></td></tr>
+<tr><td>Flux balance: returned plus passed equals one</td><td class="k">Edition10 flux_balance</td><td><span class="g LEAN">LEAN</span></td></tr>
+<tr><td>Reciprocity: from the other side Γ₂₁ = −Γ₁₂</td><td class="k">Edition10.lean:69 reciprocity</td><td><span class="g LEAN">LEAN</span></td></tr>
+<tr><td>Film of layers: the sum of echoes is the ⊕-sum</td><td class="k">Film.lean film_is_oplus; Smith.lean</td><td><span class="g LEAN">LEAN</span></td></tr>
+<tr><td>Stacks telescope; echo series</td><td class="k">Directed.lean, ThinFilm.lean</td><td><span class="g LEAN">LEAN</span></td></tr></table>
+<p><b>Why it is there.</b> It is the one fact that makes light behave the same at every scale: a step is a ratio, so what happens at a face depends only on the ratio. The Flock uses it at every face (K3 below).</p>
+<p>All named theorems were found at the cited lines in the five files with no <span class="k">sorry</span>, <span class="k">axiom</span> or <span class="k">native_decide</span>. Lean was not recompiled in this session; the repositories state their own builds.</p>
+
+<h3>2.2 The gap between two faces</h3>
+<p>On two perpendicular arms the faces either cross or stand apart. Where they stand apart, light between them tunnels. The gap acts as one more peel step of length 2κδ. At κ = 1 and incidence φ = π/2 it passes an amplitude of exactly 1/g.</p>
+<div class="eq">g = sinh h<sub>a</sub> · sinh h<sub>b</sub> &nbsp;·&nbsp; g &lt; 1: faces cross at angle arccos g &nbsp;·&nbsp; g &gt; 1: gap δ = arccosh g &nbsp;·&nbsp; tunnel amplitude sech(κδ)</div>
+<p><span class="g CHECKED">CHECKED</span> The gap formula was derived and matched against direct wave matching on 2,000 random cases, worst error 1.3e-15. <span class="g HYP">HYPOTHESIS</span> That the Flock's gap tunnels by sech(κδ) at φ = π/2 is the Flock's own choice. It is the film theorem at its largest passing setting. κ has no source and is a free parameter.</p>
+
+<h3>2.3 One ball: the geometry the Flock inherits</h3>
+<table><tr><th>Piece</th><th>What it is</th><th>Grade</th></tr>
+<tr><td>Positions</td><td>Ball at distance r from the centre along its arm; drawn at radius Γ</td><td><span class="g CHECKED">CHECKED</span> independent run</td></tr>
+<tr><td>Link length</td><td>cosh d = cosh r<sub>I</sub> · cosh r<sub>J</sub> (right triangle). z = 3, 5 gives d = 2.1459</td><td><span class="g CHECKED">CHECKED</span></td></tr>
+<tr><td>Triangle turn</td><td>Thomas turn = triangle area = 2 arctan(Γ<sub>I</sub> Γ<sub>J</sub>). 36.87° for z = 3, 5; 47.93° for z = 5, 5</td><td><span class="g CHECKED">CHECKED</span> to 4e-14; equal steps <span class="g LEAN">LEAN</span> for integer z</td></tr>
+<tr><td>Unequal-step Thomas turn</td><td>tan(θ/2) = Γ<sub>a</sub>Γ<sub>b</sub></td><td><span class="g CHECKED">CHECKED</span> only; recognised, not Lean</td></tr>
+<tr><td>Wall</td><td>Γ² = ½ at z = 3 + 2√2 = 5.828; R = T = ½ on both faces</td><td><span class="g CHECKED">CHECKED</span></td></tr>
+<tr><td>Pressure 2R</td><td>A face that returns R is pushed by 2R. Maxwell's wave front pressing with its energy density is <span class="g LEAN">LEAN</span>; the face push 2R is a <span class="g READING">READING</span>, untested</td><td>kept apart on purpose</td></tr>
+<tr><td>Refraction, total return, rim</td><td>Carried from the one-ball page; refraction a sin²θ is kept as a reading, not a proved path integral</td><td><span class="g READING">READING</span></td></tr></table>
+<p>The Poincaré metric is not formalised in Lean. Distances and geodesics in the ball are elementary geometry checked by runs.</p>
+
+<h3>2.4 Three balls and the matrix</h3>
+<p>Each ball carries a two-level block D<sub>i</sub> = d<sub>i</sub>·σ that says which way its field points and how far apart its levels sit. Each link carries a rotation R<sub>ij</sub> with an SU(2) lift U<sub>ij</sub>. They add into H = D + A. Link strength is c<sub>0</sub>·sech(d/2).</p>
+<div class="eq">turn round a triangle = area of the triangle = 2 arctan(Γ<sub>I</sub> Γ<sub>J</sub>) &nbsp;(0.7110545751 for the three-ball case, three ways equal)</div>
+<p><span class="g LEAN">LEAN</span> The connection energy identity (non-normality is connection energy). <span class="g CHECKED">CHECKED</span> on 3 and 7 balls: both sides 4.48386946121. <span class="g MODEL">MODEL CHOICE</span> The hop strength c<sub>0</sub>·sech(d/2) is not found in any paper. <span class="g MODEL">MODEL CHOICE</span> The sea as one projector with the cut from <span class="k">chooseCut</span>.</p>
+<p>Two things the sources do not say, found while reading: the matrix that moves the light is Hermitian, so the connection energy belongs to its companion matrix (same D, hop turned by a quarter turn); and the offset speed limit τ̇² ≤ 4gS is <span class="g PROVED">PROVED</span> in the papers and <span class="g LEAN">LEAN</span> for one mode only. In the runs its ratio stays at or below 0.021 (3 balls) and 0.026 (7 balls).</p>
+
+<h2 id="flock">3 · What the Flock adds, and its grades</h2>
+<table><tr><th>New in the Flock</th><th>What it does</th><th>Grade</th></tr>
+<tr><td>Links are stretches of field</td><td>Light crosses at speed 1, so it arrives at t = d and not before</td><td><span class="g CHECKED">CHECKED</span> K1</td></tr>
+<tr><td>Faces scatter on the way</td><td>[[τ, −ρU],[ρU†, τ]] with ρ = Γ, τ = √(1 − Γ²)</td><td><span class="g LEAN">LEAN</span> source; <span class="g CHECKED">CHECKED</span> K3</td></tr>
+<tr><td>Gap layer</td><td>Tunnels by sech(κδ) where faces stand apart</td><td><span class="g HYP">HYPOTHESIS</span></td></tr>
+<tr><td>A clock per ball</td><td>Centre rate 1; a ball one step out ticks at 1/z</td><td><span class="g HYP">HYPOTHESIS</span> (clock ratio z)</td></tr>
+<tr><td>Ball fields held by faces</td><td>Fields are held toward rest directions</td><td><span class="g MODEL">MODEL CHOICE</span></td></tr>
+<tr><td>Books</td><td>Light in balls + light in gaps = 1, every step</td><td><span class="g CHECKED">CHECKED</span> K2, ≤ 1.2e-12</td></tr></table>
+<p><b>The clock ratio.</b> Nothing in the sources derives a ball's rate from its step. Two numbers are candidates. For z = 5 the Doppler factor is 5 and the time-dilation factor is 2.6. A ball standing still at a fixed place sees a static redshift, which has the structure of time dilation. The Flock uses z, the Doppler number. Between balls B and C (not one step apart) the Flock uses 5/3 where the radar ratio of that link is e<sup>d</sup> = 8.55. This stays a hypothesis until a derivation or a different choice settles it.</p>
+
+<h2 id="found">4 · What the checks found</h2>
+
+<div class="flag">
+<h3 style="margin-top:0;color:var(--rd)">4.1 Sign of the faces on arm–arm links <span class="g OPEN">OPEN</span></h3>
+<p>On a centre–arm link the centre side sees +Γ and the ball side sees −Γ, as <span class="k">step_matching</span> and <span class="k">reciprocity</span> require. On an arm–arm link the Flock v1 code gives the first face +Γ<sub>a</sub> and the second −Γ<sub>b</sub>, the reverse. An independent first-principles check by the watcher found 48 of 60 faces differ from the centre–arm convention. Reversing the sign is not a rescue, because then the centre–arm faces would be wrong.</p>
+<p>The effect on the run is large: light in ball B at t = 3 is 0.0325 as built and 0.4212 with the signs reversed. Kick B, read at t = 2: ball B holds 0.1136 as built and 0.3250 reversed. The books hold in both, and K3 and K4 pass in both, because they measure squares. The existing checks cannot see it.</p>
+<p><b>Smallest repair.</b> Swap the two signs. This is built as <span class="k">fl_math_v2.js</span> (option <span class="k">armSign</span>); the v1 signs remain selectable as <span class="k">asBuiltV1</span> and are labelled a MODEL CHOICE. All kill lines K1–K7 hold in v2 too. The choice between them is yours; both can be shown side by side.</p>
+</div>
+
+<div class="card">
+<h3 style="margin-top:0">4.2 The flock does not lock <span class="g CHECKED">CHECKED</span></h3>
+<p>A hunt of 384 cells covered both sign conventions, loss, an absorbing end, torque reversed and up to 10, and κ up to 4. Of 1,920 ball pairs with different free rates, none had measured rates agreeing in both windows. The balls share spectral lines in 27 percent of pairs against 2.75 percent by chance, but the lines are as common with the torque off: they are normal modes of a linear coupled system, not a Kuramoto pull. The instrument was checked on a Kuramoto-with-delay control, where it reports locked at K = 3 and not locked at K = 0.</p>
+<p>The order parameter r is not a result. It drifts with step size after t ≈ 20 and sits only slightly above a random-phase baseline for z clocks. <span class="g OPEN">OPEN</span> Not scanned: a driven flock, N above 7, a single dominating mode, and a push carried by a field on the link.</p>
+<p>The readout <span class="k">FL.clockPhase</span> mismeasures turning rates when the torque is on (ball D reads −0.013 against a true 1.04). A frame-free spectral check was used instead.</p>
+</div>
+
+<div class="card">
+<h3 style="margin-top:0">4.3 Why the delayed face push is unstable <span class="g CHECKED">CHECKED</span></h3>
+<p>The delayed push arrives late, and nothing carries or books its energy, so the rest state grows. For two balls the growth rate is the real part of a root of λ = −i a (1 + e<sup>−λτ</sup>), about 2a²τ for small delay, positive for any delay. A two-ball integrator matched that to 0.2 percent at every delay tried. In the code the field update uses the neighbour's value from the start of the step, so the effective delay is one step longer than the stored one. The shipped default is the static push (held toward rest); the delayed push is an option, labelled.</p>
+</div>
+
+<div class="card">
+<h3 style="margin-top:0">4.4 Wording fixes for the page <span class="g OPEN">OPEN</span></h3>
+<p>The Flock page says light between two faces "only tunnels". In the code the light travels the whole stretch inside the centre cell freely, and is also cut once by sech(κδ). Those are two different lengths: for z = 7, 9 the stretch is 1.2846 and δ = 0.9730. δ is the least distance between the two face planes, on their common perpendicular, which is not the link. The wording will say which length is which.</p>
+</div>
+
+<h2 id="checks">5 · The checks, why each proves its claim, and its kill line</h2>
+<table><tr><th>Check</th><th>Why it decides the claim</th><th>Kill line</th><th>Result</th></tr>
+<tr><td>K1 travel time</td><td>If light moved by instant hop, B would hold light at once</td><td>Any light in B before t = d</td><td>A→B first light at 1.105 against d = 1.0986. Held.</td></tr>
+<tr><td>K2 books</td><td>Light is only moved, never made</td><td>|balls + gaps − 1| &gt; 1e-9</td><td>1.1e-12 (3 balls), 9.9e-13 (7). Held.</td></tr>
+<tr><td>K3 one face</td><td>The face must return Γ² and pass 1 − Γ²</td><td>Off by &gt; 1e-9</td><td>0.25 / 0.75 at z = 3. Held.</td></tr>
+<tr><td>K4 gap</td><td>First-pass fraction must equal the film formula, including g = 1</td><td>Off by &gt; 1e-9</td><td>0.0689 at z = 7, 9 and 0.2500 at the wall. Held.</td></tr>
+<tr><td>K5 clocks</td><td>Measured rates must equal ω/z</td><td>Ratio ≠ z</td><td>3, 5, 7 exactly. Held.</td></tr>
+<tr><td>K6 rest</td><td>A rest state must stay still</td><td>Any turn at rest</td><td>No turn; residual 8.1e-10. Held.</td></tr>
+<tr><td>K7 step size</td><td>A result that moves with step size is numerical, not physical</td><td>Spread above 0.02</td><td>0.07100, 0.07114, 0.07098. Held.</td></tr></table>
+<p class="why">The watcher found three of these weaker than their text says: K6 cannot fail below about 1.5e-8, and the true drift of 2.5e-9 already exceeds the stated 1e-9; K7's tolerance of 0.02 is about 20 percent of the value it guards; the speed-limit check cannot catch an error smaller than about a factor of 7. None of them can see the arm–arm sign defect. Repairs are listed in the watcher report.</p>
+
+<h2 id="hyp">6 · Hypotheses, in one place</h2>
+<table><tr><th>Hypothesis</th><th>Why the model needs it</th><th>What would settle it</th></tr>
+<tr><td>Clock ratio z for a ball one step out</td><td>Each ball needs its own rate</td><td>A derivation of rate from step, or a choice between z and the time-dilation number</td></tr>
+<tr><td>Gap layer tunnels by sech(κδ) at φ = π/2</td><td>Faces that stand apart must pass light somehow</td><td>A film at the true incidence; a source for κ</td></tr>
+<tr><td>Ball fields held by faces toward rest</td><td>Closes the model at rest</td><td>A law of motion for the ball field</td></tr>
+<tr><td>Arm–arm face signs (v1 as built)</td><td>Chosen by the build</td><td>Your choice; v2 is the repair</td></tr></table>
+
+<h2 id="not">7 · Not claimed</h2>
+<ul>
+<li>The electron sea with travel time; no result exists.</li>
+<li>The energy of light in transit, and gap lengths that follow the breathing drive.</li>
+<li>Any law of motion for the clock ratio, and any Doppler from a moving face.</li>
+<li>A minimum gap: it is neither enforced nor derived. Below the wall there is no gap between equal-step faces.</li>
+<li>The face push 2R as a physical pressure: untested.</li>
+<li>The Thomas turn as a turn of light's polarisation: no claim.</li>
+<li>Locking of the flock: not found; the order parameter is not a result.</li>
+<li>Lean was not recompiled; the numerical Flock results are first order in step size (good to about 1e-3 at h = 0.005).</li>
+<li>The "conserved to 2e-11" witness for card B30 was not found on disk.</li>
+</ul>
+
+<h2 id="film">8 · The film plan</h2>
+<p>The script follows the spine. The narrator taps the cane at each proved result and turns the mirror once. Pictures move in every scene, recorded live from the Flock and the one-ball pages. The pipeline was proved on a 15-second clip: frames captured one by one on a virtual clock, identical on repeat, books within 4.9e-14 of one over all 384 frames.</p>
+<table><tr><th>Scene</th><th>What moves</th><th>Number on screen</th></tr>
+<tr><td>One step, one face</td><td>A ball slides out along an arm; the face follows at half the distance</td><td>z, r = ln z, Γ, face at r/2</td></tr>
+<tr><td>Two faces meet, touch, part</td><td>z rises through 3 + 2√2; the faces cross, touch, then a bar opens</td><td>g counting through 1; δ = 0.739 at z = 7</td></tr>
+<tr><td>The triangle and its turn</td><td>A frame carried round three balls returns turned</td><td>Turn = area = 0.7110545751</td></tr>
+<tr><td>A pulse on a link</td><td>Light leaves a, meets face a, crosses the cell, meets face b</td><td>z = 7, 9: d = 3.4815; passed first time 0.0689</td></tr>
+<tr><td>Instant against travelling</td><td>Split screen: matrix lights B at once; Flock keeps B dark</td><td>First light at t = 1.0986</td></tr>
+<tr><td>The flock of clocks</td><td>Hands run at 1, 1/3, 1/5; fields shrink with the clocks</td><td>Grade on screen: HYPOTHESIS</td></tr>
+<tr><td>The retarded push</td><td>The same rest state, static and delayed side by side</td><td>Growth 0.27 per unit time at N = 7</td></tr>
+<tr><td>Where it goes</td><td>Open list from section 7</td><td>—</td></tr></table>
+
+<h2 id="evidence">9 · Evidence</h2>
+<p>Reports of the four hands and the watcher, with every command and output, are in <span class="k">/home/claude/balls/breakdown/</span>: <span class="k">L1_peel_face_smith.md</span>, <span class="k">L2_ball_geometry_turns_rim.md</span>, <span class="k">L3_matrix_sea_clocks.md</span>, <span class="k">L4_new_maths_prior_art.md</span>, <span class="k">P_pipeline.md</span>, <span class="k">W_watch_phase1.md</span>. Scratch scripts are under <span class="k">scratch/</span>; each carries its name and kill line. Flock code: <span class="k">fl_math_v1.js</span>, <span class="k">fl_math_v2.js</span>, <span class="k">fl_check_01.js</span>, <span class="k">fl_check_02.js</span>.</p>
+<p>The prior-art summary names Kuramoto with delay (Yeung and Strogatz, Phys. Rev. Lett. 82, 648), Huygens' clocks on a common beam, collision models, and input–output theory in waveguide QED. Only titles and links were read this session; statements about their content are from memory and will be checked against the papers before the film quotes them. The Flock step is exactly a collision model, one step unitary to 2e-14, and it converges to the input–output equation at first order in step size.</p>
+</main>
+<footer>Jeromie Beasley · 16 November 2026 · AI-assisted · Page FLOCK-BREAKDOWN-V1</footer>
+</body></html>

@@ -1,0 +1,23 @@
+HOLDS  T1a |r0| = 1 (total_reflection)  worst 4.4e-16 (tol 1e-12)
+HOLDS  T1b r0 (+) (-r0 e^{-2kd}) = r from direct wave matching  worst 1.3e-15 (tol 1e-11)
+HOLDS  T1c |t|^2 = sin^2 phi / (sinh^2 kd + sin^2 phi)  worst 1.2e-15 (tol 1e-11)
+HOLDS  T1d |r|^2 = sinh^2 kd / (sinh^2 kd + sin^2 phi)  worst 1.1e-15 (tol 1e-11)
+HOLDS  T2a phi = pi/2: r = r0 tanh(kd)  worst 2.2e-16 (tol 1e-12)  r0 = (0.000, -1.000) = -i
+HOLDS  T2b phi = pi/2: |t| = sech(kd)  worst 3.3e-16 (tol 1e-12)
+HOLDS  T2c tanh(kd) = (zg-1)/(zg+1), zg = e^{2kd}  worst 2.2e-16 (tol 1e-12)
+HOLDS  T2d ln((1+rho)/(1-rho)) = 2kd (relative; kd up to 4)  worst 8.3e-15 (tol 1e-9)
+       sample kd = 0.7: film r = (0.000000, -0.604368), t = (0.796705, 0.000000); tanh = 0.604368, sech = 0.796705
+HOLDS  T3 Flock marks: face rho = +(za-1)/(za+1), -(zb-1)/(zb+1); gap rho = tanh(delta)  worst 1.1e-16 (tol 1e-12)
+       z=3,5: g=0.5164 delta=0.0000 marks rho=[0.500000, -0.666667] first pass=0.4166666667
+       z=5,7: g=1.0142 delta=0.1682 marks rho=[0.666667, 0.166667, -0.750000] first pass=0.2363040123
+       z=7,9: g=1.5119 delta=0.9730 marks rho=[0.750000, 0.750000, -0.800000] first pass=0.0689062500
+       z=9,13: g=2.2188 delta=1.4350 marks rho=[0.800000, 0.892679, -0.857143] first pass=0.0194005102
+HOLDS  T4 flux-normalised step: tau = sqrt(Y2/Y1) t = sqrt(1-Gamma^2) both ways, Gamma21 = -Gamma12, Gamma = tanh(ln(Y1/Y2)/2)  worst 5.0e-16 (tol 1e-12)
+HOLDS  T5a first pass amplitude = tau_a tau_g tau_b  worst 0.0e+0 (tol 1e-12)  first 0.2625000000, squared 0.0689062500
+HOLDS  T5b sum of all echoes back = tanh(ra/2 + delta - rb/2)  worst 6.7e-16 (tol 1e-9)  sum 0.6896551724, tanh 0.6896551724
+HOLDS  T5c sum of all echoes on = sech(ra/2 + delta - rb/2)  worst 2.7e-15 (tol 1e-9)  sum 0.7241379310, sech 0.7241379310
+HOLDS  T5d no gap: echoes back sum to (zb... ) tanh((ra-rb)/2) = (za-zb)/(za+zb) (stack_telescopes / directed_composite)  worst 1.9e-16 (tol 1e-9)  sum -0.1250000000, (za-zb)/(za+zb) -0.1250000000
+NOTE   T6 arm-arm marks negated (kick B, z = 7,9,11): largest change in any ball light at t = 5,10,20,40: 1.90e-1; books 1.000000000000 and 1.000000000000
+       as built   t=40: 0.013797 0.205288 0.055191
+       negated    t=40: 0.022994 0.014877 0.030999
+all lines hold

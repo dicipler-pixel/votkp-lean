@@ -1,0 +1,8 @@
+torque -1: 8 coincide of 38 heavy unequal-rate peak pairs = 0.211
+torque 0: 18 coincide of 46 heavy unequal-rate peak pairs = 0.391
+torque 1: 33 coincide of 132 heavy unequal-rate peak pairs = 0.250
+gamma 0.3: 29 of 118 = 0.246
+gamma 0.6: 8 of 26 = 0.308
+gamma 1: 18 of 56 = 0.321
+gamma 2: 4 of 16 = 0.250
+verdict: linear mixing (torque 0 fraction 0.391 >= half of torque 1 fraction 0.250)

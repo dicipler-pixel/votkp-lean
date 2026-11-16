@@ -1,0 +1,6 @@
+n=0 h=0.005  tau_eff = (n+1)h = 0.0050  predicted Re lambda = 2.4999e-3  measured = 2.5000e-3  relative difference 0.00 percent  agrees  (run length 1500)
+n=10 h=0.005  tau_eff = (n+1)h = 0.0550  predicted Re lambda = 2.7403e-2  measured = 2.7406e-2  relative difference 0.01 percent  agrees  (run length 511)
+n=40 h=0.005  tau_eff = (n+1)h = 0.2050  predicted Re lambda = 9.7816e-2  measured = 9.7894e-2  relative difference 0.08 percent  agrees  (run length 143)
+n=200 h=0.005  tau_eff = (n+1)h = 1.0050  predicted Re lambda = 2.6772e-1  measured = 2.6821e-1  relative difference 0.18 percent  agrees  (run length 52)
+n=0 h=0.01  tau_eff = (n+1)h = 0.0100  predicted Re lambda = 4.9994e-3  measured = 4.9997e-3  relative difference 0.01 percent  agrees  (run length 1500)
+n=0 h=0.0025  tau_eff = (n+1)h = 0.0025  predicted Re lambda = 1.2500e-3  measured = 1.2500e-3  relative difference 0.00 percent  agrees  (run length 1500)

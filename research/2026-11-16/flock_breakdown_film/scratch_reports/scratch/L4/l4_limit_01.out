@@ -1,0 +1,38 @@
+A. closed form against FL.step (torque 0, push static, gamma = 0.6, two ports on A), psi_A at t = 0.8 and t = 1.5
+  h=0.100000  link samples AB 5+5  |psi_A - exact| at 0.8: 3.011e-3  at 1.5: 4.151e-3  | light decay rate of A (2 ports) 1.212195567  per port 0.606097783  discrete closed form per port 0.606097783  gamma = 0.6  (rate/port - gamma)/h = 0.06098 ; gamma^2/3 = 0.12000
+  h=0.050000  link samples AB 10+10  |psi_A - exact| at 0.8: 1.495e-3  at 1.5: 2.061e-3  ratios 2.014, 2.014  | light decay rate of A (2 ports) 1.206048441  per port 0.603024221  discrete closed form per port 0.603024221  gamma = 0.6  (rate/port - gamma)/h = 0.06048 ; gamma^2/3 = 0.12000
+  h=0.025000  link samples AB 20+20  |psi_A - exact| at 0.8: 7.451e-4  at 1.5: 1.027e-3  ratios 2.007, 2.007  | light decay rate of A (2 ports) 1.203012055  per port 0.601506027  discrete closed form per port 0.601506027  gamma = 0.6  (rate/port - gamma)/h = 0.06024 ; gamma^2/3 = 0.12000
+  h=0.012500  link samples AB 40+40  |psi_A - exact| at 0.8: 3.719e-4  at 1.5: 5.125e-4  ratios 2.003, 2.004  | light decay rate of A (2 ports) 1.201503007  per port 0.600751503  discrete closed form per port 0.600751503  gamma = 0.6  (rate/port - gamma)/h = 0.06012 ; gamma^2/3 = 0.12000
+  h=0.006250  link samples AB 80+80  |psi_A - exact| at 0.8: 1.858e-4  at 1.5: 2.560e-4  ratios 2.002, 2.002  | light decay rate of A (2 ports) 1.200750751  per port 0.600375375  discrete closed form per port 0.600375375  gamma = 0.6  (rate/port - gamma)/h = 0.06006 ; gamma^2/3 = 0.12000
+  h=0.003125  link samples AB 160+160  |psi_A - exact| at 0.8: 9.286e-5  at 1.5: 1.279e-4  ratios 2.001, 2.001  | light decay rate of A (2 ports) 1.200375188  per port 0.600187594  discrete closed form per port 0.600187594  gamma = 0.6  (rate/port - gamma)/h = 0.06003 ; gamma^2/3 = 0.12000
+
+B. one port alone into an endless link (scratch, the same rotation as fl_math_v1.js line 79 with nothing arriving): p <- cos(sqrt(gamma h)) p
+  gamma=0.1 h=0.01  amplitude decay rate 0.05000834  gamma/2 = 0.05000000  difference/h = 0.000834  gamma^2/12 = 0.000833
+  gamma=0.1 h=0.005  amplitude decay rate 0.05000417  gamma/2 = 0.05000000  difference/h = 0.000833  gamma^2/12 = 0.000833
+  gamma=0.1 h=0.0025  amplitude decay rate 0.05000208  gamma/2 = 0.05000000  difference/h = 0.000833  gamma^2/12 = 0.000833
+  gamma=0.6 h=0.01  amplitude decay rate 0.30030048  gamma/2 = 0.30000000  difference/h = 0.030048  gamma^2/12 = 0.030000
+  gamma=0.6 h=0.005  amplitude decay rate 0.30015012  gamma/2 = 0.30000000  difference/h = 0.030024  gamma^2/12 = 0.030000
+  gamma=0.6 h=0.0025  amplitude decay rate 0.30007503  gamma/2 = 0.30000000  difference/h = 0.030012  gamma^2/12 = 0.030000
+  gamma=2 h=0.01  amplitude decay rate 1.00335122  gamma/2 = 1.00000000  difference/h = 0.335122  gamma^2/12 = 0.333333
+  gamma=2 h=0.005  amplitude decay rate 1.00167112  gamma/2 = 1.00000000  difference/h = 0.334225  gamma^2/12 = 0.333333
+  gamma=2 h=0.0025  amplitude decay rate 1.00083445  gamma/2 = 1.00000000  difference/h = 0.333778  gamma^2/12 = 0.333333
+
+C. full nonlinear step (torque on), geometry with link lengths that are whole numbers of steps (z = e, e^2): light in B and tilt of A at t = 1.8; successive differences and their ratios
+  first face on link B-C at s = 0.6896 (its echo reaches B after t = 1 + 1.379, so the readout at 1.8 is free of it)
+  h=0.100000  light in B 0.068625051  tilt A 0.389350975  books 1.0000000000000
+  h=0.050000  light in B 0.068209761  tilt A 0.399617754  books 1.0000000000000
+  h=0.025000  light in B 0.068010709  tilt A 0.404873777  books 1.0000000000000  diff ratios: light 2.086, tilt 1.953
+  h=0.012500  light in B 0.067913332  tilt A 0.407534554  books 1.0000000000000  diff ratios: light 2.044, tilt 1.975
+  h=0.006250  light in B 0.067865182  tilt A 0.408873402  books 1.0000000000000  diff ratios: light 2.022, tilt 1.987
+  h=0.003125  light in B 0.067841241  tilt A 0.409544974  books 1.0000000000000  diff ratios: light 2.011, tilt 1.994
+
+D. the shipped geometry (z = 3, 5, 7; link lengths are rounded to whole steps): light in B at t = 6
+  h=0.02  light in B 0.0995089
+  h=0.01  light in B 0.1030107  change 3.50e-3
+  h=0.005  light in B 0.1017584  change -1.25e-3
+  h=0.0025  light in B 0.1020560  change 2.98e-4
+  h=0.00125  light in B 0.1018631  change -1.93e-4
+
+real	0m3.972s
+user	0m4.136s
+sys	0m0.042s
