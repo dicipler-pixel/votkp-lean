@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Moving Matrix of Balls, Glued — Jeromie Beasley</title>
+<style>
+:root{--void:#05070b;--panel:rgba(9,13,20,.84);--edge:#1f2a38;--ink:#dfe7ef;--dim:#8a9aab;--faint:#5d6e84;--gold:#f2c14e;--cyan:#63d3ff;--rose:#ff6fae;--hyp:#b58cff;
+--head:"Chakra Petch","Segoe UI",system-ui,sans-serif;--body:"Inter Tight",system-ui,-apple-system,sans-serif;--mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;color-scheme:dark}
+html,body{height:100%}body{margin:0;background:var(--void);color:var(--ink);font-family:var(--body);font-size:13px;overflow:hidden}
+#stage{position:fixed;inset:0;width:100%;height:100%;touch-action:none;cursor:grab}#stage:active{cursor:grabbing}
+.panel{position:fixed;top:12px;left:12px;width:390px;max-height:calc(100% - 24px);overflow:auto;background:var(--panel);border:1px solid var(--edge);border-radius:8px;padding:14px 14px 12px;backdrop-filter:blur(6px);display:grid;gap:10px;box-sizing:border-box;scrollbar-width:thin}
+@media (max-width:640px){.panel{top:auto;bottom:8px;left:8px;right:8px;width:auto;max-height:46%}}
+body.clean .panel{display:none}
+#back{position:fixed;right:12px;bottom:12px;display:none;font-size:11px;opacity:.4}body.clean #back{display:block}
+h1{font-family:var(--head);font-weight:600;font-size:16px;letter-spacing:.08em;text-transform:uppercase;margin:0}
+.by{font-family:var(--mono);font-size:10.5px;color:var(--faint);letter-spacing:.04em;margin-top:3px}
+.what{color:var(--dim);line-height:1.45;margin:0}
+button{font:inherit;color:var(--ink);background:#101824;border:1px solid var(--edge);border-radius:5px;padding:4px 9px;cursor:pointer;font-size:12px}
+button:hover{border-color:var(--cyan)}button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+.row{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.ctl{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px 10px}
+.ctl label{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 6px;font-size:11.5px;color:var(--dim)}
+.ctl label output{font-family:var(--mono);color:var(--ink)}
+.ctl input[type=range]{grid-column:1/-1;width:100%;accent-color:var(--cyan)}
+.clock{font-family:var(--mono);font-size:12px;color:var(--gold)}
+.sec{font-family:var(--head);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);border-top:1px solid var(--edge);padding-top:8px}
+.law{padding:5px 0;border-bottom:1px solid rgba(31,42,56,.6)}
+.law .ln{display:flex;justify-content:space-between;gap:10px;font-size:12px;color:var(--dim);align-items:baseline}
+.law .ln b{font-family:var(--mono);font-weight:400;color:var(--ink);text-align:right;font-size:11.5px;font-variant-numeric:tabular-nums;white-space:pre-wrap;min-width:40%}
+.law .ln i{font-style:normal}
+.law .ch{font-size:10.5px;color:var(--faint);line-height:1.7;margin-top:1px}
+.chip{display:inline-block;font-family:var(--mono);font-size:9.5px;letter-spacing:.03em;padding:0 5px;border-radius:3px;margin-right:4px;background:#12283a;color:var(--cyan);border:1px solid #1d4660;white-space:nowrap}
+.chip.p{background:#1d2a1c;color:#9be28a;border-color:#2f5a2a}.chip.c{background:#2b2613;color:var(--gold);border-color:#5c4d1c}
+.chip.r{background:#221a2a;color:#d9b8ff;border-color:#4a3a66}.chip.d{background:#1a1f27;color:var(--dim);border-color:#39465a}
+.chip.h{background:transparent;color:var(--hyp);border:1px dashed var(--hyp)}
+#hypbox{border:1px dashed var(--hyp);border-radius:6px;padding:6px 9px 4px}#hypbox .sec{border:0;padding:0;color:var(--hyp)}
+details{color:var(--dim);font-size:11.5px;line-height:1.5}details summary{cursor:pointer;color:var(--ink);font-size:12px}details ul{margin:6px 0 0;padding-left:16px}
+.legend{font-size:11px;color:var(--dim);line-height:1.6}.legend span{display:inline-block;width:9px;height:9px;border-radius:50%;margin:0 4px 0 8px;vertical-align:-1px}
+</style></head><body>
+<canvas id="stage" aria-label="Three-dimensional view of one ball; drag to turn, scroll or pinch to zoom"></canvas>
+<div class="panel" id="panel">
+  <div><h1>The Moving Matrix of Balls</h1><div class="by">Jeromie Beasley · v2 · glued at the hypersurface · 15 Nov 2026 · AI-assisted</div></div>
+  <p class="what">One Poincaré ball in the peel (Smith) coordinate. The centre cell of the tree is bounded by six faces, each halfway along one peel step; the neighbouring cells carry their own faces further out. Light leaves the centre as geodesic rays: a broadcast in every direction, and a fan about each arm that spans the edge of its window. At each face a ray divides into a returned part and a crossing part by the step law, bends by the conserved a sin²θ, or is returned whole past the critical angle. Along each arm the layers are summed coherently. Every part runs on one clock, and every number below is recomputed on each frame. This page is an explorer of checked formulas, not a test of them.</p>
+  <div class="row"><button id="play">Pause</button><button id="reset">Reset τ</button><span class="clock">τ = <span id="o_tau">0.00</span></span><button id="hypt" aria-pressed="true">Hypothesis layer: shown</button><button id="sig">Admittance: falls outward</button></div>
+  <div class="ctl">
+    <label>Clock speed <output id="o_speed">1.0</output><input id="speed" type="range" min="0.1" max="4" step="0.1" value="1"></label>
+    <label>Drive depth A <output id="o_amp">0.35</output><input id="amp" type="range" min="0" max="0.6" step="0.01" value="0.35"></label>
+    <label>Broadcast rays <output id="o_rays">36</output><input id="rays" type="range" min="0" max="140" step="4" value="36"></label>
+  </div>
+  <div class="row"><span style="color:var(--faint);font-size:11px">Camera only:</span><button data-view="whole">Whole ball</button><button data-view="cell">Centre cell</button><button data-view="arm">Down arm K</button><button data-view="rim">Rim</button><button id="clean">Clean view</button></div>
+  <div class="legend">Light by the layer it is in:<span style="background:#ffe09e"></span>centre cell<span style="background:#66d9ff"></span>first<span style="background:#73ff99"></span>second<span style="background:#e6f280"></span>third<span style="background:#ff6ba8"></span>returned whole.<br>On each arm: white markers run outward, cyan markers return; brightness is the flux carried. Faint white square paths: the four-step loop of each pair of arms, repeated. Thin white ring on a face: edge of the window inside which a centre ray crosses. Markers move at one hyperbolic speed and fade close to the rim, where the ball compresses distance (drawing conventions).</div>
+  <div class="sec">The moving matrix on the glued balls</div>
+  <p class="what" style="font-size:11.5px;margin:4px 0">Every cell of the tree is a ball: the centre, its six neighbours and their thirty, 37 in all. Two balls are glued where they share a face, halfway along the step between them, and that face is the only way anything passes from one to the other. One matrix H = D + A moves everything: a photon kicked into the centre ball hops across the faces, the electron sea (the ground below the gap) moves under the same matrix, and each ball turns under the light, the sea and its faces, passing on all it takes. The glue discs show what each face holds (gold) and what is crossing it (white); the bright lines trace all the light that has crossed so far; the arrows are each ball’s field. The faces breathe on the page clock, and the work they do is kept in the books.</p>
+  <div class="row"><button id="m_on" aria-pressed="true">Moving matrix: running</button><button id="m_photon">Kick in a photon</button><button id="m_sea">Sea pushes back: yes</button><button id="m_restart">Restart from the glued rest</button></div>
+  <div id="mm"></div>
+  <div class="sec">Laws, live</div>
+  <div id="laws"></div>
+  <div id="hypbox"><div class="sec">His picture, shown as a hypothesis</div>
+    <p class="what" style="font-size:11.5px;margin:4px 0">Hypothesis (Jeromie Beasley): light drives through boundary layers; it is held between electron layers and is returned again and again at the hypersurface, or is absorbed and emitted further down; the pressure of light and the rotation inside and outside the layers matter; the electron sea is ground, follows the light and keeps a record of each return; balls join at levels and always keep a gap layer. He names this his Snell law at the hypersurface together with the exclusion principle. Drawn in violet and dashed: the gap between faces that stand apart, and the record of landings on the rim. Absorption with later emission is not modelled in this version.</p>
+    <div id="hyp"></div></div>
+  <details><summary>What is not claimed</summary><ul>
+    <li>The ball is the peel coordinate of the tree. It is not a spacetime, and no spacetime metric is used. The Poincaré metric itself is not formalised in Lean; only (1 + Γ)/(1 − Γ) = z is.</li>
+    <li>Structural comparison only: the step and refraction formulas have the same algebraic form as the Fresnel and Snell laws of optics.</li>
+    <li>Reading a peel step as an admittance step (Y₁/Y₂ = z) and a = Y² are readings, not theorems. The button gives the opposite orientation.</li>
+    <li>Lean covers the algebra of the squared refraction law; the card B30 gives the path statement. The geodesic rays and the incidence relation are numerical checks made for this page.</li>
+    <li>Rays off the arms divide by flux, without phase. Coherent echoes are summed on the arms only, with one declared phase φ(τ) for every layer.</li>
+    <li>The faces move on a declared schedule. No law of motion, no retardation and no frequency shift from the motion of a face is modelled.</li>
+    <li>Below the wall the cells of the tree overlap, so the layer label belongs to the ray, not to the point.</li>
+    <li>The push 2R cos²θ is a reading. Momentum carried on by the crossing light is not modelled. Maxwell's result in Lean is the stress of a wave front; no energy-flux vector is formalised there.</li>
+    <li>Thomas turn: Lean at ratios 5 and 7 for equal steps; unequal steps are numerical checks. It is a turn of the frame; nothing is claimed about polarisation.</li>
+    <li>Lean was not run again for this page. A chip names the theorem in his repository.</li>
+  </ul></details>
+  <div class="by">Drag to turn · scroll or pinch to zoom · check script: check_surprise_v1.js</div>
+</div>
+<button id="back">show panel</button>
+<!--THREE-->
+<!--KIT-->
+<script>
+/*MATH*/
+</script>
+<script>
+/*APP*/
+</script>
+</body></html>

@@ -1,0 +1,15 @@
+{
+ "ms_600_frames": 9254,
+ "fps": 4.5,
+ "st": {
+  "books": -6.880052971780515e-9,
+  "work": 0.06171905616100126,
+  "faces": 4.103738854579605,
+  "nn": {
+   "lhs": 4.7997255702040937e-29,
+   "rhs": 1.6068110563220484e-28
+  }
+ },
+ "rows": "balls glued at shared faces\n37 balls, 36 faces; matrix clock τ − 0.00 = 10.35\nMODEL CHOICE c₀ = 0.5, ω = 2, κ = 0.25; one ball per cell, one link per shared face\neach face is halfway: the link midpoint lies on the shared face\nyes, for all 36 (checked to 1e-14 in t_glue1.js)\nCHECKED\nlight, faces (glue), sea from start\n-0.3270   4.1037   9.2208\nLEAN · connection energy (block form) faces κ|dᵢ − Rᵢⱼdⱼ|²\nbooks: change − work by the breathing faces − photons sent\n-6.9e-9   (work so far 0.0617)\nCHECKED · live the faces move on the page clock; what they put in is recorded\nconnection energy at the glued start: ⅛‖[H,H*]‖² | Σ faces\n4.8e-29 | 1.6e-28\nLEAN · NNCE the glued rest holds no mismatch on any face\nlight norm − 1; ball in − out, worst\n-4.5e-9;  1.4e-16\nPROVED · ḋ·F = 0CHECKED · live\nclock limit τ̇² ≤ 4gS, largest ratio over the balls\n0.00114\nPROVED · Offset Speed Limit g = ‖PH(1−P)‖² = 10.6765\nlight reached the ball before the sea answered\n28 of 36   (ball: light / sea  1: 0.10 / 1.97   7: 0.62 / 0.85   8: 0.68 / 0.62   20: 0.75 / 1.12)\nMEASURED first t with |ψᵢ|² > 10⁻³ / |Δνᵢ| > 10⁻³",
+ "errs": []
+}
