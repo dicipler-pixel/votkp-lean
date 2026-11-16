@@ -1,0 +1,42 @@
+{
+ "_about": "SF-RAW-DATA-V3. Raw data for the heliosphere ball, exactly as fetched on 16 Nov 2026. Jeromie Beasley. AI-assisted. Replace any value here and the page follows.",
+ "sources": {
+  "elements": "JPL Solar System Dynamics, Approximate Positions of the Planets, Table 1 (Keplerian elements and rates, J2000 ecliptic, valid 1800 to 2050). https://ssd.jpl.nasa.gov/planets/approx_pos.html",
+  "factsheet": "NASA NSSDCA Planetary Fact Sheet (last updated 13 November 2026) and the single-body fact sheets for the Sun, Jupiter, Saturn, Uranus, Neptune; Mercury, Venus, Earth, Mars sheets fetched 15 Nov 2026. https://nssdc.gsfc.nasa.gov/planetary/factsheet/",
+  "poles": "IAU Working Group on Cartographic Coordinates and Rotational Elements 2009 (Archinal et al. 2011), as tabulated at https://en.wikipedia.org/wiki/Poles_of_astronomical_bodies",
+  "edge": "NASA Voyager interstellar mission page: termination shock Voyager 1 at 94 AU (Dec 2004), Voyager 2 at 84 AU (Aug 2007); Voyager 1 left the heliosphere at about 122 AU (25 Aug 2012). https://science.nasa.gov/mission/voyager/interstellar-mission",
+  "wind": "Winslow et al., MESSENGER: mean ram pressure of the Sun's wind at Mercury 14.3 nPa; measured field edge of Mercury 1.45 radii. Earth's typical field edge 10 radii (Wikipedia Magnetopause table). Fetched 15 Nov 2026."
+ },
+ "constants": { "AU_km": 149597870.7, "c_km_s": 299792.458, "earth_obliquity_deg": 23.44, "sun_luminosity_W": 3.828e26,
+  "ram_pressure_at_mercury_Pa": 14.3e-9, "mercury_mean_distance_km": 57.9e6,
+  "shock_AU": [84, 94], "rim_AU": 122 },
+ "sun": { "name": "Sun", "mass_1e24kg": 1988400, "Req_km": 695700, "flattening": 0.00005, "rot_h": 609.12, "obliquity_deg": 7.25, "pole_ra_dec": [286.13, 63.87],
+  "dipole_G": 1.5, "dipole_note": "polar field 1 to 2 gauss; 1.5 used", "col": [1, 0.86, 0.45] },
+ "planets": [
+  { "name": "Mercury", "mass_1e24kg": 0.330, "Req_km": 2440.5, "flattening": 0.0009, "rot_h": 1407.6, "obliquity_deg": 0.034, "pole_ra_dec": [281.01, 61.41],
+    "peri_1e6km": 46.0, "aph_1e6km": 69.8, "dipole_G": 0.002, "dipole_tilt_deg": 0.0, "dipole_offset_R": 0.17, "offset_dir": "north", "edge_measured_R": 1.45, "col": [0.75, 0.72, 0.68],
+    "el": [0.38709927, 0.20563593, 7.00497902, 252.25032350, 77.45779628, 48.33076593], "rate": [0.00000037, 0.00001906, -0.00594749, 149472.67411175, 0.16047689, -0.12534081] },
+  { "name": "Venus", "mass_1e24kg": 4.87, "Req_km": 6051.8, "flattening": 0.0, "rot_h": -5832.6, "obliquity_deg": 177.36, "pole_ra_dec": [92.76, -67.16],
+    "peri_1e6km": 107.5, "aph_1e6km": 108.9, "dipole_G": 0, "dipole_tilt_deg": 0, "dipole_offset_R": 0, "col": [1, 0.86, 0.55],
+    "el": [0.72333566, 0.00677672, 3.39467605, 181.97909950, 131.60246718, 76.67984255], "rate": [0.00000390, -0.00004107, -0.00078890, 58517.81538729, 0.00268329, -0.27769418] },
+  { "name": "Earth", "mass_1e24kg": 5.97, "Req_km": 6378.137, "flattening": 0.003353, "rot_h": 23.9345, "obliquity_deg": 23.44, "pole_ra_dec": [0, 90],
+    "peri_1e6km": 147.1, "aph_1e6km": 152.1, "dipole_G": 0.306, "dipole_tilt_deg": 9.35, "dipole_offset_R": 0.076, "edge_measured_R": 10, "col": [0.39, 0.75, 1],
+    "el_note": "elements are those of the Earth-Moon barycentre",
+    "el": [1.00000261, 0.01671123, -0.00001531, 100.46457166, 102.93768193, 0.0], "rate": [0.00000562, -0.00004392, -0.01294668, 35999.37244981, 0.32327364, 0.0] },
+  { "name": "Mars", "mass_1e24kg": 0.642, "Req_km": 3396.2, "flattening": 0.00589, "rot_h": 24.6229, "obliquity_deg": 25.19, "pole_ra_dec": [317.68, 52.89],
+    "peri_1e6km": 206.7, "aph_1e6km": 249.3, "dipole_G": 0, "dipole_tilt_deg": 0, "dipole_offset_R": 0, "col": [1, 0.5, 0.4],
+    "el": [1.52371034, 0.09339410, 1.84969142, -4.55343205, -23.94362959, 49.55953891], "rate": [0.00001847, 0.00007882, -0.00813131, 19140.30268499, 0.44441088, -0.29257343] },
+  { "name": "Jupiter", "mass_1e24kg": 1898.13, "Req_km": 71492, "flattening": 0.06487, "rot_h": 9.9250, "obliquity_deg": 3.13, "pole_ra_dec": [268.06, 64.50],
+    "peri_1e6km": 740.6, "aph_1e6km": 816.4, "dipole_G": 4.30, "dipole_tilt_deg": 9.4, "dipole_offset_R": 0.119, "col": [0.92, 0.78, 0.6],
+    "el": [5.20288700, 0.04838624, 1.30439695, 34.39644051, 14.72847983, 100.47390909], "rate": [-0.00011607, -0.00013253, -0.00183714, 3034.74612775, 0.21252668, 0.20469106] },
+  { "name": "Saturn", "mass_1e24kg": 568.32, "Req_km": 60268, "flattening": 0.09796, "rot_h": 10.656, "obliquity_deg": 26.73, "pole_ra_dec": [40.59, 83.54],
+    "peri_1e6km": 1357.6, "aph_1e6km": 1506.5, "dipole_G": 0.215, "dipole_tilt_deg": 0.0, "dipole_offset_R": 0.038, "col": [0.95, 0.87, 0.62],
+    "el": [9.53667594, 0.05386179, 2.48599187, 49.95424423, 92.59887831, 113.66242448], "rate": [-0.00125060, -0.00050991, 0.00193609, 1222.49362201, -0.41897216, -0.28867794] },
+  { "name": "Uranus", "mass_1e24kg": 86.811, "Req_km": 25559, "flattening": 0.02293, "rot_h": -17.24, "obliquity_deg": 97.77, "pole_ra_dec": [257.31, -15.18],
+    "peri_1e6km": 2732.7, "aph_1e6km": 3001.4, "dipole_G": 0.228, "dipole_tilt_deg": 58.6, "dipole_offset_R": 0.352, "col": [0.6, 0.9, 0.93],
+    "el": [19.18916464, 0.04725744, 0.77263783, 313.23810451, 170.95427630, 74.01692503], "rate": [-0.00196176, -0.00004397, -0.00242939, 428.48202785, 0.40805281, 0.04240589] },
+  { "name": "Neptune", "mass_1e24kg": 102.409, "Req_km": 24764, "flattening": 0.01708, "rot_h": 16.11, "obliquity_deg": 28.32, "pole_ra_dec": [299.33, 42.95],
+    "peri_1e6km": 4471.1, "aph_1e6km": 4558.9, "dipole_G": 0.142, "dipole_tilt_deg": 46.9, "dipole_offset_R": 0.485, "col": [0.4, 0.55, 1],
+    "el": [30.06992276, 0.00859048, 1.77004347, -55.12002969, 44.96476227, 131.78422574], "rate": [0.00026291, 0.00005105, 0.00035372, 218.45945325, -0.32241464, -0.00508664] }
+ ]
+}

@@ -1,0 +1,323 @@
+{
+ "date": "2026-11-16 12:00 UT",
+ "jd": 2461361,
+ "range": [
+  {
+   "name": "Mercury",
+   "jplMin": 46,
+   "sheetPeri": 46,
+   "jplMax": 69.8,
+   "sheetAph": 69.8,
+   "ok": true
+  },
+  {
+   "name": "Venus",
+   "jplMin": 107.5,
+   "sheetPeri": 107.5,
+   "jplMax": 108.9,
+   "sheetAph": 108.9,
+   "ok": true
+  },
+  {
+   "name": "Earth",
+   "jplMin": 147.1,
+   "sheetPeri": 147.1,
+   "jplMax": 152.1,
+   "sheetAph": 152.1,
+   "ok": true
+  },
+  {
+   "name": "Mars",
+   "jplMin": 206.7,
+   "sheetPeri": 206.7,
+   "jplMax": 249.2,
+   "sheetAph": 249.3,
+   "ok": true
+  },
+  {
+   "name": "Jupiter",
+   "jplMin": 740.7,
+   "sheetPeri": 740.6,
+   "jplMax": 816,
+   "sheetAph": 816.4,
+   "ok": true
+  },
+  {
+   "name": "Saturn",
+   "jplMin": 1350,
+   "sheetPeri": 1357.6,
+   "jplMax": 1503.3,
+   "sheetAph": 1506.5,
+   "ok": false
+  },
+  {
+   "name": "Uranus",
+   "jplMin": 2735,
+   "sheetPeri": 2732.7,
+   "jplMax": 3006.2,
+   "sheetAph": 3001.4,
+   "ok": true
+  },
+  {
+   "name": "Neptune",
+   "jplMin": 4459.7,
+   "sheetPeri": 4471.1,
+   "jplMax": 4537.1,
+   "sheetAph": 4558.9,
+   "ok": false
+  }
+ ],
+ "obliquity": [
+  {
+   "name": "Sun",
+   "fromPole": 7.25,
+   "sheet": 7.25,
+   "diff": 0
+  },
+  {
+   "name": "Mercury",
+   "fromPole": 0.04,
+   "sheet": 0.034,
+   "diff": 0
+  },
+  {
+   "name": "Venus",
+   "fromPole": 177.36,
+   "sheet": 177.36,
+   "diff": 0
+  },
+  {
+   "name": "Earth",
+   "fromPole": 23.44,
+   "sheet": 23.44,
+   "diff": 0
+  },
+  {
+   "name": "Mars",
+   "fromPole": 25.19,
+   "sheet": 25.19,
+   "diff": 0
+  },
+  {
+   "name": "Jupiter",
+   "fromPole": 3.12,
+   "sheet": 3.13,
+   "diff": -0.01
+  },
+  {
+   "name": "Saturn",
+   "fromPole": 26.73,
+   "sheet": 26.73,
+   "diff": 0
+  },
+  {
+   "name": "Uranus",
+   "fromPole": 82.23,
+   "sheet": 97.77,
+   "diff": -15.54
+  },
+  {
+   "name": "Neptune",
+   "fromPole": 28.32,
+   "sheet": 28.32,
+   "diff": 0
+  }
+ ],
+ "share": [
+  {
+   "name": "Mercury",
+   "flat": 6.536116658816246e-10,
+   "ball": 6.536116658816235e-10,
+   "rel": 1.5543122344752192e-15
+  },
+  {
+   "name": "Venus",
+   "flat": 7.866965529015814e-10,
+   "ball": 7.866965529015922e-10,
+   "rel": 1.3766765505351941e-14
+  },
+  {
+   "name": "Earth",
+   "flat": 4.6465522560802914e-10,
+   "ball": 4.646552256080316e-10,
+   "rel": 5.329070518200751e-15
+  },
+  {
+   "name": "Mars",
+   "flat": 4.9693901427196156e-11,
+   "ball": 4.969390142719629e-11,
+   "rel": 2.7755575615628914e-15
+  },
+  {
+   "name": "Jupiter",
+   "flat": 2.0176675701026732e-9,
+   "ball": 2.0176675701026757e-9,
+   "rel": 1.2212453270876722e-15
+  },
+  {
+   "name": "Saturn",
+   "flat": 4.5716104393103657e-10,
+   "ball": 4.571610439310369e-10,
+   "rel": 6.661338147750939e-16
+  },
+  {
+   "name": "Uranus",
+   "flat": 1.9334732936524433e-11,
+   "ball": 1.9334732936524416e-11,
+   "rel": 8.881784197001252e-16
+  },
+  {
+   "name": "Neptune",
+   "flat": 7.674843453764556e-12,
+   "ball": 7.674843453764556e-12,
+   "rel": 0
+  }
+ ],
+ "earth": {
+  "rAU": 0.9889470129482748,
+  "watts": 177870020362753570,
+  "perM2": 1391.762706155138
+ },
+ "books": {
+  "lightSum": 4.45649553624243e-9,
+  "rimLight": 0.9999999955435045,
+  "windSum": 0.00000674334401311644,
+  "rimWind": 0.9999932566559869
+ },
+ "edges": [
+  {
+   "name": "Mercury",
+   "edgeR": 1.2,
+   "measured": 1.45
+  },
+  {
+   "name": "Venus",
+   "edgeR": null,
+   "measured": null
+  },
+  {
+   "name": "Earth",
+   "edgeR": 9.38,
+   "measured": 10
+  },
+  {
+   "name": "Mars",
+   "edgeR": null,
+   "measured": null
+  },
+  {
+   "name": "Jupiter",
+   "edgeR": 39.65,
+   "measured": null
+  },
+  {
+   "name": "Saturn",
+   "edgeR": 17.67,
+   "measured": null
+  },
+  {
+   "name": "Uranus",
+   "edgeR": 22.94,
+   "measured": null
+  },
+  {
+   "name": "Neptune",
+   "edgeR": 22.61,
+   "measured": null
+  }
+ ],
+ "leader": {
+  "sunMassShare": 0.9986602388285112,
+  "baryInSunRadii": 1.0981003074747433,
+  "lead": [
+   0.49999,
+   0.000004,
+   0.000174,
+   0.000142,
+   0.000001,
+   0.485667,
+   0.0139,
+   0.000076,
+   0.000045
+  ],
+  "gram": [
+   0.7563295189222615,
+   0.24358823009301833,
+   0.00008225098472020815
+  ]
+ },
+ "now": [
+  {
+   "name": "Mercury",
+   "AU": 0.3191,
+   "gamma": 0.002615,
+   "step": 0.00523,
+   "T": 0.99999316,
+   "lightMin": 2.65,
+   "lonDeg": 115.38
+  },
+  {
+   "name": "Venus",
+   "AU": 0.7211,
+   "gamma": 0.005911,
+   "step": 0.011822,
+   "T": 0.99996506,
+   "lightMin": 6,
+   "lonDeg": 67.81
+  },
+  {
+   "name": "Earth",
+   "AU": 0.9889,
+   "gamma": 0.008106,
+   "step": 0.016213,
+   "T": 0.99993429,
+   "lightMin": 8.22,
+   "lonDeg": 53.77
+  },
+  {
+   "name": "Mars",
+   "AU": 1.6102,
+   "gamma": 0.013199,
+   "step": 0.026399,
+   "T": 0.9998258,
+   "lightMin": 13.39,
+   "lonDeg": 107.73
+  },
+  {
+   "name": "Jupiter",
+   "AU": 5.3196,
+   "gamma": 0.043603,
+   "step": 0.087262,
+   "T": 0.99809877,
+   "lightMin": 44.24,
+   "lonDeg": 134.85
+  },
+  {
+   "name": "Saturn",
+   "AU": 9.421,
+   "gamma": 0.077221,
+   "step": 0.154751,
+   "T": 0.99403688,
+   "lightMin": 78.35,
+   "lonDeg": 12.47
+  },
+  {
+   "name": "Uranus",
+   "AU": 19.4276,
+   "gamma": 0.159243,
+   "step": 0.321219,
+   "T": 0.97464176,
+   "lightMin": 161.57,
+   "lonDeg": 63.19
+  },
+  {
+   "name": "Neptune",
+   "AU": 29.8766,
+   "gamma": 0.24489,
+   "step": 0.499939,
+   "T": 0.94002896,
+   "lightMin": 248.48,
+   "lonDeg": 2.92
+  }
+ ]
+}
