@@ -1,0 +1,26 @@
+R4 (written after NEVER-RULE-03 showed R3 misses exactly 55/21, 71/21, 75/29; so those three are FITTED, not tested):
+ non-torus NEVER iff  p/q = a +- 1/E,  a odd >= 3,  E = [e1, ..., e_2n] a continued fraction with EVEN entries, EVEN length,
+ the entries pairing up by sign (e1 e2 > 0, e3 e4 > 0, ...; the sign may change only between pairs), e1 > 0,
+ and for n = 1 the size clause a > e2.  No size clause is known for n >= 2 (none could be tested below p = 101).
+WHY THIS CHECK DECIDES IT: R4 is enumerated for all p <= 75 and compared knot by knot with NEVER-CENSUS-02.
+ What is a real test here: R4 must not predict never for any of the 250 turners (false positives), in particular the
+ unpaired sign patterns must all turn.   KILL: one false positive, or one never-turner outside R4.
+OPPOSITE (same kill): sign patterns that are NOT paired (a sign change inside a pair) predicted never.
+R4, n = 1 (= R3)                   predicts never for  32 knots (p <= 75): never  32, turn   0  []
+R4, n = 2                          predicts never for   3 knots (p <= 75): never   3, turn   0  []
+R4, n = 3                          predicts never for   0 knots (p <= 75): never   0, turn   0  []
+R4 all n: never-turners covered 35 of 35; missed []; false positives 0
+  n = 2 instances: [('55/21', (3, '-', [2, 2, -2, -2])), ('71/21', (3, '+', [2, 2, -2, -2])), ('75/29', (3, '-', [2, 2, 2, 2]))]
+
+OPPOSITE: unpaired sign patterns
+unpaired, n = 1 (b, c opposite sign) predicts never for  69 knots (p <= 75): never   8, turn  61  [('7/3', (3, '-', [2, -2])), ('11/3', (3, '+', [2, -2])), ('13/3', (5, '-', [2, -2])), ('17/3', (5, '+', [2, -2]))]
+unpaired, n = 2                    predicts never for  64 knots (p <= 75): never   8, turn  56  [('11/5', (3, '-', [2, -2, 2, -2])), ('19/5', (3, '+', [2, -2, 2, -2])), ('21/5', (5, '-', [2, -2, 2, -2])), ('29/5', (5, '+', [2, -2, 2, -2]))]
+
+R4 on the golden family [2,1^n,2] (membership only; verdicts from NEVER-GOLDEN-03 and the census):
+  n=2  13/5 = 3 - 1/[2, 2]   even entries True, length 2, paired True  -> R4 says NEVER
+  n=3  21/8 = 3 - 1/[2, 2, -2]   even entries True, length 3, paired False  -> R4 says TURN
+  n=5  55/21 = 3 - 1/[2, 2, -2, -2]   even entries True, length 4, paired True  -> R4 says NEVER
+  n=6  89/34 = 3 - 1/[2, 2, -2, -2, 2]   even entries True, length 5, paired False  -> R4 says TURN
+  n=8  233/89 = 3 - 1/[2, 2, -2, -2, 2, 2]   even entries True, length 6, paired True  -> R4 says NEVER
+
+R4 n = 2 predictions for 77 <= p <= 101 (untested except by NEVER-RULE-04, capped): [('97/21', (5, '-', [2, 2, -2, -2])), ('99/29', (3, '+', [2, 2, 2, 2]))]

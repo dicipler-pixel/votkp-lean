@@ -1,0 +1,11 @@
+WHY: exact integer polynomial identity, no matcher.  KILL: P_B(k) is not a constant multiple of (1 - m^2 k) times a power of k.
+  77/3  m = 13  P_B = 1 - 169*k   matches 1/m^2
+  79/3  m = 13  P_B = 1 - 169*k   matches 1/m^2
+  83/3  m = 14  P_B = 1 - 196*k   matches 1/m^2
+  85/3  m = 14  P_B = 1 - 196*k   matches 1/m^2
+  89/3  m = 15  P_B = 1 - 225*k   matches 1/m^2
+  91/3  m = 15  P_B = 1 - 225*k   matches 1/m^2
+  95/3  m = 16  P_B = 1 - 256*k   matches 1/m^2
+  97/3  m = 16  P_B = 1 - 256*k   matches 1/m^2
+  101/3  m = 17  P_B = 1 - 289*k   matches 1/m^2
+exact matches: 9 of 9

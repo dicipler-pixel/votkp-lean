@@ -1,0 +1,194 @@
+WHY THIS CHECK DECIDES IT
+ 1. EXACT LIMITS. k = v (t - 2), t = tr(ab) = s^2 + s^-2 - v. k stays finite as s -> infinity only if v ~ kappa/s^2
+    (type A) or t - 2 ~ kappa/s^2 (type B). Substituting each into the exact Riley polynomial (integer arithmetic,
+    no digits) and taking the leading coefficient in s gives a polynomial P_A(kappa), P_B(kappa) whose roots are ALL
+    candidate limits. Each irreducible factor is then matched to 4 sin^2(pi j/d)/m^2 at 60 digits (d <= 240, m <= 12,
+    smallest m first). A root of P is a limit of a REAL branch only if the branch is real; part 5 checks samples at
+    200 digits against the paper's own method.
+ 2. THE m^2. Two exact identities are proved with sympy: (i) v and t-2 are the two roots of X^2 + dM X + k = 0
+    (dM = 2 - s^2 - s^-2; this is the coordinator's k = -v(v + dM)); (ii) for c = ab or ab^-1,
+    tr[a,c^m] - 2 = S_(m-1)(tr c)^2 (tr[a,c] - 2), S the Chebyshev polynomial with S_(m-1)(2) = m.
+    Since tr[a,c] = tr[a,b] and tr c -> 2 in both limit types, the limit of 2 - tr[a,c^m] is m^2 kappa.
+    PREDICTION (written before the census run, read off p <= 41): for a presentation p/q (q odd) and r = q (type B) or
+    r = p - q (type A), if p = 2 r m +- 1 then the nonzero limits are EXACTLY 4 sin^2(pi j/(2r))/m^2, 0 < j < r, j = r mod 2.
+ 3. d = 2q, d = q, d = p, d = 2p are each counted against every nonzero limit factor of every presentation.
+KILL CONDITIONS
+ identities: sympy remainder not zero.   two-term prediction: one presentation with p = 2rm +- 1 whose exact nonzero
+ limit set differs from the predicted set.   d-candidates: a candidate is a rule only if it holds for every nonzero limit.
+ OPPOSITE of the two-term prediction (same kill): types swapped (r = q for type A, r = p - q for type B).
+
+IDENTITY (i):  v + (t-2) + dM = 0 ;  v (t-2) - k = 0 ;  tr(ab^-1) - 2 - v = 0
+IDENTITY (ii) m=1: tr[a,c^m]-2 - S_(m-1)(tr c)^2 (tr[a,c]-2) = 0 ; S_(m-1)(2) = 1
+IDENTITY (ii) m=2: tr[a,c^m]-2 - S_(m-1)(tr c)^2 (tr[a,c]-2) = 0 ; S_(m-1)(2) = 2
+IDENTITY (ii) m=3: tr[a,c^m]-2 - S_(m-1)(tr c)^2 (tr[a,c]-2) = 0 ; S_(m-1)(2) = 3
+IDENTITY (ii) m=4: tr[a,c^m]-2 - S_(m-1)(tr c)^2 (tr[a,c]-2) = 0 ; S_(m-1)(2) = 4
+IDENTITY (ii) m=5: tr[a,c^m]-2 - S_(m-1)(tr c)^2 (tr[a,c]-2) = 0 ; S_(m-1)(2) = 5
+IDENTITY (ii) m=6: tr[a,c^m]-2 - S_(m-1)(tr c)^2 (tr[a,c]-2) = 0 ; S_(m-1)(2) = 6
+identities HOLD (generic SL2 matrices, m = 1..6)
+
+presentations p/q, q odd, p <= 61: 394   (21 s)
+kinds of irreducible factor of the limit polynomials: {'clock value': 565, 'zero': 473}
+m of the clock-value factors: {1: 411, 2: 82, 3: 31, 4: 15, 5: 10, 6: 6, 7: 4, 8: 2, 9: 2, 10: 2}
+
+TWO-TERM PREDICTION p = 2 r m +- 1 (type, m, exact match): count
+   ('A', '>=4', True) 36
+   ('A', 1, True) 30
+   ('A', 2, True) 14
+   ('A', 3, True) 10
+   ('B', '>=4', True) 77
+   ('B', 1, True) 30
+   ('B', 2, True) 16
+   ('B', 3, True) 10
+   mismatches: 0 []
+OPPOSITE (types swapped) exact matches: {True: 89, False: 134}
+
+d-CANDIDATES over all 565 clock-value factors (candidate, holds): count
+   d = 2p                                   False 565
+   d = 2q (any of the 4 forms of q)         False 467
+   d = 2q (any of the 4 forms of q)         True  98
+   d = 2q (given q)                         False 492
+   d = 2q (given q)                         True  73
+   d = p                                    False 565
+   d = q (any form)                         False 493
+   d = q (any form)                         True  72
+   d divides 2(p-q)                         False 308
+   d divides 2(p-q)                         True  257
+   d divides 2q (given q)                   False 423
+   d divides 2q (given q)                   True  142
+   d divides 2q or 2(p-q)                   False 166
+   d divides 2q or 2(p-q)                   True  399
+
+presentation/type pairs with nonzero limits NOT covered by the two-term rule: 189 ; first 25:
+   11/7 cf [1, 1, 1, 3] type B  (d, m, j): [(6, 1, 1)]  []
+   13/5 cf [2, 1, 1, 2] type A  (d, m, j): [(6, 1, 1)]  [('multiplicity', 2, (6, 1, (1,)))]
+   17/7 cf [2, 2, 3] type B  (d, m, j): [(6, 1, 1)]  []
+   17/7 cf [2, 2, 3] type A  (d, m, j): [(4, 1, 1), (6, 1, 1)]  [('multiplicity', 2, (6, 1, (1,)))]
+   17/11 cf [1, 1, 1, 5] type B  (d, m, j): [(6, 1, 1)]  []
+   19/7 cf [2, 1, 2, 2] type A  (d, m, j): [(6, 1, 1)]  [('multiplicity', 2, (6, 1, (1,)))]
+   19/11 cf [1, 1, 2, 1, 2] type B  (d, m, j): [(4, 1, 1), (6, 1, 1)]  [('multiplicity', 2, (4, 1, (1,)))]
+   19/11 cf [1, 1, 2, 1, 2] type A  (d, m, j): [(6, 1, 1)]  [('multiplicity', 2, (6, 1, (1,)))]
+   21/13 cf [1, 1, 1, 1, 1, 2] type B  (d, m, j): [(6, 1, 1)]  [('multiplicity', 3, (6, 1, (1,)))]
+   23/9 cf [2, 1, 1, 4] type A  (d, m, j): [(6, 1, 1)]  [('multiplicity', 4, (6, 1, (1,)))]
+   23/13 cf [1, 1, 3, 3] type B  (d, m, j): [(4, 1, 1), (10, 1, 1), (10, 1, 3)]  [('multiplicity', 2, (4, 1, (1,)))]
+   23/13 cf [1, 1, 3, 3] type A  (d, m, j): [(4, 1, 1), (6, 1, 1)]  [('multiplicity', 2, (6, 1, (1,)))]
+   23/15 cf [1, 1, 1, 7] type B  (d, m, j): [(6, 1, 1)]  []
+   25/7 cf [3, 1, 1, 3] type B  (d, m, j): [(6, 2, 1)]  []
+   25/9 cf [2, 1, 3, 2] type A  (d, m, j): [(6, 1, 1)]  [('multiplicity', 2, (6, 1, (1,)))]
+   25/11 cf [2, 3, 1, 2] type B  (d, m, j): [(4, 1, 1), (6, 1, 1)]  [('multiplicity', 2, (4, 1, (1,)))]
+   25/11 cf [2, 3, 1, 2] type A  (d, m, j): [(4, 1, 1), (10, 1, 1), (10, 1, 3)]  [('multiplicity', 2, (10, 1, (1, 3)))]
+   27/11 cf [2, 2, 5] type B  (d, m, j): [(6, 1, 1)]  []
+   27/11 cf [2, 2, 5] type A  (d, m, j): [(4, 1, 1), (6, 1, 1)]  [('multiplicity', 4, (6, 1, (1,)))]
+   27/17 cf [1, 1, 1, 2, 3] type B  (d, m, j): [(6, 1, 1)]  [('multiplicity', 3, (6, 1, (1,)))]
+   29/11 cf [2, 1, 1, 1, 3] type A  (d, m, j): [(6, 1, 1)]  [('multiplicity', 4, (6, 1, (1,)))]
+   29/13 cf [2, 4, 3] type B  (d, m, j): [(4, 1, 1), (10, 1, 1), (10, 1, 3)]  [('multiplicity', 2, (4, 1, (1,)))]
+   29/13 cf [2, 4, 3] type A  (d, m, j): [(3, 1, 1), (6, 1, 1), (10, 1, 1), (10, 1, 3)]  [('multiplicity', 2, (10, 1, (1, 3)))]
+   29/17 cf [1, 1, 2, 2, 2] type B  (d, m, j): [(4, 1, 1), (6, 1, 1)]  [('multiplicity', 2, (4, 1, (1,))), ('multiplicity', 3, (6, 1, (1,)))]
+   29/17 cf [1, 1, 2, 2, 2] type A  (d, m, j): [(6, 1, 1)]  [('multiplicity', 2, (6, 1, (1,)))]
+
+FULL TABLE p <= 31 (factor: (d, m, [j...]) ^ multiplicity)
+  3/1 cf [3] | A: - | B: -
+  5/1 cf [5] | A: - | B: -
+  5/3 cf [1,1,2] | A: - | B: (6,1,(1,))^1
+  7/1 cf [7] | A: - | B: -
+  7/3 cf [2,3] | A: (4,1,(1,))^1 | B: (6,1,(1,))^1
+  7/5 cf [1,2,2] | A: - | B: ('zero',)^1
+  9/1 cf [9] | A: - | B: -
+  9/5 cf [1,1,4] | A: (4,1,(1,))^1 | B: (10,1,(1,3))^1
+  9/7 cf [1,3,2] | A: - | B: ('zero',)^1
+  11/1 cf [11] | A: - | B: -
+  11/3 cf [3,1,2] | A: ('zero',)^1 | B: (6,2,(1,))^1
+  11/5 cf [2,5] | A: (3,1,(1,))^1 (6,1,(1,))^1 | B: (10,1,(1,3))^1
+  11/7 cf [1,1,1,3] | A: - | B: (6,1,(1,))^1 ('zero',)^1
+  11/9 cf [1,4,2] | A: - | B: ('zero',)^1
+  13/1 cf [13] | A: - | B: -
+  13/3 cf [4,3] | A: ('zero',)^1 | B: (6,2,(1,))^1
+  13/5 cf [2,1,1,2] | A: (6,1,(1,))^2 | B: ('zero',)^1
+  13/7 cf [1,1,6] | A: (3,1,(1,))^1 (6,1,(1,))^1 | B: (14,1,(1,3,5))^1
+  13/9 cf [1,2,4] | A: - | B: ('zero',)^2
+  13/11 cf [1,5,2] | A: - | B: ('zero',)^1
+  15/1 cf [15] | A: - | B: -
+  15/7 cf [2,7] | A: (4,1,(1,))^1 (8,1,(1,3))^1 | B: (14,1,(1,3,5))^1
+  15/11 cf [1,2,1,3] | A: (4,2,(1,))^1 | B: ('zero',)^2
+  15/13 cf [1,6,2] | A: - | B: ('zero',)^1
+  17/1 cf [17] | A: - | B: -
+  17/3 cf [5,1,2] | A: ('zero',)^1 | B: (6,3,(1,))^1
+  17/5 cf [3,2,2] | A: ('zero',)^2 | B: ('zero',)^1
+  17/7 cf [2,2,3] | A: (4,1,(1,))^1 (6,1,(1,))^2 | B: (6,1,(1,))^1 ('zero',)^1
+  17/9 cf [1,1,8] | A: (4,1,(1,))^1 (8,1,(1,3))^1 | B: (6,1,(1,))^1 (18,1,(1,5,7))^1
+  17/11 cf [1,1,1,5] | A: - | B: (6,1,(1,))^1 ('zero',)^2
+  17/13 cf [1,3,4] | A: (4,2,(1,))^1 | B: ('zero',)^2
+  17/15 cf [1,7,2] | A: - | B: ('zero',)^1
+  19/1 cf [19] | A: - | B: -
+  19/3 cf [6,3] | A: ('zero',)^1 | B: (6,3,(1,))^1
+  19/5 cf [3,1,4] | A: ('zero',)^2 | B: (10,2,(1,3))^1
+  19/7 cf [2,1,2,2] | A: ('zero',)^1 (6,1,(1,))^2 | B: ('zero',)^1
+  19/9 cf [2,9] | A: (5,1,(1,2))^1 (10,1,(1,3))^1 | B: (6,1,(1,))^1 (18,1,(1,5,7))^1
+  19/11 cf [1,1,2,1,2] | A: (6,1,(1,))^2 | B: (6,1,(1,))^1 ('zero',)^1 (4,1,(1,))^2
+  19/13 cf [1,2,6] | A: - | B: ('zero',)^3
+  19/15 cf [1,3,1,3] | A: - | B: ('zero',)^2
+  19/17 cf [1,8,2] | A: - | B: ('zero',)^1
+  21/1 cf [21] | A: - | B: -
+  21/5 cf [4,5] | A: ('zero',)^2 | B: (10,2,(1,3))^1
+  21/11 cf [1,1,10] | A: (5,1,(1,2))^1 (10,1,(1,3))^1 | B: (22,1,(1,3,5,7,9))^1
+  21/13 cf [1,1,1,1,1,2] | A: ('zero',)^1 | B: ('zero',)^1 (6,1,(1,))^3
+  21/17 cf [1,4,4] | A: - | B: ('zero',)^2
+  21/19 cf [1,9,2] | A: - | B: ('zero',)^1
+  23/1 cf [23] | A: - | B: -
+  23/3 cf [7,1,2] | A: ('zero',)^1 | B: (6,4,(1,))^1
+  23/5 cf [4,1,1,2] | A: ('zero',)^2 | B: ('zero',)^1
+  23/7 cf [3,3,2] | A: ('zero',)^3 | B: ('zero',)^1
+  23/9 cf [2,1,1,4] | A: (6,1,(1,))^4 | B: ('zero',)^2
+  23/11 cf [2,11] | A: (3,1,(1,))^1 (4,1,(1,))^1 (6,1,(1,))^1 (12,1,(1,5))^1 | B: (22,1,(1,3,5,7,9))^1
+  23/13 cf [1,1,3,3] | A: (4,1,(1,))^1 (6,1,(1,))^2 | B: ('zero',)^1 (4,1,(1,))^2 (10,1,(1,3))^1
+  23/15 cf [1,1,1,7] | A: - | B: (6,1,(1,))^1 ('zero',)^3
+  23/17 cf [1,2,1,5] | A: (3,2,(1,))^1 (6,2,(1,))^1 | B: ('zero',)^3
+  23/19 cf [1,4,1,3] | A: (4,3,(1,))^1 | B: ('zero',)^2
+  23/21 cf [1,10,2] | A: - | B: ('zero',)^1
+  25/1 cf [25] | A: - | B: -
+  25/3 cf [8,3] | A: ('zero',)^1 | B: (6,4,(1,))^1
+  25/7 cf [3,1,1,3] | A: ('zero',)^3 | B: ('zero',)^1 (6,2,(1,))^1
+  25/9 cf [2,1,3,2] | A: (6,1,(1,))^2 ('zero',)^2 | B: ('zero',)^1
+  25/11 cf [2,3,1,2] | A: (4,1,(1,))^1 (10,1,(1,3))^2 | B: (6,1,(1,))^1 ('zero',)^1 (4,1,(1,))^2
+  25/13 cf [1,1,12] | A: (3,1,(1,))^1 (4,1,(1,))^1 (6,1,(1,))^1 (12,1,(1,5))^1 | B: (26,1,(1,3,5,7,9,11))^1
+  25/17 cf [1,2,8] | A: - | B: ('zero',)^4
+  25/19 cf [1,3,6] | A: (3,2,(1,))^1 (6,2,(1,))^1 | B: ('zero',)^3
+  25/21 cf [1,5,4] | A: (4,3,(1,))^1 | B: ('zero',)^2
+  25/23 cf [1,11,2] | A: - | B: ('zero',)^1
+  27/1 cf [27] | A: - | B: -
+  27/5 cf [5,2,2] | A: ('zero',)^2 | B: ('zero',)^1
+  27/7 cf [3,1,6] | A: ('zero',)^3 | B: (14,2,(1,3,5))^1
+  27/11 cf [2,2,5] | A: (4,1,(1,))^1 (6,1,(1,))^4 | B: (6,1,(1,))^1 ('zero',)^2
+  27/13 cf [2,13] | A: (7,1,(1,2,3))^1 (14,1,(1,3,5))^1 | B: (26,1,(1,3,5,7,9,11))^1
+  27/17 cf [1,1,1,2,3] | A: ('zero',)^1 | B: ('zero',)^2 (6,1,(1,))^3
+  27/19 cf [1,2,2,1,2] | A: ('zero',)^1 | B: ('zero',)^4
+  27/23 cf [1,5,1,3] | A: - | B: ('zero',)^2
+  27/25 cf [1,12,2] | A: - | B: ('zero',)^1
+  29/1 cf [29] | A: - | B: -
+  29/3 cf [9,1,2] | A: ('zero',)^1 | B: (6,5,(1,))^1
+  29/5 cf [5,1,4] | A: ('zero',)^2 | B: (10,3,(1,3))^1
+  29/7 cf [4,7] | A: ('zero',)^3 | B: (14,2,(1,3,5))^1
+  29/9 cf [3,4,2] | A: ('zero',)^4 | B: ('zero',)^1
+  29/11 cf [2,1,1,1,3] | A: ('zero',)^1 (6,1,(1,))^4 | B: ('zero',)^2
+  29/13 cf [2,4,3] | A: (3,1,(1,))^1 (6,1,(1,))^1 (10,1,(1,3))^2 | B: ('zero',)^1 (4,1,(1,))^2 (10,1,(1,3))^1
+  29/15 cf [1,1,14] | A: (7,1,(1,2,3))^1 (14,1,(1,3,5))^1 | B: (6,1,(1,))^1 (10,1,(1,3))^1 (30,1,(1,7,11,13))^1
+  29/17 cf [1,1,2,2,2] | A: ('zero',)^1 (6,1,(1,))^2 | B: ('zero',)^1 (4,1,(1,))^2 (6,1,(1,))^3
+  29/19 cf [1,1,1,9] | A: - | B: (6,1,(1,))^1 ('zero',)^4
+  29/21 cf [1,2,1,1,1,2] | A: (6,2,(1,))^2 | B: ('zero',)^4
+  29/23 cf [1,3,1,5] | A: - | B: ('zero',)^3
+  29/25 cf [1,6,4] | A: - | B: ('zero',)^2
+  29/27 cf [1,13,2] | A: - | B: ('zero',)^1
+  31/1 cf [31] | A: - | B: -
+  31/3 cf [10,3] | A: ('zero',)^1 | B: (6,5,(1,))^1
+  31/5 cf [6,5] | A: ('zero',)^2 | B: (10,3,(1,3))^1
+  31/7 cf [4,2,3] | A: ('zero',)^3 | B: ('zero',)^1 (6,2,(1,))^1
+  31/9 cf [3,2,4] | A: ('zero',)^4 | B: ('zero',)^2
+  31/11 cf [2,1,4,2] | A: (6,1,(1,))^2 ('zero',)^3 | B: ('zero',)^1
+  31/13 cf [2,2,1,1,2] | A: ('zero',)^1 (6,1,(1,))^2 (4,1,(1,))^3 | B: ('zero',)^1 (6,1,(1,))^3
+  31/15 cf [2,15] | A: (4,1,(1,))^1 (8,1,(1,3))^1 (16,1,(1,3,5,7))^1 | B: (6,1,(1,))^1 (10,1,(1,3))^1 (30,1,(1,7,11,13))^1
+  31/17 cf [1,1,4,1,2] | A: (4,1,(1,))^1 (10,1,(1,3))^2 | B: ('zero',)^1 (3,1,(1,))^2 (6,1,(1,))^2 (10,1,(1,3))^1
+  31/19 cf [1,1,1,1,2,2] | A: ('zero',)^2 | B: ('zero',)^1 (6,1,(1,))^5
+  31/21 cf [1,2,10] | A: - | B: ('zero',)^5
+  31/23 cf [1,2,1,7] | A: (4,2,(1,))^1 (8,2,(1,3))^1 | B: ('zero',)^4
+  31/25 cf [1,4,6] | A: - | B: ('zero',)^3
+  31/27 cf [1,6,1,3] | A: (4,4,(1,))^1 | B: ('zero',)^2
+  31/29 cf [1,14,2] | A: - | B: ('zero',)^1

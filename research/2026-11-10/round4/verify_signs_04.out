@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/home/claude/work/round4/verify_signs_04.py", line 22, in <module>
+    r=mp.findroot(f,(grid[n],grid[n+1]),solver='illinois',tol=mp.mpf(10)**-110,maxsteps=2000,verify=False); res=max(abs(x) for x in rel(89,55,s,r))
+  File "/usr/local/lib/python3.13/site-packages/mpmath/calculus/optimization.py", line 969, in findroot
+    for x, error in iterations:
+                    ^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/mpmath/calculus/optimization.py", line 415, in __iter__
+    z = a - fa/s
+            ~~^~
+  File "<string>", line 7, in __div__
+  File "/usr/local/lib/python3.13/site-packages/mpmath/libmp/libmpf.py", line 960, in mpf_div
+    raise ZeroDivisionError
+ZeroDivisionError

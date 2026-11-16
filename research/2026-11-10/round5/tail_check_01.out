@@ -1,0 +1,18 @@
+claimed cases
+lam=10 N=6 m=6 z=15.1: rho=0.87634 eps=9.376e-02 | true E0=11.2158935 E1=16.8640847 (cutoff 60) | neg eig of K_m: 1, of exact S: 1 | max(eig K - eig S) = -2.15e-01 | min Casimir omitted 19.3333 vs c+ 19.3333 | norm W 29.9006 vs 3 lam 30.0
+lam=100 N=15 m=6 z=43.3: rho=0.89100 eps=1.215e-02 | true E0=38.5784691 E1=57.9392399 (cutoff 60) | neg eig of K_m: 1, of exact S: 1 | max(eig K - eig S) = -5.33e-01 | min Casimir omitted 80.0000 vs c+ 80.0000 | norm W 298.9841 vs 3 lam 300.0
+lam=100 N=15 m=12 z=50.56: rho=0.91064 eps=1.006e-02 | true E0=38.5784691 E1=57.9392399 (cutoff 60) | neg eig of K_m: 1, of exact S: 1 | max(eig K - eig S) = -1.57e-01 | min Casimir omitted 80.0000 vs c+ 80.0000 | norm W 298.9841 vs 3 lam 300.0
+controls: z above the true E1 must give more than one negative eigenvalue
+lam=10 N=6 m=6 z=17: rho=0.92784 eps=2.537e-01 | true E0=11.2158935 E1=16.8640847 (cutoff 60) | neg eig of K_m: 3, of exact S: 2 | max(eig K - eig S) = -8.94e-01 | min Casimir omitted 19.3333 vs c+ 19.3333 | norm W 29.9006 vs 3 lam 30.0
+lam=100 N=15 m=12 z=58.5: rho=0.93313 eps=1.891e-02 | true E0=38.5784691 E1=57.9392399 (cutoff 60) | neg eig of K_m: 5, of exact S: 2 | max(eig K - eig S) = -1.87e+00 | min Casimir omitted 80.0000 vs c+ 80.0000 | norm W 298.9841 vs 3 lam 300.0
+how far depth alone can go at fixed N (largest z with one negative eigenvalue, bisection)
+   lam=10 N=6 depth  0: threshold z = 13.674435   (true E1 = 16.8641)
+   lam=10 N=6 depth  6: threshold z = 15.107879   (true E1 = 16.8641)
+   lam=10 N=6 depth 12: threshold z = 15.819142   (true E1 = 16.8641)
+   lam=10 N=6 depth 24: threshold z = 16.443317   (true E1 = 16.8641)
+   lam=10 N=6 depth 48: threshold z = 16.791128   (true E1 = 16.8641)
+   lam=100 N=15 depth  0: threshold z = 38.578470   (true E1 = 57.9392)
+   lam=100 N=15 depth  6: threshold z = 43.304228   (true E1 = 57.9392)
+   lam=100 N=15 depth 12: threshold z = 50.564837   (true E1 = 57.9392)
+   lam=100 N=15 depth 24: threshold z = 56.479799   (true E1 = 57.9392)
+   lam=100 N=15 depth 48: threshold z = 57.813831   (true E1 = 57.9392)

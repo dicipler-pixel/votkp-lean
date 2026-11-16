@@ -1,0 +1,26 @@
+R3: non-torus NEVER iff p/q = a +- 1/(b + 1/c), a odd >= 3, b, c even >= 2, a > c.
+R4 (lead, read off 55/21, 71/21, 75/29 after NEVER-RULE-03): p/q = a +- 1/E with E an even continued fraction of length 4
+   whose entries pair up by sign, E = [2,2,-2,-2] = 21/8 or [2,2,2,2] = 29/12.  Predictions: 97/21 = 5 - 8/21 and
+   99/29 = 3 + 12/29 never.
+WHY THIS CHECK DECIDES IT
+ (i) every knot R3 predicts NEVER in 77 <= p <= 101: a sign change of the exact Riley polynomial in the half band at any
+     grid x (80 digits, re-evaluated at 160) PROVES a turn and kills R3.  Silence is not proof of never.
+ (ii) every near miss (a odd >= 3, b, c even, a < c or a = c) in the same range is predicted TURN: a sign change proves it;
+     silence there counts against R3 (listed).
+ (iii) CAP: the root finder (needed to call NEVER) is run only on 4 knots and only at x = 0.5, 0.8, 1.2, 2.0 in both views
+     (degree 38-50 polynomials at 80 digits; the full 20-point grid would take about 20 minutes per knot).
+KILL: any sign change in (i); any silent knot in (ii) is reported as a possible miss; any confirmed real band root in (iii).
+
+R3 predicts NEVER for 25 knots with 77 <= p <= 101; near misses (a <= c) predicted TURN: 11
+(i) predicted NEVER: sign change found (R3 killed there) in 0 of 25: []
+    silent (consistent with never): [('77/5', (15, '+', 2, 2)), ('77/9', (9, '-', 2, 4)), ('77/25', (3, '+', 12, 2)), ('79/9', (9, '-', 4, 2)), ('81/17', (5, '-', 4, 4)), ('83/5', (17, '-', 2, 2)), ('83/9', (9, '+', 4, 2)), ('83/17', (5, '-', 8, 2)), ('85/9', (9, '+', 2, 4)), ('85/13', (7, '-', 2, 6)), ('85/29', (3, '-', 14, 2)), ('87/5', (17, '+', 2, 2)), ('87/17', (5, '+', 8, 2)), ('89/13', (7, '-', 6, 2)), ('89/17', (5, '+', 4, 4)), ('89/29', (3, '+', 14, 2)), ('93/5', (19, '-', 2, 2)), ('93/13', (7, '+', 6, 2)), ('95/9', (11, '-', 2, 4)), ('97/5', (19, '+', 2, 2)), ('97/9', (11, '-', 4, 2)), ('97/13', (7, '+', 2, 6)), ('97/33', (3, '-', 16, 2)), ('101/9', (11, '+', 4, 2)), ('101/33', (3, '+', 16, 2))]
+(ii) near misses predicted TURN: turn proved in 7 of 11; silent: [('77/9', (5, '-', 2, 8)), ('83/5', (3, '-', 2, 16)), ('93/5', (3, '-', 2, 18)), ('95/9', (5, '-', 2, 10))]
+     proved turns: [('79/19', (3, '+', 6, 4), 'x=0.8'), ('81/13', (3, '+', 4, 6), 'x=0.8'), ('87/7', (3, '+', 2, 12), 'x=0.8'), ('91/11', (3, '-', 4, 8), 'x=0.8'), ('93/11', (5, '+', 2, 8), 'x=0.8'), ('95/23', (3, '-', 8, 4), 'x=0.8'), ('101/7', (3, '+', 2, 14), 'x=0.8')]
+R4 lead: 97/21 and 99/29 sign scan: [('97/21', 'silent'), ('99/29', 'silent')]
+   [53 s so far]
+(iii) root finder on the capped sample ['77/5', '77/9', '97/21', '99/29']
+    77/5 cf [15, 2, 2]: real band roots at x = 0.5, 0.8, 1.2, 2.0: [] ; near-real complex pairs (log10 rel. Im): []  -> no confirmed real band root at the 4 sampled x
+    77/9 cf [8, 1, 1, 4]: real band roots at x = 0.5, 0.8, 1.2, 2.0: [] ; near-real complex pairs (log10 rel. Im): []  -> no confirmed real band root at the 4 sampled x
+    97/21 cf [4, 1, 1, 1, 1, 1, 2]: real band roots at x = 0.5, 0.8, 1.2, 2.0: [] ; near-real complex pairs (log10 rel. Im): []  -> no confirmed real band root at the 4 sampled x
+    99/29 cf [3, 2, 2, 2, 2]: real band roots at x = 0.5, 0.8, 1.2, 2.0: [] ; near-real complex pairs (log10 rel. Im): []  -> no confirmed real band root at the 4 sampled x
+[186 s]

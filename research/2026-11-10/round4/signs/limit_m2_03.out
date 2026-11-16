@@ -1,0 +1,7 @@
+WHY: exact integer polynomial identity, no matcher.  KILL: P_B(k) is not a constant multiple of (1 - m^2 k) times a power of k.
+Traceback (most recent call last):
+  File "/home/claude/work/agent_signs/limit_m2_03.py", line 8, in <module>
+    exec(open('/home/claude/work/agent_signs/limit_m2_01.py').read().split('mp.mp.dps=60')[0].split('# ---------- exact limits')[1])
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in <module>
+NameError: name 'ring' is not defined. Did you mean: 'print'?

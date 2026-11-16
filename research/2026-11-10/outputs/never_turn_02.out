@@ -1,0 +1,51 @@
+3/1  crossings 3  cf [3]  NEVER
+5/1  crossings 5  cf [5]  NEVER
+5/3  crossings 4  cf [1, 1, 2]  turns from x<=0.5
+7/1  crossings 7  cf [7]  NEVER
+7/3  crossings 5  cf [2, 3]  turns from x<=0.8
+9/1  crossings 9  cf [9]  NEVER
+9/5  crossings 6  cf [1, 1, 4]  turns from x<=0.4
+11/3  crossings 6  cf [3, 1, 2]  turns from x<=0.4
+11/5  crossings 7  cf [2, 5]  turns from x<=0.7
+13/3  crossings 7  cf [4, 3]  turns from x<=0.5
+13/5  crossings 6  cf [2, 1, 1, 2]  NEVER
+13/7  crossings 8  cf [1, 1, 6]  turns from x<=0.3
+15/7  crossings 9  cf [2, 7]  turns from x<=0.6
+15/11  crossings 7  cf [1, 2, 1, 3]  turns from x<=0.5
+17/3  crossings 8  cf [5, 1, 2]  turns from x<=0.3
+17/5  crossings 7  cf [3, 2, 2]  NEVER
+17/13  crossings 8  cf [1, 3, 4]  turns from x<=0.3
+19/3  crossings 9  cf [6, 3]  turns from x<=0.4
+19/5  crossings 8  cf [3, 1, 4]  turns from x<=0.3
+19/7  crossings 7  cf [2, 1, 2, 2]  turns from x<=0.6
+21/5  crossings 9  cf [4, 5]  turns from x<=0.5
+21/13  crossings 7  cf [1, 1, 1, 1, 1, 2]  turns from x<=0.8
+23/5  crossings 8  cf [4, 1, 1, 2]  NEVER
+23/7  crossings 8  cf [3, 3, 2]  turns from x<=0.3
+23/17  crossings 9  cf [1, 2, 1, 5]  turns from x<=0.5
+25/7  crossings 8  cf [3, 1, 1, 3]  turns from x<=0.3
+25/9  crossings 8  cf [2, 1, 3, 2]  NEVER
+27/5  crossings 9  cf [5, 2, 2]  NEVER
+27/17  crossings 8  cf [1, 1, 1, 2, 3]  turns from x<=0.4
+29/9  crossings 9  cf [3, 4, 2]  NEVER
+29/11  crossings 8  cf [2, 1, 1, 1, 3]  turns from x<=0.6
+29/17  crossings 8  cf [1, 1, 2, 2, 2]  turns from x<=0.4
+31/7  crossings 9  cf [4, 2, 3]  turns from x<=0.5
+31/11  crossings 9  cf [2, 1, 4, 2]  turns from x<=0.5
+31/13  crossings 8  cf [2, 2, 1, 1, 2]  turns from x<=0.4
+33/7  crossings 9  cf [4, 1, 2, 2]  turns from x<=0.4
+33/23  crossings 9  cf [1, 2, 3, 3]  turns from x<=0.4
+35/13  crossings 9  cf [2, 1, 2, 4]  turns from x<=0.5
+37/11  crossings 9  cf [3, 2, 1, 3]  turns from x<=0.4
+37/23  crossings 9  cf [1, 1, 1, 1, 1, 4]  turns from x<=0.6
+39/17  crossings 9  cf [2, 3, 2, 2]  turns from x<=0.5
+39/25  crossings 9  cf [1, 1, 1, 3, 1, 2]  turns from x<=0.5
+41/11  crossings 9  cf [3, 1, 2, 1, 2]  turns from x<=0.5
+41/17  crossings 9  cf [2, 2, 2, 3]  turns from x<=0.6
+41/23  crossings 9  cf [1, 1, 3, 1, 1, 2]  turns from x<=0.7
+43/25  crossings 9  cf [1, 1, 2, 1, 1, 3]  turns from x<=0.6
+45/19  crossings 9  cf [2, 2, 1, 2, 2]  turns from x<=0.8
+47/13  crossings 9  cf [3, 1, 1, 1, 1, 2]  turns from x<=0.8
+49/19  crossings 9  cf [2, 1, 1, 2, 1, 2]  turns from x<=0.5
+55/21  crossings 9  cf [2, 1, 1, 1, 1, 1, 2]  NEVER
+NEVER: [(3, 1, [3]), (5, 1, [5]), (7, 1, [7]), (9, 1, [9]), (13, 5, [2, 1, 1, 2]), (17, 5, [3, 2, 2]), (23, 5, [4, 1, 1, 2]), (25, 9, [2, 1, 3, 2]), (27, 5, [5, 2, 2]), (29, 9, [3, 4, 2]), (55, 21, [2, 1, 1, 1, 1, 1, 2])]

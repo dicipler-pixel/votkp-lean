@@ -1,0 +1,19 @@
+U sig.v U^dag vs sig.(R v): worst 7.22e-15  vs sig.(R^T v): worst 1.28e+0
+link rotation angles (rad): 0.000 0.000 0.000 0.000 0.000 0.000 0.644 0.718 0.644 0.718 0.927 0.644 0.927 0.718 0.927 0.644 0.718 0.927
+rest, N=7, t=50: largest turn by cross product 2.54e-9  (acos tilt reads 0.00e+0) rest residual 8.07e-10
+smallest angle acos can report: acos(1-1.1e-16) = 1.49e-8
+static push, B tipped 1e-3 rad, no light: tilt of A..G
+  t=0: 0.0e+0 1.0e-3 2.1e-8 0.0e+0 0.0e+0 2.1e-8 0.0e+0
+  t=50: 0.0e+0 1.1e-3 0.0e+0 0.0e+0 0.0e+0 0.0e+0 0.0e+0
+  t=100: 0.0e+0 1.2e-3 0.0e+0 0.0e+0 0.0e+0 0.0e+0 0.0e+0
+  t=150: 0.0e+0 1.3e-3 2.1e-8 0.0e+0 0.0e+0 2.1e-8 0.0e+0
+  t=200: 0.0e+0 1.4e-3 0.0e+0 0.0e+0 0.0e+0 0.0e+0 0.0e+0
+z = 5.8284271+(-0.001)  g = 0.999757361  marks 2  delta 0.000e+0  first-pass T = 0.250060671
+z = 5.8284271+(-0.000001)  g = 0.999999757  marks 2  delta 0.000e+0  first-pass T = 0.250000061
+z = 5.8284271+(0)  g = 1.000000000  marks 2  delta 0.000e+0  first-pass T = 0.250000000
+z = 5.8284271+(0.000001)  g = 1.000000243  marks 3  delta 6.966e-4  first-pass T = 0.249999818
+z = 5.8284271+(0.001)  g = 1.000242642  marks 3  delta 2.203e-2  first-pass T = 0.249818103
+z = 5.8284271+(0.01)  g = 1.002426533  marks 3  delta 6.965e-2  first-pass T = 0.248188532
+kick B: first light in C at t = 2.1500  B-C link d = 2.1459  samples 141+113+175 = 429  x h = 2.1450  seg true lengths 0.7059 0.5673 0.8727  nTot 429
+  N=7 link 0 3 d 1.9459 delay 1.9500 err 0.0041 nTot*h 1.9450
+  N=7 link 0 6 d 1.9459 delay 1.9500 err 0.0041 nTot*h 1.9450

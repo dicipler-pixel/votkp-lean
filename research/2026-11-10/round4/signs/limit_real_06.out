@@ -1,0 +1,14 @@
+WHY: every exact limit value (LIMIT-M2-01) is compared with the real branches at x = 12, 200 digits, exact
+integer coefficients, in the variable where that branch is small (v for type A, w for type B).
+PREDICTION (elementary): a limit value that is a SIMPLE root of its limit polynomial is always reached by a real
+branch; a repeated root may or may not be.
+KILL: a simple-root value with no real branch within 1e-8; or a real branch with 1e-6 < k < 4 away from every exact value.
+41/7 cf [5,1,6] : B (14,3,1)^1:real x1; B (14,3,3)^1:real x1; B (14,3,5)^1:real x1
+47/3 cf [15,1,2] : B (6,8,1)^1:real x1
+59/29 cf [2,29] : A (3,1,1)^1:real x1; A (6,1,1)^1:real x1; A (5,1,1)^1:real x1; A (5,1,2)^1:real x1; A (10,1,1)^1:real x1; A (10,1,3)^1:real x1; A (30,1,1)^1:real x1; A (30,1,7)^1:real x1; A (30,1,11)^1:real x1; A (30,1,13)^1:real x1; A (15,1,1)^1:real x1; A (15,1,2)^1:real x1; A (15,1,4)^1:real x1; A (15,1,7)^1:real x1; B (58,1,1)^1:real x1; B (58,1,3)^1:real x1; B (58,1,5)^1:real x1; B (58,1,7)^1:real x1; B (58,1,9)^1:real x1; B (58,1,11)^1:real x1; B (58,1,13)^1:real x1; B (58,1,15)^1:real x1; B (58,1,17)^1:real x1; B (58,1,19)^1:real x1; B (58,1,21)^1:real x1; B (58,1,23)^1:real x1; B (58,1,25)^1:real x1; B (58,1,27)^1:real x1
+
+TALLY (type, root kind, branch): count
+   ('A', 'simple', 'real') 14
+   ('B', 'simple', 'real') 18
+simple-root values with no real branch (kill list): []
+real band branches away from every exact value: []

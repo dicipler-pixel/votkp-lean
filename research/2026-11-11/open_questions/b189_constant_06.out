@@ -1,0 +1,21 @@
+kappa*lam = 16
+   kappa= 0.0625 lam=  256.00 N=220  gap=7.960805  c=(2sqrt(P)-gap)/kappa=0.62713  dN=1.1e-13
+   kappa= 0.1250 lam=  128.00 N=136  gap=7.921339  c=(2sqrt(P)-gap)/kappa=0.62929  dN=1.5e-13
+   kappa= 0.2500 lam=   64.00 N= 80  gap=7.841571  c=(2sqrt(P)-gap)/kappa=0.63371  dN=3.0e-13
+   kappa= 0.5000 lam=   32.00 N= 52  gap=7.678482  c=(2sqrt(P)-gap)/kappa=0.64304  dN=2.5e-13
+   kappa= 1.0000 lam=   16.00 N= 38  gap=7.336131  c=(2sqrt(P)-gap)/kappa=0.66387  dN=4.8e-13
+   kappa= 2.0000 lam=    8.00 N= 31  gap=6.562661  c=(2sqrt(P)-gap)/kappa=0.71867  dN=5.7e-13
+kappa*lam = 64
+   kappa= 0.0625 lam= 1024.00 N=220  gap=15.960871  c=(2sqrt(P)-gap)/kappa=0.62606  dN=5.9e-13
+   kappa= 0.1250 lam=  512.00 N=220  gap=15.921609  c=(2sqrt(P)-gap)/kappa=0.62713  dN=8.6e-13
+   kappa= 0.2500 lam=  256.00 N=136  gap=15.842678  c=(2sqrt(P)-gap)/kappa=0.62929  dN=1.9e-13
+   kappa= 0.5000 lam=  128.00 N= 80  gap=15.683143  c=(2sqrt(P)-gap)/kappa=0.63371  dN=3.2e-14
+   kappa= 1.0000 lam=   64.00 N= 52  gap=15.356964  c=(2sqrt(P)-gap)/kappa=0.64304  dN=2.7e-13
+   kappa= 2.0000 lam=   32.00 N= 38  gap=14.672262  c=(2sqrt(P)-gap)/kappa=0.66387  dN=2.5e-13
+kappa*lam = 256
+   kappa= 0.0625 lam= 4096.00 N=220  gap=31.960904  c=(2sqrt(P)-gap)/kappa=0.62553  dN=1.4e-12
+   kappa= 0.1250 lam= 2048.00 N=220  gap=31.921743  c=(2sqrt(P)-gap)/kappa=0.62606  dN=1.7e-12
+   kappa= 0.2500 lam= 1024.00 N=220  gap=31.843219  c=(2sqrt(P)-gap)/kappa=0.62713  dN=2.2e-13
+   kappa= 0.5000 lam=  512.00 N=136  gap=31.685357  c=(2sqrt(P)-gap)/kappa=0.62929  dN=1.3e-13
+   kappa= 1.0000 lam=  256.00 N= 80  gap=31.366285  c=(2sqrt(P)-gap)/kappa=0.63371  dN=3.5e-13
+   kappa= 2.0000 lam=  128.00 N= 52  gap=30.713929  c=(2sqrt(P)-gap)/kappa=0.64304  dN=6.7e-13

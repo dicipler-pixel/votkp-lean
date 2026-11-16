@@ -1,0 +1,3 @@
+two parts: (ln I)'' against (gap/2)^2 (1-G^2), worst relative error over 200 fades: 1.41e-48
+equal start, gap 0.37: bend halves at t*gap = 1.7627471740390860505  (ln(3+2sqrt2) = 1.7627471740390860505);  ratio there = 5.8284271247461900976  (3+2sqrt2 = 5.8284271247461900976)
+three parts, largest/smallest part when the bend has halved: [17.056, 16.648, 14.181, 3.65, 3.613, 5.83]  (no single ratio)

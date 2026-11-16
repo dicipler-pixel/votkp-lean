@@ -1,0 +1,127 @@
+DEFINITION (as NEVER-TURN-02): the pair turns at x iff some REAL root v of the Riley relation at s = e^x has v > 0,
+ t = tr(ab) > 2 and k = v (t - 2) < 4.  NEVER = no such root on the grid x = 0.1..1.5 (step 0.1), 2, 2.5, 3, 3.5, 4.
+WHY THIS CHECK DECIDES IT
+ v and w = t - 2 are the two roots of X^2 + dM X + k = 0, so the band is {v < A/2} + {w < A/2} (A = v + w), k = r (A - r) < 4.
+ Each half is read in the variable where its roots are SMALL (v-polynomial for v < A/2, w-polynomial for w < A/2),
+ with exact integer coefficients; the large cluster of either polynomial is never used (that is where polyroots fails).
+ Pass 1: sign change of the exact polynomial along the half band (no root finder): proves a real root -> TURN.
+ Pass 2 (only if pass 1 is silent at every x): roots at 80 digits in both views. A root-only hit must be confirmed by a
+ sign change of the polynomial across r (1 -+ 1e-6) evaluated at 160 digits, else it is listed as UNCONFIRMED.
+ Torus knots p/1 are run only for p <= 21 (control); for all p the centre argument of Two Trees Thm 8.7 applies.
+CONTROL / KILL: Two Trees census 8.8 must come out 19 turn / 7 never.
+3/1 cf [3]  NEVER  (no real band root on the grid) 0.4s
+5/1 cf [5]  NEVER  (no real band root on the grid) 0.4s
+5/3 cf [1,1,2]  TURN  (sign change, first found at x=0.8) 0.0s
+7/1 cf [7]  NEVER  (no real band root on the grid) 0.6s
+7/3 cf [2,3]  TURN  (sign change, first found at x=0.8) 0.0s
+9/1 cf [9]  NEVER  (no real band root on the grid) 0.9s
+9/5 cf [1,1,4]  TURN  (sign change, first found at x=0.8) 0.0s
+11/1 cf [11]  NEVER  (no real band root on the grid) 1.1s
+11/3 cf [3,1,2]  TURN  (sign change, first found at x=0.8) 0.0s
+11/5 cf [2,5]  TURN  (sign change, first found at x=0.8) 0.0s
+13/1 cf [13]  NEVER  (no real band root on the grid) 1.5s
+13/3 cf [4,3]  TURN  (sign change, first found at x=0.8) 0.0s
+13/5 cf [2,1,1,2]  NEVER  (no real band root on the grid) 1.7s
+13/7 cf [1,1,6]  TURN  (sign change, first found at x=0.8) 0.0s
+15/1 cf [15]  NEVER  (no real band root on the grid) 1.8s
+15/7 cf [2,7]  TURN  (sign change, first found at x=0.8) 0.1s
+15/11 cf [1,2,1,3]  TURN  (sign change, first found at x=0.8) 0.0s
+17/1 cf [17]  NEVER  (no real band root on the grid) 3.5s
+17/3 cf [5,1,2]  TURN  (sign change, first found at x=0.8) 0.0s
+17/5 cf [3,2,2]  NEVER  (no real band root on the grid) 2.8s
+17/9 cf [1,1,8]  TURN  (sign change, first found at x=0.8) 0.0s
+17/13 cf [1,3,4]  TURN  (sign change, first found at x=0.8) 0.1s
+19/1 cf [19]  NEVER  (no real band root on the grid) 3.6s
+19/3 cf [6,3]  TURN  (sign change, first found at x=0.8) 0.0s
+19/5 cf [3,1,4]  TURN  (sign change, first found at x=0.8) 0.0s
+19/7 cf [2,1,2,2]  TURN  (sign change, first found at x=0.8) 0.1s
+19/9 cf [2,9]  TURN  (sign change, first found at x=0.8) 0.1s
+21/1 cf [21]  NEVER  (no real band root on the grid) 5.3s
+21/5 cf [4,5]  TURN  (sign change, first found at x=0.8) 0.1s
+21/11 cf [1,1,10]  TURN  (sign change, first found at x=0.8) 0.1s
+21/13 cf [1,1,1,1,1,2]  TURN  (sign change, first found at x=0.8) 0.0s
+23/3 cf [7,1,2]  TURN  (sign change, first found at x=0.8) 0.0s
+23/5 cf [4,1,1,2]  NEVER  (no real band root on the grid) 9.4s
+23/7 cf [3,3,2]  TURN  (sign change, first found at x=0.8) 0.1s
+23/11 cf [2,11]  TURN  (sign change, first found at x=0.8) 0.0s
+23/17 cf [1,2,1,5]  TURN  (sign change, first found at x=0.8) 0.0s
+25/3 cf [8,3]  TURN  (sign change, first found at x=0.8) 0.1s
+25/7 cf [3,1,1,3]  TURN  (sign change, first found at x=0.8) 0.0s
+25/9 cf [2,1,3,2]  NEVER  (no real band root on the grid) 11.3s
+25/13 cf [1,1,12]  TURN  (sign change, first found at x=0.8) 0.1s
+25/19 cf [1,3,6]  TURN  (sign change, first found at x=0.8) 0.0s
+27/5 cf [5,2,2]  NEVER  (no real band root on the grid) 9.6s
+27/7 cf [3,1,6]  TURN  (sign change, first found at x=0.8) 0.0s
+27/13 cf [2,13]  TURN  (sign change, first found at x=0.8) 0.0s
+27/17 cf [1,1,1,2,3]  TURN  (sign change, first found at x=0.8) 0.0s
+29/3 cf [9,1,2]  TURN  (sign change, first found at x=0.8) 0.1s
+29/5 cf [5,1,4]  TURN  (sign change, first found at x=0.8) 0.1s
+29/7 cf [4,7]  TURN  (sign change, first found at x=0.8) 0.0s
+29/9 cf [3,4,2]  NEVER  (no real band root on the grid) 10.4s
+29/11 cf [2,1,1,1,3]  TURN  (sign change, first found at x=0.8) 0.1s
+29/15 cf [1,1,14]  TURN  (sign change, first found at x=0.8) 0.1s
+29/17 cf [1,1,2,2,2]  TURN  (sign change, first found at x=0.8) 0.0s
+31/3 cf [10,3]  TURN  (sign change, first found at x=0.8) 0.1s
+31/5 cf [6,5]  TURN  (sign change, first found at x=0.8) 0.1s
+31/7 cf [4,2,3]  TURN  (sign change, first found at x=0.8) 0.1s
+31/11 cf [2,1,4,2]  TURN  (sign change, first found at x=0.8) 0.1s
+31/13 cf [2,2,1,1,2]  TURN  (sign change, first found at x=0.8) 0.1s
+31/15 cf [2,15]  TURN  (sign change, first found at x=0.8) 0.1s
+31/23 cf [1,2,1,7]  TURN  (sign change, first found at x=0.8) 0.0s
+33/5 cf [6,1,1,2]  NEVER  (no real band root on the grid) 15.0s
+33/7 cf [4,1,2,2]  TURN  (sign change, first found at x=0.8) 0.1s
+33/17 cf [1,1,16]  TURN  (sign change, first found at x=0.8) 0.1s
+33/23 cf [1,2,3,3]  TURN  (sign change, first found at x=0.8) 0.0s
+33/25 cf [1,3,8]  TURN  (sign change, first found at x=0.8) 0.0s
+35/3 cf [11,1,2]  TURN  (sign change, first found at x=0.8) 0.1s
+35/9 cf [3,1,8]  TURN  (sign change, first found at x=0.8) 0.1s
+35/11 cf [3,5,2]  TURN  (sign change, first found at x=0.8) 0.1s
+35/13 cf [2,1,2,4]  TURN  (sign change, first found at x=0.8) 0.1s
+35/17 cf [2,17]  TURN  (sign change, first found at x=0.8) 0.1s
+35/29 cf [1,4,1,5]  TURN  (sign change, first found at x=0.8) 0.0s
+37/3 cf [12,3]  TURN  (sign change, first found at x=0.8) 0.1s
+37/5 cf [7,2,2]  NEVER  (no real band root on the grid) 21.1s
+37/7 cf [5,3,2]  TURN  (sign change, first found at x=0.8) 0.1s
+37/9 cf [4,9]  TURN  (sign change, first found at x=0.8) 0.1s
+37/11 cf [3,2,1,3]  TURN  (sign change, first found at x=0.8) 0.1s
+37/13 cf [2,1,5,2]  NEVER  (no real band root on the grid) 20.8s
+37/19 cf [1,1,18]  TURN  (sign change, first found at x=0.8) 0.1s
+37/23 cf [1,1,1,1,1,4]  TURN  (sign change, first found at x=0.8) 0.1s
+37/31 cf [1,5,6]  TURN  (sign change, first found at x=0.8) 0.1s
+39/5 cf [7,1,4]  TURN  (sign change, first found at x=0.8) 0.1s
+39/7 cf [5,1,1,3]  TURN  (sign change, first found at x=0.8) 0.1s
+39/17 cf [2,3,2,2]  TURN  (sign change, first found at x=0.8) 0.1s
+39/19 cf [2,19]  TURN  (sign change, first found at x=0.8) 0.1s
+39/25 cf [1,1,1,3,1,2]  TURN  (sign change, first found at x=0.8) 0.1s
+39/29 cf [1,2,1,9]  TURN  (sign change, first found at x=0.8) 0.1s
+41/3 cf [13,1,2]  TURN  (sign change, first found at x=0.8) 0.1s
+41/5 cf [8,5]  TURN  (sign change, first found at x=0.8) 0.1s
+41/7 cf [5,1,6]  TURN  (sign change, first found at x=0.8) 0.1s
+41/9 cf [4,1,1,4]  NEVER  (no real band root on the grid) 33.5s
+41/11 cf [3,1,2,1,2]  TURN  (sign change, first found at x=0.8) 0.1s
+41/13 cf [3,6,2]  NEVER  (no real band root on the grid) 31.6s
+41/17 cf [2,2,2,3]  TURN  (sign change, first found at x=0.8) 0.1s
+41/21 cf [1,1,20]  TURN  (sign change, first found at x=0.8) 0.1s
+41/23 cf [1,1,3,1,1,2]  TURN  (sign change, first found at x=0.8) 0.1s
+41/31 cf [1,3,10]  TURN  (sign change, first found at x=0.8) 0.1s
+43/3 cf [14,3]  TURN  (sign change, first found at x=0.8) 0.1s
+43/5 cf [8,1,1,2]  NEVER  (no real band root on the grid) 34.8s
+43/7 cf [6,7]  TURN  (sign change, first found at x=0.8) 0.1s
+43/9 cf [4,1,3,2]  NEVER  (no real band root on the grid) 34.2s
+43/11 cf [3,1,10]  TURN  (sign change, first found at x=0.8) 0.1s
+43/13 cf [3,3,4]  TURN  (sign change, first found at x=0.8) 0.1s
+43/15 cf [2,1,6,2]  TURN  (sign change, first found at x=0.8) 0.1s
+43/21 cf [2,21]  TURN  (sign change, first found at x=0.8) 0.1s
+43/25 cf [1,1,2,1,1,3]  TURN  (sign change, first found at x=0.8) 0.1s
+43/27 cf [1,1,1,2,5]  TURN  (sign change, first found at x=0.8) 0.1s
+45/7 cf [6,2,3]  TURN  (sign change, first found at x=0.8) 0.1s
+45/11 cf [4,11]  TURN  (sign change, first found at x=0.8) 0.1s
+45/17 cf [2,1,1,1,5]  TURN  (sign change, first found at x=0.8) 0.1s
+45/19 cf [2,2,1,2,2]  TURN  (sign change, first found at x=0.8) 0.1s
+45/23 cf [1,1,22]  TURN  (sign change, first found at x=0.8) 0.1s
+45/29 cf [1,1,1,4,3]  TURN  (sign change, first found at x=0.8) 0.1s
+knots 111  TURN 88  NEVER 23  (133 s)
+NEVER: [(3, 1, [3]), (5, 1, [5]), (7, 1, [7]), (9, 1, [9]), (11, 1, [11]), (13, 1, [13]), (13, 5, [2, 1, 1, 2]), (15, 1, [15]), (17, 1, [17]), (17, 5, [3, 2, 2]), (19, 1, [19]), (21, 1, [21]), (23, 5, [4, 1, 1, 2]), (25, 9, [2, 1, 3, 2]), (27, 5, [5, 2, 2]), (29, 9, [3, 4, 2]), (33, 5, [6, 1, 1, 2]), (37, 5, [7, 2, 2]), (37, 13, [2, 1, 5, 2]), (41, 9, [4, 1, 1, 4]), (41, 13, [3, 6, 2]), (43, 5, [8, 1, 1, 2]), (43, 9, [4, 1, 3, 2])]
+TURN found by roots only: []
+NEVER with unconfirmed root-finder hits (x, view, k): []
+NEVER with a near-real complex pair in the half band (log10 relative |Im|): [(37, 13, [-8.7, -7.6, -6.5])]

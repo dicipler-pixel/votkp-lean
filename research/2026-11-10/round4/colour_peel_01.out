@@ -1,0 +1,10 @@
+identities, 2 channels, 20000 random pairs:
+  balance - Smith point            max err 3.33e-16
+  Hilbert - |ln z - ln w|          max err 8.88e-16
+  Schrodinger - |phi - phi'|       max err 1.06e-11
+  cos(phi) - tanh(tau/2)           max err 4.44e-16
+2 channels, 20000 passes on close pairs: Hilbert stretched 0; Schrodinger stretched 22 (0.1%)
+  formula agrees on 20000 of 20000 passes
+  stretches with the pair carried toward white: 22   away from white: 0
+3 channels, 20000 passes, generic pairs: Hilbert stretched 0; Schrodinger stretched 0 (paper recorded 955 of 20,000)
+  of the stretches: pair carried toward white 0, away 0;   base rate toward white over all passes 0.829

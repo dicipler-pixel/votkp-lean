@@ -1,0 +1,6 @@
+sign asis torque -1: cells with >=2 heavy balls 9 ; r above surrogate+3sd in 1 ; median excess 1.38 ; max 3.04
+sign asis torque 0: cells with >=2 heavy balls 19 ; r above surrogate+3sd in 0 ; median excess 1.31 ; max 2.63
+sign asis torque 1: cells with >=2 heavy balls 31 ; r above surrogate+3sd in 2 ; median excess 1.42 ; max 3.05
+sign swap torque -1: cells with >=2 heavy balls 7 ; r above surrogate+3sd in 2 ; median excess 1.54 ; max 3.53
+sign swap torque 0: cells with >=2 heavy balls 16 ; r above surrogate+3sd in 4 ; median excess 2.69 ; max 3.96
+sign swap torque 1: cells with >=2 heavy balls 28 ; r above surrogate+3sd in 6 ; median excess 1.86 ; max 4.25

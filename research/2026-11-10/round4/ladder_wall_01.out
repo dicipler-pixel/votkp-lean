@@ -1,0 +1,16 @@
+elements with at least two thresholds: 109   steps: 5737   beyond the half line (z > 5.828): 8
+beyond-line steps at a closed core count N: 8 of 8
+closed-core openings beyond the line: 8 of 694
+  core N= 2: 101 openings,   4 beyond; beyond for Z in [3, 4, 5, 6]; largest z 14.03 (Z=3), smallest 3.888 (Z=103)
+  core N=10:  93 openings,   1 beyond; beyond for Z in [11]; largest z 9.20 (Z=11), smallest 2.000 (Z=103)
+  core N=18:  85 openings,   1 beyond; beyond for Z in [19]; largest z 7.29 (Z=19), smallest 1.049 (Z=103)
+  core N=28:  75 openings,   0 beyond; beyond for Z in []; largest z 2.63 (Z=29), smallest 1.552 (Z=103)
+  core N=36:  72 openings,   1 beyond; beyond for Z in [37]; largest z 6.53 (Z=37), smallest 1.016 (Z=108)
+  core N=46:  64 openings,   0 beyond; beyond for Z in []; largest z 2.84 (Z=47), smallest 1.018 (Z=110)
+  core N=54:  56 openings,   1 beyond; beyond for Z in [55]; largest z 5.95 (Z=55), smallest 1.011 (Z=110)
+  core N=60:  50 openings,   0 beyond; beyond for Z in []; largest z 2.13 (Z=62), smallest 1.014 (Z=110)
+  core N=68:  42 openings,   0 beyond; beyond for Z in []; largest z 2.16 (Z=71), smallest 1.017 (Z=110)
+  core N=78:  32 openings,   0 beyond; beyond for Z in []; largest z 2.19 (Z=79), smallest 1.018 (Z=110)
+  core N=86:  24 openings,   0 beyond; beyond for Z in []; largest z 5.50 (Z=87), smallest 1.020 (Z=110)
+beyond-line steps NOT at a closed core: []
+K-shell opening (N=2) z by Z: [(3, 14.029), (4, 8.451), (5, 6.838), (6, 6.08), (7, 5.64), (8, 5.353), (9, 5.151), (10, 5.001), (11, 4.886), (12, 4.794), (13, 4.719), (14, 4.657)]  -> bare limit 4

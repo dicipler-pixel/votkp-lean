@@ -1,0 +1,110 @@
+[
+ {
+  "text": "Start with one step of light.",
+  "start": 0.8,
+  "end": 2.763,
+  "synth_s": 2.66
+ },
+ {
+  "text": "A step is a boost of length r, and its size in the picture is gamma, the hyperbolic tangent of r over two.",
+  "start": 3.143,
+  "end": 11.399,
+  "synth_s": 7.17
+ },
+ {
+  "text": "Halfway along the step stands a face. A share gamma squared turns back, and the rest passes on.",
+  "start": 11.779,
+  "end": 18.541,
+  "synth_s": 6.04
+ },
+ {
+  "text": "The two shares make exactly one. Nothing is lost at the face.",
+  "start": 18.921,
+  "end": 23.209,
+  "synth_s": 4.02
+ },
+ {
+  "text": "Two faces on arms at right angles are compared by one number, g.",
+  "start": 23.589,
+  "end": 28.581,
+  "synth_s": 5.19
+ },
+ {
+  "text": "When g is below one, the faces cross. When g is above one, they stand apart, and the light between them can only tunnel.",
+  "start": 28.961,
+  "end": 37.857,
+  "synth_s": 8.05
+ },
+ {
+  "text": "At the wall, where the step ratio is three plus two root two, the faces just touch.",
+  "start": 38.237,
+  "end": 43.784,
+  "synth_s": 4.62
+ },
+ {
+  "text": "Now put three balls on the field, and kick the centre ball.",
+  "start": 44.164,
+  "end": 48.025,
+  "synth_s": 3.77
+ },
+ {
+  "text": "Light does not jump. It crosses the gap at speed one, so the next ball stays dark until the light arrives.",
+  "start": 48.405,
+  "end": 56.021,
+  "synth_s": 6.25
+ },
+ {
+  "text": "At each face a share returns and the rest passes. The light in the balls plus the light in the gaps is always exactly one.",
+  "start": 56.401,
+  "end": 65.191,
+  "synth_s": 7.8
+ },
+ {
+  "text": "Every ball keeps its own clock. This is a hypothesis, and it is marked as one: a ball one step out ticks at one over z.",
+  "start": 65.571,
+  "end": 74.851,
+  "synth_s": 7.57
+ },
+ {
+  "text": "With these clocks the faces carry a load even at rest. That number is computed, and the clock ratio is the hypothesis.",
+  "start": 75.231,
+  "end": 83.913,
+  "synth_s": 6.95
+ },
+ {
+  "text": "Seven balls make a flock. Kick the centre, and light spreads through the gaps.",
+  "start": 84.293,
+  "end": 89.2,
+  "synth_s": 4.74
+ },
+ {
+  "text": "Do the balls swing together, like clocks on one beam? In every run so far, they do not lock.",
+  "start": 89.58,
+  "end": 96.108,
+  "synth_s": 6.19
+ },
+ {
+  "text": "That is an open question, and the page says so.",
+  "start": 96.488,
+  "end": 99.816,
+  "synth_s": 3.23
+ },
+ {
+  "text": "Not done yet: the electron sea with travel time, and gaps that follow the breathing drive.",
+  "start": 100.196,
+  "end": 106.447,
+  "synth_s": 5.76
+ },
+ {
+  "text": "The film uses the corrected sign on the faces between arms. The older sign is kept for comparison.",
+  "start": 106.827,
+  "end": 114.165,
+  "synth_s": 5.64
+ },
+ {
+  "text": "Every number here comes from a run, and every hypothesis wears its label.",
+  "start": 114.545,
+  "end": 119.537,
+  "synth_s": 4.25
+ }
+]

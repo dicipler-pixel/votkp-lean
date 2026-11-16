@@ -1,0 +1,56 @@
+DEFINITION (as NEVER-TURN-02): the pair turns at x iff some REAL root v of the Riley relation at s = e^x has v > 0,
+ t = tr(ab) > 2 and k = v (t - 2) < 4.  NEVER = no such root on the grid x = 0.1..1.5 (step 0.1), 2, 2.5, 3, 3.5, 4.
+WHY THIS CHECK DECIDES IT
+ v and w = t - 2 are the two roots of X^2 + dM X + k = 0, so the band is {v < A/2} + {w < A/2} (A = v + w), k = r (A - r) < 4.
+ Each half is read in the variable where its roots are SMALL (v-polynomial for v < A/2, w-polynomial for w < A/2),
+ with exact integer coefficients; the large cluster of either polynomial is never used (that is where polyroots fails).
+ Pass 1: sign change of the exact polynomial along the half band (no root finder): proves a real root -> TURN.
+ Pass 2 (only if pass 1 is silent at every x): roots at 80 digits in both views. A root-only hit must be confirmed by a
+ sign change of the polynomial across r (1 -+ 1e-6) evaluated at 160 digits, else it is listed as UNCONFIRMED.
+ Torus knots p/1 are run only for p <= 21 (control); for all p the centre argument of Two Trees Thm 8.7 applies.
+CONTROL / KILL: Two Trees census 8.8 must come out 19 turn / 7 never.
+65/3 cf [21,1,2]  TURN  (sign change, first found at x=0.8) 0.2s
+65/7 cf [9,3,2]  TURN  (sign change, first found at x=0.8) 0.2s
+65/9 cf [7,4,2]  NEVER  (no real band root on the grid) 117.0s
+65/11 cf [5,1,10]  TURN  (sign change, first found at x=0.8) 0.2s
+65/17 cf [3,1,4,1,2]  TURN  (sign change, first found at x=0.8) 0.2s
+65/19 cf [3,2,2,1,2]  TURN  (sign change, first found at x=0.8) 0.2s
+65/21 cf [3,10,2]  NEVER  (no real band root on the grid) 113.9s
+65/27 cf [2,2,2,5]  TURN  (sign change, first found at x=0.8) 0.2s
+65/33 cf [1,1,32]  TURN  (sign change, first found at x=0.8) 0.2s
+65/47 cf [1,2,1,1,1,1,3]  TURN  (sign change, first found at x=0.8) 0.2s
+65/49 cf [1,3,16]  TURN  (sign change, first found at x=0.8) 0.2s
+65/51 cf [1,3,1,1,1,4]  TURN  (sign change, first found at x=0.8) 0.2s
+65/57 cf [1,7,8]  TURN  (sign change, first found at x=0.8) 0.1s
+67/3 cf [22,3]  TURN  (sign change, first found at x=0.8) 0.3s
+67/5 cf [13,2,2]  NEVER  (no real band root on the grid) 126.3s
+67/7 cf [9,1,1,3]  TURN  (sign change, first found at x=0.8) 0.3s
+67/9 cf [7,2,4]  NEVER  (no real band root on the grid) 128.2s
+67/11 cf [6,11]  TURN  (sign change, first found at x=0.8) 0.2s
+67/13 cf [5,6,2]  NEVER  (no real band root on the grid) 135.3s
+67/17 cf [3,1,16]  TURN  (sign change, first found at x=0.8) 0.3s
+67/21 cf [3,5,4]  TURN  (sign change, first found at x=0.8) 0.3s
+67/23 cf [2,1,10,2]  TURN  (sign change, first found at x=0.8) 0.2s
+67/25 cf [2,1,2,8]  TURN  (sign change, first found at x=0.8) 0.2s
+67/29 cf [2,3,4,2]  TURN  (sign change, first found at x=0.8) 0.2s
+67/33 cf [2,33]  TURN  (sign change, first found at x=0.8) 0.2s
+67/39 cf [1,1,2,1,1,5]  TURN  (sign change, first found at x=0.8) 0.2s
+67/41 cf [1,1,1,1,2,1,3]  TURN  (sign change, first found at x=0.8) 0.3s
+67/43 cf [1,1,1,3,1,4]  TURN  (sign change, first found at x=0.8) 0.3s
+67/47 cf [1,2,2,1,6]  TURN  (sign change, first found at x=0.8) 0.2s
+69/5 cf [13,1,4]  TURN  (sign change, first found at x=0.8) 0.4s
+69/7 cf [9,1,6]  TURN  (sign change, first found at x=0.8) 0.2s
+69/11 cf [6,3,1,2]  TURN  (sign change, first found at x=0.8) 0.2s
+69/13 cf [5,3,4]  TURN  (sign change, first found at x=0.8) 0.3s
+69/17 cf [4,17]  TURN  (sign change, first found at x=0.8) 0.2s
+69/19 cf [3,1,1,1,2,2]  TURN  (sign change, first found at x=0.8) 0.2s
+69/31 cf [2,4,2,3]  TURN  (sign change, first found at x=0.8) 0.2s
+69/35 cf [1,1,34]  TURN  (sign change, first found at x=0.8) 0.2s
+69/37 cf [1,1,6,2,2]  TURN  (sign change, first found at x=0.8) 0.2s
+69/43 cf [1,1,1,1,1,8]  TURN  (sign change, first found at x=0.8) 0.2s
+69/47 cf [1,2,7,3]  TURN  (sign change, first found at x=0.8) 0.3s
+knots 40  TURN 35  NEVER 5  (378 s)
+NEVER: [(65, 9, [7, 4, 2]), (65, 21, [3, 10, 2]), (67, 5, [13, 2, 2]), (67, 9, [7, 2, 4]), (67, 13, [5, 6, 2])]
+TURN found by roots only: []
+NEVER with unconfirmed root-finder hits (x, view, k): []
+NEVER with a near-real complex pair in the half band (log10 relative |Im|): []

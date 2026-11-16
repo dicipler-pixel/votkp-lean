@@ -1,0 +1,3 @@
+coincident heavy unequal-rate pairs: 59 ; PULLED (> 0.1 from both own lines): 57 ; at an own line: 2
+by N (coincidences, pulled): {3: [32, 30], 4: [23, 23], 7: [4, 4]}
+verdict: locking supported
