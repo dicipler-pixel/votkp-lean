@@ -1,0 +1,32 @@
+steps r_I, r_J = 1.0986, 1.6094   link lengths d (AB, AC, BC) = 1.0986, 1.6094, 2.1459   strengths c = 0.4330, 0.3727, 0.3062
+
+C1  light in B and C after a kick at A, at very early times (shared clock t):
+   t = 0.001   rho_B = 1.875e-7   rho_B/t^2 = 0.1875   rho_C = 1.389e-7   rho_C/t^2 = 0.1389   c_AB^2 = 0.1875
+   t = 0.003   rho_B = 1.687e-6   rho_B/t^2 = 0.1875   rho_C = 1.250e-6   rho_C/t^2 = 0.1389   c_AB^2 = 0.1875
+   t = 0.010   rho_B = 1.875e-5   rho_B/t^2 = 0.1875   rho_C = 1.389e-5   rho_C/t^2 = 0.1389   c_AB^2 = 0.1875
+   t = 0.030   rho_B = 1.687e-4   rho_B/t^2 = 0.1875   rho_C = 1.250e-4   rho_C/t^2 = 0.1389   c_AB^2 = 0.1875
+
+C2  clocks: level spacing of each ball in the shared time t, and what the step ratio does to the tuning:
+   ball A  spacing 2|d| = 2.000000
+   ball B  spacing 2|d| = 2.000000
+   ball C  spacing 2|d| = 2.000000
+   shared clock, kick A, most light ever reaching B, C (t <= 20): 0.682, 0.438
+   link A-B: z = 3.000  detuning omega(1-1/z) = 1.3333  link c = 0.4330  -> most light the far ball could take (two-level bound) = 0.297
+   link A-C: z = 5.000  detuning omega(1-1/z) = 1.6000  link c = 0.3727  -> most light the far ball could take (two-level bound) = 0.178
+
+C3  does the gap between faces change the link?  faces at h = r/2 on the I and J arms, g = sinh h_I sinh h_J (g > 1: a gap delta = arccosh g):
+   z = 3,5  g = 0.5164  faces cross (no gap)   link c (AB, AC, BC) = 0.4330, 0.3727, 0.3062   c0 sech(d/2) from d only = 0.4330, 0.3727, 0.3062
+   z = 5,7  g = 1.0142  gap delta = 0.1682   link c (AB, AC, BC) = 0.3727, 0.3307, 0.2205   c0 sech(d/2) from d only = 0.3727, 0.3307, 0.2205
+   z = 7,9  g = 1.5119  gap delta = 0.9730   link c (AB, AC, BC) = 0.3307, 0.3000, 0.1702   c0 sech(d/2) from d only = 0.3307, 0.3000, 0.1702
+   z = 9,13  g = 2.2188  gap delta = 1.4350   link c (AB, AC, BC) = 0.3000, 0.2575, 0.1274   c0 sech(d/2) from d only = 0.3000, 0.2575, 0.1274
+   z = 13,13  g = 2.7692  gap delta = 1.6774   link c (AB, AC, BC) = 0.2575, 0.2575, 0.1069   c0 sech(d/2) from d only = 0.2575, 0.2575, 0.1069
+
+C4  each ball's offset clock tau_i (Dirac Time: read from memory) after a kick at A, with the sea on:
+   t = 1.00  | A: tau-tau0 -Infinity tau' -4.826 limit 8.054e-4 | B: tau-tau0 -Infinity tau' -4.877 limit 0.020 | C: tau-tau0 -Infinity tau' -4.791 limit 0.014
+   t = 2.00  | A: tau-tau0 -Infinity tau' -2.522 limit 0.001 | B: tau-tau0 -Infinity tau' -0.485 limit 5.981e-4 | C: tau-tau0 -Infinity tau' -1.279 limit 0.004
+   t = 3.00  | A: tau-tau0 -Infinity tau' -0.249 limit 3.277e-5 | B: tau-tau0 -Infinity tau' 1.519 limit 0.003 | C: tau-tau0 -Infinity tau' -0.553 limit 0.001
+   t = 4.00  | A: tau-tau0 -Infinity tau' 2.193 limit 8.899e-4 | B: tau-tau0 -Infinity tau' 1.188 limit 2.061e-4 | C: tau-tau0 -Infinity tau' 1.252 limit 0.004
+   t = 5.00  | A: tau-tau0 -Infinity tau' 5.492 limit 0.001 | B: tau-tau0 -Infinity tau' -2.885 limit 0.015 | C: tau-tau0 -Infinity tau' 1.360 limit 0.003
+   t = 6.00  | A: tau-tau0 -Infinity tau' -1.982 limit 0.003 | B: tau-tau0 -Infinity tau' -0.969 limit 0.008 | C: tau-tau0 -Infinity tau' -9.036 limit 0.019
+
+   deriv() advances every ball with the same step h in the one time t: no ball uses its own tau as its time.
