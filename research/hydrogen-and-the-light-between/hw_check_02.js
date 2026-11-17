@@ -1,0 +1,15 @@
+/* SCRIPT: HW-CHECK-02 — fixed before the run, three balls breathing a third of a breath apart.
+   (a) ledger balls + gaps = 1 to 1e-9 through three full breaths (t = 24) with the faces and the gap breathing every step;
+   (b) C is not lit before the light could get there: first light in C at or after 2s;
+   (c) in time (s = T/3) against out of time (s = T/3 · golden): the most light that ever reaches C, reported, and which is larger — stated, not claimed;
+   (d) with the breathing off and equal clocks the faces return nothing through the whole run (Γ = 0 at every step). */
+const FL = require('../sea/fl_math_v2.js'), HW = require('./hw_world_v2.js'); let fails = 0; const say = (ok, s) => { console.log((ok ? 'HOLDS  ' : 'KILLED ') + s); if(!ok) fails++; };
+function run(sep, breathe, T){ const W = HW.makeWorld({ atoms:3, sep, breathe }), S = FL.initState(W, { source:0 }); let dev = 0, firstC = null, maxC = 0, maxB = 0, gmax = 0, dmin = 1e9, dmax = 0;
+  while(S.t < T){ HW.breathe(W, S.t); FL.step(W, S); const B = FL.books(W, S); dev = Math.max(dev, Math.abs(B.total - 1)); const c = FL.ballLight(S, 2), b = FL.ballLight(S, 1); if(firstC === null && c > 1e-9) firstC = S.t; maxC = Math.max(maxC, c); maxB = Math.max(maxB, b); gmax = Math.max(gmax, Math.abs(W.links[0].Gam)); dmin = Math.min(dmin, W.delta[0]); dmax = Math.max(dmax, W.delta[0]); }
+  return { dev, firstC, maxC, maxB, gmax, dmin, dmax }; }
+const sIn = HW.T0/3, sOut = sIn*(1 + Math.sqrt(5))/2, A = run(sIn, true, 24), B = run(sOut, true, 24), C = run(sIn, false, 24);
+say(A.dev < 1e-9 && B.dev < 1e-9, '(a) ledger through three breaths, faces and gap live: deviation ' + A.dev.toExponential(1) + ' (in time), ' + B.dev.toExponential(1) + ' (out of time)');
+say(A.firstC !== null && A.firstC >= 2*sIn - 0.02 && B.firstC !== null && B.firstC >= 2*sOut - 0.02, '(b) C first lit at ' + (A.firstC === null ? '—' : A.firstC.toFixed(2)) + ' for 2s = ' + (2*sIn).toFixed(2) + ' (in time), ' + (B.firstC === null ? '—' : B.firstC.toFixed(2)) + ' for 2s = ' + (2*sOut).toFixed(2) + ' (out of time)');
+console.log('(c) most light reaching C: in time ' + A.maxC.toFixed(4) + ', out of time ' + B.maxC.toFixed(4) + ' · B: ' + A.maxB.toFixed(4) + ' / ' + B.maxB.toFixed(4) + ' · face Γ swings to ' + A.gmax.toFixed(3) + ' · δ between ' + A.dmin.toFixed(3) + ' and ' + A.dmax.toFixed(3) + ' · ' + (A.maxC > B.maxC ? 'in time carries more' : 'out of time carries more'));
+say(C.gmax < 1e-12, '(d) breathing off, equal clocks: largest face Γ ' + C.gmax.toExponential(1));
+console.log(fails ? fails + ' KILLED' : 'all hold');

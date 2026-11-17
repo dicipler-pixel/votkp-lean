@@ -1,0 +1,5 @@
+HOLDS  (a) ledger through three breaths, faces and gap live: deviation 1.4e-14 (in time), 7.4e-14 (out of time)
+HOLDS  (b) C first lit at 5.38 for 2s = 5.33 (in time), 8.66 for 2s = 8.63 (out of time)
+(c) most light reaching C: in time 0.0600, out of time 0.0171 · B: 0.0783 / 0.0777 · face Γ swings to 0.294 · δ between 0.285 and 0.840 · in time carries more
+HOLDS  (d) breathing off, equal clocks: largest face Γ 0.0e+0
+all hold
