@@ -1,0 +1,70 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>The Ball Is the Tree — research note</title>
+<style>
+:root{color-scheme:dark;--bg:#070d18;--ink:#e7f0fb;--dim:#9fb2c8;--line:#1f2f44;--teal:#4fe0c0;--gold:#f2c14e;--rose:#ff8d7c;--blue:#63d3ff;--mono:ui-monospace,SFMono-Regular,Menlo,monospace}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Georgia,"Times New Roman",serif}main{max-width:860px;margin:0 auto;padding:40px 20px 80px}
+h1{font-size:30px;line-height:1.2;margin:0 0 6px;font-weight:normal}.by{color:var(--dim);font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:28px}
+h2{font-size:21px;font-weight:normal;margin:38px 0 10px;color:var(--teal)}h3{font-size:17px;font-weight:normal;margin:24px 0 6px;color:var(--gold)}
+p{margin:10px 0}.eq{font-family:var(--mono);font-size:14.5px;color:#dfe7ef;margin:12px 0 12px 24px;white-space:pre-wrap}
+.tag{display:inline-block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:1px 7px;border:1px solid var(--line);border-radius:4px;color:var(--dim);margin-right:6px;vertical-align:middle}
+.holds{color:var(--teal);border-color:var(--teal)}.fell{color:var(--rose);border-color:var(--rose)}.hyp{color:var(--gold);border-color:var(--gold)}.read{color:var(--blue);border-color:var(--blue)}
+table{border-collapse:collapse;width:100%;font-size:14px;margin:12px 0}td,th{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}th{color:var(--dim);font-weight:normal;font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.small{color:var(--dim);font-size:13.5px}figure{margin:18px 0}figure svg{width:100%;height:auto;display:block}figcaption{color:var(--dim);font-size:13px;margin-top:6px}
+</style></head><body><main>
+<h1>The Ball Is the Tree</h1>
+<div class="by">Jeromie Beasley · research note v1 · 17 November 2026 · AI-assisted</div>
+
+<p>This note records one day's work on the moving matrix of balls and what it came to. Five builds went into the ladder and were set aside; the sixth, the tree, is the one that is the model and not a picture of it. The note is written to stand on its own: the picture first, in the words it was given; then the mathematics, all of it already in the papers; then the builds, what each showed and what each got wrong; then the checks, each with the reason it proves what it claims before its result; then what is hypothesis and what is open. Scripts are listed last.</p>
+
+<h2>1. The picture</h2>
+<p>For the light there are no balls and no space. There is one tree of layers. Each ball is layers of layers; the layers breathe on their own schedule, out, in, and against each other; the stretch between two facing layers is itself a layer. A rung is a twin: two faces and the stretch between them. The balls are only the outside view. Inside the big ball is a sea of little electron balls, and they are the ground: at every scale the two things are light and electron. The big ball weighs as much as the little one.</p>
+<p>Two Trees in One Ball worked because nothing came in from outside the mathematics: two paths in one tree, every step a Γ, every closure a loop, and the only question whether the two paths met. The moment hydrogen, rooms, separations and a sea between atoms were added, the picture got heavier and worse with each version. The tree build drops all of it.</p>
+
+<h2>2. The mathematics, as it already stands</h2>
+<h3>The peel step</h3>
+<p>A ratio z between two levels is a point of the Smith disk at hyperbolic distance r = ln z from the centre, and the face that returns it returns</p>
+<p class="eq">Γ = tanh(r/2) = (z − 1)/(z + 1)</p>
+<p>(VOTKP; Two Trees in One Ball). The centre of the disk is the vacuum and the rim, |Γ| = 1, is ground. A step composes by Smith addition, Γ ⊕ Γ′ = (Γ + Γ′)/(1 + ΓΓ′), and the composed Γ of a ladder of rungs has length 2 atanh Γ, the one peel coordinate the light sees.</p>
+<h3>A cell and its faces</h3>
+<p>A cell is a centre with six faces at ±I, ±J, ±K, each the hyperbolic plane perpendicular to its axis at distance h = r/2, drawn as a spherical cap whose apex sits at tanh(h/2) (the Light at the Hypersurface ball, Balls in One Ball). Two faces of neighbouring cells either cross (sinh h_a sinh h_b &lt; 1, the square of the two steps is a turn, the walk is held) or stand apart (&gt; 1, a run, nothing returns). Each face is a projector; the geometry between cells is the intrinsic one (IQGT): nothing in it is a length, everything is a ratio.</p>
+<h3>Rate is weight</h3>
+<p>A cell's step r is its own clock. Geometry cannot set an absolute rate, only the ratio of two clocks (Dirac Time §9.4), so every cell breathes on its own schedule and no master breath exists. Between two cells the only thing the face can return is their ratio:</p>
+<p class="eq">Γ_junction = tanh((r_p − r_c)/2)</p>
+<p>open when the two breathe alike, shut when one is large and the other small. Friction, and so heat, needs a declared bath (Dirac Time §12.6); with none declared nothing heats, and what a wall keeps is a record, not a temperature.</p>
+<h3>The rung is a twin</h3>
+<p>On the edge between a parent and a child the parent's face sits at r_p/2 from the parent and returns +Γ_p; the child's face sits at r_c/2 from the child and returns −Γ_c; between them the junction returns the clock ratio, and if the two faces leave an empty stretch δ the Flock's gap element tanh(κ_g δ) sits on it. Two faces and the stretch between: the rung is the twin.</p>
+<h3>The electrons are the ground</h3>
+<p>The ball's own labels say it: <em>the sea of electrons is the ground and keeps the record</em>; <em>the walls of each layer are electrons</em>. Free electrons push the reflection to the rim, bound ones keep it near the vacuum (VOTKP); the electron decides where matter sits on the disk. In the tree the leaves are the electrons: a leaf's wall is the end of its step, returns everything, |Γ| = 1, and keeps the record of what pushed on it,</p>
+<p class="eq">K = ∫ push dt,   push = 2R (Y_k |a⁺_k|² − Y_{k+1} |a⁻_{k+1}|²) / Y₀,   at the ground R = 1 and nothing beyond: push = 2|a⁺|²</p>
+<p>which is the ball's own push on a face (arriving flux from each side, opposite senses), with the record rings that fill with K.</p>
+<h3>Connection energy</h3>
+<p>On every edge the Flock engine carries the non-normal connection energy of the two cells' fields, ‖D_i − U D_j U†‖², the one-page note's self-commutator energy in the engine's own variables. It is measured on the page, not added.</p>
+<h3>Weight</h3>
+<p>Nothing in a cell knows its size. The weight of a path from the root to a leaf is its total step Σ r; at rest it is D ln z, and per layer it is one step, ln z, the same for a tree of depth D and one of depth D − 1. <span class="tag hyp">hypothesis</span> The big ball weighs the same per layer as the little one; the whole weighs by how many layers it has, and the layers are electrons, so the weight is the electron count times one step. Kept as a hypothesis until the tree can count it against something measured.</p>
+
+<h2>3. The builds</h2>
+<table><tr><th>Build</th><th>What it was</th><th>What it showed</th><th>What was wrong</th></tr>
+<tr><td>Hydrogen in a row, v1–v3</td><td>Three balls on a line, a room with E, faces at r_c, the breath a third apart</td><td>In time hands light down the line, out of time does not (0.060 / 0.017 in a ball); walls moving every step; the ledger holds</td><td>A room, a separation and a sea between atoms are not in the mathematics; the light lived on a line beside the ball</td></tr>
+<tr><td>The Ladder of Twins v1</td><td>On each link both balls' layers interleaved as rungs, each breathing with its ball, the junction the clock ratio, the gap element both ways</td><td>Composed Γ by Smith addition equals tanh(Σ ln z / 2); in time 0.025 reaches the third ball, out of time 0.016; the gap element changes nothing when the outer layers cross</td><td>The rungs were drawn as rings on a line; the ball's own stack, streams, push and record ran on a private source and never saw the link</td></tr>
+<tr><td>The Ladder of Twins v2</td><td>The link's light fed into the ball's own stack on the I arm (streams, push, record rings); the leak between facing layers counted</td><td>The ball's own push on the fed amplitudes equals the engine's reading to 10⁻¹⁸; the light in the links climbs to 0.9 of the ledger by t ≈ 5 while the balls empty</td><td>One arm of one ball; J and K untouched; still a ladder with a ball painted over it</td></tr>
+<tr><td>The Ball Is the Tree v1</td><td>One tree of cells, each on its own clock; faces at r/2 of each cell, junction the clock ratio; leaves the electrons; the light on the edges; twins tracked</td><td>Section 4</td><td>Section 5</td></tr></table>
+
+<h2>4. The checks</h2>
+<p class="small">Each kill line was written before its run, with the reason it would prove the claim. Output is in TB-CHECK-01's record.</p>
+<p><span class="tag holds">holds</span> <b>The ledger.</b> Every rung is a unitary scatter, τ² + ρ² = 1, and the Flock step is unitary, so cells + edges must stay 1 whatever the rungs do; a drift would be a bug, not physics. Through three breaths with all 37 cells on their own clocks, leaves ground and open, gap element on and off: largest deviation 3.8·10⁻¹⁴.</p>
+<p><span class="tag holds">holds</span> <b>Causality.</b> Light moves at speed one, so a cell at depth ℓ cannot be lit before ℓ ln z. Depth-1 cells first lit at 1.11 for ln 3 = 1.10; no cell early.</p>
+<p><span class="tag holds">holds</span> <b>The ground passes nothing.</b> At |Γ| = 1, τ = 0, so no light enters a leaf and the record can only grow. Light in every leaf cell exactly 0 for all time; K never fell. The opposite was built: with leaves open, 0.018 enters a leaf by t = 3 ln z. Two things were fixed before the run and are stated: a ground wall sits at the end of its step, not at a face, since a wall has no inside; and two rungs never share one sample, because two scatterers applied in one sample do not compose (the first build had the parent's face and the ground on one sample and leaked 4.5·10⁻⁴).</p>
+<p><span class="tag fell">fell, with its reading</span> <b>Two paths.</b> A cell's twin is the mirror word; with twins on one schedule the mirror tree is the same tree, and the light in a cell and its twin were to agree to 10⁻¹⁰. They differ by 7·10⁻⁵ at t = 12. The reading: the Flock engine's ports take a cell's light link by link, one after another, so twins fed from one cell differ by order γh per step; the difference falls with the step, 4.7, 0.8, 0.7, 0.24 ·10⁻⁴ at steps 0.04, 0.02, 0.01, 0.005. It is the engine's step, not the model. With own schedules twins differ by 4·10⁻³: that is the two clocks, reported, not judged.</p>
+<p><span class="tag holds">holds</span> <b>Weight.</b> At rest every root→leaf path has Σ r = 2 ln z exactly and ln z per layer; the depth-1 tree has the same per layer, 6 leaves against 30.</p>
+<p><span class="tag read">reading</span> With the leaves ground, the light by depth at t = 24 is 0.037, 0.020, 0.000 with 0.943 in the edges: the tree holds the light between its walls. With the leaves open it is 0.001, 0.031, 0.077 with 0.891 in the edges: the light goes down into the leaves and stays. The leak is the stretches between facing layers, and it is most of the ledger either way.</p>
+
+<h2>5. What is hypothesis, what is open, what is a limit</h2>
+<p><span class="tag hyp">hypothesis</span> The leaves are the electrons and keep the record. <span class="tag hyp">hypothesis</span> The weight per layer is one step and the whole weighs by its electron count. <span class="tag hyp">hypothesis</span> The amber stocks on the ball (B182) stay amber and switchable, not fed.</p>
+<p>Open: the two paths should be two walks, not two halves of one kick. The twin-prime chain gave two walks tracked against each other at every step, and a layer is where the two see different things. The tree has the twins; the next build should walk two lights through it and record their difference at every face. Open: the record is kept but nothing reads it back; the ball's own record rings fill, and what a filled ring does to the next step is not yet in the engine.</p>
+<p>Limits: model units; positions at rest, faces moving; edges drawn straight inside the ball, not as the arcs they are; the root drawn as the whole ball and every other cell as a sphere; the record integrated with the engine's step; no bath, so nothing heats. The light is one quantum on the Flock engine; the ball's own rays and rim field are the view, not the ledger.</p>
+
+<h2>6. Next</h2>
+<p>Two walks in the tree: kick the root twice, one light along a word and one along its twin, and record at every face the difference the two see. That is the twin-prime setup in the tree, and it is one build.</p>
+
+<h2>Scripts</h2>
+<p class="small">TB-WORLD-V1 (the tree on the Flock engine, unchanged FL-MATH-V2 and MM-MATH-V1), TB-CHECK-01 and its output, TB-LAYER-V1 and TB-BUILD-V1 (the page The_Ball_Is_the_Tree_v1_20261117.html), TB-SHOT-V1. Earlier today: HW-WORLD-V5/V6, HW-FEED-V1, HW-LAYER-V5/V6, HW-CHECK-04 (the ladder pages), and the ball inventory (every drawn part of the Light at the Hypersurface ball, with the code line that places it). All on GitHub, votkp-lean, branch claude/moving-matrix-of-balls, research/hydrogen-and-the-light-between and research/the-ball-is-the-tree.</p>
+</main></body></html>

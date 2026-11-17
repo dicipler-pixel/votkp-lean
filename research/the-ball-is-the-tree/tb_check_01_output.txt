@@ -1,0 +1,11 @@
+HOLDS  (a) ledger, depth 2, 37 cells on their own clocks, three breaths: largest deviation 3.8e-14
+HOLDS  (b) causality: no cell lit before ℓ ln z (worst early 0.000); depth-1 cells first lit at 1.11 1.11 1.11 1.11 1.11 1.11 for ln z = 1.10
+HOLDS  (c) the ground passes nothing: most light in any leaf cell 0.0e+0; record K = 0.0343, never fell · opposite, leaves open: most light in a leaf cell 0.0178 (enters)
+KILLED (d) two paths: twin phases the same, largest twin difference 7.0e-5 over 19 pairs at t = 12 · own schedules: largest 4.03e-3, mean 2.28e-4 at t = 24 (reported)
+HOLDS  (e) weight at rest: every path of the depth-2 tree Σ r = 2.197225 = 2 ln z, per layer 1.098612; the depth-1 tree per layer 1.098612 · 30 leaves vs 6
+levels of light at t = 24, leaves ground: 0.0366 0.0200 0.0000 · leaves open: 0.0013 0.0313 0.0767 · edges 0.9434 / 0.8908
+1 KILLED
+h 0.04 twin dmax 4.70e-4 by axis 2.8e-4 4.7e-4 1.0e-4 root 0.0819
+h 0.02 twin dmax 8.07e-5 by axis 8.1e-5 6.2e-5 2.9e-5 root 0.0932
+h 0.01 twin dmax 7.01e-5 by axis 7.0e-5 3.4e-5 1.1e-5 root 0.0946
+h 0.005 twin dmax 2.38e-5 by axis 1.0e-5 2.4e-5 6.6e-6 root 0.0987
