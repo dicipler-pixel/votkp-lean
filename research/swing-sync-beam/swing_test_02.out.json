@@ -1,0 +1,88 @@
+{
+ "arc": {
+  "cut_angle": 0.9339483720224415,
+  "margin": 0.05567956292360179,
+  "runnable": true,
+  "rank": 32,
+  "of": 64,
+  "T6a": {
+   "rest_dev": 7.771561172376096e-16,
+   "projector_dev": 5.551115123125783e-16,
+   "held": true
+  },
+  "T6b": {
+   "weight_between_at_rest": 0.008053118942520662,
+   "held": true
+  },
+  "T6c": {
+   "crossing_step": 24,
+   "largest_change_before_crossing": 3.444511320479795e-15,
+   "first_step_with_change_above_1e_12": 24,
+   "change_at_steps_23_24_25_26": [
+    3.444511320479795e-15,
+    0.5456145482844188,
+    0.7471232812400562,
+    0.747123281240056
+   ],
+   "largest_change_by_72": 0.7702006530610233,
+   "held": true
+  },
+  "kick_size_on_A": 1.3825436651048129
+ },
+ "opposite_arc": {
+  "cut_angle": 0.9339483720224415,
+  "margin": 0.05567956292360179,
+  "runnable": true,
+  "rank": 32,
+  "of": 64,
+  "T6a": {
+   "rest_dev": 9.992007221626409e-16,
+   "projector_dev": 5.551115123125783e-16,
+   "held": true
+  },
+  "T6b": {
+   "weight_between_at_rest": 0.008053118942520674,
+   "held": true
+  },
+  "T6c": {
+   "crossing_step": 24,
+   "largest_change_before_crossing": 3.0702273784465624e-15,
+   "first_step_with_change_above_1e_12": 24,
+   "change_at_steps_23_24_25_26": [
+    2.8545358972216445e-15,
+    0.5456145482844189,
+    0.7471232812400568,
+    0.7471232812400569
+   ],
+   "largest_change_by_72": 0.7702006530610234,
+   "held": true
+  },
+  "kick_size_on_A": 1.3825436651048144
+ },
+ "E2": {
+  "10": {
+   "weight_between": 0.018614867851133976,
+   "margin": 0.08225809628301863,
+   "rank": 22,
+   "of": 44
+  },
+  "20": {
+   "weight_between": 0.008053118942520662,
+   "margin": 0.05567956292360179,
+   "rank": 32,
+   "of": 64
+  },
+  "40": {
+   "weight_between": 0.002773950742287464,
+   "margin": 0.03310459153734005,
+   "rank": 52,
+   "of": 104
+  },
+  "80": {
+   "weight_between": 0.0008376764291465886,
+   "margin": 0.017998802032212356,
+   "rank": 92,
+   "of": 184
+  }
+ }
+}

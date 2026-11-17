@@ -1,0 +1,275 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>The Swing: notes and test</title>
+<style>/* SCRIPT: SWING-NOTES-V1 page. Jeromie Beasley. 16 Nov 2026. AI-assisted. */
+:root{--bg:#070b14;--card:#0e1524;--ink:#e6ecf7;--dim:#93a1bd;--line:#22304d;--gold:#f2c14e;--cy:#5ad1e6;--gr:#7be0a1;--rd:#ff7a7a;--vi:#b79cff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 Georgia,serif}header{padding:44px 6vw 20px;border-bottom:1px solid var(--line)}h1{font-size:2rem;margin:0 0 6px;font-weight:600}
+.sub{color:var(--dim);font:.95rem system-ui,sans-serif}main{max-width:1000px;margin:0 auto;padding:10px 6vw 80px}h2{font-size:1.4rem;margin:44px 0 8px;color:var(--gold);font-weight:600}h3{font-size:1.05rem;margin:24px 0 6px;color:var(--cy)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin:14px 0}.eq{font-family:ui-monospace,Consolas,monospace;color:#d8e8ff;border-left:3px solid var(--cy);padding:4px 12px;margin:10px 0;overflow-wrap:anywhere}
+table{border-collapse:collapse;width:100%;font:14px/1.45 system-ui,sans-serif;margin:12px 0}th,td{border-bottom:1px solid var(--line);padding:7px 8px;text-align:left;vertical-align:top}th{color:var(--dim);font-weight:600}
+.g{display:inline-block;font:600 11px system-ui,sans-serif;letter-spacing:.04em;padding:2px 8px;border-radius:99px;border:1px solid}.held{color:var(--gr);border-color:var(--gr)}.kill{color:var(--rd);border-color:var(--rd)}
+.t{color:var(--vi);border-color:var(--vi)}pre{font:12px/1.45 ui-monospace,Consolas,monospace;background:#0a1120;border:1px solid var(--line);border-radius:8px;padding:12px;white-space:pre-wrap;overflow-wrap:anywhere;color:#cfe3ff}
+q{color:#f6dfa0}footer{color:var(--dim);font:13px system-ui,sans-serif;padding:20px 6vw 60px;border-top:1px solid var(--line)}</style></head><body>
+<header><h1>The Swing: notes and test</h1><div class="sub">The ground state as a swing, the open end, and the bigger container · Jeromie Beasley · 16 November 2026 · AI-assisted</div></header><main>
+<p>These are the notes of one evening's talk turned into a test. The kill lines were written to a file before any run. One part was killed on the first run; it is recorded, and its rerun has its own file written before that run. The model is one line of light, faces and ends. It is small on purpose: every number in it can be derived by hand first.</p>
+<h2>1 · The notes</h2>
+<div class="card"><p><b>The swing.</b> The ground state, the sea of electrons, is <q>like a swing</q>, a <q>cosmic sync beam</q>.</p>
+<p><b>The crux.</b> Is it <q>a charged loop like structure that holds itself together shut, all energy conserved</q>, or <q>an open container on some end</q>, or <q>no end no background</q>?</p>
+<p><b>The bigger container.</b> An open end loses a little each cycle and needs feeding, <q>unless it is in another even bigger container, then it may just be a compression of sorts</q>.</p>
+<p><b>The kick.</b> <q>If you want to get energy you must kick it like a photon.</q></p>
+<p><b>The beam.</b> Everywhere at once, or must the sync travel along the links like light. A third option from the talk: the swing at rest is everywhere, and only changes to it travel.</p></div>
+<h2>2 · The model</h2>
+<p>A line of stretches of field joined by faces. Light crosses one cell per step. A face of step ratio z scatters by the proved rule, and an end is one of the two extremes of the same rule.</p>
+<div class="eq">Γ = (z − 1)/(z + 1) &nbsp;·&nbsp; return Γ², pass 1 − Γ² &nbsp;·&nbsp; mirror: |Γ| = 1 &nbsp;·&nbsp; matched load: Γ = 0</div>
+<p>A swing is the light held between two faces; its period is the round trip, 2L. There is no law of motion for the faces here and no torque, so nothing in this model can lock. Choices made to close it: one dimension, and the face sign (+ρ seen from the left).</p>
+<h2>3 · The loss comes back</h2>
+<p>The same swing, twice. With an open end it keeps a quarter at every meeting with its face (z = 3, Γ² = ¼) and nothing returns. Inside a bigger container of the same length, what left meets the swing again at the face, and the face hands all of it back: ¼, then 1, then ¼, then 1.</p>
+<svg viewBox="0 0 720 230" role="img" style="width:100%;max-width:720px;display:block;margin:10px 0"><line x1="52" x2="702" y1="196.0" y2="196.0" stroke="#22304d"/><text x="46" y="200.0" fill="#93a1bd" font-size="11" text-anchor="end" font-family="system-ui">0</text><line x1="52" x2="702" y1="154.1" y2="154.1" stroke="#22304d"/><text x="46" y="158.1" fill="#93a1bd" font-size="11" text-anchor="end" font-family="system-ui">0.25</text><line x1="52" x2="702" y1="112.2" y2="112.2" stroke="#22304d"/><text x="46" y="116.2" fill="#93a1bd" font-size="11" text-anchor="end" font-family="system-ui">0.5</text><line x1="52" x2="702" y1="70.3" y2="70.3" stroke="#22304d"/><text x="46" y="74.3" fill="#93a1bd" font-size="11" text-anchor="end" font-family="system-ui">0.75</text><line x1="52" x2="702" y1="28.4" y2="28.4" stroke="#22304d"/><text x="46" y="32.4" fill="#93a1bd" font-size="11" text-anchor="end" font-family="system-ui">1</text><text x="52.0" y="214" fill="#93a1bd" font-size="11" text-anchor="middle" font-family="system-ui">0</text><text x="102.0" y="214" fill="#93a1bd" font-size="11" text-anchor="middle" font-family="system-ui">10</text><text x="152.0" y="214" fill="#93a1bd" font-size="11" text-anchor="middle" font-family="system-ui">20</text><text x="202.0" y="214" fill="#93a1bd" font-size="11" text-anchor="middle" font-family="system-ui">30</text><text x="252.0" y="214" fill="#93a1bd" font-size="11" text-anchor="middle" font-family="system-ui">40</text><text x="302.0" y="214" fill="#93a1bd" font-size="11" text-anchor="middle" font-family="system-ui">50</text><text x="352.0" y="214" fill="#93a1bd" font-size="11" text-anchor="middle" font-family="system-ui">60</text><text x="402.0" y="214" fill="#93a1bd" font-size="11" text-anchor="middle" font-family="system-ui">70</text><text x="452.0" y="214" fill="#93a1bd" font-size="11" text-anchor="middle" font-family="system-ui">80</text><text x="502.0" y="214" fill="#93a1bd" font-size="11" text-anchor="middle" font-family="system-ui">90</text><text x="552.0" y="214" fill="#93a1bd" font-size="11" text-anchor="middle" font-family="system-ui">100</text><text x="602.0" y="214" fill="#93a1bd" font-size="11" text-anchor="middle" font-family="system-ui">110</text><text x="652.0" y="214" fill="#93a1bd" font-size="11" text-anchor="middle" font-family="system-ui">120</text><text x="702.0" y="214" fill="#93a1bd" font-size="11" text-anchor="middle" font-family="system-ui">130</text><polyline fill="none" stroke="#ff7a7a" stroke-width="2" points="52.0,28.4 57.0,28.4 62.0,28.4 67.0,28.4 72.0,28.4 77.0,28.4 82.0,28.4 87.0,28.4 92.0,28.4 97.0,28.4 102.0,154.1 107.0,154.1 112.0,154.1 117.0,154.1 122.0,154.1 127.0,154.1 132.0,154.1 137.0,154.1 142.0,154.1 147.0,154.1 152.0,154.1 157.0,154.1 162.0,154.1 167.0,154.1 172.0,154.1 177.0,154.1 182.0,154.1 187.0,154.1 192.0,154.1 197.0,154.1 202.0,185.5 207.0,185.5 212.0,185.5 217.0,185.5 222.0,185.5 227.0,185.5 232.0,185.5 237.0,185.5 242.0,185.5 247.0,185.5 252.0,185.5 257.0,185.5 262.0,185.5 267.0,185.5 272.0,185.5 277.0,185.5 282.0,185.5 287.0,185.5 292.0,185.5 297.0,185.5 302.0,193.4 307.0,193.4 312.0,193.4 317.0,193.4 322.0,193.4 327.0,193.4 332.0,193.4 337.0,193.4 342.0,193.4 347.0,193.4 352.0,193.4 357.0,193.4 362.0,193.4 367.0,193.4 372.0,193.4 377.0,193.4 382.0,193.4 387.0,193.4 392.0,193.4 397.0,193.4 402.0,195.3 407.0,195.3 412.0,195.3 417.0,195.3 422.0,195.3 427.0,195.3 432.0,195.3 437.0,195.3 442.0,195.3 447.0,195.3 452.0,195.3 457.0,195.3 462.0,195.3 467.0,195.3 472.0,195.3 477.0,195.3 482.0,195.3 487.0,195.3 492.0,195.3 497.0,195.3 502.0,195.8 507.0,195.8 512.0,195.8 517.0,195.8 522.0,195.8 527.0,195.8 532.0,195.8 537.0,195.8 542.0,195.8 547.0,195.8 552.0,195.8 557.0,195.8 562.0,195.8 567.0,195.8 572.0,195.8 577.0,195.8 582.0,195.8 587.0,195.8 592.0,195.8 597.0,195.8 602.0,196.0 607.0,196.0 612.0,196.0 617.0,196.0 622.0,196.0 627.0,196.0 632.0,196.0 637.0,196.0 642.0,196.0 647.0,196.0 652.0,196.0 657.0,196.0 662.0,196.0 667.0,196.0 672.0,196.0 677.0,196.0 682.0,196.0 687.0,196.0 692.0,196.0 697.0,196.0 702.0,196.0"/><polyline fill="none" stroke="#7be0a1" stroke-width="2" points="52.0,28.4 57.0,28.4 62.0,28.4 67.0,28.4 72.0,28.4 77.0,28.4 82.0,28.4 87.0,28.4 92.0,28.4 97.0,28.4 102.0,154.1 107.0,154.1 112.0,154.1 117.0,154.1 122.0,154.1 127.0,154.1 132.0,154.1 137.0,154.1 142.0,154.1 147.0,154.1 152.0,154.1 157.0,154.1 162.0,154.1 167.0,154.1 172.0,154.1 177.0,154.1 182.0,154.1 187.0,154.1 192.0,154.1 197.0,154.1 202.0,28.4 207.0,28.4 212.0,28.4 217.0,28.4 222.0,28.4 227.0,28.4 232.0,28.4 237.0,28.4 242.0,28.4 247.0,28.4 252.0,28.4 257.0,28.4 262.0,28.4 267.0,28.4 272.0,28.4 277.0,28.4 282.0,28.4 287.0,28.4 292.0,28.4 297.0,28.4 302.0,154.1 307.0,154.1 312.0,154.1 317.0,154.1 322.0,154.1 327.0,154.1 332.0,154.1 337.0,154.1 342.0,154.1 347.0,154.1 352.0,154.1 357.0,154.1 362.0,154.1 367.0,154.1 372.0,154.1 377.0,154.1 382.0,154.1 387.0,154.1 392.0,154.1 397.0,154.1 402.0,28.4 407.0,28.4 412.0,28.4 417.0,28.4 422.0,28.4 427.0,28.4 432.0,28.4 437.0,28.4 442.0,28.4 447.0,28.4 452.0,28.4 457.0,28.4 462.0,28.4 467.0,28.4 472.0,28.4 477.0,28.4 482.0,28.4 487.0,28.4 492.0,28.4 497.0,28.4 502.0,154.1 507.0,154.1 512.0,154.1 517.0,154.1 522.0,154.1 527.0,154.1 532.0,154.1 537.0,154.1 542.0,154.1 547.0,154.1 552.0,154.1 557.0,154.1 562.0,154.1 567.0,154.1 572.0,154.1 577.0,154.1 582.0,154.1 587.0,154.1 592.0,154.1 597.0,154.1 602.0,28.4 607.0,28.4 612.0,28.4 617.0,28.4 622.0,28.4 627.0,28.4 632.0,28.4 637.0,28.4 642.0,28.4 647.0,28.4 652.0,28.4 657.0,28.4 662.0,28.4 667.0,28.4 672.0,28.4 677.0,28.4 682.0,28.4 687.0,28.4 692.0,28.4 697.0,28.4 702.0,154.1"/><rect x="60" y="220" width="14" height="3" fill="#ff7a7a"/><text x="80" y="225" fill="#e6ecf7" font-size="11.5" font-family="system-ui">open end (matched load)</text><rect x="251" y="220" width="14" height="3" fill="#7be0a1"/><text x="271" y="225" fill="#e6ecf7" font-size="11.5" font-family="system-ui">inside a bigger container, in time</text><text x="702" y="225" fill="#93a1bd" font-size="11" text-anchor="end" font-family="system-ui">step</text></svg>
+<p style="color:var(--dim);font:13.5px system-ui">Share of the light held by the swing against step. Both runs are the same until what left has had time to come back.</p>
+<h2>4 · At rest everywhere; changes travel</h2>
+<p>Two swings joined by a link of 20 cells, sealed. The sea is half of the step matrix's spectrum, with the cut in a gap. At rest the two swings are already tied: the weight between them is 0.00805. Kick one cell of the first swing, and the sea on the second does not move at all until light could have crossed.</p>
+<svg viewBox="0 0 720 230" role="img" style="width:100%;max-width:720px;display:block;margin:10px 0"><line x1="52" x2="702" y1="196.0" y2="196.0" stroke="#22304d"/><text x="46" y="200.0" fill="#93a1bd" font-size="11" text-anchor="end" font-family="system-ui">0</text><line x1="52" x2="702" y1="154.1" y2="154.1" stroke="#22304d"/><text x="46" y="158.1" fill="#93a1bd" font-size="11" text-anchor="end" font-family="system-ui">0.25</text><line x1="52" x2="702" y1="112.2" y2="112.2" stroke="#22304d"/><text x="46" y="116.2" fill="#93a1bd" font-size="11" text-anchor="end" font-family="system-ui">0.5</text><line x1="52" x2="702" y1="70.3" y2="70.3" stroke="#22304d"/><text x="46" y="74.3" fill="#93a1bd" font-size="11" text-anchor="end" font-family="system-ui">0.75</text><line x1="52" x2="702" y1="28.4" y2="28.4" stroke="#22304d"/><text x="46" y="32.4" fill="#93a1bd" font-size="11" text-anchor="end" font-family="system-ui">1</text><text x="52.0" y="214" fill="#93a1bd" font-size="11" text-anchor="middle" font-family="system-ui">0</text><text x="160.3" y="214" fill="#93a1bd" font-size="11" text-anchor="middle" font-family="system-ui">10</text><text x="268.7" y="214" fill="#93a1bd" font-size="11" text-anchor="middle" font-family="system-ui">20</text><text x="377.0" y="214" fill="#93a1bd" font-size="11" text-anchor="middle" font-family="system-ui">30</text><text x="485.3" y="214" fill="#93a1bd" font-size="11" text-anchor="middle" font-family="system-ui">40</text><text x="593.7" y="214" fill="#93a1bd" font-size="11" text-anchor="middle" font-family="system-ui">50</text><text x="702.0" y="214" fill="#93a1bd" font-size="11" text-anchor="middle" font-family="system-ui">60</text><line x1="312.0" x2="312.0" y1="14" y2="196" stroke="#f2c14e" stroke-dasharray="5 4"/><text x="318.0" y="24" fill="#f2c14e" font-size="12" font-family="system-ui">light can first arrive (step 24)</text><polyline fill="none" stroke="#5ad1e6" stroke-width="2" points="52.0,196.0 62.8,196.0 73.7,196.0 84.5,196.0 95.3,196.0 106.2,196.0 117.0,196.0 127.8,196.0 138.7,196.0 149.5,196.0 160.3,196.0 171.2,196.0 182.0,196.0 192.8,196.0 203.7,196.0 214.5,196.0 225.3,196.0 236.2,196.0 247.0,196.0 257.8,196.0 268.7,196.0 279.5,196.0 290.3,196.0 301.2,196.0 312.0,104.5 322.8,70.8 333.7,70.8 344.5,67.7 355.3,67.7 366.2,66.9 377.0,66.9 387.8,67.2 398.7,67.2 409.5,69.7 420.3,69.7 431.2,101.2 442.0,196.0 452.8,196.0 463.7,196.0 474.5,196.0 485.3,196.0 496.2,196.0 507.0,196.0 517.8,196.0 528.7,196.0 539.5,196.0 550.3,196.0 561.2,196.0 572.0,187.6 582.8,186.9 593.7,186.9 604.5,187.1 615.3,187.1 626.2,187.3 637.0,187.3 647.8,187.6 658.7,187.6 669.5,188.1 680.3,188.1 691.2,191.1 702.0,196.0"/><rect x="60" y="220" width="14" height="3" fill="#5ad1e6"/><text x="80" y="225" fill="#e6ecf7" font-size="11.5" font-family="system-ui">change of the sea on the far swing</text><text x="702" y="225" fill="#93a1bd" font-size="11" text-anchor="end" font-family="system-ui">step</text></svg>
+<p style="color:var(--dim);font:13.5px system-ui">Before step 24 the change is 3.4e-15 (rounding). In the Moving Matrix, where one matrix with direct links moves everything together, the far ball has already changed by 0.0016 at 1% of the crossing time.</p>
+<h2>5 · Every test, why it decides, its kill line, and what came out</h2>
+<table><tr><th>Test</th><th>Why it decides the claim</th><th>Kill line (fixed before the run)</th><th>Result</th><th></th></tr><tr><td><b>T1</b><br>Sealed loop</td><td>If nothing can leave, the swing must come back exactly.</td><td>Energy off 1 by more than 1e-12, or the state at one round trip differs from the start.</td><td>Energy off by 0.0e+00; return error 0.0e+00.</td><td><span class="g held">HELD</span></td></tr><tr><td><b>T2</b><br>Open end</td><td>Each meeting with the face keeps Γ² and the load returns nothing, so after n meetings the swing holds Γ^(2n).</td><td>Held differs from Γ^(2n) by more than 1e-12 for any n up to 20; or the books are off.</td><td>Held after meetings 1, 2, 3: 0.25, 0.0625, 0.01562. Largest error 0.0e+00; books off by 1.1e-16.</td><td><span class="g held">HELD</span></td></tr><tr><td><b>T3</b><br>Bigger container</td><td>What leaves must travel out and back, so it cannot re-enter before step L + 2D. Until then the run must match the open end exactly.</td><td>The two runs differ before step 84, or do not differ at step 84, or the books are off.</td><td>First difference at step 84 (derived: 84). Books off by 7.8e-16.</td><td><span class="g held">HELD</span></td></tr><tr><td><b>T3b</b><br>Bigger container, in time</td><td>A lossless two-sided face undoes itself on the pair (inside, outside). If what left returns at the same instant, the whole loss must come back on the next meeting.</td><td>Held differs from Γ² (odd meetings) or 1 (even meetings) by more than 1e-12; both face signs.</td><td>Held after meetings 1 to 4: 0.25, 1, 0.25, 1. Largest error 8.9e-16 with either face sign.</td><td><span class="g held">HELD</span></td></tr><tr><td><b>T4a</b><br>Squeeze in time, wall moving in</td><td>A wall moving at v multiplies the pulse energy by D = (1 − v)/(1 + v) at each meeting; in time, every meeting has the same v.</td><td>Energy after 20 meetings off D₀^20 by more than 1%.</td><td>D₀ = 1.06487. Derived ×3.51504, measured ×3.51504 (off by 5.3e-08).</td><td><span class="g held">HELD</span></td></tr><tr><td><b>T4b</b><br>Squeeze in time, wall moving out</td><td>The same law with the sign of v reversed: the swing hands energy back.</td><td>Energy after 5 meetings off D₀^(−5) by more than 1%.</td><td>Derived ×0.730327, measured ×0.730327 (off by 5.1e-08).</td><td><span class="g held">HELD</span></td></tr><tr><td><b>T4c</b><br>Squeeze out of time</td><td>Out of time the meetings fall at every phase, gains and losses cancel.</td><td>Mean log gain per meeting over 200 meetings above 0.1 ln D₀.</td><td>Mean log gain -0.000188 against a limit of 0.00629; single meetings still move the energy by up to 0.102 in the log.</td><td><span class="g held">HELD</span></td></tr><tr><td><b>T4d</b><br>The books of the squeeze</td><td>Energy gained must equal the work done by the wall, with wall pressure 2 × incident energy density × D.</td><td>Gain and work differ by more than 0.1%.</td><td>Gain 17831.1185, work 17831.1185 (off by 3.1e-12).</td><td><span class="g held">HELD</span></td></tr><tr><td><b>T5</b><br>The rate moves with the squeeze</td><td>Energy × length is kept under a slow squeeze, so a 0.8 squeeze raises energy by 1.25 and cuts the period to 0.8. A leak does neither.</td><td>Energy ratio off 1.25 or period ratio off 0.8 by more than 1%.</td><td>Energy ×1.2511; period ×0.8.</td><td><span class="g held">HELD</span></td></tr><tr><td><b>T6a</b><br>The sea at rest (run 01)</td><td>A rest sea must be carried into itself by one step.</td><td>V P V† differs from P by more than 1e-12.</td><td>Differed by 0.075. The step matrix has spectrum exactly on the chosen cut, so the chosen half was not a defined set.</td><td><span class="g kill">KILLED</span></td></tr><tr><td><b>T6c</b><br>Changes travel (run 01)</td><td>Depends on T6a.</td><td>Any change on B before step 24.</td><td>Failed with T6a: a sea that is not at rest changes on B by itself from step 1. T6b and E2 of run 01 are withdrawn with it.</td><td><span class="g kill">KILLED</span></td></tr><tr><td><b>T6a′</b><br>The sea at rest, cut in a gap (run 02)</td><td>The same line, with the filled half ending in the two widest gaps of the spectrum (found by the script).</td><td>V P V† differs from P by more than 1e-12.</td><td>Cut ends 0.0557 from the nearest spectrum point; 32 of 64 states filled. Differs by 7.8e-16. The other half of the circle: 1.0e-15.</td><td><span class="g held">HELD</span></td></tr><tr><td><b>T6b′</b><br>Tied at rest (run 02)</td><td>If the swing at rest is everywhere, the weight between two far swings is not zero while nothing moves.</td><td>Weight between A and B at or below 1e-12.</td><td>Weight between A and B at rest: 0.008053 (the other half: the same).</td><td><span class="g held">HELD</span></td></tr><tr><td><b>T6c′</b><br>Changes travel (run 02)</td><td>One step moves light one cell. A kick at cell 2 cannot reach B (cell 26) before step 24, whatever the sea holds.</td><td>Any change on B above 1e-12 before step 24; or none above 1e-9 by step 72.</td><td>Largest change on B before step 24: 3.4e-15. At step 24: 0.5456. Same for the other half.</td><td><span class="g held">HELD</span></td></tr><tr><td><b>T6d</b><br>All at once (the Moving Matrix way)</td><td>One matrix with direct links moves every ball together, so the far ball must change with no delay.</td><td>Change on the far ball at 1% of the light-crossing time below 1e-8.</td><td>Change on the far ball at 1% of the crossing time: 0.0016; at 10%: 0.0163.</td><td><span class="g held">HELD</span></td></tr></table>
+<h2>6 · Looks with no kill line</h2>
+<div class="card"><h3 style="margin-top:0">How much the swing gets back, against the size of the container</h3>
+<table><tr><th>container length ÷ swing length</th><th>most the swing gets back in 400 round trips</th><th>mean held</th></tr><tr><td>1.0</td><td>1</td><td>0.625</td></tr><tr><td>2.0</td><td>0.999984</td><td>0.387</td></tr><tr><td>3.0</td><td>0.999961</td><td>0.339</td></tr><tr><td>1.5</td><td>0.998811</td><td>0.479</td></tr><tr><td>1.4</td><td>0.970205</td><td>0.493</td></tr><tr><td>1.6</td><td>0.95566</td><td>0.463</td></tr></table>
+<p>Whole-number ratios (1, 2, 3) return all but a few parts in 100,000. Ratios in between return less: 1.5 gives 0.9988, 1.4 and 1.6 give 0.97 and 0.96. This was looked at after the fact and over one fixed span of time, so it is a lead toward the gear idea, not a result.</p></div>
+<div class="card"><h3 style="margin-top:0">The tie at rest, against the length of the link</h3>
+<table><tr><th>link length (cells)</th><th>weight between the two swings at rest</th></tr><tr><td>10</td><td>0.0186</td></tr><tr><td>20</td><td>0.00805</td></tr><tr><td>40</td><td>0.00277</td></tr><tr><td>80</td><td>0.000838</td></tr></table><p>The tie weakens as the link grows and does not vanish.</p></div>
+<h2>7 · What this says and does not say</h2>
+<div class="card"><p><b>Says.</b> In this model an open end and a bigger container are told apart by one thing: whether what left comes back, and when. A container in time with the swing returns the whole loss. A squeeze in time feeds the swing and out of time does not, and the books of the squeeze close against the wall's work. A sea can be tied everywhere at rest and still pass no change faster than light: the third option is a consistent machine. The all-at-once machine differs from it in when the far sea first moves.</p>
+<p><b>Grades.</b> T2, T3, T3b: derived from the proved face rule and checked. T4, T5: reproduction of the moving-mirror Doppler law and radiation pressure, shown in the face language; at v → 0 the wall pressure is the 2R of the ball pages with R = 1. T6′: checked on one layout with a declared choice of the filled half; a tie at rest in a filled sea is known physics, the point here is that it sits with the travel rule in one machine. T6d: checked on one three-ball matrix.</p>
+<p><b>Does not say.</b> Which machine nature uses. Whether the universe is sealed, open or nested. Anything about locking or gear locking: this model is linear and cannot lock. Anything about the clock ratio z. The sea here has no interactions, is in one dimension, and the tie depends on which half is filled.</p></div>
+<h2>8 · Evidence</h2><h3>PREREG_SWING_01.md</h3><pre># PREREG_SWING_01 — the swing, the open end and the bigger container
+Jeromie Beasley. Written 16 Nov 2026 (Central), before any run. AI-assisted.
+Script: SWING_TEST_01 (swing_test_01.py). Nothing in this file is changed after the first run; results go in a separate file.
+
+## The ideas under test (his, in his words where given)
+N1. The ground state, the sea of electrons, is &quot;like a swing&quot;, a &quot;cosmic sync beam&quot;.
+N2. Is it &quot;a charged loop like structure that holds itself together shut, all energy conserved&quot;, or &quot;an open container on some end&quot;,
+    or &quot;no end no background&quot;?
+N3. An open end loses a little each cycle and needs feeding, &quot;unless it is in another even bigger container, then it may just be a
+    compression of sorts&quot;.
+N4. &quot;If you want to get energy you must kick it like a photon&quot; (in time with the swing).
+N5. The open question on the beam: everywhere at once, or must the sync travel along the links like light. A third option raised in
+    talk: the swing at rest is everywhere, and only changes to it travel.
+
+## The model (stated so every line can be checked)
+A line of stretches of field joined by faces. Light crosses one cell per step at speed 1. A face with step ratio z has Smith coordinate
+Γ = (z − 1)/(z + 1) and scatters by the proved rule: return Γ², pass 1 − Γ² (step_matching, flux_balance). An end is a mirror (|Γ| = 1,
+everything returns) or a matched load (Γ = 0, nothing returns). A swing is the light held between two faces; its period is the round
+trip, 2L. No law of motion for the faces, no torque, no locking: this model is linear. MODEL CHOICE: one dimension; face signs
+(+ρ seen from the left, −ρ from the right).
+
+## Tests, why each decides its claim, and the kill line (fixed now)
+T1 SEALED. Mirror, stretch L, mirror. If the loop is shut, nothing can leave, so the swing must return exactly.
+   KILL: energy differs from 1 by more than 1e-12 at any step, or the state at step 2L differs from the start by more than 1e-12.
+T2 OPEN END. Mirror, swing L, face Γ, stretch, matched load. Each meeting with the face keeps Γ² and passes the rest, and the load
+   returns nothing. So after n meetings the swing holds exactly Γ^(2n).
+   KILL: |held − Γ^(2n)| &gt; 1e-12 for any n ≤ 20; or held + absorbed + in transit ≠ 1 to 1e-12.
+T3 BIGGER CONTAINER (N3). Same swing, but the outside stretch D ends in a mirror. Derived before the run: what leaves at step L comes
+   back into the swing at step L + 2D and not one step earlier, so the two runs (open end, bigger container) must agree exactly until
+   then and differ from then on. Books over swing plus container stay 1.
+   KILL: the two runs differ before step L + 2D; or do not differ at step L + 2D; or total ≠ 1 to 1e-12.
+T3b IN TIME (N3, &quot;a compression of sorts&quot;). D = L, so what left meets the swing again at the face at the same instant. Derived: a
+   lossless two-sided face is its own inverse on the pair (inside, outside) (a real symmetric scattering with determinant −1), so the
+   swing must hold Γ² after odd meetings and exactly 1 after even meetings: the whole loss comes back. Holds for either face sign.
+   KILL: held after meeting n differs from Γ² (n odd) or 1 (n even) by more than 1e-12, n ≤ 20. Run with both face signs.
+T4 THE SQUEEZE DOES WORK (N3, N4). Swing between a fixed mirror and a mirror that moves, L(t) = L0(1 + a sin(Ωt + φ)); exact rays
+   (each ray&#x27;s meeting time with the wall is solved, nothing is imposed). Derived: one meeting with a wall moving at v multiplies the
+   pulse energy by D = (1 − v)/(1 + v) (v &gt; 0 moving away). With Ω = π/L0 the pulse meets the wall at the same phase every time.
+   a = 0.01, so v0 = aπ and D0 = (1 + v0)/(1 − v0).
+   T4a IN TIME, wall moving in at each meeting (φ = 0): energy after 20 meetings = D0^20.   KILL: off by more than 1%.
+   T4b IN TIME, wall moving out (φ = π): energy after 5 meetings = D0^(−5) (energy handed back).   KILL: off by more than 1%.
+   T4c OUT OF TIME (Ω × golden ratio): no net gain.   KILL: |mean log gain per meeting| over 200 meetings &gt; 0.1 ln D0.
+   T4d BOOKS: energy gained = work done by the wall, with wall pressure 2 × (incident energy density) × D. At v → 0 this is the
+       pressure 2R with R = 1.   KILL: |gain − work| / |gain| &gt; 1e-3 over the 20 meetings of T4a.
+   Grade if it holds: REPRODUCTION (Doppler at a moving mirror and radiation pressure are textbook), shown in the face language.
+T5 THE SWING&#x27;S RATE MOVES WITH THE SQUEEZE (N3). Wall moves in slowly at v = 1e-3 from L0 to 0.8 L0. Derived: energy × length is kept,
+   so energy rises by 1/0.8 = 1.25, and the period falls to 0.8 of its start. A leak (T2) changes neither the period nor raises energy.
+   KILL: energy ratio off 1.25 by more than 1%; period ratio off 0.8 by more than 1%.
+T6 THE SEA: EVERYWHERE AT REST, CHANGES TRAVEL (N1, N5). Two swings A and B (6 cells each, faces z = 3) joined by a link of 20 cells,
+   mirrors at both ends: a sealed loop. One step is a matrix V. The rest sea is the projector P onto half of V&#x27;s spectrum (the half
+   with negative imaginary part). MODEL CHOICE: that half; it is a rest state of V by construction, checked.
+   T6a REST: V P V† = P.   KILL: differs by more than 1e-12.
+   T6b TIED AT REST: the weight between A and B, X = ‖P_AB‖², is not zero though nothing is moving.   KILL: X ≤ 1e-12.
+   T6c CHANGES TRAVEL: kick one cell of A (a local reflection), then step. The sea on B must not change by even 1e-12 before the
+       crossing step t× = 24 (the kicked right-mover sits at cell 2; B starts at cell 26), and must change after.
+       KILL: any change above 1e-12 on B before step 24; or no change above 1e-9 by step 72.
+   T6d ALL AT ONCE (the Moving Matrix way), for contrast: three balls, one matrix H = D + A with direct links c0·sech(d/2), sea = levels
+       below the largest gap, kick ball A, move by e^(−iHt). The far ball must already have changed at 1% of the light-crossing time.
+       KILL: change on the far ball at t = 0.01·d is below 1e-8.
+   What T6 would say if all hold: the third option is a consistent machine (tied at rest and causal together), and the two machines
+   differ in reading 1 (when the far sea first moves). It would NOT say which one nature uses.
+
+## Looks with no kill line (exploring, not testing)
+E1. Bigger container, D/L = 1, 2, 3, 1.5, √2, golden: the most the swing gets back within 400 round trips.
+E2. The weight between A and B at rest against link length 10, 20, 40, 80.
+
+## Not in this test
+Locking and gear locking (needs a law that pulls rates; this model is linear). The clock ratio z. The electron sea with interactions.
+Any claim about which container the universe is.
+</pre><h3>PREREG_SWING_02.md</h3><pre># PREREG_SWING_02 — the sea test again, with the cut placed in a gap
+Jeromie Beasley. Written 16 Nov 2026 (Central), after SWING_TEST_01 and before SWING_TEST_02 is run. AI-assisted.
+
+## What happened in run 01 (stands as recorded)
+T6a was KILLED: V P V† differed from P by 0.075. The cause, read from the output: the step matrix V has spectrum exactly on the cut
+(smallest distance 4e-17; real V on this layout has eigenvalues at +1 or −1). &quot;The half with negative imaginary part&quot; is then not a
+defined set, so the P of run 01 was not a rest sea. T6c failed with it (a sea that is not at rest changes on B by itself from step 1).
+T6b and E2 used the same P and are withdrawn with it. This is the need the Flock session had already written down: the arc has to end
+in gaps. T1 to T5 and T6d do not use P and are not rerun.
+
+## The one change
+The filled half is the arc of V&#x27;s spectrum from angle φ to φ + π, where φ is the angle whose two ends (φ and φ + π) are farthest from
+any spectrum point. The script finds φ; nothing else is chosen. MODEL CHOICE: a half-circle arc; its ends in the widest gaps.
+RUNNABLE ONLY IF the margin (distance from each end to the nearest spectrum point) is above 1e-6; otherwise the report is &quot;no gapped
+half exists for this layout&quot; and no verdict is given.
+
+## Tests and kill lines (the same lines as run 01)
+T6a&#x27; REST: V P V† = P.   KILL: differs by more than 1e-12.
+T6b&#x27; TIED AT REST: X = ‖P_AB‖² between swings A and B.   KILL: X ≤ 1e-12.
+T6c&#x27; CHANGES TRAVEL: kick cell 2 of A; the sea on B must not change by 1e-12 before step 24 and must change after.
+     KILL: any change above 1e-12 on B before step 24; or no change above 1e-9 by step 72.
+The opposite, run under the same lines: the other half of the circle (the complement arc).
+Look, no kill line: E2&#x27; the weight between A and B at rest against link length 10, 20, 40, 80, each with its own gapped cut.
+</pre><h3>swing_test_01.py</h3><pre># SCRIPT: SWING_TEST_01
+# The swing, the open end and the bigger container. Jeromie Beasley. 16 Nov 2026. AI-assisted.
+# Runs the tests fixed in PREREG_SWING_01.md. Every kill line below is copied from that file; none was changed after a run.
+import json, math
+import numpy as np
+from scipy.linalg import expm
+OUT = {}
+def line(seg, zs, right, sign=1):
+    &quot;&quot;&quot;A line of stretches (cell counts seg) joined by faces of step ratio zs. Left end: mirror. right: &#x27;mirror&#x27; or &#x27;load&#x27;.&quot;&quot;&quot;
+    N = sum(seg); b = np.cumsum(seg)[:-1] - 1; g = [(z - 1.0)/(z + 1.0) for z in zs]
+    def step(R, L):
+        nR = np.zeros_like(R); nL = np.zeros_like(L); nR[1:] = R[:-1]; nL[:-1] = L[1:]
+        for k, rho in zip(b, g):
+            tau = math.sqrt(1 - rho*rho); nR[k+1] = tau*R[k] - sign*rho*L[k+1]; nL[k] = sign*rho*R[k] + tau*L[k+1]
+        nR[0] = -L[0]; ab = 0.0
+        if right == &#x27;mirror&#x27;: nL[N-1] = -R[N-1]
+        else: nL[N-1] = 0.0; ab = abs(R[N-1])**2
+        return nR, nL, ab
+    return N, step
+def run(seg, zs, right, steps, sign=1):
+    N, step = line(seg, zs, right, sign); R = np.zeros(N); L = np.zeros(N); R[0] = 1.0; Lc = seg[0]; held = []; tot = []; ab = 0.0
+    for t in range(steps + 1):
+        held.append(float(np.sum(R[:Lc]**2 + L[:Lc]**2))); tot.append(float(np.sum(R**2 + L**2)) + ab)
+        R, L, a = step(R, L); ab += a
+    return np.array(held), np.array(tot), (R, L)
+G = 0.5; Z = 3.0; Lc = 10
+# ---- T1 sealed ----
+N, step = line([Lc], [], &#x27;mirror&#x27;); R = np.zeros(N); L = np.zeros(N); R[0] = 0.6; R[3] = 0.8; R0, L0_ = R.copy(), L.copy(); dev = 0.0
+for t in range(2*Lc*50):
+    R, L, _ = step(R, L); dev = max(dev, abs(np.sum(R*R + L*L) - 1))
+    if t + 1 == 2*Lc: ret = float(max(np.max(abs(R - R0)), np.max(abs(L - L0_))))
+OUT[&#x27;T1&#x27;] = dict(max_energy_dev=dev, return_error_at_2L=ret, held=dev &lt;= 1e-12 and ret &lt;= 1e-12)
+# ---- T2 open end ----
+D = 37; steps = Lc*41 + 2; h2, tot2, _ = run([Lc, D], [Z], &#x27;load&#x27;, steps)
+errs = [abs(h2[Lc*(2*n - 1)] - G**(2*n)) for n in range(1, 21)]; rel = [abs(h2[Lc*(2*n - 1)]/G**(2*n) - 1) for n in range(1, 21)]
+OUT[&#x27;T2&#x27;] = dict(max_abs_err=max(errs), max_rel_err=max(rel), books_dev=float(np.max(abs(tot2 - 1))), held_after_1_2_3=[float(h2[Lc]), float(h2[3*Lc]), float(h2[5*Lc])],
+                 held=max(errs) &lt;= 1e-12 and np.max(abs(tot2 - 1)) &lt;= 1e-12)
+# ---- T3 bigger container ----
+h3, tot3, _ = run([Lc, D], [Z], &#x27;mirror&#x27;, steps); diff = np.where(abs(h3 - h2) &gt; 1e-15)[0]; first = int(diff[0]) if len(diff) else None
+OUT[&#x27;T3&#x27;] = dict(predicted_first_difference_step=Lc + 2*D, measured_first_difference_step=first, books_dev=float(np.max(abs(tot3 - 1))),
+                 held=first == Lc + 2*D and np.max(abs(tot3 - 1)) &lt;= 1e-12)
+# ---- T3b in time ----
+res = {}
+for sg in (1, -1):
+    hb, totb, _ = run([Lc, Lc], [Z], &#x27;mirror&#x27;, Lc*41 + 2, sign=sg)
+    e = [abs(hb[Lc*(2*n - 1)] - (G*G if n % 2 else 1.0)) for n in range(1, 21)]; res[sg] = (max(e), float(np.max(abs(totb - 1))), [float(hb[Lc*(2*n - 1)]) for n in range(1, 5)])
+OUT[&#x27;T3b&#x27;] = dict(max_err_sign_plus=res[1][0], max_err_sign_minus=res[-1][0], books_dev=max(res[1][1], res[-1][1]), held_after_meetings_1_to_4=res[1][2],
+                  held=res[1][0] &lt;= 1e-12 and res[-1][0] &lt;= 1e-12)
+# ---- T4, T5 moving wall by exact rays ----
+def rays(Lf, Lp, nb, w=1e-3, K=2001):
+    s = (np.arange(K)/(K - 1) - 0.5)*w; f = np.exp(-0.5*(s/(w/8))**2); df2 = np.diff(f)**2; E = [float(np.sum(df2/np.diff(s)))]; W = []; per = []; Lhit = []
+    for n in range(nb):
+        t = s + Lf(s)
+        for _ in range(200): t = s + Lf(t)
+        v = Lp(t); vm = 0.5*(v[1:] + v[:-1]); W.append(float(np.sum(-2*vm/(1 + vm)*df2/np.diff(s)))); s2 = t + Lf(t); per.append(float(s2[K//2] - s[K//2])); Lhit.append(float(Lf(t[K//2]))); s = s2
+        E.append(float(np.sum(df2/np.diff(s))))
+    return np.array(E), np.array(W), np.array(per), np.array(Lhit)
+a = 0.01; Om = math.pi; v0 = a*math.pi; D0 = (1 + v0)/(1 - v0)
+mk = lambda Omega, ph: (lambda t: 1 + a*np.sin(Omega*t + ph), lambda t: a*Omega*np.cos(Omega*t + ph))
+E, W, _, _ = rays(*mk(Om, 0.0), 20); OUT[&#x27;T4a&#x27;] = dict(D0=D0, predicted=D0**20, measured=float(E[-1]/E[0]), rel_err=abs(E[-1]/E[0]/D0**20 - 1), held=abs(E[-1]/E[0]/D0**20 - 1) &lt;= 0.01)
+OUT[&#x27;T4d&#x27;] = dict(gain=float(E[-1] - E[0]), work=float(np.sum(W)), rel_err=abs((E[-1] - E[0]) - np.sum(W))/abs(E[-1] - E[0]), held=abs((E[-1] - E[0]) - np.sum(W))/abs(E[-1] - E[0]) &lt;= 1e-3)
+E, _, _, _ = rays(*mk(Om, math.pi), 5); OUT[&#x27;T4b&#x27;] = dict(predicted=D0**-5, measured=float(E[-1]/E[0]), rel_err=abs(E[-1]/E[0]*D0**5 - 1), held=abs(E[-1]/E[0]*D0**5 - 1) &lt;= 0.01)
+E, _, _, _ = rays(*mk(Om*(1 + math.sqrt(5))/2, 0.0), 200); mg = float(np.mean(np.diff(np.log(E))))
+OUT[&#x27;T4c&#x27;] = dict(mean_log_gain_per_meeting=mg, limit=0.1*math.log(D0), ln_D0=math.log(D0), largest_single_step=float(np.max(abs(np.diff(np.log(E))))), held=abs(mg) &lt;= 0.1*math.log(D0))
+vs = 1e-3; Lf = lambda t: np.maximum(1 - vs*np.asarray(t, float), 0.8); Lp = lambda t: np.where(1 - vs*np.asarray(t, float) &gt; 0.8, -vs, 0.0)
+E, _, per, Lh = rays(Lf, Lp, 140); er = float(E[-1]/E[0]); pr = float(per[-1]/2.0)
+OUT[&#x27;T5&#x27;] = dict(energy_ratio=er, predicted_energy_ratio=1.25, period_end_over_start=pr, predicted_period_ratio=0.8, energy_times_length_start=float(E[0]*1.0), energy_times_length_end=float(E[-1]*0.8),
+                 held=abs(er/1.25 - 1) &lt;= 0.01 and abs(pr/0.8 - 1) &lt;= 0.01)
+# ---- T6 the sea ----
+def Vmat(seg, zs):
+    N, step = line(seg, zs, &#x27;mirror&#x27;); V = np.zeros((2*N, 2*N))
+    for j in range(2*N):
+        x = np.zeros(2*N); x[j] = 1; R, L, _ = step(x[:N].copy(), x[N:].copy()); V[:N, j] = R; V[N:, j] = L
+    return N, V
+def sea(V):
+    Hs = (V - V.T)/(2j); w, U = np.linalg.eigh(Hs); neg = U[:, w &lt; 0]; return neg @ neg.conj().T, float(np.min(abs(w))), int(neg.shape[1])
+def tie(link):
+    N, V = Vmat([6, link, 6], [Z, Z]); P, mn, rk = sea(V); A = list(range(6)) + list(range(N, N + 6)); B = list(range(6 + link, N)) + list(range(N + 6 + link, 2*N))
+    return N, V, P, A, B, float(np.linalg.norm(P[np.ix_(A, B)])**2), mn, rk
+N, V, P, A, B, X, mn, rk = tie(20)
+OUT[&#x27;T6a&#x27;] = dict(unitary_dev=float(np.max(abs(V @ V.T - np.eye(2*N)))), rest_dev=float(np.max(abs(V @ P @ V.T - P))), rank=rk, half=N, smallest_spectrum_distance_from_cut=mn, held=float(np.max(abs(V @ P @ V.T - P))) &lt;= 1e-12)
+OUT[&#x27;T6b&#x27;] = dict(weight_between_A_and_B_at_rest=X, held=X &gt; 1e-12)
+K = np.eye(2*N); K[2, 2] = -1; Pt = K @ P @ K; dB = []
+for t in range(81):
+    dB.append(float(np.linalg.norm((Pt - P)[np.ix_(B, B)]))); Pt = V @ Pt @ V.T
+before = max(dB[:24]); firstmove = next((t for t, x in enumerate(dB) if x &gt; 1e-12), None)
+OUT[&#x27;T6c&#x27;] = dict(crossing_step=24, largest_change_before_crossing=before, first_step_with_change=firstmove, change_at_24=dB[24], largest_change_by_72=max(dB[:73]), held=before &lt;= 1e-12 and max(dB[:73]) &gt; 1e-9)
+sx = np.array([[0, 1], [1, 0]], complex); sy = np.array([[0, -1j], [1j, 0]]); sz = np.array([[1, 0], [0, -1]], complex)
+dirs = [(0, 0, 1), (math.sin(.6), 0, math.cos(.6)), (0, math.sin(.9), math.cos(.9))]; dAB = math.log(3); dAC = math.log(5); dBC = math.acosh(math.cosh(dAB)*math.cosh(dAC)); H = np.zeros((6, 6), complex)
+for i, n in enumerate(dirs): H[2*i:2*i+2, 2*i:2*i+2] = n[0]*sx + n[1]*sy + n[2]*sz
+for (i, j, d) in ((0, 1, dAB), (0, 2, dAC), (1, 2, dBC)):
+    c = 0.5/math.cosh(d/2); H[2*i:2*i+2, 2*j:2*j+2] = c*np.eye(2); H[2*j:2*j+2, 2*i:2*i+2] = c*np.eye(2)
+w, U = np.linalg.eigh(H); k = int(np.argmax(np.diff(w))) + 1; Pm = U[:, :k] @ U[:, :k].conj().T; Km = np.eye(6, dtype=complex); Km[:2, :2] = sx; P1 = Km @ Pm @ Km.conj().T
+def farC(t): Ut = expm(-1j*H*t); return float(np.linalg.norm((Ut @ P1 @ Ut.conj().T - Pm)[4:, 4:]))
+OUT[&#x27;T6d&#x27;] = dict(levels=[float(x) for x in w], filled=k, light_crossing_time=dAC, change_on_far_ball_at_0=farC(0.0), change_at_1_percent=farC(0.01*dAC), change_at_10_percent=farC(0.1*dAC), held=farC(0.01*dAC) &gt;= 1e-8)
+# ---- looks, no kill line ----
+E1 = {}
+for Dd in (20, 40, 60, 30, 28, 32):
+    h, _, _ = run([20, Dd], [Z], &#x27;mirror&#x27;, 16000); E1[str(Dd/20)] = dict(most_the_swing_gets_back=float(np.max(h[21:])), mean_held=float(np.mean(h[21:])))
+OUT[&#x27;E1&#x27;] = E1; OUT[&#x27;E2&#x27;] = {str(l): tie(l)[5] for l in (10, 20, 40, 80)}
+OUT[&#x27;all_held&#x27;] = bool(all(v.get(&#x27;held&#x27;, True) for v in OUT.values() if isinstance(v, dict) and &#x27;held&#x27; in v))
+cv = lambda o: bool(o) if isinstance(o, np.bool_) else float(o)   # numpy values to plain ones for the file; no test is touched
+json.dump(OUT, open(&#x27;swing_test_01.out.json&#x27;, &#x27;w&#x27;), indent=1, default=cv); print(json.dumps(OUT, indent=1, default=cv))
+</pre><h3>swing_test_02.py</h3><pre># SCRIPT: SWING_TEST_02
+# The sea test with the cut placed in a gap. Jeromie Beasley. 16 Nov 2026. AI-assisted. Kill lines: PREREG_SWING_02.md.
+import json, math
+import numpy as np
+OUT = {}; Z = 3.0
+def Vmat(seg, zs):
+    N = sum(seg); b = np.cumsum(seg)[:-1] - 1; g = [(z - 1.0)/(z + 1.0) for z in zs]; V = np.zeros((2*N, 2*N))
+    for j in range(2*N):
+        x = np.zeros(2*N); x[j] = 1; R, L = x[:N], x[N:]; nR = np.zeros(N); nL = np.zeros(N); nR[1:] = R[:-1]; nL[:-1] = L[1:]
+        for k, rho in zip(b, g):
+            tau = math.sqrt(1 - rho*rho); nR[k+1] = tau*R[k] - rho*L[k+1]; nL[k] = rho*R[k] + tau*L[k+1]
+        nR[0] = -L[0]; nL[N-1] = -R[N-1]; V[:N, j] = nR; V[N:, j] = nL
+    return N, V
+def gapped_sea(V, flip=False):
+    th = np.angle(np.linalg.eigvals(V)); grid = np.linspace(0, math.pi, 200001)[:-1]
+    def margin(p): d = np.abs(np.angle(np.exp(1j*(th[None, :] - p[:, None])))); d2 = np.abs(np.angle(np.exp(1j*(th[None, :] - p[:, None] - math.pi)))); return np.minimum(d.min(1), d2.min(1))
+    m = np.concatenate([margin(grid[i:i+2000]) for i in range(0, len(grid), 2000)]); phi = float(grid[int(np.argmax(m))]); mg = float(np.max(m))
+    Hs = (np.exp(-1j*phi)*V - np.exp(1j*phi)*V.T)/(2j); w, U = np.linalg.eigh(Hs); sel = U[:, (w &gt; 0) if not flip else (w &lt; 0)]   # eigenvalue sin(theta - phi) &gt; 0: the arc from phi to phi + pi
+    return sel @ sel.conj().T, phi, mg, int(sel.shape[1])
+def setup(link, flip=False):
+    N, V = Vmat([6, link, 6], [Z, Z]); P, phi, mg, rk = gapped_sea(V, flip); A = list(range(6)) + list(range(N, N + 6)); B = list(range(6 + link, N)) + list(range(N + 6 + link, 2*N))
+    return N, V, P, A, B, phi, mg, rk
+for name, flip in ((&#x27;arc&#x27;, False), (&#x27;opposite_arc&#x27;, True)):
+    N, V, P, A, B, phi, mg, rk = setup(20, flip); r = dict(cut_angle=phi, margin=mg, runnable=mg &gt; 1e-6, rank=rk, of=2*N)
+    r[&#x27;T6a&#x27;] = dict(rest_dev=float(np.max(abs(V @ P @ V.T - P))), projector_dev=float(np.max(abs(P @ P - P)))); r[&#x27;T6a&#x27;][&#x27;held&#x27;] = r[&#x27;T6a&#x27;][&#x27;rest_dev&#x27;] &lt;= 1e-12
+    X = float(np.linalg.norm(P[np.ix_(A, B)])**2); r[&#x27;T6b&#x27;] = dict(weight_between_at_rest=X, held=X &gt; 1e-12)
+    K = np.eye(2*N); K[2, 2] = -1; Pt = K @ P @ K; dB = []
+    for t in range(81): dB.append(float(np.linalg.norm((Pt - P)[np.ix_(B, B)]))); Pt = V @ Pt @ V.T
+    r[&#x27;T6c&#x27;] = dict(crossing_step=24, largest_change_before_crossing=max(dB[:24]), first_step_with_change_above_1e_12=next((t for t, x in enumerate(dB) if x &gt; 1e-12), None), change_at_steps_23_24_25_26=dB[23:27], largest_change_by_72=max(dB[:73]))
+    r[&#x27;T6c&#x27;][&#x27;held&#x27;] = r[&#x27;T6c&#x27;][&#x27;largest_change_before_crossing&#x27;] &lt;= 1e-12 and r[&#x27;T6c&#x27;][&#x27;largest_change_by_72&#x27;] &gt; 1e-9
+    r[&#x27;kick_size_on_A&#x27;] = float(np.linalg.norm((K @ P @ K - P)[np.ix_(A, A)])); OUT[name] = r
+E2 = {}
+for l in (10, 20, 40, 80):
+    N, V, P, A, B, phi, mg, rk = setup(l); E2[str(l)] = dict(weight_between=float(np.linalg.norm(P[np.ix_(A, B)])**2), margin=mg, rank=rk, of=2*N)
+OUT[&#x27;E2&#x27;] = E2
+cv = lambda o: bool(o) if isinstance(o, np.bool_) else float(o)
+json.dump(OUT, open(&#x27;swing_test_02.out.json&#x27;, &#x27;w&#x27;), indent=1, default=cv); print(json.dumps(OUT, indent=1, default=cv))
+</pre></main><footer>Jeromie Beasley · 16 November 2026 · AI-assisted · Page SWING-NOTES-V1</footer></body></html>

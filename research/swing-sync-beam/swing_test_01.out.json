@@ -1,0 +1,140 @@
+{
+ "T1": {
+  "max_energy_dev": 0.0,
+  "return_error_at_2L": 0.0,
+  "held": true
+ },
+ "T2": {
+  "max_abs_err": 0.0,
+  "max_rel_err": 0.0,
+  "books_dev": 1.1102230246251565e-16,
+  "held_after_1_2_3": [
+   0.25,
+   0.0625,
+   0.015625
+  ],
+  "held": true
+ },
+ "T3": {
+  "predicted_first_difference_step": 84,
+  "measured_first_difference_step": 84,
+  "books_dev": 7.771561172376096e-16,
+  "held": true
+ },
+ "T3b": {
+  "max_err_sign_plus": 8.881784197001252e-16,
+  "max_err_sign_minus": 8.881784197001252e-16,
+  "books_dev": 8.881784197001252e-16,
+  "held_after_meetings_1_to_4": [
+   0.25,
+   0.9999999999999998,
+   0.24999999999999994,
+   0.9999999999999996
+  ],
+  "held": true
+ },
+ "T4a": {
+  "D0": 1.0648697978762756,
+  "predicted": 3.5150393618377236,
+  "measured": 3.515039174825509,
+  "rel_err": 5.320344820258782e-08,
+  "held": true
+ },
+ "T4d": {
+  "gain": 17831.118488419546,
+  "work": 17831.118488475327,
+  "rel_err": 3.128302303939284e-12,
+  "held": true
+ },
+ "T4b": {
+  "predicted": 0.7303271599927722,
+  "measured": 0.7303271969775679,
+  "rel_err": 5.0641407955964723e-08,
+  "held": true
+ },
+ "T4c": {
+  "mean_log_gain_per_meeting": -0.00018797437222571213,
+  "limit": 0.006285253617233956,
+  "ln_D0": 0.06285253617233956,
+  "largest_single_step": 0.10171770155600335,
+  "held": true
+ },
+ "T5": {
+  "energy_ratio": 1.2510711128737695,
+  "predicted_energy_ratio": 1.25,
+  "period_end_over_start": 0.8000000000000114,
+  "predicted_period_ratio": 0.8,
+  "energy_times_length_start": 7089.7975136537,
+  "energy_times_length_end": 7095.872692365134,
+  "held": true
+ },
+ "T6a": {
+  "unitary_dev": 1.1102230246251565e-16,
+  "rest_dev": 0.07500000000000112,
+  "rank": 32,
+  "half": 32,
+  "smallest_spectrum_distance_from_cut": 4.420767436872068e-17,
+  "held": false
+ },
+ "T6b": {
+  "weight_between_A_and_B_at_rest": 0.0119480473268278,
+  "held": true
+ },
+ "T6c": {
+  "crossing_step": 24,
+  "largest_change_before_crossing": 0.6363961030678962,
+  "first_step_with_change": 1,
+  "change_at_24": 0.5584131456911208,
+  "largest_change_by_72": 0.9817926148274402,
+  "held": false
+ },
+ "T6d": {
+  "levels": [
+   -1.4335109740158622,
+   -1.2685658523478573,
+   -0.37965283536681776,
+   0.5800901014575308,
+   0.7999309494830565,
+   1.7017086107899506
+  ],
+  "filled": 3,
+  "light_crossing_time": 1.6094379124341003,
+  "change_on_far_ball_at_0": 0.0,
+  "change_at_1_percent": 0.0016022888826080159,
+  "change_at_10_percent": 0.016325036641179267,
+  "held": true
+ },
+ "E1": {
+  "1.0": {
+   "most_the_swing_gets_back": 0.9999999999999998,
+   "mean_held": 0.6245775969962448
+  },
+  "2.0": {
+   "most_the_swing_gets_back": 0.9999837453028563,
+   "mean_held": 0.38709758220892154
+  },
+  "3.0": {
+   "most_the_swing_gets_back": 0.9999606227686608,
+   "mean_held": 0.33889815594329004
+  },
+  "1.5": {
+   "most_the_swing_gets_back": 0.9988107840745585,
+   "mean_held": 0.47895113300688563
+  },
+  "1.4": {
+   "most_the_swing_gets_back": 0.9702049253685106,
+   "mean_held": 0.49274839945772114
+  },
+  "1.6": {
+   "most_the_swing_gets_back": 0.9556602082834855,
+   "mean_held": 0.4628006163963021
+  }
+ },
+ "E2": {
+  "10": 0.02318038196692343,
+  "20": 0.0119480473268278,
+  "40": 0.005106385273307129,
+  "80": 0.0018119259713623198
+ },
+ "all_held": false
+}
