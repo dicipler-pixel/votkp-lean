@@ -1,0 +1,11 @@
+HOLDS  (a) every neighbour ball is his face: at right angles to the rim 2.7e-15, his facePlane 6.2e-15, shadow cos ψ = Γ 3.3e-16 (6 balls × 200 times)
+HOLDS  (b) his light unchanged: 40 segments inside C and 1 first passed directions compared with his traceRay, largest difference 7.4e-11, unmatched 0
+HOLDS  (c) books, his: emitted 12 = in flight 2.8740 + ground 9.1260 + below cut 0.0000 · largest deviation 1.4e-14 · walls met 538 · packets now 37
+HOLDS  (d) his light never leaves C: largest |q| 0.985000
+    light in flight by ball at t = 24 (his): C 2.3528 · N+x 0.3132 · N−x 0.1423 · N+y 0.0000 · N−y 0.0076 · N+z 0.0582 · N−z 0.0000 · ground by ball 8.226 0.389 0.387 0.071 0.000 0.053 0.000
+HOLDS  (c) books, room: emitted 12 = in flight 11.8130 + ground 0.0000 + below cut 0.1870 · largest deviation 4.1e-14 · walls met 347451 · packets now 1997
+HOLDS  (d) room light does reach the neighbours outside C: packet-steps outside C 417226
+    light in flight by ball at t = 24 (room): C 4.1866 · N+x 3.6402 · N−x 2.5008 · N+y 0.5676 · N−y 0.6523 · N+z 0.1084 · N−z 0.1571 · ground by ball 0.000 0.000 0.000 0.000 0.000 0.000 0.000
+HOLDS  (e) breathing off: a ball moved over a packet 0 times
+    breathing on: a ball moves over light about 115 times in three breaths (reported)
+all hold
