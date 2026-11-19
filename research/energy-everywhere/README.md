@@ -33,3 +33,12 @@ Untested: lag-and-phase feedback, full back-rail curve, ball pages vs measuremen
 ## Code
 ../seven-balls-vacuum-between, ../memory-makes-work, ../weight-is-the-relation, ../surge-and-orbit,
 yang-mills-lean research/2026-11-18.
+
+## Through his framework (added 19 Nov, 08:30 CST)
+Doc section "Through my framework" maps every piece onto IQGT, UPG, Dirac Time, the connection-energy note and VOTKP v3.3.
+Bridge checks, `framework_bridge.py` (ENERGY-FRAMEWORK-BRIDGE-01), output in `framework_bridge.out`:
+1. Line load end: electric/magnetic books stand in ratio z^2, so their edge coefficient is Gamma(+)Gamma (VOTKP Prop 22.2/22.3); 0.9428 at the wall.
+2. Connection-energy identity on a 6-node ring, scalar and 2x2 unitary edges: difference 0. Grid reading (magnitude mismatch = reactive side, edge holonomy = real power) untested.
+3. UPG Prop 1.5 on a load/line split: ||[H,Pi]||^2 = ||F||^2 = 2 Tr K(0).
+4. Speed optimum from the IQGT cost law W >= c l^2/T: T* = 2 c l^2 / Wmax, P* = Wmax^2/(4 c l^2), half the work spent at T*.
+5. Open line end on the rim; Ferranti = rotation on the rim, Vr/Vs = sec(beta l).

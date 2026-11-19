@@ -1,0 +1,24 @@
+=== 1. Line energy books = connection-energy edge (VOTKP Prop 22.2) at the load end ===
+ z= 0.2500: d_e/d_m=   0.0625 z^2=   0.0625  edge=-0.882353  G(+)G=-0.882353  wall G^2=0.3600
+ z= 1.0000: d_e/d_m=   1.0000 z^2=   1.0000  edge=+0.000000  G(+)G=+0.000000  wall G^2=0.0000
+ z= 3.0000: d_e/d_m=   9.0000 z^2=   9.0000  edge=+0.800000  G(+)G=+0.800000  wall G^2=0.2500
+ z= 5.8284: d_e/d_m=  33.9706 z^2=  33.9706  edge=+0.942809  G(+)G=+0.942809  wall G^2=0.5000
+ z=10.0000: d_e/d_m= 100.0000 z^2= 100.0000  edge=+0.980198  G(+)G=+0.980198  wall G^2=0.6694
+
+=== 2. Grid ring: connection energy = self-commutator (his identity) and it is the line-drop budget ===
+ (1/8)||[H,H*]||^2 = 0.015014064648   sum_edges (D_i-D_j)^2 = 0.015014064648   diff 0.0e+00
+ all node magnitudes equal (parallel field): (1/8)||[H,H*]||^2 = 0.0e+00  (normal operator)
+ block 2x2 unitary edges: lhs 41.5302598562  rhs 41.5302598562  diff 0.0e+00
+
+=== 3. Redistribution = zero-time memory footprint (UPG Prop 1.5) on a load/line split ===
+ ||[H,Pi]||^2=30.9541362108 ||F||^2=30.9541362108 2TrK(0)=30.9541362108
+
+=== 4. Speed has an optimum: thermodynamic-length cost (IQGT Thm 5.3 form W_ex >= c l^2 / T) ===
+ scan T*=1.95092 P*=0.177607   formula T*=1.95094 P*=0.177607   W(T*)/Wmax=0.5000
+
+=== 5. Open line end is the rim; Ferranti is rotation on the rim ===
+ beta l=  9 deg (   150 km at 50 Hz): |Gamma_in|=1.000000 arg=  -18.00  Vr/Vs=1.0125 sec=1.0125
+ beta l= 18 deg (   300 km at 50 Hz): |Gamma_in|=1.000000 arg=  -36.00  Vr/Vs=1.0515 sec=1.0515
+ beta l= 30 deg (   500 km at 50 Hz): |Gamma_in|=1.000000 arg=  -60.00  Vr/Vs=1.1547 sec=1.1547
+ beta l= 60 deg (  1000 km at 50 Hz): |Gamma_in|=1.000000 arg= -120.00  Vr/Vs=2.0000 sec=2.0000
+ beta l= 84 deg (  1400 km at 50 Hz): |Gamma_in|=1.000000 arg= -168.00  Vr/Vs=9.5668 sec=9.5668
