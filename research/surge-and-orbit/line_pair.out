@@ -1,0 +1,21 @@
+line   300 km: Ferranti rise at the open end 1/cos(beta l) = 1.0515
+line   500 km: Ferranti rise at the open end 1/cos(beta l) = 1.1547
+line   800 km: Ferranti rise at the open end 1/cos(beta l) = 1.4945
+line  1000 km: Ferranti rise at the open end 1/cos(beta l) = 2.0000
+line  1400 km: Ferranti rise at the open end 1/cos(beta l) = 9.5668
+
+500 km line, receiving-end voltage against load z = Z_L/Z0, and the largest voltage along the line:
+   z =      1e+09: |V_R| = 1.1547, max |V| = 1.1547, min |V| = 1.0000, charge-vs-momentum imbalance max|V^2 - I^2| = 1.3333, reflected power Gamma^2 = 1.0000
+   z =          4: |V_R| = 1.1429, max |V| = 1.1429, min |V| = 1.0000, charge-vs-momentum imbalance max|V^2 - I^2| = 1.2245, reflected power Gamma^2 = 0.3600
+   z =      5.828: |V_R| = 1.1491, max |V| = 1.1491, min |V| = 1.0000, charge-vs-momentum imbalance max|V^2 - I^2| = 1.2815, reflected power Gamma^2 = 0.5000
+   z =          2: |V_R| = 1.1094, max |V| = 1.1094, min |V| = 1.0000, charge-vs-momentum imbalance max|V^2 - I^2| = 0.9231, reflected power Gamma^2 = 0.1111
+   z =          1: |V_R| = 1.0000, max |V| = 1.0000, min |V| = 1.0000, charge-vs-momentum imbalance max|V^2 - I^2| = 0.0000, reflected power Gamma^2 = 0.0000
+   z =        0.5: |V_R| = 0.7559, max |V| = 1.0000, min |V| = 0.7559, charge-vs-momentum imbalance max|V^2 - I^2| = 1.7143, reflected power Gamma^2 = 0.1111
+
+van der Pol pair, mu = 1: final amplitude from different starts (surge plus orbit)
+   start  0.001 -> amplitude 2.0080
+   start  0.100 -> amplitude 2.0080
+   start  1.000 -> amplitude 2.0080
+   start  3.000 -> amplitude 2.0080
+   start  6.000 -> amplitude 2.0080
+   linear lossless oscillator (no surge, no orbit damping), analytic: energy is conserved, so every start keeps its own amplitude (neutral, no regulation)
