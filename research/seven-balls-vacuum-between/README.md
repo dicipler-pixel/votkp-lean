@@ -29,7 +29,7 @@ All of the page's full checks pass (Run full checks), and so does `vac_check_01.
 - the pull against the textbook value;
 - the wall touch;
 - the twelve gaps against the three kinds;
-- the moment equations against the mode function itself: the page measures a difference of 6×10⁻⁹ (its pass line is 1e-3), and node measures 1e-4 at the coarser step;
+- the moment equations against the mode function itself: the page measures a difference of 6×10⁻⁹ (its pass line is 1e-3), and node agrees to all 7 printed digits (its pass line is 1e-4);
 - the vacuum books.
 
 ## Labelled models
