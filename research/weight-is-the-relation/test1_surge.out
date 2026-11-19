@@ -1,0 +1,17 @@
+K1  non-normality ||[H,H^dag]|| of the free Dirac generator, 200 random (p, m): 0.0
+K2  connection energy across the chiral split, E_c = ||[H,P_L]||_F^2, divided by m^2:
+     m = 0.0: E_c over 100 random momenta: min 0.000000000000  max 0.000000000000   E_c/m^2 = n/a (E_c = 0)
+     m = 0.5: E_c over 100 random momenta: min 1.000000000000  max 1.000000000000   E_c/m^2 = 4.000000000000
+     m = 1.0: E_c over 100 random momenta: min 4.000000000000  max 4.000000000000   E_c/m^2 = 4.000000000000
+     m = 2.0: E_c over 100 random momenta: min 16.000000000000  max 16.000000000000   E_c/m^2 = 4.000000000000
+K3  zig start (left-handed, helicity matched), probability in zag vs (m^2/E^2) sin^2(E t):
+     m = 1.0, p = 0.5: max |P_R - (m^2/E^2) sin^2 Et| = 1.67e-15   peak zag share m^2/E^2 = 0.8000
+     m = 0.3, p = 2.0: max |P_R - (m^2/E^2) sin^2 Et| = 9.89e-17   peak zag share m^2/E^2 = 0.0220
+     m = 2.0, p = 1.0: max |P_R - (m^2/E^2) sin^2 Et| = 3.77e-15   peak zag share m^2/E^2 = 0.8000
+K4  opposite: electron (level 0) coupled at g to a light mode (level w) that leaks at rate k (passive) or is pumped (gain)
+     passive leak k = 1.0: non-normality 0.707, largest ||e^(-iHt)|| over t = 1.000000  (> 1 would be a surge)
+     passive leak k = 3.0: non-normality 4.243, largest ||e^(-iHt)|| over t = 1.000000  (> 1 would be a surge)
+     passive leak k = 0.5: non-normality 0.141, largest ||e^(-iHt)|| over t = 1.000000  (> 1 would be a surge)
+     pumped (gain 0.3): non-normality 0.212, largest ||e^(-iHt)|| over t <= 10 = 2.5928
+     pumped (gain 0.5): non-normality 0.707, largest ||e^(-iHt)|| over t <= 10 = 3.7062
+     non-normal but every mode decaying (Im eig [-0.05 -0.1 ]): largest ||e^(-iHt)|| = 15.010; its anti-Hermitian part has eigenvalues [-1.575  1.425] (a positive one = gain hidden in the cross term)

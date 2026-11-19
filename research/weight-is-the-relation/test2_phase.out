@@ -1,0 +1,10 @@
+P1  eps under 1000 random SU(3) rotations: max change 1.31e-15  -> phases cancel exactly (Lean: SingletWitnessSU3 proves it)
+P2  chi-QCD proton mass decomposition (arXiv:1808.08677, MS-bar 2 GeV; main-text values):
+     quark masses (Higgs), u+d+s scalar condensate      9% +- 2
+     quark energy (motion in the field)                32% +- 4
+     glue field energy                                 36% +- 5
+     trace anomaly (1/4)                               23% +- 1
+     own quark masses: 9%  (kill line 50%: NOT killed). Pure gauge field + anomaly: 36 + 23 = 59%; quark motion in the field: 32%.
+P3  baryon-type state on the theta subgraph: 7 links x c(3) = 28/3; audited floor (2026-11-12, A2) = 28/3 on all five graphs -> NOT killed
+     for comparison, a meson-like single loop (4-cycle of 3 and 3bar): 4 x c(3) = 16/3; the junction state costs 4 more
+P4  proton: spin 1/2 (fermion), baryon number conserved in every observed process -> NOT a messenger in the gauge-boson sense (killed in that sense)
