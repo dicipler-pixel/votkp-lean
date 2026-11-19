@@ -1,0 +1,7 @@
+HOLDS  (a) fluid: my diag table (231, 6) against his archived (231, 6), largest relative difference 0.0e+00
+HOLDS  (b) fluid ends as his run: status BH at eps 4.035 (expected BH), 112 frames from eps 0.100
+HOLDS  (a) nu: my diag table (7926, 6) against his archived (7926, 6), largest relative difference 0.0e+00
+HOLDS  (b) nu ends as his run: status undecided at eps 9.000 (expected undecided), 345 frames from eps 0.100
+HOLDS  (a) nu535: my diag table (3955, 6) against his archived (3955, 6), largest relative difference 0.0e+00
+HOLDS  (b) nu535 ends as his run: status BH at eps 4.540 (expected BH), 172 frames from eps 0.100
+all hold
