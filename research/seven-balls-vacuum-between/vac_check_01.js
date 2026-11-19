@@ -1,7 +1,7 @@
-// SCRIPT: SB-VAC-CHECK-01 — checks for the vacuum layer, run in node
-const fs=require('fs');
-global.LH=require('./p2.js');const {GEOM}=require('./p3.js');
-const VAC=new Function(fs.readFileSync('./vac_v1.js','utf8')+';return VAC;')();
+// SCRIPT: SB-VAC-CHECK-02 — checks for the vacuum layer, run in node from this folder: node vac_check_01.js
+const fs=require('fs'),path=require('path');
+global.LH=require(path.join(__dirname,'lh_math_v1_from_page.js'));const {GEOM}=require(path.join(__dirname,'seven_balls_v4_page.js'));
+const VAC=new Function(fs.readFileSync(path.join(__dirname,'vac_v1.js'),'utf8')+';return VAC;')();
 const ZW=VAC.ZW,out=[];const row=(name,val,pass)=>{out.push([name,val,pass]);console.log((pass?'PASS ':'FAIL ')+name+': '+val);};
 // 1. eta against the independent mpmath run (CASIMIR-WALL-01)
 for(const [z,ref] of [[3,0.261245],[5,0.414141],[ZW,0.456192],[7,0.504067]]){const e=VAC.eta(z);row('eta('+z.toFixed(4)+') vs mpmath '+ref,e.toFixed(6),Math.abs(e-ref)<2e-6);}

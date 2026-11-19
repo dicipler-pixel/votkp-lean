@@ -16,19 +16,20 @@ Jeromie Beasley's seven balls, built on his page *Seven Balls, One Container v3*
 - **The pump test.** One gap of his faces is pumped at twice its own light.
 
 ## Findings (all from the checks; numbers in `vac_check_01_output.txt`)
-1. At his drive (periods 8, 13, 21) the gaps change slowly next to their own light. The walls move at about 1–4% of c, and the gap light stays at about 10⁻⁵ photons per mode, which is (wall speed / c)². The pull is real and large near touching.
+1. At his drive (periods 8, 13, 21) the gaps change slowly next to their own light. The walls move at about 1–4% of c, and the gap light stays at about 2×10⁻⁵ photons per mode. That is (v/c)²/4π², with v the gap's rate of change: the adiabatic parameter is λ/ω₁ = ṡ/2π. The pull is real and large near touching.
 2. Resonance needs the gap pumped at twice its own light. For s = 0.05 and P = 8 that is about 160× faster breathing.
-3. With his faces (R_f = ½ at the wall) the gap light leaks fast: κ/ω₁ = ln4/2π = 0.221. Light only builds from the vacuum if the gap width swings by more than about 22% at 2ω₁ (measured 0.216).
-   - Better faces lower that threshold: z_gap = 7 gives 0.175, and z_gap = 20 gives 0.048.
+3. With his faces (R_f = ½ at the wall) the gap light leaks fast: κ/ω₁ = ln4/2π = 0.221. Light only builds from the vacuum if the gap width swings at 2ω₁ by more than about κ/ω₁.
+   - The onset of growth, measured from the growth rate between 200 and 400 pump periods, is 0.226 at the wall, 0.185 at z_gap = 7 and 0.062 at z_gap = 20. The first-order values κ/ω₁ are 0.221, 0.183 and 0.064.
+   - The earlier search (60 against 120 periods) reported 0.216, 0.175 and 0.048. It counted the slow rise towards a steady level as growth, so those were too low.
    - Below the threshold the light leaks into the balls as fast as it is made.
 
 ## Checks
-All of the page's full checks pass (Run full checks), and so does `vac_check_01.js` in node:
+All of the page's full checks pass (Run full checks), and so does `vac_check_01.js` in node. It runs from any folder; the files it needs are here: `lh_math_v1_from_page.js` (his LH-MATH-V1, as embedded in the page) and `seven_balls_v4_page.js`. It checks:
 - η against an independent high-precision run;
 - the pull against the textbook value;
 - the wall touch;
 - the twelve gaps against the three kinds;
-- the moment equations against the mode function itself, to 1e-9 in the page;
+- the moment equations against the mode function itself: the page measures a difference of 6×10⁻⁹ (its pass line is 1e-3), and node measures 1e-4 at the coarser step;
 - the vacuum books.
 
 ## Labelled models
