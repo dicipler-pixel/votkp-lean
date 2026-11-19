@@ -23,7 +23,7 @@ Jeromie Beasley's seven balls, built on his page *Seven Balls, One Container v3*
    - Below the threshold the light leaks into the balls as fast as it is made.
 
 ## Checks
-All 42 page checks pass (Run full checks), and so does `vac_check_01.js` in node:
+All of the page's full checks pass (Run full checks), and so does `vac_check_01.js` in node:
 - η against an independent high-precision run;
 - the pull against the textbook value;
 - the wall touch;
