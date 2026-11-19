@@ -1,0 +1,11 @@
+1. Check: polar formula vs raw double integral (z=3): 0.565503087712 0.565503087712
+2. Check: z -> infinity approaches perfect mirrors: F(1e4)/F_perfect = 0.9980955984
+3. Force/energy as a share of perfect mirrors (eta = F/F_perfect), and his normal-incidence-only scalar Li4(G^2)/zeta(4):
+   z=3                  Gamma=0.5      Gamma^2=0.25     eta=0.261245 scalar Li4(G^2)/zeta4=0.234788
+   z=5                  Gamma=0.6666666666666666 Gamma^2=0.4444444444444444 eta=0.414141 scalar Li4(G^2)/zeta4=0.423221
+   wall 3+2sqrt2        Gamma=0.707107 Gamma^2=0.5      eta=0.456192 scalar Li4(G^2)/zeta4=0.478119
+   z=7                  Gamma=0.75     Gamma^2=0.5625   eta=0.504067 scalar Li4(G^2)/zeta4=0.540494
+   z=16.82 (mu->tau)    Gamma=0.887754 Gamma^2=0.788107 eta=0.697001 scalar Li4(G^2)/zeta4=0.771768
+4. At the wall, scalar normal-incidence value exactly Li4(1/2)/zeta(4) = 0.478118777788
+5. w=1e-07 m: perfect-mirror pressure -13.001 Pa; at the wall (z=3+2sqrt2, no dispersion) -5.9311 Pa
+5. w=1e-06 m: perfect-mirror pressure -0.0013001 Pa; at the wall (z=3+2sqrt2, no dispersion) -0.00059311 Pa
