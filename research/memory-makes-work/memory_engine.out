@@ -1,0 +1,37 @@
+A. one pass, fresh record (m = 0): work w p_e, against the bound T[H(p_e) - H(0)]
+   w/T     W/T        bound      efficiency  second law (W <= bound)
+   0.25   0.109456   0.685395   0.1597      True
+   0.50   0.188770   0.662847   0.2848      True
+   1.00   0.268941   0.582203   0.4619      True
+   1.50   0.273638   0.475052   0.5760      True
+   2.00   0.238406   0.365334   0.6526      True
+   3.00   0.142278   0.190865   0.7454      True
+   5.00   0.033464   0.040180   0.8329      True
+   best single pass: W/T = 0.278465 at w/T = 1.278  (the most one fresh bit can give is ln 2 = 0.693147)
+
+B. the edge: the same fresh record walked down a ladder of K qubits
+   K =     1   W/T = 0.000000   of ln 2 = 0.0000   record leaves at P(1) = 0.5000   bath gave 0.000000
+   K =     2   W/T = 0.274653   of ln 2 = 0.3962   record leaves at P(1) = 0.5000   bath gave 0.274653
+   K =     4   W/T = 0.444419   of ln 2 = 0.6412   record leaves at P(1) = 0.5000   bath gave 0.444419
+   K =     8   W/T = 0.548094   of ln 2 = 0.7907   record leaves at P(1) = 0.5000   bath gave 0.548094
+   K =    16   W/T = 0.610034   of ln 2 = 0.8801   record leaves at P(1) = 0.5000   bath gave 0.610034
+   K =    64   W/T = 0.666999   of ln 2 = 0.9623   record leaves at P(1) = 0.5000   bath gave 0.666999
+   K =   256   W/T = 0.685259   of ln 2 = 0.9886   record leaves at P(1) = 0.5000   bath gave 0.685259
+   K =  1024   W/T = 0.690837   of ln 2 = 0.9967   record leaves at P(1) = 0.5000   bath gave 0.690837
+
+C. back rails: a fraction R of spent records comes back and mixes with the fresh ones (m0 = R/2), ladder K = 256
+   R = 0.00   W/T = 0.685259   bound 0.693147   
+   R = 0.10   W/T = 0.492048   bound 0.494632   
+   R = 0.25   W/T = 0.314953   bound 0.316377   
+   R = 0.50   W/T = 0.130276   bound 0.130812   <- his face at the wall returns R = 1/2
+   R = 0.75   W/T = 0.031459   bound 0.031584   
+   R = 0.90   W/T = 0.004989   bound 0.005008   
+   R = 1.00   W/T = 0.000000   bound 0.000000   
+
+D. the coherent return (by unitarity: the inverse swap on the same joint state, before Q rethermalises):
+   forward W = 0.268941, reverse W = -0.268941, net 0: the record un-written, nothing erased, nothing gained
+
+E. how fast memory makes power: P <= k_B T ln2 x (fresh bits per second)
+   room temperature, 1 Gbit/s  : 2.871e-12 W
+   chip at 20 mK, 10 Gbit/s    : 1.914e-15 W
+   room temperature, 1 Tbit/s  : 2.871e-09 W
