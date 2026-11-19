@@ -1,0 +1,18 @@
+vertices 126 edges 189 degrees {3} bipartite True girth 12 diameter 6 radius 6
+cubic bipartite => chromatic index 3 by Konig's edge-colouring theorem
+shell sizes from any vertex (distance 0..6): {(1, 3, 6, 12, 24, 48, 32)}
+ i  size  c_i  a_i  b_i   (c = edges back toward start, b = edges outward)
+ 0     1  {0}  {0}  {3}
+ 1     3  {1}  {0}  {2}
+ 2     6  {1}  {0}  {2}
+ 3    12  {1}  {0}  {2}
+ 4    24  {1}  {0}  {2}
+ 5    48  {1}  {0}  {2}
+ 6    32  {3}  {0}  {0}
+spectrum (eigenvalue: multiplicity): {-3.0: 1, -2.44948974: 21, -1.41421356: 27, -0.0: 28, 1.41421356: 27, 2.44948974: 21, 3.0: 1}
+distinct eigenvalues: 7 = diameter+1 = 7
+as surds: 3, sqrt6 = 2.44948974 , sqrt2 = 1.41421356 , 0
+Hamiltonian cycle given by LCF (the 126-cycle 0..125 is in the graph): True
+
+Tutte graph (46) n 46 bipartite False girth 4 diameter 8
+Tutte-Coxeter / Tutte 8-cage n 30 bipartite True girth 8 diameter 4
