@@ -1,0 +1,29 @@
+best gap for power: w = 1.2785 kT, refill ceiling 0.2785 -> exact 0.278465 gamma kT
+
+A. power against the record rate (gap w = 1.278 kT), in units of gamma kT; the stepped run vs the formula
+   records per refill time   W per record (kT)   power (gamma kT)   memory ceiling   refill ceiling   share of kT ln2 used   2nd law
+       0.01                    0.278465            0.002785               0.0069      0.2785           40.2%               True
+       0.10                    0.278452            0.027845               0.0693      0.2785           40.2%               True
+       0.30                    0.268531            0.080559               0.2079      0.2785           38.7%               True
+       1.00                    0.176023            0.176023               0.6931      0.2785           25.4%               True
+       3.00                    0.078936            0.236808               2.0794      0.2785           11.4%               True
+      10.00                    0.026499            0.264994               6.9315      0.2785            3.8%               True
+      30.00                    0.009129            0.273875              20.7944      0.2785            1.3%               True
+     100.00                    0.002771            0.277077              69.3147      0.2785            0.4%               True
+
+B. where the two ceilings cross (memory-limited below, refill-limited above): r* = 0.4017 records per refill time
+
+C. what sets the speed: the bath refill rate gamma. Real numbers, one qubit, w = 1.278 kT:
+   transmon at 0.2 K, refill 1 MHz                 : up to 7.69e-19 W per qubit
+   transmon at 0.2 K, refill 10 MHz (tunable bath) : up to 7.69e-18 W per qubit
+   room temperature, refill 1 GHz                  : up to 1.15e-12 W per qubit
+   (for scale, the Aalto autonomous engine emits about 5e-18 W)
+
+D. faster AND fuller: a pipeline of K qubits, each record walks down the ladder (MEMORY-ENGINE-01 B) while a new
+   record enters every dt; each qubit refills between records. Work per record and power, gamma dt = 3:
+   K =   1: W per record = 0.0000 kT ( 0.0% of ln2), power = 0.0000 gamma kT, record leaves at P(1) = 0.475
+   K =   2: W per record = 0.2610 kT (37.7% of ln2), power = 0.0870 gamma kT, record leaves at P(1) = 0.487
+   K =   4: W per record = 0.4320 kT (62.3% of ln2), power = 0.1440 gamma kT, record leaves at P(1) = 0.493
+   K =   8: W per record = 0.5394 kT (77.8% of ln2), power = 0.1798 gamma kT, record leaves at P(1) = 0.497
+   K =  16: W per record = 0.6045 kT (87.2% of ln2), power = 0.2015 gamma kT, record leaves at P(1) = 0.498
+   K =  64: W per record = 0.6650 kT (95.9% of ln2), power = 0.2217 gamma kT, record leaves at P(1) = 0.500
