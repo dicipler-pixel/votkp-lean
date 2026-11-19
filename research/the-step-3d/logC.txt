@@ -1,0 +1,2 @@
+nu_20_0.515 BH eps 4.4348 TH 2.001271109810743 steps 28446 frames 174 calls 85339 time 25s
+CHECKSNAP his snapshot at eps 2.000090 vs recorded frame at eps 2.000090: largest difference 0.000e+00

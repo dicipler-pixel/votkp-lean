@@ -1,0 +1,7 @@
+nu_5_0.515 dispersed eps 4.5793 TH 0.5061971849256212 steps 33654 frames 180 calls 100963 time 31s
+CHECKSNAP his snapshot at eps 2.000090 vs recorded frame at eps 2.000090: largest difference 0.000e+00
+nu_0.5_0.515 dispersed eps 4.7075 TH 0.06251932973431093 steps 31409 frames 185 calls 94228 time 29s
+CHECKSNAP his snapshot at eps 2.000047 vs recorded frame at eps 2.000047: largest difference 0.000e+00
+pf_5_0.515 BH eps 3.5948 TH 0.5057516593249151 steps 2190 frames 140 calls 6571 time 4s
+pf_1.5_0.515 BH eps 3.3926 TH 0.16577336852237268 steps 2138 frames 132 calls 6415 time 1s
+pf_0.5_0.515 BH eps 3.6250 TH 0.062458791140331066 steps 2131 frames 141 calls 6394 time 2s

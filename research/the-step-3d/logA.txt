@@ -1,0 +1,13 @@
+nu_160_0.515 BH eps 3.7877 TH 15.999860236357927 steps 62195 frames 148 calls 186586 time 52s
+CHECKSNAP his snapshot at eps 2.000075 vs recorded frame at eps 2.000075: largest difference 0.000e+00
+nu_40_0.515 BH eps 3.9100 TH 4.000177656909453 steps 25147 frames 153 calls 75442 time 22s
+CHECKSNAP his snapshot at eps 2.000088 vs recorded frame at eps 2.000088: largest difference 0.000e+00
+nu_10_0.515 dispersed eps 4.8944 TH 1.0029621678467682 steps 33508 frames 192 calls 100525 time 30s
+CHECKSNAP his snapshot at eps 2.000116 vs recorded frame at eps 2.000116: largest difference 0.000e+00
+nu_1.5_0.515 dispersed eps 6.1470 TH 0.16579934561707776 steps 48863 frames 242 calls 146590 time 44s
+CHECKSNAP his snapshot at eps 2.000045 vs recorded frame at eps 2.000045: largest difference 0.000e+00
+pf_160_0.515 BH eps 3.7896 TH 15.976373981167816 steps 2169 frames 148 calls 6508 time 1s
+pf_40_0.515 BH eps 3.7825 TH 3.9953206607953873 steps 2170 frames 148 calls 6511 time 2s
+pf_20_0.515 BH eps 3.7636 TH 1.9996464893062256 steps 2173 frames 147 calls 6520 time 1s
+pf_10_0.515 BH eps 3.7075 TH 1.0019555997829943 steps 2180 frames 145 calls 6541 time 1s
+pf_10_0.5 BH eps 4.8727 TH 1.0019473874356253 steps 2887 frames 191 calls 8662 time 2s

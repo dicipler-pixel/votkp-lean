@@ -1,0 +1,26 @@
+    run_nu_10_0.515.npz    his dispersed eps 4.89   ours dispersed eps 4.8944
+    run_nu_160_0.515.npz   his BH        eps 3.79   ours BH        eps 3.7877
+    run_nu_20_0.515.npz    his BH        eps 4.43   ours BH        eps 4.4348
+    run_nu_40_0.515.npz    his BH        eps 3.91   ours BH        eps 3.9100
+    run_nu_5_0.515.npz     his dispersed eps 4.58   ours dispersed eps 4.5793
+    run_pf_10_0.5.npz      his BH        eps 4.87   ours BH        eps 4.8727
+HOLDS  (a) 6 runs with a twin in his logs: same outcome, largest eps difference 0.0048 []
+HOLDS  (b) recorder against his snapshot at eps = 2 in 7 full-model runs: largest difference 0
+    run_nu_0.5_0.515.npz   T_H  0.0625 MeV  his dc 0.52457 +- 0.00012  delta_m 0.515  must be dispersed is dispersed
+    run_nu_1.5_0.515.npz   T_H  0.1658 MeV  his dc 0.51543 +- 0.00012  delta_m 0.515  must be dispersed is dispersed
+    run_nu_10_0.515.npz    T_H  1.0029 MeV  his dc 0.52076 +- 0.00010  delta_m 0.515  must be dispersed is dispersed
+    run_nu_160_0.515.npz   T_H 15.9998 MeV  his dc 0.49771 +- 0.00010  delta_m 0.515  must be BH        is BH
+    run_nu_20_0.515.npz    T_H  2.0013 MeV  his dc 0.50865 +- 0.00010  delta_m 0.515  must be BH        is BH
+    run_nu_40_0.515.npz    T_H  4.0002 MeV  his dc 0.50006 +- 0.00010  delta_m 0.515  must be BH        is BH
+    run_nu_5_0.515.npz     T_H  0.5062 MeV  his dc 0.52564 +- 0.00010  delta_m 0.515  must be dispersed is dispersed
+    run_pf_0.5_0.515.npz   T_H  0.0624 MeV  his dc 0.49383 +- 0.00008  delta_m 0.515  must be BH        is BH
+    run_pf_1.5_0.515.npz   T_H  0.1657 MeV  his dc 0.48633 +- 0.00008  delta_m 0.515  must be BH        is BH
+    run_pf_10_0.5.npz      T_H  1.0019 MeV  his dc 0.49742 +- 0.00008  delta_m 0.500  must be BH        is BH
+    run_pf_10_0.515.npz    T_H  1.0019 MeV  his dc 0.49742 +- 0.00008  delta_m 0.515  must be BH        is BH
+    run_pf_160_0.515.npz   T_H 15.9764 MeV  his dc 0.49773 +- 0.00008  delta_m 0.515  must be BH        is BH
+    run_pf_20_0.515.npz    T_H  1.9996 MeV  his dc 0.49773 +- 0.00008  delta_m 0.515  must be BH        is BH
+    run_pf_40_0.515.npz    T_H  3.9953 MeV  his dc 0.49773 +- 0.00008  delta_m 0.515  must be BH        is BH
+    run_pf_5_0.515.npz     T_H  0.5057 MeV  his dc 0.49602 +- 0.00008  delta_m 0.515  must be BH        is BH
+HOLDS  (c) every outcome on the side of his threshold it must be (15 runs)
+HOLDS  (d) his physical curve against Table VII: largest difference 0.0e+00 over 6 rows
+all hold
