@@ -1,4 +1,4 @@
-# SCRIPT: IAN-CHART-01  decode Ian Matson's notebook page "end digit totals, gaps, and codes"
+# SCRIPT: EJ-CHART-01  decode Elizabeth Johnson's notebook page "end digit totals, gaps, and codes"
 # Rule read off the page: list the primes; cut the list at every gap of 2 (twin primes); in each block write each prime
 # as (last digit, decade), the gaps between neighbours on top, the sum of the last digits as the block total, and under
 # each prime its decade minus the block's first decade (the code). If this rule is right, it must reproduce every block on the page.

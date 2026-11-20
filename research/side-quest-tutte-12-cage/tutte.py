@@ -1,4 +1,4 @@
-# SCRIPT: TUTTE-12CAGE-01  Ian Matson's take: Tutte 12-cage (chromatic index 3, chromatic number 2, diameter 6)
+# SCRIPT: TUTTE-12CAGE-01  Elizabeth Johnson's take: Tutte 12-cage (chromatic index 3, chromatic number 2, diameter 6)
 # Check first that the LCF really builds the unique (3,12)-cage: if 126 vertices, cubic, bipartite, girth 12, diameter 6
 # all hold, it is that graph (the cage is unique). Then read its shells, its intersection array and its "sound" (spectrum).
 import networkx as nx, numpy as np
