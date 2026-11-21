@@ -71,14 +71,14 @@ Element names and "crossing number" are written in full.
   Zimborás et al., Scientific Reports 3, 2361 (2013); Lu et al., Physical Review A 93, 042302 (2016).
   Odd cycles are needed for time-asymmetric transfer.
 
-## 3. Screening, relativity and chirality
+## 3. Screening, the spinor (Dirac) term, and chirality
 
-- **All five screening events need relativity.**
-  - In the nonrelativistic, infinite-mass limit, S = 5/8 − 0.157666/Z and σ = 5/8 + 0.037646/Z,
+- **All five screening events need the electron's spinor (Dirac) structure.** No spacetime metric is involved; the term comes from describing the electron as a spinor.
+  - With a scalar wave alone and an infinitely heavy nucleus, S = 5/8 − 0.157666/Z and σ = 5/8 + 0.037646/Z,
     so S < 5/8 < σ for every element.
   - The crossing of S and σ follows from the leading Dirac term: Z* = (4σ²/α²)^(1/4) = 13.00 for
     σ = 0.617, between aluminium and silicon (checked).
-  - σ < 0 (between palladium and silver) needs the relativistic gain in the helium-like energy to
+  - σ < 0 (between palladium and silver) needs the spinor (Dirac) gain in the helium-like energy to
     beat the 5Z/8 repulsion; the estimate gives Z ≈ 46.7.
 - **Caveat for the paper.** σ at neon is only 2 × 10⁻⁵ above 5/8. Removing nuclear recoil moves the
   "σ passes 5/8" event from neon–sodium to fluorine–neon, so the paper must say the event refers to
