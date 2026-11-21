@@ -37,7 +37,8 @@ def main():
     assert margin(Fraction(3,5), Fraction(4,5), 0)==0
     w = csv.writer(sys.stdout,lineterminator='\n')
     w.writerow(['element_one','element_two','core_electrons','margin_at_90_deg',
-                'lower_contact_deg','upper_contact_deg','upper_contact_minus_90_deg'])
+                'lower_contact_deg','upper_contact_deg','upper_contact_minus_90_deg',
+                'sector_entry_deg'])
     for n,left,right in [(2,6,7),(10,11,12),(18,19,20),(36,37,38),(54,55,56)]:
         g,h = reflection(left,n),reflection(right,n)
         lo,hi = tangent_angles(float(g),float(h))
@@ -45,8 +46,18 @@ def main():
             assert abs(margin(float(g),float(h),math.cos(math.radians(angle)))) < 1e-14
         mid = math.radians((lo+hi)/2)
         assert margin(float(g),float(h), math.cos(mid)) < 0
+        # The two complete supports can meet outside the wedge of forward axes.
+        # Nonnegative coefficients of the solution in the two axis directions
+        # require cos(theta) <= min(g/h,h/g). Equality degenerates one edge.
+        entry = math.degrees(math.acos(float(min(g/h, h/g))))
+        assert lo < entry < hi
+        if left == 6:
+            def in_sector(angle):
+                c = math.cos(math.radians(angle))
+                return float(g)-float(h)*c > 0 and float(h)-float(g)*c > 0
+            assert not in_sector(2) and in_sector(89.8)
         w.writerow([records[left-1]['name'],records[right-1]['name'],n,
-                    f'{float(margin(g,h,0)):.9f}',f'{lo:.8f}',f'{hi:.8f}',f'{hi-90:+.8f}'])
+                    f'{float(margin(g,h,0)):.9f}',f'{lo:.8f}',f'{hi:.8f}',f'{hi-90:+.8f}',f'{entry:.8f}'])
 
 if __name__ == '__main__':
     main()

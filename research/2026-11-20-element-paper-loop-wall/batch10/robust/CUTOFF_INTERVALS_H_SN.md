@@ -38,3 +38,11 @@ The standard-library script checks the archived SHA-256 before reading energies.
 ```sh
 python3 cutoff_intervals.py /path/to/element_thresholds_20261011.json.gz
 ```
+
+### A sufficient experimental target for the remaining ordinary rungs
+
+**DERIVED, conditional on increasing true successive ionization energies.** Write a ≤ x ≤ y ≤ d for the first four thresholds. If one of the interior thresholds p (either x or y) is bounded by d_max/c ≤ p ≤ c a_min, every adjacent ratio is at most c. To see this, split the ordered chain at p. Any successive ratio on the left is at most p/a, and any on the right is at most d/p. Those are both at most c. The partial information required is a bound on **one** interior threshold.
+
+Take c equal to the exact silver endpoint 7576259/1304450. Using the tabulated endpoints for the outer two thresholds, it would suffice to bound either the second or the third threshold between 7.351916 and 41.349257 eV for technetium, or between 7.524092 and 43.321077 eV for rhodium. These intervals are rounded inward. The bound would need independent evidence.
+
+Ordering plus the known outer endpoints alone genuinely fails. Taking the outer endpoints at their allowed extremes and the two intermediate energies at 0.01 and 0.02 eV above the lower endpoint yields increasing chains whose last ratios are 5.980937 and 5.843144. Both exceed the loop wall. Using the tabulated central intermediate energies instead gives increasing chains whose largest ratios are 2.143454 and 2.423966. The first pair of constructed chains are mathematical counterexamples to an inference from partial information. They are not proposed spectroscopic values. [Exact input calculation](missing_threshold_targets.py) · [Numerical targets and false controls](missing_threshold_targets.csv)

@@ -1,0 +1,3 @@
+element,IE1_lower_eV,IE4_upper_eV,interior_threshold_min_eV,interior_threshold_max_eV,counterexample_last_z,example_inside_max_z
+Technetium,7.119350000,42.700000000,7.351915371,41.349257934,5.980936640,2.143454107
+Rhodium,7.458850000,43.700000000,7.524091375,43.321077421,5.843144334,2.423966161

@@ -34,3 +34,7 @@
 **Uncertainty convention.** Each ratio lies in [(b−δb)/(a+δa), (b+δb)/(a−δa)] for independent endpoints. For 44 faces the ratio box reaches or includes 1; their squared reflection has a minimum of zero inside the box. The code computes the smaller and larger power over the entire positive interval, then adds the two power ranges. Treating power as ascending across a ratio interval which includes values below one would give an incorrect lower bound. These boxes propagate the reported tolerances and make no assertion about their joint statistical distribution.
 
 Run `python3 adjacent_pairs.py /path/to/data/element_thresholds_20261011.json.gz .`. The [433 faces](opening_faces.csv) preserve the exact ratio, source energies as rational electronvolts, uncertainties, individual grades and NIST reference codes. The [427 adjacent pairs](adjacent_pairs.csv) give both self calls, mixed margins, uncertainty tests and direction comparisons. All rational tests run before display rounding.
+
+![Noble-core opening ratios versus atomic number for the six complete available sequences. Francium’s quoted interval straddles the equal-face wall.](six_core_sequences.svg)
+
+The [standalone figure generator](plot_sequences.py) reads the archive-derived face table. The closed-form mixed test, sign audit and closest-pair comparison use its exact rational inputs. The [finite Lean certificate](../nearest_lean/README.md) proves that carbon with nitrogen is closer to tangency than every rival throughout the encoded boxes of rational perturbations.

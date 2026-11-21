@@ -1,0 +1,16 @@
+Reparsed 433 energy/uncertainty tuples from Lean; all 427 adjacent keys match archive and published packet.
+Lean (version 4.34.1, x86_64-unknown-linux-gnu, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)
+'VOTKP.NearestPair.powerBounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.NearestPair.certifiedCut' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.NearestPair.nearestFromCuts' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.NearestPair.checkHelium' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.NearestPair.checkNeon' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.NearestPair.checkArgon' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.NearestPair.checkKrypton' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.NearestPair.checkXenon' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.NearestPair.checkRadon' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.NearestPair.coversAndHasOneTarget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.NearestPair.allCuts' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.NearestPair.uniquelyNearest' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.NearestPair.wrongWinner' depends on axioms: [propext, Classical.choice, Quot.sound]
+Rejected wrong winner: argon-core potassium with calcium fails the carbon–nitrogen envelope.

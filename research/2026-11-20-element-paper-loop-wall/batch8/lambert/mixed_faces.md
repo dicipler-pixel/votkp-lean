@@ -73,8 +73,10 @@ In the disk coordinates above, write g and h for the two reflections. The face e
 
     F(c) = c² − 2ghc + g² + h² − 1,     c = cos θ.
 
-The two ideal contacts therefore have cosines gh ± √((1−g²)(1−h²)). Between the two contact angles the intersection is interior and the loop closes. At either contact the intersection is ideal. Beyond either contact, within the stated angle domain, the loop opens. This reduces exactly to the original signed margin at 90°.
+The two ideal contacts therefore have cosines gh ± √((1−g²)(1−h²)). Between the two contact angles the **complete supporting geodesics** intersect inside the disk. For closure in the sector bounded by the two forward axes there is an additional orientation condition. At either contact the intersection is ideal. Beyond either contact, within the stated angle domain, the loop opens. This reduces exactly to the original signed margin at 90°.
 
 At the archive central values, carbon with nitrogen has contacts at **1.51888748° and 89.82270223°**. At 89.8° the loop closes. At 90° it opens. Thus a rotation of about **0.17730°** from orthogonality reaches the nearer contact. Sodium with magnesium takes about 6.67065° in the same direction. This quantifies what “barely” means for one specified perturbation of the mathematical construction. The original orthogonal classification is stable to the quoted energy uncertainties. No angular measurement enters that result.
 
 [Five archived opening pairs](angle_control.csv) · [Reproducible angle and ideal-contact checks](angle_control.py)
+
+For an oriented loop, write the intersection vector as α times the first unit axis plus β times the second. Then α=(g−h cos θ)/sin² θ and β=(h−g cos θ)/sin² θ. Both must be positive for a nondegenerate loop in the forward sector. For carbon with nitrogen this requires θ>13.11528523°. A 2° test gives an interior intersection of the complete geodesics on the wrong side of the forward sector. Thus the oriented, finite carbon-with-nitrogen loop closes for 13.11528523…° < θ < 89.82270223…°. The near-parallel contact previously listed describes the complete supporting geodesics. The 89.8° and 90° conclusions retain their original sectors and signs.

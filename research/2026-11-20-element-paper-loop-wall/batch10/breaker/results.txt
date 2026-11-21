@@ -1,0 +1,20 @@
+Map CSV face and adjacent-pair matches: 433 427
+Ratio boxes containing 1: 44 unresolved mixed calls: 0 counts: {'rises': 24, 'falls': 403, 'ties': 0, 'robust_falls': 174, 'robust_rises': 0, 'open': 5, 'closed': 422}
+Closest and runner-up (core, Z, Z+1, |M|, lower/upper |M|):
+helium 6 7 0.003093337566 0.003090763530 0.003095911608
+argon 19 20 0.037822018547 0.037818075932 0.037825961189
+H–Sn counts: 1265 ordinary: 1225 conditional/missing boxes: 18
+ordinary central [ ('N', 5, Fraction(55206741, 9789010)) , ('C', 4, Fraction(4901132, 806169)) )
+ordinary box [ ('N', 5, Fraction(55206749, 9788970)) , ('C', 4, Fraction(39209052, 6449371)) )
+all central [ ('Ag', 0, Fraction(3788117, 652235)) , ('Si', 0, Fraction(20379200, 3473803)) )
+all box [ ('Ag', 0, Fraction(7576259, 1304450)) , ('Si', 0, Fraction(6270500, 1068863)) )
+Monotone-energy sensitivity, 17 ordinary incomplete boxes: {'conditionally below silver': 11, 'still unknown': 6}
+Exact c=5 alternatives: [('N', 5), ('O', 6), ('F', 0), ('F', 7), ('Ne', 8), ('Mg', 2), ('Ag', 0)]
+Carbon and nitrogen full-line lower & upper ideal and sector entry degrees: 1.51888748250 89.82270223492 13.11528523271
+1°: supports intersect=False; interior-to-sector intersection=False
+2°: supports intersect=True; interior-to-sector intersection=False
+10°: supports intersect=True; interior-to-sector intersection=False
+15°: supports intersect=True; interior-to-sector intersection=True
+89.8°: supports intersect=True; interior-to-sector intersection=True
+90°: supports intersect=False; interior-to-sector intersection=False
+At the two contact angles the complete supports have one common ideal endpoint.
