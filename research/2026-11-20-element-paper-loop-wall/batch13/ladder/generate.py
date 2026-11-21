@@ -16,16 +16,16 @@ from batch12_ladder import (
 )
 
 
-def build(archive, destination):
+def build(archive, destination, *, input_dir=DIR, first=61, last=65, filename='batch13_pm_tb.csv'):
     if hashlib.sha256(archive.read_bytes()).hexdigest() != HASH:
         raise ValueError('Archive hash differs from the pin')
     with gzip.open(archive, 'rt') as f:
-        atoms = json.load(f, parse_float=D)['records'][60:65]
-    aff = {r['symbol']: r for r in rows(DIR/'affinities.csv')}
-    states = {(int(r['Z']), int(r['q'])): r for r in rows(DIR/'asd_states_20261121.csv')}
-    expected = {(z,q) for z in range(61,66) for q in range(z)}
-    assert len(states) == len(rows(DIR/'asd_states_20261121.csv')) and set(states) == expected
-    assert [r['Z'] for r in atoms] == list(range(61,66))
+        atoms = json.load(f, parse_float=D)['records'][first-1:last]
+    aff = {r['symbol']: r for r in rows(input_dir/'affinities.csv')}
+    states = {(int(r['Z']), int(r['q'])): r for r in rows(input_dir/'asd_states_20261121.csv')}
+    expected = {(z,q) for z in range(first,last+1) for q in range(z)}
+    assert len(states) == len(rows(input_dir/'asd_states_20261121.csv')) and set(states) == expected
+    assert [r['Z'] for r in atoms] == list(range(first,last+1))
     ladder, detail, chem, screening, cores, diffs, ranges = [], [], [], [], [], [], []
     for atom in atoms:
         znum, symbol, thresholds = atom['Z'], atom['symbol'], atom['thresholds']
@@ -87,15 +87,21 @@ def build(archive, destination):
         screening.append([znum,symbol,he,h,*(f'{v:.10f}' for v in
                          (h/he,s,sigma,s-sigma,he-HARTREE*znum*znum/2))])
         limit = ie1*(3-2*D(2).sqrt())
-        value_rows = [('theory-only comparison', D(a['theory_eV']), None)]
+        value_rows = []
+        if a['theory_eV']:
+            value_rows.append(('theory-only comparison', D(a['theory_eV']), None))
         if ea is not None:
             value_rows.insert(0,(tag,ea,uea))
         if a['lower_bound_eV']:
             value_rows.append(('strict lower bound (boundary evaluation only)',D(a['lower_bound_eV']),None))
+        if a.get('upper_bound_eV'):
+            value_rows.append(('upper limit (if bound; boundary evaluation only)',D(a['upper_bound_eV']),None))
         for status,v,u in value_rows:
             chi,eta = (ie1+v)/2,(ie1-v)/2
             omega = chi**2/(2*eta)
             result = 'undetermined from lower bound' if status.startswith('strict') else side(F(ie1)/F(v))
+            if status.startswith('upper'):
+                result = ('outside if bound' if v < limit else 'undetermined from upper bound')
             iu=steps[1][1]
             limits=(('','') if u is None or iu is None else
                     ((((ie1+iu)+(v-u))/((ie1+iu)-(v-u)))**2/2,
@@ -105,7 +111,7 @@ def build(archive, destination):
                          f'{omega/eta:.9f}',*(f'{n:.9f}' if n!='' else n for n in limits),result])
     destination.mkdir(parents=True,exist_ok=True)
     for file,cols,data in [
-        ('batch13_pm_tb.csv',CSV_HEADER,ladder),('rungs_detailed.csv',DETAILS,detail),('asg_openings.csv',OPEN,cores),
+        (filename,CSV_HEADER,ladder),('rungs_detailed.csv',DETAILS,detail),('asg_openings.csv',OPEN,cores),
         ('screening.csv',SCREEN,screening),
         ('affinity_chemistry.csv','Z,symbol,scope,input_EA_eV,input_unc_eV,IE1_eV,critical_EA_eV,z0,Gamma0,eta_eV,chi_eV,omega_eV,omega_over_eta,omega_over_eta_lower,omega_over_eta_upper,wall'.split(','),chem),
         ('direction_limits.csv','Z,symbol,k,IE_k,unc_k,IE_next,unc_next,grade_k,grade_next,ref_k,ref_next,z_lower,z_upper,direction,Gamma_lower,Gamma_upper,box_wall'.split(','),ranges),
