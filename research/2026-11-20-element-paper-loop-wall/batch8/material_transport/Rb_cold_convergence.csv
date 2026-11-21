@@ -1,0 +1,4 @@
+pw_Ry,charge_Ry,SCF_grid,SCF_width_Ry,band_grid,direction,area_distortion_parts_per_10000,onsager_frequency_kT
+55,420,16,0.005,32,100,66.4801937,16.13619219
+55,420,16,0.005,32,110,-44.99551605,15.95750079
+55,420,16,0.005,32,111,112.03337898,16.20921225

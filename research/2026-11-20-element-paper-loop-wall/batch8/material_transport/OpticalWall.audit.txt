@@ -1,0 +1,8 @@
+Lean (version 4.34.1, x86_64-unknown-linux-gnu, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)
+'VOTKP.OpticalWall.reciprocal_amplitude' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.OpticalWall.reciprocal_power' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.OpticalWall.circle_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.OpticalWall.half_power_iff_outside_circle' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.OpticalWall.rubidium_observed_bracket' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.OpticalWall.rubidium_extinction_false_control' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.OpticalWall.krypton_transparent_comparison' depends on axioms: [propext, Classical.choice, Quot.sound]
