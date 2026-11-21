@@ -1,0 +1,14 @@
+Lean (version 4.34.1, x86_64-unknown-linux-gnu, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)
+'VOTKP.FixedFace.reciprocal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.FixedFace.mapsForward' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.FixedFace.partnerIff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.FixedFace.involution' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.FixedFace.fixedIff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.FixedFace.sensitivity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.FixedFace.strictlyReverses' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.FixedFace.mixedScoreSigns' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.FixedFace.positiveRootFixedClock' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.FixedFace.boxMargins' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.FixedFace.order_control' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.FixedFace.nonlinear_control' depends on axioms: [propext, Classical.choice, Quot.sound]
+Rejected false order prediction M(2)<M(3) on an exact rational instance.

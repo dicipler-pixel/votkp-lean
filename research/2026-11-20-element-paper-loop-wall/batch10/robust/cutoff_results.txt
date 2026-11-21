@@ -1,0 +1,28 @@
+Central rows 1265 (1225 ordinary, 40 anion). Outside 41; complete uncertainty boxes 1247; unavailable 18.
+ordinary central: [55206741/9789010 (5.639665400281, N k=5), 4901132/806169 (6.079534191962, C k=4))
+ordinary reported-box: [55206749/9788970 (5.639689262507, N k=5), 39209052/6449371 (6.079515661295, C k=4))
+all central: [3788117/652235 (5.807902059840, Ag k=0), 20379200/3473803 (5.866538776091, Si k=0))
+all reported-box: [7576259/1304450 (5.808010272529, Ag k=0), 6270500/1068863 (5.866514230542, Si k=0))
+Alternative scalar thresholds: disagreement lists vs the loop wall on all central inputs
+5  7: [('N', 5), ('O', 6), ('F', 7), ('F', 0), ('Ne', 8), ('Mg', 2), ('Ag', 0)]
+29/5  1: [('Ag', 0)]
+291/50  0: []
+583/100  0: []
+117/20  0: []
+59/10  1: [('Si', 0)]
+6  1: [('Si', 0)]
+Nearest central ratios bracketing five: S k=0 4.987717997008; Ne k=8 5.001351752636
+Optional sensitivity assuming all intervening true IEs are increasing (no invented error bars):
+Bromine IE 2..2: adjacent z <= 2.953338271082 conditional on ordering.
+Zirconium IE 2..2: adjacent z <= 3.493153049213 conditional on ordering.
+Niobium IE 2..3: adjacent z <= 5.567991998591 conditional on ordering.
+Technetium IE 2..3: adjacent z <= 5.997738557593 conditional on ordering.
+Ruthenium IE 3..3: adjacent z <= 2.796407185629 conditional on ordering.
+Rhodium IE 2..3: adjacent z <= 5.858812015257 conditional on ordering.
+Palladium IE 3..3: adjacent z <= 2.470222682548 conditional on ordering.
+Ne k=8: z=5.001351752636 [5.001310336434, 5.001393169496], Gamma=0.666741747120
+Ag k=0: z=5.807902059840 [5.807793850470, 5.808010272529], Gamma=0.706223740821
+Si k=0: z=5.866538776091 [5.866514230542, 5.866563321664], Gamma=0.708732439266
+Silicon-28 alternate EA, elemental IE retained: z=5.866535356284, guaranteed upper endpoint 5.866513048392 (exclusive).
+Silicon-29 alternate EA, elemental IE retained: z=5.866536580659, guaranteed upper endpoint 5.866514483860 (exclusive).
+Silicon-30 alternate EA, elemental IE retained: z=5.866540549325, guaranteed upper endpoint 5.866518452511 (exclusive).

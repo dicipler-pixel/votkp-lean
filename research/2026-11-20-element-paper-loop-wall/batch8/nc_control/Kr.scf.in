@@ -1,0 +1,16 @@
+&CONTROL
+    calculation='scf', prefix='system', pseudo_dir='@PSEUDO_DIR@', outdir='./out', verbosity='high'
+/
+&SYSTEM
+    ibrav=2, A=5.721, nat=1, ntyp=1, ecutwfc=75, ecutrho=300, nbnd=8,
+    occupations='fixed'
+/
+&ELECTRONS
+    conv_thr=1.0d-9, mixing_beta=0.5
+/
+ATOMIC_SPECIES
+Kr 83.798 Kr.upf
+ATOMIC_POSITIONS crystal
+Kr 0 0 0
+K_POINTS automatic
+8 8 8 0 0 0

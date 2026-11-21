@@ -1,0 +1,5 @@
+element,ecutwfc_Ry,iterations,final_energy_Ry,last_estimated_scf_error_Ry,irreducible_k_points
+Rb,75,6,-54.15406119,9.0E-10,72
+Kr,75,4,-41.86022264,4.6E-10,29
+Rb,60,6,-54.15404872,8.8E-10,72
+Kr,60,4,-41.86019272,4.0E-10,29

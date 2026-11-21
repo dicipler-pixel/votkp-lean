@@ -1,0 +1,5 @@
+element,Nk,upper_occupied_band_min_eV,upper_occupied_band_max_eV,quantity,value_eV
+Kr,64,-3.29032966,-2.81238572,insulating_gap_eV,7.44742979
+Kr,216,-3.30069864,-2.80615674,insulating_gap_eV,7.33157569
+Rb,64,0.06946778,3.03518327,ranked_mu_eV,1.93659548
+Rb,216,0.0074168,3.11650587,ranked_mu_eV,1.91620979

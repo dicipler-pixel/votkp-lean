@@ -1,0 +1,48 @@
+Energy grades in order: denominator then numerator (E evaluated, S semiempirical, T theoretical).
+
+Helium core: 101 faces 3–103, 100 adjacent pairs, internal gaps [], missing eligible Z range 104–118.
+  pair classes (left self, mixed, right self): {('open', 'open', 'open'): 3, ('open', 'open', 'closes'): 1, ('closes', 'closes', 'closes'): 96}
+  central ratio direction: {'falling': 100} interval direction: {'falling': 100}
+  central mixed calls unresolved by endpoints: []
+  boundary: Carbon / Nitrogen, open / open / closes, margin 0.003093338 [0.003090764, 0.003095912], self interval calls open / closes.
+
+Neon core: 100 faces 11–110, 99 adjacent pairs, internal gaps [], missing eligible Z range 111–118.
+  pair classes (left self, mixed, right self): {('open', 'open', 'closes'): 1, ('closes', 'closes', 'closes'): 98}
+  central ratio direction: {'falling': 99} interval direction: {'falling': 43, 'overlap': 56}
+  central mixed calls unresolved by endpoints: []
+  boundary: Sodium / Magnesium, open / open / closes, margin 0.114273066 [0.114268679, 0.114277453], self interval calls open / closes.
+
+Argon core: 92 faces 19–110, 91 adjacent pairs, internal gaps [], missing eligible Z range 111–118.
+  pair classes (left self, mixed, right self): {('open', 'closes', 'closes'): 1, ('closes', 'closes', 'closes'): 90}
+  central ratio direction: {'falling': 87, 'rising': 4} interval direction: {'falling': 12, 'overlap': 79}
+  central mixed calls unresolved by endpoints: []
+  Central nondecreases (source grades): Tungsten/Rhenium (SS:TT), Bismuth/Polonium (TT:TT), Radon/Francium (TT:TT), Berkelium/Californium (TT:TT)
+  boundary: Potassium / Calcium, open / closes / closes, margin -0.037822019 [-0.037825961, -0.037818076], self interval calls open / closes.
+
+Krypton core: 74 faces 37–110, 73 adjacent pairs, internal gaps [], missing eligible Z range 111–118.
+  pair classes (left self, mixed, right self): {('open', 'closes', 'closes'): 1, ('closes', 'closes', 'closes'): 72}
+  central ratio direction: {'falling': 72, 'rising': 1} interval direction: {'falling': 8, 'overlap': 65}
+  central mixed calls unresolved by endpoints: []
+  Central nondecreases (source grades): Dubnium/Seaborgium (TT:TT)
+  boundary: Rubidium / Strontium, open / closes / closes, margin -0.111436975 [-0.111439607, -0.111434343], self interval calls open / closes.
+
+Xenon core: 49 faces 55–103, 48 adjacent pairs, internal gaps [], missing eligible Z range 104–118.
+  pair classes (left self, mixed, right self): {('open', 'closes', 'closes'): 1, ('closes', 'closes', 'closes'): 47}
+  central ratio direction: {'falling': 32, 'rising': 16} interval direction: {'falling': 5, 'overlap': 43}
+  central mixed calls unresolved by endpoints: []
+  Central nondecreases (source grades): Promethium/Samarium (TT:TT), Gadolinium/Terbium (TT:TT), Erbium/Thulium (TT:TT), Hafnium/Tantalum (TT:TT), Tungsten/Rhenium (SS:TT), Platinum/Gold (TT:TT), Thallium/Lead (TT:TT), Lead/Bismuth (TT:TT), Astatine/Radon (TT:TT), Radium/Actinium (TT:TT), Thorium/Protactinium (TT:TT), Neptunium/Plutonium (TT:TT), Americium/Curium (TT:TT), Californium/Einsteinium (TT:TT), Fermium/Mendelevium (TT:TT), Nobelium/Lawrencium (TT:TT)
+  boundary: Cesium / Barium, open / closes / closes, margin -0.175248016 [-0.175276211, -0.175219824], self interval calls open / closes.
+
+Radon core: 17 faces 87–103, 16 adjacent pairs, internal gaps [], missing eligible Z range 104–118.
+  pair classes (left self, mixed, right self): {('closes', 'closes', 'closes'): 16}
+  central ratio direction: {'falling': 13, 'rising': 3} interval direction: {'falling': 6, 'overlap': 10}
+  central mixed calls unresolved by endpoints: []
+  Central nondecreases (source grades): Americium/Curium (TT:TT), Fermium/Mendelevium (TT:TT), Mendelevium/Nobelium (TT:TT)
+  boundary: Francium / Radium, closes / closes / closes, margin -0.263879104 [-0.316084207, -0.215870361], self interval calls straddles/touches / closes.
+Even the farthest edge of the closest pair box is closer to zero than the nearest edge of every other box: 0.003095912 < 0.037818076.
+Three-way agreement: reflected powers, raw squared sinh product and disk-circle geometry on every central pair.
+
+433 archived faces, 427 distinct adjacent pairs.
+Total mixed verdicts: {'open': 5, 'closes': 422}
+Number of interval-supported mixed calls: 427
+Closest central distinct-element mixed wall: helium core Carbon / Nitrogen, margin 0.003093338 [0.003090764, 0.003095912].
