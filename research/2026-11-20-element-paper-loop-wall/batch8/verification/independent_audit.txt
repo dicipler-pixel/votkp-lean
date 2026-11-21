@@ -1,0 +1,12 @@
+Kr: classified=35 outside k=[]; missing combined uncertainty k=[]
+Rb Kr core  k=1  z=6.533086692  Γ=0.734504582  z endpoints=[6.533070451, 6.533102933]  outside
+Rb: classified=37 outside k=[0, 1]; missing combined uncertainty k=[]
+Sr Kr core  k=2  z=3.887801906  Γ=0.590818114  z endpoints=[3.887783799, 3.887820012]  inside
+Sr: classified=38 outside k=[0]; missing combined uncertainty k=[]
+Y Kr core  k=3  z=2.952932630  Γ=0.494046525  z endpoints=[2.952793560, 2.953071702]  inside
+Y: classified=39 outside k=[0]; missing combined uncertainty k=[]
+Zr Kr core  k=4  z=2.334451729  Γ=0.400201244  z endpoints=[2.334244280, 2.334659178]  inside
+Zr: classified=40 outside k=[0]; missing combined uncertainty k=[1, 2]
+{'ordinary energies': 190, 'ordinary pairs': 185, 'pairs robust at archive/EA endpoints': 187, 'affinities': 4, 'anion pairs': 4}
+CSV SHA-256: 4d3305db7d088f4bded8d1f7a7a9ddcf14ab9b3b0febaf2c8f02fdb5e41a2a9e
+CSV pass: 194 physical energy rows, 189 displayed pairs, 1 blank Kr placeholder.
