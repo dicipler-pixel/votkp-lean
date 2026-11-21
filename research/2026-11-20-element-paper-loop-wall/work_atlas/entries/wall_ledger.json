@@ -473,5 +473,34 @@
    "polynomial"
   ],
   "links": []
+ },
+ {
+  "id": "vacuum-disk.torus-direction",
+  "title": "Torus-knot directions from the Dirac-time arc ends",
+  "statement": "Each torus-knot root of the decay–direction polynomial has decay 0 and direction = −4pq·α_end² mod 1, α_end the end point of a Dirac-time arc. Exact on T(2,3), T(2,5), T(2,7), T(3,4), T(3,5); 2/3 (8_19) and 11/15 (10_124) predicted by the formula, then found on braid drawings.",
+  "paper": {
+   "title": "The Volume of the Knot Potential: Decay and Direction on the Vacuum Disk",
+   "version": "v6",
+   "section": "§6"
+  },
+  "lean": null,
+  "grade": "NEW READING of Kirk–Klassen · COMPUTED",
+  "tags": [
+   "knots",
+   "vacuum-disk",
+   "polynomial",
+   "dirac-time"
+  ],
+  "links": [
+   {
+    "to": "vacuum-disk.polynomial",
+    "kind": "special-case",
+    "note": "torus knots"
+   },
+   {
+    "to": "dirac-time.trefoil-arc-vacuum-end",
+    "kind": "uses"
+   }
+  ]
  }
 ]

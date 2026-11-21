@@ -1,6 +1,6 @@
-# Work atlas status — 2026-11-21 22:34 UTC
+# Work atlas status — 2026-11-21 22:39 UTC
 
-19 results, 11 with a Lean proof found, 0 need attention.
+106 results, 42 with a Lean proof found, 0 need attention.
 
 ## Needs attention
 

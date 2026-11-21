@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21 22:34 UTC",
+ "updated": "2026-11-21 22:39 UTC",
  "repos": [
   {
    "repo": "votkp-lean",
@@ -531,6 +531,2246 @@
   }
  ],
  "entries": [
+  {
+   "id": "dirac-time.memory-definition",
+   "title": "Memory as predictive distinguishability (Definition 1.1)",
+   "statement": "Relative to a declared reduction, memory is information absent from the present reduced description that is still needed to distinguish future admitted observations. invariant != history != memory != arrow.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§1.2, Def. 1.1"
+   },
+   "lean": null,
+   "grade": "STATED",
+   "tags": [
+    "memory",
+    "framework"
+   ],
+   "links": [
+    {
+     "to": "dirac-time.predictive-equivalence",
+     "kind": "generalises",
+     "note": "Def. 1.1 is the general statement; §2 is its exact linear form."
+    }
+   ],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.predictive-equivalence",
+   "title": "Future decided by the first dim V readings",
+   "statement": "N_inf = {v : R L^n v = 0 for all n >= 0}; v ~ w iff v - w in N_inf iff R L^n v = R L^n w for all n; by Cayley-Hamilton the first dim V readings decide every future reading.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§2.1, §2.3"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/dirac-time-lean",
+    "branch": "main",
+    "file": "DiracTime/Headline.lean",
+    "theorem": "future_decided_by_first_dim_steps"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "memory",
+    "predictive-quotient"
+   ],
+   "links": [
+    {
+     "to": "dirac-time.return-criterion",
+     "kind": "special-case",
+     "note": "Theorem P5 is the density-operator form of the same quotient."
+    }
+   ],
+   "_file": "dirac_time.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "dirac-time-lean@main",
+    "file": "DiracTime/Headline.lean",
+    "line": 17,
+    "name": "DiracTime.Headline.future_decided_by_first_dim_steps"
+   }
+  },
+  {
+   "id": "dirac-time.cayley-hamilton-closure",
+   "title": "Finite closure: N_inf = ker O_d, dim V_pred = rank O_d",
+   "statement": "O_d(v) = (Rv, RLv, ..., RL^{d-1}v), d = dim V. N_inf = ker O_d and dim(V/N_inf) = rank O_d; L descends to V/N_inf because L N_inf is inside N_inf.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§2.2-2.3"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/dirac-time-lean",
+    "branch": "main",
+    "file": "DiracTime/PredictiveQuotient.lean",
+    "theorem": "finrank_quotient_unobservable"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "memory",
+    "predictive-quotient"
+   ],
+   "links": [],
+   "_file": "dirac_time.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "dirac-time-lean@main",
+    "file": "DiracTime/PredictiveQuotient.lean",
+    "line": 155,
+    "name": "DiracTime.PredictiveQuotient.finrank_quotient_unobservable"
+   }
+  },
+  {
+   "id": "dirac-time.minimal-predictor",
+   "title": "Minimal predictor dimension",
+   "statement": "Any linear summary F that fixes all future observations has ker F inside N_inf, so rank F >= dim(V/N_inf).",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§2.3"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/dirac-time-lean",
+    "branch": "main",
+    "file": "DiracTime/Headline.lean",
+    "theorem": "minimal_predictor_dimension"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "memory",
+    "predictive-quotient"
+   ],
+   "links": [],
+   "_file": "dirac_time.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "dirac-time-lean@main",
+    "file": "DiracTime/Headline.lean",
+    "line": 35,
+    "name": "DiracTime.Headline.minimal_predictor_dimension"
+   }
+  },
+  {
+   "id": "dirac-time.present-closes",
+   "title": "When the present observation closes",
+   "statement": "The present reading Rv is an autonomous predictive state iff L(ker R) is inside ker R, iff RL = AR for some linear A. Memory is needed exactly when the chosen present reduction fails to close.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§2.4"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/dirac-time-lean",
+    "branch": "main",
+    "file": "DiracTime/Headline.lean",
+    "theorem": "present_observation_closes_iff"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "memory",
+    "predictive-quotient"
+   ],
+   "links": [],
+   "_file": "dirac_time.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "dirac-time-lean@main",
+    "file": "DiracTime/Headline.lean",
+    "line": 43,
+    "name": "DiracTime.Headline.present_observation_closes_iff"
+   }
+  },
+  {
+   "id": "dirac-time.memory-filtration",
+   "title": "Structural memory filtration",
+   "statement": "For successive reductions R_0 -> R_1 -> ... -> R_m, a coarser record cannot create distinctions the finer one lacked; memory hierarchy = nested kernels of declared record maps.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§3.1"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/dirac-time-lean",
+    "branch": "main",
+    "file": "DiracTime/MemoryFiltration.lean",
+    "theorem": "coarser_cannot_separate"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "memory"
+   ],
+   "links": [
+    {
+     "to": "dirac-time.record-hierarchy",
+     "kind": "generalises",
+     "note": "§24 hierarchy is a proposed chain of such reductions."
+    }
+   ],
+   "_file": "dirac_time.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "dirac-time-lean@main",
+    "file": "DiracTime/MemoryFiltration.lean",
+    "line": 14,
+    "name": "DiracTime.MemoryFiltration.coarser_cannot_separate"
+   }
+  },
+  {
+   "id": "dirac-time.chiral-sf-zero",
+   "title": "Chiral negative control: full spectral flow is zero",
+   "statement": "Flat torus D = sigma1(-i d_x + 2 pi alpha) + sigma2(-i d_y + 2 pi beta); block D_mn = 2 pi[(m+alpha) sigma1 + (n+beta) sigma2], lambda = +-2 pi sqrt((m+alpha)^2+(n+beta)^2). Gamma = sigma3 gives Gamma D Gamma = -D, so SF(D) = SF(-D) = -SF(D) = 0. Full scalar spectral flow is not a universal time variable.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§5, §19.1"
+   },
+   "lean": null,
+   "grade": "DERIVED-IN-PAPER",
+   "tags": [
+    "chiral-pairing",
+    "spinor-structure",
+    "negative-control"
+   ],
+   "links": [
+    {
+     "to": "dirac-time.one-law-eta",
+     "kind": "special-case",
+     "note": "The torus is one instance of the one law."
+    }
+   ],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.projector-orientation",
+   "title": "The projector keeps the direction the spectrum forgets",
+   "statement": "a = m+alpha, b = n+beta, phi = arg(a+ib); P+ = (1/2)(I + cos phi sigma1 + sin phi sigma2); Tr(P+ sigma1) = cos phi, Tr(P+ sigma2) = sin phi; d phi = (a db - b da)/(a^2+b^2). |lambda| = sqrt(a^2+b^2) forgets phi; the projector keeps it.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§5.1"
+   },
+   "lean": null,
+   "grade": "DERIVED-IN-PAPER",
+   "tags": [
+    "chiral-pairing",
+    "projector",
+    "wall-adjacent"
+   ],
+   "links": [
+    {
+     "to": "loop wall Gamma^2 = 1/2 (Gamma=(z-1)/(z+1)=tanh h, h=(1/2)ln z; z=3+2sqrt2)",
+     "kind": "analogy-only",
+     "note": "At phi = 45 degrees, Tr(P+ sigma1)^2 = 1/2; the paper gives 45 degrees no special role."
+    }
+   ],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.loop-holonomy-minus-one",
+   "title": "Loop holonomy -1 without scalar motion (the 720-degree return)",
+   "statement": "For (alpha,beta) = r(cos s, sin s), 0 < r < 1/2, the (0,0) block keeps eigenvalues +-2 pi r while phi = s; u+ = (1, e^{is})/sqrt2, i<u+,du+> = -(1/2) ds; one winding gives holonomy -1. Two windings give (-1)^2 = +1, the 720-degree return. The paper states the -1; the 720-degree return is its direct consequence and is not written out. v3.1 adds the reading: equatorial holonomy -1 is half the unit monopole flux (a_N = (1 - cos theta)/2, loop integral pi).",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§5.2 (v3.1 also App. F row)"
+   },
+   "lean": null,
+   "grade": "DERIVED-IN-PAPER",
+   "tags": [
+    "minus-one-return",
+    "holonomy",
+    "spinor-structure",
+    "wall-adjacent"
+   ],
+   "links": [
+    {
+     "to": "monopole paper (Geometric Flux and Magnetic Charge)",
+     "kind": "same-formula",
+     "note": "half unit flux = holonomy -1"
+    },
+    {
+     "to": "loop wall Gamma^2 = 1/2 (Gamma=(z-1)/(z+1)=tanh h, h=(1/2)ln z; z=3+2sqrt2)",
+     "kind": "same-wall",
+     "note": "The wall list names the -1 / 720-degree return as one of its forms; here it appears as an eigenline holonomy on a unitary loop."
+    }
+   ],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.one-law-eta",
+   "title": "One law, stated once: chiral symmetry kills every odd scalar record",
+   "statement": "If Gamma D(s) Gamma = -D(s) with Gamma^2 = I: (1) the spectrum is even; (2) every odd functional of the scalar spectrum (SF, eta, odd traces) vanishes. Lean proves item (2) for eta in finite dimension, plus eta(-D) = -eta(D) (eta_neg) and the 2x2 torus symbol case (pauli_eta_eq_zero).",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§5.3 items 1-2"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/dirac-time-d25-lean",
+    "branch": "master",
+    "file": "DiracTimeD25/ChiralEta.lean",
+    "theorem": "eta_eq_zero_of_chiral"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "chiral-pairing",
+    "eta",
+    "spinor-structure"
+   ],
+   "links": [
+    {
+     "to": "dirac-time.chiral-projector-pairing",
+     "kind": "uses",
+     "note": "Item 3 is where the orientation survives."
+    },
+    {
+     "to": "dirac-time.arc-eta-window",
+     "kind": "opposite-reading",
+     "note": "Boundary eta = 0 here; the bulk rho-invariant is nonzero on the arc window."
+    }
+   ],
+   "_file": "dirac_time.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "dirac-time-d25-lean@master",
+    "file": "DiracTimeD25/ChiralEta.lean",
+    "line": 100,
+    "name": "DiracTimeD25.eta_eq_zero_of_chiral"
+   }
+  },
+  {
+   "id": "dirac-time.chiral-projector-pairing",
+   "title": "Chiral pairing Gamma P+ Gamma = P- keeps the orientation",
+   "statement": "Under the same hypotheses Gamma P+ Gamma = P- (P- = I - P+ - P0). For a Gamma-odd observable A on a finite Gamma-invariant block, Tr(P+ A) = -Tr(P- A), and the spectrum does not fix this value. Orientation can live only at projector level.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§5.3 item 3"
+   },
+   "lean": null,
+   "grade": "DERIVED-IN-PAPER",
+   "tags": [
+    "chiral-pairing",
+    "projector",
+    "wall-adjacent"
+   ],
+   "links": [
+    {
+     "to": "loop wall Gamma^2 = 1/2 (Gamma=(z-1)/(z+1)=tanh h, h=(1/2)ln z; z=3+2sqrt2)",
+     "kind": "analogy-only",
+     "note": "The wall list names Gamma P+ Gamma = P-; here Gamma is the chiral grading sigma3, NOT the Smith/peel Gamma = (z-1)/(z+1). The paper's A.0 (v3.1) separates the two symbols."
+    },
+    {
+     "to": "dirac-time.asymmetry-costs-motion",
+     "kind": "uses",
+     "note": "chi = -Tr(Gamma P-) is the coordinate that leaves the chiral plane."
+    }
+   ],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.naive-oriented-scalar-dead",
+   "title": "Naive oriented projector scalar is zero by identity",
+   "statement": "For a fixed-rank orthogonal projector, Tr((2P - I) P-dot) = 0. Do not use it as oriented memory.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§19.2"
+   },
+   "lean": null,
+   "grade": "DERIVED-IN-PAPER",
+   "tags": [
+    "negative-control",
+    "projector"
+   ],
+   "links": [],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.iqgt-tangent",
+   "title": "Intrinsic projector tangent space (Theorem P1, item 1 and 4)",
+   "statement": "T_P Gr(k,H) = {V = V^dag : PVP = 0, QVQ = 0}, V = [[0,X],[X^dag,0]]; g_P(V,W) = (1/2)Tr(VW) is positive definite and unitarily invariant, as is Omega_P(V,W) = i Tr(P[V,W]). The metric lives on the projector bundle; no spacetime metric is introduced.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§6, App. D.1 Theorem P1"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/dirac-time-lean",
+    "branch": "main",
+    "file": "DiracTime/ProjectorTangent.lean",
+    "theorem": "tangent_iff_blocks_zero"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "iqgt",
+    "intrinsic-metric",
+    "projector"
+   ],
+   "links": [
+    {
+     "to": "IQGT / Grassmannian paper (Paper I)",
+     "kind": "same-formula",
+     "note": "Same Q, g, Omega."
+    }
+   ],
+   "_file": "dirac_time.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "dirac-time-lean@main",
+    "file": "DiracTime/ProjectorTangent.lean",
+    "line": 52,
+    "name": "DiracTime.ProjectorTangent.tangent_iff_blocks_zero"
+   }
+  },
+  {
+   "id": "dirac-time.iqgt-metric-positive",
+   "title": "Intrinsic metric is positive",
+   "statement": "g_P(V,V) = (1/2)Tr(V^2) = ||X||_HS^2 > 0 for a nonzero self-adjoint tangent.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "App. D.1 Theorem P1 item 1"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/dirac-time-lean",
+    "branch": "main",
+    "file": "DiracTime/ProjectorTangent.lean",
+    "theorem": "metric_pos"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "iqgt",
+    "intrinsic-metric"
+   ],
+   "links": [],
+   "_file": "dirac_time.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "dirac-time-lean@main",
+    "file": "DiracTime/ProjectorTangent.lean",
+    "line": 89,
+    "name": "DiracTime.ProjectorTangent.metric_pos"
+   }
+  },
+  {
+   "id": "dirac-time.iqgt-block-formulas",
+   "title": "Block formulas: Q = g - (i/2) Omega",
+   "statement": "g_P(V,W) = Re Tr(XY^dag), Omega_P(V,W) = -2 Im Tr(XY^dag), Q_P(V,W) = Tr(P V^dag W) = g - (i/2) Omega.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§6, App. D.1 Theorem P1 item 2"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/dirac-time-lean",
+    "branch": "main",
+    "file": "DiracTime/ProjectorBlocks.lean",
+    "theorem": "hermitian_form_split"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "iqgt",
+    "intrinsic-metric"
+   ],
+   "links": [],
+   "_file": "dirac_time.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "dirac-time-lean@main",
+    "file": "DiracTime/ProjectorBlocks.lean",
+    "line": 93,
+    "name": "DiracTime.ProjectorBlocks.hermitian_form_split"
+   }
+  },
+  {
+   "id": "dirac-time.metric-curvature-inequality",
+   "title": "Metric-curvature inequality",
+   "statement": "|Omega_P(V,W)| <= 2 sqrt(g(V,V) g(W,W) - g(V,W)^2) (Hilbert-Schmidt Cauchy-Schwarz; proved in block variables).",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "App. D.1 Theorem P1 item 3"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/dirac-time-lean",
+    "branch": "main",
+    "file": "DiracTime/ProjectorTangent.lean",
+    "theorem": "metric_curvature_inequality"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "iqgt",
+    "intrinsic-metric"
+   ],
+   "links": [],
+   "_file": "dirac_time.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "dirac-time-lean@main",
+    "file": "DiracTime/ProjectorTangent.lean",
+    "line": 152,
+    "name": "DiracTime.ProjectorTangent.metric_curvature_inequality"
+   }
+  },
+  {
+   "id": "dirac-time.gap-coupling-law",
+   "title": "Gap-weighted response: the gap enters only through coupled pairs",
+   "statement": "<n|d_i Pi|m> = <n|d_i Sigma|m>/(lambda_m - lambda_n); g_ij = sum_{m in I, n not in I} Re[<m|d_i Sigma|n><n|d_j Sigma|m>]/(lambda_n - lambda_m)^2. A small gap alone is not enough; the perturbation must couple the sectors. v3.1: 'the empty spacing between levels is part of the structure'.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§6.2"
+   },
+   "lean": null,
+   "grade": "RECOGNISED (prior art)",
+   "tags": [
+    "iqgt",
+    "gap"
+   ],
+   "links": [],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.aharonov-wilson-records",
+   "title": "Aharonov-Bohm, Aharonov-Anandan, ABL as typed history records",
+   "statement": "W(C) = exp(iq oint A) is a gauge-invariant loop record; closed histories can keep a geometric phase with equal endpoint rays; ABL P(k|i,f) = |<f|Pi_k|i>|^2 / sum_j |<f|Pi_j|i>|^2 is a two-boundary conditional rule, not APS and not retrocausal signalling.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§7.1-7.3, §7.6"
+   },
+   "lean": null,
+   "grade": "RECOGNISED (prior art)",
+   "tags": [
+    "holonomy",
+    "measurement"
+   ],
+   "links": [],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.weak-value-bound",
+   "title": "Weak-value success-probability bound (Theorem P2)",
+   "statement": "A_w = <f|A|i>/<f|i>, p0 = |<f|i>|^2: p0 |A_w|^2 <= <i|A^2|i>. Large weak values cost postselection weight; a weak value is a conditional response, not the memory.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§7.4, App. D.2 Theorem P2"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/dirac-time-lean",
+    "branch": "main",
+    "file": "DiracTime/WeakValue.lean",
+    "theorem": "weak_value_bound"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "measurement"
+   ],
+   "links": [],
+   "_file": "dirac_time.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "dirac-time-lean@main",
+    "file": "DiracTime/WeakValue.lean",
+    "line": 30,
+    "name": "DiracTime.WeakValue.weak_value_bound"
+   }
+  },
+  {
+   "id": "dirac-time.finite-meter-control",
+   "title": "Finite-meter negative control",
+   "statement": "A near-orthogonal postselection gives a weak value of order 10^3 while the exact finite-strength qubit meter stays of order one: weak approximation != exact finite meter.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§7.5, §19.4"
+   },
+   "lean": null,
+   "grade": "COMPUTED",
+   "tags": [
+    "measurement",
+    "negative-control"
+   ],
+   "links": [],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.sf-path-ledger",
+   "title": "Spectral flow is a path ledger (Theorem P3)",
+   "statement": "For an additive, reversal-odd ledger l on an admitted path system of a connected space: l(gamma: x->y) = n(y) - n(x) for some n iff every admitted loop has l = 0. Spectral flow is the case A = Z (spectral flow itself is not constructed in Lean).",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§8.1, App. D.3 Theorem P3"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/dirac-time-lean",
+    "branch": "main",
+    "file": "DiracTime/PathLedger.lean",
+    "theorem": "descent_iff"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "spectral-flow",
+    "ledger"
+   ],
+   "links": [],
+   "_file": "dirac_time.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "dirac-time-lean@main",
+    "file": "DiracTime/PathLedger.lean",
+    "line": 21,
+    "name": "DiracTime.PathLedger.descent_iff"
+   }
+  },
+  {
+   "id": "dirac-time.positive-reachability-not-order",
+   "title": "Positive spectral-flow reachability is not a time order",
+   "statement": "If l(gamma: x->y) = r > 0 and a loop at y has ledger N > r, the path loop*reverse(gamma): y->x has ledger N - r > 0; positive paths can exist both ways, so antisymmetry needs extra hypotheses.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "App. D.3"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/dirac-time-lean",
+    "branch": "main",
+    "file": "DiracTime/PathLedger.lean",
+    "theorem": "positive_both_ways"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "spectral-flow",
+    "negative-control"
+   ],
+   "links": [],
+   "_file": "dirac_time.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "dirac-time-lean@main",
+    "file": "DiracTime/PathLedger.lean",
+    "line": 55,
+    "name": "DiracTime.PathLedger.positive_both_ways"
+   }
+  },
+  {
+   "id": "dirac-time.circle-odometer",
+   "title": "Circle odometer: SF = (a1 - a0) + (1/2)(eta1 - eta0)",
+   "statement": "D_a = -i d/dx + a on the circle: lambda_k = k + a, SF(a0->a1) = floor(a1) - floor(a0), eta(D_a) = 1 - 2{a}, so SF = (a1-a0) + (1/2)(eta1 - eta0) for non-integer ends. a and a+1 share spectrum and eta but the path has SF 1: no endpoint-only formula for history.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§8.2"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/dirac-time-d25-lean",
+    "branch": "master",
+    "file": "DiracTimeD25/CircleOdometer.lean",
+    "theorem": "odometer_identity"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "spectral-flow",
+    "eta"
+   ],
+   "links": [
+    {
+     "to": "dirac-time.eta-coupling-hypothesis",
+     "kind": "uses",
+     "note": "alpha = 1/2 + kappa chi gives eta = -2 kappa chi."
+    }
+   ],
+   "_file": "dirac_time.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "dirac-time-d25-lean@master",
+    "file": "DiracTimeD25/CircleOdometer.lean",
+    "line": 45,
+    "name": "DiracTimeD25.odometer_identity"
+   }
+  },
+  {
+   "id": "dirac-time.aps-maslov-ledgers",
+   "title": "APS, Cauchy data, Maslov, determinant line as distinct ledgers",
+   "statement": "ind D+_APS = int I_loc - xi(A), xi = (eta + dim ker)/2; SF(D_{X,Q}(s)) = Mas(ker Q(s), C_X(s)); exponentiated eta lives in a determinant line. A fractional boundary term is part of the ledger, not an index leak.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§8.3-8.5"
+   },
+   "lean": null,
+   "grade": "RECOGNISED (prior art)",
+   "tags": [
+    "eta",
+    "ledger"
+   ],
+   "links": [],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.one-flow",
+   "title": "Rank-(n-1) phase constraint gives one progression",
+   "statement": "B theta(s) = delta with rank B = n-1 gives theta-dot = a(s) v, v in ker B, theta = theta0 + v tau(s). Many phase readouts can parameterize one collective progression (kinematic).",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§9.1"
+   },
+   "lean": null,
+   "grade": "DERIVED-IN-PAPER",
+   "tags": [
+    "clock",
+    "phase"
+   ],
+   "links": [],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.affine-phase-readout",
+   "title": "Affine phase readout: constant numerator, monotone or silent",
+   "statement": "x = A + Bs, y = C + Ds, phi = arg(x+iy): phi' = (AD - BC)/(x^2 + y^2). AD - BC != 0 gives a strictly monotone phase lift; AD - BC = 0 is a silent readout, which does not mean the progression stopped.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§9.2"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/dirac-time-lean",
+    "branch": "main",
+    "file": "DiracTime/PhaseSilence.lean",
+    "theorem": "affine_numerator"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "phase",
+    "silence"
+   ],
+   "links": [
+    {
+     "to": "dirac-time.silence-law",
+     "kind": "uses",
+     "note": "Theorem 13.1(4) is this formula on a knot arc."
+    }
+   ],
+   "_file": "dirac_time.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "dirac-time-lean@main",
+    "file": "DiracTime/PhaseSilence.lean",
+    "line": 22,
+    "name": "DiracTime.PhaseSilence.affine_numerator"
+   }
+  },
+  {
+   "id": "dirac-time.common-clock",
+   "title": "Covariant common clock (Theorem P4)",
+   "statement": "With psi = R chi: i hbar chi-dot = (R^dag H R - i hbar R^dag R-dot) chi; the dynamics equal a fixed H0 advancing with tau(t) (up to a phase) iff R^dag H R - i hbar R^dag R-dot = tau-dot H0 + a(t) I; a clock needs tau-dot > 0. Lean: the instantaneous identity and the common-clock form; the propagator form is not formalized.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§9.3, App. D.4 Theorem P4"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/dirac-time-lean",
+    "branch": "main",
+    "file": "DiracTime/MovingFrame.lean",
+    "theorem": "common_clock"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "clock"
+   ],
+   "links": [],
+   "_file": "dirac_time.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "dirac-time-lean@main",
+    "file": "DiracTime/MovingFrame.lean",
+    "line": 41,
+    "name": "DiracTime.MovingFrame.common_clock"
+   }
+  },
+  {
+   "id": "dirac-time.common-gap-scaling",
+   "title": "Common gap scaling and unique rate (Corollaries P4.1-P4.2)",
+   "statement": "mu_j - mu_k = tau-dot (E_j - E_k): every internal gap shares one scale factor; for non-scalar H0, c H0 + a I = c' H0 + a' I forces c = c', a = a'.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "App. D.4 Cor. P4.1-P4.2"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/dirac-time-lean",
+    "branch": "main",
+    "file": "DiracTime/CommonClock.lean",
+    "theorem": "common_gap_scaling"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "clock"
+   ],
+   "links": [],
+   "_file": "dirac_time.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "dirac-time-lean@main",
+    "file": "DiracTime/CommonClock.lean",
+    "line": 29,
+    "name": "DiracTime.CommonClock.common_gap_scaling"
+   }
+  },
+  {
+   "id": "dirac-time.no-absolute-rate",
+   "title": "Projector geometry cannot set seconds (Cor. P4.3)",
+   "statement": "H -> sH (s > 0) keeps every eigenvector and projector and scales every gap by s; H -> H + cI changes neither. Geometry of change != seconds.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§9.4, App. D.4 Cor. P4.3"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/dirac-time-lean",
+    "branch": "main",
+    "file": "DiracTime/CommonClock.lean",
+    "theorem": "rescale_same_eigenvectors"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "clock",
+    "intrinsic-metric"
+   ],
+   "links": [],
+   "_file": "dirac_time.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "dirac-time-lean@main",
+    "file": "DiracTime/CommonClock.lean",
+    "line": 60,
+    "name": "DiracTime.CommonClock.rescale_same_eigenvectors"
+   }
+  },
+  {
+   "id": "dirac-time.offset-speed-limit",
+   "title": "Offset speed limit (imported into v3.1)",
+   "statement": "Signed offset of a cut tau_off = log det(I - C) - log det C, C = E^dag P E: tau_off-dot^2 <= 4 g S, g = (1/2)||P-dot||^2, S = Tr[(C(I-C))^{-1}]; for P-dot = -i[H,P], g = ||P H (I-P)||^2. Rank one: tau_off = ln((1-C)/C).",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.1 (6 Nov 2026) - v3.1 text not reachable; taken from Read record 02 and the 13 Nov full-read notes",
+    "section": "§9.4 (v3.1), quoting 'The Offset Speed Limit' Thm 1"
+   },
+   "lean": null,
+   "grade": "STATED",
+   "tags": [
+    "speed-limit",
+    "loop-wall"
+   ],
+   "links": [
+    {
+     "to": "loop wall Gamma^2 = 1/2 (Gamma=(z-1)/(z+1)=tanh h, h=(1/2)ln z; z=3+2sqrt2)",
+     "kind": "same-formula",
+     "note": "Rank one, tau_off = ln((1-C)/C) is 2h for z = (1-C)/C; with C = (1+G)/2 the bound becomes (G-dot)^2 <= 4g(1-G^2). That dictionary is untested for the peel."
+    },
+    {
+     "to": "The Offset Speed Limit (rate is weight)",
+     "kind": "uses",
+     "note": "Proof lives in the companion paper."
+    }
+   ],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.real-line-conditional",
+   "title": "Real-line reconstruction is conditional",
+   "statement": "If the predictive-history quotient is a connected, dense, Dedekind-complete, endpoint-free, countably order-dense linear order, it is order-isomorphic to (R,<); the physics must derive the hypotheses.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§9.5"
+   },
+   "lean": null,
+   "grade": "RECOGNISED (prior art)",
+   "tags": [
+    "clock"
+   ],
+   "links": [],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.hidden-sector-kernel",
+   "title": "Hidden-sector memory kernel K(t) = B e^{-iDt} B^dag",
+   "statement": "H = [[A,B],[B^dag,D]]: x-dot = -iAx - iB e^{-iDt} y(0) - int_0^t K(t-s) x(s) ds. Two carriers: the initial hidden source and the kernel. K(0) = BB^dag = PH(I-P)HP = PH^2P - (PHP)^2; same B, different D gives same K(0), different K(t).",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§10, §10.1, §19.3"
+   },
+   "lean": null,
+   "grade": "DERIVED-IN-PAPER",
+   "tags": [
+    "memory",
+    "hidden-sector"
+   ],
+   "links": [],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.energy-resolved-memory",
+   "title": "Aggregate coupling forgets its energy resolution",
+   "statement": "BB^dag = sum_e M_e; M = sum M_e does not determine {(e, M_e)}; Sigma(z) = sum_e M_e/(z - e) can differ for equal M.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§10.2"
+   },
+   "lean": null,
+   "grade": "DERIVED-IN-PAPER",
+   "tags": [
+    "memory",
+    "hidden-sector"
+   ],
+   "links": [],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.jordan-same-trace",
+   "title": "Same scalar ledger, different dynamics (nilpotent control)",
+   "statement": "J_mu = bI + mu N0, N0 = [[0,1],[0,0]]: Tr f(J_mu) = 2 f(b) for every analytic f, independent of mu, while ||e^{-J_mu t}|| depends on mu and can grow transiently.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§10.3"
+   },
+   "lean": null,
+   "grade": "DERIVED-IN-PAPER",
+   "tags": [
+    "memory",
+    "non-normal",
+    "wall-adjacent"
+   ],
+   "links": [
+    {
+     "to": "loop wall Gamma^2 = 1/2 (Gamma=(z-1)/(z+1)=tanh h, h=(1/2)ln z; z=3+2sqrt2)",
+     "kind": "analogy-only",
+     "note": "A 2x2 Jordan block is what the loop operator becomes exactly at the wall; the paper uses it only as a control and never calls it a wall or exceptional point."
+    }
+   ],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.density-memory-reduction",
+   "title": "Exact density-operator memory reduction (Nakajima-Zwanzig, no approximation)",
+   "statement": "sigma-dot = L0 sigma + int K(t-s) sigma(s) ds + I(t), K(u) = R L Q e^{uQLQ} Q L J, I(t) = R L Q e^{tQLQ} Q rho(0); Laplace kernel = Schur complement b(z-d)^{-1}c. The density kernel (tensor product) is not the amplitude kernel (direct sum). A vanishing source does not force a vanishing kernel.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§10.4, App. C-C.2"
+   },
+   "lean": null,
+   "grade": "RECOGNISED (prior art)",
+   "tags": [
+    "memory",
+    "hidden-sector"
+   ],
+   "links": [],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.nonzero-kernel-control",
+   "title": "A nonzero kernel is not readable memory",
+   "statement": "H = g Z_W Z_M: K(u) sigma = -g^2 [Z,[Z,sigma]] is nonzero, yet rho_a = (|00><00| + |11><11|)/2 and rho_b = (|01><01| + |10><10|)/2 stay indistinguishable forever.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "App. C.5, D.5"
+   },
+   "lean": null,
+   "grade": "DERIVED-IN-PAPER",
+   "tags": [
+    "memory",
+    "negative-control"
+   ],
+   "links": [],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.neutrino-kept-population",
+   "title": "Neutrino kept population and its Smith coordinate (v3.1)",
+   "statement": "L = A + D, A = -ik mu, D = -kappa(I - P); c_l = (l+1)/sqrt((2l+1)(2l+3)); E_B = ||PH(I-P)||^2 = k^2/3; kept population A obeys A-dot^2 <= 4 E_B A(1-A). The offset ln[(1-G)/G] of the surviving share G moves along the rapidity (1/2) ln r, r = kappa2/kappa1, whose Smith coordinate is (r-1)/(r+1).",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.1 (6 Nov 2026) - v3.1 text not reachable; taken from Read record 02 and the 13 Nov full-read notes",
+    "section": "§10.5 (v3.1), from 'When the Neutrinos Leave'"
+   },
+   "lean": null,
+   "grade": "STATED",
+   "tags": [
+    "hidden-sector",
+    "speed-limit",
+    "loop-wall"
+   ],
+   "links": [
+    {
+     "to": "loop wall Gamma^2 = 1/2 (Gamma=(z-1)/(z+1)=tanh h, h=(1/2)ln z; z=3+2sqrt2)",
+     "kind": "same-formula",
+     "note": "(r-1)/(r+1) with rapidity (1/2) ln r is exactly Gamma = tanh h, h = (1/2) ln z, z = r. Here G is a share in (0,1), not the peel coordinate."
+    },
+    {
+     "to": "When the Neutrinos Leave",
+     "kind": "uses",
+     "note": "Bound and runs live there (simulation runs of McCormick's code)."
+    }
+   ],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.peel-boundary-control",
+   "title": "Elemental Peeling as a boundary-memory control",
+   "statement": "Fixed-channel optical peel G_t = sum_m s_m^(t) K_m, 0 <= s_m^(1) <= s_m^(0); with two probe energies 0 <= B1 <= B0 and beta_min L <= D <= beta_max L, ker D = ker L (L = G0 - G1, D = B0 - B1). A richer readout recovers removed coupling directions; a counterfamily has equal one-energy boundary data but different later energy dependence: boundary equivalence does not imply future equivalence.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§11.3"
+   },
+   "lean": null,
+   "grade": "STATED",
+   "tags": [
+    "peel",
+    "memory",
+    "element-paper"
+   ],
+   "links": [
+    {
+     "to": "element paper (VOTKP / Elemental Peeling: peel ratios z, coordinate Gamma)",
+     "kind": "uses",
+     "note": "Quoted from VOTKP Sections 5.6, 5.9, 5.10; here 'peel' means removing coupling channels, not the two-step Smith peel."
+    }
+   ],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.equal-endpoint-witness",
+   "title": "Exact equal-endpoint witness: a Wilson phase read later",
+   "statement": "|Psi> = (|0>_P|1>_E + e^{i Phi}|1>_P|0>_E)/sqrt2: both marginals I/2 and energy epsilon for every Phi; after V = g(|01><10| + h.c.), <Z_P>(t) = sin(2gt) sin Phi. This probe cannot separate Phi from pi - Phi; a second probe reads cos Phi. Lean proves the populations and readout from the stated amplitudes.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§11.4"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/dirac-time-lean",
+    "branch": "main",
+    "file": "DiracTime/EqualEndpointWitness.lean",
+    "theorem": "later_readout"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "holonomy",
+    "memory"
+   ],
+   "links": [
+    {
+     "to": "dirac-time.relational-witness",
+     "kind": "special-case",
+     "note": "P5a is the case Phi = +-pi/2."
+    }
+   ],
+   "_file": "dirac_time.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "dirac-time-lean@main",
+    "file": "DiracTime/EqualEndpointWitness.lean",
+    "line": 61,
+    "name": "DiracTime.EqualEndpointWitness.later_readout"
+   }
+  },
+  {
+   "id": "dirac-time.relational-witness",
+   "title": "Relational-memory witness (P5a)",
+   "statement": "|psi+-> = (|01> +- i|10>)/sqrt2: equal marginals I/2 and equal energy; rho_W(t) = (1/2)[I +- sin(2gt) Z]; trace distance |sin 2gt|, perfectly distinguishable at t = pi/(4g); E_W + E_M = epsilon, no negative-energy reservoir.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "App. C.4, D.5 P5a"
+   },
+   "lean": null,
+   "grade": "DERIVED-IN-PAPER",
+   "tags": [
+    "memory"
+   ],
+   "links": [],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.return-criterion",
+   "title": "Finite retained-history return criterion (Theorem P5)",
+   "statement": "R rho_a = R rho_b, Delta = rho_a - rho_b: there is t > 0 with R e^{tL} Delta != 0 iff some j in {1, ..., d_T^2 - 1} has R L^j Delta != 0. Lean: discrete form and continuous form (all real t, past and future).",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "App. C.3, D.5 Theorem P5"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/dirac-time-lean",
+    "branch": "main",
+    "file": "DiracTime/FiniteReturn.lean",
+    "theorem": "finite_return_iff"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "memory"
+   ],
+   "links": [],
+   "_file": "dirac_time.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "dirac-time-lean@main",
+    "file": "DiracTime/FiniteReturn.lean",
+    "line": 40,
+    "name": "DiracTime.FiniteReturn.finite_return_iff"
+   }
+  },
+  {
+   "id": "dirac-time.return-criterion-continuous",
+   "title": "Continuous-time return: hidden forever iff every derivative is hidden",
+   "statement": "R e^{tL} Delta = 0 for every real t iff R L^k Delta = 0 for every k (bounded generator on a complete real normed space).",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "App. D.5 Theorem P5"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/dirac-time-lean",
+    "branch": "main",
+    "file": "DiracTime/ContinuousReturn.lean",
+    "theorem": "hidden_forever_iff"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "memory"
+   ],
+   "links": [],
+   "_file": "dirac_time.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "dirac-time-lean@main",
+    "file": "DiracTime/ContinuousReturn.lean",
+    "line": 45,
+    "name": "DiracTime.ContinuousReturn.hidden_forever_iff"
+   }
+  },
+  {
+   "id": "dirac-time.memory-engine",
+   "title": "Finite repeated-contact memory engine",
+   "statement": "p* = (1-eta)p_h + eta p_m, p_m' = (1-eta)p_m + eta p_h, W_out = (eps_h - eps_c)(p* - p_c) = Q_h + Q_c - Delta E_M; W_n^(a) - W_n^(b) = (eps_h - eps_c) eta (1-eta)^n [p_m,a - p_m,b]; the memory excess telescopes (no perpetual source). Numbers eps_h = 3, eps_c = 1, p_h = 2/5, p_c = 1/5, p_m = 3/10, eta = 1/4 give p* = 3/8, W_out = 7/20.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§12.1, App. E"
+   },
+   "lean": null,
+   "grade": "COMPUTED",
+   "tags": [
+    "thermodynamics",
+    "memory"
+   ],
+   "links": [],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.friction-metric",
+   "title": "Friction on projector rotations = reweighted intrinsic metric",
+   "statement": "Under rho-dot = -ik[H,rho] + (omega(H(t)) - rho)/tau: zeta = tau beta Var_p(H-dot_diag) + sum c_mn |H-dot_mn|^2 (p_m - p_n)/(E_n - E_m), c_mn = tau/(1 + k^2 tau^2 (E_m - E_n)^2); per pair zeta_mn = 2 c_mn (p_m - p_n)(E_n - E_m) g_mn; Gibbs weights make every pair weight >= 0; beta W_ex = Sigma + D(rho_f || omega_f). Lean: pairwise algebra and Gibbs sign; the slow-driving derivation is in the paper only.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§12.6"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/dirac-time-lean",
+    "branch": "main",
+    "file": "DiracTime/FrictionMetric.lean",
+    "theorem": "pair_friction_eq_weighted_metric"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "thermodynamics",
+    "intrinsic-metric"
+   ],
+   "links": [
+    {
+     "to": "dirac-time.friction-two-level-tanh",
+     "kind": "special-case",
+     "note": "Two levels."
+    }
+   ],
+   "_file": "dirac_time.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "dirac-time-lean@main",
+    "file": "DiracTime/FrictionMetric.lean",
+    "line": 27,
+    "name": "DiracTime.FrictionMetric.pair_friction_eq_weighted_metric"
+   }
+  },
+  {
+   "id": "dirac-time.friction-two-level-tanh",
+   "title": "Two-level friction weight tanh(beta Delta/2)",
+   "statement": "p- - p+ = tanh(beta Delta/2) and zeta_rot = 2 c(Delta) Delta tanh(beta Delta/2) g_ss. Equivalently p- - p+ = (z-1)/(z+1) with z = p-/p+ = e^{beta Delta}.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§12.6 item 1"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/dirac-time-lean",
+    "branch": "main",
+    "file": "DiracTime/FrictionMetric.lean",
+    "theorem": "two_level_population_gap"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "thermodynamics",
+    "loop-wall",
+    "gamma-form"
+   ],
+   "links": [
+    {
+     "to": "loop wall Gamma^2 = 1/2 (Gamma=(z-1)/(z+1)=tanh h, h=(1/2)ln z; z=3+2sqrt2)",
+     "kind": "same-formula",
+     "note": "The Boltzmann population gap is Gamma = tanh h with h = beta Delta/2 = (1/2) ln z. The wall Gamma^2 = 1/2 sits at beta Delta = ln(3+2sqrt2) = 1.7627 (checked numerically, DT-WALL-CHECKS-01). The paper does not name this point."
+    },
+    {
+     "to": "element paper (VOTKP / Elemental Peeling: peel ratios z, coordinate Gamma)",
+     "kind": "same-formula",
+     "note": "Same (z-1)/(z+1) map as the peel coordinate, with z a population ratio."
+    }
+   ],
+   "_file": "dirac_time.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "dirac-time-lean@main",
+    "file": "DiracTime/FrictionMetric.lean",
+    "line": 47,
+    "name": "DiracTime.FrictionMetric.two_level_population_gap"
+   }
+  },
+  {
+   "id": "dirac-time.friction-zero-T-band",
+   "title": "Zero temperature: a band, not a proportionality",
+   "statement": "zeta_rot = sum_n 2c(Delta_n) Delta_n g_0n, so min_n 2c Delta g <= zeta_rot <= max_n 2c Delta g; the two metrics agree up to a constant only when one value of c(Delta)Delta is coupled.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§12.6 item 2"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/dirac-time-lean",
+    "branch": "main",
+    "file": "DiracTime/FrictionMetric.lean",
+    "theorem": "weighted_sum_band"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "thermodynamics",
+    "intrinsic-metric"
+   ],
+   "links": [],
+   "_file": "dirac_time.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "dirac-time-lean@main",
+    "file": "DiracTime/FrictionMetric.lean",
+    "line": 55,
+    "name": "DiracTime.FrictionMetric.weighted_sum_band"
+   }
+  },
+  {
+   "id": "dirac-time.scale-rotation-split",
+   "title": "Scale-plus-rotation split of friction",
+   "statement": "Two levels, H = d.sigma, r = |d|, Delta = 2r: zeta = tau beta sech^2(beta Delta/2) r-dot^2 + 2c(Delta) Delta tanh(beta Delta/2) g_ss, no cross term; as T -> 0 all slow-driving dissipation is projector rotation.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§12.6 item 3"
+   },
+   "lean": null,
+   "grade": "DERIVED-IN-PAPER",
+   "tags": [
+    "thermodynamics",
+    "intrinsic-metric"
+   ],
+   "links": [
+    {
+     "to": "dirac-time.asymmetry-costs-motion",
+     "kind": "same-formula",
+     "note": "Thermally weighted |d-dot|^2 = r-dot^2 + Delta^2 g_ss."
+    }
+   ],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.entropy-correlation-identity",
+   "title": "Exact entropy/correlation ledger (Theorem P6)",
+   "statement": "Delta S_S - sum_r beta_r Q_r = Delta I(S:H:C) + sum_r Delta D(rho_r || tau_r); with uncorrelated thermal reservoirs initially it equals I_f + sum D(rho_r^f || tau_r) >= 0 (integrated, not a rate). Lean discharges unitarity with Physlib's von Neumann entropy; Gibbs relative-entropy form and nonnegativity are hypotheses.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "App. D.6 Theorem P6, Cor. P6.1"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/dirac-time-lean",
+    "branch": "main",
+    "file": "DiracTime/UnitaryEntropy.lean",
+    "theorem": "entropy_correlation_identity_unitary"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "thermodynamics"
+   ],
+   "links": [],
+   "_file": "dirac_time.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "dirac-time-lean@main",
+    "file": "DiracTime/UnitaryEntropy.lean",
+    "line": 44,
+    "name": "DiracTime.UnitaryEntropy.entropy_correlation_identity_unitary"
+   }
+  },
+  {
+   "id": "dirac-time.arrow-architecture",
+   "title": "Arrow architecture: O + M + Gamma_diss -> A_thermo",
+   "statement": "Orientation/order, retained record and specified transfer into inaccessible degrees of freedom give an effective arrow; entropy does not define the oriented history. Cost side supplied by §12.6; orientation side open (T10).",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§12.5, §25.3"
+   },
+   "lean": null,
+   "grade": "STATED",
+   "tags": [
+    "thermodynamics",
+    "arrow",
+    "open"
+   ],
+   "links": [],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.trefoil-gearing",
+   "title": "Trefoil phase gearing L = -M^{-6}",
+   "statement": "M = e^{2 pi i alpha}, L = e^{2 pi i beta}: beta = 1/2 - 6 alpha, 6 d theta_M + d theta_L = 0; silent sector iff 6 eps_mu + eps_lambda + 1/2 in Z (a resonance, codimension one).",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§13.1"
+   },
+   "lean": null,
+   "grade": "DERIVED-IN-PAPER",
+   "tags": [
+    "torus-knot",
+    "trefoil",
+    "silence"
+   ],
+   "links": [
+    {
+     "to": "dirac-time.torus-peripheral-law",
+     "kind": "special-case",
+     "note": "(p,q) = (2,3), (a,b) = (1,1)."
+    }
+   ],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.819-same-boundary",
+   "title": "8_19 = T(3,4): same boundary, different interior",
+   "statement": "G = <X,Y | X^3 = Y^4>, mu = XY^{-1}, lambda = X^3 mu^{-12}; arcs (1,1), (1,3), (2,2) with L = -M^{-12}, -M^{-12}, +M^{-12}; at alpha = 1/4 two branches share M = i, L = -1 while Tr Y = +-sqrt2. Silence iff 12 eps_mu + eps_lambda + h in Z, h = 1/2 or 0.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§13.2, §19.7"
+   },
+   "lean": null,
+   "grade": "DERIVED-IN-PAPER",
+   "tags": [
+    "torus-knot",
+    "memory"
+   ],
+   "links": [
+    {
+     "to": "dirac-time.torus-peripheral-law",
+     "kind": "special-case",
+     "note": "(p,q) = (3,4)."
+    }
+   ],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.torus-peripheral-law",
+   "title": "Theorem 13.1(1): L = (-1)^a M^{-pq} on every arc",
+   "statement": "For T(p,q), G = <x,y | x^p = y^q>, uq + vp = 1, mu = x^u y^v, lambda = x^p mu^{-pq}; irreducible SU(2) reps form (p-1)(q-1)/2 arcs (a,b), 0<a<p, 0<b<q, a = b mod 2; on each arc L = (-1)^a M^{-pq}.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§13.3 Theorem 13.1(1)"
+   },
+   "lean": null,
+   "grade": "DERIVED-IN-PAPER",
+   "tags": [
+    "torus-knot"
+   ],
+   "links": [],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.torus-arc-range",
+   "title": "Theorem 13.1(2): where each arc lives",
+   "statement": "The arc (a,b) covers exactly the meridian phases strictly between alpha_+- = ||(1/2)(ua/p +- vb/q)||; proof via (1/2)Tr mu = cos phi1 cos phi2 - sin phi1 sin phi2 cos(vartheta), phi1 = pi ua/p, phi2 = pi vb/q. Trefoil: alpha in (1/12, 5/12) (checked numerically, DT-WALL-CHECKS-01).",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§13.3 Theorem 13.1(2)"
+   },
+   "lean": null,
+   "grade": "DERIVED-IN-PAPER",
+   "tags": [
+    "torus-knot",
+    "alpha-end"
+   ],
+   "links": [
+    {
+     "to": "vacuum-disk.torus-direction",
+     "kind": "uses",
+     "note": "alpha_end are these alpha_+-; with alpha_end = k/(2pq) the direction is -k^2/pq mod 1."
+    }
+   ],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.torus-arc-end-steps",
+   "title": "Theorem 13.1(3): arc ends are Alexander roots with end step k",
+   "statement": "At both ends omega = M^2 = e^{4 pi i alpha_+-} = e^{+-2 pi i k/pq} is a root of Delta_T(p,q)(t) = (t^{pq}-1)(t-1)/((t^p-1)(t^q-1)), with end step k = uaq +- vbp, k = a (mod p), k = +-b (mod q). Lean proves the two congruences (end_index_mod_p, end_index_mod_q); the root statement and the SU(2) arcs are not formalized.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§13.3 Theorem 13.1(3)"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/dirac-time-lean",
+    "branch": "main",
+    "file": "DiracTime/PhaseSilence.lean",
+    "theorem": "end_index_mod_p"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "torus-knot",
+    "alpha-end",
+    "wall-adjacent"
+   ],
+   "links": [
+    {
+     "to": "vacuum-disk.torus-direction",
+     "kind": "uses",
+     "note": "Vacuum disk reads the direction off these end points: -4pq alpha_end^2 mod 1; 10 of 10 found there."
+    },
+    {
+     "to": "loop wall Gamma^2 = 1/2 (Gamma=(z-1)/(z+1)=tanh h, h=(1/2)ln z; z=3+2sqrt2)",
+     "kind": "analogy-only",
+     "note": "'Wall' in Dirac Time means a unit-circle Alexander root, not Gamma^2 = 1/2."
+    }
+   ],
+   "_file": "dirac_time.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "dirac-time-lean@main",
+    "file": "DiracTime/PhaseSilence.lean",
+    "line": 48,
+    "name": "DiracTime.PhaseSilence.end_index_mod_p"
+   }
+  },
+  {
+   "id": "dirac-time.silence-law",
+   "title": "Theorem 13.1(4): silence iff pq eps_mu + eps_lambda + a/2 in Z",
+   "statement": "With lift beta = a/2 - pq alpha, sector (m,n) with offsets (eps_mu, eps_lambda) has constant phase numerator -[pq(m + eps_mu) + n + eps_lambda + a/2]; a silent sector exists iff pq eps_mu + eps_lambda + a/2 in Z. Checked on 35 arcs of eight torus knots (DT3-KNOT-01).",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§13.3 Theorem 13.1(4)"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/dirac-time-lean",
+    "branch": "main",
+    "file": "DiracTime/PhaseSilence.lean",
+    "theorem": "silent_sector_iff"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "torus-knot",
+    "silence"
+   ],
+   "links": [],
+   "_file": "dirac_time.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "dirac-time-lean@main",
+    "file": "DiracTime/PhaseSilence.lean",
+    "line": 34,
+    "name": "DiracTime.PhaseSilence.silent_sector_iff"
+   }
+  },
+  {
+   "id": "dirac-time.trefoil-arc-vacuum-end",
+   "title": "Trefoil arc ends at the vacuum point omega = e^{i pi/3}",
+   "statement": "The trefoil arc (1/12, 5/12) ends where omega = M^2 is a root of Delta_31(t) = t - 1 + 1/t; at alpha = 1/12, omega = e^{i pi/3} (the vacuum point s^2 = w of the vacuum disk). Lean (in the omega variable): Delta_31(e^{2 pi i x}) = 0 iff x = +-1/6 mod 1, and the wall at x = 1/6.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§13.1, §13.3-13.4 (Lean: D25.2)"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/dirac-time-d25-lean",
+    "branch": "master",
+    "file": "DiracTimeD25/AlexanderWall.lean",
+    "theorem": "alex31_wall_at_sixth"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "trefoil",
+    "alpha-end",
+    "vacuum-point",
+    "wall-adjacent"
+   ],
+   "links": [
+    {
+     "to": "vacuum-disk.torus-direction",
+     "kind": "same-formula",
+     "note": "alpha_end = 1/12 gives direction -24/144 = 5/6 mod 1 (checked, DT-WALL-CHECKS-01)."
+    },
+    {
+     "to": "loop wall Gamma^2 = 1/2 (Gamma=(z-1)/(z+1)=tanh h, h=(1/2)ln z; z=3+2sqrt2)",
+     "kind": "analogy-only",
+     "note": "e^{i pi/3} is the regular-ideal-tetrahedron shape, not the Gamma^2 = 1/2 point."
+    }
+   ],
+   "_file": "dirac_time.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "dirac-time-d25-lean@master",
+    "file": "DiracTimeD25/AlexanderWall.lean",
+    "line": 122,
+    "name": "DiracTimeD25.alex31_wall_at_sixth"
+   }
+  },
+  {
+   "id": "dirac-time.figure-eight-no-wall",
+   "title": "Figure-eight: no Alexander wall on the circle, rho = 0",
+   "statement": "Delta_41(e^{2 pi i x}) = 3 - 2 cos(2 pi x) >= 1, never zero; the paper notes the bulk record rho(S_K, chi) vanishes identically for amphichiral knots such as the figure-eight.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§13.4 (Lean: D25.2)"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/dirac-time-d25-lean",
+    "branch": "master",
+    "file": "DiracTimeD25/AlexanderWall.lean",
+    "theorem": "alex41_circle_ne_zero"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "knot",
+    "amphichiral"
+   ],
+   "links": [
+    {
+     "to": "vacuum-disk paper: 4_1 geometric solution at e^{i pi/3}",
+     "kind": "opposite-reading",
+     "note": "4_1 has no circle wall in Dirac Time yet sits at the vacuum point in the vacuum disk."
+    }
+   ],
+   "_file": "dirac_time.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "dirac-time-d25-lean@master",
+    "file": "DiracTimeD25/AlexanderWall.lean",
+    "line": 112,
+    "name": "DiracTimeD25.alex41_circle_ne_zero"
+   }
+  },
+  {
+   "id": "dirac-time.arc-eta-window",
+   "title": "Theorem 13.2: the Dirac-time arcs are the eta window",
+   "statement": "For T(p,q) and non-end alpha, N(alpha) = (1/2)|rho(S_K, chi_{e^{4 pi i alpha}})| = (1/2)|sigma_K(e^{4 pi i alpha})|; every wall ends exactly one arc; lower ends lie in B = {theta - 1 : theta in Theta, theta > 1}, upper ends in D = {theta in Theta, theta < 1}, Theta = {i/p + j/q}. Trefoil rho = +2 on (1/12, 5/12). Uses Burde/de Rham/Klassen, Lin/Herald, APS/Toffoli (rho = -sigma). Checked exactly for 248 torus knots (27,697 arcs). Gluing from boundary record to this bulk invariant is not proved.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§13.4 Theorem 13.2"
+   },
+   "lean": null,
+   "grade": "DERIVED-IN-PAPER",
+   "tags": [
+    "torus-knot",
+    "eta",
+    "spinor-structure",
+    "alpha-end"
+   ],
+   "links": [
+    {
+     "to": "dirac-time.one-law-eta",
+     "kind": "opposite-reading",
+     "note": "Boundary eta = 0, bulk rho nonzero on the window."
+    }
+   ],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.chirality-fixes-bulk-sign",
+   "title": "Knot chirality fixes the sign of the bulk odd record",
+   "statement": "Mirror sends sigma_K -> -sigma_K and keeps the arc set, so the sign of the odd bulk record is fixed by chirality through an actual bulk operator; this fixes the sign of a record, not of a branch.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§13.4, §16.4"
+   },
+   "lean": null,
+   "grade": "DERIVED-IN-PAPER",
+   "tags": [
+    "knot",
+    "chirality"
+   ],
+   "links": [],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.two-strand-recursion",
+   "title": "Two-strand Alexander recursion (v3.1)",
+   "statement": "t^{-m} Delta_T(2,2m+1)(t) = P_m(x), x = t + 1/t, P_0 = 1, P_1 = x - 1, P_{m+1} = x P_m - P_{m-1}; 7_1: P_3 = x^3 - x^2 - 2x + 1 (checked m <= 50).",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.1 (6 Nov 2026) - v3.1 text not reachable; taken from Read record 02 and the 13 Nov full-read notes",
+    "section": "§13 (v3.1)"
+   },
+   "lean": null,
+   "grade": "DERIVED-IN-PAPER",
+   "tags": [
+    "torus-knot"
+   ],
+   "links": [],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.13-crossing-window",
+   "title": "A window no other listed invariant sees",
+   "statement": "13a3542 and the mirror of 13a4018 share HOMFLY, Alexander, Jones, Khovanov, knot Floer and signature 0; between Alexander roots at alpha = 0.10971 and 0.11522, sigma = -2 vs +2 (rho = +2 vs -2). 60-digit longitude angles at alpha = 0.11247: -0.0145345761398 and +0.0171688847270 turns. Isolated numerical solutions, not interval-certified.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§13.5"
+   },
+   "lean": null,
+   "grade": "COMPUTED",
+   "tags": [
+    "knot",
+    "memory",
+    "crossing-number-13"
+   ],
+   "links": [],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.theta-chirality-census",
+   "title": "theta invariant as chirality detector (v3.1)",
+   "statement": "Bar-Natan-van der Veen theta is nonzero on all 12,887 chiral prime knots through 13 crossings and zero on the 78 amphichiral ones; mirror antisymmetry is their Conjecture 21, not a theorem.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.1 (6 Nov 2026) - v3.1 text not reachable; taken from Read record 02 and the 13 Nov full-read notes",
+    "section": "§13.5 (v3.1)"
+   },
+   "lean": null,
+   "grade": "COMPUTED",
+   "tags": [
+    "knot",
+    "chirality"
+   ],
+   "links": [],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.connection-energy",
+   "title": "Non-normality is connection energy",
+   "statement": "H = D + A on a graph, A anti-Hermitian with unitary edge blocks: [H,H^dag] = -2[D,A], (1/8)||[H,H^dag]||_F^2 = sum_edges ||D_i - A_ij D_j A_ij^dag||_F^2; H normal iff D is parallel. Distinct from the projector metric; not memory, entropy or transient growth by itself.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§14, §14.1"
+   },
+   "lean": null,
+   "grade": "DERIVED-IN-PAPER",
+   "tags": [
+    "non-normal",
+    "connection-energy"
+   ],
+   "links": [
+    {
+     "to": "Non-Normality Is Connection Energy (one-page note)",
+     "kind": "same-formula",
+     "note": "Imported result; its Lean lives in nonnormality-connection-energy-lean, not here."
+    }
+   ],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.maxwell-dirac-seed",
+   "title": "Loss-Yau seed and exact source-closure failure",
+   "statement": "d = 1 + r^2, psi = d^{-3/2}(1 + iz, ix - y), A = 3N/d, B = 12N/d^2, j_W = N/d^2; integrals pi^2, 9 pi^2, 9 pi^2; at (1,0,0) curl B = (0,6,-3) vs j_W = (0,1/4,0): no constant makes them proportional.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§15.1-15.2, §19.8"
+   },
+   "lean": null,
+   "grade": "COMPUTED",
+   "tags": [
+    "spinor-structure",
+    "maxwell-dirac",
+    "negative-control"
+   ],
+   "links": [],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.no-static-zero-mode",
+   "title": "No static magnetic zero mode is self-consistent",
+   "statement": "B = 12 j_W for the seed; Lemma 15.1: Re[psi^dag sigma_k (sigma.pi) psi] = Re(psi^dag pi_k psi) + (1/2)(curl(psi^dag sigma psi))_k; a zero mode carries zero Pauli current; Proposition 15.3: no static magnetic zero mode sources its own field (Pauli-Maxwell or Maxwell-Dirac/Weyl with constant A0). A candidate needs a non-constant electric potential.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§15.3"
+   },
+   "lean": null,
+   "grade": "DERIVED-IN-PAPER",
+   "tags": [
+    "spinor-structure",
+    "maxwell-dirac"
+   ],
+   "links": [],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.sector-reduction",
+   "title": "Sector reduction must be proved",
+   "statement": "The retained sector evolves autonomously only if (I - P)HP = 0, i.e. HP = PHP; the redistribution F(H,P) = (I-P)HP + PH(I-P) vanishes iff [H,P] = 0.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§15.5"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/dirac-time-lean",
+    "branch": "main",
+    "file": "DiracTime/SectorReduction.lean",
+    "theorem": "redistribution_zero_iff_commute"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "projector"
+   ],
+   "links": [],
+   "_file": "dirac_time.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "dirac-time-lean@main",
+    "file": "DiracTime/SectorReduction.lean",
+    "line": 27,
+    "name": "DiracTime.SectorReduction.redistribution_zero_iff_commute"
+   }
+  },
+  {
+   "id": "dirac-time.electron-hypothesis",
+   "title": "Electron memory hypothesis and admission gates",
+   "statement": "The electron may be an elementary knot-like carrier of relational memory [H]; to promote it a candidate must pass self-consistent Maxwell-Dirac sources, finite energy, localization, gauge consistency, charge, total angular momentum, a persistent record, an operational readout, robustness and a derived minimality criterion.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§4 Hyp. 4.1, §15.6"
+   },
+   "lean": null,
+   "grade": "STATED",
+   "tags": [
+    "hypothesis",
+    "spinor-structure"
+   ],
+   "links": [],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.branch-record",
+   "title": "Branch record: even spectrum, odd projector orientation",
+   "statement": "V(a;s) = (1/2) mu(s) a^2 + (lambda/4) a^4; H(a) = Delta sigma_x + a sigma_z has E = +-sqrt(Delta^2 + a^2) but Tr(P-(a) sigma_z) = -a/sqrt(Delta^2 + a^2). Symmetric data stay symmetric; instability amplifies a seed, it does not create one. mu(s) = mu0 - chi W(s) remains [H].",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§16.3"
+   },
+   "lean": null,
+   "grade": "DERIVED-IN-PAPER",
+   "tags": [
+    "chiral-pairing",
+    "gigantefermion"
+   ],
+   "links": [],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.asymmetry-costs-motion",
+   "title": "Asymmetry costs projector motion",
+   "statement": "H = d.sigma, rho = |d|, n = d/rho, Delta = 2 rho, chi = -Tr(Gamma P-) = n3 = m/rho: |d-dot|^2 = rho-dot^2 + Delta^2 g_ss exactly, and rho^2 chi-dot^2 <= Delta^2 g_ss (checked on 2000 random pairs, 3.6e-15).",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§16.4"
+   },
+   "lean": null,
+   "grade": "DERIVED-IN-PAPER",
+   "tags": [
+    "chiral-pairing",
+    "intrinsic-metric",
+    "speed-limit"
+   ],
+   "links": [
+    {
+     "to": "dirac-time.working-definition-bounds",
+     "kind": "uses",
+     "note": "First of the three bounded records in v3.1 §18."
+    }
+   ],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.eta-coupling-hypothesis",
+   "title": "Spectral asymmetry inherits the sign under a coupling [H]",
+   "statement": "With the circle odometer and alpha = 1/2 + kappa chi, eta = -2 kappa chi locally; the circle formula is exact, the coupling is a bulk hypothesis. Three sources for the branch sign: fluctuation, boundary/topological, residual memory [H].",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§16.4"
+   },
+   "lean": null,
+   "grade": "STATED",
+   "tags": [
+    "eta",
+    "hypothesis"
+   ],
+   "links": [],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.gigantefermion-hypothesis",
+   "title": "Gigantefermion hypothesis",
+   "statement": "A large coherent spinor (Dirac)/gauge architecture may realize operator + transport + reduction + memory + energy ledger; not a giant elementary fermion; no naive fermion condensate; memory transfer vs destruction via record maps R_fine(x) = (Cx, H(x)).",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§16, §16.1-16.2"
+   },
+   "lean": null,
+   "grade": "STATED",
+   "tags": [
+    "hypothesis",
+    "gigantefermion"
+   ],
+   "links": [],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.stress-candidate",
+   "title": "Three-record stress candidate",
+   "statement": "S_ij = d_i rho d_j rho + Delta^2 g_ij + chi_eta d_i eta d_j eta (scale, scaled subspace orientation, odd record). Response-geometric, not a spacetime metric.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§17"
+   },
+   "lean": null,
+   "grade": "STATED",
+   "tags": [
+    "intrinsic-metric"
+   ],
+   "links": [],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.ledger-survives-metric-wall",
+   "title": "The ledger can survive a metric wall",
+   "statement": "Tangent trace form, Hermitian proxy, Riesz projector and contour trace-log are distinct; an isolated cluster and its contour ledger can stay regular while a chosen tangent form becomes indefinite or degenerate.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§17.1"
+   },
+   "lean": null,
+   "grade": "STATED",
+   "tags": [
+    "metric-wall",
+    "wall-adjacent"
+   ],
+   "links": [
+    {
+     "to": "loop wall Gamma^2 = 1/2 (Gamma=(z-1)/(z+1)=tanh h, h=(1/2)ln z; z=3+2sqrt2)",
+     "kind": "analogy-only",
+     "note": "Template for 'the record survives where one metric fails'; no Gamma^2 = 1/2 statement."
+    }
+   ],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.smith-coordinate",
+   "title": "Smith coordinate Gamma_S = (z-1)/(z+1) = tanh(eps/2) (v3.1)",
+   "statement": "For a ratio z = e^eps, Gamma_S = (z-1)/(z+1) = tanh(eps/2); |Gamma_S| < 1 exactly when Re z > 0 and |Gamma_S| = 1 exactly when Re z = 0.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.1 (6 Nov 2026) - v3.1 text not reachable; taken from Read record 02 and the 13 Nov full-read notes",
+    "section": "§17.1 (v3.1), notation in App. A.0"
+   },
+   "lean": null,
+   "grade": "DERIVED-IN-PAPER",
+   "tags": [
+    "loop-wall",
+    "gamma-form",
+    "element-paper"
+   ],
+   "links": [
+    {
+     "to": "loop wall Gamma^2 = 1/2 (Gamma=(z-1)/(z+1)=tanh h, h=(1/2)ln z; z=3+2sqrt2)",
+     "kind": "same-formula",
+     "note": "Identical map Gamma = tanh h, h = (1/2) ln z. The paper names the rim |Gamma| = 1, not the inner wall Gamma^2 = 1/2 (z = 3+2sqrt2, eps = 1.7627)."
+    },
+    {
+     "to": "element paper (VOTKP / Elemental Peeling: peel ratios z, coordinate Gamma)",
+     "kind": "same-formula",
+     "note": "Same coordinate as the peel G = (z-1)/(z+1)."
+    }
+   ],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.exit-line-petermann",
+   "title": "Exit line where the band-averaged Petermann factor is 2 (v3.1)",
+   "statement": "On the PT-symmetric SSH chain the half-chain correlation matrix is a biorthogonal idempotent; finite-block levels leave the disk on the line E(0)E(pi) = u^2, where the band-averaged Petermann factor equals 2; the analytic derivation is open.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.1 (6 Nov 2026) - v3.1 text not reachable; taken from Read record 02 and the 13 Nov full-read notes",
+    "section": "§17.1 (v3.1), from 'The Weight Between and the Exit Line'"
+   },
+   "lean": null,
+   "grade": "COMPUTED",
+   "tags": [
+    "metric-wall",
+    "non-normal",
+    "wall-adjacent",
+    "open"
+   ],
+   "links": [
+    {
+     "to": "loop wall Gamma^2 = 1/2 (Gamma=(z-1)/(z+1)=tanh h, h=(1/2)ln z; z=3+2sqrt2)",
+     "kind": "analogy-only",
+     "note": "Rim crossing |Gamma_S| = 1; the loop wall's Petermann factor 1/(1-2G^2) diverges at G^2 = 1/2, a different place."
+    }
+   ],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.nuclei-outside-disk",
+   "title": "Unbound nuclei sit outside the Smith disk (v3.1)",
+   "statement": "A negative separation energy puts a peel step outside the disk: 5He, 5Li, 8Be at |Gamma_S| = 1.074, 1.220, 1.025 against 0.579 for 4He (NUBASE2020).",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.1 (6 Nov 2026) - v3.1 text not reachable; taken from Read record 02 and the 13 Nov full-read notes",
+    "section": "§17.1 (v3.1), from VOTKP v2.9 §15.4"
+   },
+   "lean": null,
+   "grade": "COMPUTED",
+   "tags": [
+    "element-paper",
+    "peel",
+    "loop-wall"
+   ],
+   "links": [
+    {
+     "to": "element paper (VOTKP / Elemental Peeling: peel ratios z, coordinate Gamma)",
+     "kind": "uses",
+     "note": "Placements come from the element paper."
+    },
+    {
+     "to": "loop wall Gamma^2 = 1/2 (Gamma=(z-1)/(z+1)=tanh h, h=(1/2)ln z; z=3+2sqrt2)",
+     "kind": "same-wall",
+     "note": "4He at Gamma^2 = 0.335 lies inside the wall Gamma^2 = 1/2; the three unbound nuclei are past the rim |Gamma| = 1, so past the wall too. Arithmetic only; the paper does not mention the inner wall."
+    }
+   ],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.horizon-control",
+   "title": "Horizon and clock-gradient controls",
+   "statement": "A Schwarzschild local-symbol control has a horizon with positive projector metric and open gap (horizon != projector-metric degeneracy); in ds^2 = -N(x)^2 dt^2 + dx^2, R = -2N''/N, so a linear lapse has a rate gradient and zero curvature.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§17.2-17.3, §19.6"
+   },
+   "lean": null,
+   "grade": "DERIVED-IN-PAPER",
+   "tags": [
+    "negative-control"
+   ],
+   "links": [],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.working-definition",
+   "title": "Dirac Time working definition T = (O, F, Theta, M, S)",
+   "statement": "Dirac Time = oriented transported predictive histories modulo orientation-preserving reparameterization and operational history equivalence, typed by orientation, local distinguishability, multi-time structure, predictive memory and synchronization; duration needs calibration and an arrow needs an extra asymmetric condition.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§18, Def. 18.1"
+   },
+   "lean": null,
+   "grade": "STATED",
+   "tags": [
+    "framework",
+    "clock"
+   ],
+   "links": [],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.working-definition-bounds",
+   "title": "Three bounded records and the saturating pair (v3.1, proposed reading)",
+   "statement": "F(s) = (1/2)Tr(P-dot^2); rho^2 chi-dot^2 <= Delta^2 F; tau_off-dot^2 <= 4 F S; A-dot^2 <= 4 E_B A(1-A). Saturating pair tau_off(t) = 2 sigma artanh(sin 2 Omega t), sigma = +-1: same bound, opposite directions - the metric limits how fast a record changes, never which way. Tagged [framework; proposed]; the v3.1 change ledger marks this reading as Claude's version.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.1 (6 Nov 2026) - v3.1 text not reachable; taken from Read record 02 and the 13 Nov full-read notes",
+    "section": "§18 (v3.1)"
+   },
+   "lean": null,
+   "grade": "STATED",
+   "tags": [
+    "speed-limit",
+    "framework",
+    "loop-wall"
+   ],
+   "links": [
+    {
+     "to": "loop wall Gamma^2 = 1/2 (Gamma=(z-1)/(z+1)=tanh h, h=(1/2)ln z; z=3+2sqrt2)",
+     "kind": "same-formula",
+     "note": "2 artanh(x) = ln((1+x)/(1-x)) is 2h for Gamma = x; the saturating pair is the h-coordinate of Gamma = sin 2 Omega t, which passes Gamma^2 = 1/2 at 2 Omega t = 45 degrees. Reading of the formula only; not stated in the paper."
+    }
+   ],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.schur-well",
+   "title": "The tower and the well: subtractive Schur shift",
+   "statement": "For H = [[A,B],[B^dag,D]], D > 0: y* = -D^{-1} B^dag x and E_eff(x) = x^dag (A - B D^{-1} B^dag) x; positive hidden structure gives a negative effective shift without negative hidden energy.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§22"
+   },
+   "lean": null,
+   "grade": "DERIVED-IN-PAPER",
+   "tags": [
+    "memory",
+    "tower-well"
+   ],
+   "links": [],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.stability-model",
+   "title": "Finite memory-dependent stability model",
+   "statement": "U_J = V + J^2/(2 I(r)), I(r) = I0 + alpha r; H_J-dot = -gamma v^2 - eta_y y-dot^2 - eta_r r-dot^2 <= 0; F_J' >= lambda* > 0; two wells at a = +-sqrt(s*) iff mu_J < 0; exact zero stays at zero.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§23"
+   },
+   "lean": null,
+   "grade": "DERIVED-IN-PAPER",
+   "tags": [
+    "memory",
+    "tower-well"
+   ],
+   "links": [],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.projector-writes-record",
+   "title": "Projector activity writes the retained record",
+   "statement": "Pi(theta) = (I + cos theta X + sin theta Y)/2: q = (1/2)Tr(Pi-dot^2) = theta-dot^2/4; eta_r r-dot + kappa(r - r-bar) = (g/2) a^2 + 2 alpha q.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§23.1"
+   },
+   "lean": null,
+   "grade": "DERIVED-IN-PAPER",
+   "tags": [
+    "memory",
+    "intrinsic-metric"
+   ],
+   "links": [],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.fading-record",
+   "title": "Fading record versus lifetime integral",
+   "statement": "nu = kappa/eta_r: e^{-nu u} A(u) <= A_nu(u) <= A(u) and 0 <= A - A_nu <= (1 - e^{-nu u}) A <= nu u A; a fading record approximates the accumulated history only when nu T << 1.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§23.2"
+   },
+   "lean": null,
+   "grade": "DERIVED-IN-PAPER",
+   "tags": [
+    "memory"
+   ],
+   "links": [],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.phase-clock",
+   "title": "Phase as a clock inside the model",
+   "statement": "theta-dot = J/I(r); for J != 0 the unwrapped phase is strictly monotone and t - t0 = (1/J) int I(r(vartheta)) d vartheta: a clock coordinate inside a parametrized dynamics, not a derivation of time.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§23.3"
+   },
+   "lean": null,
+   "grade": "DERIVED-IN-PAPER",
+   "tags": [
+    "clock",
+    "phase"
+   ],
+   "links": [],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.record-hierarchy",
+   "title": "Record hierarchy and the Great Winding [H]",
+   "statement": "full field history -> projector history -> holonomy/helicity -> knot/link class -> ring/arc geometry -> scalar endpoint; each arrow must be an explicit reduction map. Visible structure can relax farther than the memory underneath it. CCC and the cosmic web stay outer tests only.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "§24-24.2"
+   },
+   "lean": null,
+   "grade": "STATED",
+   "tags": [
+    "hypothesis",
+    "memory"
+   ],
+   "links": [],
+   "_file": "dirac_time.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "dirac-time.bhl-boundary-benchmark",
+   "title": "Bringmann-Hikami-Lovejoy signed-boundary q-series checks (Lean companion D27)",
+   "statement": "phi0(q) != M(q) (coefficient of q^1: 2 vs 1); Eq. (1.5) 2q^2 phi0(q^2) = psi(q) + psi(-q) and Eq. (1.7) hold exactly through q^48. Not in the Dirac Time text; this file sits in dirac-time-d25-lean and is cited by 'Count Me as One'.",
+   "paper": {
+    "title": "Dirac Time of the Gigantefermion",
+    "version": "v3.0.1 (25 Sep 2026, read in full); same content in v3.1 per Read record 02",
+    "section": "not in the Dirac Time text (D27, cited by Count Me as One v4)"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/dirac-time-d25-lean",
+    "branch": "master",
+    "file": "DiracTimeD25/BhlBoundaryTest.lean",
+    "theorem": "phi0_ne_bhlM"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "mock-theta",
+    "lean-only"
+   ],
+   "links": [
+    {
+     "to": "Count Me as One, with the Dirac Anchor Recovered",
+     "kind": "uses",
+     "note": "Cited commit 6c34d2c2."
+    }
+   ],
+   "_file": "dirac_time.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "dirac-time-d25-lean@master",
+    "file": "DiracTimeD25/BhlBoundaryTest.lean",
+    "line": 571,
+    "name": "DiracTimeD25.BHL.phi0_ne_bhlM"
+   }
+  },
   {
    "id": "wall.definition",
    "title": "The loop wall Γ² = ½",
@@ -1107,6 +3347,37 @@
     "polynomial"
    ],
    "links": [],
+   "_file": "wall_ledger.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "vacuum-disk.torus-direction",
+   "title": "Torus-knot directions from the Dirac-time arc ends",
+   "statement": "Each torus-knot root of the decay–direction polynomial has decay 0 and direction = −4pq·α_end² mod 1, α_end the end point of a Dirac-time arc. Exact on T(2,3), T(2,5), T(2,7), T(3,4), T(3,5); 2/3 (8_19) and 11/15 (10_124) predicted by the formula, then found on braid drawings.",
+   "paper": {
+    "title": "The Volume of the Knot Potential: Decay and Direction on the Vacuum Disk",
+    "version": "v6",
+    "section": "§6"
+   },
+   "lean": null,
+   "grade": "NEW READING of Kirk–Klassen · COMPUTED",
+   "tags": [
+    "knots",
+    "vacuum-disk",
+    "polynomial",
+    "dirac-time"
+   ],
+   "links": [
+    {
+     "to": "vacuum-disk.polynomial",
+     "kind": "special-case",
+     "note": "torus knots"
+    },
+    {
+     "to": "dirac-time.trefoil-arc-vacuum-end",
+     "kind": "uses"
+    }
+   ],
    "_file": "wall_ledger.json",
    "lean_status": "no Lean proof cited"
   }
