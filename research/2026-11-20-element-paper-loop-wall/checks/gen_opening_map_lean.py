@@ -36,11 +36,15 @@ for N,name in cores:
         L.append('    '+' ∧\n    '.join(f'inside {e}' for _,e in ch)+' := by')
         L.append('  unfold inside; '+('refine ⟨'+', '.join(['?_']*len(ch))+'⟩ <;> ' if len(ch)>1 else '')+'grind'); L.append('')
     summary.append((name,len(outs),len(ins)))
-# Sc..Mn ordinary ladders all inside
-for Z in range(21,31):
+# Sc..Zr ordinary ladders: every step inside except a noble-core opening (certified above)
+for Z in range(21,41):
     th=sorted(rec[Z]['thresholds'],key=lambda t:t['q']); s=rec[Z]['symbol']
-    ex=[f"inside ({lit(b['IE_eV'])} / {lit(a['IE_eV'])} : Rat)" for a,b in zip(th,th[1:]) if b['q']==a['q']+1]
-    L.append(f'/-- Every ordinary step of the {s} ladder ({len(ex)} steps) is inside the wall. -/')
+    pairs=[(a,b) for a,b in zip(th,th[1:]) if b['q']==a['q']+1]
+    isout=lambda a,b: (lambda z: z>3 and (z-3)**2>8)(b['IE_eV']/a['IE_eV'])
+    skip=[a['q']+1 for a,b in pairs if isout(a,b)]
+    ex=[f"inside ({lit(b['IE_eV'])} / {lit(a['IE_eV'])} : Rat)" for a,b in pairs if not isout(a,b)]
+    note=''.join(f', except the step from removal {q} to removal {q+1} (the noble-core opening, certified in its core theorem)' for q in skip)
+    L.append(f'/-- Every ordinary step of the {s} ladder ({len(ex)} steps) is inside the wall{note}. -/')
     L.append(f'theorem ladder_{s}_all_inside :'); L.append('    '+' ∧\n    '.join(ex)+' := by')
     L.append('  unfold inside; refine ⟨'+', '.join(['?_']*len(ex))+'⟩ <;> grind'); L.append('')
 # Fr straddle

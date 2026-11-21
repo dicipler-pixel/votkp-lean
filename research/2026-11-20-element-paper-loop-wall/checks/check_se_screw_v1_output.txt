@@ -1,0 +1,4 @@
+bond length 2.30066 A (COD shortest contact 2.30066 A)
+chi forward 11.1638
+chi reversed path 11.1638
+chi after mirror x -> -x -11.1638

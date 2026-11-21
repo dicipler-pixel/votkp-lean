@@ -1,0 +1,2 @@
+ordinary steps 160 energy differences 0 ratio differences 0
+outside the wall: [('Ga', 0, 19.92025), ('Ge', 0, 6.408361), ('As', 0, 12.167458)]

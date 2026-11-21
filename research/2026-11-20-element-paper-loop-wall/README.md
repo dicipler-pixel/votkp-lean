@@ -8,7 +8,7 @@ check. It is kept for the element paper.
 
 ## What is proved (`lean/LoopWall.lean` and `lean/OpeningMap.lean`, core Lean 4.34.1, no Mathlib, exact `Rat` arithmetic)
 
-92 theorems in `LoopWall.lean` and 62 in `OpeningMap.lean`. Axioms: only `propext`, `Classical.choice`, `Quot.sound`. No `sorry`, `admit`,
+101 theorems in `LoopWall.lean` and 72 in `OpeningMap.lean`. Axioms: only `propext`, `Classical.choice`, `Quot.sound`. No `sorry`, `admit`,
 `native_decide` or `axiom`. Run `lean/run_checks.sh`; its output is `lean/run_checks_output.txt`.
 
 The peel step of an ordered pair of thresholds (a, then b) has ratio z = b/a and reflection
@@ -88,6 +88,22 @@ The peel step of an ordered pair of thresholds (a, then b) has ratio z = b/a and
    χ = (d₀×d₁)·d₂ = +9.9306 Å³; χ is unchanged by reversing the path (`chi_reverse`) and flips under a
    mirror (`chi_mirror`), the opposite of Γ.
 
+16. **Batch 7, gallium to bromine** (`gpt_batches/batch7_Ga_to_Br.md`, checked by
+   `checks/check_batch7_v1.py`): 165 energies match the archive and all 160 ordinary z, Γ pairs
+   match, recomputed from the archive itself. Every ordinary step is inside (`ladder_Ga_all_inside`
+   to `ladder_Br_all_inside`). The anion rung is outside for gallium, germanium and arsenic and inside
+   for selenium and bromine (`rung0_Ga` to `rung0_Br`). Arsenic uses the 2025 affinity 0.804486 eV and
+   selenium the 2026 value 2.020667 eV; both are also certified at the older values, so neither
+   revision moves a call. Trigonal selenium (P3₁21, COD 1534711) gives a screw sign
+   χ = +11.1638 Å³ that is unchanged by reversing the path and flips under a mirror
+   (`checks/check_se_screw_v1.py`), the same law as β-manganese.
+17. **Batch 8, krypton to zirconium** (`batch8/`, checked again by `checks/check_batch8_v1.py`):
+   190 energies and 185 ordinary pairs match the archive. The only outside steps are the anion rungs
+   of rubidium, strontium, yttrium and zirconium (`rung0_Rb` to `rung0_Zr`; krypton has no bound
+   anion) and rubidium's krypton-core opening. Every other ordinary step is inside
+   (`ladder_Kr_all_inside` to `ladder_Zr_all_inside`; the rubidium theorem leaves out only its
+   core opening, certified in `coreKr_outside`). Review exchange: `CLAUDE_REVIEW.md`.
+
 ## The page
 
 `VOTKP_Element_Paper_Loop_Wall_v1_20261121.html` is the readable breakdown of all of the above, H to Zn.
@@ -122,7 +138,8 @@ Lean certificates were built from the archive, not from the printed table.
 The batch-6 research table as received has two energies that differ from the archive (Ni k=21:
 1750 eV, archive 1758.0; Cu k=5: 79.5 eV, archive 79.8) and four displayed z, Γ pairs that are wrong:
 Ni k=15 (archive 1.070441, .034022), k=20 (1.068044, .032902), k=21 (1.069397, .033535),
-k=22 (1.068138, .032947). The Cu k=4 and k=5 ratios are right; only the energy text is mistyped.
+k=22 (1.068138, .032947). (The first version of this note gave k=20 and k=21 from the mistyped
+1750 eV; the corrected values above, and `checks/batch6_corrected.csv`, use the archive's 1758.0 eV.) The Cu k=4 and k=5 ratios are right; only the energy text is mistyped.
 The table's "140/140 matched the archive" line is therefore not right. Use
 `checks/batch6_corrected.csv`, rebuilt from the archive. No wall classification changes. The
 corrected Sc–Mn CSV sent with batch 6 agrees with `checks/batch5_corrected.csv` (V k=14 differs by

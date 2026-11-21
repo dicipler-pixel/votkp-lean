@@ -381,6 +381,23 @@ theorem rung0_Co : outside (7.88101 / 0.662255) := by unfold outside; grind
 theorem rung0_Ni : outside (7.639878 / 1.157368) := by unfold outside; grind
 theorem rung0_Cu : outside (7.72638 / 1.23578) := by unfold outside; grind
 
+/-- Batch 7 anion rungs, gallium to bromine. Arsenic and selenium are certified at both the older
+evaluated affinity and the newer measurement (arsenic 0.8048 eV and 0.804486 eV, 2025; selenium
+2.0206046 eV, 2012, and 2.020667 eV, 2026): neither revision changes the side of the wall. -/
+theorem rung0_Ga : outside (5.999302 / 0.301166) := by unfold outside; grind
+theorem rung0_Ge : outside (7.899435 / 1.2326764) := by unfold outside; grind
+theorem rung0_As : outside (9.78855 / 0.804486) ∧ outside (9.78855 / 0.8048) := by
+  unfold outside; constructor <;> grind
+theorem rung0_Se : inside (9.752368 / 2.020667) ∧ inside (9.752368 / 2.0206046) := by
+  unfold inside; constructor <;> grind
+theorem rung0_Br : inside (11.81381 / 3.363588) := by unfold inside; grind
+
+/-- Batch 8 anion rungs, rubidium to zirconium (krypton has no bound anion). -/
+theorem rung0_Rb : outside (4.1771281 / 0.485916) := by unfold outside; grind
+theorem rung0_Sr : outside (5.69486745 / 0.05206) := by unfold outside; grind
+theorem rung0_Y : outside (6.21726 / 0.31129) := by unfold outside; grind
+theorem rung0_Zr : outside (6.634126 / 0.433283) := by unfold outside; grind
+
 /-! ## 14. The junction cutoff in a dilute band, and the screw sign -/
 
 /-- Dilute-band bound. Per spin the neighbour element of the projector is at most the filling f,

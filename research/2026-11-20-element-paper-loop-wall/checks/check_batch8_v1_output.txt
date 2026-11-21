@@ -1,0 +1,2 @@
+ordinary steps 185 energy differences 0 ratio differences 0
+outside the wall: [('Rb', 0, 8.5964), ('Rb', 1, 6.533087), ('Sr', 0, 109.390462), ('Y', 0, 19.972566), ('Zr', 0, 15.3113)]

@@ -14,7 +14,7 @@ def closes(za, zb):
     return math.hypot(ca, cb) < Ra + Rb          # centres on perpendicular axes
 # carbon: 4th to 5th removal (last 2s electron, then first 1s electron of the closed helium-like core)
 # nitrogen: 5th to 6th removal (same two steps)
-C, N = 392.09/64.4935, 552.07/97.8902
+C, N = 392.09056/64.49352, 552.06741/97.8901   # full archive values
 print('carbon helium-core opening ratio', round(C,5), ' nitrogen helium-core opening ratio', round(N,5))
 for name, za, zb in [('carbon face with carbon face',C,C), ('nitrogen face with nitrogen face',N,N), ('carbon face with nitrogen face',C,N)]:
     print(name + ':', 'loop closes' if closes(za,zb) else 'loop open')
