@@ -59,10 +59,14 @@
   {
    "module": "VOTKP.Witnesses",
    "path": "VOTKP/Witnesses.lean"
+  },
+  {
+   "module": "VOTKP.Surviving",
+   "path": "VOTKP/Surviving.lean"
   }
  ],
- "expected_theorems": 140,
- "expected_false_controls": 15,
+ "expected_theorems": 159,
+ "expected_false_controls": 34,
  "root_imports": [
   "VOTKP.Smith",
   "VOTKP.Film",
@@ -78,7 +82,8 @@
   "VOTKP.Scaling",
   "VOTKP.Directed",
   "VOTKP.Channels",
-  "VOTKP.Witnesses"
+  "VOTKP.Witnesses",
+  "VOTKP.Surviving"
  ],
  "showcase": {
   "statements": "Showcase.lean",

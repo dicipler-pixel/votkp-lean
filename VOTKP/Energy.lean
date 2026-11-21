@@ -114,4 +114,38 @@ theorem first_threshold_not_total :
 theorem same_gap_different_weights :
     (1 : ℝ) / 2 ≠ 3 / 2 := by norm_num
 
+/-- Peel coordinate of one positive step, `Γ_j = (I_{j+1} − I_j)/(I_{j+1} + I_j)`. -/
+noncomputable def gammaStep (I : ℕ → ℝ) (j : ℕ) : ℝ :=
+  (I (j + 1) - I j) / (I (j + 1) + I j)
+
+/-- **§20.3.2.** Each later threshold is the anchor times the product of peel factors. -/
+theorem anchored_product (I : ℕ → ℝ) (q : ℕ) (hI : ∀ j ≤ q, 0 < I j) :
+    I q = I 0 * ∏ j ∈ Finset.range q, (1 + gammaStep I j) / (1 - gammaStep I j) := by
+  induction q with
+  | zero => simp
+  | succ q ih =>
+    have hIq : ∀ j ≤ q, 0 < I j := fun j hj => hI j (Nat.le_succ_of_le hj)
+    have hstep := peel_anchor_reconstruction (I q) (I (q + 1))
+      (hI q (Nat.le_succ q)) (hI (q + 1) (Nat.le_refl _))
+    rw [Finset.prod_range_succ, ← mul_assoc, ← ih hIq]
+    simpa [gammaStep, mul_div_assoc'] using hstep.symm
+
+/-- **§20.3.2.** For `Z ≥ 1` and `I_0, …, I_{Z-1} > 0`,
+`B_el = ∑_{q<Z} I_q = I_0 [1 + ∑_{q=1}^{Z-1} ∏_{j<q} (1+Γ_j)/(1−Γ_j)]`. -/
+theorem binding_from_gammas (I : ℕ → ℝ) (Z : ℕ) (hZ : 0 < Z) (hI : ∀ j < Z, 0 < I j) :
+    ∑ q ∈ Finset.range Z, I q =
+      I 0 * (1 + ∑ q ∈ Finset.Ico 1 Z,
+        ∏ j ∈ Finset.range q, (1 + gammaStep I j) / (1 - gammaStep I j)) := by
+  have hterm : ∀ q ∈ Finset.range Z,
+      I q = I 0 * ∏ j ∈ Finset.range q, (1 + gammaStep I j) / (1 - gammaStep I j) := by
+    intro q hq
+    exact anchored_product I q fun j hj => hI j (lt_of_le_of_lt hj (Finset.mem_range.mp hq))
+  rw [Finset.sum_congr rfl hterm, ← Finset.mul_sum]
+  have hsplit : Finset.range Z = insert 0 (Finset.Ico 1 Z) := by
+    ext q
+    simp only [Finset.mem_range, Finset.mem_insert, Finset.mem_Ico]
+    omega
+  have h0 : 0 ∉ Finset.Ico 1 Z := by simp
+  rw [hsplit, Finset.sum_insert h0, Finset.prod_range_zero]
+
 end VOTKP.Energy

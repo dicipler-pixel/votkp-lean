@@ -154,4 +154,23 @@ theorem parity_at_wall (H : ℝ → Matrix n n ℂ) (hH : ∀ t, (H t).IsHermiti
   · rw [Int.modEq_iff_dvd]
     exact ⟨(r : ℤ) - N1, by omega⟩
 
+/-- **Proposition 11.1, corrected.** If exactly one eigenvalue changes sign between two
+nonsingular Hermitian values, the signature jumps by `±2`.
+
+The paper concludes this from a simple root of `Δ`. That step uses analytic eigenvalue
+branches (Rellich). The hypothesis here replaces it by an explicit change of one in the
+negative-eigenvalue count, and the name records the replacement. -/
+theorem signature_jump_corrected (H : ℝ → Matrix n n ℂ) (hH : ∀ t, (H t).IsHermitian)
+    (t1 t2 : ℝ) (hnz1 : ∀ i, (hH t1).eigenvalues i ≠ 0)
+    (hnz2 : ∀ i, (hH t2).eigenvalues i ≠ 0)
+    (hcross : |(negCount (H t2) (hH t2) : ℤ) - negCount (H t1) (hH t1)| = 1) :
+    |signature (H t2) (hH t2) - signature (H t1) (hH t1)| = 2 := by
+  rw [signature_nonsingular (H t2) (hH t2) hnz2, signature_nonsingular (H t1) (hH t1) hnz1]
+  have hdiff :
+      ((Fintype.card n : ℤ) - 2 * negCount (H t2) (hH t2)) -
+          ((Fintype.card n : ℤ) - 2 * negCount (H t1) (hH t1)) =
+        2 * (negCount (H t1) (hH t1) - negCount (H t2) (hH t2) : ℤ) := by
+    ring
+  rw [hdiff, abs_mul, abs_two, abs_sub_comm, hcross, mul_one]
+
 end VOTKP.WallParity
