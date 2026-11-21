@@ -1,0 +1,14 @@
+Lean (version 4.34.1, x86_64-unknown-linux-gnu, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)
+'VOTKP.Element8Intervals.inside_everywhere' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.Element8Intervals.outside_everywhere' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.Element8Intervals.box_inside_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.Element8Intervals.box_outside_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.Element8Intervals.intervals_Kr' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.Element8Intervals.intervals_Rb' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.Element8Intervals.intervals_Sr' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.Element8Intervals.intervals_Y' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.Element8Intervals.intervals_Zr' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.Element8Intervals.zirconium_missing_is_not_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.Element8Intervals.krypton_unbound_is_not_missing' depends on axioms: [propext, Classical.choice, Quot.sound]
+False control rejected: Zr k=1 and 2 both labeled inside despite unknown IE2 uncertainty.
+187 stable boxes (182 inside, 5 outside); 2 missing Zr boxes; 1 unbound Kr placeholder.

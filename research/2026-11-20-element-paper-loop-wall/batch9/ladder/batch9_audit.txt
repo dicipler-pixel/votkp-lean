@@ -1,0 +1,11 @@
+Niobium: S=0.664001094, sigma=0.200481888
+Molybdenum: S=0.666352709, sigma=0.166392498
+Technetium: S=0.668765874, sigma=0.130440507
+Ruthenium: S=0.671239733, sigma=0.092583662
+Rhodium: S=0.673780039, sigma=0.052745425
+Source pin 182da01a14b10ce1e07e247565466d01822121c5 archive SHA-256 75e67478d9a22ef85fa2d3f6ac36ad2860c6f8f62215127c558438a2cb53f62c
+220 serialized rows, 215 archive energies, 210 ordinary pairs, 5 anion pairs (one estimated), zero differences.
+Outside at central inputs: [('Nb', 0), ('Mo', 0), ('Tc', 0), ('Ru', 0), ('Rh', 0)]
+Endpoint-certified arithmetic (reported input uncertainties only): 203
+Unavailable endpoints (symbol,k): [('Nb', 1), ('Nb', 2), ('Nb', 3), ('Tc', 0), ('Tc', 1), ('Tc', 2), ('Tc', 3), ('Ru', 2), ('Ru', 3), ('Rh', 1), ('Rh', 2), ('Rh', 3)]
+CSV SHA-256: 34ce69136005ea989130018a378066c1cd0b1ee169428ebce0533f044a65169a

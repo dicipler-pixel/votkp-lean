@@ -1,0 +1,13 @@
+All 215 Lean energy literals independently reparsed and matched the archive.
+Lean (version 4.34.1, x86_64-unknown-linux-gnu, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)
+'VOTKP.ElementBatch9.ordinary_Nb' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.ElementBatch9.ordinary_Mo' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.ElementBatch9.ordinary_Tc' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.ElementBatch9.ordinary_Ru' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.ElementBatch9.ordinary_Rh' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.ElementBatch9.below_kr_4d10_count' depends on axioms: [propext, Quot.sound]
+'VOTKP.ElementBatch9.nb_false_outside_kr_core' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.ElementBatch9.rh_false_outside_he_core' depends on axioms: [propext, Classical.choice, Quot.sound]
+Rejected false control: Nb Kr-core erroneously outside.
+Rejected false control: Rh He-core erroneously outside.
+210 ordinary pairs strictly inside; eight theorem audits.

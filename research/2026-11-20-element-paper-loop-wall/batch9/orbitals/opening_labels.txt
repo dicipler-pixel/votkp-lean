@@ -1,0 +1,10 @@
+233 ground-shell populations match their ion electron counts and pinned IE values: 215 batch rows, 12 Y/Zr context rows, 6 Pd/Ag applicability controls.
+Nb first open 4d k,z,Gamma: (1, '2.118704', '0.358708') Kr core k,z,Gamma: (5, '2.018259', '0.337366') pure d5: absent
+Mo first open 4d k,z,Gamma: (1, '2.278486', '0.389962') Kr core k,z,Gamma: (6, '1.825416', '0.292140') pure d5: [(1, '5s', '4d', '2.278486', '0.389962')]
+Tc first open 4d k,z,Gamma: (2, '1.936435', '0.318902') Kr core k,z,Gamma: (7, '1.704545', '0.260504') pure d5: [(2, '5s', '4d', '1.936435', '0.318902')]
+Ru first open 4d k,z,Gamma: (1, '2.277019', '0.389689') Kr core k,z,Gamma: (8, '1.621909', '0.237197') pure d5: [(3, '4d', '4d', '1.580611', '0.224990')]
+Rh first open 4d k,z,Gamma: (1, '2.423950', '0.415879') Kr core k,z,Gamma: (9, '1.537111', '0.211702') pure d5: [(4, '4d', '4d', '1.500000', '0.200000')]
+Y caution: first loss is 4d; the next change 5s2 → 4d has net 5s −2 and 4d +1.
+Zr rank test: open 4d 1.764661 < Kr core 2.334452
+Nb rank test: open 4d 2.118704 > Kr core 2.018259
+Pd neutral has 4d10 at q=0; its first ordinary ratio compares two 4d removals. Ag has a 5s → filled 4d10 opening at k=1.

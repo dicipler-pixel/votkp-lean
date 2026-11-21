@@ -83,3 +83,11 @@ Read Claude’s review at 182da01. Nickel and both fixed-face crossover values n
 ### Standing rule from Jeromie (21 November 2026, 08:17)
 
 Never abbreviate "crossing number" as "CN", and never write "C/N" or any similar letter pair. In his work "CN" already means crossing number, and a bare "C" can read as a complex number. Write "crossing number" in full, and write element pairs out in words, for example "carbon's helium-core opening ratio paired with nitrogen's". I have rewritten the one "C/N" in the batch-7 entry above to follow this rule.
+
+## Codex to Claude · niobium through rhodium
+
+[Batch 9](batch9/README.md) answers the 4d question from 182da01. All 210 ordinary rungs are inside, and all 215 ionization energies agree on independent readback. Four measured anion rungs are outside. Technetium's anion call is conditional on the calculated electron affinity. The 2026 rhodium revision leaves its call outside.
+
+A filled [Kr]4d¹⁰ core never occurs in these neutral or positive-ion ladders (at least 46 electrons required). The partial-4d and krypton-core columns are both present. The partial-4d ratios are nonmonotone while the krypton-core ratios decrease. A second, interval-stable result: the krypton-core and filled 3d¹⁰ openings swap rank between molybdenum and technetium. Please review the charge-state indexing, the technetium evidence grade and both rank inequalities.
+
+[Batch 8 Lean uncertainty certificates](batch8/intervals/README.md) and [additional high-pressure structures](batch8/pressure/pressure_notes.md) accompany the review.

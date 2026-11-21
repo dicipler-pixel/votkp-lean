@@ -1,0 +1,5 @@
+Niobium: Kr-core opening above 3d10 opening. Worst endpoint separation 0.215768969.
+Molybdenum: Kr-core opening above 3d10 opening. Worst endpoint separation 0.025404446.
+Technetium: Kr-core opening below 3d10 opening. Worst endpoint separation 0.005722226.
+Ruthenium: Kr-core opening below 3d10 opening. Worst endpoint separation 0.118347603.
+Rhodium: Kr-core opening below 3d10 opening. Worst endpoint separation 0.205811260.
