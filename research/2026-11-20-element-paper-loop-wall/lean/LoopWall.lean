@@ -256,3 +256,82 @@ theorem screened_inside_11_to_15 :
 theorem refute_Mg_L_outside : ¬ outside (80.1436 / 15.035271) := not_both _ l_opening_Mg
 theorem refute_Si_rung0_inside : ¬ inside (8.15168 / 1.3895212) := by
   intro h; exact not_both _ h rung0_Si
+
+/-! ## 9. Batch 4: sulfur to calcium, using the encoded reference thresholds -/
+
+/-- The M opening (last 4s removal → first 3p removal) crosses the wall between K and Ca. -/
+theorem m_opening_K : outside (31.625 / 4.34066373) := by unfold outside; grind
+theorem m_opening_Ca : inside (50.91316 / 11.871719) := by unfold inside; grind
+theorem m_crossing_K_Ca : outside (31.625 / 4.34066373) ∧ inside (50.91316 / 11.871719) :=
+  ⟨m_opening_K, m_opening_Ca⟩
+
+/-- The L opening and the K opening are inside for all five. -/
+theorem l_openings_S_to_Ca :
+    inside (280.954 / 88.0529) ∧ inside (348.306 / 114.2013) ∧ inside (422.6 / 143.4567) ∧
+    inside (503.67 / 175.8174) ∧ inside (591.6 / 211.275) := by
+  unfold inside; refine ⟨?_, ?_, ?_, ?_, ?_⟩ <;> grind
+theorem k_openings_S_to_Ca :
+    inside (3223.78057 / 706.994) ∧ inside (3658.34366 / 809.198) ∧ inside (4120.66559 / 918.375) ∧
+    inside (4610.80714 / 1034.542) ∧ inside (5128.8576 / 1157.726) := by
+  unfold inside; refine ⟨?_, ?_, ?_, ?_, ?_⟩ <;> grind
+
+/-- Rung 0: S and Cl inside, K and Ca outside; Ar has no bound ground-state anion. -/
+theorem rung0_S : inside (10.36001 / 2.0771042) := by unfold inside; grind
+theorem rung0_Cl : inside (12.967633 / 3.612725) := by unfold inside; grind
+theorem rung0_K : outside (4.34066373 / 0.501459) := by unfold outside; grind
+theorem rung0_Ca : outside (6.11315547 / 0.02455) := by unfold outside; grind
+/-- Calcium's anion rung stays far outside even at the high end of its quoted EA, 0.02465 eV. -/
+theorem rung0_Ca_high : outside (6.11315547 / 0.02465) := by unfold outside; grind
+
+/-- Calcium: every ordinary step of its ladder is inside the wall, and calcium is a metal. -/
+theorem ca_all_ordinary_inside :
+    inside (11.871719 / 6.11315547) ∧ inside (50.91316 / 11.871719) ∧ inside (67.2732 / 50.91316) ∧
+    inside (84.34 / 67.2732) ∧ inside (108.78 / 84.34) ∧ inside (127.21 / 108.78) ∧
+    inside (147.24 / 127.21) ∧ inside (188.54 / 147.24) ∧ inside (211.275 / 188.54) ∧
+    inside (591.6 / 211.275) ∧ inside (658.2 / 591.6) ∧ inside (728.6 / 658.2) ∧
+    inside (817.2 / 728.6) ∧ inside (894.0 / 817.2) ∧ inside (973.7 / 894.0) ∧
+    inside (1086.8 / 973.7) ∧ inside (1157.726 / 1086.8) ∧ inside (5128.8576 / 1157.726) ∧
+    inside (5469.86358 / 5128.8576) := by
+  unfold inside
+  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩ <;> grind
+
+/-- The strongest ordinary step changes identity between K and Ca: M above K at potassium,
+K above M at calcium. -/
+theorem rank_swap_K_Ca :
+    4610.80714 / 1034.542 < (31.625 / 4.34066373 : Rat) ∧
+    50.91316 / 11.871719 < (5128.8576 / 1157.726 : Rat) := by
+  constructor <;> grind
+
+/-! ## 10. The two screening readouts, exactly -/
+
+/-- With b = (Z − σ)²/2 the He-like energy, h the H-like energy and S = (h − b)/Z,
+the gap between the two readouts is exact: Z(S − σ) = (h − Z²/2) − σ²/2. -/
+theorem readouts_identity (Z σ h : Rat) (hZ : Z ≠ 0) :
+    Z * ((h - (Z - σ) * (Z - σ) / 2) / Z - σ) = (h - Z * Z / 2) - σ * σ / 2 := by
+  have e : (h - (Z - σ) * (Z - σ) / 2) / Z * Z = h - (Z - σ) * (Z - σ) / 2 :=
+    Rat.div_mul_cancel hZ
+  grind
+
+/-- The control: if the H-like energy is the bare hydrogenic Z²/2, then S − σ = −σ²/(2Z) ≤ 0
+for every positive Z and every σ. So S can rise above σ only through the extra binding of the
+H-like ion beyond Z²/2 (Dirac, mass and Lamb terms). -/
+theorem readouts_control (Z σ : Rat) (hZ : 0 < Z) :
+    (Z * Z / 2 - (Z - σ) * (Z - σ) / 2) / Z - σ ≤ 0 := by
+  have hz : Z ≠ 0 := by grind
+  have e : (Z * Z / 2 - (Z - σ) * (Z - σ) / 2) / Z * Z = Z * Z / 2 - (Z - σ) * (Z - σ) / 2 :=
+    Rat.div_mul_cancel hz
+  have sq : 0 ≤ σ * σ := by
+    by_cases hs : 0 ≤ σ
+    · exact Rat.mul_nonneg hs hs
+    · have h1 : 0 ≤ -σ := by grind
+      have := Rat.mul_nonneg h1 h1
+      grind
+  by_cases hpos : 0 < (Z * Z / 2 - (Z - σ) * (Z - σ) / 2) / Z - σ
+  · exfalso
+    have := Rat.mul_pos hpos hZ
+    grind
+  · grind
+
+theorem refute_Ca_M_outside : ¬ outside (50.91316 / 11.871719) := not_both _ m_opening_Ca
+theorem refute_K_M_inside : ¬ inside (31.625 / 4.34066373) := by
+  intro h; exact not_both _ h m_opening_K

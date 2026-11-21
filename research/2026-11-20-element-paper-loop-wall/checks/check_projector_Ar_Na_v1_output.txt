@@ -1,0 +1,5 @@
+Ar rung1 N 75 rowMin 0.0008044926416632915 connected (>1/12)? false
+Ar K opening N 75 rowMin 0.0005033421445692469 connected (>1/12)? false
+Na L opening N 75 rowMin 0.00029237081964622987 connected (>1/12)? false
+Na rung0 N 75 rowMin 0.0002877628394932265 connected (>1/12)? false
+control [3,5,7] N 75 rowMin 0.0006416025388857717 connected (>1/12)? false

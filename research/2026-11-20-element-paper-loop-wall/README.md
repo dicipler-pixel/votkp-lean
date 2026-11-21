@@ -8,7 +8,7 @@ check. It is kept for the element paper.
 
 ## What is proved (`lean/LoopWall.lean`, core Lean 4.34.1, no Mathlib, exact `Rat` arithmetic)
 
-61 theorems. Axioms: only `propext`, `Classical.choice`, `Quot.sound`. No `sorry`, `admit`,
+77 theorems. Axioms: only `propext`, `Classical.choice`, `Quot.sound`. No `sorry`, `admit`,
 `native_decide` or `axiom`. Run `lean/run_checks.sh`; its output is `lean/run_checks_output.txt`.
 
 The peel step of an ordered pair of thresholds (a, then b) has ratio z = b/a and reflection
@@ -39,7 +39,8 @@ The peel step of an ordered pair of thresholds (a, then b) has ratio z = b/a and
    between Z = 6 and 7 (`screened_six_outside`, `screened_seven_inside`); the unscreened control
    moves it to between 9 and 10 (`bare_nine_outside`, `bare_ten_inside`).
 8. **False controls** (`lean/controls/`): N outside, F's rung 0 outside, C inside, neon's ratio
-   exactly 5, the screened Z = 7 outside, Γ² odd, Mg's L opening outside, Si's rung 0 inside. Each is rejected by Lean and each is refuted
+   exactly 5, the screened Z = 7 outside, Γ² odd, Mg's L opening outside, Si's rung 0 inside, Ca's M opening outside, S above σ with a
+   bare hydrogenic H-like energy. Each is rejected by Lean and each is refuted
    as a theorem in `LoopWall.lean` (`refute_*`).
 
 9. **Batch 3, sodium to phosphorus.** The L opening (last 3s → first 2p) crosses the wall
@@ -49,6 +50,15 @@ The peel step of an ordered pair of thresholds (a, then b) has ratio z = b/a and
    (`mg_all_inside`), and Mg conducts, so an outside atomic rung is not required for conduction.
    The strongest ordinary step changes from the L to the K opening between Mg and Al
    (`rank_swap_Mg_Al`). The screened series keeps the K opening inside for Z = 11 to 15.
+10. **Batch 4, sulfur to calcium.** The M opening (last 4s → first 3p) crosses the wall between
+   K and Ca (`m_crossing_K_Ca`); L and K openings are inside for all five; rung 0 is inside for S
+   and Cl, outside for K and Ca (Ca at Γ₀ ≈ 0.992, still outside at the high end of its EA). Every
+   ordinary step of calcium's ladder is inside (`ca_all_ordinary_inside`), and Ca is a metal. The
+   strongest ordinary step changes from the M to the K opening between K and Ca (`rank_swap_K_Ca`).
+11. **The two screening readouts.** With b = (Z − σ)²/2 and S = (h − b)/Z, exactly
+   Z(S − σ) = (h − Z²/2) − σ²/2 (`readouts_identity`). With the bare hydrogenic h = Z²/2, S − σ ≤ 0
+   for every Z > 0 and every σ (`readouts_control`): S can pass σ (between Al and Si) only through
+   the H-like ion's binding beyond Z²/2 (the Dirac, nuclear-mass and Lamb terms).
 
 ## Sources
 

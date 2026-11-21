@@ -1,0 +1,13 @@
+steps 89 mismatches 0
+S rung0 4.98772 in apex 0.38144 | L 3.19074 in apex 0.28219 | K 4.55984 in apex 0.36212
+Cl rung0 3.58943 in apex 0.30905 | L 3.04993 in apex 0.27178 | K 4.52095 in apex 0.36026
+Ar L 2.94584 in apex 0.26372 | K 4.48691 in apex 0.35861
+K rung0 8.65607 out apex 0.49266 | M 7.28575 out apex 0.45934 | L 2.86473 in apex 0.25721 | K 4.45686 in apex 0.35715
+Ca rung0 249.00837 out apex 0.88081 | M 4.28861 in apex 0.34872 | L 2.80014 in apex 0.25188 | K 4.43011 in apex 0.35583
+S S 0.621082 sigma 0.607031 D_H 0.409060 sigma2/2 0.184243 identity err -4.2e-15
+Cl S 0.622465 sigma 0.602339 D_H 0.523548 sigma2/2 0.181406 identity err 2.3e-14
+Ar S 0.623837 sigma 0.597031 D_H 0.660734 sigma2/2 0.178223 identity err -1.7e-14
+K S 0.625208 sigma 0.591087 D_H 0.822985 sigma2/2 0.174692 identity err 2.7e-14
+Ca S 0.626587 sigma 0.584437 D_H 1.013779 sigma2/2 0.170783 identity err 2.6e-14
+Al-Si crossing: interp Z 13.239794399260338
+Ca rung0 at EA high end 247.9981935091278

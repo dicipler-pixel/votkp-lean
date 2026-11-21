@@ -32,3 +32,16 @@ import LoopWall
 #print axioms screened_inside_11_to_15
 #print axioms refute_Mg_L_outside
 #print axioms refute_Si_rung0_inside
+#print axioms m_crossing_K_Ca
+#print axioms l_openings_S_to_Ca
+#print axioms k_openings_S_to_Ca
+#print axioms rung0_S
+#print axioms rung0_Cl
+#print axioms rung0_K
+#print axioms rung0_Ca_high
+#print axioms ca_all_ordinary_inside
+#print axioms rank_swap_K_Ca
+#print axioms readouts_identity
+#print axioms readouts_control
+#print axioms refute_Ca_M_outside
+#print axioms refute_K_M_inside
