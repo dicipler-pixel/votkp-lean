@@ -1,4 +1,4 @@
-BUILD OK: 77 theorems
+BUILD OK: 81 theorems
 'gam_reverse' depends on axioms: [propext, Classical.choice, Quot.sound]
 'power_even' depends on axioms: [propext, Classical.choice, Quot.sound]
 'wall_quadratic' depends on axioms: [propext, Classical.choice, Quot.sound]
@@ -45,6 +45,10 @@ BUILD OK: 77 theorems
 'readouts_control' depends on axioms: [propext, Classical.choice, Quot.sound]
 'refute_Ca_M_outside' depends on axioms: [propext, Classical.choice, Quot.sound]
 'refute_K_M_inside' depends on axioms: [propext, Classical.choice, Quot.sound]
+'matched_junction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'gam_inverse' depends on axioms: [propext, Classical.choice, Quot.sound]
+'face_apex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'shell_floors_inside' depends on axioms: [propext, Classical.choice, Quot.sound]
 SCAN OK: no sorry, admit, native_decide or axiom
 control rejected: controls/C_inside.lean
 control rejected: controls/Ca_M_outside.lean

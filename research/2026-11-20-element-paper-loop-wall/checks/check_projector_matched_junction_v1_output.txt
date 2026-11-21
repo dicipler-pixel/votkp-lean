@@ -1,0 +1,6 @@
+Na L opening   original 0.000292371 matched 0.000865385
+Ar rung1       original 0.000804493 matched 0.000874421
+Ar L opening   original 0.000648181 matched 0.000871939
+Na K opening   original 0.000474964 matched 0.000869178
+Ar K opening   original 0.000503342 matched 0.000869632
+all 1          original 0.000875546 matched 0.000875546

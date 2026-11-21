@@ -45,3 +45,7 @@ import LoopWall
 #print axioms readouts_control
 #print axioms refute_Ca_M_outside
 #print axioms refute_K_M_inside
+#print axioms matched_junction
+#print axioms gam_inverse
+#print axioms face_apex
+#print axioms shell_floors_inside

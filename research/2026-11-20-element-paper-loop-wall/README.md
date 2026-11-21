@@ -8,7 +8,7 @@ check. It is kept for the element paper.
 
 ## What is proved (`lean/LoopWall.lean`, core Lean 4.34.1, no Mathlib, exact `Rat` arithmetic)
 
-77 theorems. Axioms: only `propext`, `Classical.choice`, `Quot.sound`. No `sorry`, `admit`,
+81 theorems. Axioms: only `propext`, `Classical.choice`, `Quot.sound`. No `sorry`, `admit`,
 `native_decide` or `axiom`. Run `lean/run_checks.sh`; its output is `lean/run_checks_output.txt`.
 
 The peel step of an ordered pair of thresholds (a, then b) has ratio z = b/a and reflection
@@ -59,6 +59,14 @@ The peel step of an ordered pair of thresholds (a, then b) has ratio z = b/a and
    Z(S − σ) = (h − Z²/2) − σ²/2 (`readouts_identity`). With the bare hydrogenic h = Z²/2, S − σ ≤ 0
    for every Z > 0 and every σ (`readouts_control`): S can pass σ (between Al and Si) only through
    the H-like ion's binding beyond Z²/2 (the Dirac, nuclear-mass and Lamb terms).
+12. **Junctions, faces and shell floors.** Equal clocks at a junction give Γ = 0 (`matched_junction`);
+   the ratio comes back from the reflection, z = (1 + Γ)/(1 − Γ) (`gam_inverse`); the face apex
+   Γ(√z) = tanh(r/4) returns the full ratio (`face_apex`); the bare shell floors 4, 9/4, 16/9,
+   25/16, 36/25, 49/36 are all inside the wall (`shell_floors_inside`).
+13. **The matched-junction rerun** (`checks/check_projector_matched_junction_v1.js`, with
+   `checks/hsb/hsb_model_matched.js`, one line changed so the port-to-lattice links take their own
+   clock): with exterior clocks set to 1 and each element's peel ratio kept inside the ball, the
+   backward sodium-below-argon ranking closes by about 98%. All rows stay below 1/12.
 
 ## Sources
 

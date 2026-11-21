@@ -335,3 +335,34 @@ theorem readouts_control (Z σ : Rat) (hZ : 0 < Z) :
 theorem refute_Ca_M_outside : ¬ outside (50.91316 / 11.871719) := not_both _ m_opening_Ca
 theorem refute_K_M_inside : ¬ inside (31.625 / 4.34066373) := by
   intro h; exact not_both _ h m_opening_K
+
+/-! ## 11. Junctions, faces and the shell floors -/
+
+/-- Equal clocks at a junction give no reflection: z = 1 is transparent. -/
+theorem matched_junction : gam 1 = 0 := by unfold gam; grind
+
+/-- The ratio is recovered from the reflection: z = (1 + Γ)/(1 − Γ). -/
+theorem gam_inverse (z : Rat) (hz : 0 < z) : (1 + gam z) / (1 - gam z) = z := by
+  unfold gam
+  have h1 : z + 1 ≠ 0 := by grind
+  have e1 : 1 + (z - 1) / (z + 1) = 2 * z / (z + 1) := by grind
+  have e2 : 1 - (z - 1) / (z + 1) = 2 / (z + 1) := by grind
+  rw [e1, e2]
+  have h2 : (2 : Rat) / (z + 1) ≠ 0 := by
+    intro h
+    have := Rat.div_mul_cancel (a := (2 : Rat)) h1
+    rw [h] at this; grind
+  grind
+
+/-- The face apex. With r = ln z and w = √z, the apex tanh(r/4) is Γ(w) = (w − 1)/(w + 1), and
+the face gives back the full ratio: ((1 + a)/(1 − a))² = w² = z. -/
+theorem face_apex (w : Rat) (hw : 0 < w) :
+    (1 + gam w) / (1 - gam w) * ((1 + gam w) / (1 - gam w)) = w * w := by
+  rw [gam_inverse w hw]
+
+/-- The hydrogenic shell floors ((n+1)/n)² for n = 1 to 6 (4, 9/4, 16/9, 25/16, 36/25, 49/36)
+all sit inside the loop wall: a bare change of shell never reaches it. -/
+theorem shell_floors_inside :
+    inside 4 ∧ inside (9 / 4) ∧ inside (16 / 9) ∧ inside (25 / 16) ∧ inside (36 / 25) ∧
+    inside (49 / 36) := by
+  unfold inside; refine ⟨?_, ?_, ?_, ?_, ?_, ?_⟩ <;> grind
