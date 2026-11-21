@@ -30,3 +30,19 @@
 ## Reproduction
 
 Install NumPy and PyMuPDF and run `python xenon_resistance.py`; the program fetches and SHA-256 checks the NIST-hosted paper. A local-copy replay is `python xenon_resistance.py --pdf /path/to/paper.pdf --output replay.csv`. It reads published graphic paths; no image thresholding or manual transcription of resistance values is involved.
+
+### Direct reconstruction of iodine–iodine distances
+
+**DERIVED from measured cells.** We read the pressure, space-group symbol, three orthorhombic axes, and fractional site coordinates straight from Bykova et al. Table 1 in its SHA-256-pinned accepted PDF. Gemmi 0.7.5 expands each inequivalent site. Sorting atom-to-atom Euclidean distances through periodic images then supplies two operational space measurements: d₁ to the closest iodine nucleus and d₂ to the second closest. Cubic or covalent radii are unnecessary. Distances and errors below are geometric. They are not atomic peel ratios or a prediction of metallicity. [Table 1, refinement and source](https://link.aps.org/accepted/10.1103/PhysRevB.108.024104).
+
+| Pressure | Crystal phase | d₁, Å | d₂, Å | d₂/d₁ |
+|---:|---|---:|---:|---:|
+| 9.90 GPa | Cmce, molecular | 2.72959 | 3.15380 | 1.15541 |
+| 15.0 GPa | Cmce, molecular | 2.72489 | 3.08192 | 1.13103 |
+| 17.0 GPa | Cmc2₁, molecular | 2.74183 | 2.96840 | 1.08263 |
+| 19.0 GPa | Cmc2₁, molecular | 2.76224 | 2.92496 | 1.05891 |
+| 32.0 GPa | Immm, monatomic | 2.90770 | 2.90770 | 1 by symmetry |
+
+**RECOGNISED.** From 15 to 19 GPa, the shortest molecular distance increases by 0.03735 Å while the next distance contracts by 0.15696 Å. The molecular and intermolecular spacings draw closer as pressure rises. At 15 GPa the two closest neighbours beyond the molecule are equidistant at 3.08192 Å. At 17 GPa that pair splits to 2.96840 and 3.13352 Å. The ratio d₂/d₁ falls from 1.13103 to 1.05891 across these three molecular snapshots, well beyond changes induced by varying every lattice/position input within one quoted refinement standard deviation. The conservative ratio boxes are [1.13023, 1.13182] at 15 GPa and [1.05538, 1.06245] at 19 GPa. Correlations and systematic errors are unavailable, so the box comparison is a sensitivity calculation, not a joint confidence interval. The 32 GPa equality follows from neighbours at ±a in the monatomic cell. A conventional cell cannot capture the modulated intermediate merely by joining the 19 and 32 GPa entries: at 20.8 GPa the measured modulation parameter is 0.4837(2), and the neighbour distribution spans the intra/intermolecular range. [All 84 calculated neighbour ranks and interval boxes](I_commensurate_neighbours.csv) · [single-crystal diffraction](https://doi.org/10.1103/PhysRevB.108.024104).
+
+Reproduce with Gemmi, NumPy and Poppler's `pdftotext`: `python iodine_neighbours.py`, or pass `--pdf /path/to/accepted-manuscript.pdf`. Expanding the translation cube from [−1,1]³ to [−2,2]³ leaves the first twelve neighbours of every inequivalent site unchanged. The conventional unit-cell multiplicities agree with the reported cell volumes and calculated mass densities. At 15 and 17 GPa the resulting bond distances reproduce the rounded labels in the published Figure 1.

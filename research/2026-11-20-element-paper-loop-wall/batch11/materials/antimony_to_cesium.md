@@ -22,11 +22,11 @@
 |---|---:|---:|---:|---|
 | Antimony | 6.68 | 903.77, u=0.001 | 1860 | Semimetal. ρ≈41.7 µΩ cm at 20 °C gives σ≈2.40 MS/m. Thermal κ≈24.4 W/(m K) near room temperature. |
 | Tellurium | 6.232 | 722.72, u≈0.02 | 1261 | Semiconductor. A room-temperature p-type sample grown by chemical transport had ρ≈0.35 Ω cm, hence σ≈286 S/m. AIST lists thermal κ=1.97 and 3.38 W/(m K) near room temperature. Direction and sample quality matter. |
-| Iodine | 4.933 | 386.8, u unreported | 457.6 | Insulating molecular solid. Thermal κ≈0.449 W/(m K) at 300 K, about 10% uncertainty. An absolute DC value for a pure crystal with temperature, field and illumination documented remains open here. |
+| Iodine | 4.933 | 386.8, u unreported | 457.6 | Insulating molecular solid. Thermal κ≈0.449 W/(m K) at 300 K, about 10% uncertainty. Room-temperature single-crystal conductivities reported in the Greenwood–Earnshaw evaluation are 5×10⁻¹⁰ S/m perpendicular to the bc plane and 1.7×10⁻⁶ S/m within it. Field and illumination in the underlying measurement remain unresolved. |
 | Xenon | 0.005366 | 161.4140, u≈0.0013 | 165.051 | Neutral gas requires charge carriers to sustain electrical conduction. At 25 °C and 0.1 MPa the evaluated thermal κ=0.005505(12) W/(m K), expanded uncertainty. |
 | Cesium | 1.873 | 301.66, u=0.1 | 944 | Solid alkali metal: ρ≈20.8 µΩ cm at 295 K, hence σ≈4.81 MS/m. Thermal κ≈35.9 W/(m K) near 300 K. |
 
-**DERIVED.** Electrical conversions use σ=1/ρ with 1 µΩ cm=10⁻⁸ Ω m. Conductivity values for iodine doped with iodide contain a mobile-ion contribution and would answer a different question. A concentration of excited or ionized xenon would likewise have to be specified before predicting discharge conductivity. [Antimony resistivity, table 18.6](https://www.osti.gov/bridge/servlets/purl/7035199-2KaSix/7035199.pdf) · [elemental thermal conductivities, Ho et al. 1972](https://srd.nist.gov/JPCRD/jpcrd7.pdf) · [1971 tellurium specimen](https://eurekamag.com/research/082/793/082793130.php) · [AIST evaluated anisotropy data](https://tpds.db.aist.go.jp/opendata/semicon_semimetal_tc_en.html) · [xenon reference value, 2018](https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=924444) · [cesium specimen record](https://srd.nist.gov/JPCRD/jpcrdS1Vol3.pdf).
+**DERIVED.** Electrical conversions use σ=1/ρ with 1 µΩ cm=10⁻⁸ Ω m. Conductivity values for iodine doped with iodide contain a mobile-ion contribution and would answer a different question. A concentration of excited or ionized xenon would likewise have to be specified before predicting discharge conductivity. [Antimony resistivity, table 18.6](https://www.osti.gov/bridge/servlets/purl/7035199-2KaSix/7035199.pdf) · [elemental thermal conductivities, Ho et al. 1972](https://srd.nist.gov/JPCRD/jpcrd7.pdf) · [iodine single-crystal conductivity, Greenwood & Earnshaw (1997), ch. 17](https://lib.ysu.am/disciplines_bk/931545868d143aa17a18c4ad33a7ea3e.pdf) · [1971 tellurium specimen](https://eurekamag.com/research/082/793/082793130.php) · [AIST evaluated anisotropy data](https://tpds.db.aist.go.jp/opendata/semicon_semimetal_tc_en.html) · [xenon reference value, 2018](https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=924444) · [cesium specimen record](https://srd.nist.gov/JPCRD/jpcrdS1Vol3.pdf).
 
 ## Five balls and their distinct tests
 
@@ -57,12 +57,14 @@
 | Representative centre | Z,N | net u,d | Spin | μ (μN) | rms charge radius (fm) |
 |---|---|---|---|---|---|
 | Antimony-121 | 51,70 | 172,191 | 5/2⁺ | +3.35540(33), revised 2024 | 4.6802(26) |
-| Tellurium-125 | 52,73 | 177,198 | 1/2⁺ | −0.8870(5), LiveChart | 4.7204(30) |
+| Tellurium-125 | 52,73 | 177,198 | 1/2⁺ | −0.8850(1), revised 2025 | 4.7204(30) |
 | Iodine-127 | 53,74 | 180,201 | 5/2⁺ | +2.8087(14), LiveChart | 4.7500(81) |
 | Xenon-129 | 54,75 | 183,204 | 1/2⁺ | −0.777961(16), LiveChart | 4.7775(50) |
-| Cesium-133 | 55,78 | 188,211 | 7/2⁺ | +2.5778(14), LiveChart | 4.8041(46) |
+| Cesium-133 | 55,78 | 188,211 | 7/2⁺ | +2.58243(12), aqueous NMR 2022 | 4.8041(46) |
 
 **MEASURED / source revision.** Shielding-corrected 2024 NMR reanalysis recommends +3.35540(33) and +2.54389(25) μN for antimony-121 and -123, respectively. The LiveChart raw values are +3.3580(16) and +2.5457(12). [antimony_moments_2023.csv](antimony_moments_2023.csv) gives the 19 derived hyperfine measurements for 113–133 from the 2023 paper's Table 2, preserving the isomer labels and the authors' reference to antimony-123. The separate 2024 calibration does not silently rescale them. Several LiveChart even-even entries include raw magnetic moments from state-dependent source tables. A spin-0 ground state has zero static dipole moment exactly. [2024 revised moments](https://doi.org/10.1103/PhysRevA.109.042815) · [2023 hyperfine data, original PDF](https://scoap3-prod-backend.s3.cern.ch/media/files/82017/10.1016/j.physletb.2023.138278.pdf).
+
+**MEASURED / source revision.** A 2025 shielding calculation combined with dimethyltelluride NMR revises tellurium-123 to −0.7341(1) and tellurium-125 to −0.8850(1) μN. The earlier raw entries are −0.7358(3) and −0.8870(5). The same study revises selenium-77, relevant to the earlier batch, to +0.53380(3) μN. Simultaneous proton and cesium NMR of three aqueous salts with shielding correction yielded +2.58243(12) μN for cesium-133 in 2022, against the raw +2.5778(14). Gas-phase NMR of the two spin-bearing natural xenon isotopes independently supports the rounded LiveChart values: −0.7779607(158) for xenon-129 and +0.6918451(70) μN for xenon-131. [Tellurium and selenium (2025)](https://doi.org/10.1063/5.0287373) · [cesium (2022)](https://doi.org/10.1007/s11018-022-02016-5) · [xenon (2015)](https://pubmed.ncbi.nlm.nih.gov/25594841/).
 
 ## Cross-element tests and coverage
 
