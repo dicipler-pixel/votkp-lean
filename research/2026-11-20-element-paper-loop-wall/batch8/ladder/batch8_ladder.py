@@ -11,7 +11,7 @@ from pathlib import Path
 PIN = "c35b18b1c577bde90eacd3ef7cfa1bb2bb93024f"
 SHA256 = "75e67478d9a22ef85fa2d3f6ac36ad2860c6f8f62215127c558438a2cb53f62c"
 COLUMNS = ["Z", "symbol", "k", "IE_k (eV)", "z_k", "Gamma_k", "source"]
-# EA22 is Ning & Lu (2022), DOI 10.1063/5.0080243, Table I.
+# EA22 is Ning & Lu (2022), DOI 10.1063/5.0080243, Table 3.
 # Y23 is Zhang et al. (2023), DOI 10.1063/5.0124882.
 # Zr17 is Fu et al. (2017), DOI 10.1063/1.4986547.
 # Nonpositive krypton affinity gives no bound ground-state rung.

@@ -1,0 +1,16 @@
+Ordinary only: 1225 defined pairs, 1218 inside, 7 outside
+  max inside: Nitrogen, rung 5, 55206741/9789010 = 5.6396654003
+  min outside: Carbon, rung 4, 4901132/806169 = 6.0795341920
+  equivalent-cutoff interval width 0.4398687917
+Anion only (including calculated technetium): 40 defined pairs, 6 inside, 34 outside
+  max inside: Silver, rung 0, 3788117/652235 = 5.8079020598
+  min outside: Silicon, rung 0, 20379200/3473803 = 5.8665387761
+  equivalent-cutoff interval width 0.0586367163
+All central inputs: 1265 defined pairs, 1224 inside, 41 outside
+  max inside: Silver, rung 0, 3788117/652235 = 5.8079020598
+  min outside: Silicon, rung 0, 20379200/3473803 = 5.8665387761
+  equivalent-cutoff interval width 0.0586367163
+Omitting the calculated technetium anion: 1264 defined pairs, 1224 inside, 40 outside
+  max inside: Silver, rung 0, 3788117/652235 = 5.8079020598
+  min outside: Silicon, rung 0, 20379200/3473803 = 5.8665387761
+  equivalent-cutoff interval width 0.0586367163

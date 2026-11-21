@@ -15,7 +15,7 @@ from pathlib import Path
 
 ARCHIVE_SHA = '75e67478d9a22ef85fa2d3f6ac36ad2860c6f8f62215127c558438a2cb53f62c'
 CORE = {'He': 2, 'Ne': 10, 'Ar': 18, 'Kr': 36}
-# Independent central-value inputs, eV. Ning & Lu 2022, Table 2,
+# Independent central-value inputs, eV. Ning & Lu 2022, Table 3,
 # https://doi.org/10.1063/5.0080243 ; Y also Zhang et al. 2023,
 # https://pubmed.ncbi.nlm.nih.gov/36859075/ . Kr has no bound ground anion.
 AFFINITY = {'Rb': Q('0.485916'), 'Sr': Q('0.05206'), 'Y': Q('0.31129'), 'Zr': Q('0.433283')}

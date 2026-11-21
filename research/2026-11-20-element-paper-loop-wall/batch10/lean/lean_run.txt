@@ -1,0 +1,13 @@
+Lean (version 4.34.1, x86_64-unknown-linux-gnu, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)
+All 240 generated Lean energy literals equal the archive and the public CSV.
+'VOTKP.ElementBatch10.ordinaryPalladium' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.ElementBatch10.ordinarySilver' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.ElementBatch10.ordinaryCadmium' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.ElementBatch10.ordinaryIndium' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.ElementBatch10.ordinaryTin' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.ElementBatch10.filled4dWallCalls' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.ElementBatch10.filled4dRatiosDecrease' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.ElementBatch10.wrongPalladiumFirstOrdinaryOutside' depends on axioms: [propext, Classical.choice, Quot.sound]
+Rejected false control: checkLadder Palladium [1] = true
+Rejected false control: checkWall palladiumEA Palladium[0]! false = true
+235 ordinary crossings inside. Five filled 4d¹⁰ crossings in order: outside, inside, inside, inside, inside.

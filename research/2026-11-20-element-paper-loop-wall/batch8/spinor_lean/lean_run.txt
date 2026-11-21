@@ -1,0 +1,8 @@
+Lean (version 4.34.1, x86_64-unknown-linux-gnu, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)
+'VOTKP.SpinorPeel.compression_of_square' depends on axioms: [propext, Quot.sound]
+'VOTKP.SpinorPeel.projector_compression' depends on axioms: [propext, Quot.sound]
+'VOTKP.SpinorPeel.squared_leakage' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.SpinorPeel.projector_squared_leakage' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.SpinorPeel.nonidempotent_observable_control' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.SpinorPeel.signed_triangle_three_sites' depends on axioms: [propext]
+False equality with e=1 and P=2 rejected by the Lean kernel.

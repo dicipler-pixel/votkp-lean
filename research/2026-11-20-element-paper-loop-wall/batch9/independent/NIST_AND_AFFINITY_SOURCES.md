@@ -16,10 +16,10 @@ Read on 21 November 2026. The five official eV tables all identify NIST ASD v5.1
 
 | Element | EA used, eV | Evidence |
 |---|---:|---|
-| Nb | 0.91740(7) | Ning & Lu (2022), Table I. The original 2016 SEVI study reports 0.91740(6) eV. The slightly wider 2022 uncertainty is carried here. [2016 measurement](https://doi.org/10.1103/PhysRevA.93.020501) |
-| Mo | 0.74723(8) | Ning & Lu (2022), Table I, list a SEVI measurement. Their reference 206 is explicitly described as unpublished. The numerical source for this check is the published evaluation. [2022 evaluation](https://doi.org/10.1063/5.0080243) |
+| Nb | 0.91740(7) | Ning & Lu (2022), Table 3. The original 2016 SEVI study reports 0.91740(6) eV. The slightly wider 2022 uncertainty is carried here. [2016 measurement](https://doi.org/10.1103/PhysRevA.93.020501) |
+| Mo | 0.74723(8) | Ning & Lu (2022), Table 3, list a SEVI measurement. Their reference 206 is explicitly described as unpublished. The numerical source for this check is the published evaluation. [2022 evaluation](https://doi.org/10.1063/5.0080243) |
 | Tc | 0.636, predicted | O’Malley & Beck (2002) predict a 636 meV ground-state binding using relativistic configuration interaction. Ning & Lu list the entry as calculated/semiempirical. No experimental threshold or numerical measurement uncertainty was located. [2002 prediction](https://doi.org/10.1103/PhysRevA.65.064502) |
-| Ru | 1.046270(20) | Ning & Lu (2022), Table I, give a SEVI value under the same unpublished reference 206. [2022 evaluation](https://doi.org/10.1063/5.0080243) |
+| Ru | 1.046270(20) | Ning & Lu (2022), Table 3, give a SEVI value under the same unpublished reference 206. [2022 evaluation](https://doi.org/10.1063/5.0080243) |
 | Rh | 1.14273(5) | Chen et al. (2026) update the earlier evaluated 1.14289(20) eV. Both place the row outside. [2026 measurement](https://doi.org/10.1088/1674-1056/ae5173) |
 
 **Test for Tc.** For a bound anion on the forward branch, an EA below IE₁/(3+2√2) puts rung 0 outside. An independently measured EA above this value but below IE₁ would defeat the predicted outside classification. An unbound ground-state anion would remove the rung entirely. This is an empirical test for the provisional datum.

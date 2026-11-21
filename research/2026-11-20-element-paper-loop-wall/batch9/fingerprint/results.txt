@@ -1,0 +1,15 @@
+Input pin 182da01a14b10ce1e07e247565466d01822121c5. 990 ordinary steps H–Rh; H has no ordinary ratio.
+Leave-one-core-out, equal ion charges 0–7, held-out element removed, 24 cases/core:
+endpoint: (15, 12, 11), 38/72
+sorted: (17, 19, 24), 60/72
+first_two_contrast: (24, 24, 24), 72/72
+first_two: (24, 24, 24), 72/72
+ordered: (24, 24, 24), 72/72
+Conservative test-input boxes, fixed central training centroids: {'same class': 72}
+Endpoint-preserving order reshuffles: 999, seed=20261121, range=15..53, median=32, central 95% empirical ranks=21..46, >=observed 0.
+All 576 relative whole-core shell registrations: range=16..72, median=40.0, >=observed 4 (includes identity).
+Isoelectronic continuation, q=0..7: adjacent/far mean TV smaller in 34/34 electron counts; analogous endpoint effect 34/34.
+Period 3 neutral retrieval: ordered top-1 6/6, span top-1 2/6, chance expectation 1.000.
+Period 4 neutral retrieval: ordered top-1 6/8, span top-1 5/8, chance expectation 1.000.
+Period 5 neutral retrieval: ordered top-1 6/9, span top-1 4/9, chance expectation 2.000.
+Control: an exact geometric ladder (ratio two) has uniform shares, so permuting steps leaves the fingerprint unchanged.

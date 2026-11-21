@@ -9,7 +9,7 @@ from decimal import Decimal
 from fractions import Fraction
 from pathlib import Path
 
-# Ning & Lu (2022), Table 1, doi:10.1063/5.0080243; Y primary update
+# Ning & Lu (2022), Table 3, doi:10.1063/5.0080243; Y primary update
 # Zhang et al. (2023), doi:10.1063/5.0124882; Kr has no bound ground-state anion.
 AFFINITIES = {
     'Kr': None, 'Rb': ('0.485916', '0.000021'), 'Sr': ('0.05206', '0.00006'),

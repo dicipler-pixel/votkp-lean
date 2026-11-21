@@ -1,0 +1,11 @@
+Palladium: S=0.676384057, sigma=0.010878006
+Silver: S=0.679053975, sigma=-0.033092367
+Cadmium: S=0.681789503, sigma=-0.079215971
+Indium: S=0.684595623, sigma=-0.127574429
+Tin: S=0.687471775, sigma=-0.178221744
+Source pin bcedbd9bba0de5a75fd2a860a912ebc4882f4e8a archive SHA-256 75e67478d9a22ef85fa2d3f6ac36ad2860c6f8f62215127c558438a2cb53f62c
+245 serialized rows, 240 archive energies, 235 ordinary pairs, 4 anion pairs, zero differences.
+Outside at central inputs: [('Palladium', 0), ('Indium', 0), ('Tin', 0)]
+Endpoint-certified arithmetic (reported input uncertainties only): 237
+Unavailable endpoints (element,k): [('Palladium', 2), ('Palladium', 3)]
+CSV SHA-256: 567ab2df1b98520441865b9362217dc5a6e40dd1acc7597ee666069220c90431

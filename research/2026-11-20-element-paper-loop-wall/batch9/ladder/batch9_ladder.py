@@ -14,7 +14,7 @@ from pathlib import Path
 
 PIN = '182da01a14b10ce1e07e247565466d01822121c5'
 HASH = '75e67478d9a22ef85fa2d3f6ac36ad2860c6f8f62215127c558438a2cb53f62c'
-# EA22 = Ning and Lu, J. Phys. Chem. Ref. Data 51, 021502 (2022), Table I.
+# EA22 = Ning and Lu, J. Phys. Chem. Ref. Data 51, 021502 (2022), Table 3.
 # Rh26 = Chen et al., Chin. Phys. B 35, 063202 (2026), DOI 10.1088/1674-1056/ae5173.
 AFF = {
     'Nb': (D('.91740'), D('.00007'), 'EA22'),
