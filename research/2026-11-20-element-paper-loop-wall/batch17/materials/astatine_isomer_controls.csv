@@ -1,0 +1,8 @@
+A,contrast,delta_isomer_minus_ground_fm2,one_box_budget_fm2,worst_three_box_lower_fm2,worst_three_box_upper_fm2,positive_at_three_boxes
+195,m-g,0.070,0.028,-0.014,0.154,False
+197,m-g,0.163,0.036,0.055,0.271,True
+198,m-g,0.023,0.047,-0.118,0.164,False
+199,m-g,0.190,0.034,0.088,0.292,True
+200,m1-g,0.016,0.043,-0.113,0.145,False
+200,m2-g,0.035,0.044,-0.097,0.167,False
+202,m-g,0.028,0.041,-0.095,0.151,False

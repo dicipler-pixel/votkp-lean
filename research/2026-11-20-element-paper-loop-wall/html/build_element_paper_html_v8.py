@@ -2,19 +2,49 @@
 # Builds the element-paper breakdown page (hydrogen to astatine) from Jeromie's threshold archive, the evaluated
 # electron affinities, and the Lean inventory. Every number in the tables is computed here.
 import gzip, json, math, html, sys, re
+import csv
+import hashlib
+from pathlib import Path
 ARCH = sys.argv[1]; LEANDIR = sys.argv[2]; OUT = sys.argv[3]
 d = json.load(gzip.open(ARCH)); rec = {r['Z']: r for r in d['records']}
 W = 3 + 2 * math.sqrt(2)
-EA = {'H':0.754195,'Li':0.618049,'B':0.279723,'C':1.2621226,'O':1.4611136,'F':3.4011898,'Na':0.547926,
-      'Al':0.43283,'Si':1.3895212,'P':0.746609,'S':2.0771042,'Cl':3.612725,'K':0.501459,'Ca':0.02455,
-      'Sc':0.17938,'Ti':0.07554,'V':0.52766,'Cr':0.675928,'Fe':0.153236,'Co':0.662255,'Ni':1.157368,'Cu':1.23578,
-      'Ga':0.301166,'Ge':1.2326764,'As':0.804486,'Se':2.020667,'Br':3.363588,'Rb':0.485916,'Sr':0.05206,'Y':0.31129,'Zr':0.433283,
-      'Nb':0.91740,'Mo':0.74723,'Tc':0.636,'Ru':1.046270,'Rh':1.14273,
-      'Pd':0.56214,'Ag':1.30447,'In':0.38392,'Sn':1.112070,
-      'Sb':1.047401,'Te':1.970875,'I':3.0590465,'Cs':0.471626,
-      'Ba':0.14462,'La':0.557546,'Ce':0.600160,'Pr':0.10923,'Nd':0.09748,'Eu':0.116,'Gd':0.212,'Tb':0.13131,
-      'Lu':0.23882,'Hf':0.1780,'Ta':0.328859,'W':0.816500,'Re':0.060396,'Os':1.077661,'Ir':1.564057,'Pt':2.12510,'Au':2.30861,
-      'Tl':0.320053,'Pb':0.356721,'Bi':0.942362,'At':2.41578}
+# Use the same affinity inputs and evidence categories as the reviewed element packets.
+PAPER = Path(__file__).resolve().parents[1]
+if hashlib.sha256(Path(ARCH).read_bytes()).hexdigest() != '75e67478d9a22ef85fa2d3f6ac36ad2860c6f8f62215127c558438a2cb53f62c':
+    raise ValueError('Ionization archive differs from the pin')
+def records(path):
+    with path.open(newline='') as source:
+        return list(csv.DictReader(source))
+
+EA, status_text = {}, {}
+for source_row in records(PAPER/'batch12/chemistry/anion_chemistry_h_nd.csv'):
+    symbol = source_row['symbol']
+    EA[symbol] = float(source_row['EA_eV'])
+    status_text[symbol] = 'estimated' if source_row['EA_status']=='estimated' else ''
+for source_row in records(PAPER/'batch12/chemistry/no_bound_anion_h_nd.csv'):
+    status_text[source_row['symbol']] = 'no bound ground-state anion in adopted ledger'
+for batch in range(13,18):
+    for source_row in records(PAPER/f'batch{batch}/ladder/affinities.csv'):
+        symbol, status = source_row['symbol'], source_row['status']
+        if source_row['EA_eV']:
+            EA[symbol] = float(source_row['EA_eV'])
+        if status == 'measured-lower-bound':
+            label = 'bound; EA > ' + source_row['lower_bound_eV'] + ' eV'
+        elif status == 'experimental-upper-limit-no-established-bound-anion':
+            label = 'no established bound anion; experimental upper limit ' + source_row['upper_bound_eV'] + ' eV'
+        else:
+            label = {'theory-only':'theory only; no adopted measured EA',
+                     'preliminary-measurement':'preliminary measurement',
+                     'evaluated-AMS-estimate':'estimated affinity',
+                     'evaluated-AMS-estimate-disputed':'disputed estimate',
+                     'evaluated-no-stable-ground-anion':'no stable ground anion in evaluation',
+                     'no established bound ground anion':'no established bound ground anion',
+                     'observed-preliminary-systematics-outstanding':'bound; preliminary threshold, systematics outstanding'}.get(status,'')
+        if symbol not in EA and not label:
+            raise ValueError(f'Unrendered missing-point status for {symbol}: {status}')
+        status_text[symbol] = label
+if set(status_text) != {rec[i]['symbol'] for i in range(1,86)}:
+    raise ValueError('Incomplete anion source coverage')
 def th(Z): return {t['q']: t['IE_eV'] for t in rec[Z]['thresholds']}
 def gam(z): return (z - 1) / (z + 1)
 def cell(z, label=''):
@@ -37,7 +67,13 @@ for Z in range(1, 86):
     rows.append((Z, s, rec[Z]['name'], r0, K, L, M, N4, N5, s in EA))
 def row_html(r):
     Z, s, name, r0, K, L, M, N4, N5, bound = r
-    r0c = cell(r0) if bound else '<td class="na">no bound anion</td>'
+    annotation = html.escape(status_text[s])
+    if bound:
+        r0c = cell(r0)
+        if annotation:
+            r0c = r0c.replace('</td>', f'<span class="g">{annotation}</span></td>')
+    else:
+        r0c = f'<td class="na">{annotation}</td>' 
     return f'<tr><td class="el"><b>{s}</b> <span class="zz">{Z}</span></td>{r0c}{cell(K)}{cell(L)}{cell(M)}{cell(N4)}{cell(N5)}</tr>'
 table = '\n'.join(row_html(r) for r in rows)
 # opening-map SVG: ratio vs Z for each noble core, log scale, wall line
@@ -80,7 +116,9 @@ for Z in range(1, 86):
     sy = rec[Z]['symbol']
     if sy not in EA: continue
     I = th(Z)[0]; A = EA[sy]; z = I/A; g = (I-A)/(I+A)
-    chem.append((1/(2*g*g), f'<tr><td>{rec[Z]["name"]}</td><td class="{"out" if z > W else "in"}">{z:.4f}</td><td>{g:.5f}</td><td class="{"out" if z > W else "in"}">{1/(2*g*g):.4f}</td></tr>'))
+    grade = html.escape(status_text[sy])
+    name = html.escape(rec[Z]['name']) + (f' <small>({grade})</small>' if grade else '')
+    chem.append((1/(2*g*g), f'<tr><td>{name}</td><td class="{"out" if z > W else "in"}">{z:.4f}</td><td>{g:.5f}</td><td class="{"out" if z > W else "in"}">{1/(2*g*g):.4f}</td></tr>'))
 chem = '\n'.join(r for _, r in sorted(chem, reverse=True))
 # Lean inventory
 def thms(f): return len(re.findall(r'^theorem ', open(f).read(), re.M))

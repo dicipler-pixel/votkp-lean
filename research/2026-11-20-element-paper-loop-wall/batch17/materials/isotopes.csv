@@ -1,0 +1,208 @@
+symbol,A,Z,N,net_up,net_down,spin_parity,charge_radius_fm,radius_unc_fm,natural_abundance_pct,abundance_unc_pct,raw_API_dipole_muN,raw_API_dipole_unc_muN,derived_spin_zero_ground_dipole_muN,dipole_status,ENSDF_cutoff
+Tl,176,81,95,257,271,(3- 4- 5-),,,,,,,,unreported,08-SEP-2009
+Tl,177,81,96,258,273,(1/2+),,,,,,,,unreported,30-Aug-2019
+Tl,178,81,97,259,275,,,,,,,,,unreported,31-May-2008
+Tl,179,81,98,260,277,(1/2+),,,,,1.631,0.016,,confirm state for individually cited raw API value,15-Nov-2008
+Tl,180,81,99,261,279,(5-),,,,,-0.56,0.02,,confirm state for individually cited raw API value,1-Feb-2015
+Tl,181,81,100,262,281,(1/2+),,,,,1.632,0.014,,confirm state for individually cited raw API value,23-Dec-2009
+Tl,182,81,101,263,283,(7+),,,,,0.54,0.1,,confirm state for individually cited raw API value,15-Jul-2015
+Tl,183,81,102,264,285,(1/2+),,,,,3.61,0.06,,confirm state for individually cited raw API value,15-Apr-2015
+Tl,184,81,103,265,287,,,,,,0.43,0.02,,confirm state for individually cited raw API value,1-Oct-2009
+Tl,185,81,104,266,289,(1/2+),,,,,1.6,0.04,,confirm state for individually cited raw API value,1-Nov-2005
+Tl,186,81,105,267,291,(2-),,,,,,,,unreported,1-Mar-2022
+Tl,187,81,106,268,293,(1/2+),,,,,1.54,0.06,,confirm state for individually cited raw API value,1-Nov-2008
+Tl,188,81,107,269,295,(2-),5.4017,0.0072,,,0.481,0.008,,confirm state for individually cited raw API value,1-Feb-2018
+Tl,189,81,108,270,297,(1/2+),,,,,,,,unreported,15-Apr-2017
+Tl,190,81,109,271,299,2-,5.4121,0.0056,,,0.253,0.002,,confirm state for individually cited raw API value,15-Oct-2020
+Tl,191,81,110,272,301,(1/2+),5.4169,0.0048,,,1.582,0.004,,confirm state for individually cited raw API value,1-Dec-2006
+Tl,192,81,111,273,303,(2-),5.4191,0.0051,,,0.199,0.003,,confirm state for individually cited raw API value,15-Jun-2012
+Tl,193,81,112,274,305,1/2(+),5.4243,0.0042,,,1.585,0.003,,confirm state for individually cited raw API value,31-Mar-2017
+Tl,194,81,113,275,307,2-,5.4259,0.0046,,,0.139,0.003,,confirm state for individually cited raw API value,3-Sep-2021
+Tl,195,81,114,276,309,1/2+,5.4325,0.0039,,,1.57,0.04,,confirm state for individually cited raw API value,1-Mar-2014
+Tl,196,81,115,277,311,2-,5.4327,0.0042,,,0.072,0.003,,confirm state for individually cited raw API value,1-Jan-2006
+Tl,197,81,116,278,313,1/2+,5.4388,0.0036,,,1.57,0.02,,confirm state for individually cited raw API value,1-Jan-2002
+Tl,198,81,117,279,315,2-,5.4396,0.0036,,,0,0.01,,confirm state for individually cited raw API value,1-Dec-2015
+Tl,199,81,118,280,317,1/2+,5.4479,0.0031,,,1.59,0.02,,confirm state for individually cited raw API value,15-Oct-2006
+Tl,200,81,119,281,319,2-,5.4491,0.0031,,,0.04,0.01,,confirm state for individually cited raw API value,1-Aug-2006
+Tl,201,81,120,282,321,1/2+,5.4573,0.0029,,,1.599,0.003,,confirm state for individually cited raw API value,20-Sep-2022
+Tl,202,81,121,283,323,2-,5.4595,0.0027,,,0.06,0.01,,confirm state for individually cited raw API value,1-May-2007
+Tl,203,81,122,284,325,1/2+,5.4666,0.0027,29.515,0.044,1.616,0.002,,confirm state for individually cited raw API value,1-Mar-2005
+Tl,204,81,123,285,327,2-,5.4704,0.0028,,,0.09,0.01,,confirm state for individually cited raw API value,1-Oct-2009
+Tl,205,81,124,286,329,1/2+,5.4759,0.0026,70.485,0.044,1.632,0.002,,confirm state for individually cited raw API value,20-Apr-2020
+Tl,206,81,125,287,331,0-,,,,,4.27,0.06,0,exact spin-zero ground state,31-Jan-2008
+Tl,207,81,126,288,333,1/2+,5.4853,0.0027,,,1.869,0.005,,confirm state for individually cited raw API value,1-Aug-2010
+Tl,208,81,127,289,335,5+,5.4946,0.0028,,,0.291,0.013,,confirm state for individually cited raw API value,1-Jun-2007
+Tl,209,81,128,290,337,1/2+,,,,,,,,unreported,30-Sep-2013
+Tl,210,81,129,291,339,(5+),,,,,,,,unreported,31-Mar-2014
+Tl,211,81,130,292,341,,,,,,,,,unreported,28-FEB-2013
+Tl,212,81,131,293,343,(5+),,,,,,,,unreported,1-Aug-2020
+Tl,213,81,132,294,345,(1/2+),,,,,,,,unreported,1-Jan-2022
+Tl,214,81,133,295,347,,,,,,,,,unreported,1-May-2021
+Tl,215,81,134,296,349,,,,,,,,,unreported,1-Jun-2022
+Tl,216,81,135,297,351,,,,,,,,,unreported,15-MAY-2011
+Tl,217,81,136,298,353,,,,,,,,,unreported,1-DEC-2017
+Pb,178,82,96,260,274,0+,,,,,,,0,exact spin-zero ground state,31-May-2008
+Pb,179,82,97,261,276,(9/2-),,,,,,,,unreported,25-Feb-2010
+Pb,180,82,98,262,278,0+,,,,,,,0,exact spin-zero ground state,1-Feb-2015
+Pb,181,82,99,263,280,(13/2+),,,,,,,,unreported,31-Aug-2005
+Pb,182,82,100,264,282,0+,5.3788,0.0035,,,,,0,exact spin-zero ground state,15-Jul-2015
+Pb,183,82,101,265,284,(3/2-),5.3869,0.0030,,,-1.154,0.005,,confirm state for individually cited raw API value,15-Apr-2015
+Pb,184,82,102,266,286,0+,5.3930,0.0029,,,,,0,exact spin-zero ground state,1-Oct-2009
+Pb,185,82,103,267,288,3/2-,5.3984,0.0028,,,-1.137,0.005,,confirm state for individually cited raw API value,1-Nov-2005
+Pb,186,82,104,268,290,0+,5.4027,0.0027,,,,,0,exact spin-zero ground state,1-Mar-2022
+Pb,187,82,105,269,292,(3/2-),5.4079,0.0026,,,-1.122,0.003,,confirm state for individually cited raw API value,1-Nov-2008
+Pb,188,82,106,270,294,0+,5.4139,0.0025,,,-0.3,0.06,0,exact spin-zero ground state,1-Feb-2018
+Pb,189,82,107,271,296,(3/2-),5.4177,0.0024,,,-1.077,0.009,,confirm state for individually cited raw API value,15-Apr-2017
+Pb,190,82,108,272,298,0+,5.4222,0.0023,,,,,0,exact spin-zero ground state,15-Oct-2020
+Pb,191,82,109,273,300,(3/2-),5.4229,0.0026,,,-1.167,0.007,,confirm state for individually cited raw API value,1-Dec-2006
+Pb,192,82,110,274,302,0+,5.4300,0.0025,,,,,0,exact spin-zero ground state,15-Jun-2012
+Pb,193,82,111,275,304,(3/2-),5.4310,0.0023,,,-1.146,0.007,,confirm state for individually cited raw API value,31-Mar-2017
+Pb,194,82,112,276,306,0+,5.4372,0.0023,,,-0.38,0.14,0,exact spin-zero ground state,3-Sep-2021
+Pb,195,82,113,277,308,3/2-,5.4389,0.0045,,,-1.124,0.007,,confirm state for individually cited raw API value,1-Mar-2014
+Pb,196,82,114,278,310,0+,5.4444,0.0024,,,-1.92,0.02,0,exact spin-zero ground state,1-Jan-2006
+Pb,197,82,115,279,312,3/2-,5.4446,0.0024,,,-1.0718,0.0023,,confirm state for individually cited raw API value,1-Jan-2002
+Pb,198,82,116,280,314,0+,5.4524,0.0022,,,,,0,exact spin-zero ground state,1-Dec-2015
+Pb,199,82,117,281,316,3/2-,5.4529,0.0022,,,-1.0707,0.0014,,confirm state for individually cited raw API value,15-Oct-2006
+Pb,200,82,118,282,318,0+,5.4611,0.0020,,,,,0,exact spin-zero ground state,1-Aug-2006
+Pb,201,82,119,283,320,5/2-,5.4629,0.0019,,,0.6731,0.0006,,confirm state for individually cited raw API value,20-Sep-2022
+Pb,202,82,120,284,322,0+,5.4705,0.0017,,,,,0,exact spin-zero ground state,1-May-2007
+Pb,203,82,121,285,324,5/2-,5.4727,0.0017,,,0.6841,0.0006,,confirm state for individually cited raw API value,4-Jul-2021
+Pb,204,82,122,286,326,0+,5.4803,0.0014,1.4,0.6,0.02,,0,exact spin-zero ground state,1-Oct-2009
+Pb,205,82,123,287,328,5/2-,5.4828,0.0015,,,0.7094,0.0006,,confirm state for individually cited raw API value,20-Apr-2020
+Pb,206,82,124,288,330,0+,5.4902,0.0014,24.1,3.0,-0.152,0.003,0,exact spin-zero ground state,31-Jan-2008
+Pb,207,82,125,289,332,1/2-,5.4943,0.0014,22.1,5.0,0.5906,0.0004,,confirm state for individually cited raw API value,1-Aug-2010
+Pb,208,82,126,290,334,0+,5.5012,0.0013,52.4,7.0,,,0,exact spin-zero ground state,1-Jun-2007
+Pb,209,82,127,291,336,9/2+,5.5100,0.0014,,,-1.4686,0.0019,,confirm state for individually cited raw API value,30-Sep-2013
+Pb,210,82,128,292,338,0+,5.5208,0.0016,,,,,0,exact spin-zero ground state,31-Mar-2014
+Pb,211,82,129,293,340,9/2+,5.5290,0.0017,,,-1.3991,0.0012,,confirm state for individually cited raw API value,28-FEB-2013
+Pb,212,82,130,294,342,0+,5.5396,0.0019,,,,,0,exact spin-zero ground state,1-Aug-2020
+Pb,213,82,131,295,344,(9/2+),,,,,,,,unreported,1-Jan-2022
+Pb,214,82,132,296,346,0+,5.5577,0.0023,,,,,0,exact spin-zero ground state,1-May-2021
+Pb,215,82,133,297,348,(9/2+),,,,,,,,unreported,23-SEP-2013
+Pb,216,82,134,298,350,0+,,,,,,,0,exact spin-zero ground state,19-FEB-2015
+Pb,217,82,135,299,352,,,,,,,,,unreported,1-DEC-2017
+Pb,218,82,136,300,354,0+,,,,,,,0,exact spin-zero ground state,30-Oct-2019
+Pb,219,82,137,301,356,,,,,,,,,unreported,19-May-2021
+Pb,220,82,138,302,358,0+,,,,,,,0,exact spin-zero ground state,15-MAY-2011
+Bi,184,83,101,267,285,,,,,,,,,unreported,1-Oct-2009
+Bi,185,83,102,268,287,1/2+,,,,,,,,unreported,1-Nov-2005
+Bi,186,83,103,269,289,(3+),,,,,,,,unreported,1-Mar-2022
+Bi,187,83,104,270,291,(9/2-),,,,,,,,unreported,1-Nov-2008
+Bi,188,83,105,271,293,(3+),,,,,,,,unreported,1-Feb-2018
+Bi,189,83,106,272,295,(9/2-),,,,,3.7,0.3,,confirm state for individually cited raw API value,31-AUG-2021
+Bi,190,83,107,273,297,(3+),,,,,3.85,0.09,,confirm state for individually cited raw API value,15-Oct-2020
+Bi,191,83,108,274,299,(9/2-),,,,,3.66,0.05,,confirm state for individually cited raw API value,29-FEB-2016
+Bi,192,83,109,275,301,(3+),,,,,4.16,0.17,,confirm state for individually cited raw API value,15-Jun-2012
+Bi,193,83,110,276,303,(9/2-),,,,,3.72,0.1,,confirm state for individually cited raw API value,31-Mar-2017
+Bi,194,83,111,277,305,(3+),,,,,4.17,0.1,,confirm state for individually cited raw API value,3-Sep-2021
+Bi,195,83,112,278,307,[9/2-],,,,,3.85,0.1,,confirm state for individually cited raw API value,1-Mar-2014
+Bi,196,83,113,279,309,(3+),,,,,,,,unreported,1-Jan-2006
+Bi,197,83,114,280,311,(9/2-),,,,,3.9,0.11,,confirm state for individually cited raw API value,1-Jan-2002
+Bi,198,83,115,281,313,(2+ 3+),,,,,2.45,0.07,,confirm state for individually cited raw API value,1-Dec-2015
+Bi,199,83,116,282,315,9/2-,,,,,4.6,0.4,,confirm state for individually cited raw API value,15-Oct-2006
+Bi,200,83,117,283,317,7+,,,,,,,,unreported,1-Aug-2006
+Bi,201,83,118,284,319,9/2-,,,,,4.8,0.3,,confirm state for individually cited raw API value,20-Sep-2022
+Bi,202,83,119,285,321,5+,5.4840,0.0912,,,4.24,0.014,,confirm state for individually cited raw API value,1-May-2007
+Bi,203,83,120,286,323,9/2-,5.4911,0.0911,,,3.999,0.013,,confirm state for individually cited raw API value,4-Jul-2021
+Bi,204,83,121,287,325,6+,5.4934,0.0910,,,4.302,0.015,,confirm state for individually cited raw API value,1-Oct-2009
+Bi,205,83,122,288,327,9/2-,5.5008,0.0909,,,4.047,0.007,,confirm state for individually cited raw API value,20-Apr-2020
+Bi,206,83,123,289,329,6+,5.5034,0.0909,,,4.341,0.008,,confirm state for individually cited raw API value,31-Jan-2008
+Bi,207,83,124,290,331,9/2-,5.5103,0.0907,,,4.0729,0.002,,confirm state for individually cited raw API value,1-Aug-2010
+Bi,208,83,125,291,333,5+,5.5147,0.0907,,,4.572,0.01,,confirm state for individually cited raw API value,1-Jun-2007
+Bi,209,83,126,292,335,9/2-,5.5211,0.0906,100,,4.092,0.002,,confirm state for individually cited raw API value,30-Sep-2013
+Bi,210,83,127,293,337,1-,5.5300,0.0904,,,-0.0443,0.0001,,confirm state for individually cited raw API value,31-Mar-2014
+Bi,211,83,128,294,339,9/2-,,,,,3.85,0.03,,confirm state for individually cited raw API value,28-FEB-2013
+Bi,212,83,129,295,341,1(-),5.5489,0.0901,,,0.32,0.04,,confirm state for individually cited raw API value,1-Aug-2020
+Bi,213,83,130,296,343,9/2-,5.5586,0.0900,,,3.699,0.007,,confirm state for individually cited raw API value,1-Jan-2022
+Bi,214,83,131,297,345,1-,,,,,,,,unreported,1-May-2021
+Bi,215,83,132,298,347,(9/2-),,,,,,,,unreported,23-SEP-2013
+Bi,216,83,133,299,349,(6- 7-),,,,,,,,unreported,1-Mar-2007
+Bi,217,83,134,300,351,(9/2-),,,,,,,,unreported,1-DEC-2017
+Bi,218,83,135,301,353,(6- 7- 8-),,,,,,,,unreported,30-Oct-2019
+Bi,219,83,136,302,355,(9/2-),,,,,,,,unreported,19-May-2021
+Bi,220,83,137,303,357,,,,,,,,,unreported,15-MAY-2011
+Bi,221,83,138,304,359,,,,,,,,,unreported,15-MAY-2011
+Bi,222,83,139,305,361,,,,,,,,,unreported,20-DEC-2016
+Bi,223,83,140,306,363,,,,,,,,,unreported,15-MAY-2011
+Bi,224,83,141,307,365,,,,,,,,,unreported,08-Mar-2022
+Po,186,84,102,270,288,0+,,,,,,,0,exact spin-zero ground state,1-Mar-2022
+Po,187,84,103,271,290,(1/2- 5/2-),,,,,,,,unreported,1-Nov-2008
+Po,188,84,104,272,292,0+,,,,,,,0,exact spin-zero ground state,1-Feb-2018
+Po,189,84,105,273,294,(5/2-),,,,,,,,unreported,31-Aug-2021
+Po,190,84,106,274,296,0+,,,,,,,0,exact spin-zero ground state,15-Oct-2020
+Po,191,84,107,275,298,(3/2-),,,,,,,,unreported,1-Dec-2006
+Po,192,84,108,276,300,0+,5.5220,0.0178,,,,,0,exact spin-zero ground state,15-Jun-2012
+Po,193,84,109,277,302,(3/2-),,,,,,,,unreported,31-Mar-2017
+Po,194,84,110,278,304,0+,5.5167,0.0178,,,,,0,exact spin-zero ground state,3-Sep-2021
+Po,195,84,111,279,306,(3/2-),,,,,-0.6,0.04,,confirm state for individually cited raw API value,1-Mar-2014
+Po,196,84,112,280,308,0+,5.5136,0.0178,,,,,0,exact spin-zero ground state,1-Jan-2006
+Po,197,84,113,281,310,(3/2-),,,,,-0.88,0.07,,confirm state for individually cited raw API value,1-Jan-2002
+Po,198,84,114,282,312,0+,5.5146,0.0178,,,7.3,0.2,0,exact spin-zero ground state,1-Dec-2015
+Po,199,84,115,283,314,(3/2-),,,,,-0.91,0.07,,confirm state for individually cited raw API value,01-DEC-2015
+Po,200,84,116,284,316,0+,5.5199,0.0178,,,,,0,exact spin-zero ground state,1-Aug-2006
+Po,201,84,117,285,318,3/2-,,,,,-0.98,0.07,,confirm state for individually cited raw API value,20-Sep-2022
+Po,202,84,118,286,320,0+,5.5281,0.0177,,,7.45,0.12,0,exact spin-zero ground state,1-May-2007
+Po,203,84,119,287,322,5/2-,,,,,0.74,0.05,,confirm state for individually cited raw API value,4-Jul-2021
+Po,204,84,120,288,324,0+,5.5378,0.0177,,,,,0,exact spin-zero ground state,1-Oct-2009
+Po,205,84,121,289,326,5/2-,5.5389,0.0177,,,0.76,0.06,,confirm state for individually cited raw API value,20-Apr-2020
+Po,206,84,122,290,328,0+,5.5480,0.0177,,,,,0,exact spin-zero ground state,31-Jan-2008
+Po,207,84,123,291,330,5/2-,5.5501,0.0177,,,0.79,0.06,,confirm state for individually cited raw API value,1-Aug-2010
+Po,208,84,124,292,332,0+,5.5584,0.0176,,,7.37,0.05,0,exact spin-zero ground state,1-Jun-2007
+Po,209,84,125,293,334,1/2-,5.5628,0.0176,,,0.68,0.08,,confirm state for individually cited raw API value,30-Sep-2013
+Po,210,84,126,294,336,0+,5.5704,0.0176,,,5.48,0.05,0,exact spin-zero ground state,31-Mar-2014
+Po,211,84,127,295,338,9/2+,,,,,-1.2,0.08,,confirm state for individually cited raw API value,28-FEB-2013
+Po,212,84,128,296,340,0+,,,,,,,0,exact spin-zero ground state,1-Aug-2020
+Po,213,84,129,297,342,9/2+,,,,,,,,unreported,1-Jan-2022
+Po,214,84,130,298,344,0+,,,,,,,0,exact spin-zero ground state,1-May-2021
+Po,215,84,131,299,346,9/2+,,,,,,,,unreported,23-SEP-2013
+Po,216,84,132,300,348,0+,5.6359,0.0174,,,,,0,exact spin-zero ground state,1-Mar-2007
+Po,217,84,133,301,350,(9/2+),,,,,-1.11,0.1,,confirm state for individually cited raw API value,1-DEC-2017
+Po,218,84,134,302,352,0+,5.6558,0.0173,,,,,0,exact spin-zero ground state,30-Oct-2019
+Po,219,84,135,303,354,(9/2+),,,,,,,,unreported,19-May-2021
+Po,220,84,136,304,356,0+,,,,,,,0,exact spin-zero ground state,31-Oct-2010
+Po,221,84,137,305,358,,,,,,,,,unreported,15-JUN-2013
+Po,222,84,138,306,360,0+,,,,,,,0,exact spin-zero ground state,31-Mar-2011
+Po,223,84,139,307,362,,,,,,,,,unreported,15-MAY-2011
+Po,224,84,140,308,364,0+,,,,,,,0,exact spin-zero ground state,08-Mar-2022
+Po,225,84,141,309,366,,,,,,,,,unreported,15-MAY-2011
+Po,226,84,142,310,368,0+,,,,,,,0,exact spin-zero ground state,15-MAY-2011
+Po,227,84,143,311,370,,,,,,,,,unreported,15-Jan-2016
+At,191,85,106,276,297,(1/2+),,,,,,,,unreported,1-Dec-2006
+At,192,85,107,277,299,(9- 10-),,,,,,,,unreported,15-Jun-2012
+At,193,85,108,278,301,(1/2+),,,,,,,,unreported,31-Mar-2017
+At,194,85,109,279,303,(4- 5-),,,,,,,,unreported,3-Sep-2021
+At,195,85,110,280,305,(1/2+),,,,,,,,unreported,1-Mar-2014
+At,196,85,111,281,307,(3+),,,,,3.72,0.14,,confirm state for individually cited raw API value,1-Jan-2006
+At,197,85,112,282,309,(9/2-),,,,,,,,unreported,1-Jan-2002
+At,198,85,113,283,311,(3+),,,,,,,,unreported,1-Dec-2015
+At,199,85,114,284,313,(9/2-),,,,,,,,unreported,15-Oct-2006
+At,200,85,115,285,315,(3+),,,,,4.28,0.15,,confirm state for individually cited raw API value,1-Aug-2006
+At,201,85,116,286,317,9/2-,,,,,4.01,0.07,,confirm state for individually cited raw API value,20-Sep-2022
+At,202,85,117,287,319,(2+ 3+),,,,,,,,unreported,1-May-2007
+At,203,85,118,288,321,9/2-,,,,,4,0.07,,confirm state for individually cited raw API value,4-Jul-2021
+At,204,85,119,289,323,7+,,,,,4.82,0.18,,confirm state for individually cited raw API value,1-Oct-2009
+At,205,85,120,290,325,9/2-,,,,,4.09,0.07,,confirm state for individually cited raw API value,20-Apr-2020
+At,206,85,121,291,327,(5)+,,,,,4.37,0.17,,confirm state for individually cited raw API value,31-Jan-2008
+At,207,85,122,292,329,9/2-,,,,,4.13,0.07,,confirm state for individually cited raw API value,1-Aug-2010
+At,208,85,123,293,331,6+,,,,,4.46,0.18,,confirm state for individually cited raw API value,1-Jun-2007
+At,209,85,124,294,333,9/2-,,,,,4.12,0.07,,confirm state for individually cited raw API value,30-Sep-2013
+At,210,85,125,295,335,(5)+,,,,,4.72,0.16,,confirm state for individually cited raw API value,31-Mar-2014
+At,211,85,126,296,337,9/2-,,,,,4.14,0.04,,confirm state for individually cited raw API value,28-FEB-2013
+At,212,85,127,297,339,(1-),,,,,,,,unreported,1-Aug-2020
+At,213,85,128,298,341,9/2-,,,,,,,,unreported,1-Jan-2022
+At,214,85,129,299,343,1-,,,,,,,,unreported,1-May-2021
+At,215,85,130,300,345,9/2-,,,,,,,,unreported,23-SEP-2013
+At,216,85,131,301,347,1-,,,,,,,,unreported,1-Mar-2007
+At,217,85,132,302,349,9/2-,,,,,3.8,0.2,,confirm state for individually cited raw API value,1-DEC-2017
+At,218,85,133,303,351,(3- 2-),,,,,,,,unreported,30-Oct-2019
+At,219,85,134,304,353,(9/2-),,,,,,,,unreported,19-May-2021
+At,220,85,135,305,355,3,,,,,,,,unreported,31-Oct-2010
+At,221,85,136,306,357,,,,,,,,,unreported,15-Jan-2007
+At,222,85,137,307,359,,,,,,,,,unreported,31-Mar-2011
+At,223,85,138,308,361,,,,,,,,,unreported,1-May-2001
+At,224,85,139,309,363,,,,,,,,,unreported,08-Mar-2022
+At,225,85,140,310,365,,,,,,,,,unreported,15-MAY-2011
+At,226,85,141,311,367,,,,,,,,,unreported,15-MAY-2011
+At,227,85,142,312,369,,,,,,,,,unreported,15-Jan-2016
+At,228,85,143,313,371,,,,,,,,,unreported,31-Dec-2012
+At,229,85,144,314,373,,,,,,,,,unreported,15-MAY-2011

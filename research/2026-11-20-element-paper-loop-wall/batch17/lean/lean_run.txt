@@ -1,0 +1,41 @@
+83 K-opening rows re-parsed from Lean; all 82 adjacent intervals are disjoint and descending.
+K Z=79: 4.001897840223, [4.001832222630,4.001963459537].
+K Z=80: 3.997804120778, [3.997740439340,3.997867803838].
+Osmium: IE=843823/100000, EA=1077661/1000000, z=7.830133966, Gamma=0.773502870, rectangular [7.829774006,7.830493942], outside
+Iridium: IE=448351/50000, EA=1564057/1000000, z=5.733179801, Gamma=0.702963524, rectangular [5.732998821,5.733360784], inside
+Platinum: IE=895883/100000, EA=21251/10000, z=4.215721613, Gamma=0.616543951, rectangular [4.215575371,4.215867862], inside
+Gold: IE=4612777/500000, EA=230861/100000, z=3.996150931, Gamma=0.599691837, rectangular [3.996097269,3.996204593], inside
+Thallium: IE=61082873/10000000, EA=320053/1000000, z=19.085236820, Gamma=0.900424375, rectangular [19.084100140,19.086373635], outside (comparison only)
+Lead: IE=74166799/10000000, EA=356721/1000000, z=20.791262359, Gamma=0.908220095, rectangular [20.791144109,20.791380611], outside
+Bismuth: IE=1821379/250000, EA=471181/500000, z=7.731122435, Gamma=0.770934377, rectangular [7.731009418,7.731235455], outside
+Astatine: IE=931751/100000, EA=120789/50000, z=3.856936476, Gamma=0.588217797, rectangular [3.856791605,3.857081355], inside
+Polonium conditional 11905631/1000±9/1000 cm^-1: z in [5.702866977, 5.702881018].
+Polonium conditional 11875±75 cm^-1: z in [5.681697171, 5.753927603].
+Seven sourced primary predictions supported. Po separately conditional; Tl excluded from predictions.
+Lean (version 4.34.1, x86_64-unknown-linux-gnu, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)
+Reusing previously checked MarginBounds.olean, identical source SHA-256 6e96f7b346fd392bf9d2416c955cde7da37a65611e6cf252c5849192d5b78b3d
+Reusing previously checked Batch11Kernel.olean, identical source SHA-256 64ad268b5500a3fdfce9b986a64d01caa239584689b8df6771b0939b0daa7018
+Reusing previously checked AntimonyCesium.olean, identical source SHA-256 732c23e1c3f6dcb74ace5432fc75a3f5965fa36994d031318bcd0f08150d8a12
+Reusing previously checked Batch12Bounds.olean, identical source SHA-256 fcb428781dd7322e803c160895c51637b0f80f697704cb9b27f4fb04d527be27
+'ElementPaper.HeavyChambers.strictlyAbove' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.HeavyChambers.strictlyBelow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.HeavyChambers.descending' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.HeavyChambers.sameCutForEveryInput' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.HeavyChambers.fullFirstCrossing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.HeavyChambers.goldMercuryK' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.HeavyChambers.nearerOnLeft' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.HeavyChambers.nearerAcrossFullBox' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.HeavyChambers.linearAlwaysNearer' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.HeavyChambers.forecastBoxCoverage' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.HeavyChambers.primarySeven' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.HeavyChambers.thalliumComparison' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.HeavyChambers.goldOppositeAtFour' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.HeavyChambers.poloniumStatisticalOnly' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.HeavyChambers.poloniumIfInDisplayedRange' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.HeavyChambers.poloniumCriticalBracket' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.HeavyChambers.controlsFalse' depends on axioms: [propext, Classical.choice, Quot.sound]
+Rejected: gold helium-core opening is below four
+Rejected: mercury helium-core opening exceeds four
+Rejected: polonium is a primary scored case
+Rejected: stated Po display window supports outside
+17 axiom audits passed. Four false controls rejected.

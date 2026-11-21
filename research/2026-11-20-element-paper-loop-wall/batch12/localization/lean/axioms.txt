@@ -1,0 +1,2 @@
+'VOTKP.Junction.occupiedOverlap_not_injective_of_rank_drop' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.Junction.occupiedOverlap_det_zero_of_rank_drop' depends on axioms: [propext, Classical.choice, Quot.sound]
