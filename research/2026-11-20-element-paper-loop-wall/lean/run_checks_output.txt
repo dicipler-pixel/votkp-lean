@@ -1,0 +1,33 @@
+BUILD OK: 39 theorems
+'gam_reverse' depends on axioms: [propext, Classical.choice, Quot.sound]
+'power_even' depends on axioms: [propext, Classical.choice, Quot.sound]
+'wall_quadratic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'outside_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'wall_two_branches' depends on axioms: [propext, Classical.choice, Quot.sound]
+'reverse_same_side' depends on axioms: [propext, Classical.choice, Quot.sound]
+'six_and_sixth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'sinh_sq_form' depends on axioms: [propext, Classical.choice, Quot.sound]
+'hydrogenic_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'two_thirds_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'crossing_C_N' depends on axioms: [propext, Classical.choice, Quot.sound]
+'neon_just_above_two_thirds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'oxygen_two_sides' depends on axioms: [propext, Classical.choice, Quot.sound]
+'rung0_H' depends on axioms: [propext, Classical.choice, Quot.sound]
+'rung0_F' depends on axioms: [propext, Classical.choice, Quot.sound]
+'screened_six_outside' depends on axioms: [propext, Classical.choice, Quot.sound]
+'screened_seven_inside' depends on axioms: [propext, Classical.choice, Quot.sound]
+'bare_nine_outside' depends on axioms: [propext, Classical.choice, Quot.sound]
+'bare_ten_inside' depends on axioms: [propext, Classical.choice, Quot.sound]
+'refute_N_outside' depends on axioms: [propext, Classical.choice, Quot.sound]
+'refute_F_rung0_outside' depends on axioms: [propext, Classical.choice, Quot.sound]
+'refute_C_inside' depends on axioms: [propext, Classical.choice, Quot.sound]
+'refute_Ne_exactly_five' depends on axioms: [propext, Classical.choice, Quot.sound]
+'refute_screened_seven_outside' depends on axioms: [propext, Classical.choice, Quot.sound]
+'refute_power_odd' depends on axioms: [propext, Classical.choice, Quot.sound]
+SCAN OK: no sorry, admit, native_decide or axiom
+control rejected: controls/C_inside.lean
+control rejected: controls/F_rung0_outside.lean
+control rejected: controls/N_outside.lean
+control rejected: controls/Ne_exactly_five.lean
+control rejected: controls/power_odd.lean
+control rejected: controls/screened_seven_outside.lean

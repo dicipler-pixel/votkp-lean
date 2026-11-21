@@ -1,0 +1,26 @@
+import LoopWall
+#print axioms gam_reverse
+#print axioms power_even
+#print axioms wall_quadratic
+#print axioms outside_iff
+#print axioms wall_two_branches
+#print axioms reverse_same_side
+#print axioms six_and_sixth
+#print axioms sinh_sq_form
+#print axioms hydrogenic_limit
+#print axioms two_thirds_iff
+#print axioms crossing_C_N
+#print axioms neon_just_above_two_thirds
+#print axioms oxygen_two_sides
+#print axioms rung0_H
+#print axioms rung0_F
+#print axioms screened_six_outside
+#print axioms screened_seven_inside
+#print axioms bare_nine_outside
+#print axioms bare_ten_inside
+#print axioms refute_N_outside
+#print axioms refute_F_rung0_outside
+#print axioms refute_C_inside
+#print axioms refute_Ne_exactly_five
+#print axioms refute_screened_seven_outside
+#print axioms refute_power_odd

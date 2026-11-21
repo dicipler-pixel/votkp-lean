@@ -1,0 +1,13 @@
+steps checked: 35 mismatches: 0
+C S_Z 0.59964 sigma_Z 0.63175 screened ratio 6.09547 data ratio 6.07953 err 0.26%
+N S_Z 0.60363 sigma_Z 0.63005 screened ratio 5.64841 data ratio 5.63967 err 0.16%
+O S_Z 0.60674 sigma_Z 0.62846 screened ratio 5.35859 data ratio 5.35283 err 0.11%
+F S_Z 0.60930 sigma_Z 0.62681 screened ratio 5.15546 data ratio 5.15101 err 0.09%
+Ne S_Z 0.61148 sigma_Z 0.62502 screened ratio 5.00518 data ratio 5.00135 err 0.08%
+Z* interp 6.570867406554702
+Gamma=2/3 <=> z= 4.999999999999999
+rung0 C z 8.9217 Gamma 0.79842 outside wall
+rung0 O z 9.3203 Gamma 0.80621 outside wall
+rung0 F z 5.1226 Gamma 0.67334 inside wall
+graphite d 1.422591063283238 diamond d 1.5445563076495463 Ne d 3.1551104576543745 2.0697015485330246
+diamond f 0.31149641909447 graphite f 0.20032405989520508
