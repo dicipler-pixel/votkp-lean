@@ -1,6 +1,6 @@
-C ratio 6.07953 N ratio 5.63969
-C/C loop open
-N/N loop closes
-C/N loop open
-C fixed: loop opens at z = 5.591162
+carbon helium-core opening ratio 6.07953  nitrogen helium-core opening ratio 5.63969
+carbon face with carbon face: loop open
+nitrogen face with nitrogen face: loop closes
+carbon face with nitrogen face: loop open
+carbon face held fixed, second face swept: loop opens at z = 5.591162
 equal faces: loop opens at z = 5.828427  3+2*sqrt2 = 5.828427

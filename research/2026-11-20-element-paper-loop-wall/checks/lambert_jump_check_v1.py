@@ -12,15 +12,17 @@ def perp_circle(z):
 def closes(za, zb):
     ca, Ra = perp_circle(za); cb, Rb = perp_circle(zb)
     return math.hypot(ca, cb) < Ra + Rb          # centres on perpendicular axes
-C, N = 64.4935 and 392.09/64.4935, 552.07/97.8902
-print('C ratio', round(C,5), 'N ratio', round(N,5))
-for name, za, zb in [('C/C',C,C), ('N/N',N,N), ('C/N',C,N)]:
-    print(name, 'loop closes' if closes(za,zb) else 'loop open')
+# carbon: 4th to 5th removal (last 2s electron, then first 1s electron of the closed helium-like core)
+# nitrogen: 5th to 6th removal (same two steps)
+C, N = 392.09/64.4935, 552.07/97.8902
+print('carbon helium-core opening ratio', round(C,5), ' nitrogen helium-core opening ratio', round(N,5))
+for name, za, zb in [('carbon face with carbon face',C,C), ('nitrogen face with nitrogen face',N,N), ('carbon face with nitrogen face',C,N)]:
+    print(name + ':', 'loop closes' if closes(za,zb) else 'loop open')
 lo, hi = 1.0001, 50.0                            # sweep the second face with C held fixed
 for _ in range(200):
     mid = (lo+hi)/2
     (lo, hi) = (mid, hi) if closes(C, mid) else (lo, mid)
-print('C fixed: loop opens at z =', round(lo, 6))
+print('carbon face held fixed, second face swept: loop opens at z =', round(lo, 6))
 lo, hi = 1.0001, 50.0
 for _ in range(200):
     mid = (lo+hi)/2
