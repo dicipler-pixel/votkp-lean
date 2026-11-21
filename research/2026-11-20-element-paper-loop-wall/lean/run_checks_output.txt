@@ -1,4 +1,5 @@
 BUILD OK: 81 theorems
+BUILD OK: OpeningMap, 57 theorems
 'gam_reverse' depends on axioms: [propext, Classical.choice, Quot.sound]
 'power_even' depends on axioms: [propext, Classical.choice, Quot.sound]
 'wall_quadratic' depends on axioms: [propext, Classical.choice, Quot.sound]
@@ -49,10 +50,16 @@ BUILD OK: 81 theorems
 'gam_inverse' depends on axioms: [propext, Classical.choice, Quot.sound]
 'face_apex' depends on axioms: [propext, Classical.choice, Quot.sound]
 'shell_floors_inside' depends on axioms: [propext, Classical.choice, Quot.sound]
+'coreHe_outside' depends on axioms: [propext, Classical.choice, Quot.sound]
+'coreRn_inside_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ladder_Mn_all_inside' depends on axioms: [propext, Classical.choice, Quot.sound]
+'francium_straddles' depends on axioms: [propext, Classical.choice, Quot.sound]
+'frozen_prediction_Rb_Sr' depends on axioms: [propext, Classical.choice, Quot.sound]
 SCAN OK: no sorry, admit, native_decide or axiom
 control rejected: controls/C_inside.lean
 control rejected: controls/Ca_M_outside.lean
 control rejected: controls/F_rung0_outside.lean
+control rejected: controls/Fr_upper_inside.lean
 control rejected: controls/Mg_L_outside.lean
 control rejected: controls/N_outside.lean
 control rejected: controls/Ne_exactly_five.lean

@@ -1,0 +1,7 @@
+He-like core N=2: 101 ratios; first Li z=14.0289; outside: Li 14.0289, Be 8.4507, B 6.8381, C 6.0795
+Ne-like core N=10: 100 ratios; first Na z=9.2013; outside: Na 9.2013
+Ar-like core N=18: 92 ratios; first K z=7.2858; outside: K 7.2858
+Kr-like core N=36: 74 ratios; first Rb z=6.5331; outside: Rb 6.5331
+Xe-like core N=54: 49 ratios; first Cs z=5.9471; outside: Cs 5.9471
+Rn-like core N=86: 17 ratios; first Fr z=5.5000; outside: 
+Fr 4.0727411 22.4 1.1e-06 1.9 E S range 5.0335 5.9665 wall 5.8284

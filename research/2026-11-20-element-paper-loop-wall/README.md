@@ -6,9 +6,9 @@ This folder holds the Lean formalization of the loop wall and the hydrogen-to-ne
 certificates, the arithmetic checks of the two element batches, and the research batches they
 check. It is kept for the element paper.
 
-## What is proved (`lean/LoopWall.lean`, core Lean 4.34.1, no Mathlib, exact `Rat` arithmetic)
+## What is proved (`lean/LoopWall.lean` and `lean/OpeningMap.lean`, core Lean 4.34.1, no Mathlib, exact `Rat` arithmetic)
 
-81 theorems. Axioms: only `propext`, `Classical.choice`, `Quot.sound`. No `sorry`, `admit`,
+81 theorems in `LoopWall.lean` and 57 in `OpeningMap.lean`. Axioms: only `propext`, `Classical.choice`, `Quot.sound`. No `sorry`, `admit`,
 `native_decide` or `axiom`. Run `lean/run_checks.sh`; its output is `lean/run_checks_output.txt`.
 
 The peel step of an ordered pair of thresholds (a, then b) has ratio z = b/a and reflection
@@ -39,7 +39,7 @@ The peel step of an ordered pair of thresholds (a, then b) has ratio z = b/a and
    between Z = 6 and 7 (`screened_six_outside`, `screened_seven_inside`); the unscreened control
    moves it to between 9 and 10 (`bare_nine_outside`, `bare_ten_inside`).
 8. **False controls** (`lean/controls/`): N outside, F's rung 0 outside, C inside, neon's ratio
-   exactly 5, the screened Z = 7 outside, Γ² odd, Mg's L opening outside, Si's rung 0 inside, Ca's M opening outside, S above σ with a
+   exactly 5, the screened Z = 7 outside, Γ² odd, francium's upper end inside, Mg's L opening outside, Si's rung 0 inside, Ca's M opening outside, S above σ with a
    bare hydrogenic H-like energy. Each is rejected by Lean and each is refuted
    as a theorem in `LoopWall.lean` (`refute_*`).
 
@@ -67,6 +67,14 @@ The peel step of an ordered pair of thresholds (a, then b) has ratio z = b/a and
    `checks/hsb/hsb_model_matched.js`, one line changed so the port-to-lattice links take their own
    clock): with exterior clocks set to 1 and each element's peel ratio kept inside the ball, the
    backward sodium-below-argon ranking closes by about 98%. All rows stay below 1/12.
+14. **The noble-core opening map** (`lean/OpeningMap.lean`, generated from the archive by
+   `checks/gen_opening_map_lean.py`): every opening ratio in `data/element_thresholds_20261011.json.gz`
+   behind a He, Ne, Ar, Kr, Xe or Rn core, 433 in all, each certified on its side of the wall.
+   Outside: Li, Be, B, C (He core); Na (Ne); K (Ar); Rb (Kr); Cs (Xe). Everything else is inside.
+   After its first element, each of the Ne, Ar, Kr and Xe sequences is inside at once.
+   The frozen Rb/Sr prediction holds (`frozen_prediction_Rb_Sr`). Francium's encoded central ratio
+   is inside, but its input interval straddles the wall (`francium_straddles`). Every ordinary step
+   of Sc, Ti, V, Cr and Mn (110 steps) is inside (`ladder_*_all_inside`).
 
 ## Sources
 
