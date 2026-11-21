@@ -159,4 +159,26 @@ theorem critical_occupation (μb δ c : ℝ) (hδ : 0 < δ) (hc : c ≠ 0) :
   field_simp
   try ring
 
+/-- **§20.2.1.** `w(ω) = 2 ℏ τ_b ω / (1 + (τ_b ω)²) ≤ ℏ`, with equality exactly at `ω τ_b = 1`. -/
+theorem bath_crossover (hbar τ ω : ℝ) (hh : 0 < hbar) (hτ : 0 < τ) (hω : 0 ≤ ω) :
+    2 * hbar * τ * ω / (1 + (τ * ω) ^ 2) ≤ hbar ∧
+      (2 * hbar * τ * ω / (1 + (τ * ω) ^ 2) = hbar ↔ τ * ω = 1) := by
+  have hden : 0 < 1 + (τ * ω) ^ 2 := by positivity
+  constructor
+  · rw [div_le_iff₀ hden]
+    nlinarith [sq_nonneg (τ * ω - 1)]
+  · rw [div_eq_iff hden.ne']
+    constructor
+    · intro heq
+      have hsq : (τ * ω - 1) ^ 2 = 0 := by nlinarith
+      have : τ * ω - 1 = 0 := by
+        have hmul : (τ * ω - 1) * (τ * ω - 1) = 0 := by simpa [pow_two] using hsq
+        rcases mul_eq_zero.mp hmul with h | h <;> exact h
+      linarith
+    · intro ht1
+      calc 2 * hbar * τ * ω = 2 * hbar * (τ * ω) := by ring
+        _ = 2 * hbar * 1 := by rw [ht1]
+        _ = hbar * (1 + 1 ^ 2) := by ring
+        _ = hbar * (1 + (τ * ω) ^ 2) := by rw [ht1]
+
 end VOTKP.Curvature

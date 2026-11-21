@@ -256,4 +256,127 @@ theorem reduced_associator {R : Type*} [Ring R] (P : R →+ R) (x y z : R) :
   simp only [mul_sub, sub_mul, mul_assoc]
   abel
 
+/-! ## 5.9 The predictor bound -/
+
+/-- **§5.9.** A record shared by two states forces every predictor of a later observable
+to miss at least one of them by half the gap. -/
+theorem predictor_half_gap {S R : Type*} (record : S → R) (F : S → ℝ)
+    {s s' : S} {Δ : ℝ} (hrec : record s = record s') (hΔ : |F s - F s'| = Δ)
+    (Fhat : R → ℝ) :
+    Δ / 2 ≤ max (|Fhat (record s) - F s|) (|Fhat (record s') - F s'|) := by
+  set p := Fhat (record s)
+  have hp' : Fhat (record s') = p := by simp [p, hrec]
+  have htri : |F s - F s'| ≤ |p - F s| + |p - F s'| := by
+    have h := abs_add_le (F s - p) (p - F s')
+    simpa [sub_add_sub_cancel, abs_sub_comm] using h
+  rw [hΔ] at htri
+  rw [hp']
+  have h1 : |p - F s| ≤ max (|p - F s|) (|p - F s'|) := le_max_left _ _
+  have h2 : |p - F s'| ≤ max (|p - F s|) (|p - F s'|) := le_max_right _ _
+  linarith
+
+/-- **§5.9.** The shared record `(T_s(0), T_s(√2))` forces every predictor of the outcomes
+at `x = 1` to miss by at least `2/5`. -/
+theorem record_half_two_fifths (Fhat : ℝ × ℝ → ℝ) :
+    (2 : ℝ) / 5 ≤ max
+      (|Fhat (T 1 0, T 1 √2) - T 1 1|)
+      (|Fhat (T (-1) 0, T (-1) √2) - T (-1) 1|) := by
+  have hs := shared_records
+  have hl := later_outcomes
+  have hrec : (T 1 0, T 1 √2) = (T (-1) 0, T (-1) √2) := by
+    ext <;> simp [hs.1, hs.2.1, hs.2.2.1, hs.2.2.2]
+  have hΔ : |T 1 1 - T (-1) 1| = 4 / 5 := by
+    rw [hl.1, hl.2.1]
+    norm_num
+  have h := predictor_half_gap
+    (fun b : Bool => if b then (T (-1) 0, T (-1) √2) else (T 1 0, T 1 √2))
+    (fun b : Bool => if b then T (-1) 1 else T 1 1)
+    (s := false) (s' := true) (by simp [hrec]) hΔ Fhat
+  simpa [hrec, show (4 : ℝ) / 5 / 2 = 2 / 5 by norm_num] using h
+
+/-- **§5.9.** Any record `(T_s(0), c)` shared by both signs — the paper's `(T_s(0), 1/g_s²)`,
+with the second slot a common value — forces every predictor of the outcomes at `x = 1/10`
+to miss by at least `39,800,000/400,039,601`. -/
+theorem record_half_fine (c : ℝ) (Fhat : ℝ × ℝ → ℝ) :
+    (39800000 : ℝ) / 400039601 ≤ max
+      (|Fhat (T 1 0, c) - T 1 (1 / 10)|)
+      (|Fhat (T (-1) 0, c) - T (-1) (1 / 10)|) := by
+  have hs := shared_records
+  have hl := later_outcomes
+  have hΔ : |T 1 (1 / 10) - T (-1) (1 / 10)| = 79600000 / 400039601 := by
+    rw [abs_sub_comm, hl.2.2]
+    norm_num
+  have hrec : T 1 0 = T (-1) 0 := hs.1.trans hs.2.1.symm
+  have h := predictor_half_gap
+    (fun b : Bool => if b then (T (-1) 0, c) else (T 1 0, c))
+    (fun b : Bool => if b then T (-1) (1 / 10) else T 1 (1 / 10))
+    (s := false) (s' := true) (by simp [hrec]) hΔ Fhat
+  simpa [hrec, show (79600000 : ℝ) / 400039601 / 2 = 39800000 / 400039601 by norm_num] using h
+
+/-! ## 5.8 Three cumulants fix a triple -/
+
+open Polynomial
+
+/-- First cumulant `c₁ = p₁`. -/
+def cum1 (a b c : ℝ) : ℝ := a + b + c
+
+/-- Second cumulant `c₂ = p₁ − p₂`. -/
+def cum2 (a b c : ℝ) : ℝ := cum1 a b c - (a ^ 2 + b ^ 2 + c ^ 2)
+
+/-- Third cumulant `c₃ = p₁ − 3p₂ + 2p₃`. -/
+def cum3 (a b c : ℝ) : ℝ :=
+  cum1 a b c - 3 * (a ^ 2 + b ^ 2 + c ^ 2) + 2 * (a ^ 3 + b ^ 3 + c ^ 3)
+
+lemma cubic_expand (a b c : ℝ) :
+    (X - C a) * ((X - C b) * (X - C c)) =
+      X ^ 3 - C (a + b + c) * X ^ 2 + C (a * b + a * c + b * c) * X - C (a * b * c) := by
+  simp [map_add, map_mul, C_mul, mul_add, add_mul, sub_eq_add_neg]
+  ring
+
+lemma newton_e2 (a b c : ℝ) :
+    a * b + a * c + b * c = ((a + b + c) ^ 2 - (a ^ 2 + b ^ 2 + c ^ 2)) / 2 := by
+  ring
+
+lemma newton_e3 (a b c : ℝ) :
+    a * b * c =
+      ((a + b + c) ^ 3 - 3 * (a + b + c) * (a ^ 2 + b ^ 2 + c ^ 2) +
+          2 * (a ^ 3 + b ^ 3 + c ^ 3)) / 6 := by
+  ring
+
+/-- **§5.8.** Three cumulants fix a triple in `[0, 1]` up to order. Shorter channel sets are
+the same statement after padding with zeros to length 3. -/
+theorem cumulants_fix_three (a b c a' b' c' : ℝ)
+    (ha : a ∈ Set.Icc (0 : ℝ) 1) (hb : b ∈ Set.Icc (0 : ℝ) 1) (hc : c ∈ Set.Icc (0 : ℝ) 1)
+    (ha' : a' ∈ Set.Icc (0 : ℝ) 1) (hb' : b' ∈ Set.Icc (0 : ℝ) 1)
+    (hc' : c' ∈ Set.Icc (0 : ℝ) 1)
+    (h1 : cum1 a b c = cum1 a' b' c')
+    (h2 : cum2 a b c = cum2 a' b' c')
+    (h3 : cum3 a b c = cum3 a' b' c') :
+    a ::ₘ b ::ₘ ({c} : Multiset ℝ) = a' ::ₘ b' ::ₘ {c'} := by
+  have _ := ha; have _ := hb; have _ := hc
+  have _ := ha'; have _ := hb'; have _ := hc'
+  have hp1 : a + b + c = a' + b' + c' := by simpa [cum1] using h1
+  have hp2 : a ^ 2 + b ^ 2 + c ^ 2 = a' ^ 2 + b' ^ 2 + c' ^ 2 := by
+    have := h2
+    simp only [cum2, cum1] at this
+    linarith
+  have hp3 : a ^ 3 + b ^ 3 + c ^ 3 = a' ^ 3 + b' ^ 3 + c' ^ 3 := by
+    have := h3
+    simp only [cum3, cum1] at this
+    linarith
+  have he2 : a * b + a * c + b * c = a' * b' + a' * c' + b' * c' := by
+    rw [newton_e2 a b c, newton_e2 a' b' c', hp1, hp2]
+  have he3 : a * b * c = a' * b' * c' := by
+    rw [newton_e3 a b c, newton_e3 a' b' c', hp1, hp2, hp3]
+  let s : Multiset ℝ := a ::ₘ b ::ₘ {c}
+  let s' : Multiset ℝ := a' ::ₘ b' ::ₘ {c'}
+  have hpoly :
+      (s.map fun t : ℝ => X - C t).prod = (s'.map fun t : ℝ => X - C t).prod := by
+    simp only [s, s', Multiset.map_cons, Multiset.prod_cons, Multiset.map_singleton,
+      Multiset.prod_singleton]
+    rw [cubic_expand, cubic_expand, hp1, he2, he3]
+  change s = s'
+  rw [← roots_multiset_prod_X_sub_C s, ← roots_multiset_prod_X_sub_C s']
+  exact congrArg roots hpoly
+
 end VOTKP.Peel

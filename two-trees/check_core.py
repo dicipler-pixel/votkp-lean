@@ -8,7 +8,7 @@
 import os, re, subprocess, sys, tempfile
 HERE = os.path.dirname(os.path.abspath(__file__))
 LEAN = os.environ.get('LEAN', 'lean')
-EXPECT = {'PeelTrees.lean': 74, 'PeelTrees2.lean': 49, 'PeelTrees3.lean': 7, 'PeelTrees4.lean': 12, 'PingPong7.lean': 17}
+EXPECT = {'PeelTrees.lean': 74, 'PeelTrees2.lean': 49, 'PeelTrees3.lean': 7, 'PeelTrees4.lean': 12, 'PeelTrees5.lean': 3, 'PingPong7.lean': 17}
 CONTROLS = {'Controls1.lean': 3, 'Controls4.lean': 3}
 ALLOWED = {'propext', 'Classical.choice', 'Quot.sound'}
 fail = []

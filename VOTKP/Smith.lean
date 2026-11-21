@@ -221,4 +221,132 @@ theorem matter_wave (k1 k2 : ℝ) (h1 : 0 < k1) (h2 : 0 < k2) :
   field_simp
   try ring
 
+/-! ## Corollary 15.2: the peel coordinate is a Poincaré length -/
+
+/-- **Corollary 15.2.** For `0 < IE_k < IE_l` and `w = (IE_l − IE_k)/(IE_l + IE_k)`,
+the Poincaré distance from the disk centre is `d(0, w) = 2 artanh|w| = ln(IE_l/IE_k)`. -/
+theorem poincare_distance (Ek El : ℝ) (hk : 0 < Ek) (hl : Ek < El) :
+    let w := (El - Ek) / (El + Ek)
+    2 * artanh |w| = log ((1 + |w|) / (1 - |w|)) ∧ 2 * artanh |w| = log (El / Ek) := by
+  intro w
+  have hwpos : 0 < w := by
+    apply div_pos <;> linarith
+  have hwlt : w < 1 := by
+    rw [div_lt_one (by linarith)]
+    linarith
+  have habs : |w| = w := abs_of_pos hwpos
+  have hmem : |w| ∈ Set.Icc (-1) 1 := by
+    rw [habs]
+    exact ⟨by linarith, by linarith⟩
+  have hlen := hyperbolic_length (El / Ek) (div_pos (by linarith) hk)
+  have hwz : w = (El / Ek - 1) / (El / Ek + 1) := by
+    field_simp
+    ring
+  have hratio : (1 + w) / (1 - w) = El / Ek := by
+    rw [← hwz] at hlen
+    exact hlen
+  refine ⟨?_, ?_⟩
+  · rw [artanh_eq_half_log hmem, habs]
+    ring
+  · rw [artanh_eq_half_log hmem, habs, hratio]
+    have : 2 * (1 / 2 * log (El / Ek)) = log (El / Ek) := by ring
+    exact this
+
+/-! ## Section 15.4: Cayley placement of every real ratio -/
+
+/-- **§15.4.** For real `z ≠ −1`, `|Γ(z)| < 1` if and only if `z > 0`; a negative ratio
+leaves the disk, and `z = 0` sits at `Γ = −1`. -/
+theorem cayley_placement (z : ℝ) (hz : z ≠ -1) :
+    (|(z - 1) / (z + 1)| < 1 ↔ 0 < z) ∧
+      (z < 0 → 1 < |(z - 1) / (z + 1)|) ∧
+      (z = 0 → (z - 1) / (z + 1) = -1) := by
+  have hz1 : z + 1 ≠ 0 := by
+    intro h
+    exact hz (by linarith)
+  refine ⟨?_, fun hz0 => negative_ratio_leaves_disk z hz0 hz1, fun hz0 => by simp [hz0]⟩
+  have hden : 0 < |z + 1| := abs_pos.mpr hz1
+  rw [abs_div, div_lt_one hden, ← sq_lt_sq]
+  constructor <;> intro h <;> nlinarith
+
+/-- **§15.4.** As `z → −1`, `|Γ(z)| → ∞`. -/
+theorem cayley_pole :
+    Filter.Tendsto (fun z : ℝ => |(z - 1) / (z + 1)|)
+      (nhdsWithin (-1) {z | z ≠ -1}) Filter.atTop := by
+  rw [Filter.tendsto_atTop]
+  intro M
+  let δ : ℝ := 1 / (max M 1 + 1)
+  have hδ : 0 < δ := by positivity
+  rw [eventually_nhdsWithin_iff, Metric.eventually_nhds_iff]
+  refine ⟨δ, hδ, ?_⟩
+  intro z hz hne
+  have hclose : |z + 1| < δ := by
+    simpa [Real.dist_eq] using hz
+  have hne1 : z + 1 ≠ 0 := by
+    intro h
+    exact hne (by linarith)
+  have hpos : 0 < |z + 1| := abs_pos.mpr hne1
+  have hδ1 : δ < 1 := by
+    unfold δ
+    rw [div_lt_one (by positivity)]
+    linarith [le_max_right M (1 : ℝ)]
+  have hlower : 1 < |z - 1| := by
+    have htri : (2 : ℝ) - |z + 1| ≤ |2 - (z + 1)| := by
+      simpa using abs_sub_abs_le_abs_sub (2 : ℝ) (z + 1)
+    have : |2 - (z + 1)| = |z - 1| := by
+      rw [show (2 - (z + 1) : ℝ) = -(z - 1) by ring, abs_neg]
+    linarith [hclose, hδ1]
+  have hbig : 1 / δ < |z - 1| / |z + 1| := by
+    rw [lt_div_iff₀ hpos, one_div, inv_mul_lt_iff₀ hδ]
+    nlinarith
+  have hM : M < 1 / δ := by
+    unfold δ
+    rw [one_div_div]
+    linarith [le_max_left M (1 : ℝ)]
+  rw [abs_div]
+  linarith
+
+/-! ## Section 15.11: Thomas–Fermi peel -/
+
+/-- The Thomas–Fermi ratio `((k+1)/k)^{4/3}`. -/
+noncomputable def tfZ (k : ℝ) : ℝ := ((k + 1) / k) ^ ((4 : ℝ) / 3)
+
+/-- **§15.11.** `Γ_k = tanh(⅔ ln((k+1)/k)) = ((k+1)^{4/3} − k^{4/3})/((k+1)^{4/3} + k^{4/3})`. -/
+theorem thomas_fermi_peel (k : ℝ) (hk : 1 ≤ k) :
+    (tfZ k - 1) / (tfZ k + 1) = tanh ((2 / 3) * log ((k + 1) / k)) ∧
+      (tfZ k - 1) / (tfZ k + 1) =
+        ((k + 1) ^ ((4 : ℝ) / 3) - k ^ ((4 : ℝ) / 3)) /
+          ((k + 1) ^ ((4 : ℝ) / 3) + k ^ ((4 : ℝ) / 3)) := by
+  have hk0 : 0 < k := by linarith
+  have hratio : 0 < (k + 1) / k := div_pos (by linarith) hk0
+  have hz : 0 < tfZ k := Real.rpow_pos_of_pos hratio _
+  refine ⟨?_, ?_⟩
+  · have hlog : log (tfZ k) / 2 = (2 / 3) * log ((k + 1) / k) := by
+      unfold tfZ
+      rw [Real.log_rpow hratio]
+      ring
+    rw [← hlog, smith_identity _ hz]
+  · unfold tfZ
+    have hdiv : ((k + 1) / k) ^ ((4 : ℝ) / 3) =
+        (k + 1) ^ ((4 : ℝ) / 3) / k ^ ((4 : ℝ) / 3) :=
+      Real.div_rpow (by linarith) hk0.le _
+    have hkp : 0 < k ^ ((4 : ℝ) / 3) := Real.rpow_pos_of_pos hk0 _
+    rw [hdiv]
+    field_simp [hkp.ne']
+
+/-! ## §20.3.1: frequency ratios carry the same Γ -/
+
+/-- **§20.3.1.** Dividing two positive energies by `h > 0` does not change `Γ`,
+and that coordinate is `tanh(½ ln(f_{q+1}/f_q))`. -/
+theorem gamma_of_frequency (h Iq Iq1 : ℝ) (hh : 0 < h) (hi : 0 < Iq) (hs : Iq < Iq1) :
+    (Iq1 - Iq) / (Iq1 + Iq) =
+        ((Iq1 / h) - Iq / h) / ((Iq1 / h) + Iq / h) ∧
+      (Iq1 - Iq) / (Iq1 + Iq) =
+        tanh (log ((Iq1 / h) / (Iq / h)) / 2) := by
+  have h1 : 0 < Iq1 := by linarith
+  have hz : 0 < (Iq1 / h) / (Iq / h) := by positivity
+  constructor
+  · field_simp [hh.ne', hi.ne', h1.ne']
+  · rw [← smith_identity _ hz]
+    field_simp [hh.ne', hi.ne', h1.ne']
+
 end VOTKP.Smith
