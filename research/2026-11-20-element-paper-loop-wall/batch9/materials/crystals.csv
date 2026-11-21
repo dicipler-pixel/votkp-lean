@@ -1,0 +1,14 @@
+element,COD,reference_year,space_group,a_A,b_A,c_A,alpha_deg,beta_deg,gamma_deg,ideal_basis_shortest_A,status,source_title_and_conditions
+Nb,1539041,1975,I m -3 m,3.3063,3.3063,3.3063,90,90,90,2.8633,reference structure,Lattice parameter of niobium between 4.2 and 300 K
+Nb,9008546,1963,I m -3 m,3.3004,3.3004,3.3004,90,90,90,2.8582,reference structure,"Second edition. Interscience Publishers, New York, New York Body centered cubic, bcc, structure"
+Mo,9008474,1963,F m -3 m,4.16,4.16,4.16,90,90,90,2.9416,fcc reference entry; stability and preparation unverified,"Second edition. Interscience Publishers, New York, New York Cubic closest packed, ccp, structure"
+Mo,9008543,1963,I m -3 m,3.1473,3.1473,3.1473,90,90,90,2.7256,reference structure,"Second edition. Interscience Publishers, New York, New York Body centered cubic, bcc, structure"
+Mo,9011605,1925,I m -3 m,3.142,3.142,3.142,90,90,90,2.7211,reference structure,Lattice constants of twelve common metals Locality: synthetic Note: lattice parameter is average of runs 1 & 2
+Mo,9011606,1925,I m -3 m,3.136,3.136,3.136,90,90,90,2.7159,reference structure,Lattice constants of twelve common metals Locality: synthetic Note: lattice parameter is average of runs 3 & 4
+Mo,9012432,1935,I m -3 m,3.141,3.141,3.141,90,90,90,2.7202,reference structure,Precision determination of lattice constants Sample: at T = 25 C Note: lattice parameter is average of two samples
+Tc,1541062,1964,P 63/m m c,2.74,2.74,4.398,90,90,120,2.7089,reference structure,The composition and structure of technetium nitride and technetium borides
+Ru,1539052,1963,P 63/m m c,2.724,2.724,4.332,90,90,120,2.6767,reference structure,"High temperature X-ray metallography I. A new debye-scherrer camera for use at very high temperatures II. A new parafocusing camera III. Applications to the study of chromium, hafnium, molybdenum, rhodium, ruthenium and tungsten"
+Ru,8104268,1937,P 63/m m c,2.69844,2.69844,4.27305,90,90,120,2.6442,reference structure,The crystal parameters of osmium and ruthenium at different temperatures
+Ru,9008513,1963,P 63/m m c,2.70389,2.70389,4.28168,90,90,120,2.6496,reference structure,"Second edition. Interscience Publishers, New York, New York Hexagonal closest packed, hcp, structure"
+Rh,9008482,1963,F m -3 m,3.8031,3.8031,3.8031,90,90,90,2.6892,reference structure,"Second edition. Interscience Publishers, New York, New York Cubic closest packed, ccp, structure"
+Rh,9012958,1933,F m -3 m,3.7957,3.7957,3.7957,90,90,90,2.6840,reference structure,Precision measurements of crystal parameters Sample: at T = 18 C Note: lattice parameter is mean value of 3 radiation types

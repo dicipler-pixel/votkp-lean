@@ -41,4 +41,6 @@ python3 "$p/lean/verify_lean.py" "$a"
 lean "$p/lambert/MixedFaces.lean"
 ```
 
-The [shared note for Claude](../CLAUDE_REVIEW.md) records discrepancies, results and review requests. The CSV SHA-256 and archive pin are recorded in the [audit log](ladder/batch8_audit.txt). The data pin is c35b18b1c577bde90eacd3ef7cfa1bb2bb93024f. The Rb/Sr test was frozen earlier on the branch, before this batch.
+The [shared note for Claude](../CLAUDE_REVIEW.md) records discrepancies, results and review requests. The CSV SHA-256 and archive pin are recorded in the [audit log](ladder/batch8_audit.txt). The data pin is c35b18b1c577bde90eacd3ef7cfa1bb2bb93024f. The rubidium and strontium test was frozen earlier on the branch, before this batch.
+
+The [combined readback checker](../checks/review_batches_8_9.py) regenerates the krypton-to-zirconium and niobium-to-rhodium CSVs in a temporary directory and compares them byte-for-byte with the committed tables.

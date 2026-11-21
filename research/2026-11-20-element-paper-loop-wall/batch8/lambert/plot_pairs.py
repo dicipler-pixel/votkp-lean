@@ -33,6 +33,7 @@ def main(archive, output):
     fig, axes = plt.subplots(2, 3, figsize=(10, 7))
     for ax, (a, b) in zip(axes.flat, [("C","C"),("C","N"),("N","N"),("Rb","Rb"),("Rb","Sr"),("Sr","Sr")]):
         ax.add_patch(plt.Circle((0,0),1,facecolor="#f4f7f8",edgecolor="#45616b",lw=1))
+        labels = {"C":"Carbon","N":"Nitrogen","Rb":"Rubidium","Sr":"Strontium"}
         u, v = names[a], names[b]
         draw_face(ax,u,True,"#056b73")
         draw_face(ax,v,False,"#ad4c24")
@@ -43,7 +44,7 @@ def main(archive, output):
             ax.scatter(x/scale,y/scale,color="#18272c",s=22,zorder=4)
         ax.set(xlim=(-1.04,1.04),ylim=(-1.04,1.04),aspect="equal")
         ax.set_axis_off()
-        ax.set_title(f"{a} × {b}    {'open' if m>0 else 'closes'}\nmargin  {m:+.6f}",fontsize=11)
+        ax.set_title(f"{labels[a]} × {labels[b]}    {'open' if m>0 else 'closes'}\nmargin  {m:+.6f}",fontsize=11)
     fig.suptitle("Two core-opening ratios on perpendicular disk faces",fontsize=16)
     fig.text(.5,.045,"Top: helium-core openings      Bottom: krypton-core openings\n"
              "Teal and copper arcs are geodesics. A dot marks their finite intersection. Margin = Γ₁² + Γ₂² − 1.",

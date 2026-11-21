@@ -1,0 +1,4 @@
+Pure projector: cell trace 4.000000000, X0 2.106519742, off-cell budget 1.893480258. Both independent constructions agree.
+Independent occupied-band unitary gauge rotations preserve all R.
+Fractional-occupation control: missing weight 0.788400000 matches Tr(rho-rho²) per cell.
+Complete occupied one-site basis has B=0, so X/B is undefined.

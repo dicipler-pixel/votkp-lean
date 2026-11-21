@@ -1,0 +1,196 @@
+symbol,A,Z,N,net_up,net_down,spin_parity,charge_radius_fm,radius_unc_fm,natural_abundance_pct,abundance_unc_pct,raw_API_dipole_muN,raw_API_dipole_unc_muN,spin_zero_derived_ground_dipole_muN,dipole_status,ENSDF_cutoff
+Nb,81,41,40,122,121,,,,,,,,,unreported,15-Aug-2008
+Nb,82,41,41,123,123,(0+),,,,,,,,unreported,1-Mar-2019
+Nb,83,41,42,124,125,(5/2+),,,,,,,,unreported,31-Dec-2014
+Nb,84,41,43,125,127,(1+ 2+ 3+),,,,,,,,unreported,30-Sep-2009
+Nb,85,41,44,126,129,(9/2+),,,,,,,,unreported,31-Dec-2013
+Nb,86,41,45,127,131,(6+),,,,,,,,unreported,30-Nov-2014
+Nb,87,41,46,128,133,(1/2)-,,,,,7,0.9,,reported value; confirm state assignment,27-Jul-2015
+Nb,88,41,47,129,135,(8+),,,,,,,,unreported,1-Nov-2013
+Nb,89,41,48,130,137,(9/2+),,,,,6.216,0.005,,reported value; confirm state assignment,20-Oct-2012
+Nb,90,41,49,131,139,8+,4.2891,0.0040,,,4.946,0.004,,reported value; confirm state assignment,1-Mar-2020
+Nb,91,41,50,132,141,9/2+,4.2878,0.0040,,,6.513,0.003,,reported value; confirm state assignment,1-Sep-2013
+Nb,92,41,51,133,143,7+,4.3026,0.0043,,,5.13,0.004,,reported value; confirm state assignment,15-Sep-2012
+Nb,93,41,52,134,145,9/2+,4.3240,0.0017,100,,6.163,0.002,,reported value; confirm state assignment,15-Dec-2010
+Nb,94,41,53,135,147,6+,,,,,,,,unreported,1-Jan-2006
+Nb,95,41,54,136,149,9/2+,,,,,6.141,0.005,,reported value; confirm state assignment,30-Jun-2009
+Nb,96,41,55,137,151,6+,,,,,4.975,0.004,,reported value; confirm state assignment,1-Apr-2008
+Nb,97,41,56,138,153,9/2+,,,,,6.153,0.005,,reported value; confirm state assignment,19-Nov-2009
+Nb,98,41,57,139,155,1+,,,,,,,,unreported,15-Feb-2020
+Nb,99,41,58,140,157,9/2+,4.4062,0.0125,,,5.96,0.03,,reported value; confirm state assignment,1-Jul-2017
+Nb,100,41,59,141,159,1+,,,,,,,,unreported,31-Jan-2021
+Nb,101,41,60,142,161,(5/2+),4.4861,0.0203,,,3.186,0.002,,reported value; confirm state assignment,1-Jul-2006
+Nb,102,41,61,143,163,(4+),,,,,,,,unreported,31-Dec-2008
+Nb,103,41,62,144,165,(5/2+),4.5097,0.0227,,,3.133,0.004,,reported value; confirm state assignment,1-Mar-2009
+Nb,104,41,63,145,167,(1+),,,,,,,,unreported,30-Mar-2007
+Nb,105,41,64,146,169,(5/2+),,,,,,,,unreported,1-Apr-2019
+Nb,106,41,65,147,171,(1-),,,,,,,,unreported,20-JUL-2015
+Nb,107,41,66,148,173,,,,,,,,,unreported,1-Mar-2008
+Nb,108,41,67,149,175,(2+),,,,,,,,unreported,20-Jul-2015
+Nb,109,41,68,150,177,(5/2+),,,,,,,,unreported,31-May-2016
+Nb,110,41,69,151,179,(5),,,,,,,,unreported,1-Aug-2011
+Nb,111,41,70,152,181,,,,,,,,,unreported,1-Feb-2008
+Nb,112,41,71,153,183,,,,,,,,,unreported,1-Aug-2014
+Nb,113,41,72,154,185,,,,,,,,,unreported,1-May-2009
+Nb,114,41,73,155,187,,,,,,,,,unreported,20-JUL-2015
+Nb,115,41,74,156,189,,,,,,,,,unreported,31-MAY-2015
+Nb,116,41,75,157,191,,,,,,,,,unreported,31-JAN-2021
+Nb,117,41,76,158,193,,,,,,,,,unreported,31-JAN-2021
+Mo,81,42,39,123,120,,,,,,,,,unreported,31-MAR-2015
+Mo,82,42,40,124,122,0+,,,,,,,0,exact spin-zero result,1-Mar-2019
+Mo,83,42,41,125,124,,,,,,,,,unreported,31-Dec-2014
+Mo,84,42,42,126,126,0+,,,,,,,0,exact spin-zero result,30-Sep-2009
+Mo,85,42,43,127,128,(1/2-),,,,,,,,unreported,31-Dec-2013
+Mo,86,42,44,128,130,0+,,,,,,,0,exact spin-zero result,30-Nov-2014
+Mo,87,42,45,129,132,(7/2+),,,,,,,,unreported,27-Jul-2015
+Mo,88,42,46,130,134,0+,,,,,,,0,exact spin-zero result,1-Nov-2013
+Mo,89,42,47,131,136,(9/2+),,,,,8.3,0.4,,reported value; confirm state assignment,30-Nov-2021
+Mo,90,42,48,132,138,0+,4.3265,0.0016,,,-1.391,0.014,0,exact spin-zero result,1-Mar-2020
+Mo,91,42,49,133,140,9/2+,4.3182,0.0012,,,-0.931,0.003,,reported value; confirm state assignment,1-Sep-2013
+Mo,92,42,50,134,142,0+,4.3151,0.0012,14.649,0.106,2.3,0.3,0,exact spin-zero result,15-Sep-2012
+Mo,93,42,51,135,144,5/2+,,,,,9.93,0.08,,reported value; confirm state assignment,15-Dec-2010
+Mo,94,42,52,136,146,0+,4.3529,0.0013,9.187,0.033,,,0,exact spin-zero result,1-Jan-2006
+Mo,95,42,53,137,148,5/2+,4.3628,0.0018,15.873,0.030,-0.9132,0.0003,,reported value; confirm state assignment,30-Jun-2009
+Mo,96,42,54,138,150,0+,4.3847,0.0015,16.673,0.008,0.79,0.06,0,exact spin-zero result,1-Apr-2008
+Mo,97,42,55,139,152,5/2+,4.3880,0.0015,9.582,0.015,-0.9324,0.0003,,reported value; confirm state assignment,19-Nov-2009
+Mo,98,42,56,140,154,0+,4.4091,0.0018,24.292,0.080,0.97,0.06,0,exact spin-zero result,15-Feb-2020
+Mo,99,42,57,141,156,1/2+,,,,,0.375,0.003,,reported value; confirm state assignment,1-Jul-2017
+Mo,100,42,58,142,158,0+,4.4468,0.0025,9.744,0.065,0.94,0.07,0,exact spin-zero result,31-Jan-2021
+Mo,101,42,59,143,160,1/2+,,,,,,,,unreported,1-Jul-2006
+Mo,102,42,60,144,162,0+,4.4914,0.0038,,,,,0,exact spin-zero result,31-Dec-2008
+Mo,103,42,61,145,164,(3/2+),4.5145,0.0046,,,-0.27,0.02,,reported value; confirm state assignment,1-Mar-2009
+Mo,104,42,62,146,166,0+,4.5249,0.0051,,,0.54,0.04,0,exact spin-zero result,30-Mar-2007
+Mo,105,42,63,147,168,(5/2-),4.5389,0.0057,,,-0.55,0.02,,reported value; confirm state assignment,1-Apr-2019
+Mo,106,42,64,148,170,0+,4.5490,0.0058,,,0.42,0.04,0,exact spin-zero result,1-May-2007
+Mo,107,42,65,149,172,(5/2+),,,,,,,,unreported,1-Mar-2008
+Mo,108,42,66,150,174,0+,4.5602,0.0067,,,1,0.6,0,exact spin-zero result,1-Jul-2008
+Mo,109,42,67,151,176,(5/2+),,,,,,,,unreported,31-May-2016
+Mo,110,42,68,152,178,0+,,,,,,,0,exact spin-zero result,1-Aug-2011
+Mo,111,42,69,153,180,(1/2+ 3/2+),,,,,,,,unreported,20-JUL-2015
+Mo,112,42,70,154,182,0+,,,,,,,0,exact spin-zero result,1-Aug-2014
+Mo,113,42,71,155,184,,,,,,,,,unreported,20-JUL-2015
+Mo,114,42,72,156,186,0+,,,,,,,0,exact spin-zero result,20-Jul-2015
+Mo,115,42,73,157,188,,,,,,,,,unreported,20-Jul-2015
+Mo,116,42,74,158,190,0+,,,,,,,0,exact spin-zero result,20-JUL-2015
+Mo,117,42,75,159,192,,,,,,,,,unreported,20-JUL-2015
+Mo,118,42,76,160,194,0+,,,,,,,0,exact spin-zero result,14-Jan-2022
+Mo,119,42,77,161,196,,,,,,,,,unreported,31-JAN-2021
+Tc,85,43,42,128,127,,,,,,,,,unreported,31-Dec-2013
+Tc,86,43,43,129,129,(0+),,,,,,,,unreported,30-Nov-2014
+Tc,87,43,44,130,131,(9/2+),,,,,,,,unreported,27-Jul-2015
+Tc,88,43,45,131,133,(5+ 6+ 7+),,,,,,,,unreported,1-Nov-2013
+Tc,89,43,46,132,135,(9/2+),,,,,,,,unreported,30-Nov-2021
+Tc,90,43,47,133,137,(8+),,,,,,,,unreported,1-Mar-2020
+Tc,91,43,48,134,139,(9/2)+,,,,,,,,unreported,1-Sep-2013
+Tc,92,43,49,135,141,(8)+,,,,,,,,unreported,15-Sep-2012
+Tc,93,43,50,136,143,9/2+,,,,,6.32,0.06,,reported value; confirm state assignment,15-Dec-2010
+Tc,94,43,51,137,145,7+,,,,,5.12,0.05,,reported value; confirm state assignment,1-Jan-2006
+Tc,95,43,52,138,147,9/2+,,,,,5.94,0.06,,reported value; confirm state assignment,30-Jun-2009
+Tc,96,43,53,139,149,7+,,,,,5.09,0.05,,reported value; confirm state assignment,1-Apr-2008
+Tc,97,43,54,140,151,9/2+,,,,,5.82,0.09,,reported value; confirm state assignment,19-Nov-2009
+Tc,98,43,55,141,153,(6)+,,,,,,,,unreported,15-Feb-2020
+Tc,99,43,56,142,155,9/2+,,,,,5.678,0.002,,reported value; confirm state assignment,1-Jul-2017
+Tc,100,43,57,143,157,1+,,,,,,,,unreported,31-Jan-2021
+Tc,101,43,58,144,159,9/2+,,,,,,,,unreported,1-Jul-2006
+Tc,102,43,59,145,161,1+,,,,,,,,unreported,31-Dec-2008
+Tc,103,43,60,146,163,5/2+,,,,,,,,unreported,1-Mar-2009
+Tc,104,43,61,147,165,(3+),,,,,,,,unreported,30-Mar-2007
+Tc,105,43,62,148,167,(3/2-),,,,,,,,unreported,1-Apr-2019
+Tc,106,43,63,149,169,(1 2),,,,,,,,unreported,1-May-2007
+Tc,107,43,64,150,171,(3/2-),,,,,,,,unreported,1-Mar-2008
+Tc,108,43,65,151,173,(2)+,,,,,,,,unreported,1-Jul-2008
+Tc,109,43,66,152,175,(5/2+),,,,,,,,unreported,31-May-2016
+Tc,110,43,67,153,177,(2 3+),,,,,,,,unreported,1-Aug-2011
+Tc,111,43,68,154,179,(5/2+),,,,,,,,unreported,1-Feb-2008
+Tc,112,43,69,155,181,(2+),,,,,,,,unreported,1-Aug-2014
+Tc,113,43,70,156,183,(5/2+),,,,,,,,unreported,20-JUL-2015
+Tc,114,43,71,157,185,(GE 4),,,,,,,,unreported,1-Jan-2012
+Tc,115,43,72,158,187,,,,,,,,,unreported,20-JUL-2015
+Tc,116,43,73,159,189,,,,,,,,,unreported,20-JUL-2015
+Tc,117,43,74,160,191,,,,,,,,,unreported,20-JUL-2015
+Tc,118,43,75,161,193,,,,,,,,,unreported,14-Jan-2022
+Tc,119,43,76,162,195,,,,,,,,,unreported,20-JUL-2015
+Tc,120,43,77,163,197,,,,,,,,,unreported,30-JUN-2017
+Tc,121,43,78,164,199,,,,,,,,,unreported,31-MAY-2015
+Tc,122,43,79,165,201,,,,,,,,,unreported,31-JAN-2021
+Ru,85,44,41,129,126,,,,,,,,,unreported,31-MAR-2015
+Ru,86,44,42,130,128,0+,,,,,,,0,exact spin-zero result,31-MAR-2015
+Ru,87,44,43,131,130,,,,,,,,,unreported,27-Jul-2015
+Ru,88,44,44,132,132,0+,,,,,,,0,exact spin-zero result,1-Nov-2013
+Ru,89,44,45,133,134,(9/2+),,,,,,,,unreported,30-Nov-2021
+Ru,90,44,46,134,136,0+,,,,,,,0,exact spin-zero result,1-Mar-2020
+Ru,91,44,47,135,138,(9/2+),,,,,,,,unreported,1-Sep-2013
+Ru,92,44,48,136,140,0+,,,,,,,0,exact spin-zero result,15-Sep-2012
+Ru,93,44,49,137,142,(9/2)+,,,,,,,,unreported,15-Dec-2010
+Ru,94,44,50,138,144,0+,,,,,12.4,0.17,0,exact spin-zero result,1-Jan-2006
+Ru,95,44,51,139,146,5/2+,,,,,0.861,0.007,,reported value; confirm state assignment,30-Jun-2009
+Ru,96,44,52,140,148,0+,4.3908,0.0047,5.54,0.14,2.3,0.3,0,exact spin-zero result,1-Apr-2008
+Ru,97,44,53,141,150,5/2+,,,,,-0.787,0.008,,reported value; confirm state assignment,19-Nov-2009
+Ru,98,44,54,142,152,0+,4.4229,0.0055,1.87,0.03,,,0,exact spin-zero result,15-Feb-2020
+Ru,99,44,55,143,154,5/2+,4.4338,0.0042,12.76,0.14,,,,unreported,1-Jul-2017
+Ru,100,44,56,144,156,0+,4.4531,0.0031,12.60,0.07,,,0,exact spin-zero result,31-Jan-2021
+Ru,101,44,57,145,158,5/2+,4.4606,0.0020,17.06,0.02,-0.718,0.006,,reported value; confirm state assignment,1-Jul-2006
+Ru,102,44,58,146,160,0+,4.4809,0.0018,31.55,0.14,,,0,exact spin-zero result,31-Dec-2008
+Ru,103,44,59,147,162,3/2+,,,,,0.206,0.003,,reported value; confirm state assignment,1-Mar-2009
+Ru,104,44,60,148,164,0+,4.5098,0.0020,18.62,0.27,,,0,exact spin-zero result,30-Mar-2007
+Ru,105,44,61,149,166,3/2+,,,,,-0.32,,,reported value; confirm state assignment,1-Apr-2019
+Ru,106,44,62,150,168,0+,,,,,0.6,0.2,0,exact spin-zero result,1-May-2007
+Ru,107,44,63,151,170,(5/2)+,,,,,,,,unreported,1-Mar-2008
+Ru,108,44,64,152,172,0+,,,,,0.43,0.08,0,exact spin-zero result,1-Jul-2008
+Ru,109,44,65,153,174,(5/2+),,,,,,,,unreported,31-May-2016
+Ru,110,44,66,154,176,0+,,,,,0.84,0.12,0,exact spin-zero result,1-Aug-2011
+Ru,111,44,67,155,178,5/2+,,,,,,,,unreported,1-Feb-2008
+Ru,112,44,68,156,180,0+,,,,,0.9,0.2,0,exact spin-zero result,1-Aug-2014
+Ru,113,44,69,157,182,(1/2+),,,,,,,,unreported,1-May-2009
+Ru,114,44,70,158,184,0+,,,,,,,0,exact spin-zero result,1-Jan-2012
+Ru,115,44,71,159,186,(3/2+),,,,,,,,unreported,1-Sep-2012
+Ru,116,44,72,160,188,0+,,,,,,,0,exact spin-zero result,10-AUG-2013
+Ru,117,44,73,161,190,,,,,,,,,unreported,31-JUL-2015
+Ru,118,44,74,162,192,0+,,,,,,,0,exact spin-zero result,14-Jan-2022
+Ru,119,44,75,163,194,,,,,,,,,unreported,20-JUL-2015
+Ru,120,44,76,164,196,0+,,,,,,,0,exact spin-zero result,30-JUN-2017
+Ru,121,44,77,165,198,,,,,,,,,unreported,20-JUL-2015
+Ru,122,44,78,166,200,0+,,,,,,,0,exact spin-zero result,20-JUL-2015
+Ru,123,44,79,167,202,,,,,,,,,unreported,15-Apr-2021
+Ru,124,44,80,168,204,0+,,,,,,,0,exact spin-zero result,20-JUL-2015
+Ru,125,44,81,169,206,,,,,,,,,unreported,31-JAN-2021
+Rh,89,45,44,134,133,,,,,,,,,unreported,30-Nov-2021
+Rh,90,45,45,135,135,(0+),,,,,,,,unreported,1-Mar-2020
+Rh,91,45,46,136,137,(9/2+),,,,,,,,unreported,1-Sep-2013
+Rh,92,45,47,137,139,(GE6+),,,,,,,,unreported,15-Sep-2012
+Rh,93,45,48,138,141,(9/2+),,,,,,,,unreported,15-Dec-2010
+Rh,94,45,49,139,143,(4+),,,,,,,,unreported,1-Jan-2006
+Rh,95,45,50,140,145,9/2+,,,,,10.9,0.3,,reported value; confirm state assignment,30-Jun-2009
+Rh,96,45,51,141,147,6+,,,,,,,,unreported,1-Apr-2008
+Rh,97,45,52,142,149,9/2+,,,,,,,,unreported,19-Nov-2009
+Rh,98,45,53,143,151,(2)+,,,,,,,,unreported,15-Feb-2020
+Rh,99,45,54,144,153,1/2-,,,,,5.62,0.06,,reported value; confirm state assignment,1-Jul-2017
+Rh,100,45,55,145,155,1-,,,,,4.69,0.14,,reported value; confirm state assignment,31-Jan-2021
+Rh,101,45,56,146,157,1/2-,,,,,5.43,0.06,,reported value; confirm state assignment,1-Jul-2006
+Rh,102,45,57,147,159,(1- 2-),,,,,0.5,0.4,,reported value; confirm state assignment,31-Dec-2008
+Rh,103,45,58,148,161,1/2-,4.4945,0.0023,100,,-0.08829,0.00003,,reported value; confirm state assignment,1-Mar-2009
+Rh,104,45,59,149,163,1+,,,,,2,0.06,,reported value; confirm state assignment,30-Mar-2007
+Rh,105,45,60,150,165,7/2+,,,,,4.41,0.05,,reported value; confirm state assignment,1-Apr-2019
+Rh,106,45,61,151,167,1+,,,,,2.55,0.03,,reported value; confirm state assignment,1-May-2007
+Rh,107,45,62,152,169,7/2+,,,,,,,,unreported,1-Mar-2008
+Rh,108,45,63,153,171,1+,,,,,,,,unreported,1-Jul-2008
+Rh,109,45,64,154,173,7/2+,,,,,,,,unreported,31-May-2016
+Rh,110,45,65,155,175,(1+),,,,,,,,unreported,1-Aug-2011
+Rh,111,45,66,156,177,(7/2+),,,,,,,,unreported,1-Feb-2008
+Rh,112,45,67,157,179,(1+),,,,,,,,unreported,1-Aug-2014
+Rh,113,45,68,158,181,(7/2+),,,,,,,,unreported,1-May-2009
+Rh,114,45,69,159,183,1+,,,,,,,,unreported,1-Jan-2012
+Rh,115,45,70,160,185,(7/2+),,,,,,,,unreported,1-Sep-2012
+Rh,116,45,71,161,187,1+,,,,,,,,unreported,1-Dec-2009
+Rh,117,45,72,162,189,(7/2+),,,,,,,,unreported,1-Mar-2009
+Rh,118,45,73,163,191,,,,,,,,,unreported,14-Jan-2022
+Rh,119,45,74,164,193,(7/2+),,,,,,,,unreported,1-Dec-2008
+Rh,120,45,75,165,195,,,,,,,,,unreported,30-JUN-2017
+Rh,121,45,76,166,197,,,,,,,,,unreported,20-Jan-2009
+Rh,122,45,77,167,199,,,,,,,,,unreported,30-NOV-2013
+Rh,123,45,78,168,201,,,,,,,,,unreported,15-Apr-2021
+Rh,124,45,79,169,203,,,,,,,,,unreported,20-JUL-2015
+Rh,125,45,80,170,205,,,,,,,,,unreported,20-JUL-2015
+Rh,126,45,81,171,207,,,,,,,,,unreported,1-Oct-2021
+Rh,127,45,82,172,209,,,,,,,,,unreported,31-MAY-2015
+Rh,128,45,83,173,211,,,,,,,,,unreported,31-JAN-2021

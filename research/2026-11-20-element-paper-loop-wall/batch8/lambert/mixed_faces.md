@@ -32,19 +32,19 @@ In particular, \(a=9, b=4\) gives \(g(a)=4/5, g(b)=3/5\), an exact unequal-face 
 
 **Rejection tests.** The exact rule would fail this comparison if its strict classification disagreed with the original disk-circle code away from tangency. The threshold formula would fail if a rational Pythagorean pair gave nonzero margin, or a positive and a negative perturbation went to the same side. A quoted uncertainty would defeat a definite historical mixed call if either endpoint crossed the wall.
 
-**DERIVED.** The runnable check exhausts all unordered pairs with replacement within each named opening in Kr through Zr, treating the neutral affinity step as a separate family. These are comparisons of two internal clocks. The Rb/Sr row uses the Kr-core opening of each atom; an equal-clock external junction must be specified separately. Each of the three lighter core families gives 15 closing pairs. Of the ten Kr-core comparisons, only Rb/Rb opens. Each of the ten bound-anion pairs opens. Krypton has no bound ground anion. The exact and disk classifications agree on all 65 pairs. The script also checks 19 exact tangencies and their 38 strict perturbations. An ideal point does not enter the strict-open or the finite-closing count.
+**DERIVED.** The runnable check exhausts all unordered pairs with replacement within each named opening in Kr through Zr, treating the neutral affinity step as a separate family. These are comparisons of two internal clocks. The rubidium and strontium row uses the Kr-core opening of each atom; an equal-clock external junction must be specified separately. Each of the three lighter core families gives 15 closing pairs. Of the ten Kr-core comparisons, only rubidium and rubidium opens. Each of the ten bound-anion pairs opens. Krypton has no bound ground anion. The exact and disk classifications agree on all 65 pairs. The script also checks 19 exact tangencies and their 38 strict perturbations. An ideal point does not enter the strict-open or the finite-closing count.
 
-**RECOGNISED.** Across the five previously observed inward crossings, pairing the last outside face with the first inside face produces two different outcomes. C/N and Na/Mg remain open. K/Ca, Rb/Sr and Cs/Ba close. All five retain their calls at the quoted lower and upper endpoints of the archive energies. The classification in the most finely balanced case, C/N, has the signed power margin +0.00309334. This is a comparison of these five pairs. Evidence for a change in atomic or material behaviour at this bound would have to come from a separate observable.
+**RECOGNISED.** Across the five previously observed inward crossings, pairing the last outside face with the first inside face produces two different outcomes. carbon and nitrogen and sodium and magnesium remain open. potassium and calcium, rubidium and strontium and caesium and barium close. All five retain their calls at the quoted lower and upper endpoints of the archive energies. The classification in the most finely balanced case, carbon and nitrogen, has the signed power margin +0.00309334. This is a comparison of these five pairs. Evidence for a change in atomic or material behaviour at this bound would have to come from a separate observable.
 
 The first element and the next element in each row open the **same core**, starting with one electron above it. If the core contains \(N\) electrons, the charge before the first removal is \(q=Z-N-1\) for each element. Their absolute charge indices differ by one. Every first element also gives a strict-open self-pair and every second element a finite-closing self-pair. For an energy ratio \(v/u\) the quoted endpoint range is \([(v-\delta v)/(u+\delta u),(v+\delta v)/(u-\delta u)]\). Both squared reflections increase with each forward ratio, so simultaneous low and simultaneous high enclose the margin. This interval propagates the quoted uncertainties without assigning them a joint probability.
 
 | Core | Last outside / next inside | Mixed margin | Margin interval using reported input uncertainties | Result |
 |---|---|---:|---|---|
-| He | C/N | +0.00309334 | [+0.00309076, +0.00309591] | open |
-| Ne | Na/Mg | +0.11427307 | [+0.11426868, +0.11427745] | open |
-| Ar | K/Ca | -0.03782202 | [-0.03782596, -0.03781808] | closes |
-| Kr | Rb/Sr | -0.11143697 | [-0.11143961, -0.11143434] | closes |
-| Xe | Cs/Ba | -0.17524802 | [-0.17527621, -0.17521982] | closes |
+| He | carbon and nitrogen | +0.00309334 | [+0.00309076, +0.00309591] | open |
+| Ne | sodium and magnesium | +0.11427307 | [+0.11426868, +0.11427745] | open |
+| Ar | potassium and calcium | -0.03782202 | [-0.03782596, -0.03781808] | closes |
+| Kr | rubidium and strontium | -0.11143697 | [-0.11143961, -0.11143434] | closes |
+| Xe | caesium and barium | -0.17524802 | [-0.17527621, -0.17521982] | closes |
 
 ## Reproduction
 
