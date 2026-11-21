@@ -438,6 +438,30 @@ theorem rung0_Nd : outside (5.525 / 0.09748) := by unfold outside; grind
 theorem rung0_Eu : outside (5.670385 / 0.129) := by unfold outside; grind
 theorem rung0_Gd : outside (6.1498 / 0.242) := by unfold outside; grind
 theorem rung0_Tb : outside (5.8638 / 0.13131) := by unfold outside; grind
+/-- Batches 15 to 17 anion rungs, lutetium to astatine (measured or evaluated affinities; dysprosium and
+thulium have only estimated affinities and are not certified). -/
+theorem rung0_Lu : outside (5.425871 / 0.23882) := by unfold outside; grind
+theorem rung0_Hf : outside (6.82507 / 0.1780) := by unfold outside; grind
+theorem rung0_Ta : outside (7.549571 / 0.328859) := by unfold outside; grind
+theorem rung0_W : outside (7.86403 / 0.816500) := by unfold outside; grind
+theorem rung0_Re : outside (7.83352 / 0.060396) := by unfold outside; grind
+theorem rung0_Os : outside (8.43823 / 1.077661) := by unfold outside; grind
+theorem rung0_Tl : outside (6.1082873 / 0.320053) := by unfold outside; grind
+theorem rung0_Pb : outside (7.4166799 / 0.356721) := by unfold outside; grind
+theorem rung0_Bi : outside (7.285516 / 0.942362) := by unfold outside; grind
+theorem rung0_Ir : inside (8.96702 / 1.564057) := by unfold inside; grind
+theorem rung0_Pt : inside (8.95883 / 2.12510) := by unfold inside; grind
+theorem rung0_Au : inside (9.225554 / 2.30861) := by unfold inside; grind
+theorem rung0_At : inside (9.31751 / 2.41578) := by unfold inside; grind
+/-- The heavy-anion prediction written at 09:24 on 21 November 2026, before the numbers were opened:
+gold, platinum, iridium and astatine inside; osmium, bismuth and lead outside (polonium has no
+established affinity yet and stays open). All seven calls hold. -/
+theorem heavy_anion_prediction :
+    inside (9.225554 / 2.30861) ∧ inside (8.95883 / 2.12510) ∧
+    inside (8.96702 / 1.564057) ∧ inside (9.31751 / 2.41578) ∧
+    outside (8.43823 / 1.077661) ∧ outside (7.285516 / 0.942362) ∧
+    outside (7.4166799 / 0.356721) := by
+  unfold inside outside; refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_⟩ <;> grind
 /-- The data window: silver's anion rung is inside and silicon's is outside. -/
 theorem window_silver_silicon :
     inside (7.576234 / 1.30447) ∧ outside (8.15168 / 1.3895212) := by

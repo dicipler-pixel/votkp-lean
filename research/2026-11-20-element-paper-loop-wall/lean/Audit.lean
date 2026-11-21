@@ -73,3 +73,4 @@ import LoopWall
 #print axioms omega_eta_wall
 #print axioms rung0_Gd
 #print axioms rung0_Tb
+#print axioms heavy_anion_prediction

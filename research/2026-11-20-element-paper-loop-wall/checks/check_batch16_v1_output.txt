@@ -1,0 +1,2 @@
+ordinary steps 385 energy differences 0 ratio differences 0
+outside the wall: [('Os', 0, 7.830134)]

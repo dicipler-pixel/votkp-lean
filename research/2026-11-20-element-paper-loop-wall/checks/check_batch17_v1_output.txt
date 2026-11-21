@@ -1,0 +1,2 @@
+ordinary steps 410 energy differences 0 ratio differences 0
+outside the wall: [('Tl', 0, 19.085237), ('Pb', 0, 20.791262), ('Bi', 0, 7.731122)]

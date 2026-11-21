@@ -1,0 +1,2 @@
+ordinary steps 335 energy differences 0 ratio differences 0
+outside the wall: [('Dy', 0, 395.9374), ('Tm', 0, 193.262563)]

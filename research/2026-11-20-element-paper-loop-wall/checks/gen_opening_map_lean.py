@@ -36,8 +36,8 @@ for N,name in cores:
         L.append('    '+' ∧\n    '.join(f'inside {e}' for _,e in ch)+' := by')
         L.append('  unfold inside; '+('refine ⟨'+', '.join(['?_']*len(ch))+'⟩ <;> ' if len(ch)>1 else '')+'grind'); L.append('')
     summary.append((name,len(outs),len(ins)))
-# Sc..Tb ordinary ladders: every step inside except a noble-core opening (certified above)
-for Z in range(21,66):
+# Sc..At ordinary ladders: every step inside except a noble-core opening (certified above)
+for Z in range(21,86):
     th=sorted(rec[Z]['thresholds'],key=lambda t:t['q']); s=rec[Z]['symbol']
     pairs=[(a,b) for a,b in zip(th,th[1:]) if b['q']==a['q']+1]
     isout=lambda a,b: (lambda z: z>3 and (z-3)**2>8)(b['IE_eV']/a['IE_eV'])

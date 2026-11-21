@@ -1,0 +1,2 @@
+ordinary steps 360 energy differences 0 ratio differences 0
+outside the wall: [('Lu', 0, 22.7195), ('Hf', 0, 38.34309), ('Ta', 0, 22.956863), ('W', 0, 9.63139), ('Re', 0, 129.702629)]
