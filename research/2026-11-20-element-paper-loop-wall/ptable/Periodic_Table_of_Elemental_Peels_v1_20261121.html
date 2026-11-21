@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Periodic Table of Elemental Peels — Jeromie Beasley</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--panel:#0a0f16;--edge:#1c2633;--ink:#e6edf4;--dim:#8fa0b2;--faint:#56667a;--out:#f2c14e;--in:#63d3ff;--none:#3a4656;--rose:#ff6fae;
+--head:"Chakra Petch","Segoe UI",system-ui,sans-serif;--body:"Inter Tight",system-ui,-apple-system,sans-serif;--mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;color-scheme:dark}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 var(--body)}
+header{padding:26px 32px 10px}
+h1{font:600 24px var(--head);letter-spacing:.1em;text-transform:uppercase;margin:0}
+.by{font:12px var(--mono);color:var(--faint);margin-top:3px}
+.rule{margin-top:12px;font:14px var(--mono);color:var(--out)}
+.lede{color:var(--dim);max-width:980px;margin:8px 0 0}
+nav{position:sticky;top:0;z-index:5;background:rgba(0,0,0,.95);border-bottom:1px solid var(--edge);padding:10px 32px;display:flex;flex-wrap:wrap;gap:6px}
+nav a{font:500 12.5px var(--head);letter-spacing:.06em;text-transform:uppercase;color:var(--dim);text-decoration:none;border:1px solid var(--edge);border-radius:6px;padding:6px 10px}
+nav a[aria-current=page]{color:var(--out);border-color:var(--out)}
+nav a:focus-visible,button:focus-visible,.tile:focus-visible{outline:2px solid var(--in);outline-offset:2px}
+main{padding:18px 32px 60px}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:13px;color:var(--dim);margin:4px 0 14px}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+.view{display:none}.view.on{display:block}
+.grid{display:grid;grid-template-columns:repeat(18,minmax(0,1fr));gap:4px;max-width:1500px}
+.tile{position:relative;aspect-ratio:1/1.12;background:var(--panel);border:1px solid var(--edge);border-radius:6px;padding:4px 5px;cursor:pointer;overflow:hidden;display:flex;flex-direction:column}
+.tile:hover{border-color:var(--dim)}
+.tile .z{font:10px var(--mono);color:var(--faint)}
+.tile .s{font:600 18px var(--body);line-height:1;margin-top:1px}
+.tile svg{flex:1;width:100%;min-height:0}
+.tile .sig{position:absolute;top:4px;right:5px;display:flex;gap:3px}
+.tile .sig i{width:7px;height:7px;border-radius:50%;display:block}
+.tile.c-outout{box-shadow:inset 0 0 0 1px rgba(242,193,78,.55)}
+.tile.c-noneout{box-shadow:inset 0 0 0 1px rgba(242,193,78,.4)}
+.gap{grid-column:span 1}
+.rowlabel{font:11px var(--mono);color:var(--faint);margin:10px 0 4px}
+.classes{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px}
+.cls{border:1px solid var(--edge);border-radius:8px;padding:12px;background:#05080c}
+.cls h3{margin:0;font:600 15px var(--body)}.cls p{margin:4px 0 10px;color:var(--dim);font-size:13.5px}
+.cls .tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(64px,1fr));gap:4px}
+.cls .n{font:12px var(--mono);color:var(--faint)}
+figure{margin:0}svg text{font-family:var(--body)}
+.chart{width:100%;max-width:1300px;height:auto;display:block}
+.note{color:var(--dim);max-width:980px;font-size:14px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:14px;max-width:1400px}
+.card{border:1px solid var(--edge);border-radius:8px;padding:14px 16px;background:var(--panel)}
+.card h3{margin:0 0 4px;font:600 16px var(--body)}.card .g{font:11px var(--mono);color:var(--out);letter-spacing:.05em}
+.card p{margin:6px 0;color:var(--dim)}.card code,.mono{font:12.5px var(--mono);color:var(--ink)}
+a{color:var(--in)}
+#drawer{position:fixed;top:0;right:0;bottom:0;width:min(560px,100%);background:#04070b;border-left:1px solid var(--edge);transform:translateX(100%);transition:transform .25s ease;z-index:20;overflow:auto;padding:18px 20px 40px}
+#drawer.on{transform:none}
+#drawer .x{position:absolute;top:12px;right:14px;background:#0d141d;border:1px solid var(--edge);color:var(--ink);border-radius:6px;padding:4px 10px;cursor:pointer;font:13px var(--body)}
+#drawer h2{margin:0;font:600 28px var(--body)}#drawer .sub{font:12px var(--mono);color:var(--faint)}
+#chain3d{width:100%;height:300px;display:block;margin:12px 0 4px;border:1px solid var(--edge);border-radius:8px;background:#000;cursor:grab}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:2px 14px;font:12.5px var(--mono);color:var(--dim)}.kv b{color:var(--ink);font-weight:400}
+.sec{margin-top:16px}.sec h4{margin:0 0 6px;font:600 12px var(--head);letter-spacing:.1em;text-transform:uppercase;color:var(--out)}
+table.steps{border-collapse:collapse;width:100%;font:12px var(--mono)}table.steps td,table.steps th{padding:2px 6px;border-bottom:1px solid #121a24;text-align:right;color:var(--dim)}
+table.steps th{color:var(--faint);font-weight:400}table.steps tr.o td{color:var(--out)}
+.signbox{display:flex;gap:10px;margin-top:10px}.signbox div{flex:1;border:1px solid var(--edge);border-radius:6px;padding:8px 10px;font-size:13px}
+.signbox .lbl{font:11px var(--mono);color:var(--faint);display:block}
+@media (max-width:900px){header,main,nav{padding-left:14px;padding-right:14px}.tile .s{font-size:13px}}
+</style></head>
+<body>
+<header>
+<h1>Periodic Table of Elemental Peels</h1>
+<div class="by">Jeromie Beasley · hydrogen to astatine · every number from the pinned ionisation archive</div>
+<div class="rule">peel step z = IEₖ₊₁ / IEₖ · reflection Γ = (z − 1)/(z + 1) · the loop wall Γ² = ½ · z = 3 + 2√2 = 5.828427</div>
+<p class="lede">Each element is read as a chain of its own removal energies. Every step of the chain is a reflection on one disk, and the loop wall splits the disk in two. An element's address is where two of its steps fall: the anion rung, from the electron affinity to the first ionisation energy, and the first opening of its noble-gas core. Of 3,570 steps from hydrogen to astatine, eight lie outside the wall, and every one is the first opening of a core.</p>
+</header>
+<nav id="nav" aria-label="Views">
+<a href="#standard">Table</a><a href="#signature">Signatures</a><a href="#cores">Core strands</a><a href="#disk">The disk</a><a href="#stone">Stone and wanting</a><a href="#colour">Colour line</a><a href="#octaves">Russell octaves</a><a href="#tests">Tests and predictions</a><a href="#about">How it is built</a>
+</nav>
+<main>
+<div class="legend"><span><i class="dot" style="background:var(--out)"></i>outside the wall</span><span><i class="dot" style="background:var(--in)"></i>inside the wall</span><span><i class="dot" style="background:var(--none)"></i>no anion / no core</span><span class="mono" style="color:var(--faint)">tile dots: left = anion rung, right = first core opening · the trace is the chain, gold where a step is outside</span></div>
+
+<section class="view" id="v-standard" aria-label="Standard layout"><div class="grid" id="grid"></div><div class="rowlabel">lanthanides, cerium to lutetium</div><div class="grid" id="grid-f"></div></section>
+
+<section class="view" id="v-signature"><p class="note">The address of an element is a pair: its anion rung and the first opening of its noble-gas core, each inside or outside the wall. Seven of the nine possible addresses occur.</p><div class="classes" id="classes"></div></section>
+
+<section class="view" id="v-cores"><p class="note">Each strand follows one noble-gas core across the table: the ratio of the step that first opens that core, element by element. The gold line is the wall. Every strand starts outside the wall and crosses inward after one to four elements: helium after carbon, the other four cores after their first element.</p><figure><svg class="chart" id="coresvg" viewBox="0 0 1300 560" role="img" aria-label="Core opening ratio against atomic number"></svg></figure></section>
+
+<section class="view" id="v-disk"><p class="note">All 3,570 removal steps (dots) and 65 anion rungs (rings) on the reflection disk: distance from the centre is Γ, angle is atomic number. The gold circle is the wall Γ² = ½. Only eight steps lie outside it.</p><figure><svg class="chart" id="disksvg" viewBox="0 0 900 900" style="max-width:820px" role="img" aria-label="Reflection disk of every step"></svg></figure></section>
+
+<section class="view" id="v-stone"><p class="note">The anion rung read as chemistry. Hardness η = (IE − EA)/2 is the stone; electronegativity χ = (IE + EA)/2 is the pull. The rung's reflection is Γ₀ = η/χ, and electrophilicity ω = χ²/2η. The wall is the line χ = √2·η, where ω = η and the ideal uptake ΔN = χ/η = 1/Γ₀ is exactly √2 electrons. Above the line the stone wins (53 of 65); below it the pull wins (12).</p><figure><svg class="chart" id="stonesvg" viewBox="0 0 1200 640" role="img" aria-label="Hardness against electronegativity"></svg></figure></section>
+
+<section class="view" id="v-colour"><p class="note">The same wall in the visible: the mean returned power |Γ|² of each element's surface across 400–700 nm (optical constants from the vacuum-disk paper, refractiveindex.info). All 35 metals sit above |Γ|² = ½ and none of the 6 non-metals do.</p><figure><svg class="chart" id="coloursvg" viewBox="0 0 1300 520" role="img" aria-label="Mean returned power by element"></svg></figure></section>
+
+<section class="view" id="v-octaves"><p class="note">Walter Russell's octaves run from one inert gas to the next: tones 1+, 2+, 3+, apex 4, then 3−, 2−, 1−. Each element sits at the height of its anion-rung Γ₀²; the gold line is the wall. The turn inward falls between his 3− and 2− tones, one tone after his apex.</p><figure><svg class="chart" id="octsvg" viewBox="0 0 1200 560" role="img" aria-label="Russell octaves against the wall"></svg></figure></section>
+
+<section class="view" id="v-tests"><div class="cards" id="cards"></div></section>
+
+<section class="view" id="v-about"><div class="cards" id="about"></div></section>
+</main>
+
+<aside id="drawer" aria-label="Element detail" aria-hidden="true"><button class="x" id="close">close</button><div id="dbody"></div></aside>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js"></script>
+<script>
+"use strict";
+const $=id=>document.getElementById(id), esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const C={out:'#f2c14e',in:'#63d3ff',none:'#3a4656'}, WALL=3+2*Math.SQRT2, f=(x,n)=>x==null?'—':Number(x).toFixed(n);
+const gam=z=>(z-1)/(z+1), ns='http://www.w3.org/2000/svg';
+const gcol=g2=>g2>0.5?'#f2c14e':`hsl(${195+40*(0.5-g2)},90%,${58+30*(0.5-g2)}%)`;
+const LEAN_BASE='https://github.com/dicipler-pixel/votkp-lean/blob/element-paper/loop-wall/';
+let D,EL,byZ={};
+fetch('ptable_data.json').then(r=>r.json()).then(d=>{D=d;EL=d.elements;EL.forEach(e=>byZ[e.Z]=e);build();route();});
+
+function spark(e){ // the chain as a trace: x = step, y = log IE
+  const ie=e.ie, n=ie.length, lo=Math.log(ie[0]), hi=Math.log(ie[n-1]), sp=Math.max(hi-lo,1e-6);
+  const X=i=>n<2?50:4+92*i/(n-1), Y=v=>44-38*(Math.log(v)-lo)/sp;
+  let s=`<svg viewBox="0 0 100 48" preserveAspectRatio="none" aria-hidden="true">`;
+  for(let k=0;k<n-1;k++){const st=e.steps[k];s+=`<line x1="${X(k)}" y1="${Y(ie[k])}" x2="${X(k+1)}" y2="${Y(ie[k+1])}" stroke="${st.out?'#f2c14e':'#4f88a8'}" stroke-width="${st.out?3:1.3}" vector-effect="non-scaling-stroke"/>`;}
+  return s+'</svg>';
+}
+function tile(e){const [a,c]=e.sig;return `<div class="tile c-${a}${c}" tabindex="0" role="button" data-z="${e.Z}" aria-label="${esc(e.name)}, address: anion rung ${a}, core opening ${c}"><span class="z">${e.Z}</span><span class="s">${e.sym}</span>${spark(e)}<span class="sig"><i style="background:${C[a]}"></i><i style="background:${C[c]}"></i></span></div>`;}
+function bindTiles(root){root.querySelectorAll('.tile').forEach(t=>{t.onclick=()=>openEl(+t.dataset.z);t.onkeydown=ev=>{if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();openEl(+t.dataset.z);}}});}
+
+function build(){
+  // standard layout
+  const cells=[];for(let p=1;p<=6;p++)for(let c=1;c<=18;c++)cells.push([p,c]);
+  $('grid').innerHTML=cells.map(([p,c])=>{const e=EL.find(x=>x.period===p&&x.col===c);return e?tile(e):'<div></div>';}).join('');
+  $('grid-f').innerHTML=Array.from({length:18},(_,i)=>{const e=EL.find(x=>x.period===8&&x.col===i+1);return e?tile(e):'<div></div>';}).join('');
+  // signature classes
+  const CL=[['out','out','Both outside','The anion rung and the first core opening both lie outside the wall: the alkali openings and the helium-core openings of boron and carbon.'],
+    ['none','out','Core opening outside, no bound anion','Beryllium: its helium core opens outside the wall, but it holds no stable anion.'],
+    ['out','in','Anion rung outside, core opening inside','The largest family: the anion rung is a hard step, the core opens gently.'],
+    ['in','in','Both inside','The pull at the anion rung beats the stone (ω > η) and the core opens gently: the halogens, the heavier chalcogens, and silver, iridium, platinum and gold.'],
+    ['none','in','No bound anion, core opening inside','Noble gases past helium, nitrogen, the alkaline earths past beryllium and others with no stable anion.'],
+    ['out','none','Anion rung outside, no core','Hydrogen.'],['none','none','No anion, no core','Helium.']];
+  $('classes').innerHTML=CL.map(([a,c,t,p])=>{const L=EL.filter(e=>e.sig[0]===a&&e.sig[1]===c);return `<div class="cls"><h3><i class="dot" style="background:${C[a]}"></i><i class="dot" style="background:${C[c]}"></i>${t} <span class="n">${L.length}</span></h3><p>${p}</p><div class="tiles">${L.map(tile).join('')}</div></div>`;}).join('');
+  bindTiles(document);
+  drawCores();drawDisk();drawStone();drawColour();drawOct();cards();
+}
+function el(tag,attrs,txt){const n=document.createElementNS(ns,tag);for(const k in attrs)n.setAttribute(k,attrs[k]);if(txt!=null)n.textContent=txt;return n;}
+function axisText(svg,x,y,t,o={}){svg.appendChild(el('text',Object.assign({x,y,fill:'#8fa0b2','font-size':13},o),t));}
+
+function drawCores(){const svg=$('coresvg'),W=1300,H=560,L=70,R=30,T=30,B=50;
+  const X=z=>L+(W-L-R)*(z-1)/84, Y=r=>T+(H-T-B)*(1-(Math.log(r)-Math.log(1))/(Math.log(40)-Math.log(1)));
+  [1,2,4,8,16,32].forEach(v=>{svg.appendChild(el('line',{x1:L,x2:W-R,y1:Y(v),y2:Y(v),stroke:'#141c26'}));axisText(svg,L-10,Y(v)+4,v,{'text-anchor':'end'});});
+  [1,10,20,30,40,50,60,70,80,85].forEach(z=>axisText(svg,X(z),H-B+20,z,{'text-anchor':'middle'}));
+  axisText(svg,(L+W)/2,H-8,'atomic number Z',{'text-anchor':'middle'});axisText(svg,18,T+10,'step ratio z',{});
+  svg.appendChild(el('line',{x1:L,x2:W-R,y1:Y(WALL),y2:Y(WALL),stroke:'#f2c14e','stroke-width':1.6}));axisText(svg,W-R,Y(WALL)-6,'wall z = 3 + 2√2',{fill:'#f2c14e','text-anchor':'end'});
+  const cores=['helium','neon','argon','krypton','xenon'], hue={helium:'#9fdcff',neon:'#b5a3ff',argon:'#7be0a0',krypton:'#ff9fcb',xenon:'#ffd58a'};
+  cores.forEach(cn=>{const pts=EL.flatMap(e=>e.cores.filter(c=>c.core===cn).map(c=>[e,c]));
+    svg.appendChild(el('polyline',{points:pts.map(([e,c])=>`${X(e.Z)},${Y(c.z)}`).join(' '),fill:'none',stroke:hue[cn],'stroke-width':1.4,opacity:.85}));
+    pts.forEach(([e,c])=>{const p=el('circle',{cx:X(e.Z),cy:Y(c.z),r:c.out?5.5:2.6,fill:c.out?'#f2c14e':hue[cn],style:'cursor:pointer'});p.appendChild(el('title',{},`${e.name}: opening of the ${cn} core, step ${c.step}, z = ${f(c.z,4)}, Γ² = ${f(c.g2,4)}`));p.onclick=()=>openEl(e.Z);svg.appendChild(p);
+      if(c.out)axisText(svg,X(e.Z)+7,Y(c.z)-6,e.sym,{fill:'#f2c14e','font-size':13});});
+    const f0=pts[0];axisText(svg,X(f0[0].Z)+4,Y(f0[1].z)+18,cn,{fill:hue[cn],'font-size':12});});
+}
+function drawDisk(){const svg=$('disksvg'),c=450,R=400;
+  svg.appendChild(el('circle',{cx:c,cy:c,r:R,fill:'none',stroke:'#3a4a5c'}));[0.25,0.5,0.75].forEach(r=>svg.appendChild(el('circle',{cx:c,cy:c,r:R*r,fill:'none',stroke:'#121a24'})));
+  svg.appendChild(el('circle',{cx:c,cy:c,r:R*Math.SQRT1_2,fill:'none',stroke:'#f2c14e','stroke-width':1.8}));axisText(svg,c+R*0.5+8,c-R*0.5-8,'Γ² = ½',{fill:'#f2c14e'});
+  EL.forEach(e=>{e.steps.forEach((s,k)=>{const G=Math.sqrt(s.g2),a=2*Math.PI*(e.Z-1)/85+0.06*Math.sin(k*2.1)-Math.PI/2;const d=el('circle',{cx:c+R*G*Math.cos(a),cy:c+R*G*Math.sin(a),r:s.out?6:1.6,fill:s.out?'#f2c14e':gcol(s.g2),opacity:s.out?1:.7});
+      if(s.out){d.appendChild(el('title',{},`${e.name} step ${s.k}: z = ${f(s.z,4)}, Γ² = ${f(s.g2,4)}`));d.style.cursor='pointer';d.onclick=()=>openEl(e.Z);axisText(svg,c+R*G*1.06*Math.cos(a),c+R*G*1.06*Math.sin(a),e.sym,{fill:'#f2c14e','font-size':13,'text-anchor':'middle'});}svg.appendChild(d);});
+    if(e.anion){const G=Math.sqrt(e.anion.g2),a=2*Math.PI*(e.Z-1)/85-Math.PI/2;const r=el('circle',{cx:c+R*G*Math.cos(a),cy:c+R*G*Math.sin(a),r:3.4,fill:'none',stroke:e.anion.out?'#c9a24a':'#63d3ff','stroke-width':1.2});r.appendChild(el('title',{},`${e.name} anion rung: z₀ = ${f(e.anion.z0,4)}, Γ₀² = ${f(e.anion.g2,4)}`));svg.appendChild(r);}});
+}
+function drawStone(){const svg=$('stonesvg'),W=1200,H=640,L=70,R=40,T=20,B=56;const an=EL.filter(e=>e.anion);
+  const xmax=10.6,ymax=7.4,X=v=>L+(W-L-R)*v/xmax,Y=v=>T+(H-T-B)*(1-v/ymax);
+  for(let v=0;v<=10;v+=2){svg.appendChild(el('line',{x1:X(v),x2:X(v),y1:T,y2:H-B,stroke:'#121a24'}));axisText(svg,X(v),H-B+20,v,{'text-anchor':'middle'});}
+  for(let v=0;v<=7;v++){svg.appendChild(el('line',{x1:L,x2:W-R,y1:Y(v),y2:Y(v),stroke:'#121a24'}));axisText(svg,L-10,Y(v)+4,v,{'text-anchor':'end'});}
+  axisText(svg,(L+W)/2,H-10,'electronegativity χ = (IE + EA)/2, eV  (the pull)',{'text-anchor':'middle'});axisText(svg,14,T+8,'hardness η (eV)',{});
+  svg.appendChild(el('line',{x1:X(0),y1:Y(0),x2:X(xmax),y2:Y(xmax/Math.SQRT2),stroke:'#f2c14e','stroke-width':1.8}));
+  axisText(svg,X(9.6),Y(9.6/Math.SQRT2)-10,'wall: χ = √2 η,  ω = η,  uptake √2 electrons',{fill:'#f2c14e','text-anchor':'end'});
+  axisText(svg,X(3.2),Y(5.6),'stone wins (ω < η)',{fill:'#c9a24a'});axisText(svg,X(8.2),Y(2.4),'the pull wins (ω > η)',{fill:'#63d3ff'});
+  an.forEach(e=>{const a=e.anion,p=el('circle',{cx:X(a.chi),cy:Y(a.eta),r:5,fill:a.out?'#c9a24a':'#63d3ff',opacity:.95,style:'cursor:pointer'});p.appendChild(el('title',{},`${e.name}: η = ${f(a.eta,3)}, χ = ${f(a.chi,3)}, ω/η = ${f(a.omega_over_eta,3)}, uptake 1/Γ₀ = ${f(a.uptake,3)}`));p.onclick=()=>openEl(e.Z);svg.appendChild(p);
+    axisText(svg,X(a.chi)+7,Y(a.eta)+4,e.sym,{fill:a.out?'#8fa0b2':'#bfe9ff','font-size':12});});
+}
+function drawColour(){const svg=$('coloursvg'),W=1300,H=520,L=70,R=30,T=20,B=70;const L2=EL.filter(e=>e.optic).sort((a,b)=>a.optic.mean_R-b.optic.mean_R);
+  const X=i=>L+(W-L-R)*(i+0.5)/L2.length,Y=v=>T+(H-T-B)*(1-v);
+  [0,0.25,0.5,0.75,1].forEach(v=>{svg.appendChild(el('line',{x1:L,x2:W-R,y1:Y(v),y2:Y(v),stroke:v===0.5?'#f2c14e':'#121a24','stroke-width':v===0.5?1.8:1}));axisText(svg,L-10,Y(v)+4,v,{'text-anchor':'end',fill:v===0.5?'#f2c14e':'#8fa0b2'});});
+  axisText(svg,W-R,Y(0.5)-6,'|Γ|² = ½',{fill:'#f2c14e','text-anchor':'end'});axisText(svg,14,T+8,'mean |Γ|², 400–700 nm',{});
+  L2.forEach((e,i)=>{const m=e.optic.metal,v=e.optic.mean_R;svg.appendChild(el('line',{x1:X(i),x2:X(i),y1:Y(0),y2:Y(v),stroke:'#1a2430'}));
+    const p=el(m?'circle':'rect',m?{cx:X(i),cy:Y(v),r:6,fill:'#f2c14e',style:'cursor:pointer'}:{x:X(i)-6,y:Y(v)-6,width:12,height:12,fill:'none',stroke:'#63d3ff','stroke-width':1.6,style:'cursor:pointer'});
+    p.appendChild(el('title',{},`${e.name}: mean |Γ|² = ${f(v,3)} (${m?'metal':'non-metal'})`));p.onclick=()=>openEl(e.Z);svg.appendChild(p);
+    axisText(svg,X(i),H-B+18,e.sym,{'text-anchor':'middle','font-size':12});});
+  axisText(svg,L,H-14,'● metal   □ non-metal',{fill:'#8fa0b2'});
+}
+function drawOct(){const svg=$('octsvg'),W=1200,H=560,L=150,R=40,T=50,B=40;const OCT=['helium octave','neon octave','argon octave','krypton octave','xenon octave'],TON=['1+','2+','3+','4','3−','2−','1−'];
+  const X=i=>L+(W-L-R)*i/6,rowH=(H-T-B)/5;
+  TON.forEach((t,i)=>axisText(svg,X(i),T-18,t,{'text-anchor':'middle',fill:'#e6edf4','font-size':15}));
+  OCT.forEach((o,r)=>{const y0=T+r*rowH,Y=g2=>y0+rowH*0.85-(rowH*0.75)*g2;axisText(svg,10,y0+rowH*0.5,o,{});
+    svg.appendChild(el('line',{x1:L-20,x2:W-R+10,y1:Y(0.5),y2:Y(0.5),stroke:'#f2c14e','stroke-width':1.2,opacity:.8}));
+    const pts=EL.filter(e=>e.tone&&e.tone[0]===o).map(e=>[e,TON.indexOf(e.tone[1])]);
+    pts.forEach(([e,i])=>{const g2=e.anion?e.anion.g2:null;if(g2==null){axisText(svg,X(i),Y(0.5)+18,e.sym+' (no anion)',{'text-anchor':'middle','font-size':11,fill:'#56667a'});return;}
+      const p=el('circle',{cx:X(i),cy:Y(g2),r:6,fill:e.anion.out?'#c9a24a':'#63d3ff',style:'cursor:pointer'});p.appendChild(el('title',{},`${e.name}, tone ${e.tone[1]}: Γ₀² = ${f(g2,4)}`));p.onclick=()=>openEl(e.Z);svg.appendChild(p);
+      axisText(svg,X(i)+9,Y(g2)+4,e.sym,{'font-size':12});});});
+}
+function cards(){
+  const C1=[['EXACT · LEAN','The wall','Γ² > ½ exactly when z² − 6z + 1 > 0, so z > 3 + 2√2 for z > 1. LoopWall.lean: wall_quadratic, outside_iff.'],
+   ['PROVED · LEAN','The data pin the wall to 1%','Every classification from hydrogen to astatine survives only for cutoffs in [5.80790, 5.86654), from silver\'s anion rung (inside) to silicon\'s (outside). LoopWall.lean: window_silver_silicon.'],
+   ['PROVED · LEAN','Only the wall gives a consistent two-face rule','A cutoff extends to two faces as sinh a · sinh b < sinh² h_c or as Γ_a² + Γ_b² < 2Γ_c². The two agree only at 3 + 2√2: (1 − x)(1 − y) − xy = 1 − (x + y). At any other cutoff some pair gets opposite calls (Lean witness at the window midpoint). TwoFaceForms.lean.'],
+   ['MEASURED · 8 of 3,570','Eight outside steps','Lithium, beryllium, boron and carbon open the helium core outside the wall; sodium, potassium, rubidium and caesium open the neon, argon, krypton and xenon cores. Every other step is inside.'],
+   ['PREDICTION · 7 hold, 1 against','Heavy anions','Gold, platinum, iridium and astatine inside; osmium, bismuth and lead outside: all seven hold. Polonium was predicted outside; the preliminary photodetachment affinity (1.476 eV) puts it inside at z = 5.703, pending the systematic budget.'],
+   ['PREDICTION · registered','Francium','Francium\'s radon-core opening is inside the wall if IE₂(Fr) < 23.738 eV. IE₁ = 4.072741 eV is measured; IE₂ has never been measured. It would be the first alkali whose core opening is inside. Only IE₂ in [23.654, 23.893) eV would separate the exact wall from other cutoffs.'],
+   ['EXACT','Connection energy on every link','E⁻ = (IEₖ₊₁ − IEₖ)² and E⁺ = (IEₖ₊₁ + IEₖ)² give E⁻/E⁺ = Γ² on every step; the wall is E⁺ = 2E⁻. In the 3D chain the bright core of each link has area Γ² of its outline.'],
+   ['EXACT · reading','Stone and wanting','At the anion rung Γ₀ = η/χ. With Parr\'s uptake ΔN = χ/η = 1/Γ₀, the wall is an uptake of √2 electrons, where ω = η.']];
+  $('cards').innerHTML=C1.map(([g,t,p])=>`<div class="card"><div class="g">${g}</div><h3>${t}</h3><p>${p}</p></div>`).join('');
+  const A=[['Data','Ionisation energies: archive data/element_thresholds_20261011.json.gz (3,655 values, hydrogen to astatine). Electron affinities: the element paper\'s committed table (65 bound anions). Optical constants: the vacuum-disk paper v6 (refractiveindex.info, 41 elements).'],
+   ['The rule','A peel step is the ratio of successive removal energies. Its reflection Γ = (z − 1)/(z + 1) = tanh(½ ln z) places it on one disk. The loop wall Γ² = ½ is where two equal faces stop closing a loop (Lambert quadrilateral, sinh h = 1). It is derived from geometry, never fitted.'],
+   ['Grades','EXACT: algebra. LEAN: certified in core Lean (LoopWall.lean, OpeningMap.lean, TwoFaceForms.lean on the element-paper/loop-wall branch). MEASURED: computed from the archive. PREDICTION: stated before the measurement.'],
+   ['Nearest prior art','Lyu, Keitel and Harman, Periodic table for highly charged ions, Phys. Rev. Research 7, L042071 (2025), built on a Coulomb filling rule. Chemists have long used jumps in successive ionisation energies to see shell boundaries. Arranging the elements by a geometric threshold on the ratio of successive removal energies is not found in either.'],
+   ['Source and licence','<a href="https://github.com/dicipler-pixel/votkp-lean/tree/element-paper/loop-wall/research/2026-11-20-element-paper-loop-wall" target="_blank" rel="noopener">github.com/dicipler-pixel/votkp-lean, branch element-paper/loop-wall</a>. Code and data MIT, text CC BY 4.0. Jeromie Beasley.']];
+  $('about').innerHTML=A.map(([t,p])=>`<div class="card"><h3>${t}</h3><p>${p}</p></div>`).join('');
+}
+
+/* detail drawer with a 3D chain */
+let R3=null;
+function openEl(Z){const e=byZ[Z];if(!e)return;const [a,c]=e.sig,fc=e.cores.length?e.cores[e.cores.length-1]:null,an=e.anion;
+  const signTxt={out:'outside',in:'inside',none:'none'};
+  let h=`<h2>${esc(e.name)} <span style="color:var(--faint);font-size:18px">${e.sym} · Z = ${e.Z}</span></h2><div class="sub">address: anion rung ${signTxt[a]} · first core opening ${signTxt[c]}</div>
+  <canvas id="chain3d" aria-label="3D chain of ${esc(e.name)}; drag to turn"></canvas><div class="sub">the chain: one node per removal energy (log height), bright core of each link = E⁻ inside the outline E⁺; gold ring on each link at Γ² = ½</div>
+  <div class="signbox"><div><span class="lbl">anion rung</span>${an?`z₀ = IE₁/EA = ${f(an.z0,4)}<br>Γ₀² = ${f(an.g2,4)} · <b style="color:${C[a]}">${signTxt[a]}</b>`:'no bound anion in the table'}</div>
+  <div><span class="lbl">first core opening</span>${fc?`${fc.core} core, step ${fc.step}<br>z = ${f(fc.z,4)} · Γ² = ${f(fc.g2,4)} · <b style="color:${C[c]}">${signTxt[c]}</b>`:'no noble-gas core below'}</div></div>`;
+  if(an)h+=`<div class="sec"><h4>Stone and wanting</h4><div class="kv"><span>IE₁, EA</span><b>${f(e.ie[0],4)} eV, ${f(an.EA,4)} eV</b><span>hardness η</span><b>${f(an.eta,4)} eV</b><span>electronegativity χ</span><b>${f(an.chi,4)} eV</b><span>electrophilicity ω</span><b>${f(an.omega,4)} eV</b><span>ω/η = 1/(2Γ₀²)</span><b>${f(an.omega_over_eta,4)}</b><span>ideal uptake 1/Γ₀</span><b>${f(an.uptake,4)} electrons (wall: √2 = 1.4142)</b><span>IE · EA</span><b>${f(an.IExEA,4)} eV²</b></div></div>`;
+  if(e.cores.length)h+=`<div class="sec"><h4>Every core opening</h4><table class="steps"><tr><th style="text-align:left">core</th><th>step</th><th>z</th><th>Γ²</th><th></th></tr>${e.cores.map(k=>`<tr class="${k.out?'o':''}"><td style="text-align:left">${k.core}</td><td>${k.step}</td><td>${f(k.z,5)}</td><td>${f(k.g2,5)}</td><td>${k.out?'outside':'inside'}</td></tr>`).join('')}</table></div>`;
+  h+=`<div class="sec"><h4>The full peel ladder</h4><div class="kv" style="margin-bottom:6px"><span>steps</span><b>${e.steps.length}, ${e.outside} outside</b><span>peel ledger Σ ln z = ln(IEₙ/IE₁)</span><b>${f(e.ledger,4)}</b></div><table class="steps"><tr><th>k</th><th>IEₖ (eV)</th><th>z</th><th>Γ² = E⁻/E⁺</th></tr>${e.ie.map((v,i)=>{const s=e.steps[i];return `<tr class="${s&&s.out?'o':''}"><td>${i+1}</td><td>${f(v,v>1000?2:4)}</td><td>${s?f(s.z,5):''}</td><td>${s?f(s.g2,5):''}</td></tr>`;}).join('')}</table></div>`;
+  const extra=[];if(e.optic)extra.push(['colour, mean |Γ|²',`${f(e.optic.mean_R,4)} (${e.optic.metal?'metal':'non-metal'})`]);if(e.tone)extra.push(['Russell',`${e.tone[0]}, tone ${e.tone[1]}`]);
+  if(extra.length)h+=`<div class="sec"><h4>Other readings</h4><div class="kv">${extra.map(([k,v])=>`<span>${k}</span><b>${v}</b>`).join('')}</div></div>`;
+  if(e.lean.length)h+=`<div class="sec"><h4>Certified in Lean</h4><div class="kv" style="grid-template-columns:1fr">${e.lean.map(t=>`<a href="${LEAN_BASE}${encodeURI(t.file)}#L${t.line}" target="_blank" rel="noopener" class="mono">${esc(t.name)}</a>`).join('')}</div></div>`;
+  $('dbody').innerHTML=h;$('drawer').classList.add('on');$('drawer').setAttribute('aria-hidden','false');$('close').focus();chain3d(e);}
+$('close').onclick=()=>{$('drawer').classList.remove('on');$('drawer').setAttribute('aria-hidden','true');if(R3){R3.stop();R3=null;}};
+document.addEventListener('keydown',ev=>{if(ev.key==='Escape')$('close').onclick();});
+
+function chain3d(e){if(R3){R3.stop();R3=null;}if(!window.THREE)return;const T=THREE,cv=$('chain3d'),w=cv.clientWidth,hgt=cv.clientHeight;
+  const ren=new T.WebGLRenderer({canvas:cv,antialias:true});ren.setPixelRatio(Math.min(2,devicePixelRatio||1));ren.setSize(w,hgt,false);
+  const sc=new T.Scene(),cam=new T.PerspectiveCamera(40,w/hgt,0.05,100),g=new T.Group();sc.add(g);
+  const ie=e.ie,n=ie.length,l0=Math.log10(ie[0]),span=Math.max(0.3,Math.log10(ie[n-1])-l0),Ys=5/span,R0=1.5,Rl=0.32;
+  const P=ie.map((v,k)=>new T.Vector3(R0*Math.cos(k*0.95),(Math.log10(v)-l0)*Ys-2.5,R0*Math.sin(k*0.95)));
+  const cyl=new T.CylinderGeometry(1,1,1,24,1,true),up=new T.Vector3(0,1,0);
+  const cage=(()=>{const p=[];for(let i=0;i<10;i++){const a=2*Math.PI*i/10;p.push(Math.cos(a),-0.5,Math.sin(a),Math.cos(a),0.5,Math.sin(a));}for(const y of[-0.5,0.5])for(let i=0;i<40;i++){const a0=2*Math.PI*i/40,a1=2*Math.PI*(i+1)/40;p.push(Math.cos(a0),y,Math.sin(a0),Math.cos(a1),y,Math.sin(a1));}const b=new T.BufferGeometry();b.setAttribute('position',new T.Float32BufferAttribute(p,3));return b;})();
+  const ring=(()=>{const p=[];for(let i=0;i<40;i++){const a0=2*Math.PI*i/40,a1=2*Math.PI*(i+1)/40,r=Math.SQRT1_2;p.push(r*Math.cos(a0),0,r*Math.sin(a0),r*Math.cos(a1),0,r*Math.sin(a1));}const b=new T.BufferGeometry();b.setAttribute('position',new T.Float32BufferAttribute(p,3));return b;})();
+  e.steps.forEach((s,k)=>{const A=P[k],B=P[k+1],d=B.clone().sub(A),L=d.length(),grp=new T.Group();grp.position.copy(A).addScaledVector(d,0.5);grp.quaternion.setFromUnitVectors(up,d.normalize());
+    const G=Math.sqrt(s.g2),col=new T.Color(s.out?0xf2c14e:0x63d3ff).lerp(new T.Color(0xffffff),s.out?0:0.35*(0.5-s.g2));
+    const core=new T.Mesh(cyl,new T.MeshBasicMaterial({color:col,transparent:true,opacity:0.6,blending:T.AdditiveBlending,depthWrite:false,side:T.DoubleSide}));core.scale.set(Rl*Math.max(G,0.03),L,Rl*Math.max(G,0.03));
+    const sh=new T.LineSegments(cage,new T.LineBasicMaterial({color:0xa9bdd2,transparent:true,opacity:0.35}));sh.scale.set(Rl,L,Rl);
+    const wr=new T.LineSegments(ring,new T.LineBasicMaterial({color:0xf2c14e,transparent:true,opacity:s.out?1:0.5}));wr.scale.set(Rl,1,Rl);grp.add(core,sh,wr);g.add(grp);});
+  const pg=new T.BufferGeometry().setFromPoints(P);g.add(new T.Points(pg,new T.PointsMaterial({color:0xe6f0ff,size:0.12})));
+  let yaw=0.6,pitch=0.25,drag=null,auto=true,raf=0;cv.onpointerdown=ev=>{drag=[ev.clientX,ev.clientY];auto=false;cv.setPointerCapture(ev.pointerId);};cv.onpointermove=ev=>{if(!drag)return;yaw-=(ev.clientX-drag[0])*0.008;pitch=Math.max(-1.2,Math.min(1.2,pitch+(ev.clientY-drag[1])*0.008));drag=[ev.clientX,ev.clientY];};cv.onpointerup=()=>drag=null;
+  const still=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  (function loop(){if(auto&&!still)yaw+=0.004;const D=9;cam.position.set(D*Math.cos(pitch)*Math.sin(yaw),D*Math.sin(pitch),D*Math.cos(pitch)*Math.cos(yaw));cam.lookAt(0,0,0);ren.render(sc,cam);raf=requestAnimationFrame(loop);})();
+  R3={stop(){cancelAnimationFrame(raf);ren.dispose();}};}
+
+/* hash routing */
+const VIEWS=['standard','signature','cores','disk','stone','colour','octaves','tests','about'];
+function route(){const v=VIEWS.includes(location.hash.slice(1))?location.hash.slice(1):'standard';VIEWS.forEach(x=>$('v-'+x).classList.toggle('on',x===v));document.querySelectorAll('#nav a').forEach(a=>a.setAttribute('aria-current',a.getAttribute('href')==='#'+v?'page':'false'));}
+addEventListener('hashchange',route);
+</script>
+</body></html>
