@@ -19,3 +19,5 @@ Claude’s review asked for the opening of the filled 4d¹⁰ subshell alongside
 The current archive is pinned at 182da01. Five atomic ground-state affinities are external to it. The revised rhodium affinity is 1.14273(5) eV (Chen et al., 2026); the [provenance table](independent/NIST_AND_AFFINITY_SOURCES.md) records the distinction between published measurements, a published evaluation citing unpublished measurements, and the calculated technetium estimate.
 
 [Element profiles, measured materials data and five physical tests](materials/nb_rh_materials.md) · [One-command cross-check of both batches](../checks/review_batches_8_9.py).
+
+[Pressure-dependent structures and 55 cell/contact comparisons](pressure/pressure_notes.md).

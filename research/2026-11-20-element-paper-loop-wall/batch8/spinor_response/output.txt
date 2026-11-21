@@ -1,0 +1,7 @@
+M Hermitian, M²=7M, Tr(M)=14: P=M/7 is a rank-two occupied projector.
+Every site: B_i = 12/49; every off-site sum equals 12/49.
+W012=(1−7i)/343, W013=(1+7i)/343. All edge sums of imaginary parts vanish.
+Reversing 012 conjugates W. Local phase gauges leave all loops unchanged.
+P and its entrywise conjugate have identical X_ij and opposite Im(W012).
+Flat Hamiltonian H=I−2P: off-site evolution blocks equal 2i sin(t) P_ji; P is the occupied lower-band projector. All off-site summed transfer probabilities agree in both directions.
+Ideal bcc nearest-neighbour displacements: 0 directed two-step sums are a third nearest-neighbour edge.
