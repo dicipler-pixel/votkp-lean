@@ -1,0 +1,19 @@
+# Cerium: hold the free-atom ladder fixed and change the solid
+
+**HYPOTHESIS / falsifier.** If compression or preparation acts on the optical conductivity solely through one positive scale factor, the sign of σ₁(1.05 eV) − σ₁(0.85 eV) must agree in the two phases. A sign change falsifies that specific model. These energies were chosen retrospectively around the authors’ published 1 eV feature. This is a test against a known feature, with no prospective prediction claimed.
+
+**MEASURED.** Van der Eb, Kuz’menko and van der Marel (2001) studied elemental cerium films under ultrahigh vacuum. They assign the cold-deposited films (below 4 K) to α and the hot-deposited films (about 400 K) to γ. Above 0.8 eV both ellipsometric angles were measured directly; the optical conductivity was reconstructed from the complex dielectric response. The comparison below stays above 0.8 eV. Both cerium phases have the face-centered cubic lattice. The films have distinct preparation histories, which matter for direct comparisons with bulk pressure sweeps. [Primary paper](https://doi.org/10.1103/PhysRevLett.86.3407) · [vector figure used for extraction, Fig. 1](https://pure.rug.nl/ws/portalfiles/portal/14529452/infraredandoptical.pdf)
+
+**DERIVED from the published figure.** In kS/cm, the plotted α curve rises from about 3.75 to 3.91 over 0.85→1.05 eV. The γ curve falls from 3.16 to 2.93. The dependence on photon energy changes shape. If each reading is moved independently by ±0.05 kS/cm (roughly half a plotted stroke), the α difference remains positive and the γ difference remains negative. This checks sensitivity to reading the printed curves. Experimental error bars and cross-energy covariance were unavailable from this figure. For a second summary, integrating σ₁(E) dE/E from 0.85 to 2.00 eV gives about 2.98 and 2.26 kS/cm respectively. The finite optical window omits low-frequency metallic transport and higher interband contributions; it cannot supply a bulk localization length. [Computed readings](figure_readings.csv)
+
+**RECOGNISED in the ball picture.** The isolated cerium peel clocks provide identical inputs for both solids. Homogeneous cerium sites have a matched neighbour clock under the equal-clock construction in each phase. Neither input changes with film preparation. A model of the different measured spectra therefore needs additional junction information, such as the occupied subspace, its energy separations and the optical transition matrix elements. The sign change supplies a sharper validation target than “both films conduct.” It also rules out using only a multiplicative density rescaling of one spectrum. No cerium site projector has been inferred from the film data.
+
+**MEASURED / model-dependent cross-check.** Bulk pressure experiments independently detect a change in the cerium 4f spectral response through the γ–α collapse near 0.8 GPa. The spectra are measured; values for the 4f occupancy obtained by fitting an impurity model depend on that model. These experiments give a separate structural/electronic test, under a different protocol from film growth. [Rueff et al. 2006](https://doi.org/10.1103/PhysRevLett.96.237403) · [X-ray Raman measurements, 2019](https://doi.org/10.1021/acs.jpclett.9b02819)
+
+Run with Python and PyMuPDF. From this directory, download the Groningen PDF above, then compare the result:
+
+```sh
+python cerium_fig1.py infraredandoptical.pdf | diff - figure_readings.csv
+```
+
+The extractor identifies the real-conductivity panel’s solid α and dashed γ vector paths and verifies the page coordinates against printed axis ticks. Within each segment σ₁(E) is linear. Its inverse-frequency weight integrates to m(b−a)+c ln(b/a) for σ₁(E)=mE+c. The CSV preserves calculation precision for reruns. Use the rounded values above when citing the figure.

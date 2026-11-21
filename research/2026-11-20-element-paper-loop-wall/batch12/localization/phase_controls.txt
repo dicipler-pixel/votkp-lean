@@ -1,0 +1,5 @@
+toy half-filled chain: exact linear growth and zero twist determinant
+gauge changes: principal angles and exact rank/overlap decomposition invariant
+filled atomic orbital: cell-center coefficient zero, microscopic positive
+Kr 4^3: 4 zone-wrap links checked on independent FFT grid, max residual 9.39e-16; wrong wrap sign rejected on 4
+Rb 4^3: 6 zone-wrap links checked on independent FFT grid, max residual 1.47e-15; wrong wrap sign rejected on 6

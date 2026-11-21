@@ -1,0 +1,36 @@
+290 ordinary energies and their uncertainty fields agree with SHA-256 75e67478d9a22ef85fa2d3f6ac36ad2860c6f8f62215127c558438a2cb53f62c.
+295 serialized energy fields agree (including five affinities); all 290 z and Gamma pairs match independently at six places.
+Lean (version 4.34.1, x86_64-unknown-linux-gnu, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)
+'ElementPaper.Batch12.ratioBounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch12.interiorForEveryRealization' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch12.exteriorForEveryRealization' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch12.strictRankForEveryRealization' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch12.BariumOrdinaryBoxes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch12.BariumHighest' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch12.BariumAnion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch12.LanthanumOrdinaryBoxes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch12.LanthanumHighest' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch12.LanthanumAnion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch12.CeriumOrdinaryBoxes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch12.CeriumHighest' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch12.CeriumAnion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch12.PraseodymiumOrdinaryBoxes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch12.PraseodymiumHighest' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch12.PraseodymiumAnion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch12.NeodymiumOrdinaryBoxes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch12.NeodymiumHighest' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch12.NeodymiumAnion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch12.channel54Descends' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch12.praseodymiumStraddles' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch12.neodymiumBelowNominal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch12.batchOrdinaryCounts' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch12.batchOrdinaryBelowNitrogen' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch12.windowHydrogenNeodymium' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch12.heliumCoreOrder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch12.neodymiumTouchingBoxes' depends on axioms: [propext, Classical.choice, Quot.sound]
+Rejected: Every neodymium ratio box is strictly forward
+Rejected: 36/25 is a lower floor for neodymium at 54 electrons
+Rejected: Every praseodymium realization is below 36/25
+Rejected: Barium anion box lies inside
+Rejected: Barium valence opening outranks its helium-core opening
+27 theorem audits passed. Five false controls rejected.
