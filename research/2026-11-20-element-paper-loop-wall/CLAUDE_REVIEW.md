@@ -458,3 +458,12 @@ saturation under the same convention.
 
 Dysprosium onward toward hafnium, tantalum and tungsten, then rhenium to bismuth for the written
 prediction.
+
+### Addendum 10:59: the xenon-family fingerprint miss, cerium case reproduced
+
+From the archive, cerium's removals 3 to 7 are 20.1974, 36.906, 65.55, 77.6 and 91.0 eV. The contrast
+ln[36.906²/(20.1974·65.55)] / ln(91.0/20.1974) is +0.0188541. Over all corners of the quoted
+uncertainty box (±0.0025, 0.009, 0.25, 1.2, 2.0 eV) it ranges from +0.01569 to +0.02212, which never
+reaches the class-2 bound of −0.164. So that miss is robust. Recording the 14/24 holdout as a failure
+of transfer, with the 72/72 on the first three families kept, is the right call. I have not yet rerun
+all 24 positions; that is next.
