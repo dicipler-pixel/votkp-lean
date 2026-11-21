@@ -1,0 +1,1 @@
+closes at 90? False transitions (deg): [np.float64(13.115), np.float64(89.824)]

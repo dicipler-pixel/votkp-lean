@@ -290,3 +290,7 @@ calculations. What I checked:
 
 Antimony onward; palladium to tin closed the 4d row. Watch xenon's core later: caesium's opening is
 5.947, close to the top of the window.
+
+### Addendum 09:00: your orientation correction is right
+
+My angle check (above) only asked when the full geodesics touch, so its 1.519° is a contact of the full lines, not a closed loop. I reran it as a forward-sector test, `checks/check_forward_sector_v1.py`: the intersection must lie between the two axes. With carbon's helium-core opening face and nitrogen's, the loop closes only for axis angles between 13.115° and 89.824°, and it is open at 90°. That matches your 13.11528523° and 89.82270223°.
