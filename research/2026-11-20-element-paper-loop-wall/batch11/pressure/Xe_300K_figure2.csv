@@ -1,0 +1,17 @@
+Z,element,temperature_K,plotted_pressure_GPa,plotted_sample_resistance_ohm,source
+54,xenon,300,57.70,2.489e+08,Eremets et al. 2000; Fig. 2; point centre
+54,xenon,300,59.00,1.002e+08,Eremets et al. 2000; Fig. 2; point centre
+54,xenon,300,59.99,7.527e+07,Eremets et al. 2000; Fig. 2; point centre
+54,xenon,300,64.49,7.109e+06,Eremets et al. 2000; Fig. 2; point centre
+54,xenon,300,65.27,1.894e+06,Eremets et al. 2000; Fig. 2; point centre
+54,xenon,300,66.22,7.464e+05,Eremets et al. 2000; Fig. 2; point centre
+54,xenon,300,68.30,2.282e+05,Eremets et al. 2000; Fig. 2; point centre
+54,xenon,300,72.01,6.975e+04,Eremets et al. 2000; Fig. 2; point centre
+54,xenon,300,80.32,1.689e+04,Eremets et al. 2000; Fig. 2; point centre
+54,xenon,300,113.01,386.5,Eremets et al. 2000; Fig. 2; point centre
+54,xenon,300,114.00,312.7,Eremets et al. 2000; Fig. 2; point centre
+54,xenon,300,118.02,225.3,Eremets et al. 2000; Fig. 2; point centre
+54,xenon,300,120.01,167.5,Eremets et al. 2000; Fig. 2; point centre
+54,xenon,300,133.02,18.35,Eremets et al. 2000; Fig. 2; point centre
+54,xenon,300,141.02,12.14,Eremets et al. 2000; Fig. 2; point centre
+54,xenon,300,146.99,5.669,Eremets et al. 2000; Fig. 2; point centre

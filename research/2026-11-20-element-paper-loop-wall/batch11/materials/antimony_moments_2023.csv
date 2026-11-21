@@ -1,0 +1,20 @@
+mass,state_in_table,spin_parity,hyperfine_anomaly_pct,experimental_mu_muN,experimental_Q_b,reference_calibration
+113,ground,5/2+,0.30(6),3.402(7),-0.568(12),relative to 123Sb adopted in 2023
+115,ground,5/2+,0.31(6),3.450(4),-0.548(12),relative to 123Sb adopted in 2023
+116,isomer,8−,0.09(6),2.312(3),-0.92(2),relative to 123Sb adopted in 2023
+117,ground,5/2+,0.31(6),3.502(3),-0.526(11),relative to 123Sb adopted in 2023
+118,isomer,8−,0.10(6),2.360(2),-0.78(2),relative to 123Sb adopted in 2023
+119,ground,5/2+,0.32(6),3.447(3),-0.537(11),relative to 123Sb adopted in 2023
+120,isomer,8−,0.11(6),2.344(3),-0.692(14),relative to 123Sb adopted in 2023
+121,ground,5/2+,0.323(9)b,3.358(4),-0.541(11),relative to 123Sb adopted in 2023
+122,isomer,(8)−,-0.38(7),1.420(7),-0.632(15),relative to 123Sb adopted in 2023
+124,isomer,8−,-0.59(11),1.168(3),-0.425(9),relative to 123Sb adopted in 2023
+125,ground,7/2+,0.03(3),2.637(3),-0.635(13),relative to 123Sb adopted in 2023
+126,ground,8−,-0.63(12),1.121(3),-0.273(6),relative to 123Sb adopted in 2023
+127,ground,7/2+,0.06(3),2.755(3),-0.576(12),relative to 123Sb adopted in 2023
+128,ground,8−,-0.58(11),1.168(5),-0.142(3),relative to 123Sb adopted in 2023
+129,ground,7/2+,0.09(3),2.872(5),-0.497(11),relative to 123Sb adopted in 2023
+130,ground,8−,-0.49(9),1.246(3),-0.033(2),relative to 123Sb adopted in 2023
+131,ground,7/2+,0.12(3),2.976(4),-0.402(9),relative to 123Sb adopted in 2023
+132,isomer,(8− ),-0.39(7),1.361(5),0.043(4),relative to 123Sb adopted in 2023
+133,ground,7/2+,0.14(3),3.077(4),-0.304(7),relative to 123Sb adopted in 2023

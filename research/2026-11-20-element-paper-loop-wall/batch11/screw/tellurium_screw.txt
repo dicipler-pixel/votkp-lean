@@ -1,0 +1,4 @@
+COD 2020222, group 152: a=4.456 Å, c=5.921 Å, x=-0.2636, two nearest 2.834506 Å, next contact 3.491173 Å, bond angle 103.1352 degrees.
+  signed triple in Å³: forward +21.224043, reversal +21.224043, constructed mirror -21.224043.
+COD 9008580, group 154: a=4.44693 Å, c=5.91492 Å, x=0.269, two nearest 2.860109 Å, next contact 3.463644 Å, bond angle 102.2878 degrees.
+  signed triple in Å³: forward -21.990034, reversal -21.990034, constructed mirror +21.990034.

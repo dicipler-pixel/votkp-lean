@@ -21,7 +21,7 @@ With independent positive input boxes A±u, B±v, we compute the exact bounds (B
 | 5.9 | 1, silicon anion | 0 |
 | 6 | 1, silicon anion | 1, caesium k=1 |
 
-**DERIVED.** Measured by absolute distance in the forward ratio z from 3+2√2, silver k=0 remains the closest anion, distance 0.020525064906…. Among the five new elements, tellurium k=0 is closest at z=4.571476121012…, distance 1.256951003734…. Neither a fitted cutoff nor a binary label identifies an independent mechanism.
+**DERIVED.** Measured by absolute distance in the forward ratio z from 3+2√2, silver k=0 remains the closest anion, distance 0.020525064906…. Among the four new bound-anion rungs, tellurium k=0 is closest at z=4.571476121012…, distance 1.256951003734…. Neither a fitted cutoff nor a binary label identifies an independent mechanism.
 
 Reproduce from the repository root:
 

@@ -21,3 +21,21 @@
 **DERIVED.** The ordinal k=1 at Cs compares loss of the neutral 6s electron with the first loss from the [Xe] 5p⁶ core. Both energies are unbracketed. With IE₁=3.89390572743(17) and IE₂=23.15745(6) eV, z₁=5.947100834…, Γ₁=0.712110…, above 3+2√2. Opposite quoted endpoints give 5.947085425 ≤ z₁ ≤ 5.947116244 with bounds rounded outward. Rung zero compares 6s detachment from Cs⁻ with 6s removal from Cs and is independently outside. For xenon the initial state already has the filled Xe core and lacks a bound anion, so no numeric ratio compares a last 6s loss to the first 5p loss there. [Cs charge table](https://physics.nist.gov/cgi-bin/ASD/ie.pl?at_num_out=1&biblio=1&e_out=0&el_name_out=1&ion_charge_out=1&spectra=cesium&unc_out=1&units=1)
 
 To reproduce from this directory, run `python fetch_asd.py .` to refresh the two public query sets, then `python verify_sb_cs.py /path/to/element_thresholds_20261011.json.gz nist_sb_cs.csv ../ladder/batch11_sb_cs.csv`. The verifier checks the compressed input SHA-256 and all printed values before emitting counts.
+
+**DERIVED.** A separate configuration-difference check assigned the orbital on each side of all 31 tracked ordinary openings. Expand the initial, intermediate and final ground configurations, verify their electron counts are (n+1,n,n-1), then subtract adjacent occupations. At the Ar core every batch member gives 3d→3p, and at the Kr core each gives 4d→4p. These are same-principal-shell transitions in these ions. At intermediate counts 28 and 46 the pairs instead give 4s→3d and 5s→4d. The Ne and He openings give 3s→2p and 2s→1s. Caesium supplies the one additional Xe core, 6s→5p. The orbital pairs describe leading ground configurations and do not measure a many-electron transition amplitude. See `opening_orbitals.csv` and `python assign_openings.py asd_configurations.csv`.
+
+## A more recent caesium ionization measurement
+
+**MEASURED.** The ASD neutral-Cs value comes from the 2016 result 31,406.4677325(14) cm⁻¹. After the 2024 ASD release, Shen et al. published 31,406.46775148(14) cm⁻¹ using the weighted result of three Rydberg series. They corrected for the initial hyperfine splitting to report the ground-state center of gravity. This comparison therefore concerns the same physical limit. Their paper discusses different spectroscopy and field environments for the two experiments. [Deiglmayr et al., 2016](https://doi.org/10.1103/PhysRevA.93.013424) · [Shen et al., 2024](https://doi.org/10.1103/PhysRevLett.133.233005) · [open methods and comparison](https://arxiv.org/html/2410.19129v1)
+
+**DERIVED.** Multiplying the 2024 wavenumber and uncertainty by the exact SI factor 100hc/e gives 3.893905729785(17) eV, 2.36×10⁻⁹ eV above the archived value. The difference of the two published wavenumbers corresponds to 569.0 kHz. Used only as a sensitivity test, the more recent IE₁ gives k=0 z=8.256342376768, Γ=0.783931933523 and k=1 z=5.947100830630, Γ=0.712110123523. Both ratios, reflections and wall calls coincide with their archive-based six-decimal displays. The archive column remains generated from the specified pin. [SI constants](https://physics.nist.gov/cuu/Constants/energy.html)
+
+## How far would the missing Sb number have to move?
+
+**DERIVED.** Keep the absent uncertainty at IE₃ blank. Let x denote the unknown actual IE₃, A=IE₂∈[16.601,16.651] eV and C=IE₄∈[43.779,43.829] eV. With W=3+2√2, both ratios x/A and C/x are strictly between the reciprocal walls for every A,C in their boxes if and only if
+
+[
+\max(A_{\max},C_{\max})/W < x < W\min(A_{\min},C_{\min}).
+]
+
+Here that interval is (43.829/W, 16.601 W), approximately (7.51987, 96.75772) eV. In particular any x **between the two adjacent thresholds** leaves both rungs strictly inside: each forward ratio is at most 43.829/16.601=2.640143 rounded up. This supplies a falsification range without imputing an experimental uncertainty or silently assuming ordering. NIST gives Moore’s energy-level compilation and a 1947 Sb spectroscopy paper for IE₃. The compilation lists the limit as 204248 cm⁻¹. [Moore, reprinted 1971](https://doi.org/10.6028/NBS.NSRDS.35v3) · [Murakawa and Suwa, 1947, as indexed by NIST](https://physics.nist.gov/cgi-bin/ASBib1/get_ASBib_ref.cgi?db=el&db_id=16241&comment_code=&element=Sb&spectr_charge=3&ref=16241&type=I)

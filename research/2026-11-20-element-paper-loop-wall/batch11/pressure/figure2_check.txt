@@ -1,0 +1,4 @@
+First and last marker: 57.70 GPa, 2.489e+08 ohm; 146.99 GPa, 5.669 ohm.
+Full plotted change: 7.642 decades.
+55–75 GPa: 8 plotted measurements; descriptive log10(R) slope -0.2636/GPa.
+75–150 GPa: 8 plotted measurements; descriptive log10(R) slope -0.0532/GPa.
