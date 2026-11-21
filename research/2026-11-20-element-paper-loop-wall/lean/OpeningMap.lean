@@ -1308,6 +1308,236 @@ theorem ladder_Zr_all_inside :
     inside (22236.712 / 21516.471 : Rat) := by
   unfold inside; refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩ <;> grind
 
+/-- Every ordinary step of the Nb ladder (40 steps) is inside the wall. -/
+theorem ladder_Nb_all_inside :
+    inside (14.32 / 6.75885 : Rat) ∧
+    inside (25.04 / 14.32 : Rat) ∧
+    inside (37.611 / 25.04 : Rat) ∧
+    inside (50.5728 / 37.611 : Rat) ∧
+    inside (102.069 / 50.5728 : Rat) ∧
+    inside (119.1 / 102.069 : Rat) ∧
+    inside (136.0 / 119.1 : Rat) ∧
+    inside (159.2 / 136.0 : Rat) ∧
+    inside (180.0 / 159.2 : Rat) ∧
+    inside (200.28 / 180.0 : Rat) ∧
+    inside (246.1 / 200.28 : Rat) ∧
+    inside (268.59 / 246.1 : Rat) ∧
+    inside (482.5 / 268.59 : Rat) ∧
+    inside (530.0 / 482.5 : Rat) ∧
+    inside (581.0 / 530.0 : Rat) ∧
+    inside (636.0 / 581.0 : Rat) ∧
+    inside (688.0 / 636.0 : Rat) ∧
+    inside (758.0 / 688.0 : Rat) ∧
+    inside (816.0 / 758.0 : Rat) ∧
+    inside (877.0 / 816.0 : Rat) ∧
+    inside (940.0 / 877.0 : Rat) ∧
+    inside (1000.0 / 940.0 : Rat) ∧
+    inside (1176.0 / 1000.0 : Rat) ∧
+    inside (1230.6 / 1176.0 : Rat) ∧
+    inside (1293.7 / 1230.6 : Rat) ∧
+    inside (1368.0 / 1293.7 : Rat) ∧
+    inside (1439.0 / 1368.0 : Rat) ∧
+    inside (1488.0 / 1439.0 : Rat) ∧
+    inside (1625.9 / 1488.0 : Rat) ∧
+    inside (1684.97 / 1625.9 : Rat) ∧
+    inside (4020.1 / 1684.97 : Rat) ∧
+    inside (4187.0 / 4020.1 : Rat) ∧
+    inside (4369.0 / 4187.0 : Rat) ∧
+    inside (4540.0 / 4369.0 : Rat) ∧
+    inside (4815.0 / 4540.0 : Rat) ∧
+    inside (5011.0 / 4815.0 : Rat) ∧
+    inside (5265.0 / 5011.0 : Rat) ∧
+    inside (5426.066 / 5265.0 : Rat) ∧
+    inside (22648.046 / 5426.066 : Rat) ∧
+    inside (23388.85 / 22648.046 : Rat) := by
+  unfold inside; refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩ <;> grind
+
+/-- Every ordinary step of the Mo ladder (41 steps) is inside the wall. -/
+theorem ladder_Mo_all_inside :
+    inside (16.16 / 7.09243 : Rat) ∧
+    inside (27.13 / 16.16 : Rat) ∧
+    inside (40.33 / 27.13 : Rat) ∧
+    inside (54.417 / 40.33 : Rat) ∧
+    inside (68.82704 / 54.417 : Rat) ∧
+    inside (125.638 / 68.82704 : Rat) ∧
+    inside (143.6 / 125.638 : Rat) ∧
+    inside (164.12 / 143.6 : Rat) ∧
+    inside (186.3 / 164.12 : Rat) ∧
+    inside (209.3 / 186.3 : Rat) ∧
+    inside (230.28 / 209.3 : Rat) ∧
+    inside (279.1 / 230.28 : Rat) ∧
+    inside (302.6 / 279.1 : Rat) ∧
+    inside (544.0 / 302.6 : Rat) ∧
+    inside (591.0 / 544.0 : Rat) ∧
+    inside (646.0 / 591.0 : Rat) ∧
+    inside (702.0 / 646.0 : Rat) ∧
+    inside (758.0 / 702.0 : Rat) ∧
+    inside (829.0 / 758.0 : Rat) ∧
+    inside (890.0 / 829.0 : Rat) ∧
+    inside (953.0 / 890.0 : Rat) ∧
+    inside (1019.0 / 953.0 : Rat) ∧
+    inside (1082.0 / 1019.0 : Rat) ∧
+    inside (1263.0 / 1082.0 : Rat) ∧
+    inside (1319.6 / 1263.0 : Rat) ∧
+    inside (1385.1 / 1319.6 : Rat) ∧
+    inside (1462.0 / 1385.1 : Rat) ∧
+    inside (1537.0 / 1462.0 : Rat) ∧
+    inside (1587.0 / 1537.0 : Rat) ∧
+    inside (1730.1 / 1587.0 : Rat) ∧
+    inside (1790.93 / 1730.1 : Rat) ∧
+    inside (4259.0 / 1790.93 : Rat) ∧
+    inside (4430.0 / 4259.0 : Rat) ∧
+    inside (4618.0 / 4430.0 : Rat) ∧
+    inside (4800.0 / 4618.0 : Rat) ∧
+    inside (5084.0 / 4800.0 : Rat) ∧
+    inside (5287.0 / 5084.0 : Rat) ∧
+    inside (5548.0 / 5287.0 : Rat) ∧
+    inside (5713.194 / 5548.0 : Rat) ∧
+    inside (23810.653 / 5713.194 : Rat) ∧
+    inside (24572.213 / 23810.653 : Rat) := by
+  unfold inside; refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩ <;> grind
+
+/-- Every ordinary step of the Tc ladder (42 steps) is inside the wall. -/
+theorem ladder_Tc_all_inside :
+    inside (15.26 / 7.11938 : Rat) ∧
+    inside (29.55 / 15.26 : Rat) ∧
+    inside (41.0 / 29.55 : Rat) ∧
+    inside (57.0 / 41.0 : Rat) ∧
+    inside (72.0 / 57.0 : Rat) ∧
+    inside (88.0 / 72.0 : Rat) ∧
+    inside (150.0 / 88.0 : Rat) ∧
+    inside (169.0 / 150.0 : Rat) ∧
+    inside (189.9 / 169.0 : Rat) ∧
+    inside (214.0 / 189.9 : Rat) ∧
+    inside (239.0 / 214.0 : Rat) ∧
+    inside (262.08 / 239.0 : Rat) ∧
+    inside (311.0 / 262.08 : Rat) ∧
+    inside (338.55 / 311.0 : Rat) ∧
+    inside (604.0 / 338.55 : Rat) ∧
+    inside (655.0 / 604.0 : Rat) ∧
+    inside (713.0 / 655.0 : Rat) ∧
+    inside (773.0 / 713.0 : Rat) ∧
+    inside (829.0 / 773.0 : Rat) ∧
+    inside (904.0 / 829.0 : Rat) ∧
+    inside (968.0 / 904.0 : Rat) ∧
+    inside (1032.0 / 968.0 : Rat) ∧
+    inside (1102.0 / 1032.0 : Rat) ∧
+    inside (1166.0 / 1102.0 : Rat) ∧
+    inside (1354.0 / 1166.0 : Rat) ∧
+    inside (1411.6 / 1354.0 : Rat) ∧
+    inside (1479.5 / 1411.6 : Rat) ∧
+    inside (1559.0 / 1479.5 : Rat) ∧
+    inside (1638.0 / 1559.0 : Rat) ∧
+    inside (1689.0 / 1638.0 : Rat) ∧
+    inside (1838.0 / 1689.0 : Rat) ∧
+    inside (1900.28 / 1838.0 : Rat) ∧
+    inside (4505.0 / 1900.28 : Rat) ∧
+    inside (4681.0 / 4505.0 : Rat) ∧
+    inside (4874.0 / 4681.0 : Rat) ∧
+    inside (5060.0 / 4874.0 : Rat) ∧
+    inside (5361.0 / 5060.0 : Rat) ∧
+    inside (5570.0 / 5361.0 : Rat) ∧
+    inside (5838.0 / 5570.0 : Rat) ∧
+    inside (6008.391 / 5838.0 : Rat) ∧
+    inside (25004.531 / 6008.391 : Rat) ∧
+    inside (25787.047 / 25004.531 : Rat) := by
+  unfold inside; refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩ <;> grind
+
+/-- Every ordinary step of the Ru ladder (43 steps) is inside the wall. -/
+theorem ladder_Ru_all_inside :
+    inside (16.76 / 7.3605 : Rat) ∧
+    inside (28.47 / 16.76 : Rat) ∧
+    inside (45.0 / 28.47 : Rat) ∧
+    inside (59.0 / 45.0 : Rat) ∧
+    inside (76.0 / 59.0 : Rat) ∧
+    inside (93.0 / 76.0 : Rat) ∧
+    inside (110.0 / 93.0 : Rat) ∧
+    inside (178.41 / 110.0 : Rat) ∧
+    inside (198.0 / 178.41 : Rat) ∧
+    inside (219.9 / 198.0 : Rat) ∧
+    inside (245.0 / 219.9 : Rat) ∧
+    inside (271.0 / 245.0 : Rat) ∧
+    inside (295.9 / 271.0 : Rat) ∧
+    inside (348.0 / 295.9 : Rat) ∧
+    inside (376.25 / 348.0 : Rat) ∧
+    inside (670.0 / 376.25 : Rat) ∧
+    inside (723.0 / 670.0 : Rat) ∧
+    inside (784.0 / 723.0 : Rat) ∧
+    inside (845.0 / 784.0 : Rat) ∧
+    inside (905.0 / 845.0 : Rat) ∧
+    inside (981.0 / 905.0 : Rat) ∧
+    inside (1048.0 / 981.0 : Rat) ∧
+    inside (1115.0 / 1048.0 : Rat) ∧
+    inside (1187.0 / 1115.0 : Rat) ∧
+    inside (1253.0 / 1187.0 : Rat) ∧
+    inside (1447.0 / 1253.0 : Rat) ∧
+    inside (1506.7 / 1447.0 : Rat) ∧
+    inside (1577.0 / 1506.7 : Rat) ∧
+    inside (1659.0 / 1577.0 : Rat) ∧
+    inside (1743.0 / 1659.0 : Rat) ∧
+    inside (1794.0 / 1743.0 : Rat) ∧
+    inside (1949.0 / 1794.0 : Rat) ∧
+    inside (2013.04 / 1949.0 : Rat) ∧
+    inside (4758.0 / 2013.04 : Rat) ∧
+    inside (4939.0 / 4758.0 : Rat) ∧
+    inside (5136.0 / 4939.0 : Rat) ∧
+    inside (5330.0 / 5136.0 : Rat) ∧
+    inside (5647.0 / 5330.0 : Rat) ∧
+    inside (5861.0 / 5647.0 : Rat) ∧
+    inside (6137.0 / 5861.0 : Rat) ∧
+    inside (6311.721 / 6137.0 : Rat) ∧
+    inside (26229.888 / 6311.721 : Rat) ∧
+    inside (27033.564 / 26229.888 : Rat) := by
+  unfold inside; refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩ <;> grind
+
+/-- Every ordinary step of the Rh ladder (44 steps) is inside the wall. -/
+theorem ladder_Rh_all_inside :
+    inside (18.08 / 7.4589 : Rat) ∧
+    inside (31.06 / 18.08 : Rat) ∧
+    inside (42.0 / 31.06 : Rat) ∧
+    inside (63.0 / 42.0 : Rat) ∧
+    inside (80.0 / 63.0 : Rat) ∧
+    inside (97.0 / 80.0 : Rat) ∧
+    inside (115.1 / 97.0 : Rat) ∧
+    inside (135.0 / 115.1 : Rat) ∧
+    inside (207.51 / 135.0 : Rat) ∧
+    inside (228.0 / 207.51 : Rat) ∧
+    inside (252.1 / 228.0 : Rat) ∧
+    inside (277.0 / 252.1 : Rat) ∧
+    inside (306.0 / 277.0 : Rat) ∧
+    inside (331.58 / 306.0 : Rat) ∧
+    inside (389.3 / 331.58 : Rat) ∧
+    inside (415.97 / 389.3 : Rat) ∧
+    inside (739.0 / 415.97 : Rat) ∧
+    inside (794.0 / 739.0 : Rat) ∧
+    inside (857.0 / 794.0 : Rat) ∧
+    inside (921.0 / 857.0 : Rat) ∧
+    inside (984.0 / 921.0 : Rat) ∧
+    inside (1061.0 / 984.0 : Rat) ∧
+    inside (1131.0 / 1061.0 : Rat) ∧
+    inside (1202.0 / 1131.0 : Rat) ∧
+    inside (1274.0 / 1202.0 : Rat) ∧
+    inside (1344.0 / 1274.0 : Rat) ∧
+    inside (1544.0 / 1344.0 : Rat) ∧
+    inside (1604.9 / 1544.0 : Rat) ∧
+    inside (1677.6 / 1604.9 : Rat) ∧
+    inside (1763.0 / 1677.6 : Rat) ∧
+    inside (1851.0 / 1763.0 : Rat) ∧
+    inside (1903.0 / 1851.0 : Rat) ∧
+    inside (2063.0 / 1903.0 : Rat) ∧
+    inside (2129.22 / 2063.0 : Rat) ∧
+    inside (5018.0 / 2129.22 : Rat) ∧
+    inside (5203.0 / 5018.0 : Rat) ∧
+    inside (5406.0 / 5203.0 : Rat) ∧
+    inside (5600.0 / 5406.0 : Rat) ∧
+    inside (5940.0 / 5600.0 : Rat) ∧
+    inside (6161.0 / 5940.0 : Rat) ∧
+    inside (6444.0 / 6161.0 : Rat) ∧
+    inside (6623.262 / 6444.0 : Rat) ∧
+    inside (27486.979 / 6623.262 : Rat) ∧
+    inside (28312.031 / 27486.979 : Rat) := by
+  unfold inside; refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩ <;> grind
+
 /-- Francium: the encoded central opening ratio is inside, but the input interval straddles the
 wall: IE1 = 4.0727411(1.1e-06) eV, IE2 = 22.4(1.9) eV (S). -/
 theorem francium_straddles :

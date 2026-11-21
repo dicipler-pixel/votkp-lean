@@ -8,3 +8,4 @@ import OpeningMap
 #print axioms ladder_Br_all_inside
 #print axioms ladder_Rb_all_inside
 #print axioms ladder_Zr_all_inside
+#print axioms ladder_Rh_all_inside

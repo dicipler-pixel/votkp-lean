@@ -1,0 +1,2 @@
+ordinary steps 210 energy differences 0 ratio differences 0
+outside the wall: [('Nb', 0, 7.367397), ('Mo', 0, 9.491629), ('Tc', 0, 11.193994), ('Ru', 0, 7.034991), ('Rh', 0, 6.527264)]

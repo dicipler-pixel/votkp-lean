@@ -398,6 +398,17 @@ theorem rung0_Sr : outside (5.69486745 / 0.05206) := by unfold outside; grind
 theorem rung0_Y : outside (6.21726 / 0.31129) := by unfold outside; grind
 theorem rung0_Zr : outside (6.634126 / 0.433283) := by unfold outside; grind
 
+/-- Batch 9 anion rungs, niobium to rhodium. Technetium's affinity is a calculated value (0.636 eV),
+so its call is also certified for any affinity up to 1.2 eV; rhodium uses the 2026 measurement
+1.14273 eV and is also certified at the older 1.14289 eV. -/
+theorem rung0_Nb : outside (6.75885 / 0.91740) := by unfold outside; grind
+theorem rung0_Mo : outside (7.09243 / 0.74723) := by unfold outside; grind
+theorem rung0_Tc : outside (7.11938 / 0.636) ∧ outside (7.11938 / 1.2) := by
+  unfold outside; constructor <;> grind
+theorem rung0_Ru : outside (7.3605 / 1.046270) := by unfold outside; grind
+theorem rung0_Rh : outside (7.4589 / 1.14273) ∧ outside (7.4589 / 1.14289) := by
+  unfold outside; constructor <;> grind
+
 /-! ## 14. The junction cutoff in a dilute band, and the screw sign -/
 
 /-- Dilute-band bound. Per spin the neighbour element of the projector is at most the filling f,

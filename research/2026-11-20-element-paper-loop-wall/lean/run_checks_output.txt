@@ -1,11 +1,11 @@
-LoopWall.lean:407:36: warning: Variable name `h0` is not explicitly referenced.
+LoopWall.lean:418:36: warning: Variable name `h0` is not explicitly referenced.
 
 Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
   [apply] _h0
 
 Note: This linter can be disabled with `set_option linter.unusedVariables false`
-BUILD OK: 101 theorems
-BUILD OK: OpeningMap, 72 theorems
+BUILD OK: 106 theorems
+BUILD OK: OpeningMap, 77 theorems
 'gam_reverse' depends on axioms: [propext, Classical.choice, Quot.sound]
 'power_even' depends on axioms: [propext, Classical.choice, Quot.sound]
 'wall_quadratic' depends on axioms: [propext, Classical.choice, Quot.sound]
@@ -70,6 +70,8 @@ BUILD OK: OpeningMap, 72 theorems
 'rung0_Br' depends on axioms: [propext, Classical.choice, Quot.sound]
 'rung0_Rb' depends on axioms: [propext, Classical.choice, Quot.sound]
 'rung0_Zr' depends on axioms: [propext, Classical.choice, Quot.sound]
+'rung0_Tc' depends on axioms: [propext, Classical.choice, Quot.sound]
+'rung0_Rh' depends on axioms: [propext, Classical.choice, Quot.sound]
 'coreHe_outside' depends on axioms: [propext, Classical.choice, Quot.sound]
 'coreRn_inside_1' depends on axioms: [propext, Classical.choice, Quot.sound]
 'ladder_Mn_all_inside' depends on axioms: [propext, Classical.choice, Quot.sound]
@@ -79,6 +81,7 @@ BUILD OK: OpeningMap, 72 theorems
 'ladder_Br_all_inside' depends on axioms: [propext, Classical.choice, Quot.sound]
 'ladder_Rb_all_inside' depends on axioms: [propext, Classical.choice, Quot.sound]
 'ladder_Zr_all_inside' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ladder_Rh_all_inside' depends on axioms: [propext, Classical.choice, Quot.sound]
 SCAN OK: no sorry, admit, native_decide or axiom
 control rejected: controls/C_inside.lean
 control rejected: controls/Ca_M_outside.lean

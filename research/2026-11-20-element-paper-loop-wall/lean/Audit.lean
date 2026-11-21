@@ -63,3 +63,5 @@ import LoopWall
 #print axioms rung0_Br
 #print axioms rung0_Rb
 #print axioms rung0_Zr
+#print axioms rung0_Tc
+#print axioms rung0_Rh
