@@ -14,8 +14,12 @@ Element names and "crossing number" are written in full.
   electron uptake ΔN_max = χ/η = 1/Γ₀ equals √2 at the wall.
 - **Checked** (`checks/check_hardness_electrophilicity_v1.py`): all 44 bound anions from hydrogen to
   caesium agree, with 0 disagreements. Silver has ω/η = 1.0025 (inside) and silicon 0.9954 (outside).
-- **Convention trap.** With η = IE − EA (Gázquez and others) the same wall reads ω = η/2 and
-  ΔN_max = 1/√2.
+- **Convention check.** This paper computes η = (IE − EA)/2, χ = (IE + EA)/2 and ω = χ²/(2η).
+  If a table uses full hardness H = IE − EA = 2η, specify which index accompanies H. Keeping the
+  paper’s original ω gives ω/H = 1/2 at the wall. Recomputing the index as Ω = χ²/(2H) instead
+  gives Ω/H = 1/4 there, because Ω = ω/2. The corresponding χ/H = 1/√2. The measured input ratio
+  and Γ do not depend on these naming conventions. [Half-gap definition, Parr & Pearson (1983)](https://doi.org/10.1021/ja00364a005)
+  · [full-gap and index formulas in “The nucleophilicity equalization principle”](https://www.sciencedirect.com/science/article/abs/pii/S2210271X16300287)
 - **Prior art.** The quantities are standard. Sources: Parr and Pearson, Journal of the American
   Chemical Society 105, 7512 (1983); Parr, von Szentpály and Liu, Journal of the American Chemical
   Society 121, 1922 (1999); Pal and Chattaraj, Journal of Computational Chemistry 44, 278 (2023).
