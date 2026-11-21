@@ -1,0 +1,55 @@
+== helium octave
+  1+      Lithium     IE/EA    8.724  Gamma0 0.7943  outside
+  2+      Beryllium   no bound anion
+  3+      Boron       IE/EA   29.665  Gamma0 0.9348  outside
+  4 apex  Carbon      IE/EA    8.922  Gamma0 0.7984  outside
+  3-      Nitrogen    no bound anion
+  2-      Oxygen      IE/EA    9.320  Gamma0 0.8062  outside
+  1-      Fluorine    IE/EA    5.123  Gamma0 0.6733  inside
+  mates 1+/1- Lithium gives to Fluorine: IE/EA 1.585 Gamma 0.2264 inside
+  mates 2+/2- Beryllium gives to Oxygen: IE/EA 6.381 Gamma 0.7290 outside
+  mates 3+/3- Boron-Nitrogen: acceptor has no bound anion
+== neon octave
+  1+      Sodium      IE/EA    9.379  Gamma0 0.8073  outside
+  2+      Magnesium   no bound anion
+  3+      Aluminum    IE/EA   13.829  Gamma0 0.8651  outside
+  4 apex  Silicon     IE/EA    5.867  Gamma0 0.7087  outside
+  3-      Phosphorus  IE/EA   14.046  Gamma0 0.8671  outside
+  2-      Sulfur      IE/EA    4.988  Gamma0 0.6660  inside
+  1-      Chlorine    IE/EA    3.589  Gamma0 0.5642  inside
+  mates 1+/1- Sodium gives to Chlorine: IE/EA 1.422 Gamma 0.1744 inside
+  mates 2+/2- Magnesium gives to Sulfur: IE/EA 3.681 Gamma 0.5728 inside
+  mates 3+/3- Aluminum gives to Phosphorus: IE/EA 8.017 Gamma 0.7782 outside
+== argon octave (main group)
+  1+      Potassium   IE/EA    8.656  Gamma0 0.7929  outside
+  2+      Calcium     IE/EA  249.008  Gamma0 0.9920  outside
+  3+      Gallium     IE/EA   19.920  Gamma0 0.9044  outside
+  4 apex  Germanium   IE/EA    6.408  Gamma0 0.7300  outside
+  3-      Arsenic     IE/EA   12.167  Gamma0 0.8481  outside
+  2-      Selenium    IE/EA    4.826  Gamma0 0.6567  inside
+  1-      Bromine     IE/EA    3.512  Gamma0 0.5568  inside
+  mates 1+/1- Potassium gives to Bromine: IE/EA 1.290 Gamma 0.1268 inside
+  mates 2+/2- Calcium gives to Selenium: IE/EA 3.025 Gamma 0.5031 inside
+  mates 3+/3- Gallium gives to Arsenic: IE/EA 7.457 Gamma 0.7635 outside
+== krypton octave (main group)
+  1+      Rubidium    IE/EA    8.596  Gamma0 0.7916  outside
+  2+      Strontium   IE/EA  109.390  Gamma0 0.9819  outside
+  3+      Indium      IE/EA   15.072  Gamma0 0.8756  outside
+  4 apex  Tin         IE/EA    6.604  Gamma0 0.7370  outside
+  3-      Antimony    IE/EA    8.219  Gamma0 0.7831  outside
+  2-      Tellurium   IE/EA    4.571  Gamma0 0.6410  inside
+  1-      Iodine      IE/EA    3.417  Gamma0 0.5472  inside
+  mates 1+/1- Rubidium gives to Iodine: IE/EA 1.366 Gamma 0.1545 inside
+  mates 2+/2- Strontium gives to Tellurium: IE/EA 2.890 Gamma 0.4858 inside
+  mates 3+/3- Indium gives to Antimony: IE/EA 5.524 Gamma 0.6935 inside
+== xenon octave (main group)
+  1+      Cesium      IE/EA    8.256  Gamma0 0.7839  outside
+  2+      Barium      IE/EA   36.037  Gamma0 0.9460  outside
+  3+      Thallium    IE/EA   19.085  Gamma0 0.9004  outside
+  4 apex  Lead        IE/EA   20.791  Gamma0 0.9082  outside
+  3-      Bismuth     IE/EA    7.731  Gamma0 0.7709  outside
+  2-      Polonium    no bound anion
+  1-      Astatine    IE/EA    3.857  Gamma0 0.5882  inside
+  mates 1+/1- Cesium gives to Astatine: IE/EA 1.612 Gamma 0.2343 inside
+  mates 2+/2- Barium-Polonium: acceptor has no bound anion
+  mates 3+/3- Thallium gives to Bismuth: IE/EA 6.482 Gamma 0.7327 outside
