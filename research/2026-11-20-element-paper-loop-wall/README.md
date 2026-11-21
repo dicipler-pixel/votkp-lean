@@ -106,7 +106,7 @@ The peel step of an ordered pair of thresholds (a, then b) has ratio z = b/a and
 
 ## The page
 
-`VOTKP_Element_Paper_Loop_Wall_v5_20261121.html` (hydrogen to caesium) is the newest readable breakdown; v4 (hydrogen to tin) is kept; v3 (hydrogen to rhodium) is kept; `VOTKP_Element_Paper_Loop_Wall_v2_20261121.html` is the readable breakdown of all of the above, hydrogen to
+`VOTKP_Element_Paper_Loop_Wall_v6_20261121.html` (hydrogen to caesium, with the chemistry-language section) is the newest readable breakdown; v5 is kept; v4 (hydrogen to tin) is kept; v3 (hydrogen to rhodium) is kept; `VOTKP_Element_Paper_Loop_Wall_v2_20261121.html` is the readable breakdown of all of the above, hydrogen to
 zirconium, built by `html/build_element_paper_html_v2.py` with `html/element_paper_template_v2.html`.
 Version 1 (hydrogen to zinc) is kept beside it.
 It is built by `html/build_element_paper_html_v1.py` from the archive and the Lean files
