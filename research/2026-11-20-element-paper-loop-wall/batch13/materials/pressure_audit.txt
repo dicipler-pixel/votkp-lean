@@ -1,0 +1,5 @@
+Sm gap to next shell at worst box endpoints (Å) 0.046436254
+Tb gap to next shell at worst box endpoints (Å) 0.068761935
+At one site: no simple 3, 4 or 5 cycle; 12 unoriented simple six-edge cycles.
+All 12 have a strictly convex projection in the integer coordinate frame.
+Positive cell-axis scaling preserves their knot type.

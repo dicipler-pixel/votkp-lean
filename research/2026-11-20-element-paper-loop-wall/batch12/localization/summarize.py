@@ -13,6 +13,7 @@ def datasets():
     yield "default", "NC-", "site"
     yield "default", "PAW-", "site"
     yield "default", "micro-", "phase"
+    yield "smooth_PAW", "pawphase-", "phase"
     for name, tag in (("alternate","alternate_twist"), ("lower-ws","60_Ry"), ("ws","grid_32")):
         for field, prefix in (("site","csite-"),("phase","cmicro-")):
             yield tag, prefix + name + "-", field

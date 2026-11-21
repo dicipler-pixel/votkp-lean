@@ -1,4 +1,4 @@
-"""Finite-q connected density structure factor of a norm-conserving Slater projector.
+"""Finite-q connected density structure factor of a smooth Slater projector.
 
 Tr(P - P U_q* P U_q) / (Tr P |q|²), U_q = exp(i q·r), uses the actual
 plane-wave position phase, with no Wigner–Seitz center approximation.
@@ -35,8 +35,15 @@ def miller_keys(miller):
     return ((miller[:,0]+128)*256 + miller[:,1]+128)*256 + miller[:,2]+128
 
 
-def load_states(save, symbol, mesh):
-    assert hashlib.sha256((save / f"{symbol}.upf").read_bytes()).hexdigest() == EXPECTED_UPF[symbol]
+def load_states(save, symbol, mesh, family="NC", stream=False):
+    if family=="NC":
+        potential=save/f"{symbol}.upf"
+        expected=EXPECTED_UPF[symbol]
+    else:
+        potential=next(save.glob(f"{symbol}.*-kjpaw_psl.1.0.0.UPF"))
+        expected={"Rb":"6e8ebe2c70064c509eb4a50578939662802c3b1dc99b51b8d302487842dc9fdb",
+                  "Kr":"e642273d4df7ae7c3d0d195b301f30336ff2b5977163d35f429270c7728ed4e8"}[symbol]
+    assert hashlib.sha256(potential.read_bytes()).hexdigest()==expected
     root = ET.parse(save / "data-file-schema.xml").getroot().find("output")
     structure = root.find("atomic_structure")
     cell = np.array([numbers(v.text) for v in structure.find("cell")]) * BOHR_A
@@ -62,37 +69,42 @@ def load_states(save, symbol, mesh):
         rows, cols = np.unravel_index(order[:count], outer.shape)
         mask[rows,cols+4] = True
     else:
-        assert energies[:,4].min() > energies[:,3].max()
-        mask[:,:4] = True
-    states = []
-    for i, active in enumerate(mask):
-        selected = np.flatnonzero(active)
-        if len(selected) == 0:
-            states.append(None)
-            continue
-        with FortranFile(save / f"wfc{i+1}.dat", "r") as src:
-            ik,x,y,z,spin,gamma,scale = struct.unpack("=i3diid", src.read_record("u1"))
-            assert ik == i+1 and spin == 1 and gamma == 0 and scale == 1
-            assert np.allclose([x,y,z], kcart[i]*units,atol=1e-9,rtol=0)
-            _,npw,npol,nbnd = src.read_record("i4")
-            assert npol == 1 and nbnd == len(active) and npw == int(blocks[i].findtext("npw"))
-            src.read_record("f8")
-            miller = src.read_record("i4").reshape(-1,3)
-            coefficients = []
-            for band in range(selected[-1]+1):
-                vector = src.read_record("c16")
-                if active[band]:
-                    coefficients.append(vector)
-        order = np.argsort(miller_keys(miller))
-        miller = miller[order]
-        keys = miller_keys(miller)
-        assert np.all(np.diff(keys) > 0)
-        coeff = np.column_stack(coefficients)[order]
-        gram = coeff.conj().T @ coeff
-        assert np.max(abs(gram - np.eye(len(selected)))) < 1e-7
-        vals, basis = np.linalg.eigh(gram)
-        coeff = coeff @ ((basis/np.sqrt(vals)) @ basis.conj().T)
-        states.append((miller,keys,coeff))
+        first = 0 if family=="NC" else 5
+        last = first+4
+        assert energies[:,last].min() > energies[:,last-1].max()
+        mask[:,first:last] = True
+    def each_state():
+        for i, active in enumerate(mask):
+            selected = np.flatnonzero(active)
+            if len(selected) == 0:
+                yield None
+                continue
+            with FortranFile(save / f"wfc{i+1}.dat", "r") as src:
+                ik,x,y,z,spin,gamma,scale = struct.unpack("=i3diid", src.read_record("u1"))
+                assert ik == i+1 and spin == 1 and gamma == 0 and scale == 1
+                assert np.allclose([x,y,z], kcart[i]*units,atol=1e-9,rtol=0)
+                _,npw,npol,nbnd = src.read_record("i4")
+                assert npol == 1 and nbnd == len(active) and npw == int(blocks[i].findtext("npw"))
+                src.read_record("f8")
+                miller = src.read_record("i4").reshape(-1,3)
+                coefficients = []
+                for band in range(selected[-1]+1):
+                    vector = src.read_record("c16")
+                    if active[band]:
+                        coefficients.append(vector)
+            order = np.argsort(miller_keys(miller))
+            miller = miller[order]
+            keys = miller_keys(miller)
+            assert np.all(np.diff(keys) > 0)
+            coeff = np.column_stack(coefficients)[order]
+            gram = coeff.conj().T @ coeff
+            if family=="NC":
+                assert np.max(abs(gram - np.eye(len(selected)))) < 1e-7
+            vals, basis = np.linalg.eigh(gram)
+            assert vals.min()>1e-6
+            coeff = coeff @ ((basis/np.sqrt(vals)) @ basis.conj().T)
+            yield miller,keys,coeff
+    states=each_state() if stream else list(each_state())
     return states, mask.sum(axis=1), kfrac, mesh_keys, cell, rec
 
 
@@ -127,8 +139,8 @@ def shell_directions(rec):
             yield "axial", g, v
 
 
-def phase_response(save, symbol, mesh, weights_path):
-    states, ranks, kfrac, mesh_keys, cell, rec = load_states(save, symbol, mesh)
+def phase_response(save, symbol, mesh, weights_path, family="NC"):
+    states, ranks, kfrac, mesh_keys, cell, rec = load_states(save, symbol, mesh, family)
     index = {tuple(v):i for i,v in enumerate(mesh_keys)}
     rank = ranks.sum()
     assert rank > 0
@@ -193,8 +205,9 @@ if __name__ == "__main__":
     parser.add_argument("symbol", choices=["Kr","Rb"])
     parser.add_argument("mesh", type=int)
     parser.add_argument("--weights", type=Path)
+    parser.add_argument("--family",choices=["NC","PAW-smooth"],default="NC")
     args = parser.parse_args()
-    rows = list(phase_response(args.save,args.symbol,args.mesh,args.weights))
+    rows = list(phase_response(args.save,args.symbol,args.mesh,args.weights,args.family))
     out = csv.DictWriter(sys.stdout,rows[0].keys())
     out.writeheader()
     out.writerows(rows)

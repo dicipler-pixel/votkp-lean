@@ -1,0 +1,3 @@
+symbol,phase,space_group,origin_choice,wyckoff,a_A,da_A,b_A,db_A,c_A,dc_A,pressure_GPa,pressure_unc_GPa,source_year,doi
+Sm,oF8,Fddd,1,8a,8.4250,0.0009,4.5531,0.0003,2.5227,0.0002,175,2,2020,10.1103/PhysRevB.101.174109
+Tb,oF8,Fddd,1,8a,7.827,0.005,4.365,0.001,2.3893,0.0006,302,,2025,10.1103/r3zx-k97x

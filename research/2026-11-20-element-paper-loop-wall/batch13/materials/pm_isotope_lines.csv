@@ -1,0 +1,6 @@
+A,N,I_parity,mu_muN,unc_mu_muN,mu_role,shift_452_MHz,unc_452_MHz,shift_468_MHz,unc_468_MHz,delta_r2_fm2,delta_r2_unc_fm2
+143,82,5/2+,4.05,0.06,measured relative to reference,737,11,-495,14,-0.53,0.06
+144,83,5-,1.95,0.04,measured relative to reference,594,10,-384,13,-0.42,0.05
+145,84,5/2+,3.72,0.05,measured relative to reference,344,10,-216,11,-0.24,0.03
+146,85,3-,1.53,0.03,measured relative to reference,226,12,-164,16,-0.17,0.02
+147,86,7/2+,2.57,0.04,re-evaluated reference,0,0,0,0,0,0

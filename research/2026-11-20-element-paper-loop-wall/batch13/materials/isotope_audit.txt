@@ -1,0 +1,7 @@
+N=82 tests vs preceding Z: [('Pm', 'absolute radius missing'), ('Sm', 'absolute radius missing'), ('Eu', 'positive in full box'), ('Gd', 'overlaps zero'), ('Tb', 'overlaps zero')]
+Fixed trivalent ionic radius falls on all five steps from Nd.
+147/143 fixed isotope pair at 452/468 nm: minimum opposite signed shift magnitudes 726/481 MHz.
+147/144 fixed isotope pair at 452/468 nm: minimum opposite signed shift magnitudes 584/371 MHz.
+147/145 fixed isotope pair at 452/468 nm: minimum opposite signed shift magnitudes 334/205 MHz.
+147/146 fixed isotope pair at 452/468 nm: minimum opposite signed shift magnitudes 214/148 MHz.
+The two lines disagree in sign for all four isotope substitutions, including all quoted uncertainty corners.

@@ -1,0 +1,3 @@
+'ElementPaper.FdddRings.noShortRings' does not depend on any axioms
+'ElementPaper.FdddRings.bothOrientations' does not depend on any axioms
+'ElementPaper.FdddRings.allSixRingsProjectSimply' does not depend on any axioms

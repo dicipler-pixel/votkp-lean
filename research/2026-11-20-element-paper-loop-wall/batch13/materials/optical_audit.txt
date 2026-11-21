@@ -1,0 +1,9 @@
+Sm 2.5 eV tabulated-column midpoint residual 5e-06
+Gd 2.5 eV tabulated-column midpoint residual 5e-06
+Tb 2.5 eV tabulated-column midpoint residual 5e-06
+2025 2.0 complex-index vs real-index rank (weakest to strongest) ('SmGd', 'GdTb', 'SmTb') ('SmGd', 'SmTb', 'GdTb')
+2025 2.5 complex-index vs real-index rank (weakest to strongest) ('SmGd', 'GdTb', 'SmTb') ('SmTb', 'SmGd', 'GdTb')
+2025 3.0 complex-index vs real-index rank (weakest to strongest) ('SmGd', 'GdTb', 'SmTb') ('SmTb', 'GdTb', 'SmGd')
+2023 2.0 complex-index vs real-index rank (weakest to strongest) ('SmGd', 'GdTb', 'SmTb') ('SmGd', 'GdTb', 'SmTb')
+2023 2.5 complex-index vs real-index rank (weakest to strongest) ('SmGd', 'GdTb', 'SmTb') ('SmGd', 'GdTb', 'SmTb')
+2023 3.0 complex-index vs real-index rank (weakest to strongest) ('SmGd', 'GdTb', 'SmTb') ('SmGd', 'GdTb', 'SmTb')

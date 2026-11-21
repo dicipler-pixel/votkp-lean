@@ -39,3 +39,5 @@ This demonstrates in an explicit response model why unqualified transfer of the 
 
     python3 screened_optics.py
     python3 screened_drude.py
+
+**DERIVED · independent material.** In the observed 9–11 eV exciton window, the published crystalline krypton fit crosses the equality of the two channels twice, but does not reach rubidium's lower wall. [Krypton central fits, all roots and rounding test](KRYPTON_SPECTRUM.md)

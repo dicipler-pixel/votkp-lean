@@ -27,7 +27,7 @@ The hypothesis tested in this comparison is that the ratio, indexed by k = Z −
 
 Taking 36/25 as the nominal hydrogenic 6s-to-5p reference, the central praseodymium reading is below it. Within the praseodymium rectangle, three pairs with first threshold 57.53 eV and second threshold respectively 78, 82.8432 and 86 eV realize all three possibilities: below, exactly on, and above 36/25. For neodymium every admissible ratio is strictly below 36/25.
 
-The comparison tracks **electron count**. The 54-electron ion’s actual ground configuration must be read for each element. For neodymium the ASD entry used by this batch is [Cd]4f²5p⁴. The 36/25 number describes the specified bare shell model; the two removals need their own configuration assignments. These finite comparisons do not give a universal lower bound or identify an orbital from energy alone. See the [configuration snapshots and openings](../ladder/asg_openings.csv) and the [channel check](../xe_sequence/).
+The comparison tracks **electron count**. The 54-electron ion’s actual ground configuration must be read for each element. For neodymium the assignment is disputed. ASD gives [Cd]4f²5p⁴ for the intermediate 54-electron ion. Table A.2 of Carvajal Gallego et al. (2024) reports three calculations assigning the closed 5p⁶ configuration instead. Both energy inputs are archive grade T, and the count-based proof applies under either assignment. The 36/25 number describes the specified bare shell model; the two removals need their own configuration assignments. These finite comparisons do not give a universal lower bound or identify an orbital from energy alone. See the [configuration snapshots and openings](../ladder/asg_openings.csv) and the [channel check](../xe_sequence/).
 
 ## Reproduction
 

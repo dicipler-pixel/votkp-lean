@@ -24,14 +24,24 @@ def site_weights(waves, owner, indices, mesh):
     """X_D includes both spins. Fourier-sum the occupied–occupied cell overlaps."""
     shape = (mesh,) * 3
     histogram = np.zeros(mesh**3)
+    cross_histogram = np.zeros(mesh**3)
     wavevectors = indices[owner]
-    for first in range(0, len(waves), 32):
-        last = min(first + 32, len(waves))
-        overlaps = waves[first:last].conj() @ waves.T
-        delta = (wavevectors[first:last, None] - wavevectors[None, :]) % mesh
-        bins = np.ravel_multi_index(delta.reshape(-1, 3).T, shape)
-        histogram += np.bincount(bins, weights=(abs(overlaps)**2).ravel(),
-                                 minlength=mesh**3)
+    # A pair in distinct tiles contributes conjugate overlaps at opposite
+    # translations. Evaluate it only once to reduce the large Kr contractions.
+    for first in range(0, len(waves), 64):
+        last = min(first + 64, len(waves))
+        bra = waves[first:last].conj()
+        for start,stop,destination in ((first,last,histogram),
+                                       (last,len(waves),cross_histogram)):
+            if start==stop:
+                continue
+            overlaps = bra @ waves[start:stop].T
+            delta = (wavevectors[first:last,None] - wavevectors[None,start:stop]) % mesh
+            bins = np.ravel_multi_index(delta.reshape(-1,3).T,shape)
+            destination += np.bincount(bins,weights=(abs(overlaps)**2).ravel(),
+                                       minlength=mesh**3)
+    reverse = (-np.arange(mesh)) % mesh
+    histogram += cross_histogram + cross_histogram.reshape(shape)[np.ix_(reverse,reverse,reverse)].ravel()
     weights = 2 * np.fft.ifftn(histogram.reshape(shape)) / mesh**3
     assert np.max(abs(weights.imag)) < 1e-10
     return weights.real
@@ -58,12 +68,16 @@ def image_dyads(mesh, cell):
     return least, dyads, closest.sum(axis=1)
 
 
-def calculate(save, symbol, mesh, grid, family, weights_path):
-    projector = nc_projector if family == "NC" else pseudo_projector
-    waves, owner, indices, cell, _ = projector.blocks(
-        save, symbol, mesh, grid, np.array([.213, .367, .479]), False)
-    count = 2 * len(waves) / mesh**3
-    weights = site_weights(waves, owner, indices, mesh)
+def calculate(save, symbol, mesh, grid, family, weights_path, disk=False):
+    if disk or (symbol=="Kr" and mesh>=10):
+        from disk_blocks import disk_weights
+        weights,count,cell=disk_weights(save,symbol,mesh,grid,family)
+    else:
+        projector = nc_projector if family == "NC" else pseudo_projector
+        waves, owner, indices, cell, _ = projector.blocks(
+            save, symbol, mesh, grid, np.array([.213, .367, .479]), False)
+        count = 2 * len(waves) / mesh**3
+        weights = site_weights(waves, owner, indices, mesh)
     assert weights.min() > -1e-9 and abs(weights.sum() - count) < 1e-9
     assert np.max(abs(weights - weights[np.ix_(*[(-np.arange(mesh)) % mesh]*3)])) < 1e-10
     cell = cell * BOHR_A
@@ -93,8 +107,9 @@ if __name__ == "__main__":
     parser.add_argument("grid", type=int)
     parser.add_argument("--family", choices=["NC","PAW-smooth"], default="NC")
     parser.add_argument("--weights", type=Path, help="save complete finite site-weight array")
+    parser.add_argument("--disk",action="store_true",help="store orbital tiles beside the QE run; automatic for Kr mesh ≥ 10")
     args = parser.parse_args()
-    result = calculate(args.save, args.symbol, args.mesh, args.grid, args.family, args.weights)
+    result = calculate(args.save, args.symbol, args.mesh, args.grid, args.family, args.weights, args.disk)
     writer = csv.DictWriter(sys.stdout, result.keys())
     writer.writeheader()
     writer.writerow(result)

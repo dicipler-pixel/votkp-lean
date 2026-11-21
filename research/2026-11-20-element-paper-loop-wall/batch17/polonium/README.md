@@ -1,0 +1,25 @@
+# Polonium's frozen anion prediction
+
+**Preliminary experimental disagreement.** Claude's recorded prediction is **outside**. All three reported IS728 fits for ²¹⁰Po give **inside**, including their separately printed errors. A final uncertainty-bounded experimental verdict remains open because the collaboration explicitly excludes systematic errors from these figures. This is one prediction and one experimental campaign. [Frozen calls](../../QUANTUM_CHEMISTRY_LINKS.md) · [Scoring protocol](../../holdouts/heavy_anions_protocol.md) · [CRIS meeting slides 7–11, February 2026](https://indico.global/event/16399/contributions/141980/attachments/66656/128992/Po_CRIS_2026.pdf)
+
+## What was observed
+
+**MEASURED, preliminary.** Fajardo-Zambrano, Nichols, Snikeris, Hanstorp and Warbinek identify their broadband threshold scan as ²¹⁰Po⁻. Figure 1 shows normalized counts and a Wigner-law fit. I inspected the published graphic. The four printed x ticks are 11800, 11850, 11900 and 11950 cm⁻¹. The data extend a little past both outer ticks. The baseline starts to rise just above 11900. That number is a labeled tick. The caption gives no final threshold or error. The axis unit cm⁻¹ denotes wavenumber. The team reports that its high-resolution scans were still being analyzed. [ISOLDE Newsletter 2026, printed p. 23, PDF p. 25](https://isolde.web.cern.ch/sites/default/files/ISOLDE_Newsletter_2026_0.pdf#page=25)
+
+**MEASURED, preliminary.** The earlier collaboration talk gives the fits below. Its authors interpret the onset as the electron affinity. Neither source supplies an independent state-resolved demonstration that rules out all excited-state thresholds. Slide 11 leaves four systematic effects open, concerning voltage, wavemeter calibration, beam overlap and charge exchange. The three fits share the experiment and should remain separate. Searches by experiment, author, element and fitted threshold through 2026-11-21 located no superseding final ground-state point with complete uncertainty. [Fajardo-Zambrano and Warbinek, slide 10 and following slide](https://indico.global/event/16399/contributions/141980/attachments/66656/128992/Po_CRIS_2026.pdf#page=10)
+
+| Laser | EA fit (cm⁻¹) | Central z | Smallest distance above EA wall allowing printed errors, cm⁻¹ |
+|---|---:|---:|---:|
+| OPO | 11905.675(846) | 5.702853 | 255.658 |
+| Z-cavity | 11905.743(140) | 5.702820 | 256.432 |
+| JyvIS | 11905.631(9) | 5.702874 | 256.451 |
+
+## Wall calculation
+
+**DERIVED.** The pinned neutral IE is 8.418070(4) eV (grade E, L20887 and L20886). The contemporary NIST ASD entry independently agrees in value and uncertainty. This comparison uses the elemental IE and isotopic experimental EA as specified by the protocol. For 0 < EA < IE, the outside condition is EA < IE(3 − 2√2). Equality lies at 1.444312474 eV or 11649.165718 cm⁻¹. We use the exact SI conversion (E=100hc\tilde\nu/e) for wavenumber in cm⁻¹ and energy in eV. Even the entire interval between the outer labeled plot ticks falls inside. That plotted span supplies graphical context only. [NIST ASD, Po I](https://physics.nist.gov/cgi-bin/ASD/ie.pl?spectra=Po&units=1&ion_charge_out=on&unc_out=on&biblio=on)
+
+**DERIVED.** JyvIS gives EA = 1.476110116 eV, z = 5.702874, Γ = 0.70162053, η = 3.47097994 eV, χ = 4.94709006 eV and ω/η = 1.01569995. Its central fit would have to move down by 256.46528 cm⁻¹ (0.03179764 eV) to reach the central wall. This is a sensitivity margin. There is no published bound here on the combined systematic shift. The trial cutoffs 5.8, 5.82, 5.83, 5.85, 5.9 and 6 give the same inside label. Cutoff 5 gives outside. The earlier silver–silicon resolution window already excludes 5, so the preliminary Po point supplies no tighter endpoint. [Computed values and full printed-error boxes](scores.csv)
+
+**DERIVED from theory.** Ning and Lu's review lists Po at **1.483(26) eV** and flags it as calculated, citing Finney and Peterson (2019). Its quoted interval gives z = 5.57857–5.77768 with IE uncertainty included, wholly inside. Hill (2024), Table VI, reports a revised final composite estimate of **34.38 kcal/mol** (= 1.490857904 eV, z = 5.64646), retaining the earlier post-frozen-core corrections. The table gives no new uncertainty for that value. The models share methodological inputs. Neither adds an independent experimental score. [Ning and Lu, 2022](https://doi.org/10.1063/5.0080243) · [Finney and Peterson, 2019](https://doi.org/10.1063/1.5110174) · [2019 erratum](https://doi.org/10.1063/1.5130197) · [Hill, 2024, Table VI](https://doi.org/10.1063/5.0197210)
+
+Run `python3 score.py` from this directory to regenerate `scores.csv`. The script verifies the compressed archive hash, reads Po's IE directly, uses an exact rational polynomial sign test on each converted decimal endpoint, and keeps unreported uncertainty blank. Decimal SI conversions use 60 significant digits. A final ground-state assignment and uncertainty box excluding the wall on the inside would defeat the frozen outside prediction under the primary protocol.

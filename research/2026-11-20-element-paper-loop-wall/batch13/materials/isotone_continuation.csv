@@ -1,0 +1,6 @@
+element,Z,A,N,net_up,net_down,spin_parity,R_fm,R_unc_fm,step_fm,step_min_fm,step_max_fm,status,ion3plus_VIII_pm,ion3plus_step_pm
+Pm,61,143,82,204,225,5/2+,,,,,,absolute radius missing,109.3,-1.6
+Sm,62,144,82,206,226,0+,4.9524,0.0034,,,,absolute radius missing,107.9,-1.4
+Eu,63,145,82,208,227,5/2+,4.9663,0.0091,0.0139,0.0014,0.0264,positive in full box,106.6,-1.3
+Gd,64,146,82,210,228,0+,4.9801,0.0140,0.0138,-0.0093,0.0369,overlaps zero,105.3,-1.3
+Tb,65,147,82,212,229,(1/2+),4.9201,0.1508,-0.0600,-0.2248,0.1048,overlaps zero,104,-1.3
