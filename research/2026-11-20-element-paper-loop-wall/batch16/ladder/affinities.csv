@@ -1,0 +1,6 @@
+Z,symbol,status,EA_eV,unc_eV,lower_bound_eV,upper_bound_eV,theory_eV,neutral_valence,anion_valence,source,primary_year,url
+76,Os,evaluated measured,1.077661,0.000024,,,,5d6 6s2 5D4,5d7 6s2 4F9/2,Ning and Lu 2022 Table 3; Lu et al. 2023 Fig. 2,2023,https://doi.org/10.1088/0256-307X/40/9/093101
+77,Ir,evaluated measured,1.564057,0.000011,,,,5d7 6s2 4F9/2,5d8 6s2 3F4,Ning and Lu 2022 Table 3; Lu et al. SEVI ground threshold,2020,https://doi.org/10.1063/1.5134535
+78,Pt,evaluated measured,2.12510,0.00005,,,,5d9 6s 3D3,5d9 6s2 2D5/2,Ning and Lu 2022 Table 3 energy (neutral configuration from ASD); Bilodeau et al.,1999,https://doi.org/10.1103/PhysRevA.61.012505
+79,Au,evaluated measured,2.30861,0.00003,,,,5d10 6s 2S1/2,5d10 6s2 1S0,Ning and Lu 2022 Table 3 citing Andersen et al. 1999 evaluation,1999,https://doi.org/10.1063/5.0080243
+80,Hg,no established bound ground anion,,,,0.005,,5d10 6s2 1S0,,Ning and Lu 2022 Table 3 (EA <0); text gives AMS sensitivity ceiling 0.005 eV,2022,https://doi.org/10.1063/5.0080243

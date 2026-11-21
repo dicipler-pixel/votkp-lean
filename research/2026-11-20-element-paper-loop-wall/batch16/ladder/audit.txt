@@ -1,0 +1,59 @@
+Pinned archive SHA256: 75e67478d9a22ef85fa2d3f6ac36ad2860c6f8f62215127c558438a2cb53f62c
+Printed CSV SHA256: 09c600ad54e15f2c70efae8a4543234d85132443ce8e279c70952017d2325e44
+Printed rows: 395
+NIST records 390
+anion point pairs 4
+complete joint widths 389
+ordinary pairs 385
+pinned grade E 15
+pinned grade S 17
+pinned grade T 358
+rectangle permits reverse 82
+rectangle touches at one 6
+rejected: Hg sensitivity limit as point
+rejected: Hg falsely bound
+rejected: wrong Os source
+rejected: changed reflection
+rejected: missing bare-nucleus row
+390 exact archive energies; 385 ordinary pairs; 4 anion pairs with externally supplied EA
+Outside: [('Os', 0)]
+Primary heavy signs: [('Os', 'outside'), ('Ir', 'inside'), ('Pt', 'inside'), ('Au', 'inside')]
+Source alternatives: 6 with unchanged whole-box side
+Comparator disagreements: [('5', 1), ('5.8', 0), ('5.82', 0), ('5.83', 0), ('5.85', 0), ('5.9', 0), ('6', 0)]
+Prior cutoff interval: 5.807902059840 5.866538776091 unchanged
+K Os 4.014042618281 above 4 0.000128656281 False -0.001041562719 False
+K Ir 4.010021988625 above 4 0.000135738625 False -0.001185471375 False
+K Pt 4.005957929721 above 4 0.000099390721 False -0.001353663279 False
+K Au 4.001897840223 above 4 0.000067013223 False -0.001496340777 False
+K Hg 3.997804120778 below 4 0.000001005778 True -0.001648715222 False
+4f/5d opening and closing rows 9
+Os 12 4f opening 4f 63 0 1.1446808511
+Os 13 4f closure rearranged 4f:-1 5p:+2 61 1 1.1078066914
+Os 14 4f opening 4f 61 0 1.0805369128
+Ir 15 4f opening 4f 61 0 1.0820668693
+Pt 16 4f opening 4f 61 0 1.0949720670
+Au 1 5d opening 5d 77 0 2.1898955878
+Au 17 4f opening 4f 61 0 1.1045918367
+Hg 2 5d opening 5d 77 0 1.8387919526
+Hg 18 4f opening 4f 61 0 1.1118881119
+76 | Os | 15 | 1 | 2440 | 9 | 11 14 17 19 21 23 25 27 29 |  | 28 | 1/2
+77 | Ir | 16 | 2 | 4290 | 9 | 12 14 17 19 21 23 25 27 29 |  | 29 | 1/2
+78 | Pt | 17 | 1 | 8010 | 10 | 12 15 18 20 22 24 26 28 30 31 | 30 | 31 | 5/11
+79 | Au | 17 | 1 | 5922 | 9 | 13 16 19 21 23 25 27 29 31 |  | 31 | 5/11
+80 | Hg | 17 | 1 | 8010 | 10 | 14 17 19 21 23 25 27 29 31 32 | 31 | 31 | 5/12
+Independent interval chain controls: 256
+Os subsets 32768 feasible 2440 maximum 9
+Ir subsets 65536 feasible 4290 maximum 9
+Pt subsets 131072 feasible 8010 maximum 10
+Au subsets 131072 feasible 5922 maximum 9
+Hg subsets 131072 feasible 8010 maximum 10
+candidate patterns exhaustively tested 491520
+Counter({'T': 358, 'S': 17, 'E': 15})
+Counter({('ordinary', 'inside'): 385, ('anion', 'inside'): 3, ('anion', 'outside'): 1})
+rejected: IE_k (eV) 8.43
+rejected: source E
+rejected: whole_box_side inside
+rejected: cutoff_5 inside
+rejected: omega_over_eta 1.000000000000
+rejected: actual_minus_secant -0.000067013223
+rejected: Dirac_model_in_box True

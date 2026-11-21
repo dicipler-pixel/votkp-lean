@@ -1,0 +1,10 @@
+Z,symbol,k,subshell,event_in_removal_k_plus_one,state_at_k,state_at_k_plus_one,previous_change,next_change,K_next,R_next,z,lower,upper,whole_box,start_grade,end_grade
+76,Os,12,4f,opening,[Cd]4f^{14}5p^{2},[Cd]4f^{13}5p^{2},5p,4f,63,0,1.1446808511,1.032388664,1.269058296,inside,T,T
+76,Os,13,4f,closure,[Cd]4f^{13}5p^{2},[Cd]4f^{14},4f,rearranged 4f:-1 5p:+2,61,1,1.1078066914,1.000000000,1.227450980,inside,T,T
+76,Os,14,4f,opening,[Cd]4f^{14},[Cd]4f^{13},rearranged 4f:-1 5p:+2,4f,61,0,1.0805369128,0.977635783,1.194346290,inside,T,T
+77,Ir,15,4f,opening,[Cd]4f^{14},[Cd]4f^{13},5p,4f,61,0,1.0820668693,0.982608696,1.191693291,inside,T,T
+78,Pt,16,4f,opening,[Cd]4f^{14},[Cd]4f^{13},5p,4f,61,0,1.0949720670,0.992000000,1.208211144,inside,T,T
+79,Au,1,5d,opening,[Xe]4f^{14}5d^{10},[Xe]4f^{14}5d^{9},6s,5d,77,0,2.1898955878,2.187184775,2.192606403,inside,E,E
+79,Au,17,4f,opening,[Cd]4f^{14},[Cd]4f^{13},5p,4f,61,0,1.1045918367,1.000000000,1.220430108,inside,T,T
+80,Hg,2,5d,opening,[Xe]4f^{14}5d^{10},[Xe]4f^{14}5d^{9},6s,5d,77,0,1.8387919526,1.836122348,1.841461568,inside,E,E
+80,Hg,18,4f,opening,[Cd]4f^{14},[Cd]4f^{13},5p,4f,61,0,1.1118881119,1.006666667,1.227941176,inside,T,T

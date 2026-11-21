@@ -1,0 +1,49 @@
+315 archived energy and uncertainty fields match regenerated Lean literals. 320 CSV rows checked, including all 313 ratio pairs.
+Promethium: reversal keys [], contact-only keys [], exact feasible subsets [[]]; earliest common-width contact k=10, factor 19/17.
+Samarium: reversal keys [13, 14], contact-only keys [], exact feasible subsets [[], [14], [13]]; earliest common-width contact k=14, factor 19/26.
+Europium: reversal keys [13, 14], contact-only keys [15], exact feasible subsets [[], [14], [13]]; earliest common-width contact k=14, factor 9/14.
+Gadolinium: reversal keys [13, 14], contact-only keys [15, 16], exact feasible subsets [[], [14], [13]]; earliest common-width contact k=14, factor 20/29.
+Terbium: reversal keys [13, 14, 17], contact-only keys [15, 16], exact feasible subsets [[], [17], [14], [14, 17], [13], [13, 17]]; earliest common-width contact k=14, factor 21/29.
+All 310 ordinary differential-error budgets checked; 9/7 is the unique first contact, Eu k=14; second is Gd k=14 at 19/14.
+Lean (version 4.34.1, x86_64-unknown-linux-gnu, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)
+'ElementPaper.Batch13.observedFilter' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch13.noConsecutiveReversal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch13.onlyPossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch13.feasibleIff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch13.smallerScaleStrict' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch13.PromethiumOrdinary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch13.PromethiumDirections' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch13.PromethiumComplete' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch13.SamariumOrdinary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch13.SamariumDirections' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch13.SamariumComplete' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch13.EuropiumOrdinary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch13.EuropiumDirections' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch13.EuropiumComplete' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch13.EuropiumAnion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch13.GadoliniumOrdinary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch13.GadoliniumDirections' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch13.GadoliniumComplete' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch13.GadoliniumAnion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch13.TerbiumOrdinary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch13.TerbiumDirections' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch13.TerbiumComplete' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch13.TerbiumAnion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch13.samariumLowerBoundPermitsBoth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch13.ordinaryCount' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch13.windowHydrogenTerbium' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch13.SharedError.adverseBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch13.SharedError.adverseAttained' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch13.SharedError.growsWithDifference' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch13.SharedError.allFive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch13.SharedError.strictlyForwardBelow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch13.SharedError.atThreshold' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch13.SharedError.europiumIsReference' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch13.SharedError.sharpEuropium' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch13.SharedError.europiumContact' depends on axioms: [propext, Classical.choice, Quot.sound]
+Rejected: every samarium sign fixed
+Rejected: samarium can reverse steps 13 and 14 together
+Rejected: all terbium reversals independent
+Rejected: gadolinium guaranteed forward at step 15
+Rejected: no contact at the critical standardized error difference
+35 axiom audits passed, five false controls rejected.

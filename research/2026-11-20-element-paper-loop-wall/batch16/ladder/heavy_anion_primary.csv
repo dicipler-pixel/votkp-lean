@@ -1,0 +1,5 @@
+Z,symbol,scope,EA_eV,unc_EA_eV,z,z_low,z_high,Gamma,eta_eV,chi_eV,omega_over_eta,prediction,central_side,whole_box_side,grade,cutoff_5,cutoff_5.8,cutoff_5.82,cutoff_5.83,cutoff_5.85,cutoff_5.9,cutoff_6,tightens_H_Cs_central_cutoff_interval
+76,Os,evaluated primary,1.077661,0.000024,7.830133966062,7.829774006319,7.830493941838,0.773502870094,3.680284500000,4.757945500000,0.835691808767,outside,outside,outside,supported,outside,outside,outside,outside,outside,outside,outside,False
+77,Ir,evaluated primary,1.564057,0.000011,5.733179800992,5.732998821023,5.733360783506,0.702963524054,3.701481500000,5.265538500000,1.011822710967,inside,inside,inside,supported,outside,inside,inside,inside,inside,inside,inside,False
+78,Pt,evaluated primary,2.12510,0.00005,4.215721613101,4.215575371150,4.215867861933,0.616543951468,3.416865000000,5.541965000000,1.315351793517,inside,inside,inside,supported,inside,inside,inside,inside,inside,inside,inside,False
+79,Au,evaluated primary,2.30861,0.00003,3.996150930647,3.996097269388,3.996204593300,0.599691837224,3.458472000000,5.767082000000,1.390316668286,inside,inside,inside,supported,inside,inside,inside,inside,inside,inside,inside,False

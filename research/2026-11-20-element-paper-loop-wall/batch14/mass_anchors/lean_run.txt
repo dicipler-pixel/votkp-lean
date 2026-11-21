@@ -1,0 +1,4 @@
+'ElementPaper.MassAnchors.scaleRatio' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.MassAnchors.scaleReflection' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.MassAnchors.anchoredStep' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.MassAnchors.massSignNeedsScale' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,7 @@
+symbol,assignment,EA_eV,unc_eV,source,url
+Os,earlier direct ground threshold,1.07780,0.00012,Bilodeau and Haugen 2000 PRL,https://doi.org/10.1103/PhysRevLett.85.534
+Ir,earlier direct ground threshold,1.56436,0.00015,Bilodeau et al. 1999 PRA,https://doi.org/10.1103/PhysRevA.61.012505
+Pt,older direct ground threshold,2.1232,0.0011,Gibson et al. 1993 as compiled by NIST WebBook,https://webbook.nist.gov/cgi/cbook.cgi?ID=C7440064&Mask=20
+Pt,conversion in NIST WebBook of same 1999 experiment,2.125104,0.000044,Bilodeau et al. 1999 as compiled by NIST WebBook,https://webbook.nist.gov/cgi/cbook.cgi?ID=C7440064&Mask=20
+Au,earlier direct ground threshold,2.30860,0.00070,Hotop and Lineberger 1973 photodetachment,https://doi.org/10.1063/1.1679515
+Pt,earlier direct dye-laser threshold,2.128,0.002,Hotop and Lineberger 1973,https://doi.org/10.1063/1.1679515
