@@ -1,0 +1,11 @@
+'_private.HardnessConventions.0.ElementPaper.HardnessConventions.byDouble' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ElementPaper.HardnessConventions.boundarySquaredWitness' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.HardnessConventions.falseUnitCutoff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.HardnessConventions.sameInside' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.HardnessConventions.fullIndex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.HardnessConventions.keepOriginalIndex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.HardnessConventions.recomputeIndex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.HardnessConventions.sameOutside' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.HardnessConventions.sameBoundary' depends on axioms: [propext, Classical.choice, Quot.sound]

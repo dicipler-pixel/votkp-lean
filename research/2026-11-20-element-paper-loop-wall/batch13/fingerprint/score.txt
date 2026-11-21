@@ -1,0 +1,8 @@
+Training D centroids for offsets 0,1,2: 0.048224616098234974 0.5183666491534689 -0.3761152656327071
+Fixed D boundaries: -0.16394532476723606 0.2832956326258519
+Central confusion actual rows 0,1,2; predicted columns 0,1,2:
+8 0 0
+4 4 0
+6 0 2
+Scores / 24: {'first_two_contrast': 14, 'endpoint': 10, 'sorted': 14, 'ordered': 15, 'first_two': 14}
+Primary test boxes: {'certain correct': 11, 'ambiguous': 10, 'certain miss': 3}

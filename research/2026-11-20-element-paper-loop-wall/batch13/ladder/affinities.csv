@@ -1,0 +1,6 @@
+Z,symbol,status,EA_eV,unc_eV,lower_bound_eV,theory_eV,neutral_valence,anion_valence,source,primary_year,url
+61,Pm,theory-only,,,,0.154,4f5 6s2,4f5 6s2 6p,OMalley-Beck-2009,2009,https://doi.org/10.1103/PhysRevA.79.012511
+62,Sm,measured-lower-bound,,,0.05,0.130,4f6 6s2,4f6 6s2 6p,Ning-Lu-2022-sec4.3,2022,https://doi.org/10.1063/5.0080243
+63,Eu,measured,0.116,0.013,,0.117,4f7 6s2,4f7 6s2 6p,Cheng-Castleman-2015,2015,https://doi.org/10.1038/srep12414
+64,Gd,preliminary-measurement,0.212,0.030,,0.234,4f7 5d 6s2,4f7 5d 6s2 6p,Ning-Lu-2022-sec4.3,2022,https://doi.org/10.1063/5.0080243
+65,Tb,measured,0.13131,0.00080,,0.088,4f9 6s2,4f8 5d 6s2 6p,Ning-Lu-2022-table3,2020,https://doi.org/10.1103/PhysRevA.101.022502

@@ -1,0 +1,14 @@
+49 numeric anion inputs and 11 without a bound ground-state anion entry.
+Class / source status / complete boxes: {('outside', 'measured', True): 40, ('inside', 'measured', True): 8, ('outside', 'estimated', False): 1}
+Inside: F, S, Cl, Se, Br, Ag, Te, I
+Read-only historical files verified by SHA-256: 10, rows 1594, numeric anions 44.
+Historical display and evaluated source differ at Sc: 0.17938 vs 0.179378 eV.
+Historical display and evaluated source differ at Se: 2.020667189540642569893201926 vs 2.020667189540642569893201925200464507585622422702239957894679919542504 eV.
+Nearest to critical EA in absolute eV distance: Ag 0.004593749 eV signed (A - A_critical).
+Nearest to critical EA in absolute eV distance: Si -0.009085976 eV signed (A - A_critical).
+Nearest to critical EA in absolute eV distance: Cu -0.089857232 eV signed (A - A_critical).
+Precision test: rational identities hold for each row; decimal rounding occurs only in output.
+Output SHA-256: e1a6232024da061289960a2c8c13d3c804b6e5dad7c6b508d760f7cbc341fc22
+All 49 serialized sets of chemistry fields match direct independent recomputation.
+Four-corner bounds checked on 48 complete input boxes; technetium uncertainty remains blank.
+Each Z from 1 through 60 has exactly one numeric or omitted row.

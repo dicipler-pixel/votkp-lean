@@ -7,11 +7,12 @@ from pathlib import Path
 import numpy as np
 
 
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "localization"))
+from weight_io import read_weights
+
+
 def audit(path):
-    with np.load(path, allow_pickle=False) as record:
-        weights = record["X"]
-        cell = record["cell_A"]
-        filling = float(record["nu"])
+    weights, cell, filling = read_weights(path)
     mesh = len(weights)
     if weights.shape != (mesh, mesh, mesh):
         raise ValueError(path)
@@ -66,6 +67,6 @@ if __name__ == "__main__":
     directory = Path(__file__).resolve().parent.parent / "localization" / "weights"
     writer = csv.writer(sys.stdout, lineterminator="\n")
     writer.writerow(("case","nearest_count","S1","xx_A2","yy_A2","zz_A2","xy_A2","xz_A2","yz_A2","trace_over_3_A2","q1_chord_A2","q2_chord_A2","q3_chord_A2"))
-    for path in sorted(directory.glob("*.npz")):
+    for path in sorted(directory.glob("*.csv")):
         case, nc, *vals = audit(path)
         writer.writerow((case, nc, *(f"{v:.10f}" for v in vals)))
