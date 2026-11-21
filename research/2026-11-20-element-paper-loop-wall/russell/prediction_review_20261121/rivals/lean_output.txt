@@ -1,0 +1,7 @@
+'Beasley.WallGap.alternative_on_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Beasley.WallGap.diagonal_35_6' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Beasley.WallGap.rectangle_from_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Beasley.WallGap.element_gap_fits' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Beasley.WallGap.be_rb_sensitive_to_mixing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Beasley.WallGap.fitted_closes_diagonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Beasley.WallGap.wrong_diagonal_sign_refuted' depends on axioms: [propext, Classical.choice, Quot.sound]
