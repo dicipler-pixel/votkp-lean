@@ -1,0 +1,31 @@
+# Russell’s printed vacancies and Bohr’s earlier control
+
+Independent source audit for Jeromie Beasley, 21 November 2026. The target is the historical element claim in §8 of *What Russell Saw* (26 September), and the test discipline of Plate II in *Russell, Corrected* (3 November). This is a selected vacancy audit. It does not score all 137 Russell rows or the separate 386-entry ledger.
+
+## Two dates worth keeping
+
+I retrieved the Library of Congress preservation scan of the Brieger Press printing. The copyright leaf gives 1926 and bears a 30 December 1926 stamp. The original PDF’s 1-based pages 115, 116, 118 and 120 contain the ninth-octave diagram and the tables on printed pp. 96, 98 and 100. For a contemporaneous comparison I retrieved the original-source Nobel lecture facsimile. In his 11 December 1922 lecture Niels Bohr printed vacancies at atomic numbers 43, 61, 72, 75, 85 and 87, and filled adjoining positions 78 and 79 with Pt and Au. These numbers distinguish a genuine pre-discovery placement, priority for locating the vacancy, and a chemical-property prediction. [Russell, original plate](https://tile.loc.gov/storage-services/service/gdc/gdclccn/27/00/45/08/27004508/27004508.pdf#page=115) · [Bohr, Fig. 1, printed p. 10](https://www.nobelprize.org/uploads/2018/06/bohr-lecture.pdf#page=4)
+
+| Printed position in Russell | Identification and accepted discovery year | What the 1926 record supports |
+|---|---|---|
+| 803D+, between Mo and Ru (p. 96) | Tc, 43, 1937 | Correct place before accepted discovery. Bohr 1922 had 43; a disputed 1925 claim also predates Russell’s printing. |
+| 903D+, between Nd and Sm (p. 98) | Pm, 61, 1945 | Correct place before accepted discovery. Bohr 1922 had 61. |
+| 903M− and 903L−, between Lu and Ta, reading the name column (p. 98) | Hf, 72, 1923 | One element fills this interval. Russell required two. One surplus place; Hf was already known. |
+| 903I−, between W and Os, reading the name column (p. 98) | Re, 75, 1925 | Correct location printed after the accepted discovery. |
+| 903E−, between Pt and Au (p. 98), also X in the diagram | No available Z between 78 and 79 | One surplus place. |
+| 901−, after Po and before niton, now Rn (pp. 98–100 and diagram) | At, 85, 1940 | Correct place before accepted discovery. Bohr 1922 had 85. |
+| 1001+, between niton and Ra (p. 100) | Fr, 87, 1939 | Correct place before accepted discovery. Bohr 1922 had 87. |
+
+For the ninth octave, the printed positions, names and several symbol/property columns are misaligned. For example, Ta occurs in the symbol column one row before the name Tantalum. The position reading here follows the name order and checks it against the labelled diagram. The p. 118 PDF leaf is the printed p. 98. The quantities, tone signs and mate relationships remain Russell’s. They are not tabulated atomic numbers. [Table p. 96](https://tile.loc.gov/storage-services/service/gdc/gdclccn/27/00/45/08/27004508/27004508.pdf#page=116) · [Table p. 98](https://tile.loc.gov/storage-services/service/gdc/gdclccn/27/00/45/08/27004508/27004508.pdf#page=118) · [Table p. 100](https://tile.loc.gov/storage-services/service/gdc/gdclccn/27/00/45/08/27004508/27004508.pdf#page=120) · [NIST discovery chronology](https://www.nist.gov/news-events/news/2024/02/henry-moseley-and-periodic-table-elements) · [Historical discussion of the earlier disputed Z=43 claim](https://doi.org/10.1016/0375-9474(88)90393-4)
+
+**Result.** Russell marked all four positions below uranium whose accepted discoveries were still ahead in 1926 (43, 61, 85, 87). This is coverage of the actual missing positions, not a success rate over all his proposed elements. In 1924 the corresponding set also included 75, which was reported in 1925. Historical claims of “masurium” and “illinium” make the word *accepted* important. [MRS Bulletin, historical state of the table](https://www.cambridge.org/core/services/aop-cambridge-core/content/view/S0883769400008344) · [American Chemical Society, the four missing elements and discovery dates](https://doi.org/10.1021/cen-v081n036.p188). Beasley’s §8 named the Pm and At locations; the Tc and Fr slots add two directly verifiable examples. All four locations were already explicit in Bohr’s chart. Russell’s distinctive addition is his symmetry rule, which pairs the slots with other tones and, on the same plate, demands extra slots in the heavy row. This evidence assigns no measured electron affinity, successive ionization energy or loop-wall side to Fr. The modern independent-energy forecast for francium has its own recorded threshold and falsifier.
+
+## Earlier-date check
+
+The University of Science and Philosophy attributes an illumination and writings to 1921. The Smithsonian catalogue identifies photographs of Russell’s science paintings in F. C. Brown Papers, Box 11, Folder 24, as undated. I did not retrieve a verifiably dated pre-1925 Russell plate or contemporaneous letter specifying the W–Os vacancy. The photographic folder itself was unavailable for inspection here. To revise the Re priority assessment, identify a verifiable date before its 1925 discovery, a legible W–Os slot, and provenance tying the date to that specific version of the plate. To establish independent precedence over Bohr’s chart for the other slots, the relevant comparison date is 1922; for 43, 61 and 75, Moseley’s 1914 table is an even earlier comparator. His paper’s stated range is Al–Au; it should not be cited by itself for 85 or 87. [USP timeline](https://www.philosophy.org/historical-timeline) · [Smithsonian archival description](https://www.americanhistory.si.edu/collections/archival-item/sova-nmah-ac-0693-ref182) · [Moseley, 1914](https://doi.org/10.1080/14786440408635141)
+
+## Reproduction
+
+Read the cited Russell PDF, especially the ninth-octave diagram on PDF page 115, then the named columns on PDF pages 116, 118 and 120. Compare Bohr’s numbered chart with the name positions. An independent chart transcription separately documents the symbol-column displacement. The two archive hashes below identify the exact PDF bytes downloaded on this pass. [Indexed transcription](https://charts.walterrussellarchive.org/dataset.html)
+    ddc2853038aa1027615aa8e00b00346b9ea0c06313c137c7751973c117896eaa  first.pdf
+    9d69d21052ed45140361b25257d6276b30a408e16b5f3057c8025d00556de16d  bohr-nobel.pdf
