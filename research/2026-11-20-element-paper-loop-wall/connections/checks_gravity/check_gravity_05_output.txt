@@ -1,0 +1,6 @@
+(a) adjacent steps in archive: 5714 ; outside: 8 ; Gamma or wall call changed by rescaling: 0
+    record shift residual (n ln alpha): 1.1e-13 ; telescoping residual: 1.8e-15
+(b) Einstein addition Gamma(A)(+)Gamma(B) = Gamma(AB): worst residual 3.3e-16
+(c) d(Gamma^2)/dz at z* = 0.060660172 (nonzero: simple zero, transverse crossing)
+    exponent of sqrt(soft eigenvalue) approaching the wall = 0.50017 ; real-part form min eigenvalue at the wall 1 - G = 0.292893
+(d) ln 5 commutator: det = 1.0  winding sum = 0.0 ; branch distance g = min|lambda+1| = 0.56 = 14/25 = 0.56

@@ -1,0 +1,6 @@
+pairs 427 : sign disagreements (Gram det / intersection / margin / s<1): 0
+closed loops: max |cos(phi_measured) - sinh ha sinh hb| = 5.77e-15
+open loops: max |cosh(d) - sinh ha sinh hb| = 2.22e-16 ; direct minimised distance vs d: 3.33e-16
+min |grad F| on the wall curve (must be > 0): 2.000014
+carbon with nitrogen: Gram-det contacts (deg): 1.51888748 89.82270223 | forward-sector closing window starts at 13.11528523
+closes at 89.8 deg: True | closes at 90 deg: False

@@ -1,0 +1,10 @@
+1. WTK Theorem 3 bound on Gamma_0 against the distance to the wall
+   silicon  Gamma_0 = 0.70873244, distance to wall = 1.626e-03, WTK bound = 5.452e-06, exact corner excursion = 1.041e-06, call fixed by the bound: True
+            (hardness/electronegativity = 0.70873244; electrophilicity/hardness = 1/(2 Gamma_0^2) = 0.995418)
+   silver   Gamma_0 = 0.70622374, distance to wall = 8.830e-04, WTK bound = 6.242e-06, exact corner excursion = 4.670e-06, call fixed by the bound: True
+            (hardness/electronegativity = 0.70622374; electrophilicity/hardness = 1/(2 Gamma_0^2) = 1.002502)
+
+2. WTK Theorem 4 coboundary on full archive ladders
+   Carbon   :  5 steps, sum h_k = 1.886554664853, (1/2) ln(IE_last/IE_first) = 1.886554664853
+   Iron     : 25 steps, sum h_k = 3.534096296539, (1/2) ln(IE_last/IE_first) = 3.534096296539
+   Cesium   : 54 steps, sum h_k = 4.653760373989, (1/2) ln(IE_last/IE_first) = 4.653760373989

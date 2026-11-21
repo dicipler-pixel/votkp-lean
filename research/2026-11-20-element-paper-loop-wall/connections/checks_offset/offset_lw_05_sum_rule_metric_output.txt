@@ -1,0 +1,9 @@
+S4a site sum rule (sublattice A and B sites of cell 0)
+  site 0: sum_j |P_ij|^2 = 0.212693399797424 ; P_ii - P_ii^2 = 0.212693399797426 ; diff -1.8e-15
+  site 1: sum_j |P_ij|^2 = 0.212693399797424 ; P_ii - P_ii^2 = 0.212693399797423 ; diff 1.1e-15
+S4b region sum rule, A = sites 0..16
+  Tr(C_A - C_A^2) = 0.600944885924559 ; cut-crossing sum = 0.600944885924552 ; sum (1-Gamma^2)/4 = 0.600944885924559
+E13 second moment (cell centres) against the integrated projector metric
+  (1/2) sum_R R^2 ||P(R)||^2 = 0.228639254356804 ; int dk/2pi g^P_kk = 0.228639254356805 ; diff -1.1e-15
+Control: half-filled one-band chain, nearest-shell share of the off-site budget
+  nearest share = 0.810569469760 ; 8/pi^2 = 0.810569469139

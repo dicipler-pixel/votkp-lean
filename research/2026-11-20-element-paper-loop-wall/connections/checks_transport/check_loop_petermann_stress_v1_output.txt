@@ -1,0 +1,27 @@
+tr W in Gammas: -2*(g_a**2*g_b**2 + g_a**2 + g_b**2 - 1)/((g_a - 1)*(g_a + 1)*(g_b - 1)*(g_b + 1))
+kappa^2 * (1 - Ga^2 - Gb^2) simplifies to: 1
+
+numeric, inside the wall (archive ratios):
+   nitrogen K opening both faces  kappa^2 = 42.711281022   1/(1-G1^2-G2^2) = 42.711281022
+   potassium with calcium (Ar-core) kappa^2 = 26.439625341   1/(1-G1^2-G2^2) = 26.439625341
+   rubidium with strontium (Kr-core) kappa^2 = 8.973682239   1/(1-G1^2-G2^2) = 8.973682239
+   z = 3 both faces               kappa^2 = 2.000000000   1/(1-G1^2-G2^2) = 2.000000000
+   z = 5 both faces               kappa^2 = 9.000000000   1/(1-G1^2-G2^2) = 9.000000000
+
+frame check (WTK A1, Theorem 4):
+   original frame        kappa^2 = 42.711281022
+   rotated frame R W R^T kappa^2 = 42.711281022  (orthogonal change: unchanged)
+   boosted frame S W S^-1 kappa^2 = 113.527785602  (non-orthogonal change: different)
+
+face idempotent and WTK tensor law:
+   z = 6.079534: S = 0.514799846667, Gamma^2 = 0.514799846667, kappa = 1.435620116708, cosh h = 1.435620116708
+   z = 5.639665: S = 0.488293490899, Gamma^2 = 0.488293490899, kappa = 1.397943210960, cosh h = 1.397943210960
+   1 - S(a x b) = 0.248280076677   (1-S_a)(1-S_b) = 0.248280076677
+   but the loop needs S_a + S_b < 1: S_a + S_b = 1.003093; tensor stress S(a x b) = 0.751720
+
+geometric reading of the frame: kappa^2 = cosh^2 d(corner i, fixed point of W) in the upper half-plane
+  (the inner product of WTK A1 picks the point i; a different instrument picks a different point)
+  z = (3.000000, 3.000000): cosh^2 d = 2.000000000, kappa^2 = 2.000000000
+  z = (5.000000, 5.000000): cosh^2 d = 9.000000000, kappa^2 = 9.000000000
+  z = (5.639665, 5.639665): cosh^2 d = 42.711281022, kappa^2 = 42.711281022
+  z = (7.285752, 4.288609): cosh^2 d = 26.439625341, kappa^2 = 26.439625341

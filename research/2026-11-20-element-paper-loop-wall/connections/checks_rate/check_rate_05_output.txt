@@ -1,0 +1,42 @@
+helium-core sequence:
+   Lithium    -> Beryllium  |dGamma^2| = 0.13002  dtheta =   8.069 deg   <- largest
+   Beryllium  -> Boron      |dGamma^2| = 0.06675  dtheta =   3.889 deg
+   Boron      -> Carbon     |dGamma^2| = 0.03998  dtheta =   2.297 deg
+   Carbon     -> Nitrogen   |dGamma^2| = 0.02651  dtheta =   1.519 deg   <- crosses wall
+   Nitrogen   -> Oxygen     |dGamma^2| = 0.01882  dtheta =   1.079 deg
+   Oxygen     -> Fluorine   |dGamma^2| = 0.01405  dtheta =   0.807 deg
+   Fluorine   -> Neon       |dGamma^2| = 0.01088  dtheta =   0.626 deg
+neon-core sequence:
+   Sodium     -> Magnesium  |dGamma^2| = 0.17839  dtheta =  10.347 deg   <- crosses wall   <- largest
+   Magnesium  -> Aluminum   |dGamma^2| = 0.08761  dtheta =   5.086 deg
+   Aluminum   -> Silicon    |dGamma^2| = 0.05091  dtheta =   3.050 deg
+   Silicon    -> Phosphorus |dGamma^2| = 0.03304  dtheta =   2.042 deg
+   Phosphorus -> Sulfur     |dGamma^2| = 0.02311  dtheta =   1.467 deg
+   Sulfur     -> Chlorine   |dGamma^2| = 0.01707  dtheta =   1.109 deg
+   Chlorine   -> Argon      |dGamma^2| = 0.01302  dtheta =   0.862 deg
+argon-core sequence:
+   Potassium  -> Calcium    |dGamma^2| = 0.18884  dtheta =  10.893 deg   <- crosses wall   <- largest
+   Calcium    -> Scandium   |dGamma^2| = 0.14063  dtheta =   8.712 deg
+   Scandium   -> Titanium   |dGamma^2| = 0.09157  dtheta =   6.595 deg
+   Titanium   -> Vanadium   |dGamma^2| = 0.04889  dtheta =   4.182 deg
+   Vanadium   -> Chromium   |dGamma^2| = 0.02852  dtheta =   2.845 deg
+   Chromium   -> Manganese  |dGamma^2| = 0.01828  dtheta =   2.086 deg
+   Manganese  -> Iron       |dGamma^2| = 0.01273  dtheta =   1.640 deg
+krypton-core sequence:
+   Rubidium   -> Strontium  |dGamma^2| = 0.19043  dtheta =  11.050 deg   <- crosses wall   <- largest
+   Strontium  -> Yttrium    |dGamma^2| = 0.10498  dtheta =   6.608 deg
+   Yttrium    -> Zirconium  |dGamma^2| = 0.08392  dtheta =   6.016 deg
+   Zirconium  -> Niobium    |dGamma^2| = 0.04635  dtheta =   3.874 deg
+   Niobium    -> Molybdenum |dGamma^2| = 0.02847  dtheta =   2.730 deg
+   Molybdenum -> Technetium |dGamma^2| = 0.01748  dtheta =   1.886 deg
+   Technetium -> Ruthenium  |dGamma^2| = 0.01160  dtheta =   1.379 deg
+xenon-core sequence:
+   Cesium     -> Barium     |dGamma^2| = 0.18945  dtheta =  11.101 deg   <- crosses wall   <- largest
+   Barium     -> Lanthanum  |dGamma^2| = 0.11948  dtheta =   7.872 deg
+   Lanthanum  -> Cerium     |dGamma^2| = 0.12001  dtheta =  10.199 deg
+   Cerium     -> Praseodymium |dGamma^2| = 0.04741  dtheta =   6.134 deg
+   Praseodymium -> Neodymium  |dGamma^2| = 0.02404  dtheta =   5.399 deg
+   Neodymium  -> Promethium |dGamma^2| = 0.00194  dtheta =   0.738 deg
+   Promethium -> Samarium   |dGamma^2| = 0.00311  dtheta =  -1.131 deg
+sequences where the largest change is NOT the wall step: 1 of 5
+KILL not fired

@@ -1,0 +1,4 @@
+A^-T - J A J^-1 = Matrix([[0, 0], [0, 0]])
+area before / after transport: -0.090251243478 -0.090251243478
+mirror flips area: 0.090251243478  swapping the two vectors flips it: 0.090251243478
+chi forward = 3.117691454  reversed path = 3.117691454  mirrored = -3.117691454

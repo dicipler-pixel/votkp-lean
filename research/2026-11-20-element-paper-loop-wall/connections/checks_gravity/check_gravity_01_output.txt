@@ -1,0 +1,9 @@
+faces 433 adjacent same-core pairs 427
+disagreements loop / licence / rank-one cap / eigenvalue : 0
+open pairs: [('helium', 3, 4, 0.373090752), ('helium', 4, 5, 0.176316795), ('helium', 5, 6, 0.069582243), ('helium', 6, 7, 0.003093338), ('neon', 11, 12, 0.114273066)]
+nesting failures among open pairs (need 1-Ga^2>0, Gb!=0): 0
+angle-of-parallelism disagreements: 0
+wall: Pi(h) deg = 45.0  tan(Pi/2)=e^-h = 0.414213562373095  sqrt2-1 = 0.414213562373095
+equal-face disagreements (433 faces): 0
+anion rungs 49 : Gamma0 != eta/chi: 0 ; chi^2-eta^2 != IE*EA: 0 ; licence vs omega>=eta disagreements or nesting failures: 0
+anion rungs outside the wall (licence failed, IE*EA > 0 still): 41 of 49

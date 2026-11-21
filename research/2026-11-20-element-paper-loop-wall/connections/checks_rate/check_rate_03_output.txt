@@ -1,0 +1,7 @@
+(a) census = junction sum rule, worst relative residual over 300 projectors: 6.40e-14
+    non-projector control: smallest relative residual 1.30e-02 (must be large)
+(b) Var(X) = E_B[X] = (1/2)||[X,P]||^2 = (1/2) sum ||P_ij||^2 (x_i-x_j)^2, worst relative residual: 2.15e-14
+(c) twist offset speed: largest tau_dot^2/(4 Var(X) S) over random blocks = 0.573390
+    whole-site block offset change under a finite twist: 2.40e-14
+half-filled ring L=400: C_ii = 0.5000, census C-C^2 = 0.2500, off-site budget = 0.2500, nearest share = 0.8106 (8/pi^2 = 0.8106)
+KILL K1 not fired | K2 not fired | K3 not fired | K4 not fired

@@ -1,0 +1,10 @@
+H u = 0                      Matrix([[0], [0]])
+eigenvalues                  {a + b: 1, 0: 1}
+P^2 - P                      Matrix([[0, 0], [0, 0]])
+C2 - a/(a+b)                 0
+offset(site 2) - ln(b/a)     0
+imbalance - Gamma            0
+census C - C^2 = |P12|^2     0
+Delta^2 + 4t^2 - (a+b)^2     0
+wall |Delta| = 2t with a = 1, b = z  ->  (z-1)^2 = 4z  ->  z = [3 - 2*sqrt(2), 2*sqrt(2) + 3] [0.1715728752538099, 5.82842712474619]
+KILL not fired

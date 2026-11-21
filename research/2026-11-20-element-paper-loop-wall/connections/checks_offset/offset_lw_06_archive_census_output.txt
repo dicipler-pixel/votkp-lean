@@ -1,0 +1,12 @@
+wall: z_w = 5.828427124746 ; nu_w = 0.146446609407 ; ln[(1-nu_w)/nu_w] = 1.762747174039 ; ln z_w = 1.762747174039
+ordinary steps Z = 1..85: 3570  outside: 8
+  Lithium    step 1  z=14.028949  Gamma^2=0.751556  nu=1/(1+z)=0.066538  nu(1-nu)=0.062111 (wall 0.125)  eps=ln z=2.641123
+  Beryllium  step 2  z=8.450658  Gamma^2=0.621534  nu=1/(1+z)=0.105813  nu(1-nu)=0.094616 (wall 0.125)  eps=ln z=2.134244
+  Boron      step 3  z=6.838132  Gamma^2=0.554782  nu=1/(1+z)=0.127581  nu(1-nu)=0.111304 (wall 0.125)  eps=ln z=1.922515
+  Carbon     step 4  z=6.079534  Gamma^2=0.514800  nu=1/(1+z)=0.141252  nu(1-nu)=0.121300 (wall 0.125)  eps=ln z=1.804928
+  Sodium     step 1  z=9.201333  Gamma^2=0.646331  nu=1/(1+z)=0.098026  nu(1-nu)=0.088417 (wall 0.125)  eps=ln z=2.219348
+  Potassium  step 1  z=7.285752  Gamma^2=0.575507  nu=1/(1+z)=0.120689  nu(1-nu)=0.106123 (wall 0.125)  eps=ln z=1.985921
+  Rubidium   step 1  z=6.533087  Gamma^2=0.539497  nu=1/(1+z)=0.132748  nu(1-nu)=0.115126 (wall 0.125)  eps=ln z=1.876880
+  Cesium     step 1  z=5.947101  Gamma^2=0.507101  nu=1/(1+z)=0.143945  nu(1-nu)=0.123225 (wall 0.125)  eps=ln z=1.782904
+telescoping: max |sum_k h_k - (1/2) ln(IE_last/IE_first)| over atoms = 8.9e-16
+LEAD L1 (exploratory): entropy weight s(ln z) carried by the 8 outside steps: 2.8639 of 2429.9491 (0.1179%)

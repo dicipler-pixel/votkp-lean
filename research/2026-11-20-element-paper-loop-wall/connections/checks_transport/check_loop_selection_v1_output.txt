@@ -1,0 +1,21 @@
+1. tr(ABA^-1B^-1) - (2 - 4 sinh^2 h_a sinh^2 h_b) = 0
+   equal faces, tr W + 2 numerator factors as: -(z + 1)**2*(z**2 - 6*z + 1)
+   so tr W = -2 exactly at z^2 - 6z + 1 = 0, i.e. z = 3 + 2 sqrt2 = 5.828427125
+
+2. WTK Theorem 1 on the loop holonomy W^N (1 - Tr(Q_N Q_N+1))
+  nitrogen K opening, both faces     G1^2+G2^2=0.976587 trW=-1.642335768 elliptic (turn)
+     N=10,50,100,200,399: 2.184e-01 1.264e-02 2.554e-03 1.234e-02 1.361e-02  max over N>=300: 5.782e-01
+     is W orthogonal in this frame?  ||W W^T - I|| = 55.3296 -> rotating line (WTK control 2), not the unresolved block (control 3)
+  the wall itself 3+2sqrt2           G1^2+G2^2=1.000000 trW=-2.000000000 parabolic
+     N=10,50,100,200,399: 1.290e-06 2.403e-09 1.532e-10 9.669e-12 6.133e-13  max over N>=300: 1.916e-12
+  carbon K opening, both faces       G1^2+G2^2=1.029600 trW=-2.502927454 hyperbolic (run)
+     N=10,50,100,200,399: 1.343e-14 -2.220e-16 -2.220e-16 -2.220e-16 -2.220e-16  max over N>=300: -2.220e-16
+     Theorem 2: 1 - Tr(Q_60 a a^T) = 0.000e+00
+  carbon with nitrogen (mixed)       G1^2+G2^2=1.003093 trW=-2.049836259 hyperbolic (run)
+     N=10,50,100,200,399: 5.568e-08 0.000e+00 2.220e-16 2.220e-16 2.220e-16  max over N>=300: 2.220e-16
+     Theorem 2: 1 - Tr(Q_60 a a^T) = -2.220e-16
+
+3. Sign agreement: Gamma1^2+Gamma2^2 < 1  <=>  |tr W| < 2
+  carbon with nitrogen     G1^2+G2^2-1 = +0.003093  |trW|-2 = +0.049836
+  sodium with magnesium    G1^2+G2^2-1 = +0.114273  |trW|-2 = +2.429115
+  random face pairs, disagreements: 0 of 2000

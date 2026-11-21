@@ -1,0 +1,21 @@
+1. eigenvalues at Phi = +0.7: [-1.37338898 -0.57241315  1.94580212]
+   eigenvalues at Phi = -0.7: [-1.37338898 -0.57241315  1.94580212]
+   det K(lambda) at lambda = -1.373389: 7.38e-16
+   det K(lambda) at lambda = -0.572413: 3.69e-16
+   det K(lambda) at lambda = +1.945802: 1.33e-15
+   reduced link K_12 + lambda... : (1.5883401441-0.4955520671j)  expected J + J^2 e^{-i Phi}/lambda: (1.5883401441-0.4955520671j)
+   diagonal shift (K_22 + lambda) : (0.7692307692+0j)  expected J^2/lambda: 0.7692307692
+   WTK sensitivity: ||dK/dlambda - (-I - G F/lambda^2)|| = 1.84e-10
+
+3. WTK Theorem 6 curvature (purely imaginary for a Hermitian family; Im shown)
+   F_b at Phi=+0.7: [-0.1375503   0.0527419   0.08480839]  sum = 0.0e+00
+   F_b at Phi=-0.7: [-0.1375503   0.0527419   0.08480839]  sum = 0.0e+00
+   spectra equal at +-Phi: True
+   projector formula Tr(P[dP,dP]) (finite differences): [-0.13755   0.052742  0.084808]
+   -> plane (Phi, eps): NO sign flip (kill condition met for this plane; see docstring)
+   repaired plane (eps1, eps2) at fixed flux:
+   F_b at +Phi: [-0.23330257  0.22083131  0.01247126]  sum = 0.0e+00
+   F_b at -Phi: [ 0.23330257 -0.22083131 -0.01247126]  sum = 0.0e+00
+   spectra equal: True ; F(-Phi) + F(+Phi) max = 2.5e-18
+
+4. deletion control: two-mode model [[eps, J],[J, 0]] has no Phi, so d_Phi P = 0 and F = 0 identically.

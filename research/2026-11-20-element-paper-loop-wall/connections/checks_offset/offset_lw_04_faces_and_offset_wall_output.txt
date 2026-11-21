@@ -1,0 +1,18 @@
+E10 gamma^2 + delta^2 = k_e
+  (0.6,1.0,0.4): gamma^2=0.1714985851 delta^2=0.1714985851 sum-k_e=0.0  1-sum=0.657003
+  (0.3,1.0,0.4): gamma^2=0.1459074408 delta^2=0.4468415375 sum-k_e=0.0  1-sum=0.407251
+  (1.0,1.0,1.5): gamma^2=0.6 delta^2=0.0 sum-k_e=0.0  1-sum=0.4
+  (0.01,1.0,0.4): gamma^2=0.1379396452 delta^2=0.8449665392 sum-k_e=9.68e-122  1-sum=0.0170938
+  (1.0e-6,1.0,0.4): gamma^2=0.1379310345 delta^2=0.8620672414 sum-k_e=9.68e-122  1-sum=1.72414e-6
+  on the circle: gamma = sin(theta) sqrt(k_e), delta = |cos(theta)| sqrt(k_e)
+    theta=0.448799: gamma - sin(theta)sqrt(k_e) = 4.84e-122 ; delta - |cos|sqrt(k_e) = 9.68e-122
+    theta=1.0472: gamma - sin(theta)sqrt(k_e) = 0.0 ; delta - |cos|sqrt(k_e) = 4.84e-122
+    theta=1.25664: gamma - sin(theta)sqrt(k_e) = 9.68e-122 ; delta - |cos|sqrt(k_e) = 9.68e-122
+
+E11 an offset on the wall and one beyond it (equal hopping t = 1)
+  on the wall, v = 2/sqrt3   gamma^2=0.5 tau_inf=1.76274717403909  tau_inf-ln(3+2sqrt2)=1.9363e-121
+     |tau_L| at L=5..21: ['1.76274181933991', '1.76274717363367', '1.76274717403905', '1.76274717403909', '1.76274717403909']  last - tau_inf = -2.84e-22
+  beyond, v = 1.5            gamma^2=0.6 tau_inf=2.06343706889556  tau_inf-ln(3+2sqrt2)=0.30069
+     |tau_L| at L=5..21: ['2.06343594888531', '2.06343706887331', '2.06343706889556', '2.06343706889556', '2.06343706889556']  last - tau_inf = -2.56e-25
+  reference-like, v = 0.4    gamma^2=0.196116135138 tau_inf=0.95154113527419  tau_inf-ln(3+2sqrt2)=-0.811206
+     |tau_L| at L=5..21: ['0.951079272978746', '0.951539296193551', '0.951541126980401', '0.951541135234736', '0.951541135273997']  last - tau_inf = -1.93e-13

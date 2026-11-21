@@ -1,0 +1,36 @@
+reference (t1, t2, v) = (0.6, 1, 0.4); gamma = v/sqrt(Emin Emax) = 0.414123876566552049099519114521
+tau_inf = 2 artanh gamma = 0.881157076037169765334157379063
+
+E1  finite blocks: z = P_empty/P_full, Gamma(z), tanh(tau/2), and the Schur ratio s0/s1
+  L= 5  tau=0.8811283239760088866129  |a - Gamma(z)|=4.16e-112  |a - tanh(tau/2)|=1.25e-111  |z - s0/s1|/z=2.75e-108  |a|-gamma=-1.19106e-5
+  L= 9  tau=0.8811570601817915054969  |a - Gamma(z)|=0.0  |a - tanh(tau/2)|=6.24e-111  |z - s0/s1|/z=1.64e-104  |a|-gamma=-6.5681e-9
+  L=13  tau=0.8811570760272303677218  |a - Gamma(z)|=4.16e-112  |a - tanh(tau/2)|=8.32e-112  |z - s0/s1|/z=1.03e-100  |a|-gamma=-4.1174e-12
+  L=17  tau=0.881157076037163154637  |a - Gamma(z)|=4.16e-112  |a - tanh(tau/2)|=2.08e-110  |z - s0/s1|/z=4.92e-96  |a|-gamma=-2.73849e-15
+
+E3  reversal: v -> -v and one-site translation (L = 17)
+  z(v)*z(-v) - 1 = -1.83e-96   Gamma(v)+Gamma(-v) = -7.57e-97
+  z(start 0)*z(start 1) - 1 = 8.27e-97   Gamma^2 equal: 2.84e-97
+
+E4  protected even block (L = 16): z - 1, Gamma
+  z - 1 = -2.17e-97   Gamma = -1.09e-97
+
+E2  each level a peel step (L = 17); the loop wall on single levels
+  max |2nu-1 + Gamma(z_i)| and |2nu-1 + tanh(eps/2)| over 17 levels: 8.32e-112
+  wall on one level: |eps| = ln(3+2sqrt2) = 1.7627471740390860505 ; nu window = (2-sqrt2)/4 = 0.146446609406726
+  levels inside the wall: ['0.9970582245'] of 17
+  entanglement entropy carried by inside levels: 0.582781038536 of 0.809820093816 (fraction 0.7196426)
+  eps range: 36.373305 to -34.591761
+
+E7  offset angle and the Two Trees boost
+  sec chi - (1+g^2)/(1-g^2) = 0.0   sec chi - cosh tau = 1.66e-111
+  2 sec chi - (z + 1/z) = 3.33e-111   chi (deg) = 44.9912275519
+  at the wall gamma^2 = 1/2: sec chi = 3.0  so trace 2 sec chi = 6 = z_w + 1/z_w: 6.0
+
+E12 chemistry form of the boundary pair (L = 17): m = s0 (vacancy), p = s1 (occupation)
+  s0 = 5.65196642526072e-8  s1 = 2.3416280807362e-8
+  "hardness"/"electronegativity" = (s0-s1)/(s0+s1) = 0.41412387656654931061  = tanh(tau/2) = 0.41412387656654931061
+  "omega/eta" = 1/(2 a^2) = 2.91547594742 (wall at 1)
+
+NEAR-COINCIDENCE (reported, not a connection): reference gamma against sqrt2 - 1 = tan(pi/8)
+  gamma - (sqrt2-1) = -8.9685807e-5    tau_inf - ln(1+sqrt2) = -0.00021651098
+  e^tau_inf = 2.41369091520451  against 1+sqrt2 = 2.4142135623731 = sqrt(3+2sqrt2), the face apex of the wall

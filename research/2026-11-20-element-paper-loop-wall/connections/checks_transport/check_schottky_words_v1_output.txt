@@ -1,0 +1,4 @@
+reduced words up to length 10: 118096
+  nitrogen K opening (inside)    elliptic words:    240   smallest |tr|-2 among the rest: 7.959e-01 at BBAABaabb
+  the wall 3+2sqrt2              elliptic words:      0   smallest |tr|-2 among the rest: -2.274e-13 at BAAABabaab
+  carbon K opening (outside)     elliptic words:      0   smallest |tr|-2 among the rest: 5.029e-01 at BBBBAbabbb

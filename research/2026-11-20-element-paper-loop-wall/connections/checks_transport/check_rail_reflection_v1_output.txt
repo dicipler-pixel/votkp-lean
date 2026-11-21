@@ -1,0 +1,14 @@
+1. with T = tan(psi/2): (lambda_+ - 1)/(lambda_+ + 1) - T = 0
+   numeric spot check at psi = 0.9: 0
+   sec psi at Gamma^2 = 1/2: 3 ; check sec(2 arctan g) = 0
+   psi at the wall = arccos(1/3) = 70.5287793655 degrees
+   lambda_pm at sec psi = 3: 2*sqrt(2) + 3 and 3 - 2*sqrt(2)
+2. (3+2sqrt2)^2 = 12*sqrt(2) + 17 ; (1+sqrt2)^4 = 12*sqrt(2) + 17
+   Gamma of the Catalan rail root 17+12sqrt2 = 2*sqrt(2)/3  (= tanh(2 h*), h* = arsinh 1)
+3. int_0^1 2 artanh(G)/(1+G^2) dG = 0.9159655941772190150546035149323841107741
+   Catalan G                      = 0.9159655941772190150546035149323841107741
+   difference                     = 0.0
+   LEAD only: inside-wall part 0.445424765266814  outside-wall part 0.470540828910405  fraction inside 0.486289843307
+4. Second map: the loop holonomy W (equal faces) outside the wall has eigenvalues -lambda_pm with
+   lambda_+ + lambda_- = |tr W| = 4 s2^2 - 2, lambda_+ lambda_- = 1, so sec psi_W = 2 s2^2 - 1
+   sec psi_W = 17 (the Catalan rail) needs sinh^2 h = [3] -> Gamma^2 = s2/(1+s2) = [3/4] ; sec psi_W = 1 (rail start) needs sinh^2 h = [1] (the wall)

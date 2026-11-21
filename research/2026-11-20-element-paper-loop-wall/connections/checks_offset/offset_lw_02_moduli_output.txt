@@ -1,0 +1,16 @@
+E6  inner branch point h: symbol-quadratic root against Gamma(Emax/Emin) against the printed column
+  ('0.6', '1', '0.4') root 0.489206414021  Gamma(Emax/Emin) 0.489206414021  printed 0.489206414  |k_e - Gamma(e^(1/xi_c))| 0.0  |h - e^(-1/xi_c)| 0.0
+  ('0.5', '1', '0.3') root 0.448035875161  Gamma(Emax/Emin) 0.448035875161  printed 0.448035875  |k_e - Gamma(e^(1/xi_c))| 0.0  |h - e^(-1/xi_c)| 6.68e-52
+  ('0.7', '0.9', '0.2') root 0.70153161108  Gamma(Emax/Emin) 0.70153161108  printed 0.701531611  |k_e - Gamma(e^(1/xi_c))| 3.34e-52  |h - e^(-1/xi_c)| 0.0
+  ('0.8', '0.8', '0.5657') root 0.499991411655  Gamma(Emax/Emin) 0.499991411655  printed 0.499991412  |k_e - Gamma(e^(1/xi_c))| 6.68e-52  |h - e^(-1/xi_c)| 6.68e-52
+  ('0.3', '1', '0.4') root 0.255690650045  Gamma(Emax/Emin) 0.255690650045  printed 0.255690650  |k_e - Gamma(e^(1/xi_c))| 0.0  |h - e^(-1/xi_c)| 0.0
+
+E5  dimerization modulus and the intercept variable
+  t1/t2 = 0.3: u - Gamma(t1/t2) = 0.0 ; u0 - Gamma(t2/t1) = 0.0 ; u0 + u = 0.0
+  t1/t2 = 0.6: u - Gamma(t1/t2) = 0.0 ; u0 - Gamma(t2/t1) = 0.0 ; u0 + u = 0.0
+  t1/t2 = 0.8: u - Gamma(t1/t2) = 0.0 ; u0 - Gamma(t2/t1) = -3.34e-52 ; u0 + u = 0.0
+
+Cayley order four and Landen as a reflection
+  z = 2.0: Gamma(Gamma(z)) + 1/z = -1.34e-51 ; (1 - z)/(1 + z) + Gamma(z) = 0.0
+  z = 5.828427: Gamma(Gamma(z)) + 1/z = 6.68e-52 ; (1 - z)/(1 + z) + Gamma(z) = 0.0
+  z = 0.3: Gamma(Gamma(z)) + 1/z = 0.0 ; (1 - z)/(1 + z) + Gamma(z) = 0.0

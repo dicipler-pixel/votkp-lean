@@ -1,0 +1,17 @@
+(a) random unitary: max | |S11| - |S22| | = 6.4e-16 ; reciprocal real step S orthogonal and symmetric: 2.2e-16
+    z = 6: Gamma = 0.7142857142857143  reverse Gamma = -0.7142857142857143  (= -Gamma: True )
+(b) n = 1: reversal factor -1, mirror factor -1, verified: True
+(b) n = 2: reversal factor -1, mirror factor -1, verified: True
+(b) n = 3: reversal factor +1, mirror factor -1, verified: True
+(b) n = 4: reversal factor +1, mirror factor -1, verified: True
+(b) n = 5: reversal factor -1, mirror factor -1, verified: True
+(b) n = 6: reversal factor -1, mirror factor -1, verified: True
+(b) n = 7: reversal factor +1, mirror factor -1, verified: True
+(c) Phi = 0: W = 1.56e-16  det g = 7.85e-15  (pinched, rank one)
+    Phi = 1.0e-06: W = 2.6998e-06, signed Im(MaMb*) at +Phi/-Phi = +1.921e-06/-1.921e-06, det g = 1.472e-10, Z(+)-Z(-) = 0.0e+00, Z(+)-Z(0) = -3.419e-14
+    Phi = 3.2e-04: W = 8.5376e-04, signed Im(MaMb*) at +Phi/-Phi = +6.074e-04/-6.074e-04, det g = 1.472e-05, Z(+)-Z(-) = 0.0e+00, Z(+)-Z(0) = -3.493e-09
+    Phi = 1.0e-01: W = 2.5200e-01, signed Im(MaMb*) at +Phi/-Phi = +1.842e-01/-1.842e-01, det g = 1.154e+00, Z(+)-Z(-) = 0.0e+00, Z(+)-Z(0) = -3.491e-04
+    log-log slope of W against Phi = 0.99703
+    max |spec(+Phi) - spec(-Phi)| = 0.0e+00 ; det g vs W^2|M|^4/(4 D^4) worst rel = 6.1e-05
+    Tr H^3 change at Phi = 1e-2, 2e-2: -3.0000e-04 -1.2000e-03 (ratio ~4: even, second order; not isospectral)
+(d) open chain (pure gauge): spectral drift = 6.7e-16 ; slope of W vs Phi with fixed probes = 0.99951 ; W with covariantly carried probes = 1.5e-16

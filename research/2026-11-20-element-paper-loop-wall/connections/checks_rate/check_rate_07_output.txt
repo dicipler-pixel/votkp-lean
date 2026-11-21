@@ -1,0 +1,9 @@
+random scalar edges: worst relative residual of E- = (di-dj)^2, E+ = (di+dj)^2: 6.8e-16
+control |a| = 1.7: E- = 26.010000 against (di-dj)^2 = 9 (must differ)
+archive H..At, 3570 steps: worst |E-/E+ - Gamma^2| = 2.8e-16; worst |(E+-E-)/E+ - 4nu(1-nu)| = 2.5e-16
+closest ordinary steps to reflected = transmitted (E-/E+ = 1/2):
+   Cesium     step  1  reflected share 0.50710  transmitted share 0.49290
+   Nitrogen   step  5  reflected share 0.48829  transmitted share 0.51171
+   Carbon     step  4  reflected share 0.51480  transmitted share 0.48520
+   Oxygen     step  6  reflected share 0.46947  transmitted share 0.53053
+KILL K1 not fired | K2 not fired | K3 not fired

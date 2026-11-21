@@ -1,0 +1,13 @@
+E14 remainder step ratio rho = Gamma(w)^2, w = sqrt((M+e)/(2e))
+  ('0.3', '1', '0.4') rho=0.00543033540482  Gamma(w)^2=0.00543033540482  printed 0.005430335405
+  ('0.6', '1', '0.4') rho=0.0276842949945  Gamma(w)^2=0.0276842949945  printed 0.02768429499
+  ('1', '1', '0.1') rho=0.279372850166  Gamma(w)^2=0.279372850166  printed 0.2793728502
+  ('1', '1', '0.02') rho=0.567437898103  Gamma(w)^2=0.567437898103  printed 0.5674378981
+
+E1b Hankel limit and equal-hopping square law
+  ('1', '1', '0.4') Gamma(R_inf) - sqrt(k_e) = -5.74e-42 ; gamma^2 - Gamma(e^(1/xi_c)) = -2.87e-42
+  ('1', '1', '1.5') Gamma(R_inf) - sqrt(k_e) = 1.15e-41 ; gamma^2 - Gamma(e^(1/xi_c)) = -1.15e-41
+  ('0.5', '0.5', '0.4') Gamma(R_inf) - sqrt(k_e) = -1.15e-41 ; gamma^2 - Gamma(e^(1/xi_c)) = 0.0
+
+Aside: rho = 1/2 at (Emax+Emin)/(2 Emin) = 33.970562748477140586  = 17 + 12 sqrt2 = 33.970562748477140586
+  i.e. k_e = Emin/Emax = 0.0149384999516553 ; check Gamma(w)^2 with M = 1/k_e, e = 1: 0.5

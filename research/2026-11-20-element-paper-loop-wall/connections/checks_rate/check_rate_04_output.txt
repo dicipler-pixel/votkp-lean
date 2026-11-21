@@ -1,0 +1,7 @@
+(1) at the wall: D = Gamma = 0.707106781186547, V = sech h = 0.707106781186548, V^2 + D^2 - 1 = 0.0e+00
+    sin(2 theta) peaks at theta = 45.0000 deg; sin(theta)^2 there = 0.500000
+(2) E -> sE + c on every ladder H..At: worst relative change of z or change of Gamma = 1.6e-14
+(3) two-step reflection = Gamma_q (+) Gamma_(q+1) on 3486 archive pairs: worst residual 2.2e-16
+(4) wall as Gibbs gap: beta Delta = 1.762747174039 = 2 asinh 1 = 1.762747174039; populations 0.853553, 0.146447
+(5) Rice-Mele offset tau = 0.881157076037: as a peel step Gamma = tanh(tau/2) = 0.414123877, z = e^tau = 2.413691, Gamma^2 = 0.171499 (inside the wall)
+KILL K1 not fired | K2 not fired | K3 not fired

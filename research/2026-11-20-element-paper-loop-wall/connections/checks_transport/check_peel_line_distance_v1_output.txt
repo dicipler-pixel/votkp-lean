@@ -1,0 +1,5 @@
+(1/2)||P_fwd - P_rev||_F^2 = (a - b)**2/(a + b)**2
+minus Gamma^2 = ((b-a)/(b+a))^2  -> 0
+WTK capacity of RP^1 at epsilon = 1/2: floor(pi/arcsin(sqrt(1/2))) = 4
+  silicon anion rung: separation = 0.50230167  (above 1/2)
+  silver anion rung: separation = 0.49875197  (below 1/2)

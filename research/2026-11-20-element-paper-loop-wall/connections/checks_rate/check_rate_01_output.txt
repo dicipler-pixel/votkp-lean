@@ -1,0 +1,34 @@
+Part A: symbolic identities (residual must be 0)
+  tau_nu = ln z = 2h                                   residual = 0
+  asymmetry 1-2nu = Gamma                              residual = 0
+  census nu(1-nu) = (1-Gamma^2)/4                      residual = 0
+  S = 1/(nu(1-nu)) = 4 cosh^2 h                        residual = 0
+  complement nu->1-nu is z->1/z (Gamma -> -Gamma)      residual = 0
+  sinh^2 h = Gamma^2/(1-Gamma^2)                       residual = 0
+  at Gamma^2 = 1/2: census nu(1-nu) = 1/8 (half of the half-filling maximum 1/4); S = 8 ; tau = ln(3+2sqrt2) = log(2*sqrt(2) + 3) = 1.762747174039086 ; 2 asinh(1) = 1.762747174039086
+  wall nu = (1 - 1/sqrt2)/2 = 0.14644660940672624 ; 4 nu(1-nu) = (1-2nu)^2 there: True
+Part B: 3570 ordinary steps H..At, outside 8, disagreements between languages 0
+   outside: Lithium step 1 z 14.028949 S 16.1002
+   outside: Beryllium step 2 z 8.450658 S 10.569
+   outside: Boron step 3 z 6.838132 S 8.9844
+   outside: Carbon step 4 z 6.079534 S 8.244
+   outside: Sodium step 1 z 9.201333 S 11.31
+   outside: Potassium step 1 z 7.285752 S 9.423
+   outside: Rubidium step 1 z 6.533087 S 8.6862
+   outside: Cesium step 1 z 5.947101 S 8.1152
+Part B anions: 44 bound anions H..Cs (same affinities as check_hardness_electrophilicity_v1), disagreements 0
+   Iodine     S0 =   5.7092  (4chi^2/(chi^2-eta^2) =   5.7092)  z0  3.4165  omega/eta 1.6701
+   Bromine    S0 =   5.7970  (4chi^2/(chi^2-eta^2) =   5.7970)  z0  3.5123  omega/eta 1.6130
+   Chlorine   S0 =   5.8680  (4chi^2/(chi^2-eta^2) =   5.8680)  z0  3.5894  omega/eta 1.5706
+   Tellurium  S0 =   6.7902  (4chi^2/(chi^2-eta^2) =   6.7902)  z0  4.5715  omega/eta 1.2168
+   Selenium   S0 =   7.0335  (4chi^2/(chi^2-eta^2) =   7.0335)  z0  4.8263  omega/eta 1.1593
+   Sulfur     S0 =   7.1882  (4chi^2/(chi^2-eta^2) =   7.1882)  z0  4.9877  omega/eta 1.1273
+   Fluorine   S0 =   7.3178  (4chi^2/(chi^2-eta^2) =   7.3178)  z0  5.1226  omega/eta 1.1028
+   Silver     S0 =   7.9801  (4chi^2/(chi^2-eta^2) =   7.9801)  z0  5.8079  omega/eta 1.0025
+   Silicon    S0 =   8.0370  (4chi^2/(chi^2-eta^2) =   8.0370)  z0  5.8665  omega/eta 0.9954
+   Copper     S0 =   8.4122  (4chi^2/(chi^2-eta^2) =   8.4122)  z0  6.2522  omega/eta 0.9533
+   Germanium  S0 =   8.5644  (4chi^2/(chi^2-eta^2) =   8.5644)  z0  6.4084  omega/eta 0.9382
+   Rhodium    S0 =   8.6805  (4chi^2/(chi^2-eta^2) =   8.6805)  z0  6.5273  omega/eta 0.9273
+   Nickel     S0 =   8.7526  (4chi^2/(chi^2-eta^2) =   8.7526)  z0  6.6011  omega/eta 0.9208
+   Tin        S0 =   8.7553  (4chi^2/(chi^2-eta^2) =   8.7553)  z0  6.6038  omega/eta 0.9206
+KILL K1 not fired | K2 not fired | K3 not fired

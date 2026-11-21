@@ -1,0 +1,18 @@
+orthogonal projector, rank 5 on 6 sites x 2 orbitals
+  (1/2)Tr[(dP)^2] commutator  = 17.421346791144
+  (1/2)Tr[(dP)^2] finite diff = 17.421346775967
+  Tr(P X (1-P) X)             = 17.421346791144
+  (1/2) sum |P_ij|^2 (xi-xj)^2 = 17.421346791144
+  WTK distance (1/2)||P(s)-P||^2 / s^2 at s=1e-3 = 17.421308843566
+  sum rule max error over sites = 2.78e-16
+
+negative control, oblique idempotent (||Pi^2 - Pi|| = 4.8e-15, ||Pi - Pi*|| = 8.782)
+  (1/2)Tr[(dPi)^2] = 22.291414
+  Tr(Pi X (1-Pi) X) = 22.291414
+  (1/2) sum |Pi_ij|^2 (xi-xj)^2 = 233.364836
+
+WTK Proposition 9 two-level reading, Gamma = cos t
+  t =  22.5000 deg: <g|D|g>^2 = 0.853553 (cos^2 t = 0.853553), |<e|D|g>|^2 = 0.146447, sum = 1.000000, outside(R>T)=True
+  t =  45.0000 deg: <g|D|g>^2 = 0.500000 (cos^2 t = 0.500000), |<e|D|g>|^2 = 0.500000, sum = 1.000000, outside(R>T)=False
+  t =  44.8683 deg: <g|D|g>^2 = 0.502298 (cos^2 t = 0.502298), |<e|D|g>|^2 = 0.497702, sum = 1.000000, outside(R>T)=True
+  t =  45.0718 deg: <g|D|g>^2 = 0.498747 (cos^2 t = 0.498747), |<e|D|g>|^2 = 0.501253, sum = 1.000000, outside(R>T)=False
