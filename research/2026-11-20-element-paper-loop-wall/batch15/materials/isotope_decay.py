@@ -81,3 +81,18 @@ print("Excited Os: bare parent, K capture, eV:",
 print("Excited Os: neutral parent, continuum, eV:",
       neutral-exc,"width",neutral_u+exc_u)
 assert hybrid-exc-hybrid_u-exc_u>0 and neutral-exc+neutral_u+exc_u<0
+
+# Yerokhin/Shabaev 2015 Table III gives total 2s–1s for 192Os, in Ry.
+# Different nuclear isotope from the decay: comparator, not a physical isotope bound.
+rydberg,rydberg_u=D("13.605693122990"),D("0.000000000015")
+os192_transition,os192_u=D("4683.841"),D("0.012")
+trans_low=(os192_transition-os192_u)*(rydberg-rydberg_u)
+trans_high=(os192_transition+os192_u)*(rydberg+rydberg_u)
+central_2s=hybrid-os192_transition*rydberg
+lo_2s=hybrid-hybrid_u-trans_high
+hi_2s=hybrid+hybrid_u-trans_low
+print("192Os electronic 2s–1s comparator, eV:",os192_transition*rydberg)
+print("Ground-nuclear 2s comparator, eV:",central_2s,"box",lo_2s,hi_2s)
+print("First-excited-nuclear 2s comparator, eV:",central_2s-exc,
+      "box",lo_2s-exc-exc_u,hi_2s-exc+exc_u)
+assert lo_2s>0 and lo_2s-exc-exc_u<0<hi_2s-exc+exc_u

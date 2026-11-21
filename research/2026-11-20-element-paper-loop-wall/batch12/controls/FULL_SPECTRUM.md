@@ -43,7 +43,7 @@ $$
 $$
 The source fitted static dielectric data, with more emphasis on gas-like densities. This is an estimate at the matched fluid state. Its experimental uncertainty and the far-ultraviolet fit's model uncertainty have not been converted to a joint error box. [Harvey and Lemmon (2005), Table II](https://www.nist.gov/system/files/documents/mml/acmd/fluids_modeling/Harvey-Lemmon-50062.pdf) · [Laporte et al. (1987), Tables I–II](https://doi.org/10.1103/PhysRevB.35.6270)
 
-**DERIVED.** Conditional on those two fits, the **entire** fluid spectrum gives $1<T/L\le1.288662$ and $0<\Gamma\le0.126127$. In the **9–11 eV window**, $T_W=3.27607790$ eV and $L_W=0.45387207$ eV give $T_W/L_W=7.21806448$. Since $T\ge T_W$ and $L\ge T/\sqrt{\epsilon_s}$,
+**DERIVED.** Adopt the two window areas as estimates of the observed integrals and the independent static correlation at the same state. The argument does not impose the four-oscillator complex fit as an exact physical response throughout the real axis. Under these numerical inputs the **entire** fluid spectrum gives $1<T/L\le1.288662$ and $0<\Gamma\le0.126127$. In the **9–11 eV window**, $T_W=3.27607790$ eV and $L_W=0.45387207$ eV give $T_W/L_W=7.21806448$. Since $T\ge T_W$ and $L\ge T/\sqrt{\epsilon_s}$,
 $$
  L-L_W\ge T_W/\sqrt{\epsilon_s}-L_W=2.08836006\ {\rm eV},\qquad
  (L-L_W)/L\ge1-L_W\sqrt{\epsilon_s}/T_W=0.8214671.

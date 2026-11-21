@@ -26,3 +26,50 @@
 **HYPOTHESIS / anion falsifier.** The same 2024 theoretical EA gives z₀ = 4.96/0.446 = 11.12108, Γ₀ = 0.83500, outside; the input boxes give z₀ = [10.76586,11.51724]. A future measured EA above 5.01/w = 0.85958 eV throughout its uncertainty box would explicitly falsify the outside call over the measured IE₁ interval. EA below 4.92/w = 0.84414 eV, if a bound anion is demonstrated, would establish outside. The theory-based anion and the charge-exchange lower bound occupy distinct evidence columns. The 2026 neutral-Lr spectral search covered about 1,500 cm⁻¹ without a confirmed transition in the scanned ranges; that finite null observation supplies neither limit here. [Coupled cluster calculation, 2024](https://doi.org/10.1103/PhysRevA.110.022817) · [Range of neutral spectroscopy search, 2026, §6](https://doi.org/10.1140/epjd/s10053-026-01198-9).
 
 **Mainstream-blend watch.** The electronic state sequence of Lr and a measurement of one valence removal carry no information by themselves about the locations of high-charge core-opening thresholds. These four single-atom measurements constrain four separate neutral starts. A country, facility or common technique cannot supply an absent second energy. Each future crossing should name both energy sources, their charge states and whether the result is an interval, theory value or threshold bound.
+
+## Executable arithmetic check
+
+Run this Python block from the repository root. It verifies the archived file digest, reads the two archive thresholds directly and prints the surface-minus-archive energy differences. The primary experimental and theory comparison inputs below are decimal strings from the cited tables.
+
+```python
+import gzip, hashlib, json
+from decimal import Decimal as D
+from pathlib import Path
+
+src = Path("data/element_thresholds_20261011.json.gz")
+assert hashlib.sha256(src.read_bytes()).hexdigest() == "75e67478d9a22ef85fa2d3f6ac36ad2860c6f8f62215127c558438a2cb53f62c"
+records = json.loads(gzip.decompress(src.read_bytes()), parse_float=D)["records"]
+by_symbol = {row["symbol"]: row["thresholds"] for row in records}
+surface = {
+    "Fm": ("6.52", "0.13", "0.13"), "Md": ("6.59", "0.13", "0.13"),
+    "No": ("6.62", "0.07", "0.06"), "Lr": ("4.96", "0.04", "0.05"),
+}
+last_bounds = None
+for name, (centre, lower, upper) in surface.items():
+    centre, lower, upper = map(D, (centre, lower, upper))
+    lo, hi = centre - lower, centre + upper
+    first, second = by_symbol[name][:2]
+    assert (first["q"], second["q"]) == (0, 1)
+    print(name, first["IE_eV"], first["grade"], second["IE_eV"], second["grade"],
+          "IE1 surface-archive eV", centre - first["IE_eV"])
+    if last_bounds:
+        print("surface IE1 difference box eV", lo-last_bounds[1], hi-last_bounds[0])
+    last_bounds = lo, hi
+
+def readout(numerator, denominator):
+    z = D(numerator) / D(denominator)
+    return z, (z-1)/(z+1)
+
+for name, a, b in (
+    ("reaction nominal boundary", "13.3", "4.96"),
+    ("conservative reaction and IE1 bound", "13.0", "5.01"),
+    ("coupled-cluster IE2 ordinary", "14.627", "4.96"),
+    ("archived IE2 ordinary", by_symbol["Lr"][1]["IE_eV"], by_symbol["Lr"][0]["IE_eV"]),
+    ("coupled-cluster EA anion", "4.96", "0.446"),
+):
+    z, gamma = readout(a, b)
+    print(name, f"z={z:.8f} Gamma={gamma:.8f}")
+w = 3 + 2*D(2).sqrt()
+print("IE2 wall limits eV", *(D(x)*w for x in ("4.92","4.96","5.01")))
+print("EA wall limits eV", *(D(x)/w for x in ("4.92","4.96","5.01")))
+```

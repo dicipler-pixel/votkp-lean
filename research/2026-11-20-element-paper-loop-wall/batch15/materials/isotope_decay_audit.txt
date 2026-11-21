@@ -8,3 +8,6 @@ Direct mass + 46 remaining threshold pairs, eV: 72761.01 width 1184.69 box 71576
 Daughter free-electron comparator, eV: -12853.41 width 1184.84
 Excited Os: bare parent, K capture, eV: 63005.010 width 1203.690
 Excited Os: neutral parent, continuum, eV: -7285.100 width 20.300
+192Os electronic 2s–1s comparator, eV: 63726.903282878604590
+Ground-nuclear 2s comparator, eV: 9034.106717121395410 box 7849.253448733661735 10218.959985509128725
+First-excited-nuclear 2s comparator, eV: -721.893282878604590 box -1925.746551266338265 481.959985509128725
