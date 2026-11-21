@@ -1,0 +1,6 @@
+element_one,element_two,core_electrons,margin_at_90_deg,lower_contact_deg,upper_contact_deg,upper_contact_minus_90_deg
+Carbon,Nitrogen,2,0.003093338,1.51888748,89.82270223,-0.17729777
+Sodium,Magnesium,10,0.114273066,10.34675287,83.32934815,-6.67065185
+Potassium,Calcium,18,-0.037822019,10.89304762,92.20735101,+2.20735101
+Rubidium,Strontium,36,-0.111436975,11.05028490,96.51954390,+6.51954390
+Cesium,Barium,54,-0.175248016,11.10135076,100.28762842,+10.28762842

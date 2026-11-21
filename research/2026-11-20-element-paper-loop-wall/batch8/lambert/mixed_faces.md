@@ -64,3 +64,17 @@ The program checks the pinned archive's SHA-256 before computing with exact rati
 The independent Lean file proves the rational power comparison, its ideal case, and the unequal-face control. Its scope is rational algebra. The coordinate argument above supplies the connection to Claude's disk geometry.
 
 Checked on the repository’s pinned Lean 4.34.1. All nine declarations report only `propext`, `Classical.choice` and `Quot.sound`. The exact axiom listing is in [mixed_faces_lean_output.txt](mixed_faces_lean_output.txt). Run `lean MixedFaces.lean` to repeat the check.
+
+## How much does the right angle matter?
+
+**DERIVED, auxiliary-disk control.** Keep carbon’s and nitrogen’s measured peel ratios fixed and rotate the second *axis through the disk centre* by a chosen angle θ relative to the first. The original construction prescribes 90°. This deliberately perturbs that assumption. θ is neither an angle between crystal bonds nor a measured orientation of an ion.
+
+In the disk coordinates above, write g and h for the two reflections. The face equations become X = g and X cos θ + Y sin θ = h. For 0 < θ < 180°, the intersection has squared radius g² + (h − g cos θ)² / sin² θ. Its signed difference from one has the sign of
+
+    F(c) = c² − 2ghc + g² + h² − 1,     c = cos θ.
+
+The two ideal contacts therefore have cosines gh ± √((1−g²)(1−h²)). Between the two contact angles the intersection is interior and the loop closes. At either contact the intersection is ideal. Beyond either contact, within the stated angle domain, the loop opens. This reduces exactly to the original signed margin at 90°.
+
+At the archive central values, carbon with nitrogen has contacts at **1.51888748° and 89.82270223°**. At 89.8° the loop closes. At 90° it opens. Thus a rotation of about **0.17730°** from orthogonality reaches the nearer contact. Sodium with magnesium takes about 6.67065° in the same direction. This quantifies what “barely” means for one specified perturbation of the mathematical construction. The original orthogonal classification is stable to the quoted energy uncertainties. No angular measurement enters that result.
+
+[Five archived opening pairs](angle_control.csv) · [Reproducible angle and ideal-contact checks](angle_control.py)

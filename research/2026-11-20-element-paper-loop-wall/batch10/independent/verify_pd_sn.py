@@ -96,7 +96,7 @@ def main():
     print(f"Matches to standalone public ASD snapshot: {len(public)} energies, uncertainty "
           "fields (including blanks), classes and reference strings in each category.")
     print(f"Reparsed {len(rows)} rows. All 240 stored ionization energies, 4 numeric affinities, one unbound record, "
-          "source/value pairs, 235 ordinary outgoing pairs, 4 anion pairs and 5 terminal "
+          "235 ordinary outgoing pairs, 4 anion pairs and 5 terminal "
           "blanks agree. Differences: none.")
     print("Outside at central inputs: " + str(outside))
     print("Ladder SHA-256 " + hashlib.sha256(args.ladder_csv.read_bytes()).hexdigest())

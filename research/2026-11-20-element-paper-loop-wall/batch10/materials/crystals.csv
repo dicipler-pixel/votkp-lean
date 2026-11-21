@@ -1,0 +1,32 @@
+element,COD,reference_year,space_group,a_A,b_A,c_A,alpha_deg,beta_deg,gamma_deg,sites_in_CIF_cell,shortest_A,next_shell_A,temperature_K_if_reported,pressure_kPa_if_reported,source_title_and_conditions,asymmetric_site_occupancies
+Ag,1509145,1979,P 63/m m c,2.93,2.93,4.79,90.0,90.0,120.0,2,2.93,2.932079,,,Native silver and its new structural modifications,1
+Ag,1509146,1954,F m -3 m,4.071,4.071,4.071,90.0,90.0,90.0,4,2.878632,4.071,,,A low-temperature X-ray camera,1
+Ag,1509194,1979,P 63/m m c,2.8862,2.8862,10.0,90.0,90.0,120.0,4,2.8862,3.004357,,,Native silver and its new structural modifications,1 1
+Ag,9008459,1963,F m -3 m,4.0862,4.0862,4.0862,90.0,90.0,90.0,4,2.88938,4.0862,,,"Second edition. Interscience Publishers, New York, New York Cubic closest packed, ccp, structure",1
+Ag,9012431,1935,F m -3 m,4.0778,4.0778,4.0778,90.0,90.0,90.0,4,2.88344,4.0778,298.15,,Precision determination of lattice constants Sample: at T = 25 C Note: lattice parameter is average of 1 sample,1
+Ag,9013045,1988,F m -3 m,4.086,4.086,4.086,90.0,90.0,90.0,4,2.889238,4.086,293,,High-temperature thermal expansion of six metallic elements measured by dilatation method and X-ray diffraction Sample: at T = 293 K,1
+Ag,9013046,1988,F m -3 m,4.109,4.109,4.109,90.0,90.0,90.0,4,2.905502,4.109,576,,High-temperature thermal expansion of six metallic elements measured by dilatation method and X-ray diffraction Sample: at T = 576 K,1
+Ag,9013047,1988,F m -3 m,4.117,4.117,4.117,90.0,90.0,90.0,4,2.911159,4.117,671,,High-temperature thermal expansion of six metallic elements measured by dilatation method and X-ray diffraction Sample: at T = 671 K,1
+Ag,9013048,1988,F m -3 m,4.126,4.126,4.126,90.0,90.0,90.0,4,2.917523,4.126,774,,High-temperature thermal expansion of six metallic elements measured by dilatation method and X-ray diffraction Sample: at T = 774 K,1
+Ag,9013049,1988,F m -3 m,4.135,4.135,4.135,90.0,90.0,90.0,4,2.923887,4.135,875,,High-temperature thermal expansion of six metallic elements measured by dilatation method and X-ray diffraction Sample: at T = 875 K,1
+Ag,9013050,1988,F m -3 m,4.144,4.144,4.144,90.0,90.0,90.0,4,2.930251,4.144,975,,High-temperature thermal expansion of six metallic elements measured by dilatation method and X-ray diffraction Sample: at T = 975 K,1
+Ag,9013051,1988,F m -3 m,4.155,4.155,4.155,90.0,90.0,90.0,4,2.938029,4.155,1076,,High-temperature thermal expansion of six metallic elements measured by dilatation method and X-ray diffraction Sample: at T = 1076 K,1
+Ag,9013052,1988,F m -3 m,4.166,4.166,4.166,90.0,90.0,90.0,4,2.945807,4.166,1174,,High-temperature thermal expansion of six metallic elements measured by dilatation method and X-ray diffraction Sample: at T = 1174 K,1
+Ag,9013053,1988,F m -3 m,4.172,4.172,4.172,90.0,90.0,90.0,4,2.950049,4.172,1228,,High-temperature thermal expansion of six metallic elements measured by dilatation method and X-ray diffraction Sample: at T = 1228 K,1
+Cd,9008490,1963,P 63/m m c,2.97887,2.97887,5.61765,90.0,90.0,120.0,2,2.97887,3.293528,,,"Second edition. Interscience Publishers, New York, New York Hexagonal closest packed, hcp, structure",1
+Cd,9012436,1935,P 63/m m c,2.9731,2.9731,5.6069,90.0,90.0,120.0,2,2.9731,3.287205,298.15,,Precision determination of lattice constants Sample: at T = 25 C Note: lattice parameter is average of two samples,1
+In,1538014,1990,I 4/m m m,3.2542,3.2542,4.9542,90.0,90.0,90.0,2,3.2542,3.380966,,,The elastic behavior of indium under pressure and with temperature uo to the melting point,1
+In,1539140,1991,I 4/m m m,2.7889,2.7889,4.293,90.0,90.0,90.0,2,2.7889,2.914866,,,Effect of pressure on the lattice distortion of indium to 56 Gpa,1
+In,9017521,1964,I 4/m m m,3.253,3.253,4.9455,90.0,90.0,90.0,2,3.253,3.377203,,,Anisotropic thermal expansion of indium Sample: 99.9999% indium Note: converted from kx units,1
+In,9017522,1964,I 4/m m m,3.2521,3.2521,4.9479,90.0,90.0,90.0,2,3.2521,3.377648,,,Anisotropic thermal expansion of indium Sample: 99.999% indium Note: converted from kx units,1
+In,9017523,1964,I 4/m m m,3.2523,3.2523,4.9479,90.0,90.0,90.0,2,3.2523,3.377744,,,Anisotropic thermal expansion of indium Sample: 99.97% indium Note: converted from kx units,1
+Pd,1011106,1926,F m -3 m,3.881,3.881,3.881,90.0,90.0,90.0,4,2.744281,3.881,,,"Die Gitterkonstanten des Platinmetalle, Silber und Gold",1
+Pd,1011112,1925,F m -3 m,3.867,3.867,3.867,90.0,90.0,90.0,4,2.734382,3.867,,,Precission measurements of the lattice constants of 12 common metals,1
+Pd,2002851,1976,P -3 m 1,2.779,2.779,6.806,90.0,90.0,120.0,5,,,,,Eine neue durch oxidspuren stabilisierte form des palladiums,1 0.185 0.165
+Pd,9008478,1963,F m -3 m,3.8898,3.8898,3.8898,90.0,90.0,90.0,4,2.750504,3.8898,,,"Second edition. Interscience Publishers, New York, New York Cubic closest packed, ccp, structure",1
+Pd,9012962,1933,F m -3 m,3.8824,3.8824,3.8824,90.0,90.0,90.0,4,2.745271,3.8824,291.15,,Precision measurements of crystal parameters Sample: at T = 18 C Note: lattice parameter is mean value of 4 radiation types,1
+Sn,7222459,2015,F d -3 m :1,6.467,6.4665284,6.4665284,90.0,90.0,90.0,8,2.800157,4.572526,,,In situ X-ray diffraction study on the formation of α-Sn in nanocrystalline Sn-based electrodes for lithium-ion batteries,1
+Sn,7222460,2015,I 41/a m d :1,5.8393,5.8392763,3.1876,90.0,90.0,90.0,4,3.02644,3.026451,,,In situ X-ray diffraction study on the formation of α-Sn in nanocrystalline Sn-based electrodes for lithium-ion batteries,1
+Sn,9008568,1963,F d -3 m :1,6.4912,6.4912,6.4912,90.0,90.0,90.0,8,2.810772,4.589972,,,"Second edition. Interscience Publishers, New York, New York",1
+Sn,9008570,1963,I 41/a m d :1,5.8197,5.8197,3.17488,90.0,90.0,90.0,4,3.01616,3.17488,,,"Second edition. Interscience Publishers, New York, New York Sample known as white tin",1
+Sn,9012005,1949,I 41/a m d :1,5.83146,5.83146,3.18129,90.0,90.0,90.0,4,3.022254,3.18129,298.15,,The precision determination of lattice constants by the powder and rotation crystal methods and applications Locality: synthetic Sample: at T = 25 C,1

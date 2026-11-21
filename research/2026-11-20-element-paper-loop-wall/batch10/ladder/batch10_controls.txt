@@ -1,0 +1,14 @@
+Palladium helium-like energy minus bare one-electron energy: -13.614648 eV, input ±0.014000 eV
+Silver helium-like energy minus bare one-electron energy: 42.337891 eV, input ±0.015000 eV
+Cadmium helium-like energy minus bare one-electron energy: 103.553045 eV, input ±0.017000 eV
+Indium helium-like energy minus bare one-electron energy: 170.323812 eV, input ±0.019000 eV
+Tin helium-like energy minus bare one-electron energy: 242.915193 eV, input ±0.022000 eV
+Filled 4d opening: all four adjacent endpoint intervals are strictly descending; palladium uses rung 0.
+Ruthenium filled 3d: 1.780731 [1.772286, 1.789180]; straddles bare 16/9.
+Rhodium filled 3d: 1.776570 [1.768763, 1.784383]; straddles bare 16/9.
+Palladium filled 3d: 1.770492 [1.763356, 1.777632]; below bare 16/9.
+Silver filled 3d: 1.766926 [1.758378, 1.775479]; below bare 16/9.
+Cadmium filled 3d: 1.763123 [1.755253, 1.770997]; below bare 16/9.
+Indium filled 3d: 1.757727 [1.750396, 1.765063]; below bare 16/9.
+Tin filled 3d: 1.754495 [1.747670, 1.761326]; below bare 16/9.
+Silver anion remains inside at its largest possible forward ratio from the quoted endpoints.
