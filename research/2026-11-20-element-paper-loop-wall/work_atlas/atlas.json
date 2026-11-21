@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21 22:39 UTC",
+ "updated": "2026-11-21 22:41 UTC",
  "repos": [
   {
    "repo": "votkp-lean",
@@ -510,7 +510,7 @@
   {
    "repo": "votkp-lean",
    "branch": "element-paper/loop-wall",
-   "sha": "15503e09b7",
+   "sha": "2b8ea372c7",
    "lean_files": 115,
    "declarations": 1818,
    "theorems": 1190,
@@ -525,6 +525,17 @@
    "lean_files": 64,
    "declarations": 917,
    "theorems": 597,
+   "sorry_or_admit": 0,
+   "open_statement_templates": 0,
+   "axioms": []
+  },
+  {
+   "repo": "votkp-lean",
+   "branch": "lg2-3-gaps",
+   "sha": "7cd4c4e63a",
+   "lean_files": 60,
+   "declarations": 613,
+   "theorems": 379,
    "sorry_or_admit": 0,
    "open_statement_templates": 0,
    "axioms": []
@@ -2772,6 +2783,2282 @@
    }
   },
   {
+   "id": "two-trees.smith-tanh",
+   "title": "Smith coordinate is tanh of half the rapidity",
+   "statement": "For z = e^τ, Γ(z) = (z − 1)/(z + 1) = tanh(τ/2). With h = ½ ln z this is Γ = tanh h, the coordinate the loop wall is written in. Restated from VOTKP Theorem 8.1 and proved in the paper; not in the Two Trees Lean (core Lean has no tanh). The Mathlib draft TwoTrees.Smith.smith_identity is listed in Appendix A.4 as written but not built.",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§2, Theorem 2.2"
+   },
+   "lean": null,
+   "grade": "DERIVED-IN-PAPER",
+   "tags": [
+    "peel-coordinate",
+    "wall-coordinate"
+   ],
+   "links": [
+    {
+     "to": "wall.definition",
+     "kind": "same-formula",
+     "note": "Γ = tanh h with h = ½ ln z is the wall's own coordinate"
+    },
+    {
+     "to": "external:VOTKP (What Survives the Peel) Theorem 8.1",
+     "kind": "uses"
+    }
+   ],
+   "_file": "two_trees.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "two-trees.einstein-addition",
+   "title": "Peel steps compose by Einstein addition",
+   "statement": "Γ(A) ⊕ Γ(B) = Γ(AB) for A, B ≥ 0, with x ⊕ y = (x + y)/(1 + xy): multiplying ratios adds rapidities.",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§2, Theorem 2.3"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/votkp-lean",
+    "branch": "main",
+    "file": "two-trees/lean/PeelTrees.lean",
+    "theorem": "gam_mul"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "peel-coordinate"
+   ],
+   "links": [
+    {
+     "to": "external:VOTKP (What Survives the Peel) Theorem 15.1",
+     "kind": "uses"
+    }
+   ],
+   "_file": "two_trees.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "votkp-lean@main",
+    "file": "two-trees/lean/PeelTrees.lean",
+    "line": 115,
+    "name": "PeelTrees.gam_mul"
+   }
+  },
+  {
+   "id": "two-trees.hyperbolic-length",
+   "title": "A peel ratio z is a hyperbolic length ln z",
+   "statement": "On the Poincaré disk the distance from 0 to Γ(z) is 2 artanh Γ(z) = ln z. Proved in the paper from Theorem 2.2; a Mathlib version (TwoTrees.Smith.dist_I_vert) is drafted, not built.",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§2, Corollary 2.4"
+   },
+   "lean": null,
+   "grade": "DERIVED-IN-PAPER",
+   "tags": [
+    "peel-coordinate"
+   ],
+   "links": [
+    {
+     "to": "external:VOTKP (What Survives the Peel) Corollary 15.2",
+     "kind": "uses"
+    }
+   ],
+   "_file": "two_trees.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "two-trees.norm-ladder",
+   "title": "The norm ladder is the peel ladder",
+   "statement": "L copies of 2/3 combined by ⊕ give Γ_L = (5^L − 1)/(5^L + 1) and d(0, Γ_L) = L ln 5, for every L (induction on L).",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§2, Theorem 2.5"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/votkp-lean",
+    "branch": "main",
+    "file": "two-trees/lean/PeelTrees.lean",
+    "theorem": "peel_ladder"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "peel-coordinate",
+    "garrett-tree"
+   ],
+   "links": [
+    {
+     "to": "two-trees.einstein-addition",
+     "kind": "uses"
+    },
+    {
+     "to": "two-trees.euler-four-square",
+     "kind": "uses"
+    }
+   ],
+   "_file": "two_trees.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "votkp-lean@main",
+    "file": "two-trees/lean/PeelTrees.lean",
+    "line": 138,
+    "name": "PeelTrees.peel_ladder"
+   }
+  },
+  {
+   "id": "two-trees.boost-entries",
+   "title": "Boost entries from the Smith step",
+   "statement": "cosh ln z = (1 + Γ²)/(1 − Γ²) = (z² + 1)/(2z) and sinh ln z = 2Γ/(1 − Γ²) = (z² − 1)/(2z), for rational z > 0 (also Lean: sinh_from_gam). z = 5 gives 13/5 and 12/5; z = 7 gives 25/7 and 24/7, so z times a boost has integer entries.",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§2, Theorem 2.6"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/votkp-lean",
+    "branch": "main",
+    "file": "two-trees/lean/PeelTrees.lean",
+    "theorem": "cosh_from_gam"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "peel-coordinate",
+    "boost"
+   ],
+   "links": [
+    {
+     "to": "wall.sinh-form",
+     "kind": "same-formula",
+     "note": "at the wall Γ² = ½ these give cosh ln z = 3 and sinh ln z = 2√2 (arithmetic from the formula; the paper does not evaluate it there)"
+    }
+   ],
+   "_file": "two_trees.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "votkp-lean@main",
+    "file": "two-trees/lean/PeelTrees.lean",
+    "line": 147,
+    "name": "PeelTrees.cosh_from_gam"
+   }
+  },
+  {
+   "id": "two-trees.euler-four-square",
+   "title": "Euler's four-square identity",
+   "statement": "The quaternion norm is multiplicative, so a word of L generators of norm 5 has norm 5^L.",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§2 (after Theorem 2.5)"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/votkp-lean",
+    "branch": "main",
+    "file": "two-trees/lean/PeelTrees.lean",
+    "theorem": "norm_mul"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "quaternion",
+    "garrett-tree"
+   ],
+   "links": [],
+   "_file": "two_trees.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "votkp-lean@main",
+    "file": "two-trees/lean/PeelTrees.lean",
+    "line": 41,
+    "name": "PeelTrees.norm_mul"
+   }
+  },
+  {
+   "id": "two-trees.double-step",
+   "title": "Smith double step",
+   "statement": "Γ ⊕ Γ = 2Γ/(1 + Γ²), and 2/3 ⊕ 2/3 = 12/13 = Γ(25): two norm-5 steps make one step of ratio 25 (also Lean: oplus_self). Used for the squared steps of §5.3.",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§5.3 and Appendix A.2"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/votkp-lean",
+    "branch": "main",
+    "file": "two-trees/lean/PeelTrees2.lean",
+    "theorem": "oplus_two_thirds"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "peel-coordinate"
+   ],
+   "links": [
+    {
+     "to": "two-trees.squared-steps-schottky",
+     "kind": "uses"
+    }
+   ],
+   "_file": "two_trees.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "votkp-lean@main",
+    "file": "two-trees/lean/PeelTrees2.lean",
+    "line": 548,
+    "name": "PeelTrees2.oplus_two_thirds"
+   }
+  },
+  {
+   "id": "two-trees.norm5-count",
+   "title": "Exactly 48 integer quaternions of norm 5",
+   "statement": "Every coordinate of a norm-5 quaternion lies in [−2, 2] (Lean: norm5_bound); the kernel checks the 625-point box and finds 48 of norm 5.",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§3, Proposition 3.1(1)"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/votkp-lean",
+    "branch": "main",
+    "file": "two-trees/lean/PeelTrees.lean",
+    "theorem": "norm5_count"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "quaternion",
+    "garrett-tree"
+   ],
+   "links": [],
+   "_file": "two_trees.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "votkp-lean@main",
+    "file": "two-trees/lean/PeelTrees.lean",
+    "line": 83,
+    "name": "PeelTrees.norm5_count"
+   }
+  },
+  {
+   "id": "two-trees.garrett-six",
+   "title": "Garrett's six generators are the LPS-normalised six",
+   "statement": "Of the 48, exactly six have a odd and positive with b, c, d even: 1 ± 2i, 1 ± 2j, 1 ± 2k (p + 1 = 6).",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§3, Proposition 3.1(2)"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/votkp-lean",
+    "branch": "main",
+    "file": "two-trees/lean/PeelTrees.lean",
+    "theorem": "lps_six"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "quaternion",
+    "garrett-tree"
+   ],
+   "links": [],
+   "_file": "two_trees.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "votkp-lean@main",
+    "file": "two-trees/lean/PeelTrees.lean",
+    "line": 87,
+    "name": "PeelTrees.lps_six"
+   }
+  },
+  {
+   "id": "two-trees.conjugate-step",
+   "title": "The backward step is the conjugate",
+   "statement": "Each generator times its conjugate is 5, and the conjugate of a generator is again a generator (also Lean: gens_conj_mem).",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§3, Proposition 3.1(3)"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/votkp-lean",
+    "branch": "main",
+    "file": "two-trees/lean/PeelTrees.lean",
+    "theorem": "gens_conj"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "quaternion",
+    "garrett-tree"
+   ],
+   "links": [],
+   "_file": "two_trees.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "votkp-lean@main",
+    "file": "two-trees/lean/PeelTrees.lean",
+    "line": 50,
+    "name": "PeelTrees.gens_conj"
+   }
+  },
+  {
+   "id": "two-trees.lps-unique-words",
+   "title": "Lubotzky–Phillips–Sarnak: the norm-5 Cayley graph is the 6-regular tree",
+   "statement": "Every quaternion of norm 5^L with a odd, b, c, d even and not divisible by 5 is ± exactly one reduced word; the group modulo ±1 is free on three generators. Holds only after the normalisation and up to ±5^r (2 + i also has norm 5).",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§3"
+   },
+   "lean": null,
+   "grade": "RECOGNISED (prior art)",
+   "tags": [
+    "quaternion",
+    "garrett-tree",
+    "free-group"
+   ],
+   "links": [
+    {
+     "to": "external:Lubotzky, Phillips, Sarnak, Ramanujan graphs (1988)",
+     "kind": "uses"
+    }
+   ],
+   "_file": "two_trees.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "two-trees.qwords-three",
+   "title": "Length-3 check of the LPS uniqueness",
+   "statement": "The 150 reduced quaternion words of length 3 give 150 different quaternions up to sign (also Lean: qwords_three_count, qwords_three_primitive: none divisible by 5).",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§3"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/votkp-lean",
+    "branch": "main",
+    "file": "two-trees/lean/PeelTrees.lean",
+    "theorem": "qwords_three_distinct"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "quaternion",
+    "garrett-tree"
+   ],
+   "links": [
+    {
+     "to": "two-trees.lps-unique-words",
+     "kind": "special-case"
+    }
+   ],
+   "_file": "two_trees.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "votkp-lean@main",
+    "file": "two-trees/lean/PeelTrees.lean",
+    "line": 101,
+    "name": "PeelTrees.qwords_three_distinct"
+   }
+  },
+  {
+   "id": "two-trees.lorentz-boosts",
+   "title": "Each step is a Lorentz boost and the step back is its inverse",
+   "statement": "For z = 5 and 7 and all six directions, B_uᵀ η B_u = η, B_u B_−u = I and B_u is symmetric (on z·B with integer entries; also Lean: lorentz7, inverse5, inverse7, boost5_symm).",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§4.1, Theorem 4.2"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/votkp-lean",
+    "branch": "main",
+    "file": "two-trees/lean/PeelTrees.lean",
+    "theorem": "lorentz5"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "boost",
+    "garrett-tree"
+   ],
+   "links": [],
+   "_file": "two_trees.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "votkp-lean@main",
+    "file": "two-trees/lean/PeelTrees.lean",
+    "line": 238,
+    "name": "PeelTrees.lorentz5"
+   }
+  },
+  {
+   "id": "two-trees.lorentz-general",
+   "title": "Lorentz and inverse for every integer ratio",
+   "statement": "With Q_u = 2z B_u: Q_uᵀ η Q_u = (2z)² η and Q_u Q_−u = (2z)² I for every integer z (also Lean: Q_inverse).",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§5.1 and Appendix A.2"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/votkp-lean",
+    "branch": "main",
+    "file": "two-trees/lean/PeelTrees2.lean",
+    "theorem": "Q_lorentz"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "boost"
+   ],
+   "links": [
+    {
+     "to": "two-trees.lorentz-boosts",
+     "kind": "generalises"
+    }
+   ],
+   "_file": "two_trees.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "votkp-lean@main",
+    "file": "two-trees/lean/PeelTrees2.lean",
+    "line": 160,
+    "name": "PeelTrees2.Q_lorentz"
+   }
+  },
+  {
+   "id": "two-trees.two-step-cosine",
+   "title": "Two steps: hyperbolic law of cosines",
+   "statement": "If the second step makes angle φ with the first, cosh d = cosh² r + sinh² r cos φ: straight gives cosh 2r, a right angle gives cosh² r, a reversal gives 1.",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§4.2, Theorem 4.3"
+   },
+   "lean": null,
+   "grade": "DERIVED-IN-PAPER",
+   "tags": [
+    "boost",
+    "garrett-tree"
+   ],
+   "links": [
+    {
+     "to": "external:hyperbolic law of cosines",
+     "kind": "uses",
+     "note": "recognised"
+    }
+   ],
+   "_file": "two_trees.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "two-trees.right-turn-5",
+   "title": "One right-angle turn at ratio 5",
+   "statement": "The word +i +j reaches the point with 25 cosh d = 169, so cosh d = cosh²(ln 5) = 169/25 (hyperbolic Pythagoras).",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§4.2 (Theorem 4.3, φ = 90°)"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/votkp-lean",
+    "branch": "main",
+    "file": "two-trees/lean/PeelTrees.lean",
+    "theorem": "turn5"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "garrett-tree"
+   ],
+   "links": [
+    {
+     "to": "two-trees.two-step-cosine",
+     "kind": "special-case"
+    }
+   ],
+   "_file": "two_trees.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "votkp-lean@main",
+    "file": "two-trees/lean/PeelTrees.lean",
+    "line": 258,
+    "name": "PeelTrees.turn5"
+   }
+  },
+  {
+   "id": "two-trees.exact-points-5",
+   "title": "Exact points of the ratio-5 tree",
+   "statement": "125 × point: +i+i+i → (7813, 7812, 0, 0), cosh d = (5³ + 5⁻³)/2, d = 3 ln 5 (Lean: straight5, straight5_is_three_ln5); +i+i+j → (4069, 4056, 300, 0); +i+j+i → (2917, 2808, 780, 0); +i+j+k → (2197, 2028, 780, 300) = (13/5)³. Decimals computed.",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§4.2, Theorem 4.4"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/votkp-lean",
+    "branch": "main",
+    "file": "two-trees/lean/PeelTrees.lean",
+    "theorem": "turned5"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "garrett-tree"
+   ],
+   "links": [],
+   "_file": "two_trees.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "votkp-lean@main",
+    "file": "two-trees/lean/PeelTrees.lean",
+    "line": 260,
+    "name": "PeelTrees.turned5"
+   }
+  },
+  {
+   "id": "two-trees.straight-farthest",
+   "title": "The straight path is the farthest",
+   "statement": "Among all 150 reduced words of length 3, 125 cosh d ≤ 7813 with equality exactly for the six straight paths: turning always shortens.",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§4.2, Theorem 4.5"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/votkp-lean",
+    "branch": "main",
+    "file": "two-trees/lean/PeelTrees.lean",
+    "theorem": "straight_farthest5"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "garrett-tree"
+   ],
+   "links": [],
+   "_file": "two_trees.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "votkp-lean@main",
+    "file": "two-trees/lean/PeelTrees.lean",
+    "line": 278,
+    "name": "PeelTrees.straight_farthest5"
+   }
+  },
+  {
+   "id": "two-trees.garrett-caption",
+   "title": "Garrett's caption numbers, exactly",
+   "statement": "At ratio 7 (Γ = 3/4): 343 × point for +i+i+i is (58825, 58824, 0, 0), d = 3 ln 7 = 5.837730 (caption 5.838); +i+j+i is (19657, 19200, 4200, 0), d = 4.741529 (caption 4.742). Points in Lean, decimals computed. Six branches at ln 7 is a drawing choice: the LPS tree for 7 branches eight ways.",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§4.3"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/votkp-lean",
+    "branch": "main",
+    "file": "two-trees/lean/PeelTrees.lean",
+    "theorem": "garrett7"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "garrett-tree"
+   ],
+   "links": [],
+   "_file": "two_trees.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "votkp-lean@main",
+    "file": "two-trees/lean/PeelTrees.lean",
+    "line": 264,
+    "name": "PeelTrees.garrett7"
+   }
+  },
+  {
+   "id": "two-trees.thomas-exact-5-7",
+   "title": "Two perpendicular boosts leave a Thomas rotation (ratios 5 and 7)",
+   "statement": "B_i B_j = L R with L a pure boost and R a rotation about k: ratio 5, cos θ = 65/97, sin θ = 72/97 (θ = 47.925°); ratio 7, cos θ = 175/337, sin θ = 288/337. B_i B_j is not symmetric, so not a boost (also Lean: thomas5_boost, thomas5_rotation, two_boosts_not_boost5, thomas7, thomas7_boost, thomas7_rotation, two_boosts_not_boost7).",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§4.4, Theorem 4.6"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/votkp-lean",
+    "branch": "main",
+    "file": "two-trees/lean/PeelTrees.lean",
+    "theorem": "thomas5"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "thomas-rotation",
+    "boost"
+   ],
+   "links": [],
+   "_file": "two_trees.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "votkp-lean@main",
+    "file": "two-trees/lean/PeelTrees.lean",
+    "line": 285,
+    "name": "PeelTrees.thomas5"
+   }
+  },
+  {
+   "id": "two-trees.thomas-half-angle",
+   "title": "Thomas half-angle is the square of the Smith step",
+   "statement": "For two perpendicular steps of equal rapidity r: cos θ = 2γ/(1 + γ²), sin θ = (γ² − 1)/(γ² + 1), tan(θ/2) = Γ² with Γ = tanh(r/2). In Lean for every rational ratio z > 0: B_i B_j = L R with R written in t = Γ(z)² (thomas_rat), and sin/(1 + cos) = t (thomas_half_angle_t); also thomas_general, thomas_boost_general, thomas_rotation_general, thomas_cos, thomas_sin, and the numeric thomas_half_angle (4/9 at ratio 5, 9/16 at ratio 7). Formula recognised (Rhodes–Semon Eq. 142b; Ungar's gyration). The paper does not evaluate it at the wall; there Γ² = ½ gives tan(θ/2) = ½, cos θ = 3/5, sin θ = 4/5, the (3, 4, 5) triple (checked symbolically for this hub).",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§4.4, Theorem 4.7"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/votkp-lean",
+    "branch": "main",
+    "file": "two-trees/lean/PeelTrees2.lean",
+    "theorem": "thomas_rat"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "loop-wall",
+    "thomas-rotation",
+    "spinor-structure"
+   ],
+   "links": [
+    {
+     "to": "wall.definition",
+     "kind": "same-formula",
+     "note": "the Thomas phase is read as Γ²; at the wall it is ½"
+    },
+    {
+     "to": "speed.books",
+     "kind": "same-formula",
+     "note": "both read Γ² as the quantity that matters (E⁻/E⁺ = Γ² there; tan(θ/2) = Γ² here)"
+    },
+    {
+     "to": "external:Rhodes and Semon, Relativistic velocity space, Eq. 142b",
+     "kind": "uses",
+     "note": "recognised"
+    },
+    {
+     "to": "external:VOTKP §15.2 (order matters only through a phase)",
+     "kind": "uses"
+    }
+   ],
+   "_file": "two_trees.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "votkp-lean@main",
+    "file": "two-trees/lean/PeelTrees2.lean",
+    "line": 518,
+    "name": "PeelTrees2.thomas_rat"
+   }
+  },
+  {
+   "id": "two-trees.thomas-pythagorean",
+   "title": "The Thomas turn is a Pythagorean triple",
+   "statement": "(1 − t², 2t, 1 + t²) is a Pythagorean triple over any commutative ring (integer form: thomas_triple_int). (65, 72, 97) and (175, 288, 337) lie in the tree of Pythagorean triples, whose generating matrices are in O(2,1; ℤ) (recognised, Satija).",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§4.4"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/votkp-lean",
+    "branch": "main",
+    "file": "two-trees/lean/PeelTrees2.lean",
+    "theorem": "thomas_triple"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "thomas-rotation"
+   ],
+   "links": [
+    {
+     "to": "two-trees.thomas-half-angle",
+     "kind": "uses"
+    }
+   ],
+   "_file": "two_trees.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "votkp-lean@main",
+    "file": "two-trees/lean/PeelTrees2.lean",
+    "line": 413,
+    "name": "PeelTrees2.thomas_triple"
+   }
+  },
+  {
+   "id": "two-trees.free-5-7",
+   "title": "Free of rank 3 at ratios 5 and 7, for every word length",
+   "statement": "For every non-backtracking word w of length L ≥ 1, z^L cosh d(w) ≢ 0 (mod z), z = 5 or 7. So no such word returns to the origin and none is the identity (also Lean: no_return5, free5, time_not_div7, no_return7, free7; the induction is red_mul5, closure5, walk5).",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§5.1, Theorem 5.1(a)(b)"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/votkp-lean",
+    "branch": "main",
+    "file": "two-trees/lean/PeelTrees.lean",
+    "theorem": "time_not_div5"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "free-group",
+    "garrett-tree"
+   ],
+   "links": [
+    {
+     "to": "two-trees.free-every-ratio",
+     "kind": "special-case"
+    }
+   ],
+   "_file": "two_trees.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "votkp-lean@main",
+    "file": "two-trees/lean/PeelTrees.lean",
+    "line": 382,
+    "name": "PeelTrees.time_not_div5"
+   }
+  },
+  {
+   "id": "two-trees.tree-embeds-injective",
+   "title": "The tree map into the ball is injective",
+   "statement": "Distinct reduced words land on distinct points: otherwise the free reduction of w1⁻¹w2 would return to the origin, against Theorem 5.1(a).",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§5.1, Theorem 5.1(c)"
+   },
+   "lean": null,
+   "grade": "DERIVED-IN-PAPER",
+   "tags": [
+    "garrett-tree"
+   ],
+   "links": [
+    {
+     "to": "two-trees.free-5-7",
+     "kind": "uses"
+    }
+   ],
+   "_file": "two_trees.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "two-trees.exact-search-7",
+   "title": "Exact search to length 7",
+   "statement": "All 117,186 reduced words of length up to 7 at ratios 5 and 7: no return to the origin and no relation (script PEEL-TREES-EXACT).",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§5.1"
+   },
+   "lean": null,
+   "grade": "COMPUTED",
+   "tags": [
+    "free-group",
+    "garrett-tree"
+   ],
+   "links": [],
+   "_file": "two_trees.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "two-trees.free-not-power-of-2",
+   "title": "Free of rank 3 for every whole ratio z ≥ 2 that is not a power of 2",
+   "statement": "Q_u = 2z B_u = W_u + z E_u; along a non-backtracking word Q(w) = 2^a W_first,last + z E, so (2z)^L cosh d ≡ 2^a modulo any odd divisor m > 1 of z, never 0. Holds on both sides of the wall (instances free3, free6; also Lean: word_form_general, time_mod_general, free_general, no_return_general).",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§5.1, Theorem 5.2"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/votkp-lean",
+    "branch": "main",
+    "file": "two-trees/lean/PeelTrees2.lean",
+    "theorem": "free_not_pow_two"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "loop-wall",
+    "free-group"
+   ],
+   "links": [
+    {
+     "to": "two-trees.schottky-threshold",
+     "kind": "opposite-reading",
+     "note": "freeness does not see the wall; discreteness and distance-keeping are what change at Γ² = ½"
+    },
+    {
+     "to": "two-trees.free-every-ratio",
+     "kind": "special-case"
+    }
+   ],
+   "_file": "two_trees.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "votkp-lean@main",
+    "file": "two-trees/lean/PeelTrees2.lean",
+    "line": 314,
+    "name": "PeelTrees2.free_not_pow_two"
+   }
+  },
+  {
+   "id": "two-trees.schottky-threshold",
+   "title": "Schottky exactly above the loop wall Γ² = ½",
+   "statement": "If z > 3 + 2√2 = 5.828427, equivalently Γ² > ½, the three boosts generate a Schottky group (free, discrete, every non-identity element loxodromic) and the tree's orbit map is a quasi-isometric embedding. Proof: half-spaces at distance δ about the six axes; orthogonal planes are disjoint iff δ ≥ ln(1 + √2), where the boundary circles have angular radius π/4 (45°) and touch; B_u maps the outside of the −u half-space into the +u one iff r ≥ 2 ln(1 + √2), i.e. z ≥ (1 + √2)²; Γ(3 + 2√2) = 1/√2. Ping-pong recognised; the threshold in the peel coordinate is proved in the paper. Lean holds only the two numeric inequalities at z = 5 and 7, not this theorem.",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§5.2, Theorem 5.3"
+   },
+   "lean": null,
+   "grade": "DERIVED-IN-PAPER",
+   "tags": [
+    "loop-wall",
+    "schottky",
+    "angle-45"
+   ],
+   "links": [
+    {
+     "to": "wall.definition",
+     "kind": "same-wall"
+    },
+    {
+     "to": "wall.outside-rule",
+     "kind": "same-wall",
+     "note": "z > 3 + 2√2 ⇔ Γ² > ½"
+    },
+    {
+     "to": "two-trees.schottky-5-7",
+     "kind": "special-case",
+     "note": "the only part of this in Lean"
+    },
+    {
+     "to": "two-trees.ping-pong-lemma",
+     "kind": "uses"
+    },
+    {
+     "to": "two-trees.caps-45",
+     "kind": "same-wall",
+     "note": "the 45° caps"
+    }
+   ],
+   "_file": "two_trees.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "two-trees.schottky-5-7",
+   "title": "Schottky threshold at ratios 5 and 7 (the Lean part)",
+   "statement": "Γ(5)² = 4/9 < ½ < 9/16 = Γ(7)² (Lean: schottky_five_below, schottky_seven_above), and (5 − 3)² < 8 < (7 − 3)² (Lean: schottky_ratio). These are numeric inequalities at two ratios only; no Lean statement proves the general threshold or that the group is Schottky.",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§5.2, Theorem 5.3"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/votkp-lean",
+    "branch": "main",
+    "file": "two-trees/lean/PeelTrees.lean",
+    "theorem": "schottky_seven_above"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "loop-wall",
+    "schottky"
+   ],
+   "links": [
+    {
+     "to": "wall.definition",
+     "kind": "same-wall"
+    },
+    {
+     "to": "wall.outside-rule",
+     "kind": "special-case",
+     "note": "the ratio test (z − 3)² > 8 at z = 5 and 7"
+    },
+    {
+     "to": "two-trees.schottky-threshold",
+     "kind": "special-case"
+    },
+    {
+     "to": "external:controls/Controls1.lean c1",
+     "kind": "uses",
+     "note": "false control: Lean rejects Γ(5)² > ½"
+    }
+   ],
+   "_file": "two_trees.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "votkp-lean@main",
+    "file": "two-trees/lean/PeelTrees.lean",
+    "line": 164,
+    "name": "PeelTrees.schottky_seven_above"
+   }
+  },
+  {
+   "id": "two-trees.ping-pong-lemma",
+   "title": "The ping-pong lemma, abstract",
+   "statement": "For any letter type with an inversion, any action and pairwise disjoint sets X_a with f_a(D minus X_(a⁻¹)) ⊆ X_a, every non-empty non-backtracking word sends a base point outside all X_a into X_(first letter). Depends on no axioms. Classical (Schottky, Beardon).",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§8.3 (and §5.2)"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/votkp-lean",
+    "branch": "main",
+    "file": "two-trees/lean/PingPong7.lean",
+    "theorem": "pingpong"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "schottky",
+    "free-group"
+   ],
+   "links": [
+    {
+     "to": "external:Beardon, The Geometry of Discrete Groups (1983)",
+     "kind": "uses",
+     "note": "recognised"
+    }
+   ],
+   "_file": "two_trees.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "votkp-lean@main",
+    "file": "two-trees/lean/PingPong7.lean",
+    "line": 205,
+    "name": "PingPong7.pingpong"
+   }
+  },
+  {
+   "id": "two-trees.caps-45",
+   "title": "Six 45° caps on the light cone are disjoint",
+   "statement": "Caps X_u = {future null v : comp_u v > 0, t² < 2 comp_u(v)²}, i.e. comp_u/t > 1/√2: angular radius 45° about each of ±i, ±j, ±k. The six caps are pairwise disjoint (orthogonal caps touch only at the 45° boundary, which the strict inequality excludes).",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§8.3"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/votkp-lean",
+    "branch": "main",
+    "file": "two-trees/lean/PingPong7.lean",
+    "theorem": "caps_disjoint"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "loop-wall",
+    "angle-45",
+    "schottky"
+   ],
+   "links": [
+    {
+     "to": "two-trees.schottky-threshold",
+     "kind": "same-wall",
+     "note": "the π/4 circles of the proof of Theorem 5.3"
+    },
+    {
+     "to": "two-trees.dirichlet-caps",
+     "kind": "same-wall",
+     "note": "cos α = Γ = 1/√2 gives α = 45° at the wall"
+    }
+   ],
+   "_file": "two_trees.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "votkp-lean@main",
+    "file": "two-trees/lean/PingPong7.lean",
+    "line": 97,
+    "name": "PingPong7.caps_disjoint"
+   }
+  },
+  {
+   "id": "two-trees.pingpong-inclusion-7",
+   "title": "Ping-pong inclusion at ratio 7",
+   "statement": "For every step u, 7B_u maps every future null vector outside X_−u into X_u. The one nonlinear step is closed by 432(527t² + 1200tb + 674b²) = 41040(t² − 2b²) + (432t + 600b)² + 13248b² (Lean: plane_core). Proved only for ratio 7 (Γ² = 9/16, above the wall).",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§8.3"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/votkp-lean",
+    "branch": "main",
+    "file": "two-trees/lean/PingPong7.lean",
+    "theorem": "pingpong_step"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "loop-wall",
+    "schottky"
+   ],
+   "links": [
+    {
+     "to": "two-trees.schottky-threshold",
+     "kind": "special-case",
+     "note": "the inclusion is the r ≥ 2 ln(1 + √2) condition, checked at r = ln 7"
+    },
+    {
+     "to": "two-trees.caps-45",
+     "kind": "uses"
+    }
+   ],
+   "_file": "two_trees.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "votkp-lean@main",
+    "file": "two-trees/lean/PingPong7.lean",
+    "line": 179,
+    "name": "PingPong7.pingpong_step"
+   }
+  },
+  {
+   "id": "two-trees.free-7-pingpong",
+   "title": "Freeness at ratio 7 by ping-pong",
+   "statement": "Every non-empty non-backtracking word sends p0 = (3, 1, 2, 2) into the cap of its first letter (Lean: word_in_cap), so the integer word map is not c·id for any c > 0 (Lean: word_ne_scalar) and B_w ≠ id. A second Lean route to Theorem 5.1 at ratio 7; discreteness itself is not stated in Lean.",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§8.3"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/votkp-lean",
+    "branch": "main",
+    "file": "two-trees/lean/PingPong7.lean",
+    "theorem": "word_ne_id"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "loop-wall",
+    "free-group",
+    "schottky"
+   ],
+   "links": [
+    {
+     "to": "two-trees.free-5-7",
+     "kind": "same-formula",
+     "note": "same conclusion at ratio 7 by a different proof"
+    },
+    {
+     "to": "two-trees.ping-pong-lemma",
+     "kind": "uses"
+    }
+   ],
+   "_file": "two_trees.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "votkp-lean@main",
+    "file": "two-trees/lean/PingPong7.lean",
+    "line": 251,
+    "name": "PingPong7.word_ne_id"
+   }
+  },
+  {
+   "id": "two-trees.dirichlet-caps",
+   "title": "Dirichlet caps with cos α = Γ",
+   "statement": "The v2 working report reaches the same line through the Dirichlet half-spaces of the steps, whose caps have angular radius α with cos α = Γ. At the wall Γ = 1/√2, so α = 45°, the angle of parallelism form of the wall (that evaluation is arithmetic, not written in the paper).",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§5.2 (after Theorem 5.3), citing the v2 working report"
+   },
+   "lean": null,
+   "grade": "STATED",
+   "tags": [
+    "loop-wall",
+    "angle-45"
+   ],
+   "links": [
+    {
+     "to": "two-trees.schottky-threshold",
+     "kind": "same-wall"
+    },
+    {
+     "to": "wall.definition",
+     "kind": "same-wall"
+    }
+   ],
+   "_file": "two_trees.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "two-trees.commutator-rotation-5",
+   "title": "At ratio 5 the commutator is a rotation (exact data)",
+   "statement": "c = B_i B_j B_−i B_−j fixes p = (3, 2, 2, 0) with ⟨p, p⟩ = 1 (Lean: comm5_fixes_p, comm5_p_unit); its trace is 196/625 = 2 + 2 cos φ, cos φ = −527/625 (Lean: comm5_trace, comm5_cos, comm5_half). Below the wall face.",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§5.3, Theorem 5.4"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/votkp-lean",
+    "branch": "main",
+    "file": "two-trees/lean/PeelTrees3.lean",
+    "theorem": "comm5_fixes_p"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "loop-wall",
+    "commutator"
+   ],
+   "links": [
+    {
+     "to": "two-trees.commutator-trace-wall",
+     "kind": "special-case",
+     "note": "z = 5 < 3 + 2√2, so elliptic"
+    }
+   ],
+   "_file": "two_trees.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "votkp-lean@main",
+    "file": "two-trees/lean/PeelTrees3.lean",
+    "line": 88,
+    "name": "PeelTrees3.comm5_fixes_p"
+   }
+  },
+  {
+   "id": "two-trees.not-discrete-5",
+   "title": "Free but not discrete at ratio 5",
+   "statement": "e^{iφ} is a root of x² + (1054/625)x + 1, not an algebraic integer, so not a root of unity: c is an elliptic of infinite order, and a discrete group has none. So the ln 5 group is free (Theorem 5.1) but not discrete.",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§5.3, Theorem 5.4(a)"
+   },
+   "lean": null,
+   "grade": "DERIVED-IN-PAPER",
+   "tags": [
+    "loop-wall",
+    "discreteness"
+   ],
+   "links": [
+    {
+     "to": "two-trees.commutator-rotation-5",
+     "kind": "uses"
+    },
+    {
+     "to": "two-trees.free-5-7",
+     "kind": "uses"
+    },
+    {
+     "to": "two-trees.schottky-threshold",
+     "kind": "opposite-reading",
+     "note": "the below-wall side of the same line"
+    }
+   ],
+   "_file": "two_trees.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "two-trees.not-qi-5",
+   "title": "The ratio-5 placement does not keep distances in proportion",
+   "statement": "c^n = (i j ī j̄)^n has 4n letters but d(O, c^n O) ≤ 2 d(O, p) = 3.5255 for every n (cosh d(O, p) = 3). Exact form sinh(d/2) = sinh ρ |sin(nφ/2)| checked against integer powers to n = 60 (computed).",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§5.3, Theorem 5.4(b)"
+   },
+   "lean": null,
+   "grade": "DERIVED-IN-PAPER",
+   "tags": [
+    "loop-wall",
+    "quasi-isometry"
+   ],
+   "links": [
+    {
+     "to": "two-trees.schottky-threshold",
+     "kind": "opposite-reading"
+    }
+   ],
+   "_file": "two_trees.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "two-trees.commutator-trace-wall",
+   "title": "Commutator trace crosses −2 exactly at the wall",
+   "statement": "In the plane of two perpendicular axes, tr[A, B] = 2 − 4 sinh⁴(r/2) in PSL(2, ℝ), with sinh²(r/2) = (z − 1)²/(4z). Rotation iff sinh(r/2) < 1, i.e. z < 3 + 2√2; parabolic, tr = −2, at z = 3 + 2√2; a boost above. Exact at z = 2, 3, 5, 11/2, 17/3, 6, 7, 10, 25 (z = 5: −14/25; z = 7: −226/49). With r/2 = h this is the wall in the forms tr[A,B] = −2 and sinh h = 1.",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§5.3 (after Theorem 5.4); Figure 4"
+   },
+   "lean": null,
+   "grade": "COMPUTED",
+   "tags": [
+    "loop-wall",
+    "commutator",
+    "trace-minus-two"
+   ],
+   "links": [
+    {
+     "to": "transport.trace-wall",
+     "kind": "same-formula",
+     "note": "tr W = 2 − 4 sinh²a sinh²b with a = b = r/2"
+    },
+    {
+     "to": "wall.sinh-form",
+     "kind": "same-wall",
+     "note": "sinh(r/2) = sinh h = 1"
+    },
+    {
+     "to": "wall.two-faces",
+     "kind": "special-case",
+     "note": "equal faces a = b: sinh a sinh b = 1 becomes sinh h = 1"
+    },
+    {
+     "to": "two-trees.schottky-threshold",
+     "kind": "same-wall"
+    }
+   ],
+   "_file": "two_trees.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "two-trees.commutator-7",
+   "title": "At ratio 7 the commutator is not a rotation",
+   "statement": "The 4×4 trace of the ratio-7 commutator is 51076/2401 > 4, so it is not a rotation (loxodromic). Above the wall face.",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§5.3"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/votkp-lean",
+    "branch": "main",
+    "file": "two-trees/lean/PeelTrees3.lean",
+    "theorem": "comm7_trace"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "loop-wall",
+    "commutator"
+   ],
+   "links": [
+    {
+     "to": "two-trees.commutator-trace-wall",
+     "kind": "special-case",
+     "note": "z = 7 > 3 + 2√2"
+    }
+   ],
+   "_file": "two_trees.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "votkp-lean@main",
+    "file": "two-trees/lean/PeelTrees3.lean",
+    "line": 95,
+    "name": "PeelTrees3.comm7_trace"
+   }
+  },
+  {
+   "id": "two-trees.squared-steps-schottky",
+   "title": "The doubled-letter subtree at ratio 5 is Schottky",
+   "statement": "B_u² has rapidity ln 25, above the wall, so B_i², B_j², B_k² generate a Schottky group and the doubled-letter subtree sits in the ball with distances kept in proportion. Proved from Theorem 5.3; a numerical cap search also finds a valid configuration (margin +0.3545).",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§5.3"
+   },
+   "lean": null,
+   "grade": "DERIVED-IN-PAPER",
+   "tags": [
+    "loop-wall",
+    "schottky"
+   ],
+   "links": [
+    {
+     "to": "two-trees.schottky-threshold",
+     "kind": "uses"
+    },
+    {
+     "to": "two-trees.double-step",
+     "kind": "uses"
+    }
+   ],
+   "_file": "two_trees.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "two-trees.closest-pair",
+   "title": "Smallest distance among words to depth 5",
+   "statement": "The smallest distance between two of the 4,687 words to depth 5 is 0.4258, for a pair 10 edges apart (the word c² i j), ratio 0.043; drift table to length 12 in COMPUTE-Q1.",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§5.3"
+   },
+   "lean": null,
+   "grade": "COMPUTED",
+   "tags": [
+    "quasi-isometry"
+   ],
+   "links": [
+    {
+     "to": "two-trees.not-qi-5",
+     "kind": "uses"
+    }
+   ],
+   "_file": "two_trees.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "two-trees.padic-pingpong-v2",
+   "title": "Second route to freeness at ratio 5: ping-pong on the 5-adic tree",
+   "statement": "Each step moves the base vertex to one of the six neighbours (1:4), (1:1), (1:3), (1:2), (0:1), (1:0) of P¹(𝔽₅). From the v2 working report; not formalised.",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§5.3"
+   },
+   "lean": null,
+   "grade": "STATED",
+   "tags": [
+    "free-group",
+    "p-adic"
+   ],
+   "links": [
+    {
+     "to": "two-trees.free-5-7",
+     "kind": "same-formula",
+     "note": "same conclusion, other route"
+    }
+   ],
+   "_file": "two_trees.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "two-trees.meridians-boosts",
+   "title": "Riley meridians are boosts of length 2x",
+   "statement": "a = [[s, 1], [0, 1/s]], b = [[s, 0], [−v, 1/s]] have determinant 1 and trace s + 1/s = 2 cosh x; (tr)² − 4 = (s − 1/s)² > 0 for real s ≠ ±1, so each is a hyperbolic translation of length 2x, a Smith step Γ = tanh x (also Lean: riley_inverses; both over any commutative ring). Translation length recognised.",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§6, Theorem 6.1"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/votkp-lean",
+    "branch": "main",
+    "file": "two-trees/lean/PeelTrees.lean",
+    "theorem": "meridian_boost"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "knot",
+    "boost",
+    "wall-coordinate"
+   ],
+   "links": [
+    {
+     "to": "wall.definition",
+     "kind": "same-formula",
+     "note": "the meridian's half-length x plays the role of h: Γ = tanh x"
+    }
+   ],
+   "_file": "two_trees.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "votkp-lean@main",
+    "file": "two-trees/lean/PeelTrees.lean",
+    "line": 491,
+    "name": "PeelTrees.meridian_boost"
+   }
+  },
+  {
+   "id": "two-trees.trefoil-relation",
+   "title": "Trefoil relation factors through its Riley polynomial",
+   "statement": "With A = s·a, B = s·b and W = ba: AW − WB = R₃(s, v)·[[0, s], [sv, 0]], R₃ = s⁴ − s²v − s² + 1, over every commutative ring.",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§6, Theorem 6.2"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/votkp-lean",
+    "branch": "main",
+    "file": "two-trees/lean/PeelTrees.lean",
+    "theorem": "trefoil_relation"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "knot"
+   ],
+   "links": [],
+   "_file": "two_trees.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "votkp-lean@main",
+    "file": "two-trees/lean/PeelTrees.lean",
+    "line": 500,
+    "name": "PeelTrees.trefoil_relation"
+   }
+  },
+  {
+   "id": "two-trees.figure-eight-relation",
+   "title": "Figure-eight relation factors through its Riley polynomial",
+   "statement": "W = b a⁻¹ b⁻¹ a: AW − WB = R₄(s, v)·[[0, s³], [s³v, 0]], R₄ = s²v² + (3s² − s⁴ − 1)v + (3s² − s⁴ − 1), over every commutative ring.",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§6, Theorem 6.2"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/votkp-lean",
+    "branch": "main",
+    "file": "two-trees/lean/PeelTrees.lean",
+    "theorem": "figure_eight_relation"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "knot"
+   ],
+   "links": [],
+   "_file": "two_trees.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "votkp-lean@main",
+    "file": "two-trees/lean/PeelTrees.lean",
+    "line": 509,
+    "name": "PeelTrees.figure_eight_relation"
+   }
+  },
+  {
+   "id": "two-trees.trefoil-real-curve",
+   "title": "Every real s gives a real trefoil representation",
+   "statement": "On the trefoil's curve v = s² + s⁻² − 1, real for every real s.",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§6, Corollary 6.3"
+   },
+   "lean": null,
+   "grade": "DERIVED-IN-PAPER",
+   "tags": [
+    "knot"
+   ],
+   "links": [
+    {
+     "to": "two-trees.trefoil-relation",
+     "kind": "uses"
+    }
+   ],
+   "_file": "two_trees.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "two-trees.fig8-discriminant",
+   "title": "Figure-eight Riley polynomial in c and its discriminant",
+   "statement": "With c = s² + s⁻² − 3, R₄ = s²(v² − cv − c) (Lean: fig8_riley_c), and the discriminant of v² − cv − c is c(c + 4) (Lean: fig8_disc).",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§6, Corollary 6.3"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/votkp-lean",
+    "branch": "main",
+    "file": "two-trees/lean/PeelTrees2.lean",
+    "theorem": "fig8_disc"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "knot"
+   ],
+   "links": [],
+   "_file": "two_trees.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "votkp-lean@main",
+    "file": "two-trees/lean/PeelTrees2.lean",
+    "line": 422,
+    "name": "PeelTrees2.fig8_disc"
+   }
+  },
+  {
+   "id": "two-trees.fig8-golden-start",
+   "title": "The figure-eight real curve starts at the golden ratio",
+   "statement": "v is real iff c(c + 4) ≥ 0, i.e. cosh 2x ≥ 3/2; the real curve starts at x₀ = ½ arcosh(3/2) = ln φ = 0.48121 where |M| = φ, v = 0 and s² = (3 + √5)/2 is a root of the Alexander polynomial t² − 3t + 1, as Burde and de Rham predict.",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§6, Corollary 6.3"
+   },
+   "lean": null,
+   "grade": "DERIVED-IN-PAPER",
+   "tags": [
+    "knot"
+   ],
+   "links": [
+    {
+     "to": "two-trees.fig8-discriminant",
+     "kind": "uses"
+    },
+    {
+     "to": "external:Burde (1967); de Rham (1967)",
+     "kind": "uses",
+     "note": "recognised"
+    }
+   ],
+   "_file": "two_trees.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "two-trees.trefoil-longitude",
+   "title": "The trefoil longitude is a boost of length 2|y|",
+   "statement": "On R₃ = 0 the scaled longitude BAAB(s a⁻¹)⁴ = s⁸L is upper triangular with diagonal −s², −s¹⁴: L has eigenvalues −s⁻⁶, −s⁶, |L| = e^y with y = −6x, translation 12x = 2|y|.",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§6, Theorem 6.4"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/votkp-lean",
+    "branch": "main",
+    "file": "two-trees/lean/PeelTrees.lean",
+    "theorem": "trefoil_longitude"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "knot",
+    "boost"
+   ],
+   "links": [],
+   "_file": "two_trees.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "votkp-lean@main",
+    "file": "two-trees/lean/PeelTrees.lean",
+    "line": 519,
+    "name": "PeelTrees.trefoil_longitude"
+   }
+  },
+  {
+   "id": "two-trees.hyperbolic-knots-table",
+   "title": "Meridian and longitude lengths on hyperbolic two-bridge knots",
+   "statement": "On the real curves of 4₁, 5₂, 6₂ at x = 0.5 and 0.9: meridian length 2x, |aW − Wb| ≤ 1e−10, longitude length = 2|y| to all printed digits (KNOT-BOOST-TREE).",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§6"
+   },
+   "lean": null,
+   "grade": "COMPUTED",
+   "tags": [
+    "knot"
+   ],
+   "links": [],
+   "_file": "two_trees.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "two-trees.real-reps-literature",
+   "title": "These real representations are the literature's",
+   "statement": "Gordon proved Riley's conjecture (at least |σ|/2 real roots, parabolic SL(2, ℝ) representations); Thakar builds hyperbolic ones on the real curve of 6₂ with the same meridian and longitude; Culler and Dunfield organise them by boundary data. The pair (meridian 2x, longitude 2|y|) is that boundary data as hyperbolic lengths.",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§6"
+   },
+   "lean": null,
+   "grade": "RECOGNISED (prior art)",
+   "tags": [
+    "knot"
+   ],
+   "links": [],
+   "_file": "two_trees.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "two-trees.two-trees-one-disk",
+   "title": "Two trees in one disk",
+   "statement": "Garrett's tree (step ln 5 or ln 7, three orthogonal axes, Thomas turns tan(θ/2) = Γ², no relations) and a knot's tree (step 2x, Γ = tanh x, axes at an angle fixed by v, one relation aW = Wb, longitude 2|y|) are both walks of boosts in the equatorial disk of the ball. The free tree and the closing tree differ by exactly one relation; the contrast free versus one-relator is true by algebra and the figure illustrates it.",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§7"
+   },
+   "lean": null,
+   "grade": "STATED",
+   "tags": [
+    "knot",
+    "garrett-tree"
+   ],
+   "links": [
+    {
+     "to": "two-trees.free-5-7",
+     "kind": "uses"
+    },
+    {
+     "to": "two-trees.trefoil-relation",
+     "kind": "uses"
+    }
+   ],
+   "_file": "two_trees.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "two-trees.relator-universal-cover",
+   "title": "The relator lifts to the identity in the universal cover",
+   "statement": "With the canonical lifts of hyperbolic meridians (the lifts with a fixed point at infinity), ã W̃ = W̃ b̃ holds in the universal cover of PSL(2, ℝ). Computed to 1e−80 on all nine real branches of 3₁, 4₁, 5₂, 6₂.",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§7.1, Proposition 7.1"
+   },
+   "lean": null,
+   "grade": "DERIVED-IN-PAPER",
+   "tags": [
+    "knot"
+   ],
+   "links": [],
+   "_file": "two_trees.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "two-trees.polygon-area-basepoint",
+   "title": "Relator polygon area depends on the base point",
+   "statement": "The frame turn along the drawn relator polygon equals its signed area (Gauss–Bonnet); it varies along each real branch and with the base point, so it belongs to the drawing, not the knot. From O = i it tends to −π + 4e^{−x} where v → ∞.",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§7.1"
+   },
+   "lean": null,
+   "grade": "COMPUTED",
+   "tags": [
+    "knot"
+   ],
+   "links": [],
+   "_file": "two_trees.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "two-trees.longitude-lift-class",
+   "title": "Lift class of the longitude by branch",
+   "statement": "The lift class of the longitude is −1 on the branch reaching x → 0 (trefoil; branch 0 of 5₂ and 6₂) and 0 elsewhere; in this data it records the sign of the longitude's trace.",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§7.1"
+   },
+   "lean": null,
+   "grade": "COMPUTED",
+   "tags": [
+    "knot"
+   ],
+   "links": [],
+   "_file": "two_trees.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "two-trees.free-even-ratios",
+   "title": "Free of rank 3 for every even ratio (ping-pong at the prime 1 + i)",
+   "statement": "For even z ≥ 2, B_i, B_j, B_k generate a free group of rank 3, and any two a free group of rank 2. Proof: M_u = (z + 1) + (z − 1)σ_u gives ρ(M_u) = B_u; six sets in P¹(ℚ(i)) cut by the (1 + i)-adic valuation, and a ping-pong. Identities checked symbolically and inclusions on 100,000 exact points (which fail on 80% of points for odd z). Not in Lean.",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§8.1, Theorem 8.1"
+   },
+   "lean": null,
+   "grade": "DERIVED-IN-PAPER",
+   "tags": [
+    "free-group",
+    "p-adic"
+   ],
+   "links": [
+    {
+     "to": "two-trees.free-every-ratio",
+     "kind": "special-case"
+    }
+   ],
+   "_file": "two_trees.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "two-trees.free-every-ratio",
+   "title": "Free of rank 3 for every whole ratio z ≥ 2",
+   "statement": "Theorem 5.2 (Lean) covers every z with an odd divisor; Theorem 8.1 (written proof) covers every even z, including the powers of 2. On both sides of the wall the group is free; below the wall it is free without being discrete.",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§8.1, Corollary 8.2"
+   },
+   "lean": null,
+   "grade": "DERIVED-IN-PAPER",
+   "tags": [
+    "loop-wall",
+    "free-group"
+   ],
+   "links": [
+    {
+     "to": "two-trees.free-not-power-of-2",
+     "kind": "uses"
+    },
+    {
+     "to": "two-trees.free-even-ratios",
+     "kind": "uses"
+    },
+    {
+     "to": "two-trees.schottky-threshold",
+     "kind": "opposite-reading",
+     "note": "freeness holds everywhere; the wall splits discrete from not discrete"
+    }
+   ],
+   "_file": "two_trees.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "two-trees.pow2-commutators",
+   "title": "Commutator type at z = 2, 4, 8",
+   "statement": "Perpendicular commutator trace 31/16 at z = 2 and 47/64 at z = 4 (elliptic of infinite order: a rational non-integer trace is not a root of unity); −1889/256 at z = 8, loxodromic, as expected above 3 + 2√2.",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§8.1"
+   },
+   "lean": null,
+   "grade": "COMPUTED",
+   "tags": [
+    "loop-wall",
+    "commutator"
+   ],
+   "links": [
+    {
+     "to": "two-trees.commutator-trace-wall",
+     "kind": "special-case"
+    }
+   ],
+   "_file": "two_trees.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "two-trees.relation-search",
+   "title": "Meet-in-the-middle relation search at powers of 2",
+   "statement": "With positive controls that find the known relations at z = 1, no relation up to length 22 at z = 2 and up to length 20 at z = 4 and 8; no return to the origin up to length 14.",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§8.1"
+   },
+   "lean": null,
+   "grade": "COMPUTED",
+   "tags": [
+    "free-group"
+   ],
+   "links": [],
+   "_file": "two_trees.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "two-trees.not-conjugate-lps",
+   "title": "The boost group is not conjugate to the LPS group",
+   "statement": "At ratio 5, τ(g) = tr(g)²/det g is 4/5 for each LPS generator and 36/5 for each boost generator (3 ± 2σ_u); every LPS element has τ = 4a²/N(q) ≤ 4. So the groups are not conjugate in PGL(2, ℚ₅) or PGL(2, ℂ) under any matching, and no LPS element is conjugate to a boost generator.",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§8.2, Theorem 8.3"
+   },
+   "lean": null,
+   "grade": "DERIVED-IN-PAPER",
+   "tags": [
+    "p-adic",
+    "garrett-tree"
+   ],
+   "links": [
+    {
+     "to": "two-trees.lps-unique-words",
+     "kind": "opposite-reading"
+    }
+   ],
+   "_file": "two_trees.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "two-trees.shared-tree-action",
+   "title": "What the boost and LPS groups share",
+   "statement": "Both send the base vertex of the 5-adic tree to its six neighbours and act simply transitively; matching words gives a tree automorphism outside PGL(2, ℚ₅). Eigenvalue ratio 5 for a boost against (−3 + 4i₅)/5 for an LPS generator (over ℂ a rotation through 126.87°). Commutator invariants agree (τ = 196/625); generator, square and product invariants differ. Tree check on all 937 reduced words to length 4.",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§8.2"
+   },
+   "lean": null,
+   "grade": "COMPUTED",
+   "tags": [
+    "p-adic"
+   ],
+   "links": [
+    {
+     "to": "two-trees.not-conjugate-lps",
+     "kind": "uses"
+    }
+   ],
+   "_file": "two_trees.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "two-trees.ln7-distance-bounds",
+   "title": "Optimal distance constants at ratio 7",
+   "statement": "With ℓ = ln 7 and cosh δ = 9/7: ℓ + (L − 1)δ ≤ d(O, wO) ≤ Lℓ, and sharper d ≥ ℓ(1 + #straight) + δ·#turns. Proof by nested half-spaces N_u = (3, 4e_u) with ⟨N_u, N_u⟩ = −7. Computed on all 488,281 reduced words to length 9 (smallest margin 0.5526). Not in Lean (needs real numbers). The v2 report writes cosh δ = sinh²(ℓ/2); at the wall sinh(ℓ/2) = 1 gives δ = 0, the planes of orthogonal axes touching (arithmetic, not stated in the paper).",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§8.3, Theorem 8.4"
+   },
+   "lean": null,
+   "grade": "DERIVED-IN-PAPER",
+   "tags": [
+    "loop-wall",
+    "quasi-isometry"
+   ],
+   "links": [
+    {
+     "to": "two-trees.schottky-threshold",
+     "kind": "uses"
+    },
+    {
+     "to": "wall.sinh-form",
+     "kind": "same-wall",
+     "note": "cosh δ = sinh²(ℓ/2) reaches 1 at sinh h = 1"
+    }
+   ],
+   "_file": "two_trees.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "two-trees.ln7-commutator-translation",
+   "title": "The ratio-7 commutator shows δ is optimal",
+   "statement": "B_i B_j B_i⁻¹ B_j⁻¹ at ratio 7 is a pure translation with cosh τ = 23137/2401 = cosh 4δ, so δ cannot be raised; min d/(Lℓ) tends to δ/ℓ = 0.37977 (still 0.5051 at L = 9).",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§8.3, Theorem 8.4"
+   },
+   "lean": null,
+   "grade": "DERIVED-IN-PAPER",
+   "tags": [
+    "loop-wall",
+    "commutator"
+   ],
+   "links": [
+    {
+     "to": "two-trees.ln7-distance-bounds",
+     "kind": "uses"
+    },
+    {
+     "to": "two-trees.commutator-7",
+     "kind": "same-formula"
+    }
+   ],
+   "_file": "two_trees.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "two-trees.sos-certificate",
+   "title": "Sum-of-squares certificate for the ratio-7 cap inequality",
+   "statement": "For t > 0 outside the backward cap, (25t + 24b)² < 2(24t + 25b)², closed by 2(24t + 25b)² − (25t + 24b)² = 527t² + 1200tb + 674b² and 432(527t² + 1200tb + 674b²) = 41040(t² − 2b²) + (432t + 600b)² + 13248b².",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§8.3"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/votkp-lean",
+    "branch": "main",
+    "file": "two-trees/lean/PingPong7.lean",
+    "theorem": "plane_core"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "schottky"
+   ],
+   "links": [
+    {
+     "to": "two-trees.pingpong-inclusion-7",
+     "kind": "uses"
+    }
+   ],
+   "_file": "two_trees.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "votkp-lean@main",
+    "file": "two-trees/lean/PingPong7.lean",
+    "line": 112,
+    "name": "PingPong7.plane_core"
+   }
+  },
+  {
+   "id": "two-trees.reflection-zero-area",
+   "title": "Relator polygon area vanishes on a whole geodesic",
+   "statement": "For a two-bridge knot K(p, q) with q odd and a real Riley representation with v > 0, R(z) = 1/(v z̄) reflects in ℓ = {|z| = 1/√v} and A(Ro) = −A(o), so A = 0 on ℓ; crossing meridian axes meet on ℓ (x_a x_b = 1/v). Palindrome property checked for all 364 pairs with q odd, p ≤ 59; area checked on about 40 branch points at 50 to 100 digits (worst error 4e−31). For v < 0, K is a half-turn and the area is nonzero at every point tested.",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§8.4, Theorem 8.5"
+   },
+   "lean": null,
+   "grade": "DERIVED-IN-PAPER",
+   "tags": [
+    "knot"
+   ],
+   "links": [
+    {
+     "to": "two-trees.polygon-area-basepoint",
+     "kind": "uses"
+    }
+   ],
+   "_file": "two_trees.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "two-trees.knot-commutator-band",
+   "title": "Knot meridian commutator trace",
+   "statement": "tr[a, b] = 2 − v((s − 1/s)² − v), tr[a, b] − 2 = −v(tr(ab) − 2), with tr(ab) = s² + s⁻² − v, over any commutative ring after scaling by s⁴ (also Lean: comm_trace_ab, T_eq, band_k: s⁴(2 − tr[a,b]) = w(A − w) with A = (s² − 1)², w = vs²). On the real curve, rotation iff 0 < v(4 sinh² x − v) < 4; the first inequality says the axes cross (recognised).",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§8.5, Theorem 8.6"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/votkp-lean",
+    "branch": "main",
+    "file": "two-trees/lean/PeelTrees4.lean",
+    "theorem": "comm_trace"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "loop-wall",
+    "knot",
+    "commutator"
+   ],
+   "links": [
+    {
+     "to": "transport.trace-wall",
+     "kind": "analogy-only",
+     "note": "a commutator trace with −2 as the turning edge, but here the variables are (s, v) of a knot, not two equal peel steps"
+    },
+    {
+     "to": "two-trees.commutator-trace-wall",
+     "kind": "same-formula",
+     "note": "both are tr[a,b] of two boosts; the knot version adds the axis parameter v"
+    }
+   ],
+   "_file": "two_trees.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "votkp-lean@main",
+    "file": "two-trees/lean/PeelTrees4.lean",
+    "line": 35,
+    "name": "PeelTrees4.comm_trace"
+   }
+  },
+  {
+   "id": "two-trees.band-bound-wall",
+   "title": "Below the wall, crossing meridian axes always rotate",
+   "statement": "4k = (s − 1/s)⁴ − (2v − (s − 1/s)²)² with k = 2 − tr[a, b], so k ≤ 4 sinh⁴ x, with equality at v = 2 sinh² x. When sinh x < 1, i.e. Γ² = tanh² x < ½ for the meridian's Smith step, the bound k < 4 is automatic: crossing axes are exactly the rotations, and a branch with v < 0 never rotates. The wall in meridian length is 2x = 2 ln(1 + √2). Lean proves the algebraic identity (band_bound) and the peak (band_peak); the inequality k ≤ 4 sinh⁴ x and the wall conclusion are proved in the paper, not in Lean.",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§8.5, Theorem 8.6"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/votkp-lean",
+    "branch": "main",
+    "file": "two-trees/lean/PeelTrees4.lean",
+    "theorem": "band_bound"
+   },
+   "grade": "DERIVED-IN-PAPER",
+   "tags": [
+    "loop-wall",
+    "knot",
+    "commutator"
+   ],
+   "links": [
+    {
+     "to": "wall.sinh-form",
+     "kind": "same-wall",
+     "note": "sinh x = 1 ⇔ tanh² x = ½"
+    },
+    {
+     "to": "two-trees.schottky-threshold",
+     "kind": "same-wall",
+     "note": "the same line on the knot side"
+    },
+    {
+     "to": "two-trees.knot-commutator-band",
+     "kind": "uses"
+    }
+   ],
+   "_file": "two_trees.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "votkp-lean@main",
+    "file": "two-trees/lean/PeelTrees4.lean",
+    "line": 104,
+    "name": "PeelTrees4.band_bound"
+   }
+  },
+  {
+   "id": "two-trees.band-criterion-rational",
+   "title": "Band criterion as an equivalence over the rationals (post-v4 Lean)",
+   "statement": "For rational s ≠ 0 (and s ≠ ±1): |tr[a, b]| < 2 ⇔ 0 < v((s − s⁻¹)² − v) < 4. Added on branch lg2-3-gaps (commit 7cd4c4e, 21 Nov 2026) after v4; not cited in the v4 paper. Over ℚ only, so real s = e^x is not covered, and the wall step sinh x < 1 is not part of it. Compiles in core Lean 4.34.1.",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§8.5, Theorem 8.6 (formalised after v4)"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/votkp-lean",
+    "branch": "lg2-3-gaps",
+    "file": "two-trees/lean/PeelTrees5.lean",
+    "theorem": "band_criterion"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "knot",
+    "commutator"
+   ],
+   "links": [
+    {
+     "to": "two-trees.knot-commutator-band",
+     "kind": "special-case"
+    }
+   ],
+   "_file": "two_trees.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "votkp-lean@lg2-3-gaps",
+    "file": "two-trees/lean/PeelTrees5.lean",
+    "line": 43,
+    "name": "PeelTrees5.band_criterion"
+   }
+  },
+  {
+   "id": "two-trees.axis-crossing",
+   "title": "Crossing axes give tr[a, b] < 2",
+   "statement": "Two hyperbolic elements with crossing axes have tr[a, b] < 2 (Gilman; Goldman; Beardon).",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§8.5"
+   },
+   "lean": null,
+   "grade": "RECOGNISED (prior art)",
+   "tags": [
+    "knot",
+    "commutator"
+   ],
+   "links": [],
+   "_file": "two_trees.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "two-trees.wall-both-sides",
+   "title": "The line Γ² = ½ on both sides of the paper",
+   "statement": "For Garrett's boosts the line separates Schottky from non-discrete groups; for a knot's meridians it is the length 2 ln(1 + √2) up to which crossing axes always produce a rotating commutator.",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§8.5"
+   },
+   "lean": null,
+   "grade": "DERIVED-IN-PAPER",
+   "tags": [
+    "loop-wall"
+   ],
+   "links": [
+    {
+     "to": "two-trees.schottky-threshold",
+     "kind": "uses"
+    },
+    {
+     "to": "two-trees.band-bound-wall",
+     "kind": "uses"
+    },
+    {
+     "to": "wall.definition",
+     "kind": "same-wall"
+    }
+   ],
+   "_file": "two_trees.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "two-trees.torus-riley-in-t",
+   "title": "Torus-knot Riley relations are polynomials in tr(ab)",
+   "statement": "For T(2, 3), T(2, 5), T(2, 7) with W = (BA)^((n−1)/2): AW − WB = P(T)·[[0, s], [sv, 0]] with t = tr(ab) satisfying t = 1, t² − t − 1 = 0, t³ − t² − 2t + 1 = 0 (Lean: trefoil_T, torus5_T, torus7_T; also v_from_T: v = (s − 1/s)² + (2 − t)). Roots 2cos((2j − 1)π/n) are classical.",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§8.5, Theorem 8.7"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/votkp-lean",
+    "branch": "main",
+    "file": "two-trees/lean/PeelTrees4.lean",
+    "theorem": "torus7_T"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "knot"
+   ],
+   "links": [],
+   "_file": "two_trees.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "votkp-lean@main",
+    "file": "two-trees/lean/PeelTrees4.lean",
+    "line": 72,
+    "name": "PeelTrees4.torus7_T"
+   }
+  },
+  {
+   "id": "two-trees.torus-never-turn",
+   "title": "Torus knots T(2,3), T(2,5), T(2,7) never turn",
+   "statement": "Since t < 2, v = (s − 1/s)² + (2 − t) > (s − 1/s)², so the axes never cross and tr[a, b] − 2 = v(2 − t) > 0: on every real representation the commutator is a boost. Lean holds the identity s⁴(tr[a,b] − 2) = vs²(2s² − T); the sign step uses the classical root values. Reason: the centre (ab)^n maps to ±I, forcing ab elliptic of finite order.",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§8.5, Theorem 8.7"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/votkp-lean",
+    "branch": "main",
+    "file": "two-trees/lean/PeelTrees4.lean",
+    "theorem": "torus_comm"
+   },
+   "grade": "DERIVED-IN-PAPER",
+   "tags": [
+    "knot",
+    "commutator"
+   ],
+   "links": [
+    {
+     "to": "two-trees.torus-riley-in-t",
+     "kind": "uses"
+    }
+   ],
+   "_file": "two_trees.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "votkp-lean@main",
+    "file": "two-trees/lean/PeelTrees4.lean",
+    "line": 88,
+    "name": "PeelTrees4.torus_comm"
+   }
+  },
+  {
+   "id": "two-trees.trefoil-commutator",
+   "title": "Trefoil commutator on its curve",
+   "statement": "tr(ab) = 1 gives tr[a, b] = 2 + v with s²v = (s² − 1)² + s², so v ≥ 1 for real s: always a boost, never in the band.",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§8.5, Theorem 8.7"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/votkp-lean",
+    "branch": "main",
+    "file": "two-trees/lean/PeelTrees4.lean",
+    "theorem": "trefoil_comm"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "knot",
+    "commutator"
+   ],
+   "links": [
+    {
+     "to": "two-trees.torus-never-turn",
+     "kind": "special-case"
+    }
+   ],
+   "_file": "two_trees.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "votkp-lean@main",
+    "file": "two-trees/lean/PeelTrees4.lean",
+    "line": 81,
+    "name": "PeelTrees4.trefoil_comm"
+   }
+  },
+  {
+   "id": "two-trees.census-26",
+   "title": "Census of 26 two-bridge knots",
+   "statement": "Nineteen knots have a rotating commutator on some real branch; seven never do: T(2,3), T(2,5), T(2,7), 6₃, 7₅, 8₇, 8₈. Every knot that turns does so before x = 0.73, below the wall (sinh x = 1 at x = 0.8814), and keeps a branch in the band at every larger x checked (to x = 6 for eleven knots; the limit x → ∞ for all). 80 digits at entry points.",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§8.5, Census 8.8"
+   },
+   "lean": null,
+   "grade": "COMPUTED",
+   "tags": [
+    "loop-wall",
+    "knot",
+    "commutator"
+   ],
+   "links": [
+    {
+     "to": "two-trees.band-bound-wall",
+     "kind": "uses"
+    }
+   ],
+   "_file": "two_trees.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "two-trees.census-limits",
+   "title": "Limits of 2 − tr[a, b] are squares of 2cos(jπ/n)/m",
+   "statement": "As x → ∞ the limits of k = 2 − tr[a, b] are 1, 2, 3, 1/2, 1/4, 1/9, φ², φ⁻², φ²/4, φ⁻²/4 and (2cos(jπ/7))², j = 1, 2, 3: in every case √k∞ = 2cos(jπ/n)/m (200 digits). Why is open. Knots enter either at the band edge with k near 0 or by a complex pair turning real inside the band; the Alexander polynomial does not decide which.",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§8.5, Census 8.8"
+   },
+   "lean": null,
+   "grade": "COMPUTED",
+   "tags": [
+    "knot"
+   ],
+   "links": [],
+   "_file": "two_trees.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "two-trees.census-precision",
+   "title": "Round-off false entries in a double-precision scan",
+   "statement": "A double-precision scan reported band entries for 6₃, 7₅, 8₇, 8₈ near x ≈ 1.3 to 2.9; computed without cancellation as −v(tr(ab) − 2) at 60 to 200 digits, k stays negative. On 8₈'s branch with tr(ab) → 2, k·s⁶ → −1.",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§8.5"
+   },
+   "lean": null,
+   "grade": "COMPUTED",
+   "tags": [
+    "knot"
+   ],
+   "links": [],
+   "_file": "two_trees.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "two-trees.open-questions",
+   "title": "What is open in v4",
+   "statement": "A Lean proof of Theorem 8.1 (needs the (1 + i)-adic valuation); whether a non-backtracking word returns to the origin at a power-of-2 ratio (none to length 14); what 6₃, 7₅, 8₇, 8₈ share that keeps them from turning; why the limits k∞ are squares of 2cos(jπ/n)/m; whether ℓ = {|z| = 1/√v} is the whole zero set of the polygon area; Theorem 8.4 in Lean (needs Mathlib); building the Mathlib drafts of Appendix A.4.",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§9"
+   },
+   "lean": null,
+   "grade": "STATED",
+   "tags": [
+    "open"
+   ],
+   "links": [],
+   "_file": "two_trees.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
    "id": "wall.definition",
    "title": "The loop wall Γ² = ½",
    "statement": "Γ = (z − 1)/(z + 1) = tanh h, h = ½ ln z. Γ² > ½ exactly when z² − 6z + 1 > 0, i.e. z > 3 + 2√2 = 5.828427 for z > 1.",
@@ -3102,41 +5389,6 @@
    ],
    "_file": "wall_ledger.json",
    "lean_status": "no Lean proof cited"
-  },
-  {
-   "id": "two-trees.schottky-5-7",
-   "title": "Schottky threshold at ratios 5 and 7",
-   "statement": "Γ(5)² < ½ < Γ(7)²: the wall separates the peel boosts of ratio 5 and 7. Proved at these two ratios only; the general threshold is stated in the paper.",
-   "paper": {
-    "title": "Two Trees in One Ball",
-    "version": "v4",
-    "section": "§ Schottky"
-   },
-   "lean": {
-    "repo": "dicipler-pixel/votkp-lean",
-    "branch": "claude/sm-ball-20261111",
-    "file": "two-trees/lean/PeelTrees.lean",
-    "theorem": "schottky_seven_above"
-   },
-   "grade": "PROVED-LEAN (two ratios)",
-   "tags": [
-    "loop-wall",
-    "two-trees"
-   ],
-   "links": [
-    {
-     "to": "wall.definition",
-     "kind": "same-wall"
-    }
-   ],
-   "_file": "wall_ledger.json",
-   "lean_status": "found",
-   "lean_found": {
-    "where": "votkp-lean@claude/sm-ball-20261111",
-    "file": "two-trees/lean/PeelTrees.lean",
-    "line": 164,
-    "name": "PeelTrees.schottky_seven_above"
-   }
   },
   {
    "id": "transport.trace-wall",

@@ -1,6 +1,6 @@
-# Work atlas status — 2026-11-21 22:39 UTC
+# Work atlas status — 2026-11-21 22:41 UTC
 
-106 results, 42 with a Lean proof found, 0 need attention.
+181 results, 80 with a Lean proof found, 0 need attention.
 
 ## Needs attention
 
@@ -56,5 +56,6 @@
 | small-diophantine-lean | main | 62589bd221 | 3 | 16 | 0 | 0 |
 | matter-at-a-scale-lean | main | 56a637a680 | 4 | 17 | 0 | 0 |
 | acwindow-lean | main | efe5da7ff3 | 3 | 48 | 0 | 0 |
-| votkp-lean | element-paper/loop-wall | 15503e09b7 | 115 | 1190 | 0 | 0 |
+| votkp-lean | element-paper/loop-wall | 2b8ea372c7 | 115 | 1190 | 0 | 0 |
 | votkp-lean | claude/sm-ball-20261111 | 74125d2977 | 64 | 597 | 0 | 0 |
+| votkp-lean | lg2-3-gaps | 7cd4c4e63a | 60 | 379 | 0 | 0 |

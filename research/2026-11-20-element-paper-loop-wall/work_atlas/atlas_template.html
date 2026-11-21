@@ -64,7 +64,7 @@ function draw(){const q=$('q').value.trim().toLowerCase();
   $('list').innerHTML=list.map(e=>`<article class="card" id="${esc(e.id)}"><h3>${esc(e.title)}</h3>
    <div class="meta">${esc(e.paper?e.paper.title+(e.paper.version?' '+e.paper.version:'')+(e.paper.section?' · '+e.paper.section:''):'')} · ${esc(e.grade||'')}</div>
    <div class="st">${esc(e.statement)}</div><div class="lean">${leanHtml(e)}</div>
-   ${(e.links||[]).length?`<div class="links">${e.links.map(l=>`<div><span class="kind">${esc(l.kind)}</span>${byId[l.to]?`<a href="#${esc(l.to)}">${esc(byId[l.to].title)}</a>`:esc(l.to)}${l.note?' — '+esc(l.note):''}</div>`).join('')}</div>`:''}
+   ${(e.links||[]).length?`<div class="links">${e.links.map(l=>`<div><span class="kind">${esc(l.kind)}</span>${byId[l.to]?`<a href="#${esc(l.to)}">${esc(byId[l.to].title)}</a>`:esc(String(l.to).replace(/^external:/,'outside the atlas: '))}${l.note?' — '+esc(l.note):''}</div>`).join('')}</div>`:''}
    <div style="margin-top:6px">${(e.tags||[]).map(t=>`<span class="tag">#${esc(t)}</span>`).join('')}</div></article>`).join('');}
 $('q').oninput=draw; draw();
 $('probs').innerHTML=A.problems.length?A.problems.map(p=>`<li>${esc(p)}</li>`).join(''):'<li>nothing</li>';

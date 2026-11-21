@@ -264,33 +264,6 @@
   ]
  },
  {
-  "id": "two-trees.schottky-5-7",
-  "title": "Schottky threshold at ratios 5 and 7",
-  "statement": "Γ(5)² < ½ < Γ(7)²: the wall separates the peel boosts of ratio 5 and 7. Proved at these two ratios only; the general threshold is stated in the paper.",
-  "paper": {
-   "title": "Two Trees in One Ball",
-   "version": "v4",
-   "section": "§ Schottky"
-  },
-  "lean": {
-   "repo": "dicipler-pixel/votkp-lean",
-   "branch": "claude/sm-ball-20261111",
-   "file": "two-trees/lean/PeelTrees.lean",
-   "theorem": "schottky_seven_above"
-  },
-  "grade": "PROVED-LEAN (two ratios)",
-  "tags": [
-   "loop-wall",
-   "two-trees"
-  ],
-  "links": [
-   {
-    "to": "wall.definition",
-    "kind": "same-wall"
-   }
-  ]
- },
- {
   "id": "transport.trace-wall",
   "title": "Loop transport: tr W = −2 at the wall",
   "statement": "W = A B A⁻¹ B⁻¹ for two perpendicular half-steps: tr W = 2 − 4 sinh²a sinh²b; at Γ² = ½ on both faces the trace is −2, the threshold where transport starts selecting one line.",
