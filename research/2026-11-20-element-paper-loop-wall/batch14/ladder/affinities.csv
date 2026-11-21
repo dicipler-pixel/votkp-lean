@@ -1,0 +1,6 @@
+Z,symbol,status,EA_eV,unc_eV,lower_bound_eV,upper_bound_eV,theory_eV,neutral_valence,anion_valence,source,primary_year,url
+66,Dy,evaluated-AMS-estimate,0.015,0.003,,,0.063,4f10 6s2,4f10 6s2 6p,Ning-Lu-2022-Table-3,1994,https://faculty.kfupm.edu.sa/PHYS/mgarwan/download/Electric%20dissociation%20of%20negative%20ions.pdf
+67,Ho,experimental-upper-limit-no-established-bound-anion,,,,0.005,0.050,4f11 6s2,4f11 6s2 6p,Nadeau-1997-and-Ning-Lu-2022,1997,https://doi.org/10.1016/S0168-583X(96)00749-5
+68,Er,experimental-upper-limit-no-established-bound-anion,,,,0.005,0.038,4f12 6s2,4f12 6s2 6p,Nadeau-1997-and-Ning-Lu-2022,1997,https://doi.org/10.1016/S0168-583X(96)00749-5
+69,Tm,evaluated-AMS-estimate-disputed,0.032,0.007,,,0.022,4f13 6s2,4f13 6s2 6p,Ning-Lu-2022-Table-3,1997,https://doi.org/10.1016/S0168-583X(96)00749-5
+70,Yb,evaluated-no-stable-ground-anion,,,,0.0036,,4f14 6s2,,Zhao-2019-and-Ning-Lu-2022,2019,https://doi.org/10.1016/j.nimb.2019.01.023

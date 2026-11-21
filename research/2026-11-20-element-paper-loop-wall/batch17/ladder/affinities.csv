@@ -1,0 +1,6 @@
+Z,symbol,status,EA_eV,unc_eV,lower_bound_eV,upper_bound_eV,theory_eV,neutral_valence,anion_valence,source,primary_year,url
+81,Tl,measured-LPT,0.320053,0.000019,,,,6s2 6p,6s2 6p2,threshold spectroscopy,2020,https://doi.org/10.1103/PhysRevA.101.052511
+82,Pb,measured-LPM-208Pb,0.356721,0.000002,,,,6s2 6p2,6s2 6p3,Bresteau et al. via Ning and Lu Table 3,2019,https://doi.org/10.1063/5.0080243
+83,Bi,measured-LPT,0.942362,0.000013,,,,6s2 6p3,6s2 6p4,Bilodeau and Haugen,2001,https://doi.org/10.1103/PhysRevA.64.024501
+84,Po,observed-preliminary-systematics-outstanding,,,,,1.483,6s2 6p4,6s2 6p5,IS728 preliminary 210Po and separate theory in Ning-Lu Table 3,2026,https://indico.global/event/16399/contributions/141980/attachments/66656/128992/Po_CRIS_2026.pdf
+85,At,measured-LPT,2.41578,0.00007,,,,6s2 6p5,6s2 6p6,Leimbach et al.,2020,https://doi.org/10.1038/s41467-020-17599-2

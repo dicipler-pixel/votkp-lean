@@ -1,0 +1,6 @@
+symbol,input_scope,EA_eV,unc_eV,z0,z_low,z_high,Gamma0,central_wall,interval_vs_6
+Dy,1994 electric dissociation fit: p1/2,0.0155,0.0025,383.165226,329.947500,456.851308,0.994794,outside,above six
+Dy,2022 Table 3 recommended rounding,0.015,0.003,395.937400,329.947500,494.922250,0.994961,outside,above six
+Tm,2022 Table 3 / 1997 AMS estimate,0.032,0.007,193.262563,158.574179,247.376440,0.989705,outside,above six
+Tm,2002 competing photodetachment assignment,1.029,0.022,6.010109,5.884294,6.141421,0.714698,outside,straddles six
+Yb,withdrawn AMS attribution; counterfactual only,0.010,0.003,625.416000,481.088308,893.453143,0.996807,outside,above six

@@ -1,0 +1,6 @@
+Z,symbol,status,EA_eV,unc_eV,lower_bound_eV,upper_bound_eV,theory_eV,neutral_valence,anion_valence,source,primary_year,url
+71,Lu,measured-SEVI,0.23882,0.00062,,,,5d 6s2,5d 6s2 6p,Fu et al.,2019,https://info.phys.tsinghua.edu.cn/henucl/ning/131.pdf
+72,Hf,measured-SEVI,0.1780,0.0006,,,,5d2 6s2,5d2 6s2 6p,Tang et al.,2018,https://doi.org/10.1103/PhysRevA.98.020501
+73,Ta,measured-SEVI,0.328859,0.000023,,,,5d3 6s2,5d4 6s2,primary published error,2022,https://pubmed.ncbi.nlm.nih.gov/35922342/
+74,W,evaluated-SEVI,0.816500,0.000082,,,,5d4 6s2,5d5 6s2,Ning and Lu Table 3 ref 206,2022,https://doi.org/10.1063/5.0080243
+75,Re,measured-SEVI,0.060396,0.000063,,,,5d5 6s2,5d6 6s2,Chen and Ning,2017,https://doi.org/10.1021/acs.jpclett.7b01079

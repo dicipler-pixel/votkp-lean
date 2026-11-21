@@ -1,0 +1,2 @@
+415 exact archive energies; 410 ordinary pairs; 4 anion pairs with externally supplied EA
+Outside: [('Tl', 0), ('Pb', 0), ('Bi', 0)]

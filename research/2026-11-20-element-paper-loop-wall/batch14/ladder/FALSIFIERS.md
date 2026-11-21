@@ -1,0 +1,5 @@
+# Dysprosium through ytterbium: tests fixed before fetching thresholds
+
+Check each row against the pinned October thresholds and the entire ASD table, independently. A single positive ratio outside the exact squared wall refutes the ordinary-step continuation; a box crossing the wall changes its robustness. No extrapolation from earlier elements establishes the sign under uncertainty. Carry forward the shared-energy test for strict reversals and check whether a two-apart pair still excludes consecutive strict reversals.
+
+Rung zero needs an assigned numeric ground-state electron affinity for a point estimate. A detection limit, upper bound, absence of stable ions, metastable measurements, and an explicit theoretical prediction are different observations. A numerical wall may still follow from a one-sided positive bound if that bound lies wholly on one side of the critical affinity. A pure upper limit permitting zero does not prove that a bound anion even exists. Report that logical condition before making a wall claim.

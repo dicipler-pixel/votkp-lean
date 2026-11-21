@@ -1,0 +1,17 @@
+Pinned archive SHA256: 75e67478d9a22ef85fa2d3f6ac36ad2860c6f8f62215127c558438a2cb53f62c
+Printed CSV SHA256: 937869d86deddaabf8b25cdff1a83c57eb837b278b5f55820c4fd0fa02a5810b
+Printed rows: 345
+NIST records 340
+anion point pairs 2
+complete joint widths 337
+ordinary pairs 335
+pinned grade E 6
+pinned grade S 24
+pinned grade T 310
+rectangle permits reverse 35
+rectangle touches at one 2
+rejected: upper limit as point
+rejected: Yb falsely bound
+rejected: wrong Tm source
+rejected: changed reflection
+rejected: missing bare-nucleus row

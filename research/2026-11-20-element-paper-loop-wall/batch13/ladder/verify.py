@@ -41,19 +41,19 @@ def within(text, number, digits):
     return F(text)==F(i,10**digits) and len(text.partition('.')[2])==digits
 
 
-def check(printed, folder=DIR):
+def check(printed, folder=DIR, *, first=61, last=65, outside=(('Eu',0),('Gd',0),('Tb',0))):
     require(hashlib.sha256(ARCH.read_bytes()).hexdigest()==HASH,'archive digest')
     with gzip.open(ARCH,'rt') as f:
-        atoms=json.load(f,parse_float=F)['records'][60:65]
+        atoms=json.load(f,parse_float=F)['records'][first-1:last]
     plain=keyrows(printed)
     details=keyrows(read(folder/'rungs_detailed.csv'))
     affinity={int(a['Z']):a for a in read(folder/'affinities.csv')}
     asd={(int(a['Z']),int(a['q'])):a for a in read(folder/'asd_states_20261121.csv')}
-    expected={(z,k) for z in range(61,66) for k in range(z+1)}
+    expected={(z,k) for z in range(first,last+1) for k in range(z+1)}
     require(plain.keys()==expected, 'complete row keys')
     dkeys={(z,k) for z,k in expected if k<z and (k>0 or affinity[z]['EA_eV'])}
     require(details.keys()==dkeys, 'complete ratio keys')
-    require(len(asd)==315, 'public NIST snapshot')
+    require(len(asd)==sum(range(first,last+1)), 'public NIST snapshot')
     result=Counter()
     outs=[]
     for atom in atoms:
@@ -104,7 +104,7 @@ def check(printed, folder=DIR):
                 result['rectangle permits reverse']+=1
             if low==1:
                 result['rectangle touches at one']+=1
-    require(outs==[('Eu',0),('Gd',0),('Tb',0)],'outside')
+    require(outs==list(outside),'outside')
     return result
 
 

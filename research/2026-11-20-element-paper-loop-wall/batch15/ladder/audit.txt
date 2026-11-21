@@ -1,0 +1,2 @@
+365 exact archive energies; 360 ordinary pairs; 5 anion pairs with externally supplied EA
+Outside: [('Lu', 0), ('Hf', 0), ('Ta', 0), ('W', 0), ('Re', 0)]
