@@ -1,0 +1,9 @@
+# Scoring the eight heavy-anion calls
+
+Claude's signed predictions predate this round in QUANTUM_CHEMISTRY_LINKS.md and the v7 element paper. Inside: gold, platinum, iridium, astatine. Outside: osmium, bismuth, polonium, lead. These were informed predictions using remembered chemistry values, rather than a laboratory blind test.
+
+Keep the predictions fixed as the element batches reach each target. For the primary comparison use the pinned neutral ionization threshold and a named evaluated ground-state electron affinity, or a dated direct ground-to-ground threshold if it supersedes the evaluation. Preserve source units, uncertainty, and status of the assignment. Repeat using the newest independently traced IE and alternative EA assignments separately. If the source is theoretical, preliminary, one-sided, or ambiguous, record that limitation. A measurement of an excited anion alone cannot give a ground-state label on its own.
+
+Define z=IE/EA and Γ=(IE−EA)/(IE+EA). For positive inputs the exact test is 2(IE−EA)² compared with (IE+EA)²; equality is on the wall. Report central outcome and the entire independent uncertainty box, plus η=(IE−EA)/2, χ=(IE+EA)/2 and ω/η=1/(2Γ²). A supported contrary outcome defeats that individual prediction. An unavailable or wall-straddling measurement stays unresolved. Do not treat the eight correlated chemistry predictions as eight independent random trials.
+
+Use the earlier fixed numerical alternatives 5, 5.8, 5.82, 5.83, 5.85, 5.9 and 6 without retuning. Report whether any heavy anion actually narrows the empirical interval of indistinguishable cutoffs. Tracking a correct inside/outside call alone does not pick out one exact real-valued cutoff from other numbers with identical labels.
