@@ -67,3 +67,5 @@ import LoopWall
 #print axioms rung0_Rh
 #print axioms rung0_Ag
 #print axioms window_silver_silicon
+#print axioms ordinary_window_nitrogen_caesium
+#print axioms rung0_Cs

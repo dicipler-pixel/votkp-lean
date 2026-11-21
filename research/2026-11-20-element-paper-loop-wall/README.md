@@ -8,7 +8,7 @@ check. It is kept for the element paper.
 
 ## What is proved (`lean/LoopWall.lean` and `lean/OpeningMap.lean`, core Lean 4.34.1, no Mathlib, exact `Rat` arithmetic)
 
-101 theorems in `LoopWall.lean` and 72 in `OpeningMap.lean`. Axioms: only `propext`, `Classical.choice`, `Quot.sound`. No `sorry`, `admit`,
+116 theorems in `LoopWall.lean` and 87 in `OpeningMap.lean`. Axioms: only `propext`, `Classical.choice`, `Quot.sound`. No `sorry`, `admit`,
 `native_decide` or `axiom`. Run `lean/run_checks.sh`; its output is `lean/run_checks_output.txt`.
 
 The peel step of an ordered pair of thresholds (a, then b) has ratio z = b/a and reflection
@@ -106,7 +106,7 @@ The peel step of an ordered pair of thresholds (a, then b) has ratio z = b/a and
 
 ## The page
 
-`VOTKP_Element_Paper_Loop_Wall_v4_20261121.html` (hydrogen to tin) is the newest readable breakdown; v3 (hydrogen to rhodium) is kept; `VOTKP_Element_Paper_Loop_Wall_v2_20261121.html` is the readable breakdown of all of the above, hydrogen to
+`VOTKP_Element_Paper_Loop_Wall_v5_20261121.html` (hydrogen to caesium) is the newest readable breakdown; v4 (hydrogen to tin) is kept; v3 (hydrogen to rhodium) is kept; `VOTKP_Element_Paper_Loop_Wall_v2_20261121.html` is the readable breakdown of all of the above, hydrogen to
 zirconium, built by `html/build_element_paper_html_v2.py` with `html/element_paper_template_v2.html`.
 Version 1 (hydrogen to zinc) is kept beside it.
 It is built by `html/build_element_paper_html_v1.py` from the archive and the Lean files

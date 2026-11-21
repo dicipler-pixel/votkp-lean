@@ -416,6 +416,17 @@ theorem rung0_Pd : outside (8.336839 / 0.56214) := by unfold outside; grind
 theorem rung0_Ag : inside (7.576234 / 1.30447) := by unfold inside; grind
 theorem rung0_In : outside (5.7863558 / 0.38392) := by unfold outside; grind
 theorem rung0_Sn : outside (7.343918 / 1.112070) := by unfold outside; grind
+/-- Batch 11 anion rungs, antimony to caesium (xenon has no bound anion). -/
+theorem rung0_Sb : outside (8.608389 / 1.047401) := by unfold outside; grind
+theorem rung0_Te : inside (9.009808 / 1.970875) := by unfold inside; grind
+theorem rung0_I : inside (10.451236 / 3.0590465) := by unfold inside; grind
+theorem rung0_Cs : outside (3.89390572743 / 0.471626) := by unfold outside; grind
+/-- Ordinary steps alone, hydrogen to caesium: nitrogen's helium-core opening is the largest inside
+and caesium's xenon-core opening the smallest outside, so a cutoff of 6 no longer sorts them. -/
+theorem ordinary_window_nitrogen_caesium :
+    inside (552.06741 / 97.8901) ∧ outside (23.15745 / 3.89390572743) ∧
+    (23.15745 / 3.89390572743 : Rat) < 6 := by
+  unfold inside outside; refine ⟨?_, ?_, ?_⟩ <;> grind
 /-- The data window: silver's anion rung is inside and silicon's is outside. -/
 theorem window_silver_silicon :
     inside (7.576234 / 1.30447) ∧ outside (8.15168 / 1.3895212) := by

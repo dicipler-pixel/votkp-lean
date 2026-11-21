@@ -1,0 +1,2 @@
+ordinary steps 260 energy differences 0 ratio differences 0
+outside the wall: [('Sb', 0, 8.218809), ('Cs', 0, 8.256342), ('Cs', 1, 5.947101)]
