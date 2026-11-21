@@ -1,14 +1,24 @@
-# Element paper: the loop wall (H to Ne)
+# Element paper: the loop wall (hydrogen to caesium)
 
-Jeromie Beasley · 20 November 2026 · VOTKP element work, first two batches (Z = 1 to 10)
+Jeromie Beasley · 20–21 November 2026 · VOTKP element work, eleven batches (Z = 1 to 55)
 
-This folder holds the Lean formalization of the loop wall and the hydrogen-to-neon element
-certificates, the arithmetic checks of the two element batches, and the research batches they
-check. It is kept for the element paper.
+This folder holds the Lean formalization of the loop wall and the element certificates from hydrogen
+to caesium, the independent archive checks of every batch, the research batches they check (researched
+with ChatGPT, reviewed in `CLAUDE_REVIEW.md`), the quantum-chemistry links, and the readable page.
+
+**State at 21 November 2026.**
+- Only two kinds of step from hydrogen to caesium land outside the wall. One is the anion rung. The
+  other is the first opening of a noble-gas core: lithium, beryllium, boron, carbon, sodium,
+  potassium, rubidium and caesium (8 of 1,485 ordinary steps).
+- Every step sorts the same way for any cutoff between silver's anion rung (5.8079) and silicon's
+  (5.8665). The derived wall 3 + 2√2 = 5.8284 lies in that window.
+- At the anion rung the wall is exactly electrophilicity = hardness.
+- The written prediction for the next batches: gold, platinum, iridium and astatine inside; osmium,
+  bismuth, polonium and lead outside.
 
 ## What is proved (`lean/LoopWall.lean` and `lean/OpeningMap.lean`, core Lean 4.34.1, no Mathlib, exact `Rat` arithmetic)
 
-116 theorems in `LoopWall.lean` and 87 in `OpeningMap.lean`. Axioms: only `propext`, `Classical.choice`, `Quot.sound`. No `sorry`, `admit`,
+118 theorems in `LoopWall.lean` and 87 in `OpeningMap.lean`. Axioms: only `propext`, `Classical.choice`, `Quot.sound`. No `sorry`, `admit`,
 `native_decide` or `axiom`. Run `lean/run_checks.sh`; its output is `lean/run_checks_output.txt`.
 
 The peel step of an ordered pair of thresholds (a, then b) has ratio z = b/a and reflection
@@ -103,6 +113,26 @@ The peel step of an ordered pair of thresholds (a, then b) has ratio z = b/a and
    anion) and rubidium's krypton-core opening. Every other ordinary step is inside
    (`ladder_Kr_all_inside` to `ladder_Zr_all_inside`; the rubidium theorem leaves out only its
    core opening, certified in `coreKr_outside`). Review exchange: `CLAUDE_REVIEW.md`.
+18. **Batches 9 to 11, niobium to caesium** (`batch9/`, `batch10/`, `batch11/`, checked by
+   `checks/check_batch9_v1.py` to `checks/check_batch11_v1.py`). Every energy and ratio matches the
+   archive. The new anion-rung certificates run from `rung0_Nb` to `rung0_Cs`, including
+   `window_silver_silicon` and `ordinary_window_nitrogen_caesium`. The ladder certificates extend
+   to `ladder_Cs_all_inside`.
+19. **The mixed-face loop and the angle test.** The sum of the two Γ² values against one: carbon with
+   nitrogen is uniquely closest to contact among 427 adjacent pairs. Its forward-sector loop closes
+   only between 13.115° and 89.823° (`checks/lambert_jump_check_v1.py`,
+   `checks/check_forward_sector_v1.py`).
+20. **Quantum-chemistry links** (`QUANTUM_CHEMISTRY_LINKS.md`):
+    - the anion rung is hardness over electronegativity, and the wall is electrophilicity = hardness
+      (`gam_anion_rung`, `omega_eta_wall`; `checks/check_hardness_electrophilicity_v1.py`);
+    - the junction sum rule is the delocalization-index sum rule;
+    - the localization tensor is the second moment of the same weights
+      (`checks/check_chemistry_links_v1.py`);
+    - the screening events need the electron's spinor (Dirac) structure.
+21. **Screws and rings.**
+    - Selenium and tellurium screw signs obey the same law as β-manganese
+      (`checks/check_se_screw_v1.py`, `checks/check_tellurium_screw_v1.py`).
+    - The spinor-peel recovery is checked in `spinor_recovery/`.
 
 ## The page
 
