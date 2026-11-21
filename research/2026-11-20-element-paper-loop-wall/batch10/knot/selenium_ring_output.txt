@@ -1,0 +1,4 @@
+8 sites, 8 published bonds, 48 strict half-plane checks
+minimum central oriented determinant = 0.004549211500
+minimum one-standard-uncertainty-box lower bound = 0.004441472100
+Swapping vertices 3 and 6 fails the convexity certificate.

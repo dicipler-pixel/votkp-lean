@@ -1,0 +1,9 @@
+8 sites, 8 published bonds, 48 strict half-plane checks
+minimum central oriented determinant = 0.004549211500
+minimum one-standard-uncertainty-box lower bound = 0.004441472100
+Swapping vertices 3 and 6 fails the convexity certificate.
+operation 1, potentially overlapping integer shifts [(0, 0), (0, 0), (0, 0)]
+operation 2, potentially overlapping integer shifts [(1, 0), (-1, 0), (2, 1)]
+operation 3, potentially overlapping integer shifts [(1, 0), (1, 1), (2, 2)]
+operation 4, potentially overlapping integer shifts [(0, 0), (1, 2), (1, 0)]
+Zero distinct candidate boxes. All distinct rings have disjoint convex hulls, including coordinate error boxes.

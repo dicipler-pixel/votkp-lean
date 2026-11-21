@@ -1,0 +1,13 @@
+Pinned CIF: 24 coordinates and their 24 uncertainties match Lean; 8 bonds and 4 symmetry operations verified.
+Lean (version 4.34.1, x86_64-unknown-linux-gnu, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)
+'VOTKP.SeleniumRing.subSound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.SeleniumRing.mulSound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.SeleniumRing.orientationSound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.SeleniumRing.allPublishedEdgesStrict' depends on axioms: [propext, Quot.sound]
+'VOTKP.SeleniumRing.indexedLower' depends on axioms: [propext]
+'VOTKP.SeleniumRing.projectedStrict' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.SeleniumRing.permutedBondsFail' depends on axioms: [propext, Quot.sound]
+'VOTKP.SeleniumRing.axisCriterion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.SeleniumRing.allBoxesContainTheirSites' does not depend on any axioms
+'VOTKP.SeleniumRing.onlyIdentityCopy' depends on axioms: [propext, Quot.sound]
+Rejected assigning the nonnegative orientation test to the vertex 3/6 permutation.

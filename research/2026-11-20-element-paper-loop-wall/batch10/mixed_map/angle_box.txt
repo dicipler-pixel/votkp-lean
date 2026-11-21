@@ -1,0 +1,2 @@
+Upper contact interval from the two energy boxes: [89.822554703, 89.822849767] degrees.
+Rotation from 90 degrees to upper contact: [0.177150233, 0.177445297] degrees.
