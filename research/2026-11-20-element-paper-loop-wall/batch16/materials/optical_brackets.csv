@@ -1,0 +1,19 @@
+channel,lambda_target_um,lambda_low_um,lambda_high_um,n_low,k_low,n_high,k_high,year,source,sha256_original_YAML
+Os ordinary,0.45,0.450,0.450,4.57,4.68,4.57,4.68,1986,https://refractiveindex.info/?shelf=main&book=Os&page=Nemoshkalenko-o,d1294db03f615f97d096ceb8b7e8ebe3329b81654d2f3ebeefc293ffcf66ffc8
+Os ordinary,0.55,0.550,0.550,5.86,2.99,5.86,2.99,1986,https://refractiveindex.info/?shelf=main&book=Os&page=Nemoshkalenko-o,d1294db03f615f97d096ceb8b7e8ebe3329b81654d2f3ebeefc293ffcf66ffc8
+Os ordinary,0.65,0.650,0.650,4.83,1.87,4.83,1.87,1986,https://refractiveindex.info/?shelf=main&book=Os&page=Nemoshkalenko-o,d1294db03f615f97d096ceb8b7e8ebe3329b81654d2f3ebeefc293ffcf66ffc8
+Os extraordinary,0.45,0.450,0.450,3.85,4.44,3.85,4.44,1986,https://refractiveindex.info/?shelf=main&book=Os&page=Nemoshkalenko-e,859ba30a1584640d273210fc3a737b2a87ef80a9ef332bd00b332e5354683732
+Os extraordinary,0.55,0.540,0.560,4.22,3.15,4.03,2.96,1986,https://refractiveindex.info/?shelf=main&book=Os&page=Nemoshkalenko-e,859ba30a1584640d273210fc3a737b2a87ef80a9ef332bd00b332e5354683732
+Os extraordinary,0.65,0.640,0.660,2.98,2.94,2.67,3.17,1986,https://refractiveindex.info/?shelf=main&book=Os&page=Nemoshkalenko-e,859ba30a1584640d273210fc3a737b2a87ef80a9ef332bd00b332e5354683732
+Ir polycrystal,0.45,0.450,0.450,1.757,3.992,1.757,3.992,1986,https://refractiveindex.info/?shelf=main&book=Ir&page=Roberts,bde9c4a42d15be91923cfd6bbf28252b97ac7f9a3cc506367b3e2b8c3ca49aca
+Ir polycrystal,0.55,0.550,0.550,2.149,4.704,2.149,4.704,1986,https://refractiveindex.info/?shelf=main&book=Ir&page=Roberts,bde9c4a42d15be91923cfd6bbf28252b97ac7f9a3cc506367b3e2b8c3ca49aca
+Ir polycrystal,0.65,0.650,0.650,2.531,5.234,2.531,5.234,1986,https://refractiveindex.info/?shelf=main&book=Ir&page=Roberts,bde9c4a42d15be91923cfd6bbf28252b97ac7f9a3cc506367b3e2b8c3ca49aca
+Pt film,0.45,0.449965,0.451621,1.657,3.761,1.662,3.774,2024,https://refractiveindex.info/?shelf=main&book=Pt&page=Tselin,8122aa98bbefbb0250f45af5257c3dd709aace5df237fe6b31bbb9ed5781d568
+Pt film,0.55,0.549315,0.550970,1.926,4.494,1.930,4.506,2024,https://refractiveindex.info/?shelf=main&book=Pt&page=Tselin,8122aa98bbefbb0250f45af5257c3dd709aace5df237fe6b31bbb9ed5781d568
+Pt film,0.65,0.648664,0.650320,2.227,5.184,2.232,5.195,2024,https://refractiveindex.info/?shelf=main&book=Pt&page=Tselin,8122aa98bbefbb0250f45af5257c3dd709aace5df237fe6b31bbb9ed5781d568
+Au film,0.45,0.4305,0.4509,1.45,1.948,1.38,1.914,1972,https://refractiveindex.info/?shelf=main&book=Au&page=Johnson,9f4bdab6bd49f7c6a1c48b5fb5482c7448caf4b6de39594a34ecd66dcf592774
+Au film,0.55,0.5486,0.5821,0.43,2.455,0.29,2.863,1972,https://refractiveindex.info/?shelf=main&book=Au&page=Johnson,9f4bdab6bd49f7c6a1c48b5fb5482c7448caf4b6de39594a34ecd66dcf592774
+Au film,0.65,0.6168,0.6595,0.21,3.272,0.14,3.697,1972,https://refractiveindex.info/?shelf=main&book=Au&page=Johnson,9f4bdab6bd49f7c6a1c48b5fb5482c7448caf4b6de39594a34ecd66dcf592774
+Hg liquid,0.45,0.44280,0.47686,1.02698,3.80193,1.18600,4.08981,1981,https://refractiveindex.info/?shelf=main&book=Hg&page=Inagaki,be585b9a15d93bc5b94ceb363ceb6540099c7a37ac5a51ac6b3e9c0c6cbb2c54
+Hg liquid,0.55,0.51660,0.56356,1.38332,4.40608,1.62088,4.75050,1981,https://refractiveindex.info/?shelf=main&book=Hg&page=Inagaki,be585b9a15d93bc5b94ceb363ceb6540099c7a37ac5a51ac6b3e9c0c6cbb2c54
+Hg liquid,0.65,0.61992,0.68880,1.90988,5.14953,2.28417,5.58189,1981,https://refractiveindex.info/?shelf=main&book=Hg&page=Inagaki,be585b9a15d93bc5b94ceb363ceb6540099c7a37ac5a51ac6b3e9c0c6cbb2c54

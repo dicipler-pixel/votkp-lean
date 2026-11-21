@@ -1,0 +1,6 @@
+phase,space_group_or_setting,conditions,a_A,b_A,c_A,alpha_deg,beta_deg,gamma_deg,independent_site_index,shortest_A,second_distinct_A,multiplicity_shortest,source
+alpha,rhombohedral primitive,"crystalline sample, pressure and T unspecified in CIF",3.005,3.005,3.005,70.52,70.52,70.52,0,3.005,3.469499,6,https://qiserver.ugr.es/cod/1538834.cif
+beta,I4/mmm,low-temperature tetragonal cell; handbook,3.995,3.995,2.825,90,90,90,0,2.825,3.158349,2,https://doi.org/10.1039/9781849735155
+gamma,C2/m,20.0(5) GPa at room temperature; Table II (2007),5.179,2.797,7.964,90,107.96,90,0,2.797,2.934437,2,https://doi.org/10.1143/JPSJ.76.023601
+gamma,C2/m,20.0(5) GPa at room temperature; Table II (2007),5.179,2.797,7.964,90,107.96,90,1,2.797,2.934437,2,https://doi.org/10.1143/JPSJ.76.023601
+delta,P63/mmc,"193 GPa room temperature, handbook",2.612,2.612,4.284,90,90,120,0,2.612,2.619608,6,https://doi.org/10.1088/2053-1591/2/1/016502

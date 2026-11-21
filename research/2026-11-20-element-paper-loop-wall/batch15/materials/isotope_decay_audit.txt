@@ -1,0 +1,10 @@
+Binding-energy sums, eV: Re, Os, H-like Os 454144.43352 469448.05823 85614.42
+Net electronic correction, eV: 70310.79529 rectangular width: 2263.71031
+Threshold-span IE75/IE1 central and interval: 10616.22488996006903665274359 10616.04517956553985827770778 10616.40460540173436600407741
+Historical neutral/bare rate central and bare-width-only limits: 1276595744.680851063829787234 1203438395.415472779369627507 1359223300.970873786407766990
+Ratio of the two central spans 120249.5009208167539340420137
+First 29 threshold sum Os minus Re, eV: 32.81471 box -1047.10560 1112.73502
+Direct mass + 46 remaining threshold pairs, eV: 72761.01 width 1184.69 box 71576.32 73945.70
+Daughter free-electron comparator, eV: -12853.41 width 1184.84
+Excited Os: bare parent, K capture, eV: 63005.010 width 1203.690
+Excited Os: neutral parent, continuum, eV: -7285.100 width 20.300

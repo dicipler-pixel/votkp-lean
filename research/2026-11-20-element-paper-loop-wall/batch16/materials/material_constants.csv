@@ -1,0 +1,6 @@
+Z,symbol,phase_near_295K,MP_NIST_2025_K,MP_unc_as_tabulated_K,MP_RSC_K,BP_RSC_K,density_RSC_g_cm3,rho_Ekin_295K_microohm_cm,kappa_300K_W_mK,kappa_source,SC_T_K,SC_material,RSC_covalent_A,RSC_nonbonded_A,alpha0_recommended_au,alpha0_unc_au,CIF_ref
+76,Os,hcp,3328,30,3306,5281,22.5872,9.13,87.6,Ekin,0.66,bulk Os,1.36,2.16,57,3,9008510
+77,Ir,fcc,2719,4[6],2719,4701,22.5622,5.07,147,Ekin,0.112,bulk Ir,1.32,2.13,54,7,9008470
+78,Pt,fcc,2041.9,0.5,2041.4,4098,21.5,10.6,71.6,Ekin,0.00062-0.00138,compressed powder only,1.30,2.13,48,4,9008480
+79,Au,fcc,1337.33,0 ITS-90 fixed point,1337.33,3109,19.3,2.23,317,Ekin,,no transition in bulk tested down to 0.000060 K,1.30,2.14,36,3,9008463
+80,Hg,liquid,234.3210,0.0005,234.321,629.769,13.5336,95.9,8.34,Ho Powell Liley liquid,4.154 / 3.95,solid alpha/beta respectively,1.32,2.23,33.91,0.34,1538834

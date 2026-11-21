@@ -1,21 +1,22 @@
-# Element paper: the loop wall (hydrogen to caesium)
+# Element paper: the loop wall (hydrogen to astatine)
 
-Jeromie Beasley · 20–21 November 2026 · VOTKP element work, eleven batches (Z = 1 to 55)
+Jeromie Beasley · 20–21 November 2026 · VOTKP element work, seventeen batches (Z = 1 to 85)
 
 This folder holds the Lean formalization of the loop wall and the element certificates from hydrogen
-to caesium, the independent archive checks of every batch, the research batches they check (researched
+to astatine, the independent archive checks of every batch, the research batches they check (researched
 with ChatGPT, reviewed in `CLAUDE_REVIEW.md`), the quantum-chemistry links, and the readable page.
 
 **State at 21 November 2026.**
-- Only two kinds of step from hydrogen to caesium land outside the wall. One is the anion rung. The
+- Only two kinds of step from hydrogen to astatine land outside the wall. One is the anion rung. The
   other is the first opening of a noble-gas core: lithium, beryllium, boron, carbon, sodium,
-  potassium, rubidium and caesium (8 of 1,485 ordinary steps).
+  potassium, rubidium and caesium (8 of 3,570 ordinary steps).
 - Every step sorts the same way for any cutoff between silver's anion rung (5.8079) and silicon's
   (5.8665). The derived wall 3 + 2√2 = 5.8284 lies in that window.
 - At the anion rung the wall is exactly electrophilicity = hardness.
 - The heavy-anion prediction (written 09:24, before the numbers): gold, platinum, iridium and astatine
-  inside; osmium, bismuth and lead outside. All seven testable calls hold (`heavy_anion_prediction`);
-  polonium stays open. Batches 12 to 17 (barium to astatine) are reviewed in `CLAUDE_REVIEW.md`.
+  inside; osmium, bismuth and lead outside. All seven adopted experimental point values agree (`heavy_anion_prediction`).
+  The eighth call, polonium outside, is provisionally contradicted by three laser fits in the same experiment.
+  The [polonium source audit](batch17/polonium/README.md) records the missing systematic uncertainty. Batches 12 to 17 (barium to astatine) are reviewed in `CLAUDE_REVIEW.md`.
 
 ## What is proved (`lean/LoopWall.lean` and `lean/OpeningMap.lean`, core Lean 4.34.1, no Mathlib, exact `Rat` arithmetic)
 

@@ -1,0 +1,6 @@
+'ElementPaper.ReEnergy.startAtChargedMass' depends on axioms: [propext, Quot.sound]
+'ElementPaper.ReEnergy.excitedKWindow' does not depend on any axioms
+'ElementPaper.ReEnergy.endpointCancel' depends on axioms: [propext, Quot.sound]
+'ElementPaper.ReEnergy.re187ChannelBox' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.ReEnergy.re185ChannelBox' depends on axioms: [propext, Quot.sound]
+'ElementPaper.ReEnergy.endpoints' does not depend on any axioms

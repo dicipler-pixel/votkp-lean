@@ -1,0 +1,17 @@
+Os ordinary ['0.65462058', '0.58142633', '0.48460484']
+Os extraordinary ['0.64381616', '0.53649928', '0.52845247']
+Ir polycrystal ['0.70140773', '0.73174232', '0.74602835']
+Pt film ['0.68744763', '0.73238035', '0.76142200']
+Au film ['0.40819372', '0.79155328', '0.95652227']
+Hg liquid ['0.77866409', '0.77939857', '0.78142814']
+alpha 0 3.005 3.469499 6
+beta 0 2.825 3.158349 2
+gamma 0 2.797 2.934437 2
+gamma 1 2.797 2.934437 2
+delta 0 2.612 2.619608 6
+Os sigma, MS/m 10.9529 solid contact r (pm) 133.765 hcp
+Ir sigma, MS/m 19.7239 solid contact r (pm) 135.743 fcc
+Pt sigma, MS/m 9.434 solid contact r (pm) 138.703 fcc
+Au sigma, MS/m 44.843 solid contact r (pm) 144.188 fcc
+Hg sigma, MS/m 1.0428 solid contact r (pm) 150.25 liquid at 295 K
+217 IAEA rows, 218 FRIB rows, 840 spectral lines, 23 ionic radii, 31 accepted and 14 set-aside cell records, 18 optical rows

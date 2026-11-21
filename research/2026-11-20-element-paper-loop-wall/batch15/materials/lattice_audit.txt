@@ -1,0 +1,7 @@
+NoPTM1 relative basal minus interlayer: 0.0008135392563941805314376865 printed shell order: interlayer
+NoPTM3 relative basal minus interlayer: 0.0069253133155928974787500266 printed shell order: interlayer
+He1 relative basal minus interlayer: 0.0126123692625406737222912771 printed shell order: interlayer
+He2 relative basal minus interlayer: 0.0109892147537857444735995100 printed shell order: interlayer
+W distinct-temperature pair comparisons plus replicate pairs: {'increase': 589, 'decrease': 4, 'tie': 2} largest decline: (Decimal('-0.0013'), '9006493', '9006494', '1527', '1537')
+W temperature endpoints, cell lengths: (298, '3.1648') (3548, '3.2358')
+W fractional endpoint length and volume gains: 0.022434277047522750252780586 0.068824012602051991037697400

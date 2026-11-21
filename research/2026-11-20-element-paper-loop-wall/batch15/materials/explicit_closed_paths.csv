@@ -1,0 +1,6 @@
+element,COD,graph,vertices_units,divisor,nominal_edge_A,closure,test
+Lu,9010998,hcp,0/0/0 2/4/3 0/6/0 2/4/-3 0/0/0,6,3.434194603178451213844644663,zero translation,four-segment simple polygon
+Hf,9008501,hcp,0/0/0 2/4/3 0/6/0 2/4/-3 0/0/0,6,3.130755846969439636142345181,zero translation,four-segment simple polygon
+Ta,1541266,bcc,0/0/0 1/1/1 2/0/0 1/-1/-1 0/0/0,2,2.860100857522335697256001595,zero translation,parallelogram
+W,9008558,bcc,0/0/0 1/1/1 2/0/0 1/-1/-1 0/0/0,2,2.740701935102575141026687081,zero translation,parallelogram
+Re,9008512,hcp,0/0/0 2/4/3 0/6/0 2/4/-3 0/0/0,6,2.740357462692291414800480130,zero translation,four-segment simple polygon
