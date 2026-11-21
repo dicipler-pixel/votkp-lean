@@ -769,6 +769,161 @@ theorem ladder_Mn_all_inside :
     inside (8571.95438 / 8140.7864 : Rat) := by
   unfold inside; refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩ <;> grind
 
+/-- Every ordinary step of the Fe ladder (25 steps) is inside the wall. -/
+theorem ladder_Fe_all_inside :
+    inside (16.19921 / 7.9024681 : Rat) ∧
+    inside (30.651 / 16.19921 : Rat) ∧
+    inside (54.91 / 30.651 : Rat) ∧
+    inside (75.0 / 54.91 : Rat) ∧
+    inside (98.985 / 75.0 : Rat) ∧
+    inside (124.9671 / 98.985 : Rat) ∧
+    inside (151.06 / 124.9671 : Rat) ∧
+    inside (233.6 / 151.06 : Rat) ∧
+    inside (262.1 / 233.6 : Rat) ∧
+    inside (290.9 / 262.1 : Rat) ∧
+    inside (330.8 / 290.9 : Rat) ∧
+    inside (361.0 / 330.8 : Rat) ∧
+    inside (392.2 / 361.0 : Rat) ∧
+    inside (456.2 / 392.2 : Rat) ∧
+    inside (489.312 / 456.2 : Rat) ∧
+    inside (1262.7 / 489.312 : Rat) ∧
+    inside (1357.8 / 1262.7 : Rat) ∧
+    inside (1460.0 / 1357.8 : Rat) ∧
+    inside (1575.6 / 1460.0 : Rat) ∧
+    inside (1687.0 / 1575.6 : Rat) ∧
+    inside (1798.4 / 1687.0 : Rat) ∧
+    inside (1950.4 / 1798.4 : Rat) ∧
+    inside (2045.759 / 1950.4 : Rat) ∧
+    inside (8828.1864 / 2045.759 : Rat) ∧
+    inside (9277.6886 / 8828.1864 : Rat) := by
+  unfold inside; refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩ <;> grind
+
+/-- Every ordinary step of the Co ladder (26 steps) is inside the wall. -/
+theorem ladder_Co_all_inside :
+    inside (17.0844 / 7.88101 : Rat) ∧
+    inside (33.5 / 17.0844 : Rat) ∧
+    inside (51.27 / 33.5 : Rat) ∧
+    inside (79.5 / 51.27 : Rat) ∧
+    inside (102.0 / 79.5 : Rat) ∧
+    inside (128.9 / 102.0 : Rat) ∧
+    inside (157.8 / 128.9 : Rat) ∧
+    inside (186.14 / 157.8 : Rat) ∧
+    inside (275.4 / 186.14 : Rat) ∧
+    inside (305.32 / 275.4 : Rat) ∧
+    inside (336.1 / 305.32 : Rat) ∧
+    inside (378.5 / 336.1 : Rat) ∧
+    inside (410.0 / 378.5 : Rat) ∧
+    inside (441.1 / 410.0 : Rat) ∧
+    inside (511.96 / 441.1 : Rat) ∧
+    inside (546.588 / 511.96 : Rat) ∧
+    inside (1397.2 / 546.588 : Rat) ∧
+    inside (1504.5 / 1397.2 : Rat) ∧
+    inside (1606.0 / 1504.5 : Rat) ∧
+    inside (1724.0 / 1606.0 : Rat) ∧
+    inside (1844.0 / 1724.0 : Rat) ∧
+    inside (1960.8 / 1844.0 : Rat) ∧
+    inside (2119.4 / 1960.8 : Rat) ∧
+    inside (2218.876 / 2119.4 : Rat) ∧
+    inside (9544.1817 / 2218.876 : Rat) ∧
+    inside (10012.1297 / 9544.1817 : Rat) := by
+  unfold inside; refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩ <;> grind
+
+/-- Every ordinary step of the Ni ladder (27 steps) is inside the wall. -/
+theorem ladder_Ni_all_inside :
+    inside (18.168838 / 7.639878 : Rat) ∧
+    inside (35.187 / 18.168838 : Rat) ∧
+    inside (54.92 / 35.187 : Rat) ∧
+    inside (76.06 / 54.92 : Rat) ∧
+    inside (108.0 / 76.06 : Rat) ∧
+    inside (132.0 / 108.0 : Rat) ∧
+    inside (162.0 / 132.0 : Rat) ∧
+    inside (193.2 / 162.0 : Rat) ∧
+    inside (224.7 / 193.2 : Rat) ∧
+    inside (319.5 / 224.7 : Rat) ∧
+    inside (351.6 / 319.5 : Rat) ∧
+    inside (384.5 / 351.6 : Rat) ∧
+    inside (429.3 / 384.5 : Rat) ∧
+    inside (462.8 / 429.3 : Rat) ∧
+    inside (495.4 / 462.8 : Rat) ∧
+    inside (571.07 / 495.4 : Rat) ∧
+    inside (607.02 / 571.07 : Rat) ∧
+    inside (1540.1 / 607.02 : Rat) ∧
+    inside (1646.0 / 1540.1 : Rat) ∧
+    inside (1758.0 / 1646.0 : Rat) ∧
+    inside (1880.0 / 1758.0 : Rat) ∧
+    inside (2008.1 / 1880.0 : Rat) ∧
+    inside (2130.5 / 2008.1 : Rat) ∧
+    inside (2295.6 / 2130.5 : Rat) ∧
+    inside (2399.259 / 2295.6 : Rat) ∧
+    inside (10288.8848 / 2399.259 : Rat) ∧
+    inside (10775.3948 / 10288.8848 : Rat) := by
+  unfold inside; refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩ <;> grind
+
+/-- Every ordinary step of the Cu ladder (28 steps) is inside the wall. -/
+theorem ladder_Cu_all_inside :
+    inside (20.29239 / 7.72638 : Rat) ∧
+    inside (36.841 / 20.29239 : Rat) ∧
+    inside (57.38 / 36.841 : Rat) ∧
+    inside (79.8 / 57.38 : Rat) ∧
+    inside (103.0 / 79.8 : Rat) ∧
+    inside (139.0 / 103.0 : Rat) ∧
+    inside (166.0 / 139.0 : Rat) ∧
+    inside (198.0 / 166.0 : Rat) ∧
+    inside (232.2 / 198.0 : Rat) ∧
+    inside (265.33 / 232.2 : Rat) ∧
+    inside (367.0 / 265.33 : Rat) ∧
+    inside (401.0 / 367.0 : Rat) ∧
+    inside (436.0 / 401.0 : Rat) ∧
+    inside (483.1 / 436.0 : Rat) ∧
+    inside (518.7 / 483.1 : Rat) ∧
+    inside (552.8 / 518.7 : Rat) ∧
+    inside (632.5 / 552.8 : Rat) ∧
+    inside (670.608 / 632.5 : Rat) ∧
+    inside (1690.5 / 670.608 : Rat) ∧
+    inside (1800.0 / 1690.5 : Rat) ∧
+    inside (1918.0 / 1800.0 : Rat) ∧
+    inside (2044.0 / 1918.0 : Rat) ∧
+    inside (2179.4 / 2044.0 : Rat) ∧
+    inside (2307.3 / 2179.4 : Rat) ∧
+    inside (2479.1 / 2307.3 : Rat) ∧
+    inside (2586.954 / 2479.1 : Rat) ∧
+    inside (11062.4309 / 2586.954 : Rat) ∧
+    inside (11567.6237 / 11062.4309 : Rat) := by
+  unfold inside; refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩ <;> grind
+
+/-- Every ordinary step of the Zn ladder (29 steps) is inside the wall. -/
+theorem ladder_Zn_all_inside :
+    inside (17.96439 / 9.394197 : Rat) ∧
+    inside (39.7233 / 17.96439 : Rat) ∧
+    inside (59.573 / 39.7233 : Rat) ∧
+    inside (82.6 / 59.573 : Rat) ∧
+    inside (108.0 / 82.6 : Rat) ∧
+    inside (133.9 / 108.0 : Rat) ∧
+    inside (173.9 / 133.9 : Rat) ∧
+    inside (203.0 / 173.9 : Rat) ∧
+    inside (238.0 / 203.0 : Rat) ∧
+    inside (274.4 / 238.0 : Rat) ∧
+    inside (310.8 / 274.4 : Rat) ∧
+    inside (417.6 / 310.8 : Rat) ∧
+    inside (453.4 / 417.6 : Rat) ∧
+    inside (490.6 / 453.4 : Rat) ∧
+    inside (540.0 / 490.6 : Rat) ∧
+    inside (577.8 / 540.0 : Rat) ∧
+    inside (613.3 / 577.8 : Rat) ∧
+    inside (697.5 / 613.3 : Rat) ∧
+    inside (737.366 / 697.5 : Rat) ∧
+    inside (1846.8 / 737.366 : Rat) ∧
+    inside (1961.0 / 1846.8 : Rat) ∧
+    inside (2085.0 / 1961.0 : Rat) ∧
+    inside (2214.0 / 2085.0 : Rat) ∧
+    inside (2358.0 / 2214.0 : Rat) ∧
+    inside (2491.5 / 2358.0 : Rat) ∧
+    inside (2669.9 / 2491.5 : Rat) ∧
+    inside (2781.996 / 2669.9 : Rat) ∧
+    inside (11864.9401 / 2781.996 : Rat) ∧
+    inside (12388.9427 / 11864.9401 : Rat) := by
+  unfold inside; refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩ <;> grind
+
 /-- Francium: the encoded central opening ratio is inside, but the input interval straddles the
 wall: IE1 = 4.0727411(1.1e-06) eV, IE2 = 22.4(1.9) eV (S). -/
 theorem francium_straddles :
@@ -776,6 +931,7 @@ theorem francium_straddles :
     inside (20.5 / 4.0727422 : Rat) ∧
     outside (24.3 / 4.0727400 : Rat) := by
   unfold inside outside; refine ⟨?_, ?_, ?_⟩ <;> grind
+
 
 /-- The frozen prediction (written before the Rb and Sr ratios were opened): the Kr-core opening
 is outside for rubidium and inside for strontium. Both hold. -/

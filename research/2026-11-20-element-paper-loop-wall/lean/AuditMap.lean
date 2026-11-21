@@ -4,3 +4,4 @@ import OpeningMap
 #print axioms ladder_Mn_all_inside
 #print axioms francium_straddles
 #print axioms frozen_prediction_Rb_Sr
+#print axioms ladder_Zn_all_inside

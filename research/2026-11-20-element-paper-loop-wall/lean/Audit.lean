@@ -53,3 +53,8 @@ import LoopWall
 #print axioms rung0_Ti
 #print axioms rung0_V
 #print axioms rung0_Cr
+#print axioms rung0_Fe
+#print axioms rung0_Cu
+#print axioms dilute_bcc_fails
+#print axioms chi_reverse
+#print axioms chi_mirror

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Loop Wall: Peeling the Elements from Hydrogen to Zinc</title>
+<style>
+:root{--bg:#05070d;--panel:#0c1120;--ink:#e9edf5;--dim:#9aa6bd;--gold:#e8c46a;--blue:#6fb6ff;--line:#1e2840;--out:#e8c46a;--in:#6fb6ff}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(ellipse at 50% -10%,#14203a 0%,var(--bg) 55%);color:var(--ink);font:16px/1.62 "Iowan Old Style","Palatino Linotype",Georgia,serif}
+main{max-width:1000px;margin:0 auto;padding:40px 22px 80px}
+header{text-align:center;padding:30px 0 10px}
+h1{font-size:2.2em;line-height:1.15;margin:.2em 0;color:var(--gold);font-weight:600;letter-spacing:.01em}
+.sub{color:var(--dim);font-size:1.05em}
+.by{margin-top:14px;font-size:1.05em}
+.ai{max-width:760px;margin:26px auto 0;font-size:.9em;color:var(--dim);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:10px 0}
+h2{color:var(--gold);font-size:1.45em;margin:2.2em 0 .5em;border-bottom:1px solid var(--line);padding-bottom:.25em}
+h3{color:var(--blue);font-size:1.12em;margin:1.6em 0 .4em}
+p{margin:.7em 0}
+.abstract{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 22px;margin-top:22px}
+.eq{display:block;text-align:center;font-size:1.15em;margin:.9em 0;color:#fff;font-family:"Cambria Math","STIX Two Math",Georgia,serif}
+.tag{display:inline-block;font:600 .72em/1 system-ui,sans-serif;letter-spacing:.06em;padding:3px 7px;border-radius:4px;margin-right:6px;vertical-align:2px}
+.D{background:#2b2410;color:var(--gold)}.M{background:#10243b;color:var(--blue)}.R{background:#1f2a1a;color:#a8e08a}.H{background:#2a1830;color:#e0a0ff}
+table{border-collapse:collapse;width:100%;margin:12px 0;font:14px/1.4 system-ui,sans-serif}
+th,td{border-bottom:1px solid var(--line);padding:6px 8px;text-align:right}
+th{color:var(--dim);font-weight:600;text-align:right}
+td:first-child,th:first-child{text-align:left}
+td.out{color:var(--out);font-weight:600}td.in{color:var(--in)}td.na{color:#56617a;text-align:center;font-size:.9em}
+td .g{display:block;font-size:.8em;opacity:.75;font-weight:400}
+td.el b{color:#fff}.zz{color:var(--dim);font-size:.8em}
+.legend{font:13px system-ui,sans-serif;color:var(--dim)}
+.legend b.o{color:var(--out)}.legend b.i{color:var(--in)}
+svg.plot{width:100%;height:auto;background:var(--panel);border:1px solid var(--line);border-radius:10px;margin:10px 0}
+svg .grid{stroke:#1a2236;stroke-width:1}svg .ax{fill:#8592ab;font:12px system-ui,sans-serif}
+svg .wall{stroke:#fff;stroke-width:1.4;stroke-dasharray:6 5}svg .wallt{fill:#fff;font:12px system-ui,sans-serif}
+svg .lab{font:12px system-ui,sans-serif}
+.box{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin:14px 0}
+code{font:13px ui-monospace,Menlo,monospace;color:#cfd8ea}
+ul{margin:.4em 0 .8em 1.2em;padding:0}li{margin:.25em 0}
+footer{margin-top:3em;color:var(--dim);font-size:.9em;border-top:1px solid var(--line);padding-top:1em}
+a{color:var(--blue)}
+</style>
+</head>
+<body>
+<main>
+<header>
+<div class="sub">VOTKP · the Vector of Traits Kept under Peeling · element paper, part one</div>
+<h1>The Loop Wall: Peeling the Elements from Hydrogen to Zinc</h1>
+<div class="by">Jeromie Beasley</div>
+<div class="sub">21 November 2026</div>
+<div class="ai">AI-assisted. The research direction, the framework and the questions are Jeromie Beasley's. The element data passes were researched with ChatGPT; every number was rechecked and the results formalized in Lean with Claude (Anthropic).</div>
+</header>
+
+<div class="abstract">
+<p>Peel an atom one electron at a time and record each step as a ratio <i>z</i> of successive removal energies. Its reflection <b>Γ = (z − 1)/(z + 1)</b> is the half-step tanh(½ ln z) of the intrinsic ledger. A step is <i>outside the loop wall</i> when Γ² &gt; ½, the condition where two equal faces satisfy sinh h<sub>a</sub> · sinh h<sub>b</sub> = 1.</p>
+<p>Running the wall through every element from hydrogen to zinc shows a clean structure:</p>
+<ul>
+<li><b>Few steps cross it.</b> Only two kinds of step ever reach outside: the anion rung (the extra electron coming off) and the first opening of a closed noble-gas core. Every other step from H to Zn, all of them checked against the archive, is inside.</li>
+<li><b>Bare shells never cross.</b> A change of shell alone always lands inside: the hydrogenic floors 4, 9/4, 16/9, … are inside. The departure from the bare shell carries an opening across, and that departure shrinks shell by shell.</li>
+<li><b>Each core opening crosses inward at the same place.</b> The core openings cross inward between C and N, Na and Mg, K and Ca, Rb and Sr, Cs and Ba. A frozen prediction for Rb and Sr passed.</li>
+<li><b>Direction is kept separately from the wall.</b> Reversing a peel flips the sign of Γ and keeps Γ². A crystal mirror does the opposite to a screw sign. So the ledger carries Russell's two halves separately.</li>
+</ul>
+<p>All of it is certified in 154 Lean theorems.</p>
+</div>
+
+<h2>1. The peel and its reflection</h2>
+<p>For an ordered pair of removal energies, first <i>a</i> then <i>b</i>:</p>
+<span class="eq">z = b / a,  r = ln z,  Γ = tanh(r/2) = (z − 1)/(z + 1)</span>
+<p><span class="tag D">DERIVED</span> The ratio comes back from the reflection, z = (1 + Γ)/(1 − Γ). The face apex of a ball is tanh(r/4) = (√z − 1)/(√z + 1). It returns the full ratio on squaring.</p>
+<p><span class="tag D">DERIVED</span> <b>Direction.</b> Reversing the order sends z → 1/z, r → −r and Γ → −Γ. The returned power Γ² is the same both ways. The sign remembers which way the peel went; the power does not. A ledger that keeps only Γ² loses the direction.</p>
+<h3>The loop wall, both branches</h3>
+<span class="eq">Γ² &gt; ½  ⇔  z² − 6z + 1 &gt; 0  ⇔  0 &lt; z &lt; 3 − 2√2  or  z &gt; 3 + 2√2 = 5.8284…</span>
+<p>The upper branch is the forward peel and the lower branch is its reverse. A step and its reverse always sit on the same side: z = 6 gives Γ = 5/7 and z = 1/6 gives Γ = −5/7, both with Γ² = 25/49 &gt; ½. With h = ½ ln z, sinh² h = (z − 1)²/4z = Γ²/(1 − Γ²), so the equal-face condition sinh h<sub>a</sub> sinh h<sub>b</sub> = 1 is exactly Γ² = ½. The wall of the tree and the wall of the peel are one condition.</p>
+<p><span class="tag D">DERIVED</span> <b>Fixed points.</b> Γ = 2/3 exactly at z = 5. A bare change of principal shell has ratio ((n+1)/n)²: 4, 9/4, 16/9, 25/16, 36/25, 49/36. Every one is inside the wall. An opening can only stand outside through a departure from the bare shell, which screening provides at low Z.</p>
+
+<h2>2. Three boundaries in every element</h2>
+<p>Each element is read at its anion rung (z₀ = IE₁/EA, where a bound anion exists) and at each closed-core opening: the last removal above the core, then the first removal from it.</p>
+<ul>
+<li><b>K</b> is the opening of the 1s² core (2s → 1s).</li>
+<li><b>L</b> is the opening of the Ne core (3s → 2p).</li>
+<li><b>M</b> is the opening of the Ar core: 4s → 3p for K and Ca, and the last 3d removal → 3p from Sc onward.</li>
+</ul>
+<p class="legend">Each cell gives z, with Γ below it. <b class="o">Gold</b> means outside the wall, <b class="i">blue</b> inside. Energies come from the NIST-derived archive in the repository. Electron affinities are the 2022 evaluated values.</p>
+<table>
+<thead><tr><th>Element</th><th>Anion rung 0</th><th>K opening</th><th>L opening</th><th>Ar-core opening</th></tr></thead>
+<tbody>
+<tr><td class="el"><b>H</b> <span class="zz">1</span></td><td class="out">18.0304<span class="g">Γ 0.8949</span></td><td class="na">—</td><td class="na">—</td><td class="na">—</td></tr>
+<tr><td class="el"><b>He</b> <span class="zz">2</span></td><td class="na">no bound anion</td><td class="na">—</td><td class="na">—</td><td class="na">—</td></tr>
+<tr><td class="el"><b>Li</b> <span class="zz">3</span></td><td class="out">8.7238<span class="g">Γ 0.7943</span></td><td class="out">14.0289<span class="g">Γ 0.8669</span></td><td class="na">—</td><td class="na">—</td></tr>
+<tr><td class="el"><b>Be</b> <span class="zz">4</span></td><td class="na">no bound anion</td><td class="out">8.4507<span class="g">Γ 0.7884</span></td><td class="na">—</td><td class="na">—</td></tr>
+<tr><td class="el"><b>B</b> <span class="zz">5</span></td><td class="out">29.6651<span class="g">Γ 0.9348</span></td><td class="out">6.8381<span class="g">Γ 0.7448</span></td><td class="na">—</td><td class="na">—</td></tr>
+<tr><td class="el"><b>C</b> <span class="zz">6</span></td><td class="out">8.9217<span class="g">Γ 0.7984</span></td><td class="out">6.0795<span class="g">Γ 0.7175</span></td><td class="na">—</td><td class="na">—</td></tr>
+<tr><td class="el"><b>N</b> <span class="zz">7</span></td><td class="na">no bound anion</td><td class="in">5.6397<span class="g">Γ 0.6988</span></td><td class="na">—</td><td class="na">—</td></tr>
+<tr><td class="el"><b>O</b> <span class="zz">8</span></td><td class="out">9.3203<span class="g">Γ 0.8062</span></td><td class="in">5.3528<span class="g">Γ 0.6852</span></td><td class="na">—</td><td class="na">—</td></tr>
+<tr><td class="el"><b>F</b> <span class="zz">9</span></td><td class="in">5.1226<span class="g">Γ 0.6733</span></td><td class="in">5.1510<span class="g">Γ 0.6748</span></td><td class="na">—</td><td class="na">—</td></tr>
+<tr><td class="el"><b>Ne</b> <span class="zz">10</span></td><td class="na">no bound anion</td><td class="in">5.0014<span class="g">Γ 0.6667</span></td><td class="na">—</td><td class="na">—</td></tr>
+<tr><td class="el"><b>Na</b> <span class="zz">11</span></td><td class="out">9.3791<span class="g">Γ 0.8073</span></td><td class="in">4.8860<span class="g">Γ 0.6602</span></td><td class="out">9.2013<span class="g">Γ 0.8039</span></td><td class="na">—</td></tr>
+<tr><td class="el"><b>Mg</b> <span class="zz">12</span></td><td class="na">no bound anion</td><td class="in">4.7942<span class="g">Γ 0.6548</span></td><td class="in">5.3304<span class="g">Γ 0.6841</span></td><td class="na">—</td></tr>
+<tr><td class="el"><b>Al</b> <span class="zz">13</span></td><td class="out">13.8294<span class="g">Γ 0.8651</span></td><td class="in">4.7194<span class="g">Γ 0.6503</span></td><td class="in">4.2180<span class="g">Γ 0.6167</span></td><td class="na">—</td></tr>
+<tr><td class="el"><b>Si</b> <span class="zz">14</span></td><td class="out">5.8665<span class="g">Γ 0.7087</span></td><td class="in">4.6572<span class="g">Γ 0.6465</span></td><td class="in">3.6943<span class="g">Γ 0.5740</span></td><td class="na">—</td></tr>
+<tr><td class="el"><b>P</b> <span class="zz">15</span></td><td class="out">14.0458<span class="g">Γ 0.8671</span></td><td class="in">4.6047<span class="g">Γ 0.6432</span></td><td class="in">3.3899<span class="g">Γ 0.5444</span></td><td class="na">—</td></tr>
+<tr><td class="el"><b>S</b> <span class="zz">16</span></td><td class="in">4.9877<span class="g">Γ 0.6660</span></td><td class="in">4.5598<span class="g">Γ 0.6403</span></td><td class="in">3.1907<span class="g">Γ 0.5228</span></td><td class="na">—</td></tr>
+<tr><td class="el"><b>Cl</b> <span class="zz">17</span></td><td class="in">3.5894<span class="g">Γ 0.5642</span></td><td class="in">4.5209<span class="g">Γ 0.6377</span></td><td class="in">3.0499<span class="g">Γ 0.5062</span></td><td class="na">—</td></tr>
+<tr><td class="el"><b>Ar</b> <span class="zz">18</span></td><td class="na">no bound anion</td><td class="in">4.4869<span class="g">Γ 0.6355</span></td><td class="in">2.9458<span class="g">Γ 0.4931</span></td><td class="na">—</td></tr>
+<tr><td class="el"><b>K</b> <span class="zz">19</span></td><td class="out">8.6561<span class="g">Γ 0.7929</span></td><td class="in">4.4569<span class="g">Γ 0.6335</span></td><td class="in">2.8647<span class="g">Γ 0.4825</span></td><td class="out">7.2858<span class="g">Γ 0.7586</span></td></tr>
+<tr><td class="el"><b>Ca</b> <span class="zz">20</span></td><td class="out">249.0084<span class="g">Γ 0.9920</span></td><td class="in">4.4301<span class="g">Γ 0.6317</span></td><td class="in">2.8001<span class="g">Γ 0.4737</span></td><td class="in">4.2886<span class="g">Γ 0.6218</span></td></tr>
+<tr><td class="el"><b>Sc</b> <span class="zz">21</span></td><td class="out">36.5787<span class="g">Γ 0.9468</span></td><td class="in">4.4061<span class="g">Γ 0.6300</span></td><td class="in">2.7517<span class="g">Γ 0.4669</span></td><td class="in">2.9684<span class="g">Γ 0.4960</span></td></tr>
+<tr><td class="el"><b>Ti</b> <span class="zz">22</span></td><td class="out">90.3908<span class="g">Γ 0.9781</span></td><td class="in">4.3845<span class="g">Γ 0.6286</span></td><td class="in">2.7021<span class="g">Γ 0.4598</span></td><td class="in">2.2950<span class="g">Γ 0.3930</span></td></tr>
+<tr><td class="el"><b>V</b> <span class="zz">23</span></td><td class="out">12.7851<span class="g">Γ 0.8549</span></td><td class="in">4.3648<span class="g">Γ 0.6272</span></td><td class="in">2.6645<span class="g">Γ 0.4542</span></td><td class="in">1.9626<span class="g">Γ 0.3249</span></td></tr>
+<tr><td class="el"><b>Cr</b> <span class="zz">24</span></td><td class="out">10.0107<span class="g">Γ 0.8184</span></td><td class="in">4.3469<span class="g">Γ 0.6260</span></td><td class="in">2.6333<span class="g">Γ 0.4495</span></td><td class="in">1.7685<span class="g">Γ 0.2776</span></td></tr>
+<tr><td class="el"><b>Mn</b> <span class="zz">25</span></td><td class="na">no bound anion</td><td class="in">4.3305<span class="g">Γ 0.6248</span></td><td class="in">2.6052<span class="g">Γ 0.4452</span></td><td class="in">1.6401<span class="g">Γ 0.2424</span></td></tr>
+<tr><td class="el"><b>Fe</b> <span class="zz">26</span></td><td class="out">51.5706<span class="g">Γ 0.9620</span></td><td class="in">4.3154<span class="g">Γ 0.6237</span></td><td class="in">2.5806<span class="g">Γ 0.4414</span></td><td class="in">1.5464<span class="g">Γ 0.2146</span></td></tr>
+<tr><td class="el"><b>Co</b> <span class="zz">27</span></td><td class="out">11.9003<span class="g">Γ 0.8450</span></td><td class="in">4.3014<span class="g">Γ 0.6227</span></td><td class="in">2.5562<span class="g">Γ 0.4376</span></td><td class="in">1.4795<span class="g">Γ 0.1934</span></td></tr>
+<tr><td class="el"><b>Ni</b> <span class="zz">28</span></td><td class="out">6.6011<span class="g">Γ 0.7369</span></td><td class="in">4.2884<span class="g">Γ 0.6218</span></td><td class="in">2.5371<span class="g">Γ 0.4346</span></td><td class="in">1.4219<span class="g">Γ 0.1742</span></td></tr>
+<tr><td class="el"><b>Cu</b> <span class="zz">29</span></td><td class="out">6.2522<span class="g">Γ 0.7242</span></td><td class="in">4.2762<span class="g">Γ 0.6209</span></td><td class="in">2.5208<span class="g">Γ 0.4320</span></td><td class="in">1.3832<span class="g">Γ 0.1608</span></td></tr>
+<tr><td class="el"><b>Zn</b> <span class="zz">30</span></td><td class="na">no bound anion</td><td class="in">4.2649<span class="g">Γ 0.6201</span></td><td class="in">2.5046<span class="g">Γ 0.4293</span></td><td class="in">1.3436<span class="g">Γ 0.1466</span></td></tr>
+</tbody></table>
+<p><span class="tag R">RECOGNISED</span> Reading the table down the columns:</p>
+<ul>
+<li><b>K opening:</b> outside from Li to C, crosses inward between carbon (6.08) and nitrogen (5.64), and stays inside from then on.</li>
+<li><b>L opening:</b> outside only at sodium (9.20).</li>
+<li><b>Ar-core opening:</b> outside only at potassium (7.29).</li>
+<li><b>Anion rung:</b> outside for most bound anions, but inside for F, S and Cl, the strong attachers.</li>
+</ul>
+<p>Two elements make the boundaries visible:</p>
+<ul>
+<li><b>Oxygen</b> stands on both sides at once: its anion rung is outside and its core opening inside.</li>
+<li><b>Silicon's</b> anion rung is the closest call (Γ = 0.70873 against the wall at 0.70711). It stays outside across its quoted uncertainties.</li>
+</ul>
+<p><span class="tag M">MEASURED</span> <b>Conduction does not need an outside step.</b> Magnesium and calcium are metals with every ordinary step inside, and so are scandium to zinc. The wall reads the atom's own ladder. Conduction is a property of the connections between atoms, and section 5 takes it up.</p>
+
+<h2>3. The opening map across the whole table</h2>
+<p>The same opening can be followed along its whole isoelectronic sequence: every ion with one electron above a given noble core, from the first element that has it to the end of the data. The archive holds 433 such ratios.</p>
+<svg viewBox="0 0 900 420" class="plot" role="img" aria-label="Opening ratio against atomic number for each noble core">
+<line x1="60" x2="880" y1="370.0" y2="370.0" class="grid"/><text x="52" y="374.0" class="ax" text-anchor="end">1</text>
+<line x1="60" x2="880" y1="282.5" y2="282.5" class="grid"/><text x="52" y="286.5" class="ax" text-anchor="end">2</text>
+<line x1="60" x2="880" y1="195.0" y2="195.0" class="grid"/><text x="52" y="199.0" class="ax" text-anchor="end">4</text>
+<line x1="60" x2="880" y1="107.5" y2="107.5" class="grid"/><text x="52" y="111.5" class="ax" text-anchor="end">8</text>
+<line x1="60" x2="880" y1="20.0" y2="20.0" class="grid"/><text x="52" y="24.0" class="ax" text-anchor="end">16</text>
+<text x="60.0" y="388" class="ax" text-anchor="middle">1</text>
+<text x="193.2" y="388" class="ax" text-anchor="middle">20</text>
+<text x="333.3" y="388" class="ax" text-anchor="middle">40</text>
+<text x="473.5" y="388" class="ax" text-anchor="middle">60</text>
+<text x="613.7" y="388" class="ax" text-anchor="middle">80</text>
+<text x="753.8" y="388" class="ax" text-anchor="middle">100</text>
+<text x="880.0" y="388" class="ax" text-anchor="middle">118</text>
+<text x="470.0" y="412" class="ax" text-anchor="middle">atomic number Z</text>
+<line x1="60" x2="880" y1="147.5" y2="147.5" class="wall"/><text x="557.6" y="164.5" class="wallt" text-anchor="middle">loop wall z = 3 + 2√2</text>
+<polyline points="74.0,36.6 81.0,100.6 88.0,127.3 95.0,142.2 102.1,151.6 109.1,158.2 116.1,163.1 123.1,166.8 130.1,169.7 137.1,172.1 144.1,174.1 151.1,175.8 158.1,177.2 165.1,178.5 172.1,179.5 179.1,180.5 186.2,181.3 193.2,182.1 200.2,182.8 207.2,183.4 214.2,184.0 221.2,184.5 228.2,185.0 235.2,185.4 242.2,185.8 249.2,186.2 256.2,186.6 263.2,186.9 270.3,187.2 277.3,187.5 284.3,187.8 291.3,188.1 298.3,188.3 305.3,188.6 312.3,188.8 319.3,189.0 326.3,189.2 333.3,189.4 340.3,189.6 347.4,189.8 354.4,190.0 361.4,190.2 368.4,190.4 375.4,190.5 382.4,190.7 389.4,190.8 396.4,191.0 403.4,191.1 410.4,191.3 417.4,191.4 424.4,191.6 431.5,191.7 438.5,191.9 445.5,192.0 452.5,192.1 459.5,192.3 466.5,192.4 473.5,192.5 480.5,192.7 487.5,192.8 494.5,192.9 501.5,193.1 508.5,193.2 515.6,193.3 522.6,193.4 529.6,193.6 536.6,193.7 543.6,193.8 550.6,193.9 557.6,194.1 564.6,194.2 571.6,194.3 578.6,194.4 585.6,194.6 592.6,194.7 599.7,194.8 606.7,194.9 613.7,195.1 620.7,195.2 627.7,195.3 634.7,195.5 641.7,195.6 648.7,195.7 655.7,195.9 662.7,196.0 669.7,196.1 676.8,196.3 683.8,196.4 690.8,196.6 697.8,196.7 704.8,196.9 711.8,197.0 718.8,197.2 725.8,197.3 732.8,197.5 739.8,197.6 746.8,197.8 753.8,198.0 760.9,198.2 767.9,198.4 774.9,198.6" fill="none" stroke="#e8c46a" stroke-width="1.8"/>
+<circle cx="74.0" cy="36.6" r="4" fill="#e8c46a"/><text x="80.0" y="30.6" class="lab" fill="#e8c46a">He core: Li 14.03</text>
+<polyline points="130.1,89.8 137.1,158.8 144.1,188.3 151.1,205.0 158.1,215.9 165.1,223.5 172.1,229.2 179.1,233.6 186.2,237.1 193.2,240.0 200.2,242.2 207.2,244.5 214.2,246.3 221.2,247.8 228.2,249.1 235.2,250.3 242.2,251.5 249.2,252.5 256.2,253.3 263.2,254.1 270.3,254.8 277.3,255.7 284.3,256.2 291.3,256.8 298.3,257.4 305.3,257.9 312.3,258.4 319.3,258.9 326.3,259.4 333.3,259.8 340.3,260.2 347.4,260.6 354.4,261.0 361.4,261.4 368.4,261.8 375.4,262.2 382.4,262.5 389.4,262.8 396.4,263.2 403.4,263.5 410.4,264.0 417.4,264.4 424.4,264.7 431.5,265.0 438.5,265.3 445.5,265.6 452.5,265.9 459.5,266.2 466.5,266.5 473.5,266.8 480.5,267.1 487.5,267.4 494.5,267.7 501.5,268.0 508.5,268.3 515.6,268.6 522.6,268.9 529.6,269.2 536.6,269.6 543.6,269.9 550.6,270.2 557.6,270.5 564.6,270.8 571.6,271.4 578.6,271.4 585.6,271.8 592.6,272.2 599.7,272.5 606.7,272.9 613.7,273.3 620.7,273.5 627.7,273.9 634.7,274.3 641.7,274.6 648.7,275.0 655.7,275.4 662.7,275.8 669.7,276.2 676.8,276.6 683.8,276.9 690.8,277.4 697.8,277.7 704.8,278.2 711.8,278.6 718.8,279.1 725.8,279.6 732.8,280.0 739.8,280.6 746.8,281.2 753.8,281.2 760.9,281.7 767.9,282.1 774.9,282.5 781.9,283.6 788.9,284.0 795.9,284.3 802.9,285.3 809.9,285.6 816.9,286.2 823.9,287.1" fill="none" stroke="#f0a050" stroke-width="1.8"/>
+<circle cx="130.1" cy="89.8" r="4" fill="#f0a050"/><text x="136.1" y="83.8" class="lab" fill="#f0a050">Ne core: Na 9.20</text>
+<polyline points="186.2,119.3 193.2,186.2 200.2,232.7 207.2,265.1 214.2,284.9 221.2,298.0 228.2,307.5 235.2,315.0 242.2,320.6 249.2,325.6 256.2,329.1 263.2,332.7 270.3,334.6 277.3,337.2 284.3,339.1 291.3,341.0 298.3,342.7 305.3,344.2 312.3,345.5 319.3,346.6 326.3,347.8 333.3,348.6 340.3,349.5 347.4,350.5 354.4,351.1 361.4,351.8 368.4,352.5 375.4,353.1 382.4,353.7 389.4,354.3 396.4,354.8 403.4,355.2 410.4,355.6 417.4,356.0 424.4,356.3 431.5,356.7 438.5,357.1 445.5,357.4 452.5,357.6 459.5,358.0 466.5,358.3 473.5,358.5 480.5,358.8 487.5,359.0 494.5,359.2 501.5,359.4 508.5,359.7 515.6,359.8 522.6,360.1 529.6,360.2 536.6,360.4 543.6,360.6 550.6,360.8 557.6,361.0 564.6,361.1 571.6,361.5 578.6,361.4 585.6,361.5 592.6,361.6 599.7,361.8 606.7,361.9 613.7,362.0 620.7,362.1 627.7,362.3 634.7,362.4 641.7,362.3 648.7,362.6 655.7,362.8 662.7,362.7 669.7,362.9 676.8,362.9 683.8,363.0 690.8,363.1 697.8,363.2 704.8,363.2 711.8,363.3 718.8,363.5 725.8,363.5 732.8,363.7 739.8,363.6 746.8,363.7 753.8,363.8 760.9,363.9 767.9,364.0 774.9,364.0 781.9,364.0 788.9,364.2 795.9,364.2 802.9,364.4 809.9,364.6 816.9,364.7 823.9,364.8" fill="none" stroke="#7fc8ff" stroke-width="1.8"/>
+<circle cx="186.2" cy="119.3" r="4" fill="#7fc8ff"/><text x="192.2" y="113.3" class="lab" fill="#7fc8ff">Ar core: K 7.29</text>
+<polyline points="312.3,133.1 319.3,198.6 326.3,233.3 333.3,263.0 340.3,281.4 347.4,294.0 354.4,302.7 361.4,309.0 368.4,315.7 375.4,319.5 382.4,323.6 389.4,327.6 396.4,330.3 403.4,332.7 410.4,334.5 417.4,336.7 424.4,338.3 431.5,340.3 438.5,341.4 445.5,342.6 452.5,343.9 459.5,344.7 466.5,345.8 473.5,346.7 480.5,347.6 487.5,348.3 494.5,349.1 501.5,349.8 508.5,350.3 515.6,350.9 522.6,351.4 529.6,352.0 536.6,352.5 543.6,352.9 550.6,353.4 557.6,353.7 564.6,354.2 571.6,354.8 578.6,354.9 585.6,355.3 592.6,355.5 599.7,355.9 606.7,356.1 613.7,356.4 620.7,356.7 627.7,356.9 634.7,357.1 641.7,357.4 648.7,357.6 655.7,357.9 662.7,358.1 669.7,358.3 676.8,358.5 683.8,358.7 690.8,358.8 697.8,359.0 704.8,359.2 711.8,359.4 718.8,359.5 725.8,359.7 732.8,359.8 739.8,360.0 746.8,360.1 753.8,360.2 760.9,360.3 767.9,360.5 774.9,360.5 781.9,360.6 788.9,361.1 795.9,360.8 802.9,361.0 809.9,361.1 816.9,361.3 823.9,361.5" fill="none" stroke="#9fe08a" stroke-width="1.8"/>
+<circle cx="312.3" cy="133.1" r="4" fill="#9fe08a"/><text x="318.3" y="127.1" class="lab" fill="#9fe08a">Kr core: Rb 6.53</text>
+<polyline points="438.5,144.9 445.5,208.9 452.5,249.2 459.5,297.5 466.5,325.3 473.5,349.3 480.5,352.5 487.5,347.5 494.5,355.9 501.5,356.9 508.5,351.1 515.6,351.7 522.6,360.3 529.6,361.2 536.6,356.8 543.6,358.0 550.6,358.2 557.6,358.8 564.6,358.0 571.6,360.1 578.6,359.4 585.6,360.2 592.6,360.9 599.7,361.4 606.7,360.4 613.7,361.1 620.7,363.0 627.7,362.1 634.7,361.4 641.7,363.0 648.7,363.4 655.7,362.7 662.7,363.1 669.7,363.5 676.8,362.9 683.8,364.1 690.8,363.5 697.8,363.8 704.8,364.8 711.8,364.3 718.8,364.6 725.8,364.1 732.8,365.0 739.8,365.2 746.8,364.8 753.8,365.0 760.9,364.6 767.9,365.3 774.9,365.0" fill="none" stroke="#d79bff" stroke-width="1.8"/>
+<circle cx="438.5" cy="144.9" r="4" fill="#d79bff"/><text x="444.5" y="128.9" class="lab" fill="#d79bff">Xe core: Cs 5.95</text>
+<polyline points="662.7,154.8 669.7,229.0 676.8,250.9 683.8,281.0 690.8,308.7 697.8,324.4 704.8,350.9 711.8,353.7 718.8,354.8 725.8,351.3 732.8,353.4 739.8,355.8 746.8,359.0 753.8,361.0 760.9,359.3 767.9,358.8 774.9,359.4" fill="none" stroke="#ff8a8a" stroke-width="1.8"/>
+<circle cx="662.7" cy="154.8" r="4" fill="#ff8a8a"/><text x="668.7" y="138.8" class="lab" fill="#ff8a8a">Rn core: Fr 5.50</text>
+</svg>
+<table>
+<thead><tr><th>Core</th><th>Ratios</th><th>First element</th><th>Outside the wall</th></tr></thead>
+<tbody>
+<tr><td>He core</td><td>101</td><td>Li 14.029</td><td>Li, Be, B, C</td></tr>
+<tr><td>Ne core</td><td>100</td><td>Na 9.201</td><td>Na</td></tr>
+<tr><td>Ar core</td><td>92</td><td>K 7.286</td><td>K</td></tr>
+<tr><td>Kr core</td><td>74</td><td>Rb 6.533</td><td>Rb</td></tr>
+<tr><td>Xe core</td><td>49</td><td>Cs 5.947</td><td>Cs</td></tr>
+<tr><td>Rn core</td><td>17</td><td>Fr 5.500</td><td>none (Fr straddles)</td></tr>
+</tbody></table>
+<p><span class="tag D">DERIVED</span> <b>Where each sequence crosses inward.</b> Counted from the first element that has it, each sequence crosses inward after 4, 1, 1, 1 and 1 steps: He, Ne, Ar, Kr and Xe cores. The first ratio falls core by core: 14.03, 9.20, 7.29, 6.53, 5.95. Francium's Rn-core value (5.50) is centrally inside, but its semiempirical second energy gives a range of 5.03–5.97, which straddles the wall.</p>
+<p><span class="tag D">DERIVED</span> <b>The frozen test.</b> Before the numbers were opened, the call was written down: rubidium outside, strontium inside. Both held: Rb at 6.533 and Sr at 3.888.</p>
+<p><span class="tag H">HYPOTHESIS</span> <b>Element 119</b> would start the next core sequence. The written call is that its opening ratio lies inside the wall (1 &lt; IE₂/IE₁ &lt; 3 + 2√2). A reliable measured ratio above 5.8284 would defeat it.</p>
+
+<h2>4. The two screening readouts and the 5/8</h2>
+<p>The last two electrons of every element give two readings of the same pair:</p>
+<ul>
+<li>the gap per unit charge, S = (h − b)/Z;</li>
+<li>the effective screening charge, σ = Z − √(2b).</li>
+</ul>
+<p>Here h and b are the H-like and He-like energies in hartree. At leading order both tend to 5/8.</p>
+<table>
+<thead><tr><th>Element</th><th>S</th><th>σ</th><th>S − σ</th></tr></thead>
+<tbody>
+<tr><td>He</td><td>0.54812</td><td>0.65570</td><td class="in">-0.10758</td></tr>
+<tr><td>Li</td><td>0.57346</td><td>0.64215</td><td class="in">-0.06869</td></tr>
+<tr><td>Be</td><td>0.58636</td><td>0.63679</td><td class="in">-0.05044</td></tr>
+<tr><td>B</td><td>0.59425</td><td>0.63380</td><td class="in">-0.03956</td></tr>
+<tr><td>C</td><td>0.59964</td><td>0.63175</td><td class="in">-0.03211</td></tr>
+<tr><td>N</td><td>0.60363</td><td>0.63005</td><td class="in">-0.02643</td></tr>
+<tr><td>O</td><td>0.60674</td><td>0.62846</td><td class="in">-0.02172</td></tr>
+<tr><td>F</td><td>0.60930</td><td>0.62681</td><td class="in">-0.01751</td></tr>
+<tr><td>Ne</td><td>0.61148</td><td>0.62502</td><td class="in">-0.01354</td></tr>
+<tr><td>Na</td><td>0.61339</td><td>0.62297</td><td class="in">-0.00958</td></tr>
+<tr><td>Mg</td><td>0.61512</td><td>0.62062</td><td class="in">-0.00550</td></tr>
+<tr><td>Al</td><td>0.61672</td><td>0.61790</td><td class="in">-0.00118</td></tr>
+<tr><td>Si</td><td>0.61823</td><td>0.61476</td><td class="out">+0.00347</td></tr>
+<tr><td>P</td><td>0.61968</td><td>0.61115</td><td class="out">+0.00852</td></tr>
+<tr><td>S</td><td>0.62108</td><td>0.60703</td><td class="out">+0.01405</td></tr>
+<tr><td>Cl</td><td>0.62246</td><td>0.60234</td><td class="out">+0.02013</td></tr>
+<tr><td>Ar</td><td>0.62384</td><td>0.59703</td><td class="out">+0.02681</td></tr>
+<tr><td>K</td><td>0.62521</td><td>0.59109</td><td class="out">+0.03412</td></tr>
+<tr><td>Ca</td><td>0.62659</td><td>0.58444</td><td class="out">+0.04215</td></tr>
+<tr><td>Sc</td><td>0.62798</td><td>0.57703</td><td class="out">+0.05095</td></tr>
+<tr><td>Ti</td><td>0.62940</td><td>0.56884</td><td class="out">+0.06056</td></tr>
+<tr><td>V</td><td>0.63083</td><td>0.55981</td><td class="out">+0.07102</td></tr>
+<tr><td>Cr</td><td>0.63230</td><td>0.54991</td><td class="out">+0.08239</td></tr>
+<tr><td>Mn</td><td>0.63381</td><td>0.53908</td><td class="out">+0.09473</td></tr>
+<tr><td>Fe</td><td>0.63534</td><td>0.52727</td><td class="out">+0.10807</td></tr>
+<tr><td>Co</td><td>0.63692</td><td>0.51445</td><td class="out">+0.12247</td></tr>
+<tr><td>Ni</td><td>0.63853</td><td>0.50056</td><td class="out">+0.13797</td></tr>
+<tr><td>Cu</td><td>0.64019</td><td>0.48555</td><td class="out">+0.15464</td></tr>
+<tr><td>Zn</td><td>0.64189</td><td>0.46939</td><td class="out">+0.17250</td></tr>
+</tbody></table>
+<p><span class="tag D">DERIVED</span> <b>An exact identity:</b> Z(S − σ) = (h − Z²/2) − σ²/2. If the H-like energy were the bare Z²/2, S could never exceed σ, for any element. So the two readings can only pass each other through the H-like ion's extra binding beyond Z²/2: the Dirac term, less the nuclear-mass and Lamb terms. They do pass, between aluminium and silicon, near 0.617.</p>
+<p>The three events are distinct, and the round numbers are not where the readings meet:</p>
+<ul>
+<li>σ crosses 5/8 between Ne and Na;</li>
+<li>S crosses σ between Al and Si;</li>
+<li>S crosses 5/8 between Ar and K;</li>
+<li>σ falls through ½ between Ni and Cu.</li>
+</ul>
+
+<h2>5. The ball: faces, junctions and the sea</h2>
+<p><span class="tag D">DERIVED</span> <b>Two kinds of step.</b> Two jumps carry the same formula but use different pairs of inputs:</p>
+<ul>
+<li>the jump between two peels of one atom, which belongs <i>inside</i> the ball;</li>
+<li>the jump at the junction between two neighbouring atoms, which belongs on the <i>face</i>.</li>
+</ul>
+<p>Two identical neighbours have equal clocks at the junction, so Γ there is 0 and the junction is transparent. In the hydrogen-in-the-space-between projector, putting the atom's peel ratio on the faces instead of inside the ball made sodium look less connected than argon. Moving it inside the ball closes about 98% of that gap.</p>
+<p><span class="tag D">DERIVED</span> <b>The sum rule.</b> For the occupied projector P with on-site block C<sub>i</sub>, the total weight a site can share with all other sites is</p>
+<span class="eq">Σ<sub>j≠i</sub> ‖P<sub>ij</sub>‖² = Tr(C<sub>i</sub> − C<sub>i</sub>²)</span>
+<p>The connection cutoff in the model, 1/12, is built as (1/4)/3. In a half-filled chain each site has ½ of weight for two neighbours, so ¼ is the most one link can carry. The cutoff is therefore a <b>Bruggeman third of the per-link share</b>. Carried over to any lattice, it asks whether the nearest shell holds more than a third of all the weight the site shares.</p>
+<p><span class="tag D">DERIVED</span> <b>What that third measures.</b> It is a reading of how close in a site's sharing is, not of conduction by itself:</p>
+<ul>
+<li>A half-filled bcc band (sodium's coordination and valence) passes: link weight 0.0333 against the cutoff 1/48.</li>
+<li>A dilute band must fail it for every filling up to 1/25, though the band is partly filled.</li>
+<li>A fully filled, gapped band passes it more strongly as the gap grows, while its absolute link weight falls.</li>
+</ul>
+<p>So the paper keeps three separate readings for every junction:</p>
+<ul>
+<li>the absolute shared weight;</li>
+<li>the fraction carried by each neighbour shell;</li>
+<li>a bulk transport response.</li>
+</ul>
+
+<h2>6. Direction: the even half and the odd half</h2>
+<p>Walter Russell's two-column method carried every quantity that stays the same under a mirror and lost every quantity that flips. The peel ledger keeps both halves:</p>
+<ul>
+<li>Γ² and the wall classification are the even half.</li>
+<li>The sign of Γ is the odd half under reversing the peel.</li>
+</ul>
+<p><span class="tag D">DERIVED</span> <b>A real crystal supplies the spatial half.</b> β-manganese comes in two mirror crystals, space groups P4₁32 and P4₃32. Its shortest-contact screw orbit (step 2.3743 Å) gives a four-site path with screw sign χ = (d₀ × d₁) · d₂ = +9.9306 Å³.</p>
+<table>
+<thead><tr><th>Operation</th><th>Peel reflection Γ</th><th>β-Mn screw sign χ</th></tr></thead>
+<tbody>
+<tr><td>Reverse the order of the record</td><td class="out">flips</td><td class="in">stays</td></tr>
+<tr><td>Mirror the crystal</td><td class="in">stays</td><td class="out">flips</td></tr>
+</tbody></table>
+<p>Closing the screw path around one lattice period gives an unknot for both hands. An unframed knot polynomial of that closure cannot tell them apart, but the framed winding and the local sign can. The knot side of VOTKP needs a closed path that keeps that sign.</p>
+
+<h2>7. What stays open</h2>
+<ul>
+<li><b>Bulk conduction.</b> The projector still uses two-level hydrogen cells. Each element needs its own outer shell and empty states, with a transport response (a boundary twist with size scaling) as the third reading.</li>
+<li><b>The knot assignment.</b> No element yet has a reproducible closed path to which the volume polynomial applies. β-Mn's framed screw is the first candidate.</li>
+<li><b>Clocks and lengths.</b> Each peel ratio is a dimensionless clock. Turning one into a distance in ångströms needs a calibration fixed before the comparison.</li>
+<li><b>Francium and element 119.</b> Francium's opening straddles the wall on present data. Element 119's call is written down and waits for the element to be made.</li>
+<li><b>The rest of the table.</b> Ga onward continues batch by batch, with every energy checked against the archive before it is used.</li>
+</ul>
+
+<h2>8. The evidence</h2>
+<div class="box">
+<p><b>Lean.</b> <code>LoopWall.lean</code> (92 theorems) and <code>OpeningMap.lean</code> (62 theorems, generated from the archive) build on core Lean 4.34.1 in exact rational arithmetic. They depend only on the three standard axioms, and the source scan finds no sorry, admit, native_decide or axiom. Eleven false claims are rejected, and each is also proved false inside the files.</p>
+<p>What the files certify:</p>
+<ul>
+<li>the wall in both branches;</li>
+<li>reversal and the mirror laws;</li>
+<li>the equal-face form;</li>
+<li>the shell floors;</li>
+<li>every core opening in the archive;</li>
+<li>every ordinary step from Sc to Zn;</li>
+<li>every anion rung from H to Cu;</li>
+<li>the screening identity and its control;</li>
+<li>the dilute-band bound.</li>
+</ul>
+<p><b>Checks.</b> Every z and Γ of the six data batches was recomputed from its energies and compared with the archive. The projector runs reproduce with the original model code.</p>
+<p><b>Where it lives.</b> <code>dicipler-pixel/votkp-lean</code>, branch <code>element-paper/loop-wall</code>, folder <code>research/2026-11-20-element-paper-loop-wall/</code>.</p>
+<p><b>Sources.</b></p>
+<ul>
+<li>NIST Atomic Spectra Database v5.12 (2024), through the archive <code>data/element_thresholds_20261011.json.gz</code>.</li>
+<li>Ning and Lu (2022), atomic electron affinities.</li>
+<li>Yerokhin and Shabaev (2015) and Yerokhin, Patkóš and Pachucki (2022), hydrogen-like and helium-like components.</li>
+<li>Crystallography Open Database, record 1539039, for β-Mn.</li>
+</ul>
+</div>
+<footer>Jeromie Beasley · VOTKP element paper · built from the repository's own data; every table on this page is computed, none typed.</footer>
+</main>
+</body>
+</html>

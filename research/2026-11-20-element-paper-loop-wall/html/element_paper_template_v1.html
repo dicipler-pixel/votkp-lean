@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Loop Wall: Peeling the Elements from Hydrogen to Zinc</title>
+<style>
+:root{--bg:#05070d;--panel:#0c1120;--ink:#e9edf5;--dim:#9aa6bd;--gold:#e8c46a;--blue:#6fb6ff;--line:#1e2840;--out:#e8c46a;--in:#6fb6ff}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(ellipse at 50% -10%,#14203a 0%,var(--bg) 55%);color:var(--ink);font:16px/1.62 "Iowan Old Style","Palatino Linotype",Georgia,serif}
+main{max-width:1000px;margin:0 auto;padding:40px 22px 80px}
+header{text-align:center;padding:30px 0 10px}
+h1{font-size:2.2em;line-height:1.15;margin:.2em 0;color:var(--gold);font-weight:600;letter-spacing:.01em}
+.sub{color:var(--dim);font-size:1.05em}
+.by{margin-top:14px;font-size:1.05em}
+.ai{max-width:760px;margin:26px auto 0;font-size:.9em;color:var(--dim);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:10px 0}
+h2{color:var(--gold);font-size:1.45em;margin:2.2em 0 .5em;border-bottom:1px solid var(--line);padding-bottom:.25em}
+h3{color:var(--blue);font-size:1.12em;margin:1.6em 0 .4em}
+p{margin:.7em 0}
+.abstract{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 22px;margin-top:22px}
+.eq{display:block;text-align:center;font-size:1.15em;margin:.9em 0;color:#fff;font-family:"Cambria Math","STIX Two Math",Georgia,serif}
+.tag{display:inline-block;font:600 .72em/1 system-ui,sans-serif;letter-spacing:.06em;padding:3px 7px;border-radius:4px;margin-right:6px;vertical-align:2px}
+.D{background:#2b2410;color:var(--gold)}.M{background:#10243b;color:var(--blue)}.R{background:#1f2a1a;color:#a8e08a}.H{background:#2a1830;color:#e0a0ff}
+table{border-collapse:collapse;width:100%;margin:12px 0;font:14px/1.4 system-ui,sans-serif}
+th,td{border-bottom:1px solid var(--line);padding:6px 8px;text-align:right}
+th{color:var(--dim);font-weight:600;text-align:right}
+td:first-child,th:first-child{text-align:left}
+td.out{color:var(--out);font-weight:600}td.in{color:var(--in)}td.na{color:#56617a;text-align:center;font-size:.9em}
+td .g{display:block;font-size:.8em;opacity:.75;font-weight:400}
+td.el b{color:#fff}.zz{color:var(--dim);font-size:.8em}
+.legend{font:13px system-ui,sans-serif;color:var(--dim)}
+.legend b.o{color:var(--out)}.legend b.i{color:var(--in)}
+svg.plot{width:100%;height:auto;background:var(--panel);border:1px solid var(--line);border-radius:10px;margin:10px 0}
+svg .grid{stroke:#1a2236;stroke-width:1}svg .ax{fill:#8592ab;font:12px system-ui,sans-serif}
+svg .wall{stroke:#fff;stroke-width:1.4;stroke-dasharray:6 5}svg .wallt{fill:#fff;font:12px system-ui,sans-serif}
+svg .lab{font:12px system-ui,sans-serif}
+.box{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin:14px 0}
+code{font:13px ui-monospace,Menlo,monospace;color:#cfd8ea}
+ul{margin:.4em 0 .8em 1.2em;padding:0}li{margin:.25em 0}
+footer{margin-top:3em;color:var(--dim);font-size:.9em;border-top:1px solid var(--line);padding-top:1em}
+a{color:var(--blue)}
+</style>
+</head>
+<body>
+<main>
+<header>
+<div class="sub">VOTKP · the Vector of Traits Kept under Peeling · element paper, part one</div>
+<h1>The Loop Wall: Peeling the Elements from Hydrogen to Zinc</h1>
+<div class="by">Jeromie Beasley</div>
+<div class="sub">21 November 2026</div>
+<div class="ai">AI-assisted. The research direction, the framework and the questions are Jeromie Beasley's. The element data passes were researched with ChatGPT; every number was rechecked and the results formalized in Lean with Claude (Anthropic).</div>
+</header>
+
+<div class="abstract">
+<p>Peel an atom one electron at a time and record each step as a ratio <i>z</i> of successive removal energies. Its reflection <b>Γ = (z − 1)/(z + 1)</b> is the half-step tanh(½ ln z) of the intrinsic ledger. A step is <i>outside the loop wall</i> when Γ² &gt; ½, the condition where two equal faces satisfy sinh h<sub>a</sub> · sinh h<sub>b</sub> = 1.</p>
+<p>Running the wall through every element from hydrogen to zinc shows a clean structure:</p>
+<ul>
+<li><b>Few steps cross it.</b> Only two kinds of step ever reach outside: the anion rung (the extra electron coming off) and the first opening of a closed noble-gas core. Every other step from H to Zn, all of them checked against the archive, is inside.</li>
+<li><b>Bare shells never cross.</b> A change of shell alone always lands inside: the hydrogenic floors 4, 9/4, 16/9, … are inside. The departure from the bare shell carries an opening across, and that departure shrinks shell by shell.</li>
+<li><b>Each core opening crosses inward at the same place.</b> The core openings cross inward between C and N, Na and Mg, K and Ca, Rb and Sr, Cs and Ba. A frozen prediction for Rb and Sr passed.</li>
+<li><b>Direction is kept separately from the wall.</b> Reversing a peel flips the sign of Γ and keeps Γ². A crystal mirror does the opposite to a screw sign. So the ledger carries Russell's two halves separately.</li>
+</ul>
+<p>All of it is certified in %%NT%% Lean theorems.</p>
+</div>
+
+<h2>1. The peel and its reflection</h2>
+<p>For an ordered pair of removal energies, first <i>a</i> then <i>b</i>:</p>
+<span class="eq">z = b / a,  r = ln z,  Γ = tanh(r/2) = (z − 1)/(z + 1)</span>
+<p><span class="tag D">DERIVED</span> The ratio comes back from the reflection, z = (1 + Γ)/(1 − Γ). The face apex of a ball is tanh(r/4) = (√z − 1)/(√z + 1). It returns the full ratio on squaring.</p>
+<p><span class="tag D">DERIVED</span> <b>Direction.</b> Reversing the order sends z → 1/z, r → −r and Γ → −Γ. The returned power Γ² is the same both ways. The sign remembers which way the peel went; the power does not. A ledger that keeps only Γ² loses the direction.</p>
+<h3>The loop wall, both branches</h3>
+<span class="eq">Γ² &gt; ½  ⇔  z² − 6z + 1 &gt; 0  ⇔  0 &lt; z &lt; 3 − 2√2  or  z &gt; 3 + 2√2 = 5.8284…</span>
+<p>The upper branch is the forward peel and the lower branch is its reverse. A step and its reverse always sit on the same side: z = 6 gives Γ = 5/7 and z = 1/6 gives Γ = −5/7, both with Γ² = 25/49 &gt; ½. With h = ½ ln z, sinh² h = (z − 1)²/4z = Γ²/(1 − Γ²), so the equal-face condition sinh h<sub>a</sub> sinh h<sub>b</sub> = 1 is exactly Γ² = ½. The wall of the tree and the wall of the peel are one condition.</p>
+<p><span class="tag D">DERIVED</span> <b>Fixed points.</b> Γ = 2/3 exactly at z = 5. A bare change of principal shell has ratio ((n+1)/n)²: 4, 9/4, 16/9, 25/16, 36/25, 49/36. Every one is inside the wall. An opening can only stand outside through a departure from the bare shell, which screening provides at low Z.</p>
+
+<h2>2. Three boundaries in every element</h2>
+<p>Each element is read at its anion rung (z₀ = IE₁/EA, where a bound anion exists) and at each closed-core opening: the last removal above the core, then the first removal from it.</p>
+<ul>
+<li><b>K</b> is the opening of the 1s² core (2s → 1s).</li>
+<li><b>L</b> is the opening of the Ne core (3s → 2p).</li>
+<li><b>M</b> is the opening of the Ar core: 4s → 3p for K and Ca, and the last 3d removal → 3p from Sc onward.</li>
+</ul>
+<p class="legend">Each cell gives z, with Γ below it. <b class="o">Gold</b> means outside the wall, <b class="i">blue</b> inside. Energies come from the NIST-derived archive in the repository. Electron affinities are the 2022 evaluated values.</p>
+<table>
+<thead><tr><th>Element</th><th>Anion rung 0</th><th>K opening</th><th>L opening</th><th>Ar-core opening</th></tr></thead>
+<tbody>
+%%TABLE%%
+</tbody></table>
+<p><span class="tag R">RECOGNISED</span> Reading the table down the columns:</p>
+<ul>
+<li><b>K opening:</b> outside from Li to C, crosses inward between carbon (6.08) and nitrogen (5.64), and stays inside from then on.</li>
+<li><b>L opening:</b> outside only at sodium (9.20).</li>
+<li><b>Ar-core opening:</b> outside only at potassium (7.29).</li>
+<li><b>Anion rung:</b> outside for most bound anions, but inside for F, S and Cl, the strong attachers.</li>
+</ul>
+<p>Two elements make the boundaries visible:</p>
+<ul>
+<li><b>Oxygen</b> stands on both sides at once: its anion rung is outside and its core opening inside.</li>
+<li><b>Silicon's</b> anion rung is the closest call (Γ = 0.70873 against the wall at 0.70711). It stays outside across its quoted uncertainties.</li>
+</ul>
+<p><span class="tag M">MEASURED</span> <b>Conduction does not need an outside step.</b> Magnesium and calcium are metals with every ordinary step inside, and so are scandium to zinc. The wall reads the atom's own ladder. Conduction is a property of the connections between atoms, and section 5 takes it up.</p>
+
+<h2>3. The opening map across the whole table</h2>
+<p>The same opening can be followed along its whole isoelectronic sequence: every ion with one electron above a given noble core, from the first element that has it to the end of the data. The archive holds 433 such ratios.</p>
+%%SVG%%
+<table>
+<thead><tr><th>Core</th><th>Ratios</th><th>First element</th><th>Outside the wall</th></tr></thead>
+<tbody>
+%%FIRST%%
+</tbody></table>
+<p><span class="tag D">DERIVED</span> <b>Where each sequence crosses inward.</b> Counted from the first element that has it, each sequence crosses inward after 4, 1, 1, 1 and 1 steps: He, Ne, Ar, Kr and Xe cores. The first ratio falls core by core: 14.03, 9.20, 7.29, 6.53, 5.95. Francium's Rn-core value (5.50) is centrally inside, but its semiempirical second energy gives a range of 5.03–5.97, which straddles the wall.</p>
+<p><span class="tag D">DERIVED</span> <b>The frozen test.</b> Before the numbers were opened, the call was written down: rubidium outside, strontium inside. Both held: Rb at 6.533 and Sr at 3.888.</p>
+<p><span class="tag H">HYPOTHESIS</span> <b>Element 119</b> would start the next core sequence. The written call is that its opening ratio lies inside the wall (1 &lt; IE₂/IE₁ &lt; 3 + 2√2). A reliable measured ratio above 5.8284 would defeat it.</p>
+
+<h2>4. The two screening readouts and the 5/8</h2>
+<p>The last two electrons of every element give two readings of the same pair:</p>
+<ul>
+<li>the gap per unit charge, S = (h − b)/Z;</li>
+<li>the effective screening charge, σ = Z − √(2b).</li>
+</ul>
+<p>Here h and b are the H-like and He-like energies in hartree. At leading order both tend to 5/8.</p>
+<table>
+<thead><tr><th>Element</th><th>S</th><th>σ</th><th>S − σ</th></tr></thead>
+<tbody>
+%%SR%%
+</tbody></table>
+<p><span class="tag D">DERIVED</span> <b>An exact identity:</b> Z(S − σ) = (h − Z²/2) − σ²/2. If the H-like energy were the bare Z²/2, S could never exceed σ, for any element. So the two readings can only pass each other through the H-like ion's extra binding beyond Z²/2: the Dirac term, less the nuclear-mass and Lamb terms. They do pass, between aluminium and silicon, near 0.617.</p>
+<p>The three events are distinct, and the round numbers are not where the readings meet:</p>
+<ul>
+<li>σ crosses 5/8 between Ne and Na;</li>
+<li>S crosses σ between Al and Si;</li>
+<li>S crosses 5/8 between Ar and K;</li>
+<li>σ falls through ½ between Ni and Cu.</li>
+</ul>
+
+<h2>5. The ball: faces, junctions and the sea</h2>
+<p><span class="tag D">DERIVED</span> <b>Two kinds of step.</b> Two jumps carry the same formula but use different pairs of inputs:</p>
+<ul>
+<li>the jump between two peels of one atom, which belongs <i>inside</i> the ball;</li>
+<li>the jump at the junction between two neighbouring atoms, which belongs on the <i>face</i>.</li>
+</ul>
+<p>Two identical neighbours have equal clocks at the junction, so Γ there is 0 and the junction is transparent. In the hydrogen-in-the-space-between projector, putting the atom's peel ratio on the faces instead of inside the ball made sodium look less connected than argon. Moving it inside the ball closes about 98% of that gap.</p>
+<p><span class="tag D">DERIVED</span> <b>The sum rule.</b> For the occupied projector P with on-site block C<sub>i</sub>, the total weight a site can share with all other sites is</p>
+<span class="eq">Σ<sub>j≠i</sub> ‖P<sub>ij</sub>‖² = Tr(C<sub>i</sub> − C<sub>i</sub>²)</span>
+<p>The connection cutoff in the model, 1/12, is built as (1/4)/3. In a half-filled chain each site has ½ of weight for two neighbours, so ¼ is the most one link can carry. The cutoff is therefore a <b>Bruggeman third of the per-link share</b>. Carried over to any lattice, it asks whether the nearest shell holds more than a third of all the weight the site shares.</p>
+<p><span class="tag D">DERIVED</span> <b>What that third measures.</b> It is a reading of how close in a site's sharing is, not of conduction by itself:</p>
+<ul>
+<li>A half-filled bcc band (sodium's coordination and valence) passes: link weight 0.0333 against the cutoff 1/48.</li>
+<li>A dilute band must fail it for every filling up to 1/25, though the band is partly filled.</li>
+<li>A fully filled, gapped band passes it more strongly as the gap grows, while its absolute link weight falls.</li>
+</ul>
+<p>So the paper keeps three separate readings for every junction:</p>
+<ul>
+<li>the absolute shared weight;</li>
+<li>the fraction carried by each neighbour shell;</li>
+<li>a bulk transport response.</li>
+</ul>
+
+<h2>6. Direction: the even half and the odd half</h2>
+<p>Walter Russell's two-column method carried every quantity that stays the same under a mirror and lost every quantity that flips. The peel ledger keeps both halves:</p>
+<ul>
+<li>Γ² and the wall classification are the even half.</li>
+<li>The sign of Γ is the odd half under reversing the peel.</li>
+</ul>
+<p><span class="tag D">DERIVED</span> <b>A real crystal supplies the spatial half.</b> β-manganese comes in two mirror crystals, space groups P4₁32 and P4₃32. Its shortest-contact screw orbit (step 2.3743 Å) gives a four-site path with screw sign χ = (d₀ × d₁) · d₂ = +9.9306 Å³.</p>
+<table>
+<thead><tr><th>Operation</th><th>Peel reflection Γ</th><th>β-Mn screw sign χ</th></tr></thead>
+<tbody>
+<tr><td>Reverse the order of the record</td><td class="out">flips</td><td class="in">stays</td></tr>
+<tr><td>Mirror the crystal</td><td class="in">stays</td><td class="out">flips</td></tr>
+</tbody></table>
+<p>Closing the screw path around one lattice period gives an unknot for both hands. An unframed knot polynomial of that closure cannot tell them apart, but the framed winding and the local sign can. The knot side of VOTKP needs a closed path that keeps that sign.</p>
+
+<h2>7. What stays open</h2>
+<ul>
+<li><b>Bulk conduction.</b> The projector still uses two-level hydrogen cells. Each element needs its own outer shell and empty states, with a transport response (a boundary twist with size scaling) as the third reading.</li>
+<li><b>The knot assignment.</b> No element yet has a reproducible closed path to which the volume polynomial applies. β-Mn's framed screw is the first candidate.</li>
+<li><b>Clocks and lengths.</b> Each peel ratio is a dimensionless clock. Turning one into a distance in ångströms needs a calibration fixed before the comparison.</li>
+<li><b>Francium and element 119.</b> Francium's opening straddles the wall on present data. Element 119's call is written down and waits for the element to be made.</li>
+<li><b>The rest of the table.</b> Ga onward continues batch by batch, with every energy checked against the archive before it is used.</li>
+</ul>
+
+<h2>8. The evidence</h2>
+<div class="box">
+<p><b>Lean.</b> <code>LoopWall.lean</code> (%%NLW%% theorems) and <code>OpeningMap.lean</code> (%%NOM%% theorems, generated from the archive) build on core Lean 4.34.1 in exact rational arithmetic. They depend only on the three standard axioms, and the source scan finds no sorry, admit, native_decide or axiom. Eleven false claims are rejected, and each is also proved false inside the files.</p>
+<p>What the files certify:</p>
+<ul>
+<li>the wall in both branches;</li>
+<li>reversal and the mirror laws;</li>
+<li>the equal-face form;</li>
+<li>the shell floors;</li>
+<li>every core opening in the archive;</li>
+<li>every ordinary step from Sc to Zn;</li>
+<li>every anion rung from H to Cu;</li>
+<li>the screening identity and its control;</li>
+<li>the dilute-band bound.</li>
+</ul>
+<p><b>Checks.</b> Every z and Γ of the six data batches was recomputed from its energies and compared with the archive. The projector runs reproduce with the original model code.</p>
+<p><b>Where it lives.</b> <code>dicipler-pixel/votkp-lean</code>, branch <code>element-paper/loop-wall</code>, folder <code>research/2026-11-20-element-paper-loop-wall/</code>.</p>
+<p><b>Sources.</b></p>
+<ul>
+<li>NIST Atomic Spectra Database v5.12 (2024), through the archive <code>data/element_thresholds_20261011.json.gz</code>.</li>
+<li>Ning and Lu (2022), atomic electron affinities.</li>
+<li>Yerokhin and Shabaev (2015) and Yerokhin, Patkóš and Pachucki (2022), hydrogen-like and helium-like components.</li>
+<li>Crystallography Open Database, record 1539039, for β-Mn.</li>
+</ul>
+</div>
+<footer>Jeromie Beasley · VOTKP element paper · built from the repository's own data; every table on this page is computed, none typed.</footer>
+</main>
+</body>
+</html>

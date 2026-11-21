@@ -37,7 +37,7 @@ for N,name in cores:
         L.append('  unfold inside; '+('refine ⟨'+', '.join(['?_']*len(ch))+'⟩ <;> ' if len(ch)>1 else '')+'grind'); L.append('')
     summary.append((name,len(outs),len(ins)))
 # Sc..Mn ordinary ladders all inside
-for Z in range(21,26):
+for Z in range(21,31):
     th=sorted(rec[Z]['thresholds'],key=lambda t:t['q']); s=rec[Z]['symbol']
     ex=[f"inside ({lit(b['IE_eV'])} / {lit(a['IE_eV'])} : Rat)" for a,b in zip(th,th[1:]) if b['q']==a['q']+1]
     L.append(f'/-- Every ordinary step of the {s} ladder ({len(ex)} steps) is inside the wall. -/')

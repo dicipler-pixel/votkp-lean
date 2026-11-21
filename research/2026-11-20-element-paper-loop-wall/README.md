@@ -8,7 +8,7 @@ check. It is kept for the element paper.
 
 ## What is proved (`lean/LoopWall.lean` and `lean/OpeningMap.lean`, core Lean 4.34.1, no Mathlib, exact `Rat` arithmetic)
 
-85 theorems in `LoopWall.lean` and 57 in `OpeningMap.lean`. Axioms: only `propext`, `Classical.choice`, `Quot.sound`. No `sorry`, `admit`,
+92 theorems in `LoopWall.lean` and 62 in `OpeningMap.lean`. Axioms: only `propext`, `Classical.choice`, `Quot.sound`. No `sorry`, `admit`,
 `native_decide` or `axiom`. Run `lean/run_checks.sh`; its output is `lean/run_checks_output.txt`.
 
 The peel step of an ordered pair of thresholds (a, then b) has ratio z = b/a and reflection
@@ -75,7 +75,25 @@ The peel step of an ordered pair of thresholds (a, then b) has ratio z = b/a and
    The frozen Rb/Sr prediction holds (`frozen_prediction_Rb_Sr`). Francium's encoded central ratio
    is inside, but its input interval straddles the wall (`francium_straddles`). Every ordinary step
    of Sc, Ti, V, Cr and Mn (110 steps) is inside (`ladder_*_all_inside`), and the anion rungs of
-   Sc, Ti, V and Cr are outside (`rung0_Sc` to `rung0_Cr`; Mn has no bound ground-state anion).
+   Sc, Ti, V, Cr, Fe, Co, Ni and Cu are outside (`rung0_Sc` to `rung0_Cu`; Mn and Zn have no bound
+   ground-state anion). The ladders of Fe, Co, Ni, Cu and Zn are certified inside as well, so every
+   ordinary step from Sc to Zn is inside. Across H to Zn the only outside steps are the anion rungs
+   and the core openings Li, Be, B, C, Na and K.
+15. **Batch 6, Fe to Zn, the junction cutoff and the β-Mn screw.** The model's 1/12 cutoff is
+   (1/4)/3, a third of the largest per-link share in a half-filled chain. The sum rule
+   Σ_j ‖P_ij‖² = Tr(C_i − C_i²) carries it to any lattice as X > B/(3n): the nearest shell holds more
+   than a third of the site's shared weight. A half-filled bcc band passes; a dilute band fails for
+   every filling f ≤ 1/25 (`dilute_bcc_fails`); a filled gapped band passes. So the third reads
+   shell concentration, not conduction by itself. β-Mn's screw (¼−y, x−¼, z+¼), a = 6.3145 Å, gives
+   χ = (d₀×d₁)·d₂ = +9.9306 Å³; χ is unchanged by reversing the path (`chi_reverse`) and flips under a
+   mirror (`chi_mirror`), the opposite of Γ.
+
+## The page
+
+`VOTKP_Element_Paper_Loop_Wall_v1_20261121.html` is the readable breakdown of all of the above, H to Zn.
+It is built by `html/build_element_paper_html_v1.py` from the archive and the Lean files
+(`python3 html/build_element_paper_html_v1.py ../../data/element_thresholds_20261011.json.gz lean OUT html/element_paper_template_v1.html`);
+every table and the opening-map figure are computed, none typed.
 
 ## Sources
 
@@ -98,6 +116,17 @@ k=20 (1.09297, .04442); V k=14 is a rounding difference only (977.2/896 = 1.0906
 flags rows whose ratio was right but whose energy text was mistyped. Use
 `checks/batch5_corrected.csv`, rebuilt from the archive. No wall classification changes, and the
 Lean certificates were built from the archive, not from the printed table.
+
+## The Fe–Zn table
+
+The batch-6 research table as received has two energies that differ from the archive (Ni k=21:
+1750 eV, archive 1758.0; Cu k=5: 79.5 eV, archive 79.8) and four displayed z, Γ pairs that are wrong:
+Ni k=15 (archive 1.070441, .034022), k=20 (1.063183, .030624), k=21 (1.074286, .035813),
+k=22 (1.068138, .032947). The Cu k=4 and k=5 ratios are right; only the energy text is mistyped.
+The table's "140/140 matched the archive" line is therefore not right. Use
+`checks/batch6_corrected.csv`, rebuilt from the archive. No wall classification changes. The
+corrected Sc–Mn CSV sent with batch 6 agrees with `checks/batch5_corrected.csv` (V k=14 differs by
+rounding only).
 
 ## The other files
 

@@ -373,3 +373,45 @@ theorem rung0_Sc : outside (6.56149 / 0.179380) := by unfold outside; grind
 theorem rung0_Ti : outside (6.82812 / 0.07554) := by unfold outside; grind
 theorem rung0_V : outside (6.746187 / 0.52766) := by unfold outside; grind
 theorem rung0_Cr : outside (6.76651 / 0.675928) := by unfold outside; grind
+
+/-! ## 13. Batch 6: the anion rungs of Fe, Co, Ni, Cu (Zn has no bound ground-state anion) -/
+
+theorem rung0_Fe : outside (7.9024681 / 0.153236) := by unfold outside; grind
+theorem rung0_Co : outside (7.88101 / 0.662255) := by unfold outside; grind
+theorem rung0_Ni : outside (7.639878 / 1.157368) := by unfold outside; grind
+theorem rung0_Cu : outside (7.72638 / 1.23578) := by unfold outside; grind
+
+/-! ## 14. The junction cutoff in a dilute band, and the screw sign -/
+
+/-- Dilute-band bound. Per spin the neighbour element of the projector is at most the filling f,
+so X ≤ 2f², while the off-site budget is B = 2f(1 − f); with n neighbours the shell fraction
+nX/B is at most nf/(1 − f). For bcc (n = 8) and 0 < f ≤ 1/25 that is at most 1/3, so the
+coordination-normalised cutoff (shell fraction > 1/3) must fail, though the band is partly filled. -/
+theorem dilute_bcc_fails (f : Rat) (h0 : 0 < f) (h1 : f ≤ 1 / 25) : 8 * f / (1 - f) ≤ 1 / 3 := by
+  have hp : 0 < 1 - f := by grind
+  have e : 8 * f / (1 - f) * (1 - f) = 8 * f := Rat.div_mul_cancel (by grind)
+  by_cases h : 8 * f / (1 - f) ≤ 1 / 3
+  · exact h
+  · exfalso
+    have hg : 1 / 3 < 8 * f / (1 - f) := by grind
+    have := Rat.mul_lt_mul_of_pos_right hg hp
+    grind
+
+/-- The triple product of three displacement vectors. -/
+def triple (a b c : Rat × Rat × Rat) : Rat :=
+  (a.2.1 * b.2.2 - a.2.2 * b.2.1) * c.1 + (a.2.2 * b.1 - a.1 * b.2.2) * c.2.1 +
+    (a.1 * b.2.1 - a.2.1 * b.1) * c.2.2
+
+def vneg (a : Rat × Rat × Rat) : Rat × Rat × Rat := (-a.1, -a.2.1, -a.2.2)
+def vmirror (a : Rat × Rat × Rat) : Rat × Rat × Rat := (-a.1, a.2.1, a.2.2)
+
+/-- Traversing a four-site path backwards replaces (d₀, d₁, d₂) by (−d₂, −d₁, −d₀):
+the screw sign χ = (d₀ × d₁) · d₂ is unchanged. -/
+theorem chi_reverse (a b c : Rat × Rat × Rat) :
+    triple (vneg c) (vneg b) (vneg a) = triple a b c := by
+  unfold triple vneg; grind
+
+/-- A spatial mirror flips the screw sign. -/
+theorem chi_mirror (a b c : Rat × Rat × Rat) :
+    triple (vmirror a) (vmirror b) (vmirror c) = - triple a b c := by
+  unfold triple vmirror; grind
