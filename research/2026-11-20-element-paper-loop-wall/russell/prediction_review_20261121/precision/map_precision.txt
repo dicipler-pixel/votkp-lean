@@ -1,0 +1,5 @@
+35/6 map: [[Fraction(-19349, 5040), Fraction(34481, 5040)], [Fraction(-34481, 29400), Fraction(53789, 29400)]] exact eigenvalues −441/400 and −400/441
+equal trace, discriminant, signed Frobenius clearance, sufficient uniform entrywise tolerance: -2.0095294785 0.0382087248 0.0011917162 0.0005958581
+Be–Rb trace, discriminant, signed Frobenius clearance, sufficient uniform entrywise tolerance: -2.0064650276 0.0259019070 0.0007842108 0.0003921054
+Si–Ag trace, discriminant, signed Frobenius clearance, sufficient uniform entrywise tolerance: -2.0168940758 0.0678617130 0.0021134147 0.0010567073
+inside control trace, discriminant, signed Frobenius clearance, sufficient uniform entrywise tolerance: 0.7343750000 -3.4606933594 -0.2662591334 0.1331295667

@@ -1,0 +1,8 @@
+3,655 IE matched; 3,637 numeric faces; 3,614 complete rectangles
+L, H, c: 5.807902059840 5.866538776091 5.837220417966
+6 midpoint rules, extrema of calibration boxes: 5.837006362245 5.837286797096
+6 x 4 calls using marginal boxes: {'Be_Rb': {'closed': 24}, 'Si_Ag': {'ideal': 1, 'unresolved': 23}}
+Be-Rb first positive lambda to reach midpoint wall: 0.022947258331 p*: 2.046143227541
+All 12241 same-family pairs scanned; two shifted-quadrature disagreements: [('Si', 'Ag'), ('Be', 'Rb')]
+Warp fixes every one of 3637 observed reflections; all cross-pairs fixed by construction
+Diagonal z: 35/6 power: 1682/1681 trace: -354481/176400 class stable on [5.832, 5.835]

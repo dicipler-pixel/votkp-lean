@@ -1,0 +1,12 @@
+Lean (version 4.34.1, x86_64-unknown-linux-gnu, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)
+'ElementPaper.BoundaryAgreement.witnessInterior' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.BoundaryAgreement.witnessTie' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.BoundaryAgreement.witnessProduct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.BoundaryAgreement.halfScaling' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.BoundaryAgreement.uniqueInteriorBoundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.BoundaryAgreement.wrongThird' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.BoundaryAgreement.midInterior' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.BoundaryAgreement.midMargins' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.BoundaryAgreement.strictCounterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.BoundaryAgreement.productAntitone' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.BoundaryAgreement.rationalThreeWayControl' depends on axioms: [propext, Classical.choice, Quot.sound]

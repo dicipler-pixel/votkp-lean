@@ -1,0 +1,72 @@
+Lean (version 4.34.1, x86_64-unknown-linux-gnu, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)
+'ElementPaper.BoundaryAgreement.witnessInterior' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.BoundaryAgreement.witnessTie' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.BoundaryAgreement.witnessProduct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.BoundaryAgreement.halfScaling' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.BoundaryAgreement.uniqueInteriorBoundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.BoundaryAgreement.wrongThird' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.BoundaryAgreement.midInterior' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.BoundaryAgreement.midMargins' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.BoundaryAgreement.strictCounterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.BoundaryAgreement.productAntitone' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.BoundaryAgreement.rationalThreeWayControl' depends on axioms: [propext, Classical.choice, Quot.sound]
+controls/FalseAtThird.lean:8:2: error: `grind` failed
+case grind.1.2
+h_1 :
+  (9⁻¹ + 11 * 18⁻¹ - 2 * 3⁻¹ < 0) =
+    ¬9⁻¹ * (11 * 18⁻¹) * (1 - 3⁻¹) * (1 - 3⁻¹) - 3⁻¹ * 3⁻¹ * (1 - 9⁻¹) * (1 - 11 * 18⁻¹) < 0
+left : ¬9⁻¹ + 11 * 18⁻¹ - 2 * 3⁻¹ < 0
+right : 9⁻¹ * (11 * 18⁻¹) * (1 - 3⁻¹) * (1 - 3⁻¹) - 3⁻¹ * 3⁻¹ * (1 - 9⁻¹) * (1 - 11 * 18⁻¹) < 0
+⊢ False
+[grind] Goal diagnostics
+  [facts] Asserted facts
+    [prop] (9⁻¹ + 11 * 18⁻¹ - 2 * 3⁻¹ < 0) =
+            ¬9⁻¹ * (11 * 18⁻¹) * (1 - 3⁻¹) * (1 - 3⁻¹) - 3⁻¹ * 3⁻¹ * (1 - 9⁻¹) * (1 - 11 * 18⁻¹) < 0 ∨
+          (9⁻¹ + 11 * 18⁻¹ - 2 * 3⁻¹ = 0) =
+              ¬9⁻¹ * (11 * 18⁻¹) * (1 - 3⁻¹) * (1 - 3⁻¹) - 3⁻¹ * 3⁻¹ * (1 - 9⁻¹) * (1 - 11 * 18⁻¹) = 0 ∨
+            (0 < 9⁻¹ + 11 * 18⁻¹ - 2 * 3⁻¹) =
+              ¬0 < 9⁻¹ * (11 * 18⁻¹) * (1 - 3⁻¹) * (1 - 3⁻¹) - 3⁻¹ * 3⁻¹ * (1 - 9⁻¹) * (1 - 11 * 18⁻¹)
+    [prop] 3 * 3⁻¹ = 1
+    [prop] 18 * 18⁻¹ = 1
+    [prop] 9 * 9⁻¹ = 1
+    [prop] (9⁻¹ + 11 * 18⁻¹ - 2 * 3⁻¹ < 0) =
+          ¬9⁻¹ * (11 * 18⁻¹) * (1 - 3⁻¹) * (1 - 3⁻¹) - 3⁻¹ * 3⁻¹ * (1 - 9⁻¹) * (1 - 11 * 18⁻¹) < 0
+    [prop] ¬9⁻¹ + 11 * 18⁻¹ - 2 * 3⁻¹ < 0
+    [prop] 9⁻¹ * (11 * 18⁻¹) * (1 - 3⁻¹) * (1 - 3⁻¹) - 3⁻¹ * 3⁻¹ * (1 - 9⁻¹) * (1 - 11 * 18⁻¹) < 0
+  [eqc] True propositions
+    [prop] ¬0 < 9⁻¹ * (11 * 18⁻¹) * (1 - 3⁻¹) * (1 - 3⁻¹) - 3⁻¹ * 3⁻¹ * (1 - 9⁻¹) * (1 - 11 * 18⁻¹)
+    [prop] (9⁻¹ + 11 * 18⁻¹ - 2 * 3⁻¹ < 0) =
+            ¬9⁻¹ * (11 * 18⁻¹) * (1 - 3⁻¹) * (1 - 3⁻¹) - 3⁻¹ * 3⁻¹ * (1 - 9⁻¹) * (1 - 11 * 18⁻¹) < 0 ∨
+          (9⁻¹ + 11 * 18⁻¹ - 2 * 3⁻¹ = 0) =
+              ¬9⁻¹ * (11 * 18⁻¹) * (1 - 3⁻¹) * (1 - 3⁻¹) - 3⁻¹ * 3⁻¹ * (1 - 9⁻¹) * (1 - 11 * 18⁻¹) = 0 ∨
+            (0 < 9⁻¹ + 11 * 18⁻¹ - 2 * 3⁻¹) =
+              ¬0 < 9⁻¹ * (11 * 18⁻¹) * (1 - 3⁻¹) * (1 - 3⁻¹) - 3⁻¹ * 3⁻¹ * (1 - 9⁻¹) * (1 - 11 * 18⁻¹)
+    [prop] (9⁻¹ + 11 * 18⁻¹ - 2 * 3⁻¹ < 0) =
+          ¬9⁻¹ * (11 * 18⁻¹) * (1 - 3⁻¹) * (1 - 3⁻¹) - 3⁻¹ * 3⁻¹ * (1 - 9⁻¹) * (1 - 11 * 18⁻¹) < 0
+    [prop] 9⁻¹ * (11 * 18⁻¹) * (1 - 3⁻¹) * (1 - 3⁻¹) - 3⁻¹ * 3⁻¹ * (1 - 9⁻¹) * (1 - 11 * 18⁻¹) < 0
+  [eqc] False propositions
+    [prop] ¬9⁻¹ * (11 * 18⁻¹) * (1 - 3⁻¹) * (1 - 3⁻¹) - 3⁻¹ * 3⁻¹ * (1 - 9⁻¹) * (1 - 11 * 18⁻¹) < 0
+    [prop] 0 < 9⁻¹ * (11 * 18⁻¹) * (1 - 3⁻¹) * (1 - 3⁻¹) - 3⁻¹ * 3⁻¹ * (1 - 9⁻¹) * (1 - 11 * 18⁻¹)
+    [prop] 9⁻¹ + 11 * 18⁻¹ - 2 * 3⁻¹ < 0
+  [eqc] Equivalence classes
+    [eqc] {(0 < 9⁻¹ + 11 * 18⁻¹ - 2 * 3⁻¹) =
+          ¬0 < 9⁻¹ * (11 * 18⁻¹) * (1 - 3⁻¹) * (1 - 3⁻¹) - 3⁻¹ * 3⁻¹ * (1 - 9⁻¹) * (1 - 11 * 18⁻¹),
+        0 < 9⁻¹ + 11 * 18⁻¹ - 2 * 3⁻¹}
+    [eqc] {18⁻¹, 9⁻¹ + 11 * 18⁻¹ - 2 * 3⁻¹}
+    [eqc] {1, 3 * 3⁻¹, 9 * 9⁻¹, 18 * 18⁻¹}
+  [cases] Case analyses
+    [cases] [1/2]: (9⁻¹ + 11 * 18⁻¹ - 2 * 3⁻¹ < 0) =
+            ¬9⁻¹ * (11 * 18⁻¹) * (1 - 3⁻¹) * (1 - 3⁻¹) - 3⁻¹ * 3⁻¹ * (1 - 9⁻¹) * (1 - 11 * 18⁻¹) < 0 ∨
+          (9⁻¹ + 11 * 18⁻¹ - 2 * 3⁻¹ = 0) =
+              ¬9⁻¹ * (11 * 18⁻¹) * (1 - 3⁻¹) * (1 - 3⁻¹) - 3⁻¹ * 3⁻¹ * (1 - 9⁻¹) * (1 - 11 * 18⁻¹) = 0 ∨
+            (0 < 9⁻¹ + 11 * 18⁻¹ - 2 * 3⁻¹) =
+              ¬0 < 9⁻¹ * (11 * 18⁻¹) * (1 - 3⁻¹) * (1 - 3⁻¹) - 3⁻¹ * 3⁻¹ * (1 - 9⁻¹) * (1 - 11 * 18⁻¹)
+      [cases] source: Initial goal
+    [cases] [2/2]: (9⁻¹ + 11 * 18⁻¹ - 2 * 3⁻¹ < 0) =
+          ¬9⁻¹ * (11 * 18⁻¹) * (1 - 3⁻¹) * (1 - 3⁻¹) - 3⁻¹ * 3⁻¹ * (1 - 9⁻¹) * (1 - 11 * 18⁻¹) < 0
+      [cases] source: Initial goal
+  [ring] Ring `Rat`
+    [basis] Basis
+      [_] 9 * 9⁻¹ + -1 = 0
+      [_] 18 * 18⁻¹ + -1 = 0
+      [_] 3 * 3⁻¹ + -1 = 0

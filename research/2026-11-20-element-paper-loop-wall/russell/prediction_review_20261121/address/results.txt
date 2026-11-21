@@ -1,0 +1,31 @@
+H_to_At_thresholds.csv 9f7b21e9eba6f76d0cbfa4ffcae65eeac7bf43cd6289bf3205432799ba8c3803
+element_data_v1.js 5a83e489dcdf083f9527e532456f9ecc7dc20a3b30a38ed115550e8982deba6b
+different ordinary component: ['He']
+dominant name vs outermost switches: [('Al', 'Ne', 'He'), ('Si', 'Ne', 'He'), ('P', 'Ne', 'He'), ('S', 'Ne', 'He'), ('Cl', 'Ne', 'He'), ('Ar', 'Ne', 'He'), ('Ca', 'Ar', 'He'), ('Sc', 'Ar', 'He')]
+first and dominant: [(('', ''), 2), (('Ar', 'Ar'), 1), (('Ar', 'He'), 17), (('He', 'He'), 8), (('Kr', 'He'), 17), (('Kr', 'Kr'), 1), (('Ne', 'He'), 6), (('Ne', 'Ne'), 2), (('Xe', 'He'), 30), (('Xe', 'Xe'), 1)]
+dominant vs ALL ordinary rank box: {'no named core': 2, 'separated': 74, 'width missing': 9}
+rank boxes: {'no named core': 2, 'sole named core': 8, 'separated': 75}
+dominant ordinal: [(0, 2), (1, 13), (2, 6), (3, 17), (4, 17), (5, 30)]
+
+ledger: mixer
+first bins/max/tied pairs (7, 45, 1230)
+ sizes [(('I', 'I'), 12), (('N', 'I'), 18), (('N', 'N'), 1), (('N', 'O'), 1), (('O', 'I'), 45), (('O', 'N'), 1), (('O', 'O'), 7)]
+any_ordinary bins/max/tied pairs (6, 45, 1248)
+ sizes [(('I', 'I'), 12), (('N', 'I'), 19), (('N', 'O'), 1), (('O', 'I'), 45), (('O', 'N'), 1), (('O', 'O'), 7)]
+ranked bins/max/tied pairs (19, 17, 346)
+named bins/max/tied pairs (24, 17, 326)
+train/test 43 22 training labels by feature {"('I', 1)": {'O': 1, 'I': 1}, "('I', 2)": {'O': 3, 'I': 2}, "('I', 3)": {'O': 12, 'I': 2}, "('I', 4)": {'O': 12, 'I': 3}, "('N', 0)": {'O': 1}, "('O', 1)": {'O': 6}}
+majority ([18, 0, 4, 0], 0.8181818181818182, 0.5)
+ranked ([18, 0, 4, 0], 0.8181818181818182, 0.5)
+
+ledger: extended
+first bins/max/tied pairs (7, 47, 1288)
+ sizes [(('I', 'I'), 12), (('N', 'I'), 16), (('N', 'N'), 1), (('N', 'O'), 1), (('O', 'I'), 47), (('O', 'N'), 1), (('O', 'O'), 7)]
+any_ordinary bins/max/tied pairs (6, 47, 1304)
+ sizes [(('I', 'I'), 12), (('N', 'I'), 17), (('N', 'O'), 1), (('O', 'I'), 47), (('O', 'N'), 1), (('O', 'O'), 7)]
+ranked bins/max/tied pairs (19, 19, 366)
+named bins/max/tied pairs (24, 19, 346)
+train/test 43 24 training labels by feature {"('I', 1)": {'O': 1, 'I': 1}, "('I', 2)": {'O': 3, 'I': 2}, "('I', 3)": {'O': 12, 'I': 2}, "('I', 4)": {'O': 12, 'I': 3}, "('N', 0)": {'O': 1}, "('O', 1)": {'O': 6}}
+majority ([20, 0, 4, 0], 0.8333333333333334, 0.5)
+ranked ([20, 0, 4, 0], 0.8333333333333334, 0.5)
+PASS

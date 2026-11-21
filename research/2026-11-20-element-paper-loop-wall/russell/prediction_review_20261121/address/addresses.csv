@@ -1,0 +1,86 @@
+Z,symbol,mixer,extended,affinity_status,first,any_ordinary,first_core,first_k,outside_k,dominant_core,dominant_k,dominant_ordinal,rank_box_status,dominant_vs_all_box,dominant_z,next_named_core,next_named_z
+1,H,O,O,measured,N,N,,,,,,0,no named core,no named core,,,
+2,He,N,N,no bound ground-state anion in adopted ledger,N,I,,,,,,0,no named core,no named core,,,
+3,Li,O,O,measured,O,O,He,1,1,He,1,1,sole named core,separated,14.028949426,,
+4,Be,N,N,no bound ground-state anion in adopted ledger,O,O,He,2,2,He,2,1,sole named core,separated,8.450658251,,
+5,B,O,O,measured,O,O,He,3,3,He,3,1,sole named core,separated,6.838131940,,
+6,C,O,O,measured,O,O,He,4,4,He,4,1,sole named core,separated,6.079534192,,
+7,N,N,N,no bound ground-state anion in adopted ledger,I,I,He,5,,He,5,1,sole named core,separated,5.639665400,,
+8,O,O,O,measured,I,I,He,6,,He,6,1,sole named core,separated,5.352829844,,
+9,F,I,I,measured,I,I,He,7,,He,7,1,sole named core,separated,5.151005903,,
+10,Ne,N,N,no bound ground-state anion in adopted ledger,I,I,He,8,,He,8,1,sole named core,separated,5.001351753,,
+11,Na,O,O,measured,O,O,Ne,1,1,Ne,1,1,separated,separated,9.201333307,He,4.886009284
+12,Mg,N,N,no bound ground-state anion in adopted ledger,I,I,Ne,2,,Ne,2,1,separated,separated,5.330372828,He,4.794170438
+13,Al,O,O,measured,I,I,Ne,3,,He,11,2,separated,separated,4.719351433,Ne,4.218008649
+14,Si,O,O,measured,I,I,Ne,4,,He,12,2,separated,separated,4.657218555,Ne,3.694293026
+15,P,O,O,measured,I,I,Ne,5,,He,13,2,separated,separated,4.604740699,Ne,3.389921217
+16,S,I,I,measured,I,I,Ne,6,,He,14,2,separated,separated,4.559841484,Ne,3.190741020
+17,Cl,I,I,measured,I,I,Ne,7,,He,15,2,separated,separated,4.520949953,Ne,3.049930255
+18,Ar,N,N,no bound ground-state anion in adopted ledger,I,I,Ne,8,,He,16,2,separated,separated,4.486909585,Ne,2.945836618
+19,K,O,O,measured,O,O,Ar,1,1,Ar,1,1,separated,separated,7.285752126,He,4.456858339
+20,Ca,O,O,measured,I,I,Ar,2,,He,18,3,separated,separated,4.430113516,Ar,4.288608920
+21,Sc,O,O,measured,I,I,Ar,3,,He,19,3,separated,separated,4.406128155,Ar,2.968448436
+22,Ti,O,O,measured,I,I,Ar,4,,He,20,3,separated,separated,4.384488271,Ne,2.702126930
+23,V,O,O,measured,I,I,Ar,5,,He,21,3,separated,separated,4.364848859,Ne,2.664493835
+24,Cr,O,O,measured,I,I,Ar,6,,He,22,3,separated,separated,4.346930222,Ne,2.633257237
+25,Mn,N,N,no bound ground-state anion in adopted ledger,I,I,Ar,7,,He,23,3,separated,separated,4.330498071,Ne,2.605176804
+26,Fe,O,O,measured,I,I,Ar,8,,He,24,3,separated,separated,4.315359923,Ne,2.580562095
+27,Co,O,O,measured,I,I,Ar,9,,He,25,3,separated,separated,4.301358751,Ne,2.556221505
+28,Ni,O,O,measured,I,I,Ar,10,,He,26,3,separated,separated,4.288359364,Ne,2.537148694
+29,Cu,O,O,measured,I,I,Ar,11,,He,27,3,separated,separated,4.276237962,Ne,2.520846754
+30,Zn,N,N,no bound ground-state anion in adopted ledger,I,I,Ar,12,,He,28,3,separated,separated,4.264901927,Ne,2.504590665
+31,Ga,O,O,measured,I,I,Ar,13,,He,29,3,separated,separated,4.254271374,Ne,2.489756078
+32,Ge,O,O,measured,I,I,Ar,14,,He,30,3,separated,separated,4.244263692,Ne,2.473990278
+33,As,O,O,measured,I,I,Ar,15,,He,31,3,separated,separated,4.234815864,Ne,2.463340963
+34,Se,I,I,measured,I,I,Ar,16,,He,32,3,separated,separated,4.225871890,Ne,2.451561234
+35,Br,I,I,measured,I,I,Ar,17,,He,33,3,separated,width missing,4.217387708,Ne,2.440558628
+36,Kr,N,N,no bound ground-state anion in adopted ledger,I,I,Ar,18,,He,34,3,separated,separated,4.209314828,Ne,2.430158559
+37,Rb,O,O,measured,O,O,Kr,1,1,Kr,1,1,separated,separated,6.533086692,He,4.201618825
+38,Sr,O,O,measured,I,I,Kr,2,,He,36,4,separated,separated,4.194259514,Kr,3.887801906
+39,Y,O,O,measured,I,I,Kr,3,,He,37,4,separated,separated,4.187211928,Kr,2.952932630
+40,Zr,O,O,measured,I,I,Kr,4,,He,38,4,separated,width missing,4.180443507,Ne,2.393877538
+41,Nb,O,O,measured,I,I,Kr,5,,He,39,4,separated,width missing,4.173934854,Ne,2.385858502
+42,Mo,O,O,measured,I,I,Kr,6,,He,40,4,separated,separated,4.167660507,Ne,2.378094063
+43,Tc,O,O,estimated,I,I,Kr,7,,He,41,4,separated,width missing,4.161601833,Ne,2.370703265
+44,Ru,O,O,measured,I,I,Kr,8,,He,42,4,separated,width missing,4.155742626,Ne,2.363589397
+45,Rh,O,O,measured,I,I,Kr,9,,He,43,4,separated,width missing,4.150066689,Ne,2.356731573
+46,Pd,O,O,measured,I,I,Kr,10,,He,44,4,separated,width missing,4.144552784,Ne,2.349624478
+47,Ag,I,I,measured,I,I,Kr,11,,He,45,4,separated,separated,4.139194130,Ne,2.343180199
+48,Cd,N,N,no bound ground-state anion in adopted ledger,I,I,Kr,12,,He,46,4,separated,separated,4.133974329,Ne,2.336889963
+49,In,O,O,measured,I,I,Kr,13,,He,47,4,separated,separated,4.128884063,Ne,2.330367434
+50,Sn,O,O,measured,I,I,Kr,14,,He,48,4,separated,separated,4.123914072,Ne,2.324352305
+51,Sb,O,O,measured,I,I,Kr,15,,He,49,4,separated,width missing,4.119050970,Ne,2.315172414
+52,Te,I,I,measured,I,I,Kr,16,,He,50,4,separated,separated,4.114281543,Ne,2.309108846
+53,I,I,I,measured,I,I,Kr,17,,He,51,4,separated,separated,4.109605036,Ne,2.303249097
+54,Xe,N,N,no bound ground-state anion in adopted ledger,I,I,Kr,18,,He,52,4,separated,separated,4.105016426,Ne,2.297678325
+55,Cs,O,O,measured,O,O,Xe,1,1,Xe,1,1,separated,separated,5.947100834,He,4.100497807
+56,Ba,O,O,measured,I,I,Xe,2,,He,54,5,separated,separated,4.096048385,Xe,3.583009141
+57,La,O,O,measured,I,I,Xe,3,,He,55,5,separated,separated,4.091667120,Xe,2.604641946
+58,Ce,O,O,measured,I,I,Xe,4,,He,56,5,separated,separated,4.087340585,Ne,2.276053495
+59,Pr,O,O,measured,I,I,Xe,5,,He,57,5,separated,separated,4.083066504,Ne,2.270702179
+60,Nd,O,O,measured,I,I,Xe,6,,He,58,5,separated,separated,4.078834614,Ne,2.264528126
+61,Pm,N,N,theory-only,I,I,Xe,7,,He,59,5,separated,separated,4.074644885,Ne,2.259830206
+62,Sm,N,N,measured-lower-bound,I,I,Xe,8,,He,60,5,separated,separated,4.070476557,Ne,2.254350161
+63,Eu,O,O,measured,I,I,Xe,9,,He,61,5,separated,separated,4.066354019,Ne,2.248863167
+64,Gd,O,O,preliminary-measurement,I,I,Xe,10,,He,62,5,separated,separated,4.062260582,Ne,2.243383085
+65,Tb,O,O,measured,I,I,Xe,11,,He,63,5,separated,separated,4.058218792,Ne,2.237492812
+66,Dy,N,O,evaluated-AMS-estimate,I,I,Xe,12,,He,64,5,separated,separated,4.054135589,Ne,2.232261641
+67,Ho,N,N,experimental-upper-limit-no-established-bound-anion,I,I,Xe,13,,He,65,5,separated,separated,4.050130289,Ne,2.226875780
+68,Er,N,N,experimental-upper-limit-no-established-bound-anion,I,I,Xe,14,,He,66,5,separated,separated,4.046084195,Ne,2.221496131
+69,Tm,N,O,evaluated-AMS-estimate-disputed,I,I,Xe,15,,He,67,5,separated,separated,4.042100374,Ne,2.216005313
+70,Yb,N,N,evaluated-no-stable-ground-anion,I,I,Xe,16,,He,68,5,separated,separated,4.038080233,Ne,2.210391276
+71,Lu,O,O,measured-SEVI,I,I,Xe,17,,He,69,5,separated,separated,4.034062266,Ne,2.205207688
+72,Hf,O,O,measured-SEVI,I,I,Xe,18,,He,70,5,separated,separated,4.030084335,Ne,2.199280791
+73,Ta,O,O,measured-SEVI,I,I,Xe,19,,He,71,5,separated,separated,4.026086897,Ne,2.193768116
+74,W,O,O,evaluated-SEVI,I,I,Xe,20,,He,72,5,separated,separated,4.022095075,Ne,2.183169705
+75,Re,O,O,measured-SEVI,I,I,Xe,21,,He,73,5,separated,separated,4.018080148,Ne,2.183002987
+76,Os,O,O,evaluated measured,I,I,Xe,22,,He,74,5,separated,separated,4.014042618,Ne,2.176084100
+77,Ir,I,I,evaluated measured,I,I,Xe,23,,He,75,5,separated,separated,4.010021989,Ne,2.170700637
+78,Pt,I,I,evaluated measured,I,I,Xe,24,,He,76,5,separated,separated,4.005957930,Ne,2.165432099
+79,Au,I,I,evaluated measured,I,I,Xe,25,,He,77,5,separated,separated,4.001897840,Ne,2.157894737
+80,Hg,N,N,no established bound ground anion,I,I,Xe,26,,He,78,5,separated,separated,3.997804121,Ne,2.151972158
+81,Tl,O,O,measured-LPT,I,I,Xe,27,,He,79,5,separated,separated,3.993678329,Ne,2.147522523
+82,Pb,O,O,measured-LPM-208Pb,I,I,Xe,28,,He,80,5,separated,separated,3.989534128,Ne,2.140983607
+83,Bi,O,O,measured-LPT,I,I,Xe,29,,He,81,5,separated,separated,3.985352868,Ne,2.134676564
+84,Po,N,N,observed-preliminary-systematics-outstanding,I,I,Xe,30,,He,82,5,separated,separated,3.981156026,Ne,2.128733265
+85,At,I,I,measured-LPT,I,I,Xe,31,,He,83,5,separated,width missing,3.976933564,Ne,2.123123123

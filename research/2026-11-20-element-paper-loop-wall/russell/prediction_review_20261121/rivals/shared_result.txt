@@ -1,0 +1,2 @@
+Si and Ag remain the unique calibration endpoints on the entire known-width box.
+8 by 8 interval-derivative boxes; 24 alternative rules: {'closed': 11, 'open': 11, 'ideal': 2}

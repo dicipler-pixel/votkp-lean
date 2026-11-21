@@ -1,0 +1,4 @@
+K: predicted 4.373717188 inside; catalogue 7.285752126 outside; ratio error (actual−prediction) 2.912034938
+Rb: predicted 5.370170945 inside; catalogue 6.533086692 outside; ratio error (actual−prediction) 1.162915747
+Cs: predicted 5.780421257 inside; catalogue 5.947100834 outside; ratio error (actual−prediction) 0.166679577
+Fr: predicted 5.361114977, IE2=21.834433307 eV, side: inside; independent experiment pending
