@@ -71,3 +71,5 @@ import LoopWall
 #print axioms rung0_Cs
 #print axioms gam_anion_rung
 #print axioms omega_eta_wall
+#print axioms rung0_Gd
+#print axioms rung0_Tb

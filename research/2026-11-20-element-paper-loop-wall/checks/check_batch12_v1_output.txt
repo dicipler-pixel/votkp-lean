@@ -1,0 +1,2 @@
+ordinary steps 285 energy differences 0 ratio differences 0
+outside the wall: [('Ba', 0, 36.036956), ('La', 0, 10.002583), ('Ce', 0, 9.228539), ('Pr', 0, 50.079648), ('Nd', 0, 56.678293)]

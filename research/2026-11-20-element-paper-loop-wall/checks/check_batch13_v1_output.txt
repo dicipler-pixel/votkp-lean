@@ -1,0 +1,2 @@
+ordinary steps 310 energy differences 0 ratio differences 0
+outside the wall: [('Eu', 0, 48.882629), ('Gd', 0, 29.008491), ('Tb', 0, 44.656157)]

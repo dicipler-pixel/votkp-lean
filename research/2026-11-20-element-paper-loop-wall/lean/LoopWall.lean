@@ -427,6 +427,17 @@ theorem ordinary_window_nitrogen_caesium :
     inside (552.06741 / 97.8901) ∧ outside (23.15745 / 3.89390572743) ∧
     (23.15745 / 3.89390572743 : Rat) < 6 := by
   unfold inside outside; refine ⟨?_, ?_, ?_⟩ <;> grind
+/-- Batches 12 and 13 anion rungs, barium to terbium (Ning and Lu 2022 unless noted). Europium is
+from Cheng and Castleman (2015); gadolinium's preliminary value is certified across its quoted
+uncertainty. Promethium (theory only) and samarium (lower bound only) are not certified. -/
+theorem rung0_Ba : outside (5.2116646 / 0.14462) := by unfold outside; grind
+theorem rung0_La : outside (5.5769 / 0.557546) := by unfold outside; grind
+theorem rung0_Ce : outside (5.5386 / 0.600160) := by unfold outside; grind
+theorem rung0_Pr : outside (5.4702 / 0.10923) := by unfold outside; grind
+theorem rung0_Nd : outside (5.525 / 0.09748) := by unfold outside; grind
+theorem rung0_Eu : outside (5.670385 / 0.129) := by unfold outside; grind
+theorem rung0_Gd : outside (6.1498 / 0.242) := by unfold outside; grind
+theorem rung0_Tb : outside (5.8638 / 0.13131) := by unfold outside; grind
 /-- The data window: silver's anion rung is inside and silicon's is outside. -/
 theorem window_silver_silicon :
     inside (7.576234 / 1.30447) ∧ outside (8.15168 / 1.3895212) := by

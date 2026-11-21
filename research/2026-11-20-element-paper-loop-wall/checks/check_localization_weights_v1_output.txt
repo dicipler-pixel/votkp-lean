@@ -1,0 +1,12 @@
+NC-Kr-4.csv    mesh  4  sum-rule error +1.78e-15  nearest share 0.991023  Tr(Lambda)/3 0.073224 A^2
+NC-Kr-6.csv    mesh  6  sum-rule error +3.55e-15  nearest share 0.990958  Tr(Lambda)/3 0.073270 A^2
+NC-Kr-8.csv    mesh  8  sum-rule error +1.78e-15  nearest share 0.990958  Tr(Lambda)/3 0.073271 A^2
+NC-Rb-4.csv    mesh  4  sum-rule error +2.22e-16  nearest share 0.496956  Tr(Lambda)/3 5.704361 A^2
+NC-Rb-6.csv    mesh  6  sum-rule error -1.11e-16  nearest share 0.477558  Tr(Lambda)/3 7.995186 A^2
+PAW-Kr-4.csv   mesh  4  sum-rule error +1.78e-15  nearest share 0.991333  Tr(Lambda)/3 0.066924 A^2
+PAW-Kr-6.csv   mesh  6  sum-rule error +0.00e+00  nearest share 0.991271  Tr(Lambda)/3 0.066972 A^2
+PAW-Kr-8.csv   mesh  8  sum-rule error +3.55e-15  nearest share 0.991270  Tr(Lambda)/3 0.066972 A^2
+PAW-Rb-10.csv  mesh 10  sum-rule error +2.22e-16  nearest share 0.473892  Tr(Lambda)/3 12.622018 A^2
+PAW-Rb-4.csv   mesh  4  sum-rule error +0.00e+00  nearest share 0.497897  Tr(Lambda)/3 5.684416 A^2
+PAW-Rb-6.csv   mesh  6  sum-rule error -2.22e-16  nearest share 0.478460  Tr(Lambda)/3 7.974303 A^2
+PAW-Rb-8.csv   mesh  8  sum-rule error -2.22e-16  nearest share 0.475015  Tr(Lambda)/3 10.378817 A^2
