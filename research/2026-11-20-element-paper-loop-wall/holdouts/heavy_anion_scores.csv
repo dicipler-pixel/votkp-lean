@@ -1,0 +1,9 @@
+Z,symbol,frozen,source_grade,IE_eV,EA_eV,z,Gamma,z_low,z_high,eta_eV,chi_eV,omega_over_eta,wall,score,z_gt_5,z_gt_5.8,z_gt_5.82,z_gt_5.83,z_gt_5.85,z_gt_5.9,z_gt_6
+76,Os,outside,adopted,8.4382300000,1.0776610000,7.8301339661,0.7735028701,7.8297740063,7.8304939418,3.6802845000,4.7579455000,0.8356918088,outside,agrees,outside,outside,outside,outside,outside,outside,outside
+77,Ir,inside,adopted,8.9670200000,1.5640570000,5.7331798010,0.7029635241,5.7329988210,5.7333607835,3.7014815000,5.2655385000,1.0118227110,inside,agrees,outside,inside,inside,inside,inside,inside,inside
+78,Pt,inside,adopted,8.9588300000,2.1251000000,4.2157216131,0.6165439515,4.2155753712,4.2158678619,3.4168650000,5.5419650000,1.3153517935,inside,agrees,inside,inside,inside,inside,inside,inside,inside
+79,Au,inside,adopted,9.2255540000,2.3086100000,3.9961509306,0.5996918372,3.9960972694,3.9962045933,3.4584720000,5.7670820000,1.3903166683,inside,agrees,inside,inside,inside,inside,inside,inside,inside
+82,Pb,outside,adopted,7.4166799000,0.3567210000,20.7912623591,0.9082200945,20.7911441090,20.7913806105,3.5299794500,3.8867004500,0.6061607217,outside,agrees,outside,outside,outside,outside,outside,outside,outside
+83,Bi,outside,adopted,7.2855160000,0.9423620000,7.7311224349,0.7709343770,7.7310094177,7.7312354552,3.1715770000,4.1139390000,0.8412695709,outside,agrees,outside,outside,outside,outside,outside,outside,outside
+84,Po,outside,preliminary-statistical-only,8.4180700000,1.4761101164,5.7028739974,0.7016205286,5.7028669765,5.7028810183,3.4709799418,4.9470900582,1.0156999459,inside,contrary,outside,inside,inside,inside,inside,inside,inside
+85,At,inside,adopted,9.3175100000,2.4157800000,3.8569364760,0.5882177974,3.8567916054,3.8570813550,3.4508650000,5.8666450000,1.4450859652,inside,agrees,inside,inside,inside,inside,inside,inside,inside

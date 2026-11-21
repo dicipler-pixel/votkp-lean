@@ -1,0 +1,5 @@
+scope,input,count,lower_element,k_lower,inclusive_lower,upper_element,k_upper,exclusive_upper
+all numeric,central,3637,Ag,0,5.8079020598,Si,0,5.8665387761
+all numeric,box,3614,Ag,0,5.8080102725,Si,0,5.8665142305
+ordinary,central,3570,N,5,5.6396654003,Cs,1,5.9471008342
+ordinary,box,3548,N,5,5.6396892625,Cs,1,5.9470854253
