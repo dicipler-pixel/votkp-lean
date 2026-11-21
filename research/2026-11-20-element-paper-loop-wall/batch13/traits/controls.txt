@@ -1,0 +1,6 @@
+Exhaustive small pairs agreed with assignment minimum: 126
+Counterexample to R<=1: Gadolinium removal 14, R=2
+Neutral lanthanum has R=1; final H-like -> bare has K=R=0
+Same R can lose different orbital identities: neodymium removal 6
+Rejected invalid pair {'1s': 3} {'1s': 2}
+Rejected invalid pair {'1s': 2} {}

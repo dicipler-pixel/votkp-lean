@@ -1,0 +1,18 @@
+Frozen 72-window feature centroids verified. Exact midpoint (class 2 vs 0): -2953376414123437/18014398509481984 < −1/8.
+Cerium q=2, actual 2, frozen centre predicts 0; minimum E₂²−E₁E₃ = 32235189/1000000 eV², conservative scaled logarithm argument 5.336994831 > 1.
+Praseodymium q=3, actual 2, frozen centre predicts 0; minimum E₂²−E₁E₃ = -63207/1250 eV², conservative scaled logarithm argument 2.406598595 > 1.
+Neodymium q=4, actual 2, frozen centre predicts 0; minimum E₂²−E₁E₃ = 644/5 eV², conservative scaled logarithm argument 2.517137725 > 1.
+Lean (version 4.34.1, x86_64-unknown-linux-gnu, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)
+'ElementPaper.XenonContrast.octIsEighthPower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.XenonContrast.positiveThroughout' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.XenonContrast.scaledThroughout' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.XenonContrast.threeWindowsVerified' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.XenonContrast.ceriumPositive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.XenonContrast.neodymiumPositive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.XenonContrast.praseodymiumCanChangeSign' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.XenonContrast.scaledForAllThree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.XenonContrast.fixedCenters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.XenonContrast.twoCannotWin' depends on axioms: [propext, Classical.choice, Quot.sound]
+Rejected false control: cerium can have a nonpositive minimum
+Rejected false control: praseodymium is uniformly positive
+10 theorem audits, two controls rejected.

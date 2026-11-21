@@ -55,6 +55,7 @@ def main(path, folder):
     table=[]
     for source,I,dI in (("pinned Nd IE1",pind,dpind),("live Nd IE1 Miyabe 2024",live,dlive)):
         table.extend([variant(source+" / Fu 2020 Nd EA",A,da,I,dI),
+                      variant(source+" / Fu 2020 Table IV Nd EA",D(".09749"),D(".00032"),I,dI),
                       variant(source+" / compiled converted Nd EA",D(".09749"),D(".00033"),I,dI),
                       variant("pinned Nd IE2 / "+source,I,dI,D(nd[1]["IE_eV"]),D(nd[1]["unc_eV"]))])
     pr=atoms[-2]["thresholds"][0]

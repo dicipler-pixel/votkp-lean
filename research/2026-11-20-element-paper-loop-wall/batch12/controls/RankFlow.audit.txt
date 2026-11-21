@@ -1,0 +1,12 @@
+'VOTKP.RankFlow.fibre_charge_le_loss' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.RankFlow.total_charge_le_loss' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.RankFlow.fixed_self_edge' does not depend on any axioms
+'VOTKP.RankFlow.opposite_neighbours' does not depend on any axioms
+'VOTKP.RankFlow.constant_rank_can_lose' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.RankFlow.all_tie_choices_110' does not depend on any axioms
+'VOTKP.RankFlow.all_tie_choices_200' does not depend on any axioms
+'VOTKP.RankFlow.all_tie_choices_222' does not depend on any axioms
+'VOTKP.RankFlow.equal_neighbours_can_change' does not depend on any axioms
+'VOTKP.RankFlow.finite_110_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.RankFlow.finite_200_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.RankFlow.finite_222_lower' depends on axioms: [propext, Classical.choice, Quot.sound]

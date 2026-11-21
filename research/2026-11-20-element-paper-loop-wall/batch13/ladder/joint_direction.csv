@@ -1,0 +1,6 @@
+symbol,reversible_k,touch_only_k,possible_strict_reversal_sets,max_simultaneous,example_k,first_to_touch_k,common_width_multiplier_to_touch,common_energy_at_touch_eV
+Pm,,,1,0,,10,19/17,2787/17
+Sm,"13,14",,3,1,13,14,19/26,3455/13
+Eu,"13,14",15,3,1,13,14,9/14,272
+Gd,"13,14","15,16",3,1,13,14,20/29,8052/29
+Tb,"13,14,17","15,16",6,2,"13,17",14,21/29,8211/29

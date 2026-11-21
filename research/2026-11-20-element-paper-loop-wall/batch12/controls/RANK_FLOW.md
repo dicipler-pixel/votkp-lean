@@ -27,6 +27,14 @@ For rubidium's selected outer subspace $r_k$ is zero or one per spin. Each occup
 
 **DERIVED · read the table.** At 48³ along [110] the outer-band rank term is enclosed between 33.17643 and 33.99942 Å². Only the lower endpoint applies to both the full-position and cell-centre total. The 297 K and 5 K labels refer to the underlying crystallographic inputs. Both projector occupations are taken at zero temperature. All three directions and all ten meshes appear in [rank_flow.csv](rank_flow.csv). [Archived input hashes](../../batch8/material_transport/band_inputs.sha256)
 
+### Exact treatment of every Fermi-level tie
+
+**DERIVED · two independent checks.** The directed translation of a uniform reciprocal mesh is a permutation. Split it into cycles. On each cycle record for every number of selected ambiguous sites the least and greatest number of occupied-to-empty transitions, conditioning on the first and last states and including the closing edge. Convolve the per-cycle counts subject to exact overall half filling. This finite dynamic program agrees with direct enumeration on 54 small random labelled torus cases. Each source-state rank is either zero or one. Some smaller physical meshes do admit several crossing counts.
+
+**DERIVED · 48³ result.** At half filling the room-geometry mesh selects 31 of 48 ambiguous states. Every allowed choice yields **the very same number of transitions** for each of the three directions. In [110] there are 1,959 exits and a rank term of 33.587924838 Å²/electron. In [100] there are 2,793 exits and 23.943612576 Å². In [111] there are 4,867 exits and 13.907812675 Å². In this calculation $|q|$ differs by direction as shown above. These improve the independently guaranteed-edge table. For the 5 K 40³ case, [110] gives exactly 1,363 exits and 26.922939923 Å². The total directional leakage may exceed the rank term. [All 30 exact enclosures](tie_bounds.csv)
+
+**DERIVED · kernel certificate.** A second program regenerates the three 48³ cycle inventories. It contracts repeated fixed symbols around a cycle, which adds or removes only a zero self-edge, while retaining every ambiguous site. It distinguishes occupancy, vacancy and ambiguity, and checks the resulting patterns, counts and exit multiplicities against the complete source tables in Lean. Lean exhausts all fillings of each encoded pattern, with no assumption about how many of its ambiguous sites are chosen. For [110], for example, 347 cycles contribute 0, 1,931 contribute 1 without ambiguity, 2 contribute 2, and 24 contribute 1 for either choice at each ambiguous site. That accounts for all 2,304 cycles and 1,959 exits. Three Lean theorems certify these cycle inventories and sums without axioms. Three further inequalities convert their counts into conservative rational bounds using $a=5.700$ Å and $\pi<3.1415926536$; the Python replay checks that last inequality against the earlier outward Machin enclosure. The Lean projection lemma formalizes the scalar overlap implications after its source- and target-rank premises have been supplied. Actual Bloch wavefunctions, archived energies and the continuous surface argument are outside the Lean kernel. Twelve theorems in total were checked with core Lean 4.34.1. [Cycle census](rank_signature.csv) · [Lean](RankFlow.lean) · [Axiom output](RankFlow.audit.txt)
+
 ## Why this term grows in a metal with a regular Fermi pocket
 
 **DERIVED · continuum hypotheses.** Take the continuum Brillouin-zone measure before $q\to0$. For a bounded single occupied pocket $\Omega$ with piecewise smooth boundary, a translation $q=t u$, $|u|=1$, gives
@@ -64,5 +72,8 @@ From this directory run the following. NumPy and SciPy are required; the scripts
 
 
     OPENBLAS_NUM_THREADS=1 python3 rank_flow.py > rank_flow.csv
+    OPENBLAS_NUM_THREADS=1 python3 tie_bounds.py > tie_bounds.csv
+    OPENBLAS_NUM_THREADS=1 python3 rank_signature.py > rank_signature.csv
+    lean RankFlow.lean
     OPENBLAS_NUM_THREADS=1 python3 rank_slope.py > rank_slope.csv
     OPENBLAS_NUM_THREADS=1 python3 orbit_slope.py > orbit_slope.csv

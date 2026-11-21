@@ -1,0 +1,19 @@
+Archive SHA256: 75e67478d9a22ef85fa2d3f6ac36ad2860c6f8f62215127c558438a2cb53f62c
+Printed CSV SHA256: a2d12829f83ad98e8cbeaf0eea69101234f8aa0441510c6b8ad546f90e43e301
+Printed rows: 320
+NIST records: 315
+anion point pairs: 3
+complete joint widths: 313
+ordinary pairs: 310
+pinned grade E: 5
+pinned grade S: 27
+pinned grade T: 283
+rectangle permits reverse: 9
+rectangle touches at one: 5
+rejected: skip terminal row
+rejected: duplicate row
+rejected: missing ratio
+rejected: reflection sign
+rejected: insert theoretical promethium EA
+rejected: wrong pinned energy
+rejected: relabel samarium as unbound

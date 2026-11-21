@@ -1,0 +1,9 @@
+label,matrix_cm-1,free_cm-1,source_shift_cm-1,matrix_fwhm_cm-1,assignment,upper,lower
+A,18854,18842,12,330,multigaussian,6s9s_3S1,6s6p_1P1
+B,18551,18429,122,354,multigaussian,6s6d_3D1,6s6p_3P0
+C,17968,18061,-93,156,identified,6s6p_1P1,6s2_1S0
+D,17427,17303,124,411,multiple_candidates,6s6d_3D3,6s6p_3P2
+E,13011,13030,-18,88,identified,5d6p_3F2,5d6s_3D1
+F,12838,12848,-9,113,identified,5d6p_3F2,5d6s_3D2
+G,12599,12635,-35,117,identified,6s6p_3P1,6s2_1S0
+H,11422,11395,27,102,identified_gas_E1_forbidden,5d6s_1D2,6s2_1S0

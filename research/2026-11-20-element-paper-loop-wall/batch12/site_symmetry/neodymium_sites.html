@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Two sites in elemental neodymium</title>
+<style>
+:root{color-scheme:light;font-family:system-ui,sans-serif;color:#192d35;background:#f5f5ed}*{box-sizing:border-box}body{max-width:1050px;margin:auto;padding:clamp(16px,4vw,48px)}h1,h2{font-family:Georgia,serif;line-height:1.12}h1{font-size:clamp(29px,4vw,49px);margin:0 0 12px}p{max-width:81ch;line-height:1.55}main{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:16px 0}section{background:#fffefa;border:1px solid #cdd3cd;border-radius:8px;overflow:hidden}h2{font-size:20px;margin:16px 16px 0}canvas{width:100%;height:clamp(180px,32vw,340px);display:block;touch-action:none;cursor:grab}canvas:active{cursor:grabbing}.keys{display:flex;gap:18px;flex-wrap:wrap}.dot{display:inline-block;border-radius:50%;width:11px;height:11px;background:#157e85;margin-right:6px}.amber{background:#b75025}.controls{display:flex;gap:8px;flex-wrap:wrap}button{font:inherit;background:#fffefa;border:1px solid #758785;border-radius:4px;padding:7px 13px;cursor:pointer}button:focus-visible{outline:3px solid #157e85}small{display:block;margin:8px 0;color:#445653}a{color:#11636a}@media(max-width:540px){main{grid-template-columns:1fr}canvas{height:220px}}
+</style>
+<h1>Two sites in elemental neodymium</h1>
+<p>Both atoms have six neighbours at 3.628 Å and six at 3.658 Å. Rotate the two cages together to see which bond vectors have an exact opposite through the central atom.</p>
+<div class="controls"><button id="top">View along the stacking axis</button><button id="tilt">Oblique view</button><button id="turn">Rotate 30°</button></div>
+<main><section><h2>Near-cubic site · six opposite pairs</h2><canvas id="six" role="img" aria-label="Twelve neighbours with six antipodal pairs"></canvas></section><section><h2>Hexagonal site · three opposite pairs</h2><canvas id="three" role="img" aria-label="Twelve neighbours with three antipodal pairs"></canvas></section></main>
+<div class="keys"><span><i class="dot"></i>Neighbour with an opposite</span><span><i class="dot amber"></i>Neighbour without an opposite</span></div>
+<p>From above, three neighbours above the hexagonal site lie over three below. Around the near-cubic site the two triangles are staggered. All twelve distances and the second directional moments agree between the two cages. Their third directional moments differ.</p>
+<small>The dark centre is the reference atom. Lines identify neighbour directions. Drag either view or use the buttons. Coordinates use the mean double-hexagonal crystal structure. <a href="https://www.crystallography.net/cod/9008526.html">COD 9008526</a> · <a href="https://doi.org/10.1103/PhysRevB.27.354">Site-resolved magnetic measurements</a></small>
+<script>
+const cages={"6":[{"xyz":[-1.8289499999999999,1.0559447748343662,2.9498],"paired":true},{"xyz":[1.8289499999999999,-1.0559447748343662,-2.9498],"paired":true},{"xyz":[-1.8289500000000003,-1.0559447748343662,-2.9498],"paired":true},{"xyz":[-6.661338147750939e-16,-2.1118895496687324,2.9498],"paired":true},{"xyz":[6.661338147750939e-16,2.1118895496687324,-2.9498],"paired":true},{"xyz":[1.8289500000000003,1.0559447748343662,2.9498],"paired":true},{"xyz":[-3.6579,0.0,0.0],"paired":true},{"xyz":[1.8289499999999992,-3.1678343245030987,0.0],"paired":true},{"xyz":[-1.8289499999999992,3.1678343245030987,0.0],"paired":true},{"xyz":[3.6579,0.0,0.0],"paired":true},{"xyz":[-1.828950000000001,-3.1678343245030987,0.0],"paired":true},{"xyz":[1.828950000000001,3.1678343245030987,0.0],"paired":true}],"3":[{"xyz":[-1.8289499999999999,1.0559447748343662,-2.9498],"paired":false},{"xyz":[-1.8289499999999999,1.0559447748343662,2.9498],"paired":false},{"xyz":[-6.661338147750939e-16,-2.1118895496687324,-2.9498],"paired":false},{"xyz":[-6.661338147750939e-16,-2.1118895496687324,2.9498],"paired":false},{"xyz":[1.8289500000000003,1.0559447748343662,-2.9498],"paired":false},{"xyz":[1.8289500000000003,1.0559447748343662,2.9498],"paired":false},{"xyz":[-3.6579,0.0,0.0],"paired":true},{"xyz":[1.8289499999999992,-3.1678343245030987,0.0],"paired":true},{"xyz":[-1.8289499999999992,3.1678343245030987,0.0],"paired":true},{"xyz":[3.6579,0.0,0.0],"paired":true},{"xyz":[-1.828950000000001,-3.1678343245030987,0.0],"paired":true},{"xyz":[1.828950000000001,3.1678343245030987,0.0],"paired":true}]};
+let az=.37,el=.42;
+const views=[[document.getElementById('six'),cages[6]],[document.getElementById('three'),cages[3]]];
+function render(){
+ for(const [canvas,points] of views){
+  const w=canvas.clientWidth,h=canvas.clientHeight,d=window.devicePixelRatio||1;
+  canvas.width=Math.round(w*d);canvas.height=Math.round(h*d);
+  const ctx=canvas.getContext('2d');ctx.scale(d,d);const size=Math.min(w,h)*.111;
+  const display=points.map(p=>{
+   const [x,y,z]=p.xyz,u=x*Math.cos(az)-y*Math.sin(az),v=x*Math.sin(az)+y*Math.cos(az);
+   return {x:w/2+u*size,y:h/2-(z*Math.cos(el)-v*Math.sin(el))*size,depth:v*Math.cos(el)+z*Math.sin(el),p};
+  });
+  display.push({x:w/2,y:h/2,depth:0,p:null});
+  for(const pt of display.filter(p=>p.p)){
+   ctx.strokeStyle=pt.p.paired?'#659a9c92':'#bb714f90';ctx.lineWidth=1.5;
+   ctx.beginPath();ctx.moveTo(w/2,h/2);ctx.lineTo(pt.x,pt.y);ctx.stroke();
+  }
+  for(const pt of display.sort((a,b)=>a.depth-b.depth)){
+   ctx.fillStyle=!pt.p?'#172f3b':pt.p.paired?'#157e85':'#b75025';
+   ctx.beginPath();ctx.arc(pt.x,pt.y,pt.p?5+.22*pt.depth:6.8,0,2*Math.PI);ctx.fill();
+   ctx.strokeStyle='#fffefa';ctx.lineWidth=1.1;ctx.stroke();
+  }
+ }
+}
+for(const [canvas] of views){
+ let previous;
+ canvas.onpointerdown=e=>{canvas.setPointerCapture(e.pointerId);previous=[e.clientX,e.clientY]};
+ canvas.onpointermove=e=>{if(!previous)return;az+=(e.clientX-previous[0])*.012;el=Math.max(-Math.PI/2,Math.min(Math.PI/2,el+(e.clientY-previous[1])*.012));previous=[e.clientX,e.clientY];render()};
+ canvas.onpointerup=canvas.onpointercancel=()=>{previous=null};
+}
+document.getElementById('top').onclick=()=>{el=Math.PI/2;render()};
+document.getElementById('tilt').onclick=()=>{az=.37;el=.42;render()};
+document.getElementById('turn').onclick=()=>{az+=Math.PI/6;render()};
+window.addEventListener('resize',render);render();
+</script></html>

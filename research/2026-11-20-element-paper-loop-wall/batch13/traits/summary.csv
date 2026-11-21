@@ -1,0 +1,11 @@
+Z,element,transitions,R0,R_positive,largest_R,sum_R,removals_with_positive_R
+56,Barium,56,56,0,0,0,
+57,Lanthanum,57,56,1,1,1,1
+58,Cerium,58,56,2,1,2,1 2
+59,Praseodymium,59,58,1,1,1,6
+60,Neodymium,60,60,0,0,0,
+61,Promethium,61,61,0,0,0,
+62,Samarium,62,61,1,1,1,6
+63,Europium,63,63,0,0,0,
+64,Gadolinium,64,61,3,2,4,13 14 15
+65,Terbium,65,63,2,1,2,6 14

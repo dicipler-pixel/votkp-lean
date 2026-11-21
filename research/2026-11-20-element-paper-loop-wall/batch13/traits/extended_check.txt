@@ -1,0 +1,23 @@
+108 paired transitions; R changes 21 ; loss/gain identity changes 37
+Pr 6 1 -> 0
+Pr 10 0 -> 1
+Nd 8 0 -> 1
+Nd 10 0 -> 1
+Pm 8 0 -> 1
+Pm 10 0 -> 1
+Pm 14 0 -> 1
+Sm 6 1 -> 0
+Sm 8 0 -> 1
+Sm 10 0 -> 1
+Eu 8 0 -> 1
+Eu 10 0 -> 1
+Gd 9 0 -> 1
+Gd 10 0 -> 1
+Gd 13 1 -> 0
+Gd 14 2 -> 0
+Gd 15 1 -> 0
+Tb 6 1 -> 0
+Tb 9 0 -> 1
+Tb 10 0 -> 1
+Tb 14 1 -> 0
+ASD R sum 8 model R sum 14

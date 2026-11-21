@@ -1,0 +1,6 @@
+symbol,A,Z,N,net_up,net_down,nuclear_spin,nuclear_rms_fm,nuclear_u_fm,nuclear_step_fm,nuclear_step_box_min_fm,ionic_charge,coordination,ionic_radius_pm,ionic_step_at_fixed_charge_pm
+Ba,138,56,82,194,220,0+,4.8378,0.0046,,,2,8,142,
+La,139,57,82,196,221,7/2+,4.8550,0.0049,0.0172,0.0077,3,8,116,
+Ce,140,58,82,198,222,0+,4.8771,0.0018,0.0221,0.0154,3,8,114.3,-1.7
+Pr,141,59,82,200,223,5/2+,4.8919,0.0050,0.0148,0.0080,3,8,112.6,-1.7
+Nd,142,60,82,202,224,0+,4.9123,0.0025,0.0204,0.0129,3,8,110.9,-1.7

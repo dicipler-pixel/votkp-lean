@@ -4,6 +4,8 @@ from collections import Counter
 import gzip
 from itertools import groupby, product
 import json
+from pathlib import Path
+import re
 import sys
 
 import numpy as np
@@ -70,9 +72,25 @@ def main():
         shift=np.rint(np.array(hkl)@np.linalg.inv(inp["reciprocal"])).astype(int)
         mu,*_=interval_counts(energy,shift)
         labels=np.where(energy<mu-TIE_WIDTH_EV,1,np.where(energy>mu+TIE_WIDTH_EV,0,2))
+        # Check the entire compact pattern tables compiled by Lean against this archive run.
+        direction = "".join(map(str, hkl))
+        source = Path(__file__).with_name("RankFlow.lean").read_text()
+        section = source.split("def patterns" + direction + " :", 1)[1].split("\ntheorem ",1)[0]
+        encoded = {}
+        for encoded_word, multiplicity, exits in re.findall(r"⟨\[([0-2, ]+)\], (\d+), (\d+)⟩", section):
+            signature = tuple(map(int, encoded_word.split(",")))
+            if signature in encoded:
+                raise AssertionError("duplicate Lean signature")
+            encoded[signature] = (int(multiplicity), int(exits))
+        found = {}
         for word,count in sorted(census(labels,shift).items()):
             lo,hi=exits_range(word)
-            writer.writerow(("".join(map(str,hkl)),"".join(map(str,word)),count,lo,hi))
+            if lo != hi:
+                raise AssertionError("tie-dependent signature")
+            found[word] = (count,lo)
+            writer.writerow((direction,"".join(map(str,word)),count,lo,hi))
+        if found != encoded:
+            raise AssertionError("archive and Lean signature tables disagree")
 
 
 if __name__=="__main__":

@@ -1,0 +1,23 @@
+49 borrowed affinity values and their reported or missing widths checked.
+1,830 archived central energies and 1,830 uncertainty fields verified against Lean source.
+all, central: 1819 rows, [3788117/652235, 20379200/3473803), witnesses (Z=47, k=0) and (Z=14, k=0).
+all, box: 1799 rows, [7576259/1304450, 6270500/1068863), witnesses (Z=47, k=0) and (Z=14, k=0).
+ordinary, central: 1770 rows, [55206741/9789010, 771915000000/129796857581), witnesses (Z=7, k=5) and (Z=55, k=1).
+ordinary, box: 1751 rows, [55206749/9788970, 57893475000/9734764319), witnesses (Z=7, k=5) and (Z=55, k=1).
+Missing uncertainty pairs: 20.
+Lean (version 4.34.1, x86_64-unknown-linux-gnu, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)
+'ElementPaper.Batch12.Window.uniqueForwardContact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch12.Window.sharpRangeWindow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch12.Window.stabilityMeaning' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch12.Window.historySourcesAlign' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch12.Window.countLedgerAndCalls' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch12.Window.missingBoxKeys' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch12.Window.stableOnAllReportedBoxes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch12.Window.centralWindowAll' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch12.Window.boxWindowAll' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch12.Window.boxWindowOrdinary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.Batch12.Window.alternativeCutoffs' depends on axioms: [propext, Classical.choice, Quot.sound]
+Rejected false claim: upper endpoint fits
+Rejected false claim: lower endpoint fails
+11 theorem audits passed. Two endpoint controls rejected.
+Clean reproduction elapsed 259.09 s, peak child RSS 1969288 KiB; exit 0.

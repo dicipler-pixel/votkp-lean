@@ -1,0 +1,5 @@
+'VOTKP.SubshellTraits.after_decomposes' depends on axioms: [propext, Quot.sound]
+'VOTKP.SubshellTraits.before_decomposes' depends on axioms: [propext, Quot.sound]
+'VOTKP.SubshellTraits.distance_decomposes' depends on axioms: [propext, Quot.sound]
+'VOTKP.SubshellTraits.peel_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.SubshellTraits.pure_removal' depends on axioms: [propext, Classical.choice, Quot.sound]

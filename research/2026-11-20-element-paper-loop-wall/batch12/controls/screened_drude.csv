@@ -1,0 +1,9 @@
+test,lower_eV,upper_eV,optical_integral_eV,loss_integral_eV
+full_observed_window_drude,0.55399998,3.96699927,0.6069842214,2.7490321820
+full_observed_window_data_trapezoid,0.55399998,3.96699927,1.2387209026,3.8412627463
+heldout_window_drude,1.44200034,3.96699927,0.0793963509,2.7461712433
+heldout_window_data_trapezoid,1.44200034,3.96699927,0.5473696938,3.8355856066
+idealized_finite_width_control,0.1,inf,18.2407609639,2.7589334904
+idealized_finite_width_control,0.01,inf,495.2769176998,2.7589448837
+idealized_finite_width_control,0.001,inf,1473.6414537524,2.7589449975
+idealized_finite_width_control,0,inf,inf,2.7589449986

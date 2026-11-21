@@ -1,0 +1,7 @@
+symbol,scope,EA_eV,unc_eV,IE1_eV,z0,Gamma0,z_low,z_high,central_wall,box_wall,source
+Eu,2004 superseded threshold assignment,1.053,.025,5.670385,5.384981,0.686765,5.260093,5.515944,inside,inside,https://doi.org/10.1038/srep12414
+Eu,2015 measured,.116,.013,5.670385,48.882629,0.959906,43.956434,55.052330,outside,outside,https://doi.org/10.1038/srep12414
+Tb,2006 superseded assignment quoted in 2015 thesis,1.98,.10,5.8638,2.961515,0.495143,2.818846,3.119362,inside,inside,https://scholarwolf.unr.edu/server/api/core/bitstreams/f41f5aac-9c22-4369-9e8a-1b2558eb8d5a/content
+Tb,2015 thesis coarse determination,.13,.07,5.8638,45.106154,0.956622,29.316000,97.740000,outside,outside,https://scholarwolf.unr.edu/server/api/core/bitstreams/f41f5aac-9c22-4369-9e8a-1b2558eb8d5a/content
+Tb,2020 Fu et al. original determination,.13131,.00079,5.8638,44.656157,0.956194,44.384557,44.931045,outside,outside,https://doi.org/10.1103/PhysRevA.101.022502
+Tb,2022 compilation Table 3 same central value,.13131,.00080,5.8638,44.656157,0.956194,44.381197,44.934488,outside,outside,https://doi.org/10.1063/5.0080243

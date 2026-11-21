@@ -1,0 +1,17 @@
+Barium 0 0 
+Lanthanum 1 1 1
+Cerium 2 2 1 2
+Praseodymium 1 1 6
+Neodymium 0 0 
+Promethium 0 0 
+Samarium 1 1 6
+Europium 0 0 
+Gadolinium 3 4 13 14 15
+Terbium 2 2 6 14
+Histogram of R on 605 ASD transitions: [(0, 595), (1, 9), (2, 1)]
+two tabulated states Kilbane_2010 R changes [('Pr', 6, 1, 0), ('Sm', 6, 1, 0), ('Tb', 6, 1, 0)] ; net loss/gain changes 12
+two tabulated states Banerjee_2023 R changes [('Pr', 6, 1, 0), ('Sm', 6, 1, 0), ('Tb', 6, 1, 0)] ; net loss/gain changes 9
+two tabulated states Carvajal_2024 R changes [('Pr', 6, 1, 0), ('Sm', 6, 1, 0), ('Tb', 6, 1, 0)] ; net loss/gain changes 12
+one tabulated state plus ASD flank Kilbane_2010 R changes [('Pr', 7, 0, 1), ('Nd', 7, 0, 2), ('Pm', 7, 0, 2), ('Sm', 7, 0, 2), ('Eu', 7, 0, 2), ('Gd', 7, 0, 2), ('Tb', 7, 0, 2)] ; net loss/gain changes 7
+one tabulated state plus ASD flank Banerjee_2023 R changes [('Pr', 7, 0, 1), ('Nd', 7, 0, 2), ('Pm', 7, 0, 1), ('Sm', 7, 0, 1), ('Eu', 7, 0, 1), ('Gd', 7, 0, 1), ('Tb', 7, 0, 1)] ; net loss/gain changes 7
+one tabulated state plus ASD flank Carvajal_2024 R changes [('Pr', 7, 0, 1), ('Nd', 7, 0, 2), ('Pm', 7, 0, 2), ('Sm', 7, 0, 1), ('Eu', 7, 0, 2), ('Gd', 7, 0, 2), ('Tb', 7, 0, 2)] ; net loss/gain changes 7
