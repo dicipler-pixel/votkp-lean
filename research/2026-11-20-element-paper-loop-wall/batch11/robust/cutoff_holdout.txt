@@ -1,0 +1,26 @@
+H-Sn: 1265 rungs, 1247 complete boxes, 41 outside.
+  ordinary central: [N k=5 5.639665400281 (55206741/9789010), C k=4 6.079534191962 (4901132/806169))
+  ordinary box: [N k=5 5.639689262507 (55206749/9788970), C k=4 6.079515661295 (39209052/6449371))
+  all central: [Ag k=0 5.807902059840 (3788117/652235), Si k=0 5.866538776091 (20379200/3473803))
+  all box: [Ag k=0 5.808010272529 (7576259/1304450), Si k=0 5.866514230542 (6270500/1068863))
+Sb-Cs: 264 rungs, 262 complete boxes, 3 outside.
+  ordinary central: [Sb k=49 4.119050969608 (3571003/866948), Cs k=1 5.947100834227 (771915000000/129796857581))
+  ordinary box: [Sb k=49 4.119072858224 (7142011/1733888), Cs k=1 5.947085425274 (57893475000/9734764319))
+  all central: [Te k=0 4.571476121012 (9009808/1970875), Cs k=1 5.947100834227 (771915000000/129796857581))
+  all box: [Te k=0 4.571495402026 (4504907/985434), Cs k=1 5.947085425274 (57893475000/9734764319))
+H-Cs: 1529 rungs, 1509 complete boxes, 44 outside.
+  ordinary central: [N k=5 5.639665400281 (55206741/9789010), Cs k=1 5.947100834227 (771915000000/129796857581))
+  ordinary box: [N k=5 5.639689262507 (55206749/9788970), Cs k=1 5.947085425274 (57893475000/9734764319))
+  all central: [Ag k=0 5.807902059840 (3788117/652235), Si k=0 5.866538776091 (20379200/3473803))
+  all box: [Ag k=0 5.808010272529 (7576259/1304450), Si k=0 5.866514230542 (6270500/1068863))
+Cutoff 5: H-Sn disagreements 7 [('N', 5), ('O', 6), ('F', 7), ('F', 0), ('Ne', 8), ('Mg', 2), ('Ag', 0)]; Sb-Cs 0 []
+Cutoff 5.8: H-Sn disagreements 1 [('Ag', 0)]; Sb-Cs 0 []
+Cutoff 5.82: H-Sn disagreements 0 []; Sb-Cs 0 []
+Cutoff 5.83: H-Sn disagreements 0 []; Sb-Cs 0 []
+Cutoff 5.85: H-Sn disagreements 0 []; Sb-Cs 0 []
+Cutoff 5.9: H-Sn disagreements 1 [('Si', 0)]; Sb-Cs 0 []
+Cutoff 6: H-Sn disagreements 1 [('Si', 0)]; Sb-Cs 1 [('Cs', 1)]
+H-Cs closest anion by absolute forward-z distance: Ag k=0 5.807902059840 (3788117/652235) distance 0.020525064906
+Sb-Cs closest anion by absolute forward-z distance: Te k=0 4.571476121012 (9009808/1970875) distance 1.256951003734
+New input boxes unavailable: [('Sb', 2), ('Sb', 3)]
+Cs k=1 outside, z 5.947100834227, bounds [5.947085425274,5.947116243180]

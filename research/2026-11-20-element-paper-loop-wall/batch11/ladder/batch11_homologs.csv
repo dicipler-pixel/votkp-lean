@@ -1,0 +1,6 @@
+first_element,second_element,z3d,z4d,normalized_z3d,normalized_z4d,minimum_absolute_z3d_minus_z4d,minimum_normalized_z4d_minus_z3d
+Gallium,Indium,2.058240,1.977239,1.157760,1.265433,0.079256,0.106581
+Germanium,Tin,1.979635,1.890771,1.113545,1.210093,0.085556,0.094471
+Arsenic,Antimony,1.930699,1.809273,1.086018,1.157935,0.114422,0.067657
+Selenium,Tellurium,1.898167,1.797395,1.067719,1.150333,0.045462,0.049242
+Bromine,Iodine,1.869455,1.721379,1.051569,1.101682,0.141732,0.046359

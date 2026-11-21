@@ -1,0 +1,11 @@
+Antimony: S=0.690421045, sigma=-0.231228706
+Tellurium: S=0.693445575, sigma=-0.286650252
+Iodine: S=0.696537639, sigma=-0.344606225
+Xenon: S=0.699708455, sigma=-0.405124397
+Cesium: S=0.702957071, sigma=-0.468302940
+Source pin 8e5d44f1d9e36f242e6522bbe70cea18fb315c7a archive SHA-256 75e67478d9a22ef85fa2d3f6ac36ad2860c6f8f62215127c558438a2cb53f62c
+270 serialized rows, 265 archive energies, 260 ordinary pairs, 4 anion pairs, zero differences.
+Outside at central inputs: [('Antimony', 0), ('Cesium', 0), ('Cesium', 1)]
+Endpoint-certified arithmetic (reported input uncertainties only): 262
+Unavailable endpoints (element,k): [('Antimony', 2), ('Antimony', 3)]
+CSV SHA-256: 9ec4f64326bb27717e45d0c679beced7e73a3e968250a28061c896e2d88fd575

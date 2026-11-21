@@ -1,0 +1,12 @@
+Indium to Tin resolved decline
+Tin to Antimony resolved decline
+Antimony to Tellurium interval overlap
+Tellurium to Iodine resolved decline
+Iodine to Xenon resolved decline
+Xenon to Cesium interval overlap
+Antimony 4d vs 3d: 4d greater throughout
+Tellurium 4d vs 3d: intervals overlap
+Iodine 4d vs 3d: 4d smaller throughout
+Xenon 4d vs 3d: 4d smaller throughout
+Cesium 4d vs 3d: 4d smaller throughout
+Cesium xenon core remains outside at the least-open allowed endpoint: 5.947085

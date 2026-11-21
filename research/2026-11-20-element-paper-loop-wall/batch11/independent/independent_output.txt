@@ -1,0 +1,5 @@
+Archive pin 8e5d44f1d9e36f242e6522bbe70cea18fb315c7a
+Matches to standalone public ASD snapshot: 265 energies, uncertainty fields (including blanks), classes and reference strings in each category.
+Reparsed 270 rows. All 265 stored ionization energies, 4 numeric affinities, one unbound record, 260 ordinary outgoing pairs, 4 anion pairs and 5 terminal blanks agree. Differences: none.
+Outside at central inputs: [('Sb', 0, 'EA22'), ('Cs', 0, 'EA22'), ('Cs', 1, 'E')]
+Ladder SHA-256 9ec4f64326bb27717e45d0c679beced7e73a3e968250a28061c896e2d88fd575
