@@ -1,0 +1,2 @@
+ordinary steps 235 energy differences 0 ratio differences 0
+outside the wall: [('Pd', 0, 14.830539), ('In', 0, 15.071775), ('Sn', 0, 6.603827)]

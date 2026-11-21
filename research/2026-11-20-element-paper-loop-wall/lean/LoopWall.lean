@@ -409,6 +409,18 @@ theorem rung0_Ru : outside (7.3605 / 1.046270) := by unfold outside; grind
 theorem rung0_Rh : outside (7.4589 / 1.14273) ∧ outside (7.4589 / 1.14289) := by
   unfold outside; constructor <;> grind
 
+/-- Batch 10 anion rungs, palladium to tin (cadmium has no bound anion). Silver's rung is the
+closest inside value from hydrogen to tin (5.8079); with silicon's (5.8665, outside) it brackets
+every cutoff that sorts the archive the same way, and 3 + 2√2 lies between them. -/
+theorem rung0_Pd : outside (8.336839 / 0.56214) := by unfold outside; grind
+theorem rung0_Ag : inside (7.576234 / 1.30447) := by unfold inside; grind
+theorem rung0_In : outside (5.7863558 / 0.38392) := by unfold outside; grind
+theorem rung0_Sn : outside (7.343918 / 1.112070) := by unfold outside; grind
+/-- The data window: silver's anion rung is inside and silicon's is outside. -/
+theorem window_silver_silicon :
+    inside (7.576234 / 1.30447) ∧ outside (8.15168 / 1.3895212) := by
+  unfold inside outside; constructor <;> grind
+
 /-! ## 14. The junction cutoff in a dilute band, and the screw sign -/
 
 /-- Dilute-band bound. Per spin the neighbour element of the projector is at most the filling f,
