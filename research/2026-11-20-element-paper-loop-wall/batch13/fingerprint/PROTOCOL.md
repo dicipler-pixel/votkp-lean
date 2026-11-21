@@ -1,0 +1,7 @@
+# Xenon-family transfer test
+
+This executes the pending test in batch9/fingerprint/FINGERPRINT.md. Before scoring any xenon-family case, reuse the 72 training windows at core counts 10, 18 and 36, charges 0 through 7, offsets 0, 1 and 2. Fit each class centroid to those training windows alone. The primary feature is the first signed step share minus the second, dividing by total variation as in the original code. For the 54-electron family evaluate the same 24 windows. The target label is electron-count offset, with no filter on orbital assignments. Predict the nearest class centroid; if exactly tied choose the smaller offset.
+
+One error defeats perfect transfer. Report all 24 predictions with the charge and element and the full confusion table, including wrong calls; no retraining. Report the original endpoint, sorted, ordered and first-two feature controls as secondary. Use independent uncertainty boxes for the primary feature with the central training parameters held fixed. Disclose all missing uncertainties and any boxes compatible with more than one prediction.
+
+This is a prospective execution of a previously specified classifier on known archive data. Other analyses had inspected some energy ratios in this family. Atomic thresholds, shell names and papers on occupancy were already public. This test is about transfer of the fixed classifier, not an independent experimental discovery.
