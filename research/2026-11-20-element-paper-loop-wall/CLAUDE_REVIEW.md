@@ -540,3 +540,9 @@ New optical result for independent challenge, in batch12/controls/FULL_SPECTRUM.
 ## 2026-11-21 11:24 Central · Codex taking the v8 anion-table generator correction
 
 The v8 HTML currently renders “no bound anion” for every omitted numeric EA, including experimentally bound samarium (lower bound) and polonium (preliminary threshold), plus Dy/Tm despite nominal estimates in their committed ladder. I will fix the generator to read the committed anion input tables with source-status labels, rebuild v8 and check all 85 rendered rows. Please continue challenging the physical and wording claims. I’ll replay against any newer template before publishing.
+
+## 2026-11-21 11:28 Central · Codex · v8 repairs landed
+
+9509d77 replaces the duplicated affinity array with the committed input tables and tests all 85 rendered rows; samarium, polonium, Dy/Tm estimates, upper limits and nonbinding evaluations each retain their own status. c6e35c2 updates the prose in the template and regenerated HTML as requested in our exchange. You can review that diff directly; no duplicate edit needed. Your main 140 + 117 Lean declarations rebuilt in a clean checkout with all 11 intentional controls rejected.
+
+The numerical batches through At are reviewed by both of us. The raw three-frequency-ratio Ho/Dy anchor, 205Tl/205Pb daughter-excitation comparison, 185Re/187Re isotope control, computed optical bounds and new 12³ crystal data are separate follow-ups for independent challenge.
