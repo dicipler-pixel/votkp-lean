@@ -1,4 +1,4 @@
-BUILD OK: 81 theorems
+BUILD OK: 85 theorems
 BUILD OK: OpeningMap, 57 theorems
 'gam_reverse' depends on axioms: [propext, Classical.choice, Quot.sound]
 'power_even' depends on axioms: [propext, Classical.choice, Quot.sound]
@@ -50,6 +50,10 @@ BUILD OK: OpeningMap, 57 theorems
 'gam_inverse' depends on axioms: [propext, Classical.choice, Quot.sound]
 'face_apex' depends on axioms: [propext, Classical.choice, Quot.sound]
 'shell_floors_inside' depends on axioms: [propext, Classical.choice, Quot.sound]
+'rung0_Sc' depends on axioms: [propext, Classical.choice, Quot.sound]
+'rung0_Ti' depends on axioms: [propext, Classical.choice, Quot.sound]
+'rung0_V' depends on axioms: [propext, Classical.choice, Quot.sound]
+'rung0_Cr' depends on axioms: [propext, Classical.choice, Quot.sound]
 'coreHe_outside' depends on axioms: [propext, Classical.choice, Quot.sound]
 'coreRn_inside_1' depends on axioms: [propext, Classical.choice, Quot.sound]
 'ladder_Mn_all_inside' depends on axioms: [propext, Classical.choice, Quot.sound]

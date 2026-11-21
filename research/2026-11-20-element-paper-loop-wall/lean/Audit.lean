@@ -49,3 +49,7 @@ import LoopWall
 #print axioms gam_inverse
 #print axioms face_apex
 #print axioms shell_floors_inside
+#print axioms rung0_Sc
+#print axioms rung0_Ti
+#print axioms rung0_V
+#print axioms rung0_Cr

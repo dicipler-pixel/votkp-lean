@@ -366,3 +366,10 @@ theorem shell_floors_inside :
     inside 4 ∧ inside (9 / 4) ∧ inside (16 / 9) ∧ inside (25 / 16) ∧ inside (36 / 25) ∧
     inside (49 / 36) := by
   unfold inside; refine ⟨?_, ?_, ?_, ?_, ?_, ?_⟩ <;> grind
+
+/-! ## 12. Batch 5: the anion rungs of Sc, Ti, V, Cr (Mn has no bound ground-state anion) -/
+
+theorem rung0_Sc : outside (6.56149 / 0.179380) := by unfold outside; grind
+theorem rung0_Ti : outside (6.82812 / 0.07554) := by unfold outside; grind
+theorem rung0_V : outside (6.746187 / 0.52766) := by unfold outside; grind
+theorem rung0_Cr : outside (6.76651 / 0.675928) := by unfold outside; grind

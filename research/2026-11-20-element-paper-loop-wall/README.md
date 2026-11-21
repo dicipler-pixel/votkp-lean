@@ -8,7 +8,7 @@ check. It is kept for the element paper.
 
 ## What is proved (`lean/LoopWall.lean` and `lean/OpeningMap.lean`, core Lean 4.34.1, no Mathlib, exact `Rat` arithmetic)
 
-81 theorems in `LoopWall.lean` and 57 in `OpeningMap.lean`. Axioms: only `propext`, `Classical.choice`, `Quot.sound`. No `sorry`, `admit`,
+85 theorems in `LoopWall.lean` and 57 in `OpeningMap.lean`. Axioms: only `propext`, `Classical.choice`, `Quot.sound`. No `sorry`, `admit`,
 `native_decide` or `axiom`. Run `lean/run_checks.sh`; its output is `lean/run_checks_output.txt`.
 
 The peel step of an ordered pair of thresholds (a, then b) has ratio z = b/a and reflection
@@ -74,7 +74,8 @@ The peel step of an ordered pair of thresholds (a, then b) has ratio z = b/a and
    After its first element, each of the Ne, Ar, Kr and Xe sequences is inside at once.
    The frozen Rb/Sr prediction holds (`frozen_prediction_Rb_Sr`). Francium's encoded central ratio
    is inside, but its input interval straddles the wall (`francium_straddles`). Every ordinary step
-   of Sc, Ti, V, Cr and Mn (110 steps) is inside (`ladder_*_all_inside`).
+   of Sc, Ti, V, Cr and Mn (110 steps) is inside (`ladder_*_all_inside`), and the anion rungs of
+   Sc, Ti, V and Cr are outside (`rung0_Sc` to `rung0_Cr`; Mn has no bound ground-state anion).
 
 ## Sources
 
@@ -86,6 +87,17 @@ The peel step of an ordered pair of thresholds (a, then b) has ratio z = b/a and
 - Earlier wall checks at z = 5 and 7: `two-trees/lean/PeelTrees.lean` (`schottky_ratio`).
 - Thresholds: NIST Atomic Spectra Database v5.12 (2024) ionization energies; electron affinities
   as listed in `gpt_batches/VOTKP_H_to_Ne_corrected_ladders.csv` (H: 0.754195 eV measured).
+
+## The Sc–Mn table
+
+The batch-5 research table as received has three energies that differ from the archive (V k=11:
+254.8 eV; Cr k=9: 209.5 eV; Cr k=20: 1495.1 eV) and five displayed z, Γ pairs that are wrong:
+V k=10 (1.10542, .05007), Cr k=8 (1.13390, .06275), k=17 (1.08990, .04302), k=19 (1.07214, .03481),
+k=20 (1.09297, .04442); V k=14 is a rounding difference only (977.2/896 = 1.090625).
+`checks/check_batch5_v1_output.txt` is the raw comparison against the printed table, so it also
+flags rows whose ratio was right but whose energy text was mistyped. Use
+`checks/batch5_corrected.csv`, rebuilt from the archive. No wall classification changes, and the
+Lean certificates were built from the archive, not from the printed table.
 
 ## The other files
 
