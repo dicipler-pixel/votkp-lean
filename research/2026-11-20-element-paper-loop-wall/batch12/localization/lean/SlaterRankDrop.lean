@@ -1,4 +1,5 @@
 import Mathlib.LinearAlgebra.Determinant
+import Mathlib.LinearAlgebra.FiniteDimensional.Lemmas
 import Mathlib.LinearAlgebra.Dimension.StrongRankCondition
 
 /-!
@@ -39,6 +40,28 @@ theorem occupiedOverlap_det_zero_of_rank_drop [Module.Finite K V]
   exact occupiedOverlap_not_injective_of_rank_drop M src dst block hsrc fiber drop
     (LinearMap.ker_eq_bot.mp hker)
 
+/-- At least the dimension lost on this fibre lies in the global overlap kernel. -/
+theorem occupiedOverlap_kernel_at_least_rank_loss [Module.Finite K A] [Module.Finite K V]
+    (M : V →ₗ[K] V) (src : A →ₗ[K] V) (dst : B →ₗ[K] V) (block : A →ₗ[K] B)
+    (hsrc : Function.Injective src) (fiber : M.comp src = dst.comp block) :
+    Module.finrank K A - Module.finrank K B ≤ Module.finrank K (LinearMap.ker M) := by
+  let lift : LinearMap.ker block →ₗ[K] LinearMap.ker M :=
+    (src.comp (LinearMap.ker block).subtype).codRestrict (LinearMap.ker M) (by
+      intro a
+      change M (src (a : A)) = 0
+      have e := congrArg (fun f : A →ₗ[K] V => f (a : A)) fiber
+      simpa [LinearMap.comp_apply, show block (a : A) = 0 from a.property] using e)
+  have hlift : Function.Injective lift := by
+    intro a b hab
+    apply Subtype.ext
+    apply hsrc
+    exact congrArg Subtype.val hab
+  have hker := LinearMap.finrank_le_finrank_of_injective (f := lift) hlift
+  have hsum := block.finrank_range_add_finrank_ker
+  have hrange := Submodule.finrank_le (LinearMap.range block)
+  omega
+
+#print axioms occupiedOverlap_kernel_at_least_rank_loss
 #print axioms occupiedOverlap_not_injective_of_rank_drop
 #print axioms occupiedOverlap_det_zero_of_rank_drop
 

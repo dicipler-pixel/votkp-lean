@@ -63,7 +63,8 @@ def finite_models():
 def fluid_kr():
     # Harvey–Lemmon, Table II and equations (1), (5), (6). Density in mol/cm³.
     with (HERE/"krypton_fit_inputs.csv").open() as src:
-        state=next(row for row in csv.DictReader(src) if row["phase"]=="fluid")
+        states=[row for row in csv.DictReader(src) if row["phase"]=="fluid"]
+        state=states[0]
     T=float(state["T_K"])
     rho=float(state["number_density_1e21_cm3"])*1e21/6.02214076e23
     inv_t=273.16/T-1
@@ -72,6 +73,12 @@ def fluid_kr():
     upper=math.sqrt(eps)
     with (HERE/"krypton_screening_scan.csv").open() as src:
         band=next(row for row in csv.DictReader(src) if row["phase"]=="fluid")
+    b=float(state["eps_background"])-1
+    oscillator_increment=float(band["plasma_prefactor_eV2"])*sum(
+        float(row["f"])/float(row["E_eV"])**2 for row in states)
+    a=b+oscillator_increment
+    s=eps-1
+    assert b>=0 and a+b>=s and 0<oscillator_increment<s
     # Use the committed ten-decimal partial-integral values as the parent extraction.
     tw=float(band["int_eps_im_eV"])
     lw=float(band["int_loss_eV"])
@@ -81,7 +88,9 @@ def fluid_kr():
         eps_static_fit=f"{eps:.10f}",full_z_upper=f"{upper:.10f}",
         full_Gamma_upper=f"{(upper-1)/(upper+1):.10f}",window_T_eV=tw,window_L_eV=lw,
         window_ratio=f"{tw/lw:.10f}",min_L_outside_eV=f"{min_out:.10f}",
-        min_fraction_L_outside=f"{min_fraction:.10f}")])
+        min_fraction_L_outside=f"{min_fraction:.10f}",
+        VUV_chi_background=b,VUV_chi_zero=f"{a:.10f}",VUV_static_increment=f"{oscillator_increment:.10f}",
+        all_shape_inverse_cap_fraction=f"{oscillator_increment/s:.10f}")])
 
 if __name__=="__main__":
     finite_models()

@@ -1,2 +1,2 @@
-T_K,rho_mol_cm3,eps_static_fit,full_z_upper,full_Gamma_upper,window_T_eV,window_L_eV,window_ratio,min_L_outside_eV,min_fraction_L_outside
-122.0,0.028959801332,1.6606497019,1.2886619812,0.1261269613,3.2760778954,0.4538720741,7.2180644775,2.0883600574,0.8214671003
+T_K,rho_mol_cm3,eps_static_fit,full_z_upper,full_Gamma_upper,window_T_eV,window_L_eV,window_ratio,min_L_outside_eV,min_fraction_L_outside,VUV_chi_background,VUV_chi_zero,VUV_static_increment,all_shape_inverse_cap_fraction
+122.0,0.028959801332,1.6606497019,1.2886619812,0.1261269613,3.2760778954,0.4538720741,7.2180644775,2.0883600574,0.8214671003,0.673,1.1434973327,0.4704973327,0.7121736849

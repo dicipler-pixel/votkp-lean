@@ -27,24 +27,38 @@ def metals():
     index=np.array([complex(float(r["n"]),float(r["k"])) for r in rows])
     eps=index**2
     computed={}
+    audit=[]
     for interp in ("linear_response","monotone_cubic_response","linear_index","linear_eps"):
         areas=[]
-        for n in GEOMETRIES:
+        for n in (*GEOMETRIES,.132):
             y=response(eps,n)
-            if interp=="linear_response":
-                area=trapezoid(y,energy)
-            elif interp=="monotone_cubic_response":
-                area=PchipInterpolator(energy,y).integrate(energy[0],energy[-1])
-            else:
-                points=index if interp=="linear_index" else eps
-                area=0.
-                for lo,hi,z0,z1 in zip(energy,energy[1:],points,points[1:]):
-                    def integrand(t):
-                        z=z0+(z1-z0)*t
-                        return response(z*z if interp=="linear_index" else z,n)
-                    area+=(hi-lo)*quad(integrand,0,1,epsabs=1e-12)[0]
-            areas.append(area)
+            cubic=PchipInterpolator(energy,y)
+            area=0.
+            inverse_area=0.
+            for j,(lo,hi) in enumerate(zip(energy,energy[1:])):
+                def integrand(t):
+                    if interp=="linear_response":
+                        return y[j]+t*(y[j+1]-y[j])
+                    if interp=="monotone_cubic_response":
+                        return cubic(lo+t*(hi-lo))
+                    if interp=="linear_index":
+                        z=index[j]+t*(index[j+1]-index[j])
+                        return response(z*z,n)
+                    return response(eps[j]+t*(eps[j+1]-eps[j]),n)
+                area+=(hi-lo)*quad(integrand,0,1,epsabs=1e-12)[0]
+                inverse_area+=(hi-lo)*quad(lambda t:integrand(t)/(lo+t*(hi-lo)),0,1,epsabs=1e-12)[0]
+            if n in GEOMETRIES:
+                areas.append(area)
+            if n>0:
+                cap=math.pi/(2*n)
+                audit.append(dict(interpolation=interp,depolarization=n,
+                                  inverse_window=f"{inverse_area:.10f}",full_inverse_cap=f"{cap:.10f}",
+                                  fraction_consumed=f"{inverse_area/cap:.10f}",
+                                  passes_necessary_test=inverse_area<=cap))
+            if n==.132:
+                assert inverse_area>math.pi/(2*n)
         computed[interp]=areas
+    table("depolarization_passivity.csv",audit)
     return computed
 
 
@@ -55,7 +69,7 @@ def main():
         outside=sphere/top-longitudinal
         share=1-top*longitudinal/sphere
         assert min(outside,share)>0
-        records.append(dict(interpolation=label,T_window_eV=f"{trans:.10f}",
+        records.append(dict(interpolation=label,physical_audit="rejected_at_n_0.132",T_window_eV=f"{trans:.10f}",
                             sphere_window_eV=f"{sphere:.10f}",L_window_eV=f"{longitudinal:.10f}",
                             sphere_over_L_window=f"{sphere/longitudinal:.10f}",
                             sphere_over_L_full_upper=f"{top:.10f}",

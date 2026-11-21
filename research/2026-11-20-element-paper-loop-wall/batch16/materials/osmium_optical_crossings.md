@@ -1,0 +1,13 @@
+# Three optical half-power crossings in osmium
+
+**DERIVED, retrospective.** Rechecking the native Os table with both polarizations shows a dip and return that sampling at 450, 550 and 650 nm misses. For a polished side face with the c axis in the interface plane, the two principal responses at normal incidence have different sequences. The 1986 spectroscopy provides the optical input; the numerical crossing wavelengths below assume linear interpolation of n and k between neighboring tabulation points. These are estimates for that interpolation, not independently measured transition wavelengths. [Principal-axis source paper](https://www.jetp.ras.ru/cgi-bin/dn/e_063_01_0115.pdf) · [Native table extract](os_native_channels.csv) · [Ordinary data transcription](https://refractiveindex.info/?shelf=main&book=Os&page=Nemoshkalenko-o) · [Extraordinary data transcription](https://refractiveindex.info/?shelf=main&book=Os&page=Nemoshkalenko-e)
+
+| Channel | Opposite-sign native nodes (nm) | Interpolated R=½ (nm) | Direction as wavelength increases |
+|---|---:|---:|---|
+| Extraordinary | 600, 620 | 603.549 | downward |
+| Extraordinary | 620, 640 | 623.045 | upward |
+| Ordinary | 625, 650 | 631.892 | downward |
+
+**DERIVED.** Write D=(n−3)²+k²−8. For n>0, the sign of D is exactly the sign of R−½ at a vacuum/half-space interface. For the extraordinary response, the native D values are +0.0341 at 600 nm, −0.1024 at 620 nm and +0.6440 at 640 nm. Allowing a half-unit in the last displayed decimal of each n,k (±0.005 separately) gives [0.00125, 0.06705], [−0.13275, −0.07195], and [0.61445, 0.67365] respectively. That bound covers tabulation rounding only. Experimental errors and surface preparation remain open. On each interpolation segment D is quadratic. Splitting it at its stationary point before bracketing roots checks for hidden pairs of crossings between equally signed endpoints. The native ranges tested are 550–675 nm ordinary and 560–660 nm extraordinary. [Exact arithmetic and independent root brackets](os_spectral_crossings.py) · [Run output](os_spectral_crossings.txt)
+
+**HYPOTHESIS for an independent test.** Repeat the polarized optical measurement on a separately prepared elemental Os single crystal. The three opposite-sign brackets above fail if calibrated, uncertainty-resolved reflectances on the named axes do not straddle ½ in those wavelength pairs. A robust two-then-one spectral crossing would give Jeromie's light-led picture a directional, frequency-resolved observable in one element. It would leave the atom's fixed peel ratios, the crystal's DC network filling and any knot assignment as separate questions.

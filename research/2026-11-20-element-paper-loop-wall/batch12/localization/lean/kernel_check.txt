@@ -1,0 +1,10 @@
+Lean 4.34.1, commit 5045d0056413266e57c625dcd7c365b10e377c52
+Mathlib v4.34.1, commit d13f23b723b8a846827a245b89c10fc7d3f11612
+Module: SlaterRankDrop
+Source SHA-256: 561b91694350538dbd45b2a5a1703c680198302dd6ed72e379f27e03a4283b59
+Built olean SHA-256: 6e0f9357b1df8cac23b9541c00e62da5aa47b255fa8bb8c38f87c4da9e433f74
+lean -j1 --root=SOURCE_DIR -o BUILD_DIR/SlaterRankDrop.olean SOURCE_DIR/SlaterRankDrop.lean
+Exit status: 0
+With the build directory prepended to the pinned package LEAN_PATH:
+leanchecker SlaterRankDrop
+Exit status: 0 (no stdout or stderr)

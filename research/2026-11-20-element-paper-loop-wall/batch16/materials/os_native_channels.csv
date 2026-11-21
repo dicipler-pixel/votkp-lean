@@ -1,0 +1,13 @@
+axis,wavelength_um,n,k
+ordinary,0.550,5.86,2.99
+ordinary,0.575,5.60,2.53
+ordinary,0.600,5.48,2.16
+ordinary,0.625,5.17,1.94
+ordinary,0.650,4.83,1.87
+ordinary,0.675,4.49,1.79
+extraordinary,0.560,4.03,2.96
+extraordinary,0.580,3.79,2.82
+extraordinary,0.600,3.50,2.79
+extraordinary,0.620,3.24,2.80
+extraordinary,0.640,2.98,2.94
+extraordinary,0.660,2.67,3.17

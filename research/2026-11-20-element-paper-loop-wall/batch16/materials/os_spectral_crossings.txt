@@ -1,0 +1,6 @@
+ordinary 625 650 nm 631.892 downward
+extraordinary 600 620 nm 603.549 downward
+extraordinary 620 640 nm 623.045 upward
+  native 600 0.0341 rounding-only [0.001250, 0.067050]
+  native 620 -0.1024 rounding-only [-0.132750, -0.071950]
+  native 640 0.644 rounding-only [0.614450, 0.673650]

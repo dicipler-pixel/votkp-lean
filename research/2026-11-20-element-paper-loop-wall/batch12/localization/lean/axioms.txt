@@ -1,2 +1,3 @@
+'VOTKP.Junction.occupiedOverlap_kernel_at_least_rank_loss' depends on axioms: [propext, Classical.choice, Quot.sound]
 'VOTKP.Junction.occupiedOverlap_not_injective_of_rank_drop' depends on axioms: [propext, Classical.choice, Quot.sound]
 'VOTKP.Junction.occupiedOverlap_det_zero_of_rank_drop' depends on axioms: [propext, Classical.choice, Quot.sound]
