@@ -1,0 +1,27 @@
+Lean (version 4.34.1, x86_64-unknown-linux-gnu, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)
+Regenerated source matches byte for byte.
+'VOTKP.ElementBatches7And8.ordinary_Ga' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.ElementBatches7And8.ordinary_Ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.ElementBatches7And8.ordinary_As' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.ElementBatches7And8.ordinary_Se' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.ElementBatches7And8.ordinary_Br' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.ElementBatches7And8.ordinary_Kr' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.ElementBatches7And8.ordinary_Rb' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.ElementBatches7And8.ordinary_Sr' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.ElementBatches7And8.ordinary_Y' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.ElementBatches7And8.ordinary_Zr' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.ElementBatches7And8.nickel_rung_20_display' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.ElementBatches7And8.nickel_rung_21_display' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.ElementBatches7And8.mixed_reflection_numerator' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.ElementBatches7And8.mixed_equal_face' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.ElementBatches7And8.mixed_carbon_nitrogen' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.ElementBatches7And8.mixed_rubidium_strontium' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.ElementBatches7And8.no_all_inside_Rb' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.ElementBatches7And8.no_outside_Sr_kr_opening' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.ElementBatches7And8.mistyped_ni20_fails_rounding' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VOTKP.ElementBatches7And8.no_open_rubidium_strontium' depends on axioms: [propext, Classical.choice, Quot.sound]
+20 declarations checked; all 345 ordinary adjacent-energy pairs covered.
+Rejected false control: Rb first ordinary rung moved inside
+Rejected false control: Sr Kr opening moved outside
+Rejected false control: Ni k=20 evaluated with mistyped 1750 eV
+Rejected false control: Rb/Sr mixed pair moved outside

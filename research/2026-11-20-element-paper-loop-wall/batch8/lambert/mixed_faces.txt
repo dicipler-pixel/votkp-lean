@@ -1,0 +1,26 @@
+Exact boundary controls: 19 tangencies and 38 strict perturbations passed.
+He {'closes': 15, 'ideal': 0, 'open': 0}
+Ne {'closes': 15, 'ideal': 0, 'open': 0}
+Ar {'closes': 15, 'ideal': 0, 'open': 0}
+Kr {'closes': 9, 'ideal': 0, 'open': 1}
+anion {'closes': 0, 'ideal': 0, 'open': 10}
+Claude disk control: 65 central-value pairs, no disagreements.
+Kr-core rows: element pair | gamma_a^2 + gamma_b^2 | closure
+Rb/Rb: 1.07899396  open
+Rb/Sr: 0.88856303  closes
+Rb/Y: 0.78357895  closes
+Rb/Zr: 0.69965802  closes
+Sr/Sr: 0.69813209  closes
+Sr/Y: 0.59314801  closes
+Sr/Zr: 0.50922708  closes
+Y/Y: 0.48816394  closes
+Y/Zr: 0.40424300  closes
+Zr/Zr: 0.32032207  closes
+Fixed Rb critical partner z: 5.22284753; observed Sr opening: 3.88780191.
+Earlier last-outside/first-inside brackets, exact source values:
+C/N: power sum 1.00309334, open, partner threshold 5.59115620, observed 5.63966540; margin [+0.00309076, +0.00309591]
+Na/Mg: power sum 1.11427307, open, partner threshold 3.93462469, observed 5.33037283; margin [+0.11426868, +0.11427745]
+K/Ca: power sum 0.96217798, closes, partner threshold 4.73939566, observed 4.28860892; margin [-0.03782596, -0.03781808]
+Rb/Sr: power sum 0.88856303, closes, partner threshold 5.22284753, observed 3.88780191; margin [-0.11143961, -0.11143434]
+Cs/Ba: power sum 0.82475198, closes, partner threshold 5.71293632, observed 3.58300914; margin [-0.17527621, -0.17521982]
+Closest sampled pair: Kr Rb/Rb, signed power surplus 0.07899396.

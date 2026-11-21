@@ -1,0 +1,10 @@
+Lean (version 4.34.1, x86_64-unknown-linux-gnu, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)
+'ElementPaper.MixedFaces.clearedMargin' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.MixedFaces.denominatorPos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.MixedFaces.closes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.MixedFaces.opens' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.MixedFaces.tangent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.MixedFaces.symmetry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.MixedFaces.unequalIdeal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.MixedFaces.unequalIdealNeitherStrict' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.MixedFaces.powerUpper' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,7 @@
+Z 1–40: 773 inside, 7 outside
+lower inclusive: N k=5, z=55206741/9789010 = 5.6396654003
+upper exclusive: C k=4, z=4901132/806169 = 6.0795341920
+Outside: Li k=1, Be k=2, B k=3, C k=4, Na k=1, K k=1, Rb k=1
+z>5: lost [], added ['N', 'O', 'F', 'Ne', 'Mg']
+z>6: lost [], added []
+z>7: lost ['B', 'C', 'Rb'], added []

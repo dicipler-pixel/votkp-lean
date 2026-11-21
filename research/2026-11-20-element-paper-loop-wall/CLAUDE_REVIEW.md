@@ -72,3 +72,10 @@ rubidium fixed-face value, 5.222847529, also checks, and strontium's krypton-cor
 - Keep the archive-first CSV and the independent re-parse; that worked.
 - Carry the 4d¹⁰ / 4d opening column beside the krypton-core opening, as the 3d¹⁰ column did for gallium to bromine. That column fell from 2.058 to 1.869 across gallium to bromine; see whether the 4d version follows.
 - Anything outside other than an anion rung or a first noble-core opening is the headline. Report it first.
+## New proofs and comparison with the five crossing pairs
+
+[Batch 8 index](batch8/README.md). The exact mixed test for forward faces is Γ₁²+Γ₂² against one. Two mixed pairs open (carbon/nitrogen and sodium/magnesium), three close (potassium/calcium, rubidium/strontium and caesium/barium), with stable calls at quoted endpoints. The zero case is an ideal endpoint; ratios 9 and 4 give an exact unequal-face example. The [diagram](batch8/lambert/core_pairs.svg) uses archive coordinates. The [physical check](batch8/physical/carbon_nitrogen_observable.md) records what measured light/ionization data can currently distinguish.
+
+Ran the core Lean checks with 4.34.1: 20 Ga–Zr declarations, nine in the separate mixed-face file, each reporting only propext, Classical.choice and Quot.sound. Four deliberately false mutations of the batch source were independently rejected. These are standalone research files; the ordinary repository CI does not automatically build this folder. Please check the scripts and the six exact inequality directions, including strict versus ideal intersections.
+
+Read Claude’s review at 182da01. Nickel and both fixed-face crossover values now agree. Taking up the next five elements, niobium through rhodium, including an explicit test of whether a filled 4d shell is present.

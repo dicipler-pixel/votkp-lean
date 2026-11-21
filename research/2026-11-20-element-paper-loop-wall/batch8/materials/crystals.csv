@@ -1,0 +1,25 @@
+element,COD,reference_year,space_group,a_A,b_A,c_A,alpha_deg,beta_deg,gamma_deg,ideal_basis_shortest_A,status,source_title_and_conditions
+Kr,9008471,1963,F m -3 m,5.721,5.721,5.721,90,90,90,4.0454,reference structure,"Second edition. Interscience Publishers, New York, New York Sample at T = 58 K Cubic closest packed, ccp, structure"
+Kr,9012404,1977,P 63/m m c,4.0,4.0,6.53,90,90,120,3.9992,reference structure,Hexagonal close packed krypton and xenon Sample: at T = 26 K
+Rb,9011008,1956,I m -3 m,5.585,5.585,5.585,90,90,90,4.8368,reference structure,X-ray study of the alkali metals at low temperatures Locality: synthetic Sample: at T = 5 K Note: lattice parameters are average of 3 values
+Rb,9011009,1956,I m -3 m,5.605,5.605,5.605,90,90,90,4.8541,reference structure,X-ray study of the alkali metals at low temperatures Locality: synthetic Sample: at T = 78 K Note: lattice parameters are average of 2 values
+Rb,9012874,1955,I m -3 m,5.612,5.612,5.612,90,90,90,4.8601,reference structure,The rubidium transition at ~180 K Sample: at T = 77 K Note: specimen III
+Rb,9012875,1955,I m -3 m,5.619,5.619,5.619,90,90,90,4.8662,reference structure,The rubidium transition at ~180 K Sample: at T = 90 K Note: specimen III
+Rb,9012876,1955,I m -3 m,5.7,5.7,5.7,90,90,90,4.9363,reference structure,The rubidium transition at ~180 K Sample: at T = 297 K Note: specimen III lattice parameter for this T is estimated
+Rb,9012877,1955,I m -3 m,5.609,5.609,5.609,90,90,90,4.8575,reference structure,The rubidium transition at ~180 K Sample: at T = 77 K Note: specimen IV
+Rb,9012878,1955,I m -3 m,5.616,5.616,5.616,90,90,90,4.8636,reference structure,The rubidium transition at ~180 K Sample: at T = 90 K Note: specimen IV
+Rb,9012879,1955,I m -3 m,5.697,5.697,5.697,90,90,90,4.9337,reference structure,The rubidium transition at ~180 K Sample: at T = 297 K Note: specimen IV lattice parameter for this T is estimated
+Rb,9012880,1955,I m -3 m,5.607,5.607,5.607,90,90,90,4.8558,reference structure,The rubidium transition at ~180 K Sample: at T = 77 K Note: specimen VI
+Sr,9008484,1963,F m -3 m,6.0847,6.0847,6.0847,90,90,90,4.3025,reference structure,"Second edition. Interscience Publishers, New York, New York Cubic closest packed, ccp, structure"
+Sr,9008515,1963,P 63/m m c,4.32,4.32,7.06,90,90,120,4.3200,historical report; hcp intermediate absent in modern assessment,"Second edition. Interscience Publishers, New York, New York Sample at T = 521 K Hexagonal closest packed, hcp, structure, known as the beta phase"
+Sr,9008551,1963,I m -3 m,4.85,4.85,4.85,90,90,90,4.2002,reference structure,"Second edition. Interscience Publishers, New York, New York Sample at T = 887 K Body centered cubic, bcc, structure, known as the gamma phase"
+Sr,9011726,1996,I m m a,5.62,5.72,3.05,90,90,90,,historical report; Sr-III model disputed,Structural study on the high-pressure phase strontium III Sample: at P = 31.3 GPa
+Sr,9012726,1956,F m -3 m,6.076,6.076,6.076,90,90,90,4.2964,reference structure,The barium-strontium equilibrium system Sample: at T = 25 C note: known as alpha-strontium
+Sr,9012727,1956,I m -3 m,4.87,4.87,4.87,90,90,90,4.2175,reference structure,The barium-strontium equilibrium system Sample: at T = 628 C note: known as beta-strontium
+Sr,9012728,1956,P 63/m m c,4.28,4.28,7.05,90,90,120,4.2800,historical report; hcp intermediate absent in modern assessment,The barium-strontium equilibrium system Sample: at T = 225 C note: known as gamma-strontium
+Sr,9012759,1963,I m -3 m,4.434,4.434,4.434,90,90,90,3.8400,reference structure,Crystal structure of strontium metal above 35 kbar and its relation to ytterbium Sample: at P = 4.2 GPa & T = room T
+Sr,9012760,1963,I m -3 m,4.84,4.84,4.84,90,90,90,4.1916,reference structure,Crystal structure of strontium metal above 35 kbar and its relation to ytterbium Sample: at T = 600 C
+Y,9010984,1956,P 63/m m c,3.6474,3.6474,5.7306,90,90,120,3.5559,reference structure,"The crystal structures and lattice parameters of high-purity scandium, yttrium and the rare earth metals Locality: synthetic Note: sample 99.4% pure"
+Y,9012385,1976,F m -3 m,5.83,5.83,5.83,90,90,90,4.1224,thin film,A new fcc phase in yttrium films
+Zr,9008523,1963,P 63/m m c,3.232,3.232,5.147,90,90,120,3.1788,reference structure,"Second edition. Interscience Publishers, New York, New York Hexagonal closest packed, hcp, structure"
+Zr,9008559,1963,I m -3 m,3.62,3.62,3.62,90,90,90,3.1350,reference structure,"Second edition. Interscience Publishers, New York, New York Sample at 1123 K Body centered cubic, bcc, structure"
