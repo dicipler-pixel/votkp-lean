@@ -1,0 +1,16 @@
+Test A: every committed ordinary input box must stay below the retained wall.
+Test B: every committed affinity input box must stay above it.
+Maximum inside central: (Decimal('4.09604838542559544554567358864852746971201214722100293695992'), 'Ba', 54)
+Maximum ordinary upper: (Decimal('4.09607144438259028274259469102904288377289035706178288812466'), 'Ba', 54)
+Minimum outside central: (Decimal('9.22853905625166622234070914422820581178352439349506798187150'), 'Ce', 0)
+Minimum anion lower: (Decimal('9.22747281676013769064923207139120206069451803274318294661988'), 'Ce', 0)
+Direction can reach zero at a reported endpoint: [('Nd', 10)]
+Pre-existing comparator 5 central disagreements [] box touches cutoff []
+Pre-existing comparator 5.8 central disagreements [] box touches cutoff []
+Pre-existing comparator 5.82 central disagreements [] box touches cutoff []
+Pre-existing comparator 5.83 central disagreements [] box touches cutoff []
+Pre-existing comparator 5.85 central disagreements [] box touches cutoff []
+Pre-existing comparator 5.9 central disagreements [] box touches cutoff []
+Pre-existing comparator 6 central disagreements [] box touches cutoff []
+Historical Pr EA threshold for a wall call (eV): 0.938537942213390928090004681656219141216361814626037300217853
+Nd conversion from 786.3(2.6) inverse cm (eV): 0.097488775228025364438 +/- 0.000322358915926320676

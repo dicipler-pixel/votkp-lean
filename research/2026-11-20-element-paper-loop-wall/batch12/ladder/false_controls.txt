@@ -1,0 +1,7 @@
+REJECTED: replace pinned Nd first IE with live ASD: ('base', (60, 1))
+REJECTED: mistype last displayed digit of barium ratio: ('rounded', (56, 54))
+REJECTED: mistype last displayed digit of praseodymium reflection: ('rounded', (59, 0))
+REJECTED: shrink cerium second IE uncertainty tenfold: ('detailed uncertainties', (58, 1))
+REJECTED: replace measured-branch chemistry ratio: ('chem derived', (56, 0))
+REJECTED: invent outgoing ratio past the bare nucleus: ('final threshold', 60)
+6 deliberate mutations rejected.

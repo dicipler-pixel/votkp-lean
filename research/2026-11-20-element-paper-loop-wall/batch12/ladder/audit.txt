@@ -1,0 +1,10 @@
+Archive SHA-256: 75e67478d9a22ef85fa2d3f6ac36ad2860c6f8f62215127c558438a2cb53f62c
+Serialized rows: 295. Archive energy matches: 290. Sources preserved.
+Six-place z and Gamma independently rounded from exact fractions: {(True, 'outside'): 5, (False, 'inside'): 285}
+Endpoint boxes complete and classifications stable: 290
+Archive threshold grades: {'E': 9, 'S': 28, 'T': 253}
+Fresh ASD field matches of 290 : {'energy': 289, 'uncertainty': 289, 'grade': 290, 'reference': 289}
+Public ASD differing rows: 1
+  Nd IE_1, changed energy, uncertainty, reference: (Fraction(221, 40), Fraction(3, 5000), 'E', 'L4277') -> (Fraction(22099, 4000), Fraction(1, 20000), 'E', 'L23155')
+Maximum ordinary ratio: (Fraction(4348537, 1061642), 'Ba', 54)
+Ladder SHA-256: a0468781201d91c58bf313afcab004951d1adca6ec5e448f03f91421aefdf001

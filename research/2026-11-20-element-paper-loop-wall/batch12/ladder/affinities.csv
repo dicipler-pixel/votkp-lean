@@ -1,0 +1,6 @@
+Z,symbol,EA_eV,unc_eV,neutral_valence,anion_valence,method,source
+56,Ba,0.14462,0.00006,6s2,6s2 6p,LPT,Ning-Lu-2022-Table-3
+57,La,0.557546,0.000020,5d 6s2,5d2 6s2,SEVI,Ning-Lu-2022-Table-3
+58,Ce,0.600160,0.000026,4f 5d 6s2,4f 5d2 6s2,SEVI,Ning-Lu-2022-Table-3
+59,Pr,0.10923,0.00046,4f3 6s2,4f3 6s2 6p,SEVI,Ning-Lu-2022-Table-3
+60,Nd,0.09748,0.00031,4f4 6s2,4f4 6s2 6p,SEVI,Ning-Lu-2022-Table-3
