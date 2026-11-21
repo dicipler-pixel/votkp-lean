@@ -199,3 +199,60 @@ theorem six_and_sixth :
     gam 6 = 5 / 7 ∧ gam (1 / 6) = -(5 / 7) ∧ gam 6 * gam 6 = 25 / 49 ∧
       gam (1 / 6) * gam (1 / 6) = 25 / 49 ∧ (1 : Rat) / 2 < 25 / 49 := by
   unfold gam; refine ⟨?_, ?_, ?_, ?_, ?_⟩ <;> decide +kernel
+
+/-! ## 8. Batch 3: sodium to phosphorus (NIST ASD v5.12; electron affinities from the 2022
+atomic negative-ion evaluation), using the encoded reference thresholds -/
+
+/-- The L opening (last 3s removal → first 2p removal) crosses the wall between Na and Mg. -/
+theorem l_opening_Na : outside (47.28636 / 5.13907696) := by unfold outside; grind
+theorem l_opening_Mg : inside (80.1436 / 15.035271) := by unfold inside; grind
+theorem l_opening_Al : inside (119.9924 / 28.447642) := by unfold inside; grind
+theorem l_opening_Si : inside (166.767 / 45.14179) := by unfold inside; grind
+theorem l_opening_P : inside (220.43 / 65.02511) := by unfold inside; grind
+theorem l_crossing_Na_Mg : outside (47.28636 / 5.13907696) ∧ inside (80.1436 / 15.035271) :=
+  ⟨l_opening_Na, l_opening_Mg⟩
+
+/-- The K opening stays inside the wall for all five. -/
+theorem k_opening_Na : inside (1465.0992 / 299.856) := by unfold inside; grind
+theorem k_opening_Mg : inside (1761.8049 / 367.489) := by unfold inside; grind
+theorem k_opening_Al : inside (2085.97693 / 442.005) := by unfold inside; grind
+theorem k_opening_Si : inside (2437.65805 / 523.415) := by unfold inside; grind
+theorem k_opening_P : inside (2816.90868 / 611.741) := by unfold inside; grind
+
+/-- Rung 0: Na, Al, Si, P outside. Mg has no bound ground-state anion. -/
+theorem rung0_Na : outside (5.13907696 / 0.547926) := by unfold outside; grind
+theorem rung0_Al : outside (5.985769 / 0.43283) := by unfold outside; grind
+theorem rung0_Si : outside (8.15168 / 1.3895212) := by unfold outside; grind
+theorem rung0_P : outside (10.486686 / 0.746609) := by unfold outside; grind
+
+/-- Silicon's anion rung stays outside at both ends of its quoted uncertainties
+(I₁ = 8.15168(3) eV, EA = 1.3895212(7) eV). -/
+theorem rung0_Si_low : outside (8.15165 / 1.3895219) := by unfold outside; grind
+theorem rung0_Si_high : outside (8.15171 / 1.3895205) := by unfold outside; grind
+
+/-- Magnesium: every step of its ladder is inside the wall, yet the metal conducts.
+So an outside atomic rung is not required for conduction. -/
+theorem mg_all_inside :
+    inside (15.035271 / 7.646236) ∧ inside (80.1436 / 15.035271) ∧
+    inside (109.2654 / 80.1436) ∧ inside (141.33 / 109.2654) ∧ inside (186.76 / 141.33) ∧
+    inside (225.02 / 186.76) ∧ inside (265.924 / 225.02) ∧ inside (327.99 / 265.924) ∧
+    inside (367.489 / 327.99) ∧ inside (1761.8049 / 367.489) ∧
+    inside (1962.663889 / 1761.8049) := by
+  unfold inside; refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩ <;> grind
+
+/-- The strongest ordinary step changes identity between Mg and Al: L opening above K opening
+at Mg, K opening above L opening at Al. A change of rank, not a wall crossing. -/
+theorem rank_swap_Mg_Al :
+    1761.8049 / 367.489 < (80.1436 / 15.035271 : Rat) ∧
+    119.9924 / 28.447642 < (2085.97693 / 442.005 : Rat) := by
+  constructor <;> grind
+
+/-- The screened series keeps the K opening inside the wall from Z = 11 to 15. -/
+theorem screened_inside_11_to_15 :
+    inside (Icore 11 / Ival 11) ∧ inside (Icore 12 / Ival 12) ∧ inside (Icore 13 / Ival 13) ∧
+    inside (Icore 14 / Ival 14) ∧ inside (Icore 15 / Ival 15) := by
+  unfold inside Icore Ival; refine ⟨?_, ?_, ?_, ?_, ?_⟩ <;> grind
+
+theorem refute_Mg_L_outside : ¬ outside (80.1436 / 15.035271) := not_both _ l_opening_Mg
+theorem refute_Si_rung0_inside : ¬ inside (8.15168 / 1.3895212) := by
+  intro h; exact not_both _ h rung0_Si

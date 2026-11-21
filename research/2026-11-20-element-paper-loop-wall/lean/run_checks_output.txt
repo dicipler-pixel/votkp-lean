@@ -1,4 +1,4 @@
-BUILD OK: 39 theorems
+BUILD OK: 61 theorems
 'gam_reverse' depends on axioms: [propext, Classical.choice, Quot.sound]
 'power_even' depends on axioms: [propext, Classical.choice, Quot.sound]
 'wall_quadratic' depends on axioms: [propext, Classical.choice, Quot.sound]
@@ -24,10 +24,20 @@ BUILD OK: 39 theorems
 'refute_Ne_exactly_five' depends on axioms: [propext, Classical.choice, Quot.sound]
 'refute_screened_seven_outside' depends on axioms: [propext, Classical.choice, Quot.sound]
 'refute_power_odd' depends on axioms: [propext, Classical.choice, Quot.sound]
+'l_crossing_Na_Mg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'rung0_Si_low' depends on axioms: [propext, Classical.choice, Quot.sound]
+'rung0_Si_high' depends on axioms: [propext, Classical.choice, Quot.sound]
+'mg_all_inside' depends on axioms: [propext, Classical.choice, Quot.sound]
+'rank_swap_Mg_Al' depends on axioms: [propext, Classical.choice, Quot.sound]
+'screened_inside_11_to_15' depends on axioms: [propext, Classical.choice, Quot.sound]
+'refute_Mg_L_outside' depends on axioms: [propext, Classical.choice, Quot.sound]
+'refute_Si_rung0_inside' depends on axioms: [propext, Classical.choice, Quot.sound]
 SCAN OK: no sorry, admit, native_decide or axiom
 control rejected: controls/C_inside.lean
 control rejected: controls/F_rung0_outside.lean
+control rejected: controls/Mg_L_outside.lean
 control rejected: controls/N_outside.lean
 control rejected: controls/Ne_exactly_five.lean
+control rejected: controls/Si_rung0_inside.lean
 control rejected: controls/power_odd.lean
 control rejected: controls/screened_seven_outside.lean

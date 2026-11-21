@@ -1,0 +1,20 @@
+MISMATCH Mg 4 1.293456116940953 0.12795366555012586
+steps 64 mismatches 1
+Na rung0 (9.37914, 'outside') | L 9.20133 outside | K 4.88601 inside
+Mg rung0 None | L 5.33037 inside | K 4.79417 inside
+Al rung0 (13.82938, 'outside') | L 4.21801 inside | K 4.71935 inside
+Si rung0 (5.86654, 'outside') | L 3.69429 inside | K 4.65722 inside
+P rung0 (14.04575, 'outside') | L 3.38992 inside | K 4.60474 inside
+Na screened K ratio 4.88949
+Mg screened K ratio 4.79769
+Al screened K ratio 4.72306
+Si screened K ratio 4.66121
+P screened K ratio 4.60910
+Na S_Z 0.61339 sigma_Z 0.62297
+Mg S_Z 0.61512 sigma_Z 0.62062
+Al S_Z 0.61672 sigma_Z 0.61790
+Si S_Z 0.61823 sigma_Z 0.61476
+P S_Z 0.61968 sigma_Z 0.61115
+Si Gamma0 interval 0.7087313980790976 0.708733480445735 wall 0.7071067811865475
+L-opening wall charge ratio 1.6094757082487299 Na 2.0222462758032216 Mg 1.5391729380850396
+Na ball 1.55A 15.598531123848923 f ambient 0.39552033885716625 f 310GPa 2.348822635724879

@@ -8,7 +8,7 @@ check. It is kept for the element paper.
 
 ## What is proved (`lean/LoopWall.lean`, core Lean 4.34.1, no Mathlib, exact `Rat` arithmetic)
 
-39 theorems. Axioms: only `propext`, `Classical.choice`, `Quot.sound`. No `sorry`, `admit`,
+61 theorems. Axioms: only `propext`, `Classical.choice`, `Quot.sound`. No `sorry`, `admit`,
 `native_decide` or `axiom`. Run `lean/run_checks.sh`; its output is `lean/run_checks_output.txt`.
 
 The peel step of an ordered pair of thresholds (a, then b) has ratio z = b/a and reflection
@@ -39,8 +39,16 @@ The peel step of an ordered pair of thresholds (a, then b) has ratio z = b/a and
    between Z = 6 and 7 (`screened_six_outside`, `screened_seven_inside`); the unscreened control
    moves it to between 9 and 10 (`bare_nine_outside`, `bare_ten_inside`).
 8. **False controls** (`lean/controls/`): N outside, F's rung 0 outside, C inside, neon's ratio
-   exactly 5, the screened Z = 7 outside, Γ² odd. Each is rejected by Lean and each is refuted
+   exactly 5, the screened Z = 7 outside, Γ² odd, Mg's L opening outside, Si's rung 0 inside. Each is rejected by Lean and each is refuted
    as a theorem in `LoopWall.lean` (`refute_*`).
+
+9. **Batch 3, sodium to phosphorus.** The L opening (last 3s → first 2p) crosses the wall
+   between Na and Mg (`l_crossing_Na_Mg`); the K opening is inside for all five; rung 0 is outside
+   for Na, Al, Si and P, and silicon's stays outside at both ends of its quoted uncertainties
+   (`rung0_Si_low`, `rung0_Si_high`). Every step of magnesium's ladder is inside the wall
+   (`mg_all_inside`), and Mg conducts, so an outside atomic rung is not required for conduction.
+   The strongest ordinary step changes from the L to the K opening between Mg and Al
+   (`rank_swap_Mg_Al`). The screened series keeps the K opening inside for Z = 11 to 15.
 
 ## Sources
 

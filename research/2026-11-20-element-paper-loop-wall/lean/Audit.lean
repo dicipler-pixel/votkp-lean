@@ -24,3 +24,11 @@ import LoopWall
 #print axioms refute_Ne_exactly_five
 #print axioms refute_screened_seven_outside
 #print axioms refute_power_odd
+#print axioms l_crossing_Na_Mg
+#print axioms rung0_Si_low
+#print axioms rung0_Si_high
+#print axioms mg_all_inside
+#print axioms rank_swap_Mg_Al
+#print axioms screened_inside_11_to_15
+#print axioms refute_Mg_L_outside
+#print axioms refute_Si_rung0_inside
