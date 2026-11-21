@@ -17,3 +17,7 @@ Each path puts the sign change at the same charge. This calculation predicts an 
 **DERIVED.** Keeping the entire observed central sign sequence requires approximately 0.407469 < c < 2.570674, with the exact constraints coming from q=60 and q=39 respectively. A physical conclusion needs the absolute energy scales and a nuclear mass anchor. Given the first ionization energy I₁ and the directed steps of each species, Iₖ=I₁∏ⱼ₌₁ᵏ⁻¹zⱼ recovers every absolute rung, and the cross-isobar sum recovers the mass change. This specifies what Jeromie’s directed record can encode and what an experiment must supply.
 
 [Source calculation and scale control](check.py) · [Four core Lean theorems](ShapeScale.lean) · [Lean 4.34.1 axiom output](lean_run.txt) · [Full neutral-anchored mass table](../materials/holmium_dysprosium_decay.md)
+
+![Ho–Dy energy difference over the full charge range and at the 56+/57+ crossing](charge_crossing.svg)
+
+The exact neutral-anchored input-box scan certifies the sign at all 67 charges and both numerical boundary intervals in integer micro-eV. The general enclosure proof records why accumulating the energy widths gives valid outer bounds. The full 67-sign enumeration itself uses no axioms. [Regenerator](certify.py) · [Three kernel checks](HoDyRange.lean) · [Axiom log](range_lean_run.txt) · [Weighted directed step for two isobars](WEIGHTED.md)

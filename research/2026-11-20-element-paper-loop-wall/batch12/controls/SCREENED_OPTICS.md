@@ -41,3 +41,5 @@ This demonstrates in an explicit response model why unqualified transfer of the 
     python3 screened_drude.py
 
 **DERIVED · independent material.** In the observed 9–11 eV exciton window, the published crystalline krypton fit crosses the equality of the two channels twice, but does not reach rubidium's lower wall. [Krypton central fits, all roots and rounding test](KRYPTON_SPECTRUM.md)
+
+**DERIVED · full-frequency comparison.** A passive finite-static scalar dielectric obeys a sharp bound on the ratio of the two unweighted spectral areas. At the 122 K fluid krypton state, the static-response fit bounds that full ratio by 1.289 even though the exciton-window ratio is 7.218. [Derivation and numerical disproof of the finite-window proxy](FULL_SPECTRUM.md)

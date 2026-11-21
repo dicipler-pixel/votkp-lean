@@ -1,0 +1,3 @@
+'ElementPaper.HoDyRange.addEncloses' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.HoDyRange.allChargeBoxes' does not depend on any axioms
+'ElementPaper.HoDyRange.endpoints' depends on axioms: [propext]

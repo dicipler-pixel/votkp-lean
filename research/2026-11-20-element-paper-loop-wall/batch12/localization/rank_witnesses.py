@@ -37,7 +37,8 @@ def witnesses(run,n):
         out=dict(mesh=n,shell=shell,h=hkl[0],k=hkl[1],l=hkl[2],
                  one_to_zero_sectors=len(loss),source_QE_k_index=a+1,
                  target_QE_k_index=b+1,source_outer_rank=1,target_outer_rank=0,
-                 mu_eV=mu,source_E5_minus_mu_eV=energies[a,0]-mu,
+                 mu_eV=mu,finite_occupancy_gap_meV=1000*(sorted_values[count]-sorted_values[count-1]),
+                 source_E5_minus_mu_eV=energies[a,0]-mu,
                  target_E5_minus_mu_eV=energies[b,0]-mu)
         for i,name in enumerate(("k1","k2","k3")):
             out["source_"+name]=k[a,i]

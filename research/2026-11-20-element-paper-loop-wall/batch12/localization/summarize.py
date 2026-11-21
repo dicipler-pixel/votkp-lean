@@ -52,6 +52,29 @@ def collect(source, target):
         means.append(out)
     write_table(target/"phase_shell_means.csv",means)
 
+    lookup={(r["series"],r["symbol"],str(r["mesh"])):r for r in means if r["shell"]=="shortest"}
+    material=[]
+    for row in site:
+        if row["series"]!="default":
+            continue
+        family=row["family"]
+        reading=lookup.get(("default" if family=="NC" else "smooth_PAW",row["symbol"],row["mesh"]))
+        if reading is None:
+            continue
+        L=reading["microscopic_L_A2"]
+        cell=reading["WS_phase_L_A2"]
+        floor=reading["rank_change_A2"]
+        assert cell>=floor-1e-9
+        material.append(dict(symbol=row["symbol"],family=family,mesh=row["mesh"],
+                             nearest_fraction=row["nearest_shell_fraction"],
+                             site_tensor_trace_over_3_A2=row["trace_over_3_A2"],
+                             shortest_q_inv_A=reading["q_inv_A"],microscopic_L_A2=L,
+                             WS_phase_L_A2=cell,rank_term_A2=floor,
+                             microscopic_remainder_A2=L-floor,WS_remainder_A2=cell-floor,
+                             microscopic_minus_WS_at_same_q_A2=L-cell,
+                             twist_log_L_A2=reading["twist_log_L_A2"]))
+    write_table(target/"material_summary.csv",material)
+
 
 if __name__=="__main__":
     p=argparse.ArgumentParser(description=__doc__)

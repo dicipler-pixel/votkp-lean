@@ -1,0 +1,17 @@
+Ho/Dy q=56→57: rho=-3235/8846, weight 17692 eV, increment -6470 eV, gap 1951.406439→-4518.593561 eV.
+Ho/Dy: all 66 increments and all 67 cumulative central gaps reproduced; bare sign(rho) equals sign(Q after the step) 49/66 times, including 0 zero increments.
+Pb/Tl q=79→80: rho=-359225/608607, weight 608607/5 eV, increment -71845 eV, gap 37544.790452→-34300.209548 eV.
+Pb/Tl: all 81 increments and all 82 cumulative central gaps reproduced; bare sign(rho) equals sign(Q after the step) 53/81 times, including 4 zero increments.
+Bare Tl endpoint release to the 2329-eV excited state: 31071.5295484 eV.
+Lean (version 4.34.1, x86_64-unknown-linux-gnu, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)
+'ElementPaper.MassAnchors.Weighted.twoSpeciesClock' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.MassAnchors.Weighted.weightedIncrement' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.MassAnchors.Weighted.exchange' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.MassAnchors.Weighted.signOfIncrement' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.MassAnchors.Weighted.chargeCancels' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.MassAnchors.Weighted.anchoredSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.MassAnchors.Weighted.holmiumDysprosiumStep' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.MassAnchors.Weighted.leadThalliumStep' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.MassAnchors.Weighted.leadThalliumLastStep' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ElementPaper.MassAnchors.Weighted.leadExcitedRelease' depends on axioms: [propext, Classical.choice, Quot.sound]
+10 theorem audits passed.
