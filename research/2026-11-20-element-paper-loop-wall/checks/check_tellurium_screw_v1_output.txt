@@ -1,0 +1,9 @@
+tellurium, P3_1 21 (COD 2020222, 1989)
+  bond 2.834506 A; closed form 2.834506
+  chi 21.224043  closed form 21.224043  reversed 21.224043  mirror -21.224043
+tellurium, P3_2 21 (COD 9008580, 1963)
+  bond 2.860109 A; closed form 2.860109
+  chi -21.990034  closed form -21.990034  reversed -21.990034  mirror 21.990034
+selenium, P3_1 21 (COD 1534711), control
+  bond 2.300664 A; closed form 2.300664
+  chi 11.163764  closed form 11.163764  reversed 11.163764  mirror -11.163764

@@ -466,3 +466,29 @@ theorem chi_reverse (a b c : Rat × Rat × Rat) :
 theorem chi_mirror (a b c : Rat × Rat × Rat) :
     triple (vmirror a) (vmirror b) (vmirror c) = - triple a b c := by
   unfold triple vmirror; grind
+
+
+/-! ## Hardness over electronegativity: the anion rung in conceptual-DFT language -/
+
+/-- At the anion rung z = IE/EA, the reflection is (IE − EA)/(IE + EA): the Pearson absolute
+hardness (IE − EA)/2 divided by the Mulliken electronegativity (IE + EA)/2. So the loop wall at
+the anion rung is hardness / electronegativity = 1/√2. -/
+theorem gam_anion_rung (I A : Rat) (hA : 0 < A) (hI : 0 < I) : gam (I / A) = (I - A) / (I + A) := by
+  unfold gam
+  have hA' : A ≠ 0 := by grind
+  have hs : I + A ≠ 0 := by grind
+  have k : A * A⁻¹ = 1 := Rat.mul_inv_cancel A hA'
+  have ks : (I + A) * (I + A)⁻¹ = 1 := Rat.mul_inv_cancel (I + A) hs
+  rw [Rat.div_def I A, Rat.div_def, Rat.div_def]
+  have h1 : I * A⁻¹ - 1 = (I - A) * A⁻¹ := by grind
+  have h2 : I * A⁻¹ + 1 = (I + A) * A⁻¹ := by grind
+  have h3 : ((I + A) * A⁻¹)⁻¹ = A * (I + A)⁻¹ := by
+    apply Rat.inv_eq_of_mul_eq_one; grind
+  rw [h1, h2, h3]
+  grind
+
+/-- Electrophilicity equals hardness at the wall. With η = (I − A)/2, χ = (I + A)/2 and
+ω = χ²/(2η), the comparison ω > η is χ² > 2η², i.e. (I + A)² > 2(I − A)², and that difference is
+exactly −(I² − 6IA + A²): the wall quadratic z² − 6z + 1 written in I and A. -/
+theorem omega_eta_wall (I A : Rat) :
+    (I + A) * (I + A) - 2 * ((I - A) * (I - A)) = -(I * I - 6 * I * A + A * A) := by grind

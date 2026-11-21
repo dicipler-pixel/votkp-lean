@@ -4,7 +4,7 @@ Hint: The binding can be removed (if unused) or named `_` (if used implicitly). 
   [apply] _h0
 
 Note: This linter can be disabled with `set_option linter.unusedVariables false`
-BUILD OK: 116 theorems
+BUILD OK: 118 theorems
 BUILD OK: OpeningMap, 87 theorems
 'gam_reverse' depends on axioms: [propext, Classical.choice, Quot.sound]
 'power_even' depends on axioms: [propext, Classical.choice, Quot.sound]
@@ -76,6 +76,8 @@ BUILD OK: OpeningMap, 87 theorems
 'window_silver_silicon' depends on axioms: [propext, Classical.choice, Quot.sound]
 'ordinary_window_nitrogen_caesium' depends on axioms: [propext, Classical.choice, Quot.sound]
 'rung0_Cs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'gam_anion_rung' depends on axioms: [propext, Classical.choice, Quot.sound]
+'omega_eta_wall' depends on axioms: [propext, Classical.choice, Quot.sound]
 'coreHe_outside' depends on axioms: [propext, Classical.choice, Quot.sound]
 'coreRn_inside_1' depends on axioms: [propext, Classical.choice, Quot.sound]
 'ladder_Mn_all_inside' depends on axioms: [propext, Classical.choice, Quot.sound]
