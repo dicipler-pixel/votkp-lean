@@ -121,7 +121,7 @@ Lean certificates were built from the archive, not from the printed table.
 
 The batch-6 research table as received has two energies that differ from the archive (Ni k=21:
 1750 eV, archive 1758.0; Cu k=5: 79.5 eV, archive 79.8) and four displayed z, Γ pairs that are wrong:
-Ni k=15 (archive 1.070441, .034022), k=20 (1.063183, .030624), k=21 (1.074286, .035813),
+Ni k=15 (archive 1.070441, .034022), k=20 (1.068044, .032902), k=21 (1.069397, .033535),
 k=22 (1.068138, .032947). The Cu k=4 and k=5 ratios are right; only the energy text is mistyped.
 The table's "140/140 matched the archive" line is therefore not right. Use
 `checks/batch6_corrected.csv`, rebuilt from the archive. No wall classification changes. The
