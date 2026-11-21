@@ -1,0 +1,1 @@
+[{"id":"control.renamed","title":"False control: a theorem that does not exist","statement":"Must be flagged.","paper":{"title":"control"},"lean":{"repo":"dicipler-pixel/votkp-lean","branch":"element-paper/loop-wall","theorem":"wall_quadratic_RENAMED"},"grade":"control","tags":["control"],"links":[{"to":"wall.no-such-entry","kind":"uses"}]}]

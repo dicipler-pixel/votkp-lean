@@ -1,0 +1,149 @@
+{
+ "owner": "dicipler-pixel",
+ "repos": [
+  {
+   "name": "votkp-lean"
+  },
+  {
+   "name": "yang-mills-lean"
+  },
+  {
+   "name": "dirac-time-lean"
+  },
+  {
+   "name": "count-me-as-one-lean"
+  },
+  {
+   "name": "dirac-time-d25-lean"
+  },
+  {
+   "name": "cmao-combined-lean"
+  },
+  {
+   "name": "neutrinos-leave-lean"
+  },
+  {
+   "name": "nonnormality-connection-energy-lean"
+  },
+  {
+   "name": "coboundary-k3-lean"
+  },
+  {
+   "name": "event-horizon-lean"
+  },
+  {
+   "name": "what-the-neutrino-state-must-keep"
+  },
+  {
+   "name": "ramanujan-challenge-lean"
+  },
+  {
+   "name": "filament-fracture-lean"
+  },
+  {
+   "name": "coxeter-rank2-lean"
+  },
+  {
+   "name": "seiberg-witten-lean"
+  },
+  {
+   "name": "maxwell-lean"
+  },
+  {
+   "name": "companion-matrix-lean"
+  },
+  {
+   "name": "iqgt-grassmannian-lean"
+  },
+  {
+   "name": "geometric-flux-magnetic-charge-lean"
+  },
+  {
+   "name": "relational-atlas-lean"
+  },
+  {
+   "name": "three-body-lean"
+  },
+  {
+   "name": "ramanujan-normality-diagnostic"
+  },
+  {
+   "name": "arithmetic-kakeya-finite-bridges"
+  },
+  {
+   "name": "earth-moon-kakeya-certificates"
+  },
+  {
+   "name": "iqgt-core-lean"
+  },
+  {
+   "name": "light-ledger-lean"
+  },
+  {
+   "name": "price-of-a-direction-lean"
+  },
+  {
+   "name": "what-tesla-saw-lean"
+  },
+  {
+   "name": "upg-lean"
+  },
+  {
+   "name": "spectral-stability-lean"
+  },
+  {
+   "name": "foft-lean"
+  },
+  {
+   "name": "emergent-transport-lean"
+  },
+  {
+   "name": "suns-lean"
+  },
+  {
+   "name": "spectral-stress-lean"
+  },
+  {
+   "name": "-connection-energy-lean"
+  },
+  {
+   "name": "gravity-ledger-lean"
+  },
+  {
+   "name": "what-transport-keeps-lean"
+  },
+  {
+   "name": "square-case-lean"
+  },
+  {
+   "name": "electron-screening-lean"
+  },
+  {
+   "name": "what-russell-saw-lean"
+  },
+  {
+   "name": "elemental-peeling-lean"
+  },
+  {
+   "name": "offset-lean"
+  },
+  {
+   "name": "sqrt-lower-bound-lean"
+  },
+  {
+   "name": "small-diophantine-lean"
+  },
+  {
+   "name": "matter-at-a-scale-lean"
+  },
+  {
+   "name": "acwindow-lean"
+  }
+ ],
+ "extra_branches": {
+  "votkp-lean": [
+   "element-paper/loop-wall",
+   "claude/sm-ball-20261111"
+  ]
+ }
+}

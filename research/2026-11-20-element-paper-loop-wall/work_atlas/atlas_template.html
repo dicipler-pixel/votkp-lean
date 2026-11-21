@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Work Atlas — Jeromie Beasley</title>
+<style>
+:root{--bg:#000;--panel:#0a0f16;--edge:#1c2633;--ink:#e3eaf2;--dim:#8a9aab;--faint:#56667a;--gold:#f2c14e;--cyan:#63d3ff;--rose:#ff6fae;--green:#7be0a0;
+--head:"Chakra Petch","Segoe UI",system-ui,sans-serif;--body:"Inter Tight",system-ui,-apple-system,sans-serif;--mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;color-scheme:dark}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 var(--body)}
+header{padding:28px 32px 14px;border-bottom:1px solid var(--edge)}
+h1{font:600 22px var(--head);letter-spacing:.12em;text-transform:uppercase;margin:0}
+.by{font:12px var(--mono);color:var(--faint);margin-top:4px}
+.sum{margin-top:10px;color:var(--dim)}
+.bar{position:sticky;top:0;z-index:2;background:rgba(0,0,0,.94);padding:12px 32px;border-bottom:1px solid var(--edge);display:grid;gap:8px}
+input[type=search]{width:100%;background:var(--panel);border:1px solid var(--edge);color:var(--ink);font:15px var(--body);padding:9px 12px;border-radius:6px}
+input[type=search]:focus-visible,button:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font:12px var(--mono);background:var(--panel);border:1px solid var(--edge);color:var(--dim);border-radius:999px;padding:3px 10px;cursor:pointer}
+.chip[aria-pressed=true]{border-color:var(--gold);color:var(--gold)}
+main{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:24px;padding:20px 32px 60px}
+@media (max-width:980px){main{grid-template-columns:1fr}}
+.card{border:1px solid var(--edge);border-radius:8px;padding:14px 16px;margin-bottom:12px;background:var(--panel)}
+.card:target{border-color:var(--gold)}
+.card h3{margin:0 0 4px;font:600 16px var(--body)}
+.meta{font:12px var(--mono);color:var(--faint)}
+.st{margin:8px 0;white-space:pre-wrap}
+.lean{font:12.5px var(--mono)}
+.ok{color:var(--green)}.bad{color:var(--rose)}.none{color:var(--faint)}
+.links{margin-top:8px;font-size:13.5px;color:var(--dim)}
+.links a,.lean a{color:var(--cyan);text-decoration:none}.links a:hover,.lean a:hover{text-decoration:underline}
+.kind{font:11px var(--mono);color:var(--gold);border:1px solid #3a3220;border-radius:4px;padding:0 5px;margin-right:6px}
+.tag{font:11px var(--mono);color:var(--dim);margin-right:8px}
+aside h2{font:600 13px var(--head);letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin:0 0 8px}
+aside section{border:1px solid var(--edge);border-radius:8px;padding:12px 14px;margin-bottom:14px;background:var(--panel)}
+aside li{font-size:13px;color:var(--dim);margin-bottom:4px}
+table{border-collapse:collapse;width:100%;font:12px var(--mono)}td,th{padding:3px 4px;border-bottom:1px solid var(--edge);text-align:left;color:var(--dim)}
+.count{font:12px var(--mono);color:var(--faint)}
+</style></head>
+<body>
+<header><h1>Work Atlas</h1><div class="by">Jeromie Beasley · every result, its paper, its Lean proof, and how it connects</div>
+<div class="sum" id="sum"></div></header>
+<div class="bar"><input type="search" id="q" placeholder="Search results, formulas, papers, theorem names" aria-label="Search the atlas">
+<div class="chips" id="papers" aria-label="Filter by paper"></div><div class="chips" id="tags" aria-label="Filter by tag"></div></div>
+<main><div><div class="count" id="count"></div><div id="list"></div></div>
+<aside><section><h2>Needs attention</h2><ul id="probs"></ul></section>
+<section><h2>Lean repos read</h2><table><thead><tr><th>repo</th><th>thms</th><th>sorry</th><th>commit</th></tr></thead><tbody id="repos"></tbody></table></section></aside></main>
+<script>
+const A=/*__ATLAS_DATA__*/null;
+const $=id=>document.getElementById(id), esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const byId=Object.fromEntries(A.entries.map(e=>[e.id,e]));
+const found=A.entries.filter(e=>e.lean_status==='found').length;
+$('sum').textContent=`${A.entries.length} results · ${found} with a Lean proof found · ${A.problems.length} needing attention · ${A.repos.length} repo branches read · updated ${A.updated}`;
+const papers=[...new Set(A.entries.map(e=>e.paper&&e.paper.title).filter(Boolean))].sort();
+const tags=[...new Set(A.entries.flatMap(e=>e.tags||[]))].sort();
+const on={paper:null,tag:null};
+function chips(el,vals,key){el.innerHTML=vals.map(v=>`<button class="chip" aria-pressed="false" data-v="${esc(v)}">${esc(v)}</button>`).join('');
+  el.querySelectorAll('button').forEach(b=>b.onclick=()=>{on[key]=on[key]===b.dataset.v?null:b.dataset.v;el.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x.dataset.v===on[key]));draw();});}
+chips($('papers'),papers,'paper');chips($('tags'),tags,'tag');
+function leanHtml(e){const L=e.lean;if(!L||!L.theorem)return '<span class="none">no Lean proof cited</span>';
+  if(e.lean_status==='found'){const f=e.lean_found, repo=L.repo.includes('/')?L.repo:A.owner+'/'+L.repo, br=f.where.split('@')[1]||'HEAD';
+    return `<span class="ok">✓ proved in Lean</span> · <a href="https://github.com/${repo}/blob/${encodeURI(br)}/${encodeURI(f.file)}#L${f.line}" target="_blank" rel="noopener">${esc(f.name)}</a> <span class="meta">${esc(repo)} · ${esc(f.file)}:${f.line}</span>`;}
+  return `<span class="bad">✗ cited theorem not found:</span> ${esc(L.theorem)} <span class="meta">${esc(L.repo)} ${esc(L.file||'')}</span>`;}
+function draw(){const q=$('q').value.trim().toLowerCase();
+  const list=A.entries.filter(e=>(!on.paper||(e.paper&&e.paper.title===on.paper))&&(!on.tag||(e.tags||[]).includes(on.tag))&&(!q||JSON.stringify(e).toLowerCase().includes(q)));
+  $('count').textContent=list.length+' shown';
+  $('list').innerHTML=list.map(e=>`<article class="card" id="${esc(e.id)}"><h3>${esc(e.title)}</h3>
+   <div class="meta">${esc(e.paper?e.paper.title+(e.paper.version?' '+e.paper.version:'')+(e.paper.section?' · '+e.paper.section:''):'')} · ${esc(e.grade||'')}</div>
+   <div class="st">${esc(e.statement)}</div><div class="lean">${leanHtml(e)}</div>
+   ${(e.links||[]).length?`<div class="links">${e.links.map(l=>`<div><span class="kind">${esc(l.kind)}</span>${byId[l.to]?`<a href="#${esc(l.to)}">${esc(byId[l.to].title)}</a>`:esc(l.to)}${l.note?' — '+esc(l.note):''}</div>`).join('')}</div>`:''}
+   <div style="margin-top:6px">${(e.tags||[]).map(t=>`<span class="tag">#${esc(t)}</span>`).join('')}</div></article>`).join('');}
+$('q').oninput=draw; draw();
+$('probs').innerHTML=A.problems.length?A.problems.map(p=>`<li>${esc(p)}</li>`).join(''):'<li>nothing</li>';
+$('repos').innerHTML=A.repos.map(r=>r.error?`<tr><td>${esc(r.repo)}</td><td colspan=3 class="bad">not reached</td></tr>`:`<tr><td>${esc(r.repo)}${r.branch&&r.branch!=='main'&&r.branch!=='master'?' @'+esc(r.branch):''}</td><td>${r.theorems}</td><td${r.sorry_or_admit?' class="bad"':''}>${r.sorry_or_admit}</td><td>${esc(r.sha)}</td></tr>`).join('');
+if(location.hash){const t=document.getElementById(location.hash.slice(1));if(t)t.scrollIntoView();}
+</script></body></html>

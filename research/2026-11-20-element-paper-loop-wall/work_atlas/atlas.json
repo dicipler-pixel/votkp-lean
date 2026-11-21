@@ -1,0 +1,1115 @@
+{
+ "updated": "2026-11-21 22:34 UTC",
+ "repos": [
+  {
+   "repo": "votkp-lean",
+   "branch": "main",
+   "sha": "fa9f8ea93a",
+   "lean_files": 39,
+   "declarations": 582,
+   "theorems": 364,
+   "sorry_or_admit": 0,
+   "open_statement_templates": 0,
+   "axioms": []
+  },
+  {
+   "repo": "yang-mills-lean",
+   "branch": "main",
+   "sha": "e81bbc75f8",
+   "lean_files": 103,
+   "declarations": 1751,
+   "theorems": 1366,
+   "sorry_or_admit": 0,
+   "open_statement_templates": 10,
+   "axioms": []
+  },
+  {
+   "repo": "dirac-time-lean",
+   "branch": "main",
+   "sha": "e8a4c86240",
+   "lean_files": 31,
+   "declarations": 116,
+   "theorems": 102,
+   "sorry_or_admit": 0,
+   "open_statement_templates": 0,
+   "axioms": []
+  },
+  {
+   "repo": "count-me-as-one-lean",
+   "branch": "main",
+   "sha": "a85cf2a056",
+   "lean_files": 49,
+   "declarations": 410,
+   "theorems": 314,
+   "sorry_or_admit": 0,
+   "open_statement_templates": 0,
+   "axioms": []
+  },
+  {
+   "repo": "dirac-time-d25-lean",
+   "branch": "master",
+   "sha": "ba5b23f9ee",
+   "lean_files": 6,
+   "declarations": 156,
+   "theorems": 115,
+   "sorry_or_admit": 0,
+   "open_statement_templates": 0,
+   "axioms": []
+  },
+  {
+   "repo": "cmao-combined-lean",
+   "branch": "master",
+   "sha": "ba9c2535d1",
+   "lean_files": 50,
+   "declarations": 410,
+   "theorems": 314,
+   "sorry_or_admit": 0,
+   "open_statement_templates": 0,
+   "axioms": []
+  },
+  {
+   "repo": "neutrinos-leave-lean",
+   "branch": "main",
+   "sha": "85fac2f00c",
+   "lean_files": 21,
+   "declarations": 97,
+   "theorems": 87,
+   "sorry_or_admit": 0,
+   "open_statement_templates": 0,
+   "axioms": []
+  },
+  {
+   "repo": "nonnormality-connection-energy-lean",
+   "branch": "main",
+   "sha": "b6d82acd34",
+   "lean_files": 32,
+   "declarations": 172,
+   "theorems": 152,
+   "sorry_or_admit": 0,
+   "open_statement_templates": 0,
+   "axioms": []
+  },
+  {
+   "repo": "coboundary-k3-lean",
+   "branch": "main",
+   "sha": "70a2b3de40",
+   "lean_files": 7,
+   "declarations": 478,
+   "theorems": 436,
+   "sorry_or_admit": 0,
+   "open_statement_templates": 0,
+   "axioms": []
+  },
+  {
+   "repo": "event-horizon-lean",
+   "branch": "main",
+   "sha": "7dd6164e44",
+   "lean_files": 7,
+   "declarations": 43,
+   "theorems": 40,
+   "sorry_or_admit": 0,
+   "open_statement_templates": 0,
+   "axioms": []
+  },
+  {
+   "repo": "what-the-neutrino-state-must-keep",
+   "branch": "main",
+   "sha": "60ce42e135",
+   "lean_files": 0,
+   "declarations": 0,
+   "theorems": 0,
+   "sorry_or_admit": 0,
+   "open_statement_templates": 0,
+   "axioms": []
+  },
+  {
+   "repo": "ramanujan-challenge-lean",
+   "branch": "main",
+   "sha": "fc08887193",
+   "lean_files": 16,
+   "declarations": 223,
+   "theorems": 156,
+   "sorry_or_admit": 0,
+   "open_statement_templates": 0,
+   "axioms": []
+  },
+  {
+   "repo": "filament-fracture-lean",
+   "branch": "main",
+   "sha": "3816c66ad6",
+   "lean_files": 5,
+   "declarations": 130,
+   "theorems": 117,
+   "sorry_or_admit": 0,
+   "open_statement_templates": 0,
+   "axioms": []
+  },
+  {
+   "repo": "coxeter-rank2-lean",
+   "branch": "main",
+   "sha": "5e5bb4af59",
+   "lean_files": 32,
+   "declarations": 315,
+   "theorems": 278,
+   "sorry_or_admit": 0,
+   "open_statement_templates": 25,
+   "axioms": []
+  },
+  {
+   "repo": "seiberg-witten-lean",
+   "branch": "main",
+   "sha": "cab2402231",
+   "lean_files": 10,
+   "declarations": 185,
+   "theorems": 121,
+   "sorry_or_admit": 0,
+   "open_statement_templates": 0,
+   "axioms": []
+  },
+  {
+   "repo": "maxwell-lean",
+   "branch": "main",
+   "sha": "36251da8b4",
+   "lean_files": 27,
+   "declarations": 680,
+   "theorems": 528,
+   "sorry_or_admit": 0,
+   "open_statement_templates": 0,
+   "axioms": []
+  },
+  {
+   "repo": "companion-matrix-lean",
+   "branch": "main",
+   "sha": "090be75f45",
+   "lean_files": 8,
+   "declarations": 46,
+   "theorems": 36,
+   "sorry_or_admit": 0,
+   "open_statement_templates": 0,
+   "axioms": []
+  },
+  {
+   "repo": "iqgt-grassmannian-lean",
+   "branch": "main",
+   "sha": "1d0af1c701",
+   "lean_files": 10,
+   "declarations": 102,
+   "theorems": 94,
+   "sorry_or_admit": 0,
+   "open_statement_templates": 0,
+   "axioms": []
+  },
+  {
+   "repo": "geometric-flux-magnetic-charge-lean",
+   "branch": "main",
+   "sha": "a1cef4973e",
+   "lean_files": 15,
+   "declarations": 65,
+   "theorems": 41,
+   "sorry_or_admit": 0,
+   "open_statement_templates": 0,
+   "axioms": []
+  },
+  {
+   "repo": "relational-atlas-lean",
+   "branch": "main",
+   "sha": "060c904825",
+   "lean_files": 50,
+   "declarations": 958,
+   "theorems": 822,
+   "sorry_or_admit": 0,
+   "open_statement_templates": 0,
+   "axioms": []
+  },
+  {
+   "repo": "three-body-lean",
+   "branch": "main",
+   "sha": "1f3ddcd190",
+   "lean_files": 5,
+   "declarations": 43,
+   "theorems": 36,
+   "sorry_or_admit": 0,
+   "open_statement_templates": 0,
+   "axioms": []
+  },
+  {
+   "repo": "ramanujan-normality-diagnostic",
+   "branch": "main",
+   "sha": "7255deec02",
+   "lean_files": 0,
+   "declarations": 0,
+   "theorems": 0,
+   "sorry_or_admit": 0,
+   "open_statement_templates": 0,
+   "axioms": []
+  },
+  {
+   "repo": "arithmetic-kakeya-finite-bridges",
+   "branch": "main",
+   "sha": "9c78329692",
+   "lean_files": 18,
+   "declarations": 194,
+   "theorems": 127,
+   "sorry_or_admit": 0,
+   "open_statement_templates": 0,
+   "axioms": []
+  },
+  {
+   "repo": "earth-moon-kakeya-certificates",
+   "branch": "main",
+   "sha": "503066d3bd",
+   "lean_files": 0,
+   "declarations": 0,
+   "theorems": 0,
+   "sorry_or_admit": 0,
+   "open_statement_templates": 0,
+   "axioms": []
+  },
+  {
+   "repo": "iqgt-core-lean",
+   "branch": "main",
+   "sha": "6160eb4e46",
+   "lean_files": 12,
+   "declarations": 155,
+   "theorems": 137,
+   "sorry_or_admit": 0,
+   "open_statement_templates": 0,
+   "axioms": []
+  },
+  {
+   "repo": "light-ledger-lean",
+   "branch": "main",
+   "sha": "885794f583",
+   "lean_files": 19,
+   "declarations": 153,
+   "theorems": 122,
+   "sorry_or_admit": 0,
+   "open_statement_templates": 0,
+   "axioms": []
+  },
+  {
+   "repo": "price-of-a-direction-lean",
+   "branch": "main",
+   "sha": "97bdcd2e57",
+   "lean_files": 4,
+   "declarations": 21,
+   "theorems": 17,
+   "sorry_or_admit": 0,
+   "open_statement_templates": 0,
+   "axioms": []
+  },
+  {
+   "repo": "what-tesla-saw-lean",
+   "branch": "main",
+   "sha": "c9f197dca6",
+   "lean_files": 8,
+   "declarations": 82,
+   "theorems": 76,
+   "sorry_or_admit": 0,
+   "open_statement_templates": 0,
+   "axioms": []
+  },
+  {
+   "repo": "upg-lean",
+   "branch": "main",
+   "sha": "79cd730e31",
+   "lean_files": 13,
+   "declarations": 124,
+   "theorems": 105,
+   "sorry_or_admit": 0,
+   "open_statement_templates": 0,
+   "axioms": []
+  },
+  {
+   "repo": "spectral-stability-lean",
+   "branch": "main",
+   "sha": "26d1619b03",
+   "lean_files": 9,
+   "declarations": 59,
+   "theorems": 44,
+   "sorry_or_admit": 0,
+   "open_statement_templates": 0,
+   "axioms": []
+  },
+  {
+   "repo": "foft-lean",
+   "branch": "main",
+   "sha": "85777212c9",
+   "lean_files": 4,
+   "declarations": 13,
+   "theorems": 11,
+   "sorry_or_admit": 0,
+   "open_statement_templates": 0,
+   "axioms": []
+  },
+  {
+   "repo": "emergent-transport-lean",
+   "branch": "main",
+   "sha": "e334cac842",
+   "lean_files": 4,
+   "declarations": 12,
+   "theorems": 11,
+   "sorry_or_admit": 0,
+   "open_statement_templates": 0,
+   "axioms": []
+  },
+  {
+   "repo": "suns-lean",
+   "branch": "main",
+   "sha": "5267622e31",
+   "lean_files": 4,
+   "declarations": 19,
+   "theorems": 15,
+   "sorry_or_admit": 0,
+   "open_statement_templates": 0,
+   "axioms": []
+  },
+  {
+   "repo": "spectral-stress-lean",
+   "branch": "main",
+   "sha": "67a738495e",
+   "lean_files": 4,
+   "declarations": 25,
+   "theorems": 20,
+   "sorry_or_admit": 0,
+   "open_statement_templates": 0,
+   "axioms": []
+  },
+  {
+   "repo": "-connection-energy-lean",
+   "branch": "main",
+   "sha": "48aa5cf281",
+   "lean_files": 5,
+   "declarations": 26,
+   "theorems": 20,
+   "sorry_or_admit": 0,
+   "open_statement_templates": 0,
+   "axioms": []
+  },
+  {
+   "repo": "gravity-ledger-lean",
+   "branch": "main",
+   "sha": "885932f0af",
+   "lean_files": 6,
+   "declarations": 36,
+   "theorems": 30,
+   "sorry_or_admit": 0,
+   "open_statement_templates": 0,
+   "axioms": []
+  },
+  {
+   "repo": "what-transport-keeps-lean",
+   "branch": "main",
+   "sha": "4754fdadd0",
+   "lean_files": 6,
+   "declarations": 73,
+   "theorems": 49,
+   "sorry_or_admit": 0,
+   "open_statement_templates": 0,
+   "axioms": []
+  },
+  {
+   "repo": "square-case-lean",
+   "branch": "main",
+   "sha": "6769949325",
+   "lean_files": 9,
+   "declarations": 80,
+   "theorems": 63,
+   "sorry_or_admit": 0,
+   "open_statement_templates": 0,
+   "axioms": []
+  },
+  {
+   "repo": "electron-screening-lean",
+   "branch": "main",
+   "sha": "7e53d04a34",
+   "lean_files": 4,
+   "declarations": 12,
+   "theorems": 11,
+   "sorry_or_admit": 0,
+   "open_statement_templates": 0,
+   "axioms": []
+  },
+  {
+   "repo": "what-russell-saw-lean",
+   "branch": "main",
+   "sha": "258d89f943",
+   "lean_files": 7,
+   "declarations": 48,
+   "theorems": 43,
+   "sorry_or_admit": 0,
+   "open_statement_templates": 0,
+   "axioms": []
+  },
+  {
+   "repo": "elemental-peeling-lean",
+   "branch": "main",
+   "sha": "f7ed2ede6d",
+   "lean_files": 13,
+   "declarations": 120,
+   "theorems": 88,
+   "sorry_or_admit": 0,
+   "open_statement_templates": 0,
+   "axioms": []
+  },
+  {
+   "repo": "offset-lean",
+   "branch": "main",
+   "sha": "3207ecb7a2",
+   "lean_files": 28,
+   "declarations": 217,
+   "theorems": 163,
+   "sorry_or_admit": 0,
+   "open_statement_templates": 0,
+   "axioms": []
+  },
+  {
+   "repo": "sqrt-lower-bound-lean",
+   "branch": "main",
+   "sha": "af16dfd1d2",
+   "lean_files": 31,
+   "declarations": 950,
+   "theorems": 668,
+   "sorry_or_admit": 0,
+   "open_statement_templates": 0,
+   "axioms": []
+  },
+  {
+   "repo": "small-diophantine-lean",
+   "branch": "main",
+   "sha": "62589bd221",
+   "lean_files": 3,
+   "declarations": 21,
+   "theorems": 16,
+   "sorry_or_admit": 0,
+   "open_statement_templates": 0,
+   "axioms": []
+  },
+  {
+   "repo": "matter-at-a-scale-lean",
+   "branch": "main",
+   "sha": "56a637a680",
+   "lean_files": 4,
+   "declarations": 20,
+   "theorems": 17,
+   "sorry_or_admit": 0,
+   "open_statement_templates": 0,
+   "axioms": []
+  },
+  {
+   "repo": "acwindow-lean",
+   "branch": "main",
+   "sha": "efe5da7ff3",
+   "lean_files": 3,
+   "declarations": 98,
+   "theorems": 48,
+   "sorry_or_admit": 0,
+   "open_statement_templates": 0,
+   "axioms": []
+  },
+  {
+   "repo": "votkp-lean",
+   "branch": "element-paper/loop-wall",
+   "sha": "15503e09b7",
+   "lean_files": 115,
+   "declarations": 1818,
+   "theorems": 1190,
+   "sorry_or_admit": 0,
+   "open_statement_templates": 0,
+   "axioms": []
+  },
+  {
+   "repo": "votkp-lean",
+   "branch": "claude/sm-ball-20261111",
+   "sha": "74125d2977",
+   "lean_files": 64,
+   "declarations": 917,
+   "theorems": 597,
+   "sorry_or_admit": 0,
+   "open_statement_templates": 0,
+   "axioms": []
+  }
+ ],
+ "entries": [
+  {
+   "id": "wall.definition",
+   "title": "The loop wall Γ² = ½",
+   "statement": "Γ = (z − 1)/(z + 1) = tanh h, h = ½ ln z. Γ² > ½ exactly when z² − 6z + 1 > 0, i.e. z > 3 + 2√2 = 5.828427 for z > 1.",
+   "paper": {
+    "title": "The Loop Wall (element paper)",
+    "version": "v8",
+    "section": "§2"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/votkp-lean",
+    "branch": "element-paper/loop-wall",
+    "file": "research/2026-11-20-element-paper-loop-wall/lean/LoopWall.lean",
+    "theorem": "wall_quadratic"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "loop-wall",
+    "definition"
+   ],
+   "links": [
+    {
+     "to": "wall.outside-rule",
+     "kind": "uses"
+    }
+   ],
+   "_file": "wall_ledger.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "votkp-lean@element-paper/loop-wall",
+    "file": "research/2026-11-20-element-paper-loop-wall/lean/LoopWall.lean",
+    "line": 39,
+    "name": "wall_quadratic"
+   }
+  },
+  {
+   "id": "wall.outside-rule",
+   "title": "Outside the wall, as a ratio test",
+   "statement": "For z > 1: outside ⇔ 3 < z and (z − 3)² > 8 ⇔ Γ² > ½.",
+   "paper": {
+    "title": "The Loop Wall (element paper)",
+    "version": "v8",
+    "section": "§2"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/votkp-lean",
+    "branch": "element-paper/loop-wall",
+    "file": "research/2026-11-20-element-paper-loop-wall/lean/LoopWall.lean",
+    "theorem": "outside_iff"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "loop-wall"
+   ],
+   "links": [
+    {
+     "to": "wall.definition",
+     "kind": "same-wall"
+    }
+   ],
+   "_file": "wall_ledger.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "votkp-lean@element-paper/loop-wall",
+    "file": "research/2026-11-20-element-paper-loop-wall/lean/LoopWall.lean",
+    "line": 50,
+    "name": "outside_iff"
+   }
+  },
+  {
+   "id": "wall.sinh-form",
+   "title": "The wall as sinh² h = 1",
+   "statement": "(z − 1)²/(4z) = sinh² h = Γ²/(1 − Γ²); the wall Γ² = ½ is sinh h = 1.",
+   "paper": {
+    "title": "The Loop Wall (element paper)",
+    "version": "v8",
+    "section": "§5"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/votkp-lean",
+    "branch": "element-paper/loop-wall",
+    "file": "research/2026-11-20-element-paper-loop-wall/lean/LoopWall.lean",
+    "theorem": "sinh_sq_form"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "loop-wall"
+   ],
+   "links": [
+    {
+     "to": "wall.two-faces",
+     "kind": "special-case",
+     "note": "equal faces"
+    }
+   ],
+   "_file": "wall_ledger.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "votkp-lean@element-paper/loop-wall",
+    "file": "research/2026-11-20-element-paper-loop-wall/lean/LoopWall.lean",
+    "line": 66,
+    "name": "sinh_sq_form"
+   }
+  },
+  {
+   "id": "wall.two-faces",
+   "title": "Two faces close one loop",
+   "statement": "Two faces at right angles close a Lambert quadrilateral iff Γ_a² + Γ_b² < 1 ⇔ sinh a · sinh b < 1; closed: cos φ = sinh a sinh b; open: cosh d = sinh a sinh b. Carbon's helium-core opening fixed: crossover z_b = 5.591156.",
+   "paper": {
+    "title": "The Loop Wall (element paper)",
+    "version": "v8",
+    "section": "§5"
+   },
+   "lean": null,
+   "grade": "DERIVED-IN-PAPER",
+   "tags": [
+    "loop-wall",
+    "hyperbolic-geometry"
+   ],
+   "links": [
+    {
+     "to": "transport.trace-wall",
+     "kind": "same-wall"
+    },
+    {
+     "to": "gravity.licence",
+     "kind": "same-formula",
+     "note": "rank-one Cauchy–Schwarz licence"
+    }
+   ],
+   "_file": "wall_ledger.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "wall.eight-outside",
+   "title": "Eight outside steps, hydrogen to astatine",
+   "statement": "Of 3,570 ordinary removal steps, exactly eight lie outside the wall: lithium, beryllium, boron, carbon, sodium, potassium, rubidium, caesium, all first openings of a noble-gas core.",
+   "paper": {
+    "title": "The Loop Wall (element paper)",
+    "version": "v8",
+    "section": "§4"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/votkp-lean",
+    "branch": "element-paper/loop-wall",
+    "file": "research/2026-11-20-element-paper-loop-wall/lean/LoopWall.lean",
+    "theorem": "ordinary_window_nitrogen_caesium"
+   },
+   "grade": "PROVED-LEAN (window ends) · COMPUTED (count)",
+   "tags": [
+    "loop-wall",
+    "elements"
+   ],
+   "links": [
+    {
+     "to": "wall.window",
+     "kind": "uses"
+    }
+   ],
+   "_file": "wall_ledger.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "votkp-lean@element-paper/loop-wall",
+    "file": "research/2026-11-20-element-paper-loop-wall/lean/LoopWall.lean",
+    "line": 426,
+    "name": "ordinary_window_nitrogen_caesium"
+   }
+  },
+  {
+   "id": "wall.window",
+   "title": "The data pin the cutoff to 1%",
+   "statement": "Every classification from hydrogen to astatine survives only for cutoffs in [5.80790, 5.86654): silver's anion rung (inside) to silicon's (outside). 3 + 2√2 = 5.82843 lies in it.",
+   "paper": {
+    "title": "The Loop Wall (element paper)",
+    "version": "v8",
+    "section": "§6"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/votkp-lean",
+    "branch": "element-paper/loop-wall",
+    "file": "research/2026-11-20-element-paper-loop-wall/lean/LoopWall.lean",
+    "theorem": "window_silver_silicon"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "loop-wall",
+    "elements",
+    "anion-rung"
+   ],
+   "links": [
+    {
+     "to": "wall.francium",
+     "kind": "uses"
+    }
+   ],
+   "_file": "wall_ledger.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "votkp-lean@element-paper/loop-wall",
+    "file": "research/2026-11-20-element-paper-loop-wall/lean/LoopWall.lean",
+    "line": 466,
+    "name": "window_silver_silicon"
+   }
+  },
+  {
+   "id": "wall.anion-rung",
+   "title": "The anion rung is a peel step",
+   "statement": "Γ(IE/EA) = (IE − EA)/(IE + EA) = η/χ.",
+   "paper": {
+    "title": "The Loop Wall (element paper)",
+    "version": "v8",
+    "section": "§6"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/votkp-lean",
+    "branch": "element-paper/loop-wall",
+    "file": "research/2026-11-20-element-paper-loop-wall/lean/LoopWall.lean",
+    "theorem": "gam_anion_rung"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "loop-wall",
+    "anion-rung",
+    "chemistry"
+   ],
+   "links": [
+    {
+     "to": "wall.omega-eta",
+     "kind": "uses"
+    }
+   ],
+   "_file": "wall_ledger.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "votkp-lean@element-paper/loop-wall",
+    "file": "research/2026-11-20-element-paper-loop-wall/lean/LoopWall.lean",
+    "line": 511,
+    "name": "gam_anion_rung"
+   }
+  },
+  {
+   "id": "wall.omega-eta",
+   "title": "Electrophilicity meets hardness",
+   "statement": "With ω = χ²/2η: ω/η = 1/(2Γ₀²), so the wall Γ₀² = ½ is the plane ω = η. Identity: (I + A)² − 2(I − A)² = −(I² − 6IA + A²). 12 of 65 anions are inside.",
+   "paper": {
+    "title": "The Loop Wall (element paper)",
+    "version": "v8",
+    "section": "§6"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/votkp-lean",
+    "branch": "element-paper/loop-wall",
+    "file": "research/2026-11-20-element-paper-loop-wall/lean/LoopWall.lean",
+    "theorem": "omega_eta_wall"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "loop-wall",
+    "anion-rung",
+    "chemistry"
+   ],
+   "links": [
+    {
+     "to": "wall.definition",
+     "kind": "same-wall"
+    }
+   ],
+   "_file": "wall_ledger.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "votkp-lean@element-paper/loop-wall",
+    "file": "research/2026-11-20-element-paper-loop-wall/lean/LoopWall.lean",
+    "line": 528,
+    "name": "omega_eta_wall"
+   }
+  },
+  {
+   "id": "wall.heavy-anion-prediction",
+   "title": "Heavy-anion prediction",
+   "statement": "Gold, platinum, iridium, astatine inside; osmium, bismuth, lead outside: all seven hold. Polonium (preliminary affinity 1.476 eV, z = 5.703) is provisionally contradicted.",
+   "paper": {
+    "title": "The Loop Wall (element paper)",
+    "version": "v8",
+    "section": "§6"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/votkp-lean",
+    "branch": "element-paper/loop-wall",
+    "file": "research/2026-11-20-element-paper-loop-wall/lean/LoopWall.lean",
+    "theorem": "heavy_anion_prediction"
+   },
+   "grade": "PROVED-LEAN (ratios) · MEASURED",
+   "tags": [
+    "loop-wall",
+    "anion-rung",
+    "prediction"
+   ],
+   "links": [],
+   "_file": "wall_ledger.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "votkp-lean@element-paper/loop-wall",
+    "file": "research/2026-11-20-element-paper-loop-wall/lean/LoopWall.lean",
+    "line": 459,
+    "name": "heavy_anion_prediction"
+   }
+  },
+  {
+   "id": "wall.francium",
+   "title": "Advance prediction: francium",
+   "statement": "Francium's radon-core opening is inside the wall iff IE₂(Fr) < 23.738 eV (IE₁ = 4.072741 eV measured; IE₂ unmeasured). Only IE₂ in [23.654, 23.893) eV separates the exact wall from other allowed cutoffs. Registered 21 Nov 2026.",
+   "paper": {
+    "title": "The Loop Wall (element paper)",
+    "version": "v8",
+    "section": "prediction file"
+   },
+   "lean": null,
+   "grade": "PREDICTION (untested)",
+   "tags": [
+    "loop-wall",
+    "prediction",
+    "elements"
+   ],
+   "links": [
+    {
+     "to": "wall.window",
+     "kind": "uses"
+    }
+   ],
+   "_file": "wall_ledger.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "two-trees.schottky-5-7",
+   "title": "Schottky threshold at ratios 5 and 7",
+   "statement": "Γ(5)² < ½ < Γ(7)²: the wall separates the peel boosts of ratio 5 and 7. Proved at these two ratios only; the general threshold is stated in the paper.",
+   "paper": {
+    "title": "Two Trees in One Ball",
+    "version": "v4",
+    "section": "§ Schottky"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/votkp-lean",
+    "branch": "claude/sm-ball-20261111",
+    "file": "two-trees/lean/PeelTrees.lean",
+    "theorem": "schottky_seven_above"
+   },
+   "grade": "PROVED-LEAN (two ratios)",
+   "tags": [
+    "loop-wall",
+    "two-trees"
+   ],
+   "links": [
+    {
+     "to": "wall.definition",
+     "kind": "same-wall"
+    }
+   ],
+   "_file": "wall_ledger.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "votkp-lean@claude/sm-ball-20261111",
+    "file": "two-trees/lean/PeelTrees.lean",
+    "line": 164,
+    "name": "PeelTrees.schottky_seven_above"
+   }
+  },
+  {
+   "id": "transport.trace-wall",
+   "title": "Loop transport: tr W = −2 at the wall",
+   "statement": "W = A B A⁻¹ B⁻¹ for two perpendicular half-steps: tr W = 2 − 4 sinh²a sinh²b; at Γ² = ½ on both faces the trace is −2, the threshold where transport starts selecting one line.",
+   "paper": {
+    "title": "What Transport Keeps",
+    "version": "ed. 3",
+    "section": "Theorems 1–2 (reading)"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/votkp-lean",
+    "branch": "claude/sm-ball-20261111",
+    "file": "research/2026-11-12-harness/lean/NewProps.lean",
+    "theorem": "trace_at_wall"
+   },
+   "grade": "PROVED-LEAN (value at the wall) · COMPUTED (selection)",
+   "tags": [
+    "loop-wall",
+    "transport"
+   ],
+   "links": [
+    {
+     "to": "wall.two-faces",
+     "kind": "same-wall"
+    }
+   ],
+   "_file": "wall_ledger.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "votkp-lean@claude/sm-ball-20261111",
+    "file": "research/2026-11-12-harness/lean/NewProps.lean",
+    "line": 317,
+    "name": "NewProps.trace_at_wall"
+   }
+  },
+  {
+   "id": "transport.trace-wall-matrix",
+   "title": "The loop matrix has trace −2 on the wall",
+   "statement": "For c² − s² = 1 and s² = 1, the loop matrix W satisfies tr W = −2.",
+   "paper": {
+    "title": "VOTKP harness",
+    "version": "12 Nov 2026",
+    "section": "NewProps"
+   },
+   "lean": {
+    "repo": "dicipler-pixel/votkp-lean",
+    "branch": "claude/sm-ball-20261111",
+    "file": "research/2026-11-12-harness/lean/NewProps.lean",
+    "theorem": "loopW_wall_trace"
+   },
+   "grade": "PROVED-LEAN",
+   "tags": [
+    "loop-wall",
+    "transport"
+   ],
+   "links": [
+    {
+     "to": "transport.trace-wall",
+     "kind": "same-formula"
+    }
+   ],
+   "_file": "wall_ledger.json",
+   "lean_status": "found",
+   "lean_found": {
+    "where": "votkp-lean@claude/sm-ball-20261111",
+    "file": "research/2026-11-12-harness/lean/NewProps.lean",
+    "line": 257,
+    "name": "NewProps.loopW_wall_trace"
+   }
+  },
+  {
+   "id": "speed.fastest-at-wall",
+   "title": "The speed limit is fastest at the wall",
+   "statement": "With θ = arcsin Γ, the offset speed limit gives |dθ/dt| ≤ 2√E_B, so |d(Γ²)/dt| ≤ 2√E_B · sin 2θ, largest at θ = 45°, Γ² = ½. Sharpness 1/[ν(1 − ν)] > 8 reproduces all eight outside steps.",
+   "paper": {
+    "title": "The Offset Speed Limit",
+    "version": "v1.1",
+    "section": "Theorem 1 (corollary)"
+   },
+   "lean": null,
+   "grade": "DERIVED (corollary) · COMPUTED",
+   "tags": [
+    "loop-wall",
+    "speed-limit"
+   ],
+   "links": [
+    {
+     "to": "wall.definition",
+     "kind": "same-wall"
+    }
+   ],
+   "_file": "wall_ledger.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "speed.books",
+   "title": "Connection books on one edge: E⁻/E⁺ = Γ²",
+   "statement": "On one scalar edge, E⁻ = (IE_{k+1} − IE_k)² (connection book) and E⁺ = (IE_{k+1} + IE_k)² (opposite book): E⁻/E⁺ = Γ² exactly; the wall is E⁺ = 2E⁻. Checked on all 3,570 steps.",
+   "paper": {
+    "title": "The Weight Between",
+    "version": "v1.1",
+    "section": "scalar edge (atlas card B189)"
+   },
+   "lean": null,
+   "grade": "DERIVED · COMPUTED",
+   "tags": [
+    "loop-wall",
+    "connection-energy"
+   ],
+   "links": [
+    {
+     "to": "wall.definition",
+     "kind": "same-wall"
+    }
+   ],
+   "_file": "wall_ledger.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "offset.ladder-4pi",
+   "title": "The entanglement ladder is spaced 4π at the wall",
+   "statement": "Each level of a block is a peel step, z = (1 − ν)/ν. On the dimerised chain ũ = Γ(t₂/t₁); at ũ² = ½ (t₂/t₁ = 3 + 2√2) K = K′ and the spacing Δ = 4πK(ũ)/K′(ũ) is exactly 4π (finite blocks to ~10⁻¹⁹).",
+   "paper": {
+    "title": "The Offset Belongs to the Boundary",
+    "version": "v31",
+    "section": "spacing formula"
+   },
+   "lean": null,
+   "grade": "DERIVED · MEASURED",
+   "tags": [
+    "loop-wall",
+    "offset",
+    "entanglement"
+   ],
+   "links": [
+    {
+     "to": "wall.definition",
+     "kind": "same-wall"
+    }
+   ],
+   "_file": "wall_ledger.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "gravity.licence",
+   "title": "The licence is the two-face closing test",
+   "statement": "Γ_a² + Γ_b² < 1 is the rank-one persistence cap / licence: [[1, w],[w̄, 1]] positive with w = Γ_a + iΓ_b. At the anion rung the metric determinant is IE · EA, so the wall lapses before the anion unbinds.",
+   "paper": {
+    "title": "The Ledger Outlives the Metric",
+    "version": "Ed. 7",
+    "section": "Thm 1, Thm 5"
+   },
+   "lean": null,
+   "grade": "DERIVED · COMPUTED",
+   "tags": [
+    "loop-wall",
+    "gravity"
+   ],
+   "links": [
+    {
+     "to": "wall.two-faces",
+     "kind": "same-formula"
+    }
+   ],
+   "_file": "wall_ledger.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "vacuum-disk.metals-line",
+   "title": "Metals and non-metals split at |Γ|² = ½",
+   "statement": "Averaged over the visible, the reflection |Γ|² = ½ separates metals (35 of 35 above) from non-metals (0 of 6 above) on the vacuum disk.",
+   "paper": {
+    "title": "The Volume of the Knot Potential: Decay and Direction on the Vacuum Disk",
+    "version": "v6",
+    "section": "§9"
+   },
+   "lean": null,
+   "grade": "MEASURED (refractiveindex.info data)",
+   "tags": [
+    "loop-wall",
+    "colour",
+    "vacuum-disk"
+   ],
+   "links": [
+    {
+     "to": "wall.definition",
+     "kind": "same-wall"
+    }
+   ],
+   "_file": "wall_ledger.json",
+   "lean_status": "no Lean proof cited"
+  },
+  {
+   "id": "vacuum-disk.polynomial",
+   "title": "The decay–direction polynomial",
+   "statement": "P_K(x) = Π_ρ (x − e^{λV₀(ρ)}), one root per geometry read off the drawing (Cho–Kim–Kim potential): top root = complex volume on 79 of 79 knots; same spectrum from different drawings (13 of 13); torus knots give pure direction −4pq α_end² mod 1.",
+   "paper": {
+    "title": "The Volume of the Knot Potential: Decay and Direction on the Vacuum Disk",
+    "version": "v6",
+    "section": "§6"
+   },
+   "lean": null,
+   "grade": "NEW DEFINITION · COMPUTED",
+   "tags": [
+    "knots",
+    "vacuum-disk",
+    "polynomial"
+   ],
+   "links": [],
+   "_file": "wall_ledger.json",
+   "lean_status": "no Lean proof cited"
+  }
+ ],
+ "problems": []
+}
