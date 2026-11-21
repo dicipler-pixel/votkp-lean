@@ -1,0 +1,6 @@
+wall      c = 5.828427125  pairs where product and sum forms disagree: 0 of 7140
+Ag end    c = 5.80790206  pairs where product and sum forms disagree: 7 of 7140
+midpoint  c = 5.837220418  pairs where product and sum forms disagree: 1 of 7140
+Si end    c = 5.866480111  pairs where product and sum forms disagree: 2 of 7140
+identity residual: 0
+2 Gamma_mid^2 = 1.001065717131807757046073378 | sinh^2 h_mid = 1.00213370819299106324019889335
