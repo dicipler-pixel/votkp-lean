@@ -1,0 +1,27 @@
+A coverage: {'E': 20, 'U': 4}
+A by original grade: {('E', 'F'): 10, ('E', 'T'): 10, ('U', 'F'): 2, ('U', 'T'): 2}
+B coverage: {'E': 21, 'U': 3}
+B by original grade: {('E', 'F'): 10, ('E', 'T'): 11, ('U', 'F'): 2, ('U', 'T'): 1}
+all agreements 23 / 24 [(('E', 'E'), 20), (('U', 'E'), 1), (('U', 'U'), 3)]
+scoreable: P01 G87 E T T True
+scoreable: P02 U183 E T T True
+scoreable: P03 U239 E T F False
+scoreable: P04 G64 E T T True
+scoreable: P05 L85 E T T True
+scoreable: P06 U144 E T F False
+scoreable: P08 U214 E T T True
+scoreable: P10 U208 E T F False
+scoreable: P11 G89 E T F False
+scoreable: P12 G82 E T T True
+scoreable: P13 L69 E T F False
+scoreable: P14 U270 E T T True
+scoreable: P15 G28 E T F False
+scoreable: P16 G11 E T T True
+scoreable: P17 L163 E T T True
+scoreable: P18 U190 E T F False
+scoreable: P21 U262 E T T True
+scoreable: P22 L101 E T F False
+scoreable: P23 G12 E T F False
+scoreable: P24 L174 E T F False
+joint coverage and correct 20 10
+disagreed P07 L25 U E

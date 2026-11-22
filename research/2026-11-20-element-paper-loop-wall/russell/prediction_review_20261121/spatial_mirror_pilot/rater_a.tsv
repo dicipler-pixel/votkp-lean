@@ -1,0 +1,25 @@
+token	label	reason
+P01	E	Whether the marble climbs relative to the curved support is retained when the support, marble and vertical are inverted together.
+P02	E	Approach is a decrease in separation, and the stated comparison uses speed magnitudes.
+P03	E	Inverting the emitter and spectrometer preserves the number and wavelengths of the lines.
+P04	E	Energy per stated amount and the comparison of concentrations are scalars.
+P05	E	The occurrence of orbital and spin motion and their relative prominence specify no signed component of either.
+P06	E	The volume of the resulting liquid is independent of its orientation.
+P07	U	The terms electric and magnetic give no specific property to measure for a mass.
+P08	E	Elapsed arrival times retain their ordering at the corresponding receivers.
+P09	U	The quotation does not identify moving objects or measurable directions of propagation for electricity and magnetism.
+P10	E	Coincidence of two lines or two planes survives inversion regardless of how their ends or faces are labeled.
+P11	E	The claim concerns the layers acting as curved reflectors, a property also possessed by their inverted images.
+P12	E	Temperature and volume changes keep their signs when the whole body is inverted.
+P13	E	Attraction and repulsion describe the sense of force relative to separation, preserved as both vectors reverse.
+P14	E	The comparison is of reaction intensity for each metal, which does not depend on a signed spatial direction.
+P15	E	Both pressure and volume retain their values, preserving their stated ordering.
+P16	E	Inversion leaves each electric charge intact and preserves the count of charges.
+P17	E	Expansion and the ordering of equilibrium pressures refer to volume and pressure, both scalars.
+P18	E	The distance ratios, temperature factors and stated orbital and spin rate factors all compare magnitudes.
+P19	U	Neither the proposed plan nor the balance of every effect specifies a measurable quantity with a defined transformation.
+P20	U	Degeneration could refer to a loss of mass or to another change in condition, and the claim does not define it.
+P21	E	The Sun's speed is the magnitude of its velocity, which inversion preserves in any specified frame.
+P22	E	Eastward motion relative to the system's own east direction is preserved when both orbital velocity and the local east direction reverse.
+P23	E	Contraction is a decrease in size over time, preserved by inversion.
+P24	E	Orbital speed and distance from the force center are magnitudes, so their proposed ratio survives inversion.

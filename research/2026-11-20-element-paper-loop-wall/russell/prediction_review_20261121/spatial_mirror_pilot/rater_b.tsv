@@ -1,0 +1,25 @@
+token	label	reason
+P01	E	Ascending a curve relative to local gravity and curvature in all directions survive inversion of the apparatus.
+P02	E	Approach, equal speeds and orbital deviation magnitudes are unchanged by inversion.
+P03	E	The number and colors of spectral lines are invariant.
+P04	E	Energy, mass and degree of concentration are scalar quantities.
+P05	E	The presence and relative predominance of spin and orbital motion involve no signed polar component.
+P06	E	Condensed water volume is invariant.
+P07	E	Possessing electric and magnetic properties names a conjunction of properties without specifying a field direction.
+P08	E	Arrival-time ordering at specified distances survives inversion.
+P09	U	The text gives no definition of the motions of electricity and magnetism that would establish whether their directions are transport velocities or field directions.
+P10	E	Line and plane coincidence are invariant geometric relations.
+P11	E	A reflected spiral surface remains curved and retains its mirror function, regardless of its handedness.
+P12	E	Volume change and temperature change are scalars with unchanged signs.
+P13	E	Attraction and repulsion are radial relations, and relative potential is scalar.
+P14	E	Relative reaction intensity in water survives inversion.
+P15	E	The inverse relation involves scalar pressure and volume.
+P16	E	Electric charge and the number of charges are unchanged.
+P17	E	Expansion and lower equilibrium pressure refer to volume and pressure, both scalar.
+P18	E	The cited temperature and motion ratios involve magnitudes at specified radial distances.
+P19	U	Perfect mechanistic balance and absence of waste specify no unique physical quantity.
+P20	U	Degeneration has no defined measure here; radiation alone does not identify the readout.
+P21	E	Speed is the magnitude of velocity.
+P22	E	Relative to the system's rotation axis, the local eastward tangent and the orbital velocity both reverse, preserving eastward motion.
+P23	E	The sign of the change in solar radius is invariant.
+P24	E	Orbital speed and distance from the center are magnitudes.
