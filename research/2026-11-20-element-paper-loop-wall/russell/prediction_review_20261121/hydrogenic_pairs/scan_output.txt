@@ -1,0 +1,7 @@
+assigned ion energies 110 missing 8 Rg,Cn,Nh,Fl,Mc,Lv,Ts,Og
+grade counts {'T': 110}
+levels without widths: []
+pairs: 5995 complete boxes 5995 central 1 overlap 1 robust 1
+archived candidate Sc Sn 5.832602195379 5.832600285303 5.832604105455 T T 5.668934240363 5.836645320692
+z_NonRel candidates [('Nb', 'Es', '5.830458060678')]
+z_Dirac candidates [('Ar', 'Tc', '5.829275207373'), ('Sc', 'Sn', '5.836645320692'), ('Br', 'Tl', '5.830924484468')]

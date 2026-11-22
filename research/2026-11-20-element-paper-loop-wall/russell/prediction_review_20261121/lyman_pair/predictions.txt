@@ -1,0 +1,5 @@
+Frozen before the literature search. For z=21 and 50, x=z/137.035999177, evaluate
+d(z,k)=[1+(x/(2-k+sqrt(k*k-x*x)))^2]^(-1/2)-sqrt(1-x*x).
+R=d(50,k)/d(21,k) is the larger/smaller photon energy ratio.
+k=1 (2p1/2 to 1s), R=5.822458105167732.
+k=2 (2p3/2 to 1s), R=5.879107419208684.

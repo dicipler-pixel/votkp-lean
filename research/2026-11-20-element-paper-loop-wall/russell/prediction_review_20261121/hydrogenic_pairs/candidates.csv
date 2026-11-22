@@ -1,0 +1,2 @@
+Za,a,Zb,b,Ea,Eb,dEa,dEb,grade_a,grade_b,ref_a,ref_b,ratio,low,high,central,overlap,robust,z_NonRel,z_Dirac,hit_NonRel,hit_Dirac
+21,Sc,50,Sn,6033.75643,35192.501,9e-05,0.011,T,T,L19200,L19200,5.832602195379,5.832600285303,5.832604105455,True,True,True,5.668934240363,5.836645320692,False,True

@@ -1,0 +1,9 @@
+higher binding/mc² 0.0001 continuous charge pair 0.8024 1.9379 fidelity 0.568221182
+higher binding/mc² 0.02 continuous charge pair 11.3379 27.2698 fidelity 0.563399991
+higher binding/mc² 0.07 continuous charge pair 21.1657 50.3689 fidelity 0.551059772
+higher binding/mc² 0.15 continuous charge pair 30.8764 72.1882 fidelity 0.530615523
+higher binding/mc² 0.25 continuous charge pair 39.6878 90.6408 fidelity 0.503777765
+higher binding/mc² 0.35 continuous charge pair 46.7532 104.1383 fidelity 0.475412129
+higher binding/mc² 0.45 continuous charge pair 52.7784 114.4476 fidelity 0.445399702
+higher binding/mc² 0.5 continuous charge pair 55.5092 118.6767 fidelity 0.429736289
+one bracketed equal-half example at identical z; upper binding/mc² 0.2636444560760663 charges 40.732135852701745 92.71784339724165

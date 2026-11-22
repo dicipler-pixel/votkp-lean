@@ -1,0 +1,9 @@
+Quadrature comparisons 24 max absolute overlap error 1.1102230246251565e-15
+Sc/Sn large overlap 0.7317205987176314 small overlap 0.010656438599227196 total fidelity 0.5511236655353564
+nonrel charge-scale fidelity 0.5783593738612663
+Allowed numerator at archive denominator 35167.30964072374 35220.36623022674 margins eV 25.19135927625757 27.865230226743734
+Allowed denominator fixed B(Sn) 6028.982714390259 6038.07858394258
+nonrel formula forced onto archive energies 0.5682895554738717
+Z 21 point binding eV 6035.756886609336 mass correction to signed level eV 0.07323536437311827 total Lamb eV 1.9272151377773505 FNS within Lamb eV 0.018663867502353753
+Z 50 point binding eV 35228.57221179605 mass correction to signed level eV 0.15564912932700561 total Lamb eV 35.91576447834408 FNS within Lamb eV 1.9555679626868547
+point, +mass, +mass+FNS, +mass+entire Lamb ratios: 5.836645324458413 5.83669035659287 5.836384403106207 5.832602156028296
