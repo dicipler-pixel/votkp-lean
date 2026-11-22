@@ -1,5 +1,7 @@
 # SCRIPT: NONRIEMANN-WHERE-01
 # Where does "non-Riemannian" belong in Jeromie's corpus? Every claim re-checked a new way.
+from pathlib import Path
+
 import numpy as np, mpmath as mp
 rng = np.random.default_rng(20261122)
 out = []
@@ -163,4 +165,4 @@ for x in [0.6, 0.2, 0.05, 0.0]:
     Vx = (Pfold(x+h, 0) - Pfold(x-h, 0))/(2*h); Vy = (Pfold(x, h) - Pfold(x, -h))/(2*h)
     g = np.array([[0.5*np.trace(a@b).real for b in (Vx, Vy)] for a in (Vx, Vy)])
     rep("C5", f"fold x={x}: det(pullback g) = {np.linalg.det(g):.4e}; intrinsic g on unit X = 1 by C1")
-open('/home/claude/nr/nonriemann_checks_output.txt', 'w').write("\n".join(out))
+Path(__file__).with_name("nonriemann_checks_output.txt").write_text("\n".join(out))
