@@ -1,0 +1,5 @@
+1s cycle permutation expectation 32768/91125 0.3595939643347051 ancilla + probability 0.6797969821673525
+2s cycle permutation expectation -262144/20503125 -0.012785563176345069 ancilla + probability 0.4936072184118275
+2p cycle permutation expectation 33554432/184528125 0.181839120730241 ancilla + probability 0.5909195603651205
+equal pairwise fidelities 1/9, triple trace: 1 /27, det Gram 0.740740741
+equal pairwise fidelities 1/9, triple trace: -1 /27, det Gram 0.592592593

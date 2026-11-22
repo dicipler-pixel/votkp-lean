@@ -1,0 +1,4 @@
+'Beasley.TripleReadout.threeWeights' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Beasley.TripleReadout.sameClockOppositeCycle' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Beasley.TripleReadout.realCycleReversesEven' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Beasley.TripleReadout.equalPairControl' depends on axioms: [propext, Classical.choice, Quot.sound]
