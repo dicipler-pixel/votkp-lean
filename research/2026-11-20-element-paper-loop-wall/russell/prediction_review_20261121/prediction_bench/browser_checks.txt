@@ -1,0 +1,3 @@
+PASS: 5 presets, 15 rival comparisons, 5 exact/archived return traces, 5 zoom settings.
+PASS: mobile tap, pointer inspection/click and keyboard commit on plots; invalid manual entry and recovery.
+PASS: 320, 390, 768, 1024, 1280 px layouts, labelled inputs, zero page exceptions or network requests.

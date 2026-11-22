@@ -1,0 +1,10 @@
+35/6 L 3.299858880818262e-05 flux fractions Q/U/V 0.18705 0.18705 0.6259
+  nominal SNR 3 incident 5464232318 detected expectation 156361485
+  nominal SNR 5 incident 15178423104 detected expectation 434337458
+Be/Rb L 2.0545530626737066e-05 flux fractions Q/U/V 0.17764 0.19587 0.62649
+  nominal SNR 3 incident 13693089615 detected expectation 381215739
+  nominal SNR 5 incident 38036360040 detected expectation 1058932608
+null 9/4 L 0.0 flux fractions Q/U/V 0.17611 0.19719 0.6267
+inside 4/4 L -0.013518333435058594 flux fractions Q/U/V 0.18466 0.18466 0.63068
+  nominal SNR 3 incident 23047 detected expectation 491
+  nominal SNR 5 incident 64018 detected expectation 1363
