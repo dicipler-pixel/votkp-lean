@@ -1,0 +1,8 @@
+Source counts when grouped by the first listed grade (reproduces Appendix C)
+G Counter({'P': 35, 'F': 32, 'T': 31, 'N': 6})
+U Counter({'F': 97, 'T': 94, 'P': 78, 'N': 10, '—': 3})
+L Counter({'N': 111, 'P': 46, 'T': 21, 'F': 21})
+References without separate grade: ['U222', 'U273', 'U282']
+Literal screen hits: 107 ; reviewed unique IDs: 132 ; readout rows: 133
+Unaddressed literal candidates: []
+Contextual additions: ['G18', 'G2', 'G25', 'G58', 'G94', 'L10', 'L11', 'L168', 'L169', 'L192', 'L193', 'L22', 'L23', 'L5', 'L50', 'L51', 'L6', 'L7', 'L8', 'L9', 'U149', 'U181', 'U36', 'U54', 'U81']

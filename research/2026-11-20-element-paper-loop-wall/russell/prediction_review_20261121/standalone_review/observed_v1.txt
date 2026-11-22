@@ -1,0 +1,7 @@
+HTML SHA256 e954f69e30f8c545cda6ef68c55e04abd3b2746fca1cdf09ef62574ee46e976b
+Chrome 142.0.7444.175 verified views 9
+standard table elements 85
+Sr WebGL canvas 519 x 300 PNG bytes before/after 50502 58992 drag changes image; remains stable after release
+individual drawers [[1,"anion rung z₀ = IE₁/EA = 18.0304 Γ₀² = 0.8009 · outside"],[2,"anion rung no bound anion in the table"],[8,"anion rung z₀ = IE₁/EA = 9.3203 Γ₀² = 0.6500 · outside"],[12,"anion rung no bound anion in the table"],[20,"anion rung z₀ = IE₁/EA = 249.0084 Γ₀² = 0.9841 · outside"],[38,"anion rung z₀ = IE₁/EA = 109.3905 Γ₀² = 0.9641 · outside"],[56,"anion rung z₀ = IE₁/EA = 36.0370 Γ₀² = 0.8949 · outside"],[62,"anion rung no bound anion in the table"],[66,"anion rung no bound anion in the table"],[69,"anion rung no bound anion in the table"],[84,"anion rung no bound anion in the table"],[85,"anion rung z₀ = IE₁/EA = 3.8569 Γ₀² = 0.3460 · inside"]]
+blocked external fetches ["https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap"]
+JavaScript exceptions []

@@ -1,0 +1,4 @@
+standalone sha256 e954f69e30f8c545cda6ef68c55e04abd3b2746fca1cdf09ef62574ee46e976b
+Embedded JSON agrees with 6068b3f634817f4a9b864351466388726233a49e
+Embedded JSON agrees with 3fad6267f5f980f6378371d0c02b95c9a71d00e1
+Links receiving the display radius floor 1562 of 3570

@@ -1,0 +1,7 @@
+637 exact rational moment/Jacobi comparisons, n=1..13, every l
+n=1 l=0 F(z=4)=512/729 (0.702331962), local coefficient=3/16
+n=2 l=0 F(z=4)=2048/6561 (0.312147538), local coefficient=9/16
+n=2 l=1 F(z=4)=32768/59049 (0.554928957), local coefficient=5/16
+n=3 l=0 F(z=4)=184832/4782969 (0.038643780), local coefficient=19/16
+n=3 l=1 F(z=4)=524288/4782969 (0.109615597), local coefficient=15/16
+n=3 l=2 F(z=4)=2097152/4782969 (0.438462386), local coefficient=7/16
