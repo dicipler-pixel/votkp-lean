@@ -1,0 +1,12 @@
+Pinned gzip SHA256 75e67478d9a22ef85fa2d3f6ac36ad2860c6f8f62215127c558438a2cb53f62c
+Fields examined (rounding to 7 significant digits for the display JSON): Counter({'IE': 3655, 'k': 3570, 'z': 3570, 'g2': 3570, 'Em': 3570, 'Ep': 3570, 'out': 3570, 'T': 2518, 'S': 847, 'core.step': 305, 'core.z': 305, 'core.g2': 305, 'core.out': 305, 'E': 290, 'indexed theorem': 177, 'ledger': 85, 'anion.EA': 65, 'anion.z0': 65, 'anion.g2': 65, 'anion.chi': 65, 'anion.eta': 65, 'anion.omega': 65, 'anion.omega_over_eta': 65, 'anion.uptake': 65, 'anion.out': 65, 'anion.IExEA': 65, ('optics', True, True): 35, ('optics', False, False): 6})
+Mismatches: 0 []
+ordinary outside 8 of 3570 nearest inside/outside (5.639665400280518, False, 'N', 5) (5.947100834226937, True, 'Cs', 1)
+anion outside 53 of 65 nearest inside/outside (5.807902059840395, False, 'Ag', 0) (5.866538776090643, True, 'Si', 0)
+combined outside 61 of 3635 nearest inside/outside (5.807902059840395, False, 'Ag', 0) (5.866538776090643, True, 'Si', 0)
+3D minimum floor changes 1562 of 3570 links; smallest= (5.764595e-05, 'At', 82) area inflation= 15.612545200486764
+helium octave [('Li', '1+', 'out'), ('Be', '2+', 'none'), ('B', '3+', 'out'), ('C', '4', 'out'), ('N', '3−', 'none'), ('O', '2−', 'out'), ('F', '1−', 'in')]
+neon octave [('Na', '1+', 'out'), ('Mg', '2+', 'none'), ('Al', '3+', 'out'), ('Si', '4', 'out'), ('P', '3−', 'out'), ('S', '2−', 'in'), ('Cl', '1−', 'in')]
+argon octave [('K', '1+', 'out'), ('Ca', '2+', 'out'), ('Ga', '3+', 'out'), ('Ge', '4', 'out'), ('As', '3−', 'out'), ('Se', '2−', 'in'), ('Br', '1−', 'in')]
+krypton octave [('Rb', '1+', 'out'), ('Sr', '2+', 'out'), ('In', '3+', 'out'), ('Sn', '4', 'out'), ('Sb', '3−', 'out'), ('Te', '2−', 'in'), ('I', '1−', 'in')]
+xenon octave [('Cs', '1+', 'out'), ('Ba', '2+', 'out'), ('Tl', '3+', 'out'), ('Pb', '4', 'out'), ('Bi', '3−', 'out'), ('Po', '2−', 'none'), ('At', '1−', 'in')]

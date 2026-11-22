@@ -1,0 +1,1 @@
+Headless DOM runtime, local JSON, no WebGL engine: 9/9 routes; 85 standard + 85 signature tiles; 85/85 drawers open and close; 3,640 disk circles = 5 guides + 3,570 steps + 65 anion rings. No JS exception. The 3D animation, keyboard focus behavior, CSS layout and visuals were not validated.

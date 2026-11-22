@@ -1,0 +1,34 @@
+Z,symbol,IE1_eV,IE_source,EA_reported_eV,EA_grade,EA_source,target_EA_lo_eV,target_EA_hi_eV,z_if_positive
+86,Rn,10.748500000,archive E,,semiempirical unbound,"Ning 2022, Table 3",1.841372988,1.844151050,
+87,Fr,4.072741100,archive E,0.491000000,theory; +/- 0.005,"Ning 2022, Table 3",0.697719258,0.698771901,8.294788391
+88,Ra,5.278423900,archive E,0.170000000,AMS-informed estimate; no stated width,"Ning 2022, Table 3 and Sec. 5",0.904270102,0.905634365,31.049552353
+89,Ac,5.380235000,archive E,0.357320185,"theory, most-bound reported channel","10.1063/5.0293868, Tables II–III",0.921711811,0.923102388,15.057181824
+90,Th,6.306700000,archive E,0.607690000,experiment; +/- 0.000060,PhysRevLett.123.203002,1.080428620,1.082058652,10.378153335
+91,Pa,5.890000000,archive S,0.333469930,"theory, most-bound reported channel","10.1063/5.0293868, Tables II–III",1.009041903,1.010564235,17.662761964
+92,U,6.194050000,archive E,0.314970000,experiment; +/- 0.00009,PhysRevA.103.L050801,1.061130051,1.062730968,19.665523701
+93,Np,6.265540000,archive E,0.270158344,"theory, most-bound reported channel","10.1063/5.0293868, Tables II–III",1.073377319,1.074996713,23.192102479
+94,Pu,6.025760000,archive E,0.027319383,"theory, most-bound reported channel","10.1063/5.0293868, Tables II–III",1.032299548,1.033856969,220.567205981
+95,Am,5.973810000,archive E,0.076000000,theory,"Ning 2022, Table 2",1.023399764,1.024943758,78.602763158
+96,Cm,5.992241000,archive E,0.321000000,theory,"Ning 2022, Table 2",1.026557260,1.028106018,18.667417445
+97,Bk,6.197850000,archive E,-0.040328613,theory negative in reported 7p channel; other states unresolved,"10.1063/5.0293868, Tables II–III",1.061781046,1.063382945,
+98,Cf,6.281878000,archive E,-0.057240612,theory negative in reported 7p channel; other states unresolved,"10.1063/5.0293868, Tables II–III",1.076176253,1.077799870,
+99,Es,6.368400000,archive E,-0.067647996,theory negative in reported 7p channel; other states unresolved,"10.1063/5.0293868, Tables II–III",1.090998719,1.092644699,
+100,Fm,6.500000000,archive S,-0.081524508,theory negative in reported 7p channel; other states unresolved,"10.1063/5.0293868, Tables II–III",1.113543696,1.115223689,
+101,Md,6.580000000,archive S,-0.096268302,theory negative in reported 7p channel; other states unresolved,"10.1063/5.0293868, Tables II–III",1.127248849,1.128949519,
+102,No,6.626210000,archive E,-0.098870148,theory negative in reported 7p channel; other states unresolved,"10.1063/5.0293868, Tables II–III",1.135165289,1.136877902,
+103,Lr,4.960000000,archive E,0.446000000,theory; +/- 0.011,PhysRevA.110.022817,0.849719497,0.851001461,11.121076233
+104,Rf,6.020000000,archive T,,not determined in this screen,,1.031312777,1.032868709,
+105,Db,6.800000000,archive T,,not determined in this screen,,1.164938021,1.166695552,
+106,Sg,7.800000000,archive S,,not determined in this screen,,1.336252435,1.338268427,
+107,Bh,7.700000000,archive S,,not determined in this screen,,1.319120994,1.321111139,
+108,Hs,7.600000000,archive S,,not determined in this screen,,1.301989553,1.303953852,
+109,Mt,,unavailable in this screen,,not determined in this screen,,,,
+110,Ds,10.158397331,"theory, PhysRevA.101.012514 VIII",,not determined in this screen,,1.740279894,1.742905438,
+111,Rg,11.174943774,"theory, PhysRevA.101.012514 VIII",1.565000000,theory,"Ning 2022, text ref. 194",1.914428953,1.917317234,7.140539153
+112,Cn,12.144996142,"theory, PhysRevA.101.012514 VIII",,not determined in this screen,,2.080612907,2.083751908,
+113,Nh,7.569000000,"theory, 10.1088/1361-6455/ac761f",0.776000000,theory; +/- 0.030,10.1088/1361-6455/ac761f,1.296678806,1.298635093,9.753865979
+114,Fl,,unavailable in this screen,,theory unbound,"Ning 2022, text ref. 197",,,
+115,Mc,5.574000000,"theory, PhysRevA.91.020501",0.313000000,theory,"PhysRevA.91.020501, III",0.954906548,0.956347207,17.808306709
+116,Lv,6.855000000,"theory, PhysRevA.91.020501",0.776000000,theory,"PhysRevA.91.020501, III",1.174360313,1.176132060,8.833762887
+117,Ts,7.654000000,"theory, PhysRevA.91.020501",1.602000000,theory,"PhysRevA.91.020501, III",1.311240531,1.313218787,4.777777778
+118,Og,8.888000000,"theory, 10.1016/bs.aiq.2021.05.007",0.080000000,theory; +/- 0.006,"10.1016/bs.aiq.2021.05.007, Table 5",1.522642519,1.524939715,111.100000000

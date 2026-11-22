@@ -1,0 +1,5 @@
+'Beasley.OpticalWall.opticalDiscriminant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Beasley.OpticalWall.scaleLaw' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Beasley.OpticalWall.noPhaseSign' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Beasley.OpticalWall.rotationControl' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Beasley.OpticalWall.missingVControl' depends on axioms: [propext, Classical.choice, Quot.sound]
