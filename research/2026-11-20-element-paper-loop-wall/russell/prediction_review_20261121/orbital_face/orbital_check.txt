@@ -1,0 +1,5 @@
+Independent quadrature tests 70 max discrepancy 4.6629367034256575e-15
+energy ratio z=4; 1s, 2s, 2p fidelities: 512/729 2048/6561 32768/59049
+radius-scale ratio 2.000000000 binding energy ratio 4.000000000 1s / 2s / 2p 0.702331962 0.312147538 0.554928957
+radius-scale ratio 2.414213562 binding energy ratio 5.828427125 1s / 2s / 2p 0.568542495 0.133890627 0.390185882
+radius-scale ratio 3.732050808 binding energy ratio 13.928203230 1s / 2s / 2p 0.296296296 0.000000000 0.131687243

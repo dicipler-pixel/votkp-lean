@@ -1,0 +1,5 @@
+ratio 35/6 weights 1/4 3/4 first dominates False
+ratio 35/6 weights 3/4 1/4 first dominates True
+z=35/6: ground survival 0.5682452816391487 port reflection 0.5002974419988102
+wall: ground survival 0.5685424949238019
+half ground-survival in energy ratio z 7.098811379745804

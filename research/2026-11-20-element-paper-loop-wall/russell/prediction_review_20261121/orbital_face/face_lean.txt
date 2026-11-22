@@ -1,0 +1,4 @@
+'Beasley.FaceFidelity.apexFidelity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Beasley.FaceFidelity.reverseIndependent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Beasley.FaceFidelity.tritiumControl' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Beasley.FaceFidelity.distinctFromPeelPower' depends on axioms: [propext, Classical.choice, Quot.sound]
