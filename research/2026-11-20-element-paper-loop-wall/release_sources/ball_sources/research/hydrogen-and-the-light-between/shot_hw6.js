@@ -1,0 +1,7 @@
+/* SCRIPT: HW-SHOT-V6 — screenshots and the on-page check: the ball's own push (its stack code on the fed amplitudes) against the engine's reading of the same samples. */
+const { chromium } = require('playwright'); (async () => { const b = await chromium.launch({ args:['--use-gl=swiftshader','--enable-unsafe-swiftshader','--ignore-gpu-blocklist'] }), p = await b.newPage({ viewport:{ width:1500, height:900 } }); const errs = []; p.on('pageerror', e => errs.push(String(e))); p.on('console', m => { if(m.type() === 'error') errs.push(m.text()); });
+  await p.goto('file://' + __dirname + '/Ladder_of_Twins_v2_20261117.html'); await p.waitForTimeout(4000); const steps = JSON.parse(process.argv[2] || '[]'); let n = 0; const out = [];
+  for(const s of steps){ if(s.click) for(const c of s.click) await p.click(c); await p.waitForTimeout(s.wait || 5000);
+    out.push(await p.evaluate(() => { const H = window.__HW, st = H.balls[0].orig.state.stacks[0], F = H.feeds[0]; let dmax = 0; for(let k=0;k<3;k++) dmax = Math.max(dmax, Math.abs(st.push[k] - F.push[k])); return { t:H.S.t.toFixed(2), fed:!!st.fed, pushBall:st.push.slice(0,3).map(x => x.toExponential(3)), pushEngine:F.push.slice(0,3).map(x => x.toExponential(3)), dmax:dmax.toExponential(1), K:F.K.slice(0,3).map(x => x.toFixed(4)), held:H.W.links.map(l => H.held(l).e.toFixed(4)), num:document.getElementById('num').innerText.replace(/\n/g, ' | ').slice(0, 400) }; }));
+    await p.screenshot({ path:__dirname + '/m' + (n++) + '.png' }); }
+  console.log(JSON.stringify({ errs, out }, null, 1)); await b.close(); })();

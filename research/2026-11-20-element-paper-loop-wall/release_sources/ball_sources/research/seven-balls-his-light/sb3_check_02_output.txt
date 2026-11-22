@@ -1,0 +1,11 @@
+HOLDS  (a) every ball radius 1; a neighbour's near point is his face apex tanh(r/4) at every time 1.1e-16 (6 balls × 200 times); on his wall the neighbour is his face: at right angles and his facePlane 4.4e-16, shadow 1.1e-16
+HOLDS  (b) his light unchanged, on his wall (where the balls are his faces): 31 segments inside C and 0 first passed directions compared with his traceRay, largest difference 4.0e-12, unmatched 0
+HOLDS  (c) books, his: emitted 12 = in flight 2.6635 + ground 9.3364 + below cut 0.0001 · largest deviation 1.2e-14 · walls met 388 · packets now 42
+HOLDS  (d) his light never leaves C: largest |q| 0.984997
+    light in flight by ball at t = 24 (his): C 2.3716 · N+x 0.2477 · N−x 0.0263 · N+y 0.0179 · N−y 0.0000 · N+z 0.0000 · N−z 0.0000 · ground by ball 8.556 0.616 0.035 0.098 0.000 0.032 0.000
+HOLDS  (c) books, room: emitted 12 = in flight 11.7960 + ground 0.0000 + below cut 0.2040 · largest deviation 3.9e-14 · walls met 255364 · packets now 2298
+HOLDS  (d) room light does reach the neighbours outside C: packet-steps outside C 292152
+    light in flight by ball at t = 24 (room): C 6.2018 · N+x 2.0789 · N−x 2.2297 · N+y 0.7204 · N−y 0.2962 · N+z 0.1904 · N−z 0.0786 · ground by ball 0.000 0.000 0.000 0.000 0.000 0.000 0.000
+HOLDS  (e) breathing off: a ball moved over a packet 0 times
+    breathing on: a ball moves over light about 59 times in three breaths (reported)
+all hold

@@ -1,0 +1,6 @@
+HOLDS  (a) ledger through three breaths, rungs breathing: largest deviation 1.4e-13
+HOLDS  (b) C first lit: in time 5.37 / 5.37 for 2s = 5.33; out of time 8.67 / 8.67 for 2s = 8.63
+(c) K = 0 ladder vs V4 single-wall engine (different wall places by construction): largest difference in B light 7.43e-2 — recorded, not a kill line, since V4 puts its faces at r_c and the K = 0 ladder has no faces but the junction
+(d) most light reaching C: in time, gap element on 0.0250 / off 0.0250 · out of time, on 0.0161 / off 0.0161 · B: 0.0801 0.0801 0.0334 0.0334
+HOLDS  (e) at rest: 4 layer rungs on A–B each |Γ| = 0.5000, junction Γ = 0.0000, composed Γ 0.975610 = tanh(Σ ln z / 2) 0.975610 · rungs at 0.55A0 1.02B1 1.33j 1.65A1 2.12B0
+all hold

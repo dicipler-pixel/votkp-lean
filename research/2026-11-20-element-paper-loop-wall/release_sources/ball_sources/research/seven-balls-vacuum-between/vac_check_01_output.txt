@@ -1,0 +1,19 @@
+PASS eta(3.0000) vs mpmath 0.261245: 0.261245
+PASS eta(5.0000) vs mpmath 0.414141: 0.414141
+PASS eta(5.8284) vs mpmath 0.456192: 0.456192
+PASS eta(7.0000) vs mpmath 0.504067: 0.504067
+PASS eta(1e4) -> 1 (perfect mirrors): 0.99799
+PASS plate pressure from energy, perfect mirrors, vs pi^2/(240 s^4): 1.000000000
+PASS sphere pull (attraction) F = dU/ds, U = -eta pi^3 r/(1440 s^2): 1.000000000
+PASS neighbour gap at z = 5.8184: -5.030e-4
+PASS neighbour gap at z = 5.8284: 0.000e+0
+PASS neighbour gap at z = 5.8384: 5.020e-4
+PASS pumped gap, no loss: n from the moment equations vs |beta|^2 from the mode function: 1.391053e+0 vs 1.391053e+0
+   threshold eps* (z_gap = 5.828, face return 0.5000, leak/omega1 = 0.2206): 0.2163
+   threshold eps* (z_gap = 7.000, face return 0.5625, leak/omega1 = 0.1831): 0.1751
+   threshold eps* (z_gap = 20.000, face return 0.8186, leak/omega1 = 0.0637): 0.0484
+   his drive (3,5,7; A 0.35; periods 8,13,21), 63 time units: gap openings 5, largest photon number in any gap mode 2.343e-5, largest pull 2.446e+3 (hbar c/r^2 units), made now 0.000e+0, leaked 3.489e-1, closed with 1.293e-2
+PASS book-keeping of the vacuum layer (an identity, checks the code): work = made now + leaked + closed-with (rel): 3.99e-15
+PASS twelve gaps = three kinds (x-y, y-z, x-z), ball to ball at 5 times: max diff: 0.00e+0
+   resonance needs breathing period P = s (one light crossing of the gap there and back is 2s; pump at 2 omega_1 = 2 pi/s): for s = 0.05 and P = 8, speed-up x160
+"ALL PASS"

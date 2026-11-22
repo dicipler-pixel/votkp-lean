@@ -1,0 +1,17 @@
+HOLDS  (a) books cells + stretches + outside − work = 1 over 8 settings, three breaths: largest deviation 1.6e-14
+HOLDS  (b) work with walls still 4.609787302149339e-16 · with wall work off 8.070835055959235e-16
+HOLDS  (c) the mirror at v = 0.2 toward the pulse, ρ = 0.5: returned 0.375000 for ρ²(1 + v)/(1 − v) = 0.375000 · work booked 0.125000 for ρ²(D − 1) = 0.125000
+KILLED (d) closed: outside 0.00007883996720247315, rim record K = 0.2000 never fell · open: outside reaches 0.5181
+HOLDS  (e) work per quarter of one breath of A alone: 4.29e-2  -6.44e-2  2.49e-2  -2.94e-2 (face moving out in quarters 1 and 4, in during 2 and 3)
+readings at t = 24: work closed Cbreathes: A 0.0295 B 0.0156 AB 0.5002 CA 0.4969 BC 0.1835 out 0.0000 W 0.2257 K 0.2000
+work closed Cstill: A 0.0797 B 0.0146 AB 0.5732 CA 0.3269 BC 0.1235 out 0.0000 W 0.1178 K 0.1896
+work open Cbreathes: A 0.0785 B 0.0052 AB 0.4235 CA 0.4625 BC 0.0396 out 0.1358 W 0.1452 K 0.0000
+work open Cstill: A 0.0407 B 0.0180 AB 0.4053 CA 0.2987 BC 0.0492 out 0.2240 W 0.0358 K 0.0000
+nowork closed Cbreathes: A 0.0258 B 0.0039 AB 0.4287 CA 0.4588 BC 0.0828 out 0.0000 W 0.0000 K 0.1653
+nowork closed Cstill: A 0.0547 B 0.0007 AB 0.5384 CA 0.2927 BC 0.1136 out 0.0000 W -0.0000 K 0.1853
+nowork open Cbreathes: A 0.0616 B 0.0053 AB 0.4116 CA 0.3522 BC 0.0349 out 0.1344 W 0.0000 K 0.0000
+nowork open Cstill: A 0.0333 B 0.0168 AB 0.3917 CA 0.2747 BC 0.0435 out 0.2400 W 0.0000 K 0.0000
+1 KILLED
+h 0.02 outside peak 1.01e-4 W 0.1518
+h 0.01 outside peak 7.88e-5 W 0.2257
+h 0.005 outside peak 2.59e-5 W 0.2654

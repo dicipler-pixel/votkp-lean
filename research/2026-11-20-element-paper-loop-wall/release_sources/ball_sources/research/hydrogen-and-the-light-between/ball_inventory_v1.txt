@@ -1,0 +1,710 @@
+BALL INVENTORY v1
+createOriginalMixerBall (LH-MIXER-V2), Light at the Hypersurface ball
+Source: /tmp/claude-0/-home-claude/f86429e3-e32f-50e6-b1fd-fcadab5264af/scratchpad/hsb/ball_blocks.html
+Written 2026-11-17. Line numbers refer to ball_blocks.html unless marked otherwise.
+Method: code and comments only. Nothing was run in a browser; the counts below are from the source.
+
+==========================================================================
+0. FILE FACTS
+==========================================================================
+
+0.1 Script blocks: five, not four as requested.
+    L1-10     three.js r158 (L8 is the minified body, 651 KB, not read line by line; const e="158" at L8).
+    L11-231   mixer3d_parts_v1 (window.Mixer3D). Header: "27 Oct 2026".
+    L232-489  LH-MATH-V1 (window.LH). Pure math, no DOM.
+    L490-721  LH-MIXER-V2 (window.createOriginalMixerBall at L495).
+    L722-950  MM-MATH-V1 (window.MM). Moving-matrix mathematics. Not in the requested list.
+              It defines no drawn objects, and createOriginalMixerBall does not call it.
+
+0.2 No page. The file has no HTML page body. The only DOM markup is the template string
+    inside Mixer3D.run (L168-183), which createOriginalMixerBall never calls.
+
+0.3 No page in this file calls createOriginalMixerBall. Its only occurrence is the definition at L495.
+
+0.4 Constants used by the ball:
+    RB = 2.6, the ball radius (L497).
+    AXN = ['I','J','K'] (L503).
+    AXC = [0xff8d7c, 0x63d3ff, 0xf2c14e], colour per axis I, J, K (L503).
+    AXV = [[1,0.55,0.49],[0.39,0.83,1],[0.95,0.76,0.31]] (L503).
+    AMBER = 0xffb347, AMBV = [1,0.5,0.08] (L505).
+    toBall(p) = (p1*k, p3*k, -p2*k), k = RB/(1+p0) (L506). Hyperboloid to ball.
+    w3(u) = (u0, u2, -u1) (L507). Generator direction to ball axis.
+
+0.5 Generator index k = 0..5 (LH L257, genU): axis k>>1 (0=I, 1=J, 2=K); sign + for even k, - for odd k.
+    FACES[k] uses axis k>>1 and colour AXC[k>>1].
+
+==========================================================================
+1. OPTIONS OBJECT
+==========================================================================
+
+Code (L512): PP = Object.assign({}, L.DEF, {drive:'hold'}, options)
+The wrapper forces drive 'hold' unless options.drive is given. The L.DEF value 'breathe' (LH L357)
+is therefore never the effective default for this ball.
+
+Key       L.DEF (LH L357)   Effective default   Read at
+--------  ----------------  ------------------  ----------------------------------------------------------
+zI        3                 3                   rOf (LH L361-364). Under 'hold', r_I = ln zI.
+zJ        5                 5                   as zI, for axis 1.
+zK        7                 7                   as zI, for axis 2.
+drive     'breathe'         'hold'              rOf (LH L362-364). 'hold': r = ln z (constant).
+                                                'breathe': r = max(ln 1.05, ln z + A sin(2pi tau/PER[a] + PHS[a])).
+                                                any other string: triangle wave between RLO = ln 1.5 and
+                                                RHI = ln 13, period 3*PER[a]. PER = [8,13,21], PHS = [0, 2pi/3, 4pi/3].
+                                                Also selects the reduced at() path with layers rays = 0 (L715).
+A         0.35              0.35                breathe amplitude, in ln z units.
+fan       62                62                  half-angle in degrees of the ray fan (LH fanDirs L388).
+omega     3                 3                   omega: passed to splitAtFace (LH L376); stack phases
+                                                phis = omega*Y*r (LH L391).
+depth     4                 4                   layers per arm, k < depth. Used by updateStack (L651),
+                                                updatePress (L665), updateHyp (L690) and DEEP visibility (L626).
+orient    1                 1                   node admittance Y = z^(-orient) per letter (LH L366);
+                                                stack Y_k = z^(-orient*k) (LH L391); face-window threshold
+                                                crit = 1/z if orient > 0, else 2 (L623).
+tag       6                 6                   index of the ray (0..nray-1) drawn in the tag colour (L641, L648).
+arm       0                 0                   arm (0=I, 1=J, 2=K) whose stack is emphasised (sel = 1 against 0.45, L651)
+                                                and whose first cap carries RPT and XPT (L658-661).
+pair      0                 0                   index into PAIRS = [[0,1],[1,2],[0,2]] (LH L359) for the square (L670).
+kappa     1                 1                   kappa in the hypothesis stock matrix (LH L352, L428).
+ha        1                 1                   a in the stock matrix (LH L352, L428).
+hb        0.2               0.2                 b in the stock matrix (LH L352, L428); set to 0 when absorb is truthy.
+absorb    0                 0                   if truthy, b = 0 (LH L428).
+nray      9                 9                   number of rays in the fan (LH L388).
+
+Other keys passed in options are copied into PP and never read.
+Not an option: chi = 2*pi*tau/34 (LH L401) is hard-coded, so the ray fan turns at a fixed rate.
+
+==========================================================================
+2. LAYER KEYS: layers({...}) (L716)
+==========================================================================
+
+COMPS (L518): rim, tree, balls, faces, cross, rays, stack, press, loop, rimf, hyp. Eleven keys.
+Each is a THREE.Group added to WORLD (L560). groups returns them as G.<key>.
+
+Default values (L711): rim 1, tree 0.7, balls 1, faces 1, cross 1, rays 0.7, stack 0.8,
+press 0.25, loop 0.3, rimf 0.65, hyp 0.35.
+
+Effect (applyEmph, L523-524): each registered material gets
+    opacity = base * layer value
+    visible = (layer value > 0.01)
+A value of 0 hides that key's materials. Keys not in the list are ignored (L716: if(k in WT)).
+layers() applies at once (applyEmph(0)). The 'hyp' target also reads HYP.shown (L513, L523);
+HYP.shown is internal and always true (F6).
+
+What each key multiplies (base opacity in brackets, as registered):
+    rim     : shell mesh (0.035), 3 great circles (0.5, 0.18, 0.18), label 'rim: the ground' (1)
+    tree    : tree LineSegments (0.5)
+    balls   : centre sphere (1), label 'O  centre' (1), 3 orbs (1), 3 z-labels (1)
+    faces   : 6 cap meshes (0.5), 6 cap edges (0.75)
+    cross   : CROSS arcs (1, dynamic), GAPS (0.9)
+    rays    : RAYL (0.85), RAYP (1), HITP (1)
+    stack   : 15 DEEP cap meshes (0.14), 15 DEEP edges (0.75), STKP (1), RPT (1), XPT (1), ECHO (0.75)
+    press   : PRSP (1), RECP (1)
+    loop    : LOOPL (1), ORBP (0.8), MOVP (1), 3 FRAMES solid (1), 3 FRAMES dashed (0.8), CARRY (1), CARRYP (1)
+    rimf    : RIMP (0.9), 6 rim circles (0.55), 6 SHADOW lines (0.95)
+    hyp     : HYPX (1), HYPY (1), 3 OCC arcs (1), 3 GAPH (1), 2 hypothesis labels (1)
+
+==========================================================================
+3. OBJECT INVENTORY
+==========================================================================
+
+Each entry: (1) name in code, (2) geometry, (3) position / size / count from code,
+(4) time behaviour, (5) comment or label text. "no comment in code" where none exists.
+Block comments apply to the whole block they sit above and are quoted where used.
+
+--------------------------------------------------------------------------
+GROUP rim
+--------------------------------------------------------------------------
+
+E01  rim.sh (shell)
+  (1) G.rim, variable sh
+  (2) Sphere. M.shell -> SphereGeometry(2.6, 36, 24), MeshBasicMaterial, additive, depthWrite false.
+  (3) L562: const sh = M.shell(RB, 0x63d3ff, 0.035); reg(sh.material,'rim',0.035); G.rim.add(sh);
+      Colour 0x63d3ff. Centre origin. Radius RB = 2.6.
+  (4) Static. Changed only by layers({rim}).
+  (5) Block comment L561: "/* rim: the ground */". Label E03.
+
+E02  rim.rings (3 great circles)
+  (1) G.rim, variable l in loop k = 0..2
+  (2) Line (continuous), 129 points each, closed.
+  (3) L563: p = [] for i = 0..128, a = 2pi*i/128, c = RB cos a, s = RB sin a;
+      p.push(k===0 ? V3(c,0,s) : k===1 ? V3(c,s,0) : V3(0,c,s));
+      l = M.line(p, 0x63d3ff, k===0 ? 0.5 : 0.18).
+      Planes: k=0 (x,z), k=1 (x,y), k=2 (y,z). Opacity 0.5 for k=0, 0.18 for k=1,2.
+  (4) Static.
+  (5) Block comment L561 "/* rim: the ground */". No other comment in code.
+
+E03  rim label
+  (1) G.rim, variable lb
+  (2) Sprite, text 'rim: the ground'.
+  (3) L564: M.label('rim: the ground', '#63d3ff', 0.3); position.set(-RB*0.74, 0.12, RB*0.74) = (-1.924, 0.12, 1.924).
+  (4) Static.
+  (5) The text itself is the label. Block comment L561.
+
+--------------------------------------------------------------------------
+GROUP tree
+--------------------------------------------------------------------------
+
+E04  tree (TREE.l)
+  (1) G.tree, variable l inside TREE (L565-567)
+  (2) LineSegments, vertexColors, additive, depthWrite false, base 0.5. Capacity 186 words * 12 = 2232 vertices.
+  (3) Words from a depth-3 walk over 6 generators (L566):
+      walk skips the inverse of the last letter: if (w[last]^1) === k continue.
+      Count: 6 + 30 + 150 = 186 words. Each word draws 6 segments (L617).
+      L613-617 (updateTree):
+        gens[k] = L.boost(L.genU(k), S.r[k>>1]);
+        Mw = L.mm(Mp, gens[k]);
+        g = geoBetween(L.mv(Mp,O4), L.mv(Mw,O4), 6);
+        f = 0.55 * Math.pow(0.6, w.length-1);  colour = AXC[k>>1] * f.
+      So each word is a geodesic from the parent centre image to the child centre image.
+  (4) updateTree runs in update(). Cell positions move only when S.r moves (breathe or triangle drives).
+      Static under 'hold'.
+  (5) Comment L565: "/* tree to depth 3 */". No other comment.
+
+--------------------------------------------------------------------------
+GROUP balls
+--------------------------------------------------------------------------
+
+E05  balls centre (the O point)
+  (1) G.balls, variable c
+  (2) Sphere, MeshStandardMaterial white, emissive white, emissiveIntensity 0.5. regObj base 1.
+  (3) L569: new T.SphereGeometry(0.11, 24, 16). No position set: at the origin.
+  (4) Static.
+  (5) Block comment L568 "/* balls */". Label E06 names it 'O  centre'.
+
+E06  balls label 'O  centre'
+  (1) G.balls, variable lo
+  (2) Sprite.
+  (3) L570: M.label('O  centre', '#dfe7ef', 0.26); position.set(0.05, -0.28, 0).
+  (4) Static.
+  (5) The text itself. Block comment L568.
+
+E07  balls orbs (orbs[0..2] = I, J, K)
+  (1) G.balls, array orbs; variable b inside the map
+  (2) Sphere, radius 1 (SphereGeometry(1,24,16)), scaled each frame. MeshStandardMaterial,
+      colour AXC[a], emissive AXC[a], emissiveIntensity 0.45, roughness 0.4. regObj base 1.
+  (3) L571 creates them. L618 (updateBalls) sets:
+        p = toBall(L.mv(L.boost(L.AX[a], S.r[a]), L.O4));
+        f = 1 - p.lengthSq()/(RB*RB);
+        o.position.copy(p); o.scale.setScalar(0.05 + 0.16*f).
+      Derived from toBall: p lies on axis a at ball radius RB*tanh(r_a/2) = RB*Gamma_a.
+      Then f = 1 - Gamma_a^2, so scale = 0.05 + 0.16*(1 - Gamma_a^2).
+  (4) Moves along its axis as S.r[a] changes (breathe, triangle). Static under 'hold'.
+  (5) No comment on the orbs. Block comment L568 "/* balls */".
+
+E08  balls z-labels (BALLS.labels[0..2]: I, J, K), dynamic
+  (1) G.balls, variable lb in updateBalls
+  (2) Sprite, three of them, rebuilt on a timer.
+  (3) L619-621:
+        if(BALLS.t > 0.5){ BALLS.t = 0; ... const lb = M.label(AXN[a] + '   z ' + fmt(S.z[a],2),
+          '#' + AXC[a].toString(16).padStart(6,'0'), 0.28); reg(lb.material,'balls',1); ... }
+        and each frame: position.copy(BALLS.orbs[a].position).add(V3(0,0.3,0)).
+      Text under default hold: 'I   z 3.00', 'J   z 5.00', 'K   z 7.00' (3 spaces after the letter).
+      Colours: #ff8d7c, #63d3ff, #f2c14e. Scale 0.28.
+      BALLS.t starts at 9 (L572). The rebuild condition reads BALLS.t, which grows only by dt.
+  (4) Position follows the orb every frame. The TEXT is rebuilt only when dt accumulates past 0.5.
+      at(t) passes dt = 0 (L702, L715), so after construction the text never changes. See F1.
+  (5) No comment in code.
+
+--------------------------------------------------------------------------
+GROUP faces (G.faces.children are the six FACES groups; this is the only group a reduced page reaches)
+--------------------------------------------------------------------------
+
+E09  faces FACES[0..5] (six cap groups)
+  (1) G.faces, variable FACES[k]
+  (2) Each entry is a Group containing a mesh (E09a) and an edge line (E09b).
+      Naming by index: FACES[0] = +I, FACES[1] = -I, FACES[2] = +J, FACES[3] = -J, FACES[4] = +K, FACES[5] = -K.
+      No text label is drawn on any cap. GEN (L504), which would name them, is never used.
+  (3) L574: makeCap(AXC[k>>1], 'faces', 0.5); G.faces.add(f).
+      L622-625 (updateFaces) call setCap(FACES[k], u, h, colourFn) with
+        u = L.genU(k), h = S.h[a] = S.r[a]/2 (LH L399), a = k>>1.
+      Cap geometry (capParams L545-546; capPoint L547):
+        rho = tanh(h/2); c = (1+rho^2)/(2rho); R = (1-rho^2)/(2rho); tmax = atan(1/R);
+        a = w3(u) normalised; e1, e2 orthonormal, perpendicular to a.
+        point(theta, phi) = RB * [ a*(c - R cos theta) + R sin theta (cos phi e1 + sin phi e2) ],
+        theta in [0, tmax], phi in [0, 2pi].
+      The apex sits on the axis at ball radius RB*rho = RB*tanh(h/2).
+      Each vertex lies on a sphere of radius RB*R centred on RB*c*a (capSphere, L629).
+      Mesh grid NT = 14 (theta rows), NP = 40 (phi columns) (L544): 15 x 41 = 615 vertices, 3360 indices (L549).
+  (4) updateFaces runs in update(). Moves with r_a and z_a (drive). Static under 'hold'.
+      NOT run in the reduced at() path (F2).
+  (5) L543: "/* the face perpendicular to u at hyperbolic distance h: a spherical cap; geometry updated in place */"
+      L573: "/* the six faces of the centre cell, and the deeper faces along each + arm */"
+      Inline L623: "rays from the centre cross while cosh h · sin ψ < 1/z"
+
+E09a  faces cap mesh
+  (2) MeshBasicMaterial, vertexColors, additive, DoubleSide, depthWrite false, base 0.5.
+  (3) Per-vertex colour (L624-625): cp = clamp((p/|p|)·ax); sp = sqrt(1 - cp^2);
+      win = cosh(h)*sp < crit, with crit = 1/z if PP.orient > 0, else 2 (L623).
+      f = win ? 0.1 + 0.3*R : 0.018 + 0.03*R, R = S.Rf[a] = Gamma_a^2.
+      Inside the window: colour = AXC[a] * f. Outside: [0.95f, 0.4f, 0.7f] (rose).
+  (5) Covered by E09 comments.
+
+E09b  faces cap edge
+  (2) Line, solid, colour AXC[k>>1], base 0.75 (solid(color, comp, 0.75) in makeCap).
+  (3) The theta = tmax ring, 41 points (L553-554: edge.push(p) when i === NT).
+  (5) Covered by E09 comments.
+
+--------------------------------------------------------------------------
+GROUP stack
+--------------------------------------------------------------------------
+
+E10  stack DEEP (15 cap groups: arm a = 0..2, k = 1..5)
+  (1) G.stack, variable DEEP[a][k-1]
+  (2) Each is a Group: mesh (base 0.14) and edge (base 0.75), same cap geometry as E09.
+  (3) L575: makeCap(AXC[a], 'stack', 0.14).
+      L626-627 (updateFaces): if k >= S.depth, f.visible = false; else
+        setCap(f, L.AX[a], (k+0.5)*S.r[a], colour = AXC[a] * (0.12 + 0.3*Rf[a])).
+      So h = (k+0.5)*r_a. With depth 4, k = 1, 2, 3 are shown; k = 4, 5 are hidden.
+  (4) Moves with r_a (drive). Static under 'hold'.
+  (5) Block comment L573: "the deeper faces along each + arm".
+
+E11  stack STKP (streams)
+  (1) G.stack, variable STKP
+  (2) Points, capacity 6000, size 0.075, base 1. Glow sprite.
+  (3) L584: pts(6000, 0.075, 'stack', 1).
+      L651-656 (updateStack), per arm a and layer k = 0..D (D = S.depth):
+        k = 0:   d0 = 0.05, d1 = 0.5*r_a
+        k = D:   d1 = max(d0 + 0.4, 4.2)
+        others:  d0 = (k-0.5)*r_a, d1 = (k+0.5)*r_a
+      Forward dots, from d0 to d1, at offset +side, colour AXV[a] * sel * min(1, 0.15 + sqrt(fp)).
+      Backward dots, from d1 to d0, at offset -side, colour [1,0.45,0.7] * sel * min(1, 0.1 + sqrt(fm)).
+      side = w3(AX[(a+1)%3]) * 0.045 (L652). sel = 1 for arm PP.arm, else 0.45 (L651).
+      fp = Y_k * |a+_k|^2; fm = Y_k * |a-_k|^2 (L654); Y_k = S.stacks Ys[k][0] (LH L391).
+      Spacing 0.12; speed vel = 0.5 * min(5, 1/Y_k) (L654).
+      Positions: axisPoint(a, d, side) = w3(AX[a]) * RB*tanh(max(0,d)/2) + side (L650).
+  (4) Dots drift along the axis with tau (TLS.stack = CLOCK.tau). Amplitudes change with drive.
+      Moves under 'hold' (the drift).
+  (5) L583: "/* stack streams, composed point, echo circle */". Points past capacity are dropped silently (F4).
+
+E12  stack RPT (2 points)
+  (1) G.stack, variable RPT
+  (2) Points, size 0.34, base 1, capacity 2.
+  (3) L585: pts(2, 0.34, 'stack', 1).
+      L660: ptPush(RPT, onCap(st.r), [1,1,1]); ptPush(RPT, capPoint(q,0,0), [0.35,0.35,0.35]).
+      onCap(z) (L659) = capPoint(q, min(1,|z|)*tmax*0.999, arg z): the cap used as a Smith disk,
+      |z| -> polar angle, arg z -> azimuth. q = capParams(L.AX[PP.arm], S.h[PP.arm]).
+      Point 0: white, the composed reflection st.r of the arm's stack.
+      Point 1: grey, the cap apex.
+  (4) Moves with the stack as r changes (drive). Static under 'hold'.
+  (5) L658: "/* composed reflection on the first face of the selected arm, the cap used as the Smith disk */"
+
+E13  stack XPT (1 point, ring sprite)
+  (1) G.stack, variable XPT
+  (2) Points, size 0.3, base 1, texture ringTex (L535: white ring, 7 px, radius 22, 64 px canvas).
+  (3) L586: pts(1, 0.3, 'stack', 1, ringTex). L661: ptPush(XPT, onCap(st.xNow), AXV[a]).
+      st.xNow = rho * exp(2i phi1) (L699-700), computed in update().
+  (4) Moves with the stack (drive). Static under 'hold'.
+  (5) No comment on this line. L698: "/* the composed stack also needs ρ seen from inside layer 1 and the echo circle of the first face */"
+
+E14  stack ECHO (line)
+  (1) G.stack, variable ECHO
+  (2) Line, solid, white (0xffffff), base 0.75.
+  (3) L587: solid(0xffffff, 'stack', 0.75).
+      L662-663: centre xc and radius |xc| from echoCircle(st.G[0]) (LH L303:
+        A = 1 - |a|^4; C = conj(a)*(1 - a^2); xc = -conj(C)/A).
+      181 samples of the circle; keep z with |z| <= 1, map by onCap, keep the longest run.
+  (4) Moves with st.G[0], which depends on drive. Static under 'hold'.
+  (5) Covered by L583 "echo circle". No comment on echoCircle itself (LH L303).
+
+--------------------------------------------------------------------------
+GROUP cross
+--------------------------------------------------------------------------
+
+E15  cross CROSS (3 groups, dynamic children)
+  (1) G.cross, variable CROSS[i], i = pair index
+  (2) Group. Children are rebuilt every frame: lines, white, base 1 (opacity set to W.cross).
+  (3) L577: new T.Group() per pair, added to G.cross.
+      L630-635 (updateCross): children exist only where p.over (LH L402: g = sinh(h_a)*sinh(h_b) < 1).
+      Then they are arcs where the two cap spheres meet (capSphere, L629), cut to the unit ball
+      (|q|^2 <= 1.0001) and scaled by RB.
+      Pairs PAIRS = [[0,1],[1,2],[0,2]] (LH L359): I-J, J-K, I-K.
+  (4) Changes with r. Static under 'hold'.
+  (5) L576: "/* crossings and gaps */"
+
+E16  cross GAPS (3 solid lines)
+  (1) G.cross, variable GAPS[i]
+  (2) Line, solid, white, base 0.9. Geodesic arc, 25 points.
+  (3) L578: solid(0xffffff, 'cross', 0.9).
+      L636-638 (non-over pairs): Na, Nb = facePlane(I4, AX[a], h_a) and facePlane(I4, AX[b], h_b);
+        g = mink(Na,Nb); fa, fb normalised; P = geoBetween(fa, fb, 24); M.setLine(GAPS[i], P).
+      Hidden when over (L632: GAPS[i].visible = false).
+  (4) Changes with r. Static under 'hold'.
+  (5) L576: "/* crossings and gaps */". LH L266 (facePlane): "face of generator k at the centre: unit spacelike normal, inside is <Y,N> > 0"
+
+--------------------------------------------------------------------------
+GROUP rays
+--------------------------------------------------------------------------
+
+E17  rays RAYL (ray segments)
+  (1) G.rays, variable RAYL
+  (2) LineSegments, vertexColors, additive, base 0.85. Capacity 60000 vertices.
+  (3) L580: lineSegs(60000, 'rays', 0.85).
+      L641-642 (updateRays): for each traced segment sg, n = max(4, min(28, ceil(sg.s*7))) pieces,
+        colour = rayColour(sg) * f * k, where
+        rayColour = colour.ramp(0.15 + 0.7*min(1, word.length/4)) (L639),
+        f = flux^0.5, k = 0.75 (other rays) or 1.25 (tag ray, colour [1,0.8,0.35]).
+      Rays are traced from the origin along fanDirs (9 rays inside +-62 deg of d0 = (1,1,1)/sqrt3,
+      fan plane turned by chi; LH L387-389), reflected through up to 6 faces (LH traceRay L368-386).
+  (4) Recomputed every update(). The fan turns with chi = 2*pi*tau/34 (LH L401), so it moves under 'hold'.
+  (5) L579: "/* rays and markers */"
+
+E18  rays RAYP (ray dots)
+  (1) G.rays, variable RAYP
+  (2) Points, capacity 9000, size 0.07, base 1.
+  (3) L581: pts(9000, 0.07, 'rays', 1).
+      L643-647: dots every sp = 0.2 along each ray. Offset off = ((vel*tau) % sp + sp) % sp,
+        vel = 0.55 * min(6, 1/sg.Y) (L643). Colour c * min(1, 0.25 + flux) * (1.2 if tag).
+      Evanescent tail (L646-647): where a face is total reflection (sp.total), 6 dots at x = l*j/3,
+        l = min(0.6, sp.depth), along +-N, colour [1,0.45,0.7] * flux * exp(-x/depth).
+  (4) Dots march along each ray with tau (TLS.rays = CLOCK.tau). Moves under 'hold'.
+  (5) L579 "/* rays and markers */"
+
+E19  rays HITP (face-hit dots)
+  (1) G.rays, variable HITP
+  (2) Points, capacity 800, size 0.16, base 1, white.
+  (3) L582: pts(800, 0.16, 'rays', 1). L645: ptPush(HITP, toBall(sg.hit), white * min(1, 0.2 + 0.9*flux*sp.R)).
+  (4) Recomputed every update() with the rays. Moves under 'hold' (follows chi).
+  (5) L579 "/* rays and markers */"
+
+--------------------------------------------------------------------------
+GROUP press
+--------------------------------------------------------------------------
+
+E20  press PRSP (pressure arrows)
+  (1) G.press, variable PRSP
+  (2) Points, capacity 2400, size 0.085, base 1.
+  (3) L589: pts(2400, 0.085, 'press', 1).
+      L664-666 (updatePress): for arm a, layer k < depth:
+        base = axisPoint(a, (k+0.5)*r_a); dir = w3(AX[a]) normalised;
+        len = 0.55 * min(2, |push_k|); sg = sign(push_k) || 1;
+        10 dots at base + sg*dir*x + w3(AX[(a+2)%3])*0.03, x = len*j/9, j = 0..9,
+        colour [1,0.9,0.6] * (1 - 0.6*j/9).
+      push_k from axisStack (LH L395): 2*R_k*(Y_k|a+|^2 - Y_{k+1}|..|^2)/Y_0.
+  (4) Depends on S.stacks (drive). Static under 'hold'. NOT run in the reduced at() path (F2).
+  (5) L588: "/* pressure arrows and the record rings */". LH L393: "/* push on face k: arriving flux from each side, 2R each, opposite senses (reading) */"
+
+E21  press RECP (record rings)
+  (1) G.press, variable RECP
+  (2) Points, capacity 3*6*48 = 864, size 0.075, base 1. Each ring uses 48 dots.
+  (3) L590: pts(3*6*48, 0.075, 'press', 1).
+      L667-668: for arm a, layer k < depth:
+        ang = (6 + 3.5k) deg (6, 9.5, 13, 16.5 deg); ring = rimCircle(AX[a], cos(ang), 48) (L555).
+        K = ST.K[a][k]; frac = K/5 - floor(K/5).
+        dot j is lit ([1,0.85,0.45]) if j/48 < frac, else [0.18,0.16,0.12].
+      ST.K integrates the push over tau (LH L427): K += (dtau/6)*(p0 + 4*pm + p1).
+  (4) The ring fills and empties with K, with a period of 5 in K. Changes with time under every drive.
+      NOT run in the reduced at() path (F2).
+  (5) L588: "/* pressure arrows and the record rings */". No comment on ST.K.
+
+--------------------------------------------------------------------------
+GROUP loop (the square, a closed loop of boosts; "loop4" in LH)
+--------------------------------------------------------------------------
+
+E22  loop LOOPL (the square's path)
+  (1) G.loop, variable LOOPL
+  (2) Line, solid, gold 0xf2c14e, base 1. 84 points.
+  (3) L592: solid(0xf2c14e, 'loop', 1).
+      L670-672 (updateLoop): pi = PP.pair; steps [ua,ra], [ub,rb], [-ua,ra], [-ub,rb]
+        corners = O4 and the image of O4 after each step.
+        path = concatenation of geoBetween(corners[i], corners[i+1], 20), i = 0..3.
+  (4) Follows r of the chosen pair (drive). Static under 'hold'.
+  (5) L591: "/* the square: path, orbit, moving centre, frames, carried direction */". LH L320: "/* ---------- M6: SL(2,C), the Lorentz image, Thomas turn, the square ---------- */"
+
+E23  loop ORBP (orbit dots)
+  (1) G.loop, variable ORBP
+  (2) Points, capacity 48, 40 used, size 0.1, base 0.8, colour [0.8,0.8,0.8].
+  (3) L593: pts(48, 0.1, 'loop', 0.8). L673: for m = 1..40: x = W4^m * O4, normalised by sqrt(mink(x,x)),
+        ptPush(ORBP, toBall(x), [0.8,0.8,0.8]). W4 = loop4(r_a, r_b, u_a, u_b) (LH L336, L403).
+  (4) Static under 'hold' (depends only on r).
+  (5) L591 (block): "orbit"
+
+E24  loop MOVP (moving centre)
+  (1) G.loop, variable MOVP
+  (2) Points, 1 point, size 0.34, base 1, colour [1,0.76,0.3].
+  (3) L594: pts(1, 0.34, 'loop', 1). L674-675: f = tau/T_LOOP - floor(tau/T_LOOP + 1e-12);
+        Mf = ST.Wacc * partialSquare(S, pi, f); xc = Mf * O4; ptPush(MOVP, toBall(xc), ...).
+      T_LOOP = 5 (LH L415). partialSquare (LH L417-419): "the four steps, f in [0,1) through them".
+      Wacc is reset every NPASS = 8 passes (LH L424).
+  (4) Moves through the four steps of the square every 5 units of tau. Moves under 'hold'.
+  (5) L591 (block): "moving centre"
+
+E25  loop FRAMES (3 pairs: solid and dashed)
+  (1) G.loop, variable FRAMES[i] with fields s (solid) and d (dashed)
+  (2) Two lines per frame. Solid: base 1, colour AXC[i]. Dashed: base 0.8, colour AXC[i].
+  (3) L595: FRAMES = [0,1,2].map(i => { s = solid(AXC[i],'loop',1), d = dashed(AXC[i],'loop',0.8); G.loop.add(s,d); ... }).
+      L678-681: P0 = Lam * O4; for i: e[i+1] = 1;
+        v1 = Lam * e; v2 = L * e;
+        M.setLine(FRAMES[i].s, geoPts(P0, v1, 0, 0.5, 8)); setDashed(FRAMES[i].d, geoPts(P0, v2, 0, 0.5, 8)).
+      Each has 9 points. Axes: i=0 I, 1 J, 2 K.
+  (4) Follows the Thomas turn of the pair, which depends on r (drive). Static under 'hold'.
+  (5) L678: "/* frames at the corner reached by the two steps: solid = carried, dashed = pure boost */"
+
+E26  loop CARRY (trail, 220 points)
+  (1) G.loop, variable CARRY (trace)
+  (2) Points ring buffer, capacity 220, size 0.13, base 1.
+  (3) L596: M.trail(220, 0.13). L676-677: ell = Mf * ELL0; dn = V3(ell1/ell0, ell3/ell0, -ell2/ell0) normalised * RB*1.005;
+        M.pushTrail(CARRY, dn, [1,0.9,0.5]).
+      ELL0 = (1, d-hat), d = (0.25, -0.35, 0.9) normalised (L515).
+      Older points fade: f = (1 - age/n)^2 * 0.85 (parts L70).
+  (4) Trail of the carried null direction on the rim. Grows with each update() or reduced at() call (F5).
+      Cleared when at(t) goes backwards (L715).
+  (5) L591 (block): "carried direction"
+
+E27  loop CARRYP (trail head)
+  (1) G.loop, variable CARRYP
+  (2) Points, 1 point, size 0.36, base 1, colour [1,1,0.8].
+  (3) L597: pts(1, 0.36, 'loop', 1). L677: ptPush(CARRYP, dn, [1,1,0.8]).
+  (4) Moves with the trail head.
+  (5) L591 (block): "carried direction"
+
+--------------------------------------------------------------------------
+GROUP rimf
+--------------------------------------------------------------------------
+
+E28  rimf RIMP (rim light field)
+  (1) G.rimf, variable RIMP
+  (2) Points, 1600 points, size 0.06, base 0.9.
+  (3) L600: pts(RIMDIRS.length, 0.06, 'rimf', 0.9). RIMDIRS = L.sphereSample(1600) (L599; LH L345, Fibonacci sphere).
+      L683-686 (updateRim): cyc = 7; a = floor(tau/7) mod 3; ph = frac(tau/7);
+        f = 0.5 - 0.5 cos(2 pi ph); r = f * S.r[a];
+        for each direction n: b = boostNull(n, u_a, r) (LH L341);
+        q = (b.n0, b.n2, -b.n1) * RB*0.996;
+        colour = colour.ramp(0.5 + 0.5*ln(b.f)/S.r[a]) * 0.8.
+  (4) Every frame, reads tau (not S). Arms I, J, K cycle every 21 units of tau (7 each); the rapidity
+      sweeps 0 -> r_a -> 0 within each 7-unit cycle. Moves under 'hold'.
+  (5) L598: "/* rim field, caps, face shadows */". LH L338: "/* ---------- M7: light on the rim ---------- */"
+
+E29  rimf rim circles (6 lines)
+  (1) G.rimf, variable l in loop k = 0..5
+  (2) Line, 97 points, colour 0xdfe7ef, base 0.55. Static.
+  (3) L601: M.line(rimCircle(L.genU(k), Math.SQRT1_2, 96), 0xdfe7ef, 0.55).
+      Circle on the rim sphere at 45 deg (cos = 1/sqrt2) about each generator. Matches the inCap threshold
+      (LH L343: n.u > Math.SQRT1_2), which has no comment.
+  (4) Static.
+  (5) L598 (block): "rim field, caps, face shadows"
+
+E30  rimf SHADOW (6 lines)
+  (1) G.rimf, variable SHADOW[k]
+  (2) Line, solid, colour AXC[k>>1], base 0.95, 97 points.
+  (3) L602: solid(AXC[k>>1], 'rimf', 0.95). L687 (updateRim): M.setLine(SHADOW[k], rimCircle(L.genU(k), S.shadow[k>>1], 96)).
+      S.shadow = tanh(h_a) = Gamma_a (L409; LH L344 faceShadow).
+      So each circle sits at cos psi0 = Gamma_a about its generator.
+  (4) Moves with Gamma_a = tanh(r_a/2) (drive). Static under 'hold'.
+  (5) L598: "face shadows". LH L474 self-test label: "K12 face shadow cos ψ0 = Γ".
+
+--------------------------------------------------------------------------
+GROUP hyp (hypothesis layer)
+--------------------------------------------------------------------------
+
+E31  hyp HYPX (stock dots, plain)
+  (1) G.hyp, variable HYPX
+  (2) Points, capacity 1200, size 0.07, base 1, colour AMBV [1,0.5,0.08].
+  (3) L604: pts(1200, 0.07, 'hyp', 1).
+      L690-692 (updateHyp): for arm a, layer k < depth:
+        sx = ST.stocks[a][k][0]; nx = min(40, round(sx*12));
+        base = axisPoint(a, (k+0.5)*r_a);
+        for j < nx: t = j * 2.39996 (golden angle), rr = 0.06 + 0.012 j;
+          dot = base + dir*(-0.06 - 0.004 j) + e1*rr*cos t + e2*rr*sin t.
+      ST.stocks evolves by stocksStep (LH L352): 2x2 linear step, matrix M = [[-(kappa+a), b], [a, -b]],
+      Simpson source, with kappa = P.kappa, a = P.ha, b = P.hb (0 when absorb).
+  (4) The count and spiral follow ST.stocks, which is integrated over tau under every drive, including 'hold'.
+      NOT run in the reduced at() path (F2).
+  (5) L603: "/* hypothesis layer: amber, dashed or hollow */"
+      LH L348: "/* ---------- hypothesis layer: B182 stocks, exact step with Simpson source ---------- */"
+
+E32  hyp HYPY (stock rings)
+  (1) G.hyp, variable HYPY
+  (2) Points, capacity 1200, size 0.12, base 1, texture ringTex, colour AMBV.
+  (3) L605: pts(1200, 0.12, 'hyp', 1, ringTex). L693: ny = min(40, round(sy*12)), sy = ST.stocks[a][k][1];
+        dot = base + e1*rr*cos t + e2*rr*sin t, t = 2.39996 j + 1, rr = 0.05 + 0.011 j.
+  (4) As HYPX.
+  (5) As E31.
+
+E33  hyp OCC (3 dashed arcs)
+  (1) G.hyp, variable OCC[a]
+  (2) Line, dashed, colour AMBER, base 1. Dash 0.07, gap 0.06.
+  (3) L606: dashed(AMBER, 'hyp', 1). L694 (updateHyp): q = capParams(L.AX[a], S.h[a]);
+        arc on the cap at theta = 0.86*tmax, phi from 0 to 2*pi*Cocc[a];
+        n = max(2, round(96*Cocc[a])) points. Cocc = 1/(z+1) (LH L355, occupation).
+  (4) Arc length changes with z (drive). Under 'hold' static.
+  (5) No comment on OCC. L603 (block) as E31. LH L479 self-test label names C: "K17 1 − 2C = Γ and 4C(1 − C) = T"
+
+E34  hyp GAPH (3 dashed lines)
+  (1) G.hyp, variable GAPH[i]
+  (2) Line, dashed, AMBER, base 1.
+  (3) L607: dashed(AMBER,'hyp',1). L632: setDashed(GAPH[i], []) for over pairs.
+      L638: setDashed(GAPH[i], P * 1.004) for non-over pairs (P = the GAPS geodesic).
+  (4) Follows GAPS. Changes with r.
+  (5) L603 (block) as E31.
+
+E35  hyp labels (2 sprites)
+  (1) G.hyp, variables a and b in an IIFE
+  (2) Sprite. Colour #ffb347. Scale 0.15.
+  (3) L608: label 'hypothesis: the sea of electrons is the ground and keeps the record', position (0, -2.86, 0).
+      L609: label 'hypothesis: the walls of each layer are electrons', position (2.47, -0.65, 0).
+  (4) Static.
+  (5) The label text is the statement. Block comment L603.
+
+==========================================================================
+4. LABELS: every text string drawn in 3D
+==========================================================================
+
+#  Text (exact)                                                    Attached to                     Colour     Position (fixed or per frame)
+1  rim: the ground                                                  rim group (free, fixed)         #63d3ff   (-1.924, 0.12, 1.924), fixed. L564
+2  O  centre (two spaces)                                          balls group (free, fixed)       #dfe7ef   (0.05, -0.28, 0), fixed. L570
+3  I   z 3.00  (text = 'I' + 3 spaces + 'z ' + S.z[0].toFixed(2))  orb I, offset (0,0.3,0)            #ff8d7c   follows orb I each frame; text rebuilt only when BALLS.t > 0.5 (F1). L620
+4  J   z 5.00                                                      orb J, offset (0,0.3,0)            #63d3ff   as 3. L620
+5  K   z 7.00                                                      orb K, offset (0,0.3,0)            #f2c14e   as 3. L620
+6  hypothesis: the sea of electrons is the ground and keeps the record   hyp group (free, fixed)        #ffb347   (0, -2.86, 0), fixed. L608
+7  hypothesis: the walls of each layer are electrons               hyp group (free, fixed)            #ffb347   (2.47, -0.65, 0), fixed. L609
+
+Text 3-5 show the values at construction under the default hold drive (z = 3, 5, 7 exactly).
+No other text is drawn. No cap carries a label. GEN (L504) is never used.
+
+==========================================================================
+5. WHAT A PAGE REACHES
+==========================================================================
+
+Page: calls createOriginalMixerBall + layers + at(t) and adds groups.faces.children to a scene.
+
+5.1 Reached: groups.faces.children = FACES[0..5] (E09). That is 6 cap groups, i.e. 6 meshes (E09a) and 6 edge lines (E09b): 12 objects.
+    Their geometry is recomputed on each at(t) call under the default layers (update(0), L702).
+
+5.2 Not reached: 93 static objects in WORLD, plus the dynamic arcs of CROSS (E15).
+    rim     5   (E01 shell, E02 three rings, E03 label)
+    tree    1   (E04)
+    balls   8   (E05 centre, E06 label, E07 three orbs, E08 three z-labels)
+    cross   6   (E15 three groups, E16 three GAPS) plus dynamic arcs
+    rays    3   (E17 RAYL, E18 RAYP, E19 HITP)
+    stack   34  (E10 fifteen DEEP groups = 30 objects, E11 STKP, E12 RPT, E13 XPT, E14 ECHO)
+    press   2   (E20 PRSP, E21 RECP)
+    loop    11  (E22 LOOPL, E23 ORBP, E24 MOVP, E25 six FRAMES lines, E26 CARRY, E27 CARRYP)
+    rimf    13  (E28 RIMP, E29 six rim circles, E30 six SHADOW lines)
+    hyp     10  (E31 HYPX, E32 HYPY, E33 three OCC, E34 three GAPH, E35 two labels)
+    Total   93.
+
+5.3 Mixer3D parts never reached by this ball (mixer3d_parts_v1):
+    Not called by createOriginalMixerBall at all: orb, paintOrb, tcol (called only inside paintOrb),
+    box, grid, surface, setSurface, stage, run (with its CSS and DOM template, L134-183),
+    colour.spec, colour.enc, colour.hex, colour.wave, colour.norm, colour.lum, WL, CMF.
+    glow and sprite are exported but called only inside points().
+    The ball does call: T, shell, line, setLine, points, setPt, flush, label, trail, pushTrail,
+    clearTrail, colour.ramp.
+
+5.4 Never reached: MM-MATH-V1 (L722-950), which draws nothing.
+
+5.5 Declared but unused in LH-MIXER-V2: GEN (L504), TSP (L708), SELF (L514).
+    LIVE (L705) is internal: LIVE.tag, LIVE.loop, LIVE.rim are never exposed.
+
+==========================================================================
+6. WHAT MOVES UNDER THE DEFAULT 'hold' DRIVE
+==========================================================================
+
+Static under hold (depend only on r, which is ln z): tree, faces, cross, rim shell, rim rings, balls
+centre and orbs, DEEP caps, stack-cap objects RPT/XPT/ECHO, LOOPL, ORBP, FRAMES, rim circles and SHADOW
+(these move only if r moves), hyp labels, GAPS and GAPH, OCC arc length.
+
+Moving under hold: RAYL and RAYP (chi and tau), HITP, STKP (tau drift), MOVP (tau), CARRY and
+CARRYP (tau), RIMP (tau), RECP (ST.K), HYPX and HYPY (ST.stocks).
+
+Radii change only with drive 'breathe' or a triangle drive.
+
+==========================================================================
+7. FINDINGS (from the code; not run)
+==========================================================================
+
+F1  The I/J/K z-label text is stale after construction under at(t).
+    updateBalls rebuilds the labels only when BALLS.t > 0.5 (L619). BALLS.t grows only by dt (L619).
+    at(t) passes dt = 0 (L702 update(0); L715 reduced path also uses dt = 0 for applyEmph), so the rebuild
+    never fires after the first update. The labels keep the z values from construction (3.00, 5.00, 7.00 under hold)
+    while the orbs move. The positions do follow.
+
+F2  The reduced at(t) path skips some updaters.
+    L715: if drive is 'hold' and layers rays = 0, at() runs only updateStack, updateLoop, updateRim, applyEmph.
+    It does not run updatePress (RECP rings, PRSP arrows) or updateHyp (HYPX, HYPY), and it does not run
+    updateFaces, updateCross, updateBalls, updateTree, updateRays.
+    Under 'hold' the tree, faces, cross, balls and rays depend only on r or chi, so skipping them is harmless
+    except for rays, which are hidden on this path. But RECP and the hyp dots depend on ST, which
+    advances, so they freeze on this path. Also S is not re-fed (L715); under 'hold' that is harmless
+    because S does not change except S.chi and S.tau.
+    Triggered by layers({rays: 0}) together with the 'hold' drive.
+
+F3  The wrapper forces drive 'hold' (L512), so the L.DEF value 'breathe' (LH L357) never applies unless
+    the page passes options.drive.
+
+F4  Silent capacity limits. segPush (L529) and ptPush (L533) return without error when the buffer is full.
+    Capacities: RAYL 60000 vertices, RAYP 9000, HITP 800, STKP 6000, PRSP 2400, RECP 864, HYPX 1200,
+    HYPY 1200, RIMP 1600, ORBP 48 (40 used), CARRY 220 (ring buffer, wraps). Whether any buffer fills at a
+    given setting was not tested.
+
+F5  The CARRY trail gets one point per update() or reduced at() call (L677), not per unit of tau.
+    Repeated at() calls at the same t add points.
+
+F6  HYP.shown (L513) is never exposed. The hyp layer can only be switched off with layers({hyp: 0}).
+
+F7  The LH-MATH self-test (L447-481) and the MM-MATH block are not drawn and are not part of the page.
+
+==========================================================================
+8. NAMES FROM THE TEXT FILES
+==========================================================================
+
+Sources: votkp_v1.txt (31,903 bytes), read in full. two_trees_v4.txt (415,781 bytes), searched by term
+only, because it is above the read limit in this turn.
+
+peel step
+  Code: L493 header "one feed operator (the peel step)"; LH L235 "One feed operator: the peel step B(u, r), r = ln z, Gamma = tanh(r/2)."
+  two_trees_v4.txt L26: "a ratio z between two levels becomes a point Gamma = (z - 1)/(z + 1) of the Smith (Poincare) disk, at hyperbolic distance ln z from the centre".
+  votkp_v1.txt uses "peeling" (L17: "kept under peeling"; L237: "Peeling kept a vector of traits").
+
+level shells
+  No match in the code (no identifier, label or comment). Nearest code object: M.shell (L562), the rim sphere.
+  No match in either text file.
+
+stack
+  Code only: "stack streams" (L583); "composed reflection ... the cap used as the Smith disk" (L658).
+  No stack concept in either text file.
+
+rim and ground
+  votkp_v1.txt L31-32: "a Smith-type disk whose centre is the vacuum and whose rim is ground."
+  votkp_v1.txt L216: "|Gamma| = 1 is total reflection (ground)."
+  votkp_v1.txt L2082: "Free electrons push reflection to the rim (ground); bound electrons keep it near the vacuum."
+  Code label 'rim: the ground' (L564) matches this wording.
+
+record
+  Code: comment "record rings" (L588); label "keeps the record" (L608).
+  Neither text file uses "record" in this sense. two_trees_v4.txt uses "records" for enumeration counts only.
+
+sea of electrons
+  Phrase not found in either file (phrase search). Code: label L608 only.
+  Closest text: votkp_v1.txt L2082 "Free electrons".
+
+caps +I -I +J -J +K -K (the request says ±I ±J ±K)
+  Code: FACES (L574), cap geometry at h = r_a/2 (L399, L545).
+  two_trees_v4.txt L418: "Around each of the six directions ±i, ±j, ±k take the half-space bounded by the hyperbolic plane perpendicular to that axis at distance δ from the origin."
+  two_trees_v4.txt L423: "whose caps have angular radius α with cos α = Γ" (Dirichlet half-spaces of the steps).
+  Code shadow circles: cos psi0 = Gamma (LH L474 label). Related wording, not the same object.
+
+rays
+  Code only (L579 "rays and markers"). No ray-fan concept in either text file.
+
+press
+  Code only (L588 "pressure arrows"). votkp_v1.txt uses "pressures" for metallization pressure (L1986); a different thing.
+
+hyp
+  Code labels "hypothesis:" (L608-609) and comments L348, L603. No match in either file.
+
+loop
+  Code: "the square" (L591). LH L320 "the square".
+  votkp_v1.txt L179: "A loop that comes back still remembers, through its phase (IQGT Ex. 6.5)."
+  two_trees_v4.txt L27: "the knot relation is a closed loop of boosts."
+  two_trees_v4.txt L571: "the knot relation aW = Wb, a closed loop".
+  Closest match: the closed loop of boosts.
+
+==========================================================================
+9. NOTES FOR THE MAIN SESSION
+==========================================================================
+
+9.1 Five script blocks, not four. The fifth (MM-MATH-V1, L722-950) is not drawn and not called here.
+9.2 No page in this file uses createOriginalMixerBall. The only place it is defined is L495.
+9.3 Not read line by line: L8, the 651 KB minified three.js body. The header (L1-7, L9-10) was read.
+9.4 two_trees_v4.txt was searched by term, not read in full.
