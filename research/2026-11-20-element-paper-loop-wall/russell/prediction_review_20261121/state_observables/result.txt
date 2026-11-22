@@ -1,0 +1,18 @@
+O initial J=2, final J=0: z=5.826880873182, inside/inside
+O initial J=1, final J=0: z=5.835288985523, outside/inside
+O initial J=0, final J=0: z=5.838946993151, outside/outside
+neutral initial shifts for the two boundaries (cm^-1): 29.13919 194.55575
+O initial J=2, final J=1: z=5.827870339202, inside/inside
+O initial J=1, final J=1: z=5.836279879330, outside/inside
+O initial J=0, final J=1: z=5.839938508126, outside/outside
+O initial J=2, final J=2: z=5.830347008705, outside/inside
+O initial J=1, final J=2: z=5.838760122634, outside/outside
+O initial J=0, final J=2: z=5.842420306237, outside/outside
+C 2s4d 1D even: threshold=64.5803699 eV, z=5.735232521 inside/inside
+C 2p3d 1D odd: threshold=65.6316047 eV, z=5.828590235 outside/inside
+C 2p3p 1D even: threshold=65.6845373 eV, z=5.833291054 outside/inside
+C 2s5d 1D even: threshold=67.3632945 eV, z=5.982377578 outside/outside
+O J=0: published retained rates n=8, tau=0.694378286 ns, tag=1590.589 A, A_tag/sum(A)=0.323580281
+O J=1: published retained rates n=24, tau=0.690319989 ns, tag=1591.290 A, A_tag/sum(A)=0.240231356
+O J=2: published retained rates n=16, tau=0.692528027 ns, tag=1589.979 A, A_tag/sum(A)=0.269393403
+O lifetime contrast tau2 / sqrt(tau0*tau1)=1.000262677

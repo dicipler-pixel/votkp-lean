@@ -1,0 +1,10 @@
+W1 holonomy differences: 2.22 vs f*area 2.22 (area 6.0 ); 0.74 vs 0.74 (area 2.0 )  error 2.220446049250313e-16
+[V,H0] = 0.0
+Phi=+2.220000: marginals P [0.5 0.5], E [0.5 0.5]; <Z_P>(pi/4g) = +0.796565 (probe 1), -0.604552 (probe 2)
+Phi=+0.740000: marginals P [0.5 0.5], E [0.5 0.5]; <Z_P>(pi/4g) = +0.674288 (probe 1), +0.738469 (probe 2)
+Phi=+0.000000: marginals P [0.5 0.5], E [0.5 0.5]; <Z_P>(pi/4g) = +0.000000 (probe 1), +1.000000 (probe 2)
+Phi=+0.921593: marginals P [0.5 0.5], E [0.5 0.5]; <Z_P>(pi/4g) = +0.796565 (probe 1), +0.604552 (probe 2)
+Phi=-1.100000: marginals P [0.5 0.5], E [0.5 0.5]; <Z_P>(pi/4g) = -0.891207 (probe 1), +0.453596 (probe 2)
+W2 max present-record difference: 1.1121276454532484e-16   W3 max witness error: 1.1102230246251565e-15
+probe-1 blindness: Phi and pi-Phi give 0.7965654722360868 0.7965654722360868 ; probe 2 separates them: -0.6045522710579293 0.6045522710579294
+KILL: W1 False  W2 False  W3 False   ANY KILL: False

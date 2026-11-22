@@ -8,6 +8,7 @@ import hashlib
 import re
 import sys
 from collections import Counter
+from decimal import Decimal, getcontext
 from fractions import Fraction
 from pathlib import Path
 from urllib.request import urlopen
@@ -53,6 +54,11 @@ def energy(s,k):
     value=thresholds.get((s,k),{}).get('energy_eV')
     return Q(value) if value else None
 
+getcontext().prec=60
+wall_dec=3+2*Decimal(2).sqrt()
+rival_dec=Decimal(rival.numerator)/Decimal(rival.denominator)
+window_width=rival_dec-wall_dec
+bins={j:[] for j in range(-10,11)}
 counts=Counter()
 writer=csv.writer(sys.stdout)
 writer.writerow('symbol selected_charge k role level J observed_cm-1 z'.split())
@@ -68,7 +74,24 @@ with manifest.open() as f:
                 if lo is None or hi is None:continue
                 counts[(src['repository'],role)]+=1
                 z=(hi-d)/(lo+d) if role=='intermediate' else (hi+d)/lo
+                if len(sys.argv)>3 and role=='final':
+                    exact_z=Decimal(z.numerator)/Decimal(z.denominator)
+                    scaled=(exact_z-wall_dec)/window_width
+                    if -10<=scaled<11:
+                        j=int(scaled.to_integral_value(rounding='ROUND_FLOOR'))
+                        assert abs(scaled-scaled.to_integral_value())>Decimal('1e-35')
+                        bins[j].append((s,q,level))
                 if z>1 and z*z-6*z+1>0 and z<rival:
                     writer.writerow([s,q,k,role,level,J,wavenumber,f'{float(z):.12f}'])
 for group,total in sorted(counts.items()):
     print(*group,total,file=sys.stderr)
+
+if len(sys.argv)>3:
+    with open(sys.argv[3],'w') as f:
+        out=csv.writer(f)
+        out.writerow(['window_offset','lo','hi','level_count','configuration_term_count','element_count','elements'])
+        for j,items in bins.items():
+            lo=wall_dec+j*window_width
+            hi=lo+window_width
+            elements=sorted({x[0] for x in items})
+            out.writerow([j,f'{lo:.12f}',f'{hi:.12f}',len(items),len(set(items)),len(elements),' '.join(elements)])

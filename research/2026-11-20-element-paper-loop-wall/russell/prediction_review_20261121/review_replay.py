@@ -20,7 +20,7 @@ def run():
     print(version,flush=True)
     if 'version 4.34.1,' not in version: raise SystemExit('expected 4.34.1')
     files=('TwoFaceForms.lean','consistency/BoundaryAgreement.lean','angle/ObliqueFaces.lean',
-           'rivals/FiniteWallGap.lean','rivals/PellControls.lean','precision/OpticalWall.lean')
+           'rivals/FiniteWallGap.lean','rivals/PellControls.lean','precision/OpticalWall.lean','state_observables/PreparedRoute.lean')
     with TemporaryDirectory() as temp:
         for path in files:
             source=root/path

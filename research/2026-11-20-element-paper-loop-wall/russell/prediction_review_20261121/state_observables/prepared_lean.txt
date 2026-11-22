@@ -1,0 +1,5 @@
+'Beasley.PreparedRoute.groundTriplet' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Beasley.PreparedRoute.sameFinalDifferentRoutes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Beasley.PreparedRoute.noFinalOnlyWall' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Beasley.PreparedRoute.identicalPreparedResponse' does not depend on any axioms
+'Beasley.PreparedRoute.excitationTelescopes' depends on axioms: [propext, Classical.choice, Quot.sound]

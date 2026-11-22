@@ -1,0 +1,4 @@
+phase-pair/visibility combinations: 1156 maximum error 2.22e-16
+visibility, phases 1 0.74 2.22 differences in Z probes -0.122278 1.343021 trace distance 0.674288
+visibility, phases 0 0.74 2.22 differences in Z probes 0.0 0.0 trace distance 0.0
+visibility, phases 1 0.74 2.401593 differences in Z probes -0.0 1.476937 trace distance 0.738469

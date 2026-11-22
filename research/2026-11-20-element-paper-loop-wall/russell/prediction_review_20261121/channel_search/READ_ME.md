@@ -50,3 +50,24 @@ Given the pinned archive, reproduce the nine primary-data rows offline. Given th
 
     python check.py /path/to/element_thresholds_20261011.json.gz
     python screen_levels.py /path/to/H_to_At_thresholds.csv /path/to/level-cache
+
+## Following the same ion to its next removal
+
+**DERIVED.** Selecting an excited ion also changes the energy of a subsequent removal from that ion. If X²⁺(j) is carried forward before it radiates, the second and third photon thresholds are \(I_2+E_j\) and \(I_3-E_j\). If the ion subsequently decays to its ground state first, radiation carries away \(E_j\) (possibly in a cascade) and the third threshold is once again \(I_3\). Recording which event happened matters here.
+
+| Physical forward path, before radiative decay | \(I_2+E_j\) (eV) | \(I_3-E_j\) (eV) | Next ratio | Signed reflection |
+|---|---:|---:|---:|---:|
+| C²⁺, 2p3p ¹D₂ | 65.68453725 | 6.58638575 | 0.10027300 | −0.81773069 |
+| O²⁺, 2s²2p4s ³P°₂ | 79.39798623 | 10.65867377 | 0.13424363 | −0.76328961 |
+
+Both middle ratios lie below \(3-2\sqrt2\), on the lower outside branch of the squared-reflection wall. A negative reflection is compatible with removing one more electron. Its sign records that the next threshold falls. This distinguishes an ordered energy reading from the direction of the charge change. Replacing only \(I_2\) and silently retaining the ground-to-ground \(I_3\) would double-count the excitation in the prompt path.
+
+Two checks hold exactly, including for all nine rows in the primary comparison. The sum of the two affected removal energies is \(I_2+I_3\). The product of all three affected ratios is \(I_4/I_1\), so the sum of their logarithms is unchanged. An independent state-selected ionization measurement on the freshly prepared excited ion could test its predicted lower threshold. The populations, lifetimes and competing radiative decays would have to be characterized before scoring.
+
+    python check_path.py /path/to/element_thresholds_20261011.json.gz
+
+Kjeldsen et al. covered the carbon channel's photon energy in a C⁺ photoionization experiment from threshold to 105 eV. Their detector measured the C²⁺ charge yield. Population of the ¹D₂ daughter cannot be read from that total yield alone. [Kjeldsen et al., 2001, experimental method](https://doi.org/10.1086/321787).
+
+**Neighboring-window check.** To see how readily this search can find levels elsewhere, divide the raw-ratio axis into adjacent intervals of the same width \(c-w\), with the central interval running from \(w\) to \(c\). Across all 5,008 final-state trials, the central interval contains six levels in four configuration/term groups from two elements. Thirteen of the 20 neighboring intervals (ten in each direction) contain levels. Two neighboring intervals have larger counts, eight and 19. The six matches establish specific disagreeing settings; the control counts give no basis for attributing a unique concentration of levels to either wall. Fine-structure levels are correlated and this local comparison has no assigned significance level. Add an output filename to the screen command to reproduce the full controls.
+
+    python screen_levels.py /path/to/H_to_At_thresholds.csv /path/to/level-cache neighbor_windows.csv

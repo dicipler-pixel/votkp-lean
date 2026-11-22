@@ -1,0 +1,53 @@
+Lean (version 4.34.1, x86_64-unknown-linux-gnu, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)
+TwoFaceForms.lean PASS
+consistency/BoundaryAgreement.lean PASS
+  'ElementPaper.BoundaryAgreement.witnessInterior' depends on axioms: [propext, Classical.choice, Quot.sound]
+  'ElementPaper.BoundaryAgreement.witnessTie' depends on axioms: [propext, Classical.choice, Quot.sound]
+  'ElementPaper.BoundaryAgreement.witnessProduct' depends on axioms: [propext, Classical.choice, Quot.sound]
+  'ElementPaper.BoundaryAgreement.halfScaling' depends on axioms: [propext, Classical.choice, Quot.sound]
+  'ElementPaper.BoundaryAgreement.uniqueInteriorBoundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+  'ElementPaper.BoundaryAgreement.wrongThird' depends on axioms: [propext, Classical.choice, Quot.sound]
+  'ElementPaper.BoundaryAgreement.midInterior' depends on axioms: [propext, Classical.choice, Quot.sound]
+  'ElementPaper.BoundaryAgreement.midMargins' depends on axioms: [propext, Classical.choice, Quot.sound]
+  'ElementPaper.BoundaryAgreement.strictCounterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+  'ElementPaper.BoundaryAgreement.productAntitone' depends on axioms: [propext, Classical.choice, Quot.sound]
+  'ElementPaper.BoundaryAgreement.rationalThreeWayControl' depends on axioms: [propext, Classical.choice, Quot.sound]
+angle/ObliqueFaces.lean PASS
+  'ElementPaper.ObliqueFaces.faceProductDiscriminant' depends on axioms: [propext, Classical.choice, Quot.sound]
+  'ElementPaper.ObliqueFaces.rightAngle' depends on axioms: [propext, Classical.choice, Quot.sound]
+  'ElementPaper.ObliqueFaces.diskSignOfTilt' depends on axioms: [propext, Classical.choice, Quot.sound]
+  'ElementPaper.ObliqueFaces.commutatorEvenTilt' depends on axioms: [propext, Classical.choice, Quot.sound]
+  'ElementPaper.ObliqueFaces.bothClockSigns' depends on axioms: [propext, Classical.choice, Quot.sound]
+  'ElementPaper.ObliqueFaces.rationalSignedControl' depends on axioms: [propext, Classical.choice, Quot.sound]
+  'ElementPaper.ObliqueFaces.beRbAcuteTilt' depends on axioms: [propext, Classical.choice, Quot.sound]
+  'ElementPaper.ObliqueFaces.noUniversalObliqueEquivalence' depends on axioms: [propext, Classical.choice, Quot.sound]
+  'ElementPaper.ObliqueFaces.normalDet' depends on axioms: [propext, Classical.choice, Quot.sound]
+  'ElementPaper.ObliqueFaces.normalTraceProduct' depends on axioms: [propext, Classical.choice, Quot.sound]
+  'ElementPaper.ObliqueFaces.properFactorization' depends on axioms: [propext, Classical.choice, Quot.sound]
+  'ElementPaper.ObliqueFaces.bothStagesProper' depends on axioms: [propext, Classical.choice, Quot.sound]
+  'ElementPaper.ObliqueFaces.commutatorTrace' depends on axioms: [propext, Classical.choice, Quot.sound]
+rivals/FiniteWallGap.lean PASS
+  'Beasley.WallGap.alternative_on_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+  'Beasley.WallGap.diagonal_35_6' depends on axioms: [propext, Classical.choice, Quot.sound]
+  'Beasley.WallGap.rectangle_from_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+  'Beasley.WallGap.element_gap_fits' depends on axioms: [propext, Classical.choice, Quot.sound]
+  'Beasley.WallGap.be_rb_sensitive_to_mixing' depends on axioms: [propext, Classical.choice, Quot.sound]
+  'Beasley.WallGap.fitted_closes_diagonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+  'Beasley.WallGap.wrong_diagonal_sign_refuted' depends on axioms: [propext, Classical.choice, Quot.sound]
+rivals/PellControls.lean PASS
+  'Beasley.PellControls.alternating_defect' depends on axioms: [propext, Classical.choice, Quot.sound]
+  'Beasley.PellControls.settings' depends on axioms: [propext, Classical.choice, Quot.sound]
+  'Beasley.PellControls.bounded_classes' depends on axioms: [propext, Classical.choice, Quot.sound]
+  'Beasley.PellControls.return_margins' depends on axioms: [propext, Classical.choice, Quot.sound]
+precision/OpticalWall.lean PASS
+  'Beasley.OpticalWall.opticalDiscriminant' depends on axioms: [propext, Classical.choice, Quot.sound]
+  'Beasley.OpticalWall.scaleLaw' depends on axioms: [propext, Classical.choice, Quot.sound]
+  'Beasley.OpticalWall.noPhaseSign' depends on axioms: [propext, Classical.choice, Quot.sound]
+  'Beasley.OpticalWall.rotationControl' depends on axioms: [propext, Classical.choice, Quot.sound]
+  'Beasley.OpticalWall.missingVControl' depends on axioms: [propext, Classical.choice, Quot.sound]
+state_observables/PreparedRoute.lean PASS
+  'Beasley.PreparedRoute.groundTriplet' depends on axioms: [propext, Classical.choice, Quot.sound]
+  'Beasley.PreparedRoute.sameFinalDifferentRoutes' depends on axioms: [propext, Classical.choice, Quot.sound]
+  'Beasley.PreparedRoute.noFinalOnlyWall' depends on axioms: [propext, Classical.choice, Quot.sound]
+  'Beasley.PreparedRoute.excitationTelescopes' depends on axioms: [propext, Classical.choice, Quot.sound]
+FalseAtThird.lean REJECTED at its false goal
