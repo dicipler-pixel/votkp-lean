@@ -25,7 +25,7 @@ CSV outputs, forecast errors and exact archive digest come from `archive_audit.p
 
 ## Prior calculations and an explicit opposing prediction
 
-**DERIVED FROM PUBLISHED THEORY** Koen van der Schoor’s 2016 Groningen bachelor thesis, supervised by Anastasia Borschevsky, gives in Table 4 Fr IE₂ = **20.673 eV** with relativistic X2C CCSD(T) and the stated Dyall quadruple-zeta basis. Its Rb and Cs results differ from their archived IE₂ by −0.133 and −0.128 eV. The table labels a 20.02-eV Fr value as a neural-network calculation in footnote b, citing Sigman and Rives (1994). Our numeric transcription for the latter relies on the thesis. [Groningen thesis, Table 4](https://fse.studenttheses.ub.rug.nl/14531/1/report.pdf#page=10) · [Sigman and Rives](https://doi.org/10.1021/ci00019a021)
+**DERIVED FROM PUBLISHED THEORY** Koen van der Schoor’s 2016 Groningen bachelor thesis was supervised by Anastasia Borschevsky. Table 4 gives Fr IE₂ = **20.673 eV** with relativistic X2C CCSD(T) and the stated Dyall quadruple-zeta basis. Its Rb and Cs results differ from their archived IE₂ by −0.133 and −0.128 eV. The table labels a 20.02-eV Fr value as a neural-network calculation in footnote b, citing Sigman and Rives (1994). Our numeric transcription for the latter relies on the thesis. [Groningen thesis, Table 4](https://fse.studenttheses.ub.rug.nl/14531/1/report.pdf#page=10) · [Sigman and Rives](https://doi.org/10.1021/ci00019a021)
 
 **DERIVED** Keeping both energies internally consistent makes a direct relativity control. For Fr, the thesis gives
 
@@ -88,11 +88,15 @@ The three source grades are experimental, theoretical and semiempirical respecti
 
 **HYPOTHESIS AND FALSIFIER** The residual Fr²⁺ ground-configuration doublet is a separate target. Its magnetic-dipole transition has vacuum wavelength `hc/ΔE`. The ECP-IP-EOM-CCSD, radial PBE and radial PZ estimates span approximately 260 to 241 nm. A direct spectrum of Fr III can check the assignment and energy separation independently of the common absolute threshold. The spread across approximations is not a confidence interval. Combining an independent splitting measurement with both absolute Fr⁺ onsets would test the electronic-state reading.
 
-**COMPUTED / DERIVED** As a separate correlation check, full-virtual-space spinor ΔMP2 gives Fr IE₂ = 20.5610 eV in the 111-function spdf basis. The same calculation with the published Lim et al. dipolar core-polarization correction gives 20.5722 eV, a shift of +0.0112 eV. For Cs these values are 22.9353 and 22.9677 eV. We included both the one-electron and the cross-electron pieces of the squared electric field. Refining radial quadrature from 100 to 180 points changed the correction integrals by less than 4.0×10⁻¹⁵ hartree in this basis. Unmodeled high-order correlation and differences between the theoretical Hamiltonians remain. On a scalar Rb benchmark the custom MP2 integral contraction agrees with PySCF's standard closed- and open-shell implementations within 8.4×10⁻¹⁷ hartree. Direct complex, four-index spinor integrals on a small basis agree with the packed implementation within 2.3×10⁻¹⁶ hartree. These are implementation tests.
+**COMPUTED / DERIVED** As a separate correlation check, full-virtual-space spinor ΔMP2 gives Fr IE₂ = 20.5610 eV in the 111-function spdf basis. The same calculation with the published Lim et al. dipolar core-polarization correction gives 20.5722 eV, a shift of +0.0112 eV. For Cs these values are 22.9353 and 22.9677 eV. Disabling the explicit spin–orbit term while retaining the scalar-relativistic ECP gives ΔMP2 = 21.9042 eV for Fr, a +1.3432-eV difference. We included both the one-electron and the cross-electron pieces of the squared electric field. Refining radial quadrature from 100 to 180 points changed the correction integrals by less than 4.0×10⁻¹⁵ hartree in this basis. Unmodeled high-order correlation and differences between the theoretical Hamiltonians remain. On a scalar Rb benchmark the custom MP2 integral contraction agrees with PySCF's standard closed- and open-shell implementations within 8.4×10⁻¹⁷ hartree. Direct complex, four-index spinor integrals on a small basis agree with the packed implementation within 2.3×10⁻¹⁶ hartree. These are implementation tests.
+
+## A measured series that would give the wrong threshold for the table
+
+**MEASURED / DERIVED** This failure has a stable analogue. Kilbane et al. observed the Rb⁺ photoionization spectrum. McLaughlin and Babb assigned an autoionizing Rydberg series from the ground state to the **excited** residual ²P°₁/₂ threshold and reproduced seven experimental line energies. Fitting their experimental `n = 8…14` entries to `E_n = L − 4 R∞/(n−δ)²` with L and δ free gives `L = 28.22825 eV`, `δ = 0.36648`, and 8.29 meV rms on the lines. The independently assigned lower threshold is 27.28954 eV, 0.939 eV away. Its upper partner from independent fine structure is 28.20386 eV, just 24.4 meV away. Removing the first one to three lines moves the fitted limit up to 28.25645 eV while the within-series residual can *decrease* to 3.99 meV. A low residual gives neither the correct channel assignment nor sub-18-meV limit accuracy. The literature describes contributions from metastable initial ions, another reason to assign the initial state and the residual series limit independently. Use both checks on a future francium spectrum. [Kilbane et al. 2007](https://doi.org/10.1103/PhysRevA.75.032711) · [McLaughlin and Babb 2019, experimental entries in Table 3](https://academic.oup.com/view-large/133260203)
 
 ## Reproduction
 
-Use the pinned archive with Git blob `0c4e6513b9e7910354585cc1aeab939388537e3f` and SHA-256 `75e67478d9a22ef85fa2d3f6ac36ad2860c6f8f62215127c558438a2cb53f62c`. `archive_audit.py` uses the Python standard library. The all-electron calculations used the Debian Quantum ESPRESSO `6.7-3+b1` package and `ld1.x` v6.7MaX, in single-rank, single-thread runs. The correlated calculations used PySCF 2.11.0, NumPy and SciPy with one BLAS thread. The plotted PNG and PDF use Matplotlib. A command line that reproduces the numerical work from this folder follows.
+Use the pinned archive with Git blob `0c4e6513b9e7910354585cc1aeab939388537e3f` and SHA-256 `75e67478d9a22ef85fa2d3f6ac36ad2860c6f8f62215127c558438a2cb53f62c`. `archive_audit.py` uses the Python standard library. The all-electron calculations used the Debian Quantum ESPRESSO `6.7-3+b1` package and `ld1.x` v6.7MaX, in single-rank, single-thread runs. The correlated calculations used Python 3.12.14, PySCF 2.11.0, NumPy 2.3.5 and SciPy 1.17.0 with one BLAS thread. The plotted PNG and PDF use Matplotlib. A command line that reproduces the numerical work from this folder follows.
 
 ```sh
 export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1
@@ -100,12 +104,14 @@ python archive_audit.py /path/to/data/element_thresholds_20261011.json.gz
 python allelectron_control.py /path/to/ld1.x
 python sequence_control.py /path/to/ld1.x
 python validate_integrals.py
+python rb_threshold_control.py
 for basis in coarse medium; do
   for atom in Rb Cs Fr; do python atomic_control.py "$atom" "$basis"; done
 done > atomic_runs.jsonl
 for basis in medium medium-f fine-f; do
   for atom in Rb Cs Fr; do python atomic_control.py "$atom" "$basis" --mp2; done
 done > mp2_runs.jsonl
+for atom in Rb Cs Fr; do python atomic_control.py "$atom" medium-f --no-soc --mp2; done > scalar_mp2_runs.jsonl
 for cap in 24 36 48 60; do
   for atom in Rb Cs Fr; do python eom_control.py "$atom" medium-f "$cap"; done
 done > eom_runs.jsonl

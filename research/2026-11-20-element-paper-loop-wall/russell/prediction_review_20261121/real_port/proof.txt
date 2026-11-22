@@ -1,0 +1,6 @@
+'Beasley.HalfPower.fluxBalance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Beasley.HalfPower.circleTest' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Beasley.HalfPower.equalAtComplexBoundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Beasley.HalfPower.reactanceFlipsClassification' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Beasley.HalfPower.loadSetting' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Beasley.HalfPower.calibratedEqualFaces' depends on axioms: [propext, Classical.choice, Quot.sound]

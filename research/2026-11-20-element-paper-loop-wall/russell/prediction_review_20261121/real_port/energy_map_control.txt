@@ -1,0 +1,3 @@
+linear ratio as wave impedance: R = 841/1681 fraction 0.5002974419988102
+same number as kinetic-energy ratio, equal masses, propagating: R = 0.17171725758018083
+kinetic-energy ratio at half reflected power = 33.970562748477136
