@@ -1,0 +1,13 @@
+Lean (version 4.34.1, x86_64-unknown-linux-gnu, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)
+TwoFaceForms 3 Classical.choice, Quot.sound, propext
+BoundaryAgreement 11 Classical.choice, Quot.sound, propext
+ObliqueFaces 13 Classical.choice, Quot.sound, propext
+FiniteWallGap 14 Classical.choice, Quot.sound, propext
+PellControls 5 Classical.choice, Quot.sound, propext
+OpticalWall 5 Classical.choice, Quot.sound, propext
+PreparedRoute 5 Classical.choice, Quot.sound, propext
+HalfPower 6 Classical.choice, Quot.sound, propext
+FaceFidelity 5 Classical.choice, Quot.sound, propext
+TripleReadout 4 Classical.choice, Quot.sound, propext
+HydrogenicScSn 4 Classical.choice, Quot.sound, propext
+modules 11 named theorems 75 leanchecker True negative control rejected

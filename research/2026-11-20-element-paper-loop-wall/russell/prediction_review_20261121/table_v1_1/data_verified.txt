@@ -1,0 +1,4 @@
+embedded dataset identical to Claude v1: 85 elements, 3,655 energies, 3,570 ordinary pairs; eight outside
+v1 baseline 53/65; working-paper 55/67; evidence-linked annotations cover all 20 unscored baseline rows
+1,562 drawing floors confirmed; Ca/Sr/Ba membership and four observed octave steps checked
+HTML sha256 68f8c367bc137be250b28c2489923080ca0270a4b99a770e20cf38159a7a6a90

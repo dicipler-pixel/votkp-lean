@@ -1,0 +1,4 @@
+'Beasley.HydrogenicScSn.endpoints' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Beasley.HydrogenicScSn.wallMonotone' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Beasley.HydrogenicScSn.entireBox' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Beasley.HydrogenicScSn.nonrelControl' depends on axioms: [propext, Classical.choice, Quot.sound]

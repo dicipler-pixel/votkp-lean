@@ -5,7 +5,7 @@ from concurrent.futures import ThreadPoolExecutor
 p=argparse.ArgumentParser();p.add_argument('root',type=Path);p.add_argument('--bin',type=Path,required=True)
 p.add_argument('--skip-kernel',action='store_true')
 a=p.parse_args();root=a.root.resolve();bin=a.bin.resolve()
-names=['TwoFaceForms','BoundaryAgreement','ObliqueFaces','FiniteWallGap','PellControls','OpticalWall','PreparedRoute','HalfPower','FaceFidelity','TripleReadout']
+names=['TwoFaceForms','BoundaryAgreement','ObliqueFaces','FiniteWallGap','PellControls','OpticalWall','PreparedRoute','HalfPower','FaceFidelity','TripleReadout','HydrogenicScSn']
 env=dict(os.environ,PATH=str(bin)+os.pathsep+os.environ['PATH'])
 def check(name):
     paths=list(root.rglob(name+'.lean'));assert len(paths)==1,(name,paths)
