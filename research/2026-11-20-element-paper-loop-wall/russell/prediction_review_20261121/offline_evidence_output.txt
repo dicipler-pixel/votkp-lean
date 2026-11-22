@@ -1,0 +1,15 @@
+MATCH rivals/rival_boxes.csv 8084
+MATCH rivals/si_ag_shared_boxes.csv 1940
+MATCH ground_state_search/heavy_archived_pairs.csv 208095
+MATCH ground_state_search/heavy_affinity_screen.csv 4324
+MATCH ground_state_search/additional_ordinary_theory.csv 1203
+MATCH hydrogenic_pairs/candidates.csv 294
+MATCH hydrogenic_pairs/comparison.csv 786
+MATCH channel_search/result.csv 1377
+MATCH channel_search/path_result.csv 1541
+MATCH channel_search/oxygen_settings.txt 647
+MATCH precision/photon_budget.txt 673
+MATCH real_port/energy_map_control.txt 227
+MATCH hydrogenic_orbitals/outputs.txt 459
+MATCH spatial_mirror_pilot/result.txt 980
+All selected output bytes match.
