@@ -1,0 +1,10 @@
+8 segments 898 seats 1 mean tally 1.0 fill 1.0 counts {1: 898}
+14 segments 2235 seats 2 mean tally 1.207 fill 0.603 counts {1: 1773, 2: 462}
+20 segments 1590 seats 4 mean tally 1.555 fill 0.389 counts {1: 811, 2: 676, 3: 103}
+26 segments 1053 seats 5 mean tally 1.764 fill 0.353 counts {1: 419, 2: 473, 3: 151, 4: 10}
+32 segments 3039 seats 7 mean tally 2.154 fill 0.308 counts {1: 725, 2: 1332, 3: 787, 4: 178, 5: 17}
+38 segments 898 seats 9 mean tally 2.404 fill 0.267 counts {1: 157, 2: 334, 3: 307, 4: 88, 5: 11, 6: 1}
+44 segments 2785 seats 10 mean tally 2.874 fill 0.287 counts {1: 251, 2: 799, 3: 997, 4: 552, 5: 161, 6: 25}
+50 segments 1468 seats 12 mean tally 3.187 fill 0.266 counts {1: 82, 2: 336, 3: 508, 4: 354, 5: 146, 6: 39, 7: 3}
+56 segments 951 seats 13 mean tally 3.526 fill 0.271 counts {1: 37, 2: 145, 3: 294, 4: 284, 5: 145, 6: 40, 7: 5, 8: 1}
+62 segments 2077 seats 15 mean tally 3.826 fill 0.255 counts {1: 57, 2: 252, 3: 573, 4: 587, 5: 387, 6: 173, 7: 39, 8: 8, 9: 1}
