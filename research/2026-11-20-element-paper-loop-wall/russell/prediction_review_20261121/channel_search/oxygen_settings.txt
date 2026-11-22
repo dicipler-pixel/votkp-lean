@@ -1,0 +1,5 @@
+ground I1/I2, exact-wall edge, registered rival edge (eV) 13.618055 35.12112 79.37184114828547778961816227833499993472 79.49158869897741780880037177042395350327
+triplet J0 threshold eV 79.35078421 ratio 5.8268808732 ordinary/wall difference meV -21.057 rival difference meV -140.804
+triplet J1 threshold eV 79.36425881 ratio 5.8278703392 ordinary/wall difference meV -7.582 rival difference meV -127.330
+triplet J2 threshold eV 79.39798623 ratio 5.8303470087 ordinary/wall difference meV +26.145 rival difference meV -93.602
+singlet J1 threshold eV 79.59039607 ratio 5.8444760336 ordinary/wall difference meV +218.555 rival difference meV +98.807
