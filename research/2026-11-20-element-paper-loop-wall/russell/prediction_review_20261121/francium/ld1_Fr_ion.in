@@ -1,0 +1,6 @@
+&input
+ atom='Fr', iswitch=1, rel=2, lsd=0, dft='PBE',
+ config='[Xe] 4f14 5d10 6s2 6p6',
+ xmin=-9.0, dx=0.00625, rmax=100.0, tr2=1.0d-12,
+ rytoev_fact=13.605693122994, prefix='atom'
+/

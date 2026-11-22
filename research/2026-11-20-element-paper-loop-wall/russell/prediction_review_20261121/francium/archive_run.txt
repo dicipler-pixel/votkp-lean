@@ -1,0 +1,14 @@
+archive_sha256 75e67478d9a22ef85fa2d3f6ac36ad2860c6f8f62215127c558438a2cb53f62c
+disagreement_eV 23.737674699308634 23.773487506007346 width_eV 0.03581280669871109
+strict_max_admissible_symmetric_IE2_halfwidth_eV 0.017899987243204407
+Na–Cs IE2-on-IE1 regression slope, intercept, Fr 19.722436120474924 -54.196419821218065 26.127956358764713
+Rb/Cs linear interpolation on neutral IE1, fraction, Fr eV 0.6314309528135876 25.766579525811498
+Groningen self-consistent ratios (NR, X2C) 6.076214405360134 5.101924975320829
+mixed ratios (numerator only, denominator only) 5.771356783919598 5.371421520236921
+log contributions (IE2, -IE1, denominator fraction of log shift) -0.05147467396108039 -0.12328928274791684 0.7054617271752903
+leave_alkali_out Li+ T 89.2418 75.63388
+leave_alkali_out Na+ E 50.85407 47.33431
+leave_alkali_out K+ E 33.33639 31.6699
+leave_alkali_out Rb+ E 28.44157 27.34767
+leave_alkali_out Cs+ E 23.98682 23.23708
+leave_alkali_out Fr+ S 20.87425 19.6495

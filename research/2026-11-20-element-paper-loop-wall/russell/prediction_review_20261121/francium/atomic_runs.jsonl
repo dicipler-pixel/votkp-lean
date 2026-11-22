@@ -1,0 +1,6 @@
+{"atom": "Cs", "basis": "coarse", "n_ao": 52, "with_soc": true, "n_e": 8, "E1_Ha": -19.639921393541904, "E2_Ha": -18.81529914959181, "second_IE_eV": 22.439114200804656, "frozen_orbital_eV": 22.993314443941205}
+{"atom": "Fr", "basis": "coarse", "n_ao": 52, "with_soc": true, "n_e": 8, "E1_Ha": -18.700676206210073, "E2_Ha": -17.96555932334371, "second_IE_eV": 20.00354926949567, "frozen_orbital_eV": 20.485682750229778}
+{"atom": "Rb", "basis": "coarse", "n_ao": 52, "with_soc": true, "n_e": 8, "E1_Ha": -23.64865796071021, "E2_Ha": -22.68191643145174, "second_IE_eV": 26.30637693421737, "frozen_orbital_eV": 27.158362950245593}
+{"atom": "Cs", "basis": "medium", "n_ao": 83, "with_soc": true, "n_e": 8, "E1_Ha": -19.731476232259215, "E2_Ha": -18.915725328295665, "second_IE_eV": 22.197712743916124, "frozen_orbital_eV": 22.83324193087293}
+{"atom": "Fr", "basis": "medium", "n_ao": 83, "with_soc": true, "n_e": 8, "E1_Ha": -18.790589655374326, "E2_Ha": -18.062248794102874, "second_IE_eV": 19.819164330196738, "frozen_orbital_eV": 20.364617159618728}
+{"atom": "Rb", "basis": "medium", "n_ao": 83, "with_soc": true, "n_e": 8, "E1_Ha": -23.658998478398896, "E2_Ha": -22.69528973097055, "second_IE_eV": 26.22385073712339, "frozen_orbital_eV": 27.10062549720637}

@@ -1,0 +1,2 @@
+PBE linear interpolated Fr 21.3925385 quadratic interpolated Fr 20.73538766666666666666666667 direct Fr 20.679688
+PZ linear interpolated Fr 21.590487 quadratic interpolated Fr 20.934817 direct Fr 20.879940
