@@ -1,0 +1,31 @@
+== 1. a chain of cells is a ladder of equal peel steps ==
+ G=1.0 g_m=0.01 N=40: theta=0.099958 (continuum a/lambda=0.100000)  max|solve-closed|=3.3e-16  centre=3.667997e-02
+ G=2.5 g_m=0.3 N=12: theta=0.344701 (continuum a/lambda=0.346410)  max|solve-closed|=3.3e-16  centre=3.195198e-02
+ G=1.0 g_m=0.0001 N=300: theta=0.010000 (continuum a/lambda=0.010000)  max|solve-closed|=3.3e-14  centre=9.932916e-02
+
+== 2. the centre field is the ball radius of the edge ==
+ rho=0.5: 1/cosh=8.868189e-01  (1-G^2)/(1+G^2)=8.868189e-01
+ rho=1: 1/cosh=6.480543e-01  (1-G^2)/(1+G^2)=6.480543e-01
+ rho=2: 1/cosh=2.658022e-01  (1-G^2)/(1+G^2)=2.658022e-01
+ rho=10: 1/cosh=9.079986e-05  (1-G^2)/(1+G^2)=9.079986e-05
+ rho=50: 1/cosh=3.857500e-22  (1-G^2)/(1+G^2)=0.000000e+00
+ Ink's numbers, lambda = 1 mm: L=4 -> 0.2658  L=20 -> 9.08e-05  L=100 -> 3.86e-22
+
+== 3. the wall is the one-third shell ==
+ wall rapidity ln(3+2 sqrt2) = 1.7627471740, arccosh(3) = 1.7627471740, Gamma^2 = 0.5000000000, centre field = 0.3333333333
+ so a wound of width L = 2 ln(3+2 sqrt2) lambda = 3.525494 lambda keeps exactly 1/3 of the edge field at its centre
+
+== 4. shape of the wound: slab, round (disc), ball ==
+ R/lambda=1.0: slab 0.648055 (0.648054)  disc 0.789848 (0.789848)  ball 0.850918 (0.850918)
+ R/lambda=2.0: slab 0.265802 (0.265802)  disc 0.438676 (0.438676)  ball 0.551441 (0.551441)
+ R/lambda=3.0: slab 0.099328 (0.099328)  disc 0.204885 (0.204885)  ball 0.299465 (0.299465)
+
+== 5. critical width under drugs ==
+ threshold 0.5000: L*/lambda = 2.6339
+ threshold 0.3333: L*/lambda = 3.5255
+ threshold 0.1000: L*/lambda = 5.9864
+ threshold 0.0100: L*/lambda = 10.5966
+ gap x1, leak x1: lambda factor 1.000
+ gap x4, leak x1: lambda factor 2.000
+ gap x1, leak x4: lambda factor 0.500
+ gap x0.25, leak x1: lambda factor 0.500
