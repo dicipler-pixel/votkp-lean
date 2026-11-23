@@ -1,0 +1,8 @@
+K = 8 steps per element, 77 elements (Z 9 to 85)
+   shuffled-column control: mean 0.044, 99th percentile 0.117
+   circle/ball (now)          recall 0.688   difference vs circle +0.000 [+0.000, +0.000]  
+   diamond (per-step peel)    recall 0.675   difference vs circle -0.013 [-0.022, +0.089]  no clear difference
+   cube own reading           recall 0.623   difference vs circle -0.065 [-0.129, +0.000]  no clear difference
+   simplex (ladder shape)     recall 0.779   difference vs circle +0.091 [-0.019, +0.191]  no clear difference
+   control: raw energies      recall 0.052   difference vs circle -0.636 [-0.653, -0.385]  loses to the circle
+      Na  nearest: circle/ball K, diamond K, cube K, simplex K, control: Mg
