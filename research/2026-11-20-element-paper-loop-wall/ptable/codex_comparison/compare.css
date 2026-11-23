@@ -1,0 +1,19 @@
+#v-neighbours h2{font:600 25px var(--head);margin:12px 0 0}
+#v-neighbours h3{font:600 18px var(--head);margin:0 0 10px}
+#v-neighbours .cmp-controls{display:flex;flex-wrap:wrap;align-items:flex-end;gap:12px 18px;margin:18px 0}
+.cmp-controls label{display:grid;gap:4px;color:var(--dim)}
+.cmp-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:24px;margin:24px 0}
+.cmp-grid>div{min-width:0}
+.cmp-grid figure{margin:12px 0 8px}
+#cmp-traces{display:block;width:100%;height:auto;background:var(--panel);border:1px solid var(--edge);border-radius:7px}
+#cmp-match{margin:0;color:var(--dim)}
+.cmp-scroll{overflow-x:auto;max-width:100%}
+#v-neighbours table{min-width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+#v-neighbours table th,#v-neighbours table td{text-align:right;white-space:nowrap;padding:5px 8px}
+#v-neighbours table th:first-child,#v-neighbours table td:first-child{text-align:left}
+#v-neighbours th[scope="row"]{font-weight:500;color:var(--ink)}
+#cmp-score .cmp-selected{background:#172836}
+#v-neighbours details{color:var(--dim);margin-top:10px}
+#v-neighbours summary{cursor:pointer}
+.cmp-key{font-weight:600}
+@media(max-width:880px){.cmp-grid{grid-template-columns:1fr;gap:18px}}

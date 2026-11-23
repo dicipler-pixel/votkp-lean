@@ -1,0 +1,22 @@
+<section class="view" id="v-neighbours" aria-labelledby="cmp-heading">
+<h2 id="cmp-heading">Compare neighbours</h2>
+<p class="note">Choose an element and a distance rule. Each candidate is compared with every other element in the selected set. The score counts how often the nearest neighbour shares the selected label.</p>
+<div class="ctl cmp-controls">
+<label>Elements <select id="cmp-cohort"><option value="primary">77 · F through At</option><option value="without_lanthanides">62 · exclude La through Lu</option></select></label>
+<label>Score by <select id="cmp-label"><option value="long">Long-form table column</option><option value="short">Short-form group</option></select></label>
+<label>Element <select id="cmp-element"></select></label>
+<label>Distance rule <select id="cmp-method"></select></label>
+</div>
+<p class="note" id="cmp-label-note"></p>
+<div class="cmp-grid">
+<div><h3 id="cmp-pair"></h3>
+<p id="cmp-match" aria-live="polite"></p>
+<figure><svg viewBox="0 0 720 305" id="cmp-traces" role="img" aria-labelledby="cmp-trace-title"></svg></figure>
+<details><summary>First nine removal energies (eV), including archive precision</summary><div class="cmp-scroll"><table class="steps" id="cmp-energies"></table></div></details>
+</div>
+<div><h3>Nearest neighbour by rule</h3><div class="cmp-scroll"><table class="steps" id="cmp-score"></table></div></div>
+</div>
+<details class="cmp-contrasts" open><summary>Paired differences for the triangle family</summary><p class="note">Each difference uses the same query elements and fixed neighbour lists. The paired interval resamples their match outcomes. The deletion interval recomputes nearest neighbours on reduced reference sets. Values are percentage points of recall.</p><div class="cmp-scroll"><table class="steps" id="cmp-contrasts"></table></div></details>
+<p class="note">Gold dashes mark the forward wall. Each curve uses the eight ratios of adjacent removal energies. The mat2vec baseline uses cosine distance between material-literature embeddings. Scores describe this reference set.</p>
+<p class="note"><a href="https://github.com/dicipler-pixel/votkp-lean/blob/element-paper/loop-wall/research/2026-11-20-element-paper-loop-wall/PREDICTIONS_REGISTER_20261123.md">Prediction register</a> · <a href="https://github.com/dicipler-pixel/votkp-lean/tree/element-paper/loop-wall/research/2026-11-20-element-paper-loop-wall/ptable/fair_baseline">Paired comparisons, uncertainty and source data</a></p>
+</section>
