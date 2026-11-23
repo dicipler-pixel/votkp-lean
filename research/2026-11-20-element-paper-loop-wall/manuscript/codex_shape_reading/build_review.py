@@ -280,6 +280,63 @@ def typeset(target, title, r):
           'and existing labels. They supply no measured-only advantage and no determination '
           'of the loop-wall cutoff.')
     p.finish()
+    prefix_records = json.loads((transfer / 'experimental_prefix_results.json').read_text())
+    prefix = {q['k']:q for q in prefix_records if q['panel']=='historical'}
+    heavy_prefix = {q['k']:q for q in prefix_records if q['panel']=='heavy'}
+    p.start('V. EXPERIMENTAL THRESHOLDS', 'How much of the comparison survives on measured inputs?', 72)
+    p.par('Two positive log ratios are the shortest ladder with nontrivial projective shape. '
+          'After the empty nine-energy comparison, protocol 67c1435 fixed two rungs as the '
+          'primary case before the shorter-prefix scores were computed. Each query and each '
+          'candidate must have the first three thresholds graded experimental (E) in the '
+          'pinned archive. Candidate neighbours must come from a different period.')
+    first = prefix[2]['full']
+    p.heading('The primary two-rung comparison')
+    p.par(f'{first["queries"]} F–At elements qualify. The simplex recovers '
+          f'{first["simplex_hits"]} displayed columns and plain log ratios recover '
+          f'{first["log_hits"]}. Only the simplex succeeds for {", ".join(first["simplex_only"])}. '
+          f'Only plain logs succeed for {" and ".join(first["log_only"])}. The exact two-sided '
+          f'paired sign statistic gives p = {first["descriptive_sign_p"]:.0f}. The prespecified '
+          'advantage criterion is not met.')
+    p.par(f'Seven queries ({", ".join(first["no_group"])}) have no eligible same-column '
+          'reference outside their own period. They remain in the denominator. The achievable '
+          f'ceiling is {prefix[2]["full_available"]["queries"]}/{first["queries"]}.')
+    p.heading('Coverage as the ladder lengthens')
+    top = p.y
+    rows = [['Rungs', 'Eligible', 'Can match¹', 'Simplex hits', 'Log hits']]
+    for k in range(2,9):
+        block = prefix[k]
+        f = block['full']
+        rows.append([str(k), str(f['queries']), str(block['full_available']['queries']),
+                     str(f['simplex_hits']) if f['scorable'] else '—',
+                     str(f['log_hits']) if f['scorable'] else '—'])
+    xs = [LEFT+8,LEFT+122,LEFT+244,LEFT+367,RIGHT-10]
+    p.pdf.setFillColor(PALE)
+    p.pdf.rect(LEFT, top-20, COLUMN, 20, fill=1, stroke=0)
+    for j,row in enumerate(rows):
+        p.pdf.setFont('UIBold' if j==0 else 'UI',9.4)
+        p.pdf.setFillColor(INK)
+        for col,(x,w) in enumerate(zip(xs,row)):
+            (p.pdf.drawRightString if col else p.pdf.drawString)(x, top-14-19*j, w)
+    p.y -= 19*len(rows)+7
+    p.par('¹ Number of queries with an eligible reference carrying the true label. At five '
+          'rungs every query has candidates but no correct label is available; both scores '
+          'are zero. At six rungs only Hg qualifies and cannot nominate a candidate. At '
+          'seven and eight rungs there are no historical queries. Dashes denote unscorable panels.',
+          font='UI', size=8.7, leading=12.8)
+    p.heading('Separate another rung from a change in the element set')
+    third = prefix[3]
+    same = third['k2_matched']
+    added = third['full']
+    p.par(f'Hold the same {added["queries"]} elements and allowed neighbours fixed. Two rungs '
+          f'give {same["simplex_hits"]} simplex and {same["log_hits"]} log-ratio hits. Three rungs '
+          f'give {added["simplex_hits"]} and {added["log_hits"]}. This describes the additional '
+          'rung on a matched subset. The registered superiority test used the two-rung panel above.')
+    if any(b['full']['queries'] for b in heavy_prefix.values()):
+        raise ValueError('Heavy experimental coverage changed; revisit interpretation')
+    p.par('No Rn–Og query qualifies even with two rungs. The heavy extension therefore yields '
+          'no experimental-only score at any tested length. The earlier eight heavy queries '
+          'on page 71 used mixed-grade thresholds.')
+    p.finish()
     p.pdf.save()
 
 
@@ -293,7 +350,7 @@ def build():
         combined = Path(tmp) / 'combined.pdf'
         copyfile(PREVIOUS, combined)
         with fitz.open(combined) as document, fitz.open(extra) as new:
-            if len(document)!=67 or len(new)!=4:
+            if len(document)!=67 or len(new)!=5:
                 raise ValueError('Unexpected number of pages')
             document.insert_pdf(new)
             document.save(combined, incremental=True, encryption=fitz.PDF_ENCRYPT_KEEP, no_new_id=True)
@@ -303,10 +360,10 @@ def build():
                     raise ValueError(f'Original page text changed: {i+1}')
                 if old[i].get_pixmap().samples!=review[i].get_pixmap().samples:
                     raise ValueError(f'Original page appearance changed: {i+1}')
-            if len(review)!=71 or not combined.read_bytes().startswith(PREVIOUS.read_bytes()):
+            if len(review)!=72 or not combined.read_bytes().startswith(PREVIOUS.read_bytes()):
                 raise ValueError('Original byte prefix or combined length changed')
         copyfile(combined, OUTPUT)
-    print(f'{OUTPUT.name}: 71 pages; original 67 page texts and rasters verified.')
+    print(f'{OUTPUT.name}: 72 pages; original 67 page texts and rasters verified.')
 
 
 if __name__=='__main__':

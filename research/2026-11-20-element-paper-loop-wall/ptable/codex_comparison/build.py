@@ -79,6 +79,20 @@ def build():
         "rows": [r for r in panels if r["panel"] == "heavy"]
     }
 
+    prefix = json.loads((transfer_dir / "experimental_prefix_results.json").read_bytes())
+    prefix = {(r["panel"], r["k"]): r for r in prefix}
+    primary = prefix["historical", 2]
+    deeper = prefix["historical", 3]
+    if primary["full"]["queries"] - len(primary["full"]["no_group"]) != primary["full_available"]["queries"]:
+        raise ValueError("Inconsistent attainable group count in two-rung experimental panel")
+    if deeper["full"]["queries"] != deeper["k2_matched"]["queries"]:
+        raise ValueError("Different query counts in matched three-rung experimental panel")
+    display["transfer"]["prefix"] = {
+        "two": primary["full"], "attainable": primary["full_available"]["queries"],
+        "heavy_queries": prefix["heavy", 2]["full"]["queries"],
+        "three": deeper["full"], "two_matched": deeper["k2_matched"],
+    }
+
     title = "Periodic Table of Elemental Peels · Codex comparison edition"
     source = replace_once(source, "<title>Periodic Table of Elemental Peels v2.2", "<title>" + title)
     source = replace_once(source, "v2.2, 23 November 2026</div>", "v2.2 · Codex comparison edition, 23 November 2026</div>")

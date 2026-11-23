@@ -89,6 +89,9 @@ function cmpDrawTransfer(){
       r.simplex_grades,r.logs+' · '+(r.logs_hit==='True'?'match':'miss'),r.logs_grades]);
     if(r.simplex_hit!==r.logs_hit) row.className='cmp-discordant';
   }
+  const {two,attainable,heavy_queries,three,two_matched}=cmpData.transfer.prefix;
+  $('cmp-prefix').textContent='Two rungs need three consecutive experimental thresholds. Across '+two.queries+' historical queries, the triangle family found '+two.simplex_hits+' columns and plain log ratios found '+two.log_hits+' (paired sign p = '+two.descriptive_sign_p+'). '+two.no_group.length+' queries had no eligible reference from their column, so at most '+attainable+' could match. Eligible heavy queries: '+heavy_queries+'.';
+  $('cmp-prefix-matched').textContent='With the same '+three.queries+' queries and candidate pools, two rungs gave '+two_matched.simplex_hits+' triangle and '+two_matched.log_hits+' plain-log matches. Three rungs gave '+three.simplex_hits+' and '+three.log_hits+', respectively.';
   const g=heavy.query_thresholds;
   $('cmp-grades').textContent='Heavy query thresholds: '+g.E+' experimental, '+g.S+' semiempirical and '+g.T+' theoretical. Heavy queries with nine experimental inputs: '+experimental_queries+' of '+heavy.queries+'.';
 }

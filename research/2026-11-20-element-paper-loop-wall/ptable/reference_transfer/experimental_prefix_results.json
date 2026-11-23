@@ -1,0 +1,904 @@
+[
+  {
+    "k": 2,
+    "panel": "historical",
+    "references": 33,
+    "full": {
+      "queries": 33,
+      "simplex_hits": 18,
+      "log_hits": 17,
+      "simplex_only": [
+        "Ne",
+        "As",
+        "Kr"
+      ],
+      "log_only": [
+        "Se",
+        "Br"
+      ],
+      "no_group": [
+        "Ti",
+        "V",
+        "Cr",
+        "Mn",
+        "Fe",
+        "Ni",
+        "Cu"
+      ],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {
+        "E": 99
+      },
+      "descriptive_sign_p": 1,
+      "scorable": true
+    },
+    "full_available": {
+      "queries": 26,
+      "simplex_hits": 18,
+      "log_hits": 17,
+      "simplex_only": [
+        "Ne",
+        "As",
+        "Kr"
+      ],
+      "log_only": [
+        "Se",
+        "Br"
+      ],
+      "no_group": [],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {
+        "E": 78
+      },
+      "descriptive_sign_p": 1
+    },
+    "k2_matched": {
+      "queries": 33,
+      "simplex_hits": 18,
+      "log_hits": 17,
+      "simplex_only": [
+        "Ne",
+        "As",
+        "Kr"
+      ],
+      "log_only": [
+        "Se",
+        "Br"
+      ],
+      "no_group": [
+        "Ti",
+        "V",
+        "Cr",
+        "Mn",
+        "Fe",
+        "Ni",
+        "Cu"
+      ],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {
+        "E": 99
+      },
+      "descriptive_sign_p": 1,
+      "scorable": true
+    },
+    "k2_matched_available": {
+      "queries": 26,
+      "simplex_hits": 18,
+      "log_hits": 17,
+      "simplex_only": [
+        "Ne",
+        "As",
+        "Kr"
+      ],
+      "log_only": [
+        "Se",
+        "Br"
+      ],
+      "no_group": [],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {
+        "E": 78
+      },
+      "descriptive_sign_p": 1
+    }
+  },
+  {
+    "k": 2,
+    "panel": "heavy",
+    "references": 33,
+    "full": {
+      "queries": 0,
+      "simplex_hits": 0,
+      "log_hits": 0,
+      "simplex_only": [],
+      "log_only": [],
+      "no_group": [],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {},
+      "descriptive_sign_p": null,
+      "scorable": false
+    },
+    "full_available": {
+      "queries": 0,
+      "simplex_hits": 0,
+      "log_hits": 0,
+      "simplex_only": [],
+      "log_only": [],
+      "no_group": [],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {},
+      "descriptive_sign_p": null
+    },
+    "k2_matched": {
+      "queries": 0,
+      "simplex_hits": 0,
+      "log_hits": 0,
+      "simplex_only": [],
+      "log_only": [],
+      "no_group": [],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {},
+      "descriptive_sign_p": null,
+      "scorable": false
+    },
+    "k2_matched_available": {
+      "queries": 0,
+      "simplex_hits": 0,
+      "log_hits": 0,
+      "simplex_only": [],
+      "log_only": [],
+      "no_group": [],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {},
+      "descriptive_sign_p": null
+    }
+  },
+  {
+    "k": 3,
+    "panel": "historical",
+    "references": 22,
+    "full": {
+      "queries": 22,
+      "simplex_hits": 16,
+      "log_hits": 14,
+      "simplex_only": [
+        "Al",
+        "Zn"
+      ],
+      "log_only": [],
+      "no_group": [
+        "Sc",
+        "Ti",
+        "V",
+        "Fe",
+        "Kr"
+      ],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {
+        "E": 88
+      },
+      "descriptive_sign_p": 0.5,
+      "scorable": true
+    },
+    "full_available": {
+      "queries": 17,
+      "simplex_hits": 16,
+      "log_hits": 14,
+      "simplex_only": [
+        "Al",
+        "Zn"
+      ],
+      "log_only": [],
+      "no_group": [],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {
+        "E": 68
+      },
+      "descriptive_sign_p": 0.5
+    },
+    "k2_matched": {
+      "queries": 22,
+      "simplex_hits": 11,
+      "log_hits": 12,
+      "simplex_only": [],
+      "log_only": [
+        "Se"
+      ],
+      "no_group": [
+        "Sc",
+        "Ti",
+        "V",
+        "Fe",
+        "Kr"
+      ],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {
+        "E": 66
+      },
+      "descriptive_sign_p": 1,
+      "scorable": true
+    },
+    "k2_matched_available": {
+      "queries": 17,
+      "simplex_hits": 11,
+      "log_hits": 12,
+      "simplex_only": [],
+      "log_only": [
+        "Se"
+      ],
+      "no_group": [],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {
+        "E": 51
+      },
+      "descriptive_sign_p": 1
+    }
+  },
+  {
+    "k": 3,
+    "panel": "heavy",
+    "references": 22,
+    "full": {
+      "queries": 0,
+      "simplex_hits": 0,
+      "log_hits": 0,
+      "simplex_only": [],
+      "log_only": [],
+      "no_group": [],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {},
+      "descriptive_sign_p": null,
+      "scorable": false
+    },
+    "full_available": {
+      "queries": 0,
+      "simplex_hits": 0,
+      "log_hits": 0,
+      "simplex_only": [],
+      "log_only": [],
+      "no_group": [],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {},
+      "descriptive_sign_p": null
+    },
+    "k2_matched": {
+      "queries": 0,
+      "simplex_hits": 0,
+      "log_hits": 0,
+      "simplex_only": [],
+      "log_only": [],
+      "no_group": [],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {},
+      "descriptive_sign_p": null,
+      "scorable": false
+    },
+    "k2_matched_available": {
+      "queries": 0,
+      "simplex_hits": 0,
+      "log_hits": 0,
+      "simplex_only": [],
+      "log_only": [],
+      "no_group": [],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {},
+      "descriptive_sign_p": null
+    }
+  },
+  {
+    "k": 4,
+    "panel": "historical",
+    "references": 12,
+    "full": {
+      "queries": 12,
+      "simplex_hits": 7,
+      "log_hits": 6,
+      "simplex_only": [
+        "Si"
+      ],
+      "log_only": [],
+      "no_group": [
+        "Ti",
+        "V",
+        "Te",
+        "Hg",
+        "Tl"
+      ],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {
+        "E": 60
+      },
+      "descriptive_sign_p": 1,
+      "scorable": true
+    },
+    "full_available": {
+      "queries": 7,
+      "simplex_hits": 7,
+      "log_hits": 6,
+      "simplex_only": [
+        "Si"
+      ],
+      "log_only": [],
+      "no_group": [],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {
+        "E": 35
+      },
+      "descriptive_sign_p": 1
+    },
+    "k2_matched": {
+      "queries": 12,
+      "simplex_hits": 3,
+      "log_hits": 3,
+      "simplex_only": [],
+      "log_only": [],
+      "no_group": [
+        "Ti",
+        "V",
+        "Te",
+        "Hg",
+        "Tl"
+      ],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {
+        "E": 36
+      },
+      "descriptive_sign_p": 1,
+      "scorable": true
+    },
+    "k2_matched_available": {
+      "queries": 7,
+      "simplex_hits": 3,
+      "log_hits": 3,
+      "simplex_only": [],
+      "log_only": [],
+      "no_group": [],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {
+        "E": 21
+      },
+      "descriptive_sign_p": 1
+    }
+  },
+  {
+    "k": 4,
+    "panel": "heavy",
+    "references": 12,
+    "full": {
+      "queries": 0,
+      "simplex_hits": 0,
+      "log_hits": 0,
+      "simplex_only": [],
+      "log_only": [],
+      "no_group": [],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {},
+      "descriptive_sign_p": null,
+      "scorable": false
+    },
+    "full_available": {
+      "queries": 0,
+      "simplex_hits": 0,
+      "log_hits": 0,
+      "simplex_only": [],
+      "log_only": [],
+      "no_group": [],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {},
+      "descriptive_sign_p": null
+    },
+    "k2_matched": {
+      "queries": 0,
+      "simplex_hits": 0,
+      "log_hits": 0,
+      "simplex_only": [],
+      "log_only": [],
+      "no_group": [],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {},
+      "descriptive_sign_p": null,
+      "scorable": false
+    },
+    "k2_matched_available": {
+      "queries": 0,
+      "simplex_hits": 0,
+      "log_hits": 0,
+      "simplex_only": [],
+      "log_only": [],
+      "no_group": [],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {},
+      "descriptive_sign_p": null
+    }
+  },
+  {
+    "k": 5,
+    "panel": "historical",
+    "references": 4,
+    "full": {
+      "queries": 4,
+      "simplex_hits": 0,
+      "log_hits": 0,
+      "simplex_only": [],
+      "log_only": [],
+      "no_group": [
+        "V",
+        "As",
+        "Br",
+        "Hg"
+      ],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {
+        "E": 24
+      },
+      "descriptive_sign_p": 1,
+      "scorable": true
+    },
+    "full_available": {
+      "queries": 0,
+      "simplex_hits": 0,
+      "log_hits": 0,
+      "simplex_only": [],
+      "log_only": [],
+      "no_group": [],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {},
+      "descriptive_sign_p": null
+    },
+    "k2_matched": {
+      "queries": 4,
+      "simplex_hits": 0,
+      "log_hits": 0,
+      "simplex_only": [],
+      "log_only": [],
+      "no_group": [
+        "V",
+        "As",
+        "Br",
+        "Hg"
+      ],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {
+        "E": 12
+      },
+      "descriptive_sign_p": 1,
+      "scorable": true
+    },
+    "k2_matched_available": {
+      "queries": 0,
+      "simplex_hits": 0,
+      "log_hits": 0,
+      "simplex_only": [],
+      "log_only": [],
+      "no_group": [],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {},
+      "descriptive_sign_p": null
+    }
+  },
+  {
+    "k": 5,
+    "panel": "heavy",
+    "references": 4,
+    "full": {
+      "queries": 0,
+      "simplex_hits": 0,
+      "log_hits": 0,
+      "simplex_only": [],
+      "log_only": [],
+      "no_group": [],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {},
+      "descriptive_sign_p": null,
+      "scorable": false
+    },
+    "full_available": {
+      "queries": 0,
+      "simplex_hits": 0,
+      "log_hits": 0,
+      "simplex_only": [],
+      "log_only": [],
+      "no_group": [],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {},
+      "descriptive_sign_p": null
+    },
+    "k2_matched": {
+      "queries": 0,
+      "simplex_hits": 0,
+      "log_hits": 0,
+      "simplex_only": [],
+      "log_only": [],
+      "no_group": [],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {},
+      "descriptive_sign_p": null,
+      "scorable": false
+    },
+    "k2_matched_available": {
+      "queries": 0,
+      "simplex_hits": 0,
+      "log_hits": 0,
+      "simplex_only": [],
+      "log_only": [],
+      "no_group": [],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {},
+      "descriptive_sign_p": null
+    }
+  },
+  {
+    "k": 6,
+    "panel": "historical",
+    "references": 1,
+    "full": {
+      "queries": 1,
+      "simplex_hits": 0,
+      "log_hits": 0,
+      "simplex_only": [],
+      "log_only": [],
+      "no_group": [
+        "Hg"
+      ],
+      "unresolved": [
+        "Hg"
+      ],
+      "ties": [],
+      "query_thresholds": {
+        "E": 7
+      },
+      "descriptive_sign_p": null,
+      "scorable": false
+    },
+    "full_available": {
+      "queries": 0,
+      "simplex_hits": 0,
+      "log_hits": 0,
+      "simplex_only": [],
+      "log_only": [],
+      "no_group": [],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {},
+      "descriptive_sign_p": null
+    },
+    "k2_matched": {
+      "queries": 1,
+      "simplex_hits": 0,
+      "log_hits": 0,
+      "simplex_only": [],
+      "log_only": [],
+      "no_group": [
+        "Hg"
+      ],
+      "unresolved": [
+        "Hg"
+      ],
+      "ties": [],
+      "query_thresholds": {
+        "E": 3
+      },
+      "descriptive_sign_p": null,
+      "scorable": false
+    },
+    "k2_matched_available": {
+      "queries": 0,
+      "simplex_hits": 0,
+      "log_hits": 0,
+      "simplex_only": [],
+      "log_only": [],
+      "no_group": [],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {},
+      "descriptive_sign_p": null
+    }
+  },
+  {
+    "k": 6,
+    "panel": "heavy",
+    "references": 1,
+    "full": {
+      "queries": 0,
+      "simplex_hits": 0,
+      "log_hits": 0,
+      "simplex_only": [],
+      "log_only": [],
+      "no_group": [],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {},
+      "descriptive_sign_p": null,
+      "scorable": false
+    },
+    "full_available": {
+      "queries": 0,
+      "simplex_hits": 0,
+      "log_hits": 0,
+      "simplex_only": [],
+      "log_only": [],
+      "no_group": [],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {},
+      "descriptive_sign_p": null
+    },
+    "k2_matched": {
+      "queries": 0,
+      "simplex_hits": 0,
+      "log_hits": 0,
+      "simplex_only": [],
+      "log_only": [],
+      "no_group": [],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {},
+      "descriptive_sign_p": null,
+      "scorable": false
+    },
+    "k2_matched_available": {
+      "queries": 0,
+      "simplex_hits": 0,
+      "log_hits": 0,
+      "simplex_only": [],
+      "log_only": [],
+      "no_group": [],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {},
+      "descriptive_sign_p": null
+    }
+  },
+  {
+    "k": 7,
+    "panel": "historical",
+    "references": 0,
+    "full": {
+      "queries": 0,
+      "simplex_hits": 0,
+      "log_hits": 0,
+      "simplex_only": [],
+      "log_only": [],
+      "no_group": [],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {},
+      "descriptive_sign_p": null,
+      "scorable": false
+    },
+    "full_available": {
+      "queries": 0,
+      "simplex_hits": 0,
+      "log_hits": 0,
+      "simplex_only": [],
+      "log_only": [],
+      "no_group": [],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {},
+      "descriptive_sign_p": null
+    },
+    "k2_matched": {
+      "queries": 0,
+      "simplex_hits": 0,
+      "log_hits": 0,
+      "simplex_only": [],
+      "log_only": [],
+      "no_group": [],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {},
+      "descriptive_sign_p": null,
+      "scorable": false
+    },
+    "k2_matched_available": {
+      "queries": 0,
+      "simplex_hits": 0,
+      "log_hits": 0,
+      "simplex_only": [],
+      "log_only": [],
+      "no_group": [],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {},
+      "descriptive_sign_p": null
+    }
+  },
+  {
+    "k": 7,
+    "panel": "heavy",
+    "references": 0,
+    "full": {
+      "queries": 0,
+      "simplex_hits": 0,
+      "log_hits": 0,
+      "simplex_only": [],
+      "log_only": [],
+      "no_group": [],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {},
+      "descriptive_sign_p": null,
+      "scorable": false
+    },
+    "full_available": {
+      "queries": 0,
+      "simplex_hits": 0,
+      "log_hits": 0,
+      "simplex_only": [],
+      "log_only": [],
+      "no_group": [],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {},
+      "descriptive_sign_p": null
+    },
+    "k2_matched": {
+      "queries": 0,
+      "simplex_hits": 0,
+      "log_hits": 0,
+      "simplex_only": [],
+      "log_only": [],
+      "no_group": [],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {},
+      "descriptive_sign_p": null,
+      "scorable": false
+    },
+    "k2_matched_available": {
+      "queries": 0,
+      "simplex_hits": 0,
+      "log_hits": 0,
+      "simplex_only": [],
+      "log_only": [],
+      "no_group": [],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {},
+      "descriptive_sign_p": null
+    }
+  },
+  {
+    "k": 8,
+    "panel": "historical",
+    "references": 0,
+    "full": {
+      "queries": 0,
+      "simplex_hits": 0,
+      "log_hits": 0,
+      "simplex_only": [],
+      "log_only": [],
+      "no_group": [],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {},
+      "descriptive_sign_p": null,
+      "scorable": false
+    },
+    "full_available": {
+      "queries": 0,
+      "simplex_hits": 0,
+      "log_hits": 0,
+      "simplex_only": [],
+      "log_only": [],
+      "no_group": [],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {},
+      "descriptive_sign_p": null
+    },
+    "k2_matched": {
+      "queries": 0,
+      "simplex_hits": 0,
+      "log_hits": 0,
+      "simplex_only": [],
+      "log_only": [],
+      "no_group": [],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {},
+      "descriptive_sign_p": null,
+      "scorable": false
+    },
+    "k2_matched_available": {
+      "queries": 0,
+      "simplex_hits": 0,
+      "log_hits": 0,
+      "simplex_only": [],
+      "log_only": [],
+      "no_group": [],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {},
+      "descriptive_sign_p": null
+    }
+  },
+  {
+    "k": 8,
+    "panel": "heavy",
+    "references": 0,
+    "full": {
+      "queries": 0,
+      "simplex_hits": 0,
+      "log_hits": 0,
+      "simplex_only": [],
+      "log_only": [],
+      "no_group": [],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {},
+      "descriptive_sign_p": null,
+      "scorable": false
+    },
+    "full_available": {
+      "queries": 0,
+      "simplex_hits": 0,
+      "log_hits": 0,
+      "simplex_only": [],
+      "log_only": [],
+      "no_group": [],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {},
+      "descriptive_sign_p": null
+    },
+    "k2_matched": {
+      "queries": 0,
+      "simplex_hits": 0,
+      "log_hits": 0,
+      "simplex_only": [],
+      "log_only": [],
+      "no_group": [],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {},
+      "descriptive_sign_p": null,
+      "scorable": false
+    },
+    "k2_matched_available": {
+      "queries": 0,
+      "simplex_hits": 0,
+      "log_hits": 0,
+      "simplex_only": [],
+      "log_only": [],
+      "no_group": [],
+      "unresolved": [],
+      "ties": [],
+      "query_thresholds": {},
+      "descriptive_sign_p": null
+    }
+  }
+]

@@ -13,3 +13,5 @@ $$\min_{a>0}\max_k |\ln(x_k/(a y_k))|=\frac{\max_k u_k-\min_k u_k}{2}.$$
 This gives the table two distinct readings of the same measured inputs. The normalized profile compares where the cost is concentrated along the ladder. Recovering the wall address also needs its scale. A good nearest-neighbour score for the profile cannot select the exact wall.
 
 The independent replay in this folder asserts the minimax formula on every pair to floating-point tolerance, tests the synthetic wall classifications in exact rational arithmetic, and prints the input digest and changed element labels.
+
+**Tolerance around the best scale.** Let $m=(\min u+\max u)/2$ and $R=(\max u-\min u)/2$. At any log scale $t$, the largest residual is exactly $R+|t-m|$. Therefore allowing at most $\varepsilon\ge0$ extra log error admits exactly the closed scale interval $[e^m e^{-\varepsilon},e^m e^{\varepsilon}]$. This is an algebraic tolerance, independent of experimental uncertainty. The real finite-profile, attainment, uniqueness, tolerance and squaring statements are [checked in Lean](formal/README.md).
