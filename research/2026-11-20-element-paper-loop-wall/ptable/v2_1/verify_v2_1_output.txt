@@ -1,0 +1,7 @@
+3d errors 0 baseline 1 / 45 | page agrees: True
+4d errors 1 baseline 10 / 210 | page agrees: True
+5d errors 1 baseline 9 / 36 | page agrees: True
+tile marks on the main table: 20 ['Ac:t', 'Ag:d', 'Au:d', 'Ce:t', 'Cm:t', 'Cr:d', 'Cu:d', 'Gd:t', 'La:t', 'Lr:t', 'Mo:d', 'Nb:d', 'Np:t', 'Pa:t', 'Pd:d', 'Pt:d', 'Rh:d', 'Ru:d', 'Th:t', 'U:t']
+drawer section present (Fe 26 should be False): [(24, True), (46, True), (57, True), (92, True), (103, True), (26, False)]
+byline: ['Jeromie Beasley · hydrogen to darmstadtium · v2.1, 22 November 2026'] | Codex/Claude/Elizabeth in visible text: []
+page errors: none

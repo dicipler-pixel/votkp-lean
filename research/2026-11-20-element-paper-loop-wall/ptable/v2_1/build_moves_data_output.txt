@@ -1,0 +1,5 @@
+3d: movers 2 of 10, best errors 0; random sets doing as well or better: 1 of 45 = 0.0222
+4d: movers 6 of 10, best errors 1; random sets doing as well or better: 10 of 210 = 0.0476
+5d: movers 2 of 9, best errors 1; random sets doing as well or better: 9 of 36 = 0.2500
+joint (all three rows at once): 0.000265 = 1/3780
+total errors 2; random sets with total errors <= 2: 349 of 340200 = 0.001026

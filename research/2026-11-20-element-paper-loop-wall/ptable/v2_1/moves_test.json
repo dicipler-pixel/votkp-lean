@@ -1,0 +1,216 @@
+{
+ "rows": [
+  {
+   "row": "3d",
+   "n": 10,
+   "k": 2,
+   "errors": 0,
+   "hits": 1,
+   "total": 45,
+   "p": 0.022222222222222223,
+   "pts": [
+    {
+     "Z": 21,
+     "sym": "Sc",
+     "z1": 1.9507,
+     "mover": false
+    },
+    {
+     "Z": 22,
+     "sym": "Ti",
+     "z1": 1.9882,
+     "mover": false
+    },
+    {
+     "Z": 23,
+     "sym": "V",
+     "z1": 2.1692,
+     "mover": false
+    },
+    {
+     "Z": 24,
+     "sym": "Cr",
+     "z1": 2.4365,
+     "mover": true
+    },
+    {
+     "Z": 25,
+     "sym": "Mn",
+     "z1": 2.1038,
+     "mover": false
+    },
+    {
+     "Z": 26,
+     "sym": "Fe",
+     "z1": 2.0499,
+     "mover": false
+    },
+    {
+     "Z": 27,
+     "sym": "Co",
+     "z1": 2.1678,
+     "mover": false
+    },
+    {
+     "Z": 28,
+     "sym": "Ni",
+     "z1": 2.3782,
+     "mover": false
+    },
+    {
+     "Z": 29,
+     "sym": "Cu",
+     "z1": 2.6264,
+     "mover": true
+    },
+    {
+     "Z": 30,
+     "sym": "Zn",
+     "z1": 1.9123,
+     "mover": false
+    }
+   ]
+  },
+  {
+   "row": "4d",
+   "n": 10,
+   "k": 6,
+   "errors": 1,
+   "hits": 10,
+   "total": 210,
+   "p": 0.047619047619047616,
+   "pts": [
+    {
+     "Z": 39,
+     "sym": "Y",
+     "z1": 1.9661,
+     "mover": false
+    },
+    {
+     "Z": 40,
+     "sym": "Zr",
+     "z1": 1.9792,
+     "mover": false
+    },
+    {
+     "Z": 41,
+     "sym": "Nb",
+     "z1": 2.1187,
+     "mover": true
+    },
+    {
+     "Z": 42,
+     "sym": "Mo",
+     "z1": 2.2785,
+     "mover": true
+    },
+    {
+     "Z": 43,
+     "sym": "Tc",
+     "z1": 2.1434,
+     "mover": false
+    },
+    {
+     "Z": 44,
+     "sym": "Ru",
+     "z1": 2.277,
+     "mover": true
+    },
+    {
+     "Z": 45,
+     "sym": "Rh",
+     "z1": 2.4239,
+     "mover": true
+    },
+    {
+     "Z": 46,
+     "sym": "Pd",
+     "z1": 2.3306,
+     "mover": true
+    },
+    {
+     "Z": 47,
+     "sym": "Ag",
+     "z1": 2.8358,
+     "mover": true
+    },
+    {
+     "Z": 48,
+     "sym": "Cd",
+     "z1": 1.88,
+     "mover": false
+    }
+   ]
+  },
+  {
+   "row": "5d",
+   "n": 9,
+   "k": 2,
+   "errors": 1,
+   "hits": 9,
+   "total": 36,
+   "p": 0.25,
+   "pts": [
+    {
+     "Z": 57,
+     "sym": "La",
+     "z1": 2.0056,
+     "mover": false
+    },
+    {
+     "Z": 72,
+     "sym": "Hf",
+     "z1": 2.1406,
+     "mover": false
+    },
+    {
+     "Z": 73,
+     "sym": "Ta",
+     "z1": 2.1458,
+     "mover": false
+    },
+    {
+     "Z": 74,
+     "sym": "W",
+     "z1": 2.0816,
+     "mover": false
+    },
+    {
+     "Z": 75,
+     "sym": "Re",
+     "z1": 2.1191,
+     "mover": false
+    },
+    {
+     "Z": 76,
+     "sym": "Os",
+     "z1": 2.0146,
+     "mover": false
+    },
+    {
+     "Z": 77,
+     "sym": "Ir",
+     "z1": 1.8958,
+     "mover": false
+    },
+    {
+     "Z": 78,
+     "sym": "Pt",
+     "z1": 2.0717,
+     "mover": true
+    },
+    {
+     "Z": 79,
+     "sym": "Au",
+     "z1": 2.1899,
+     "mover": true
+    }
+   ]
+  }
+ ],
+ "joint": 0.00026455026455026457,
+ "joint_frac": "1/3780",
+ "total_obs": 2,
+ "total_hits": 349,
+ "total_den": 340200
+}

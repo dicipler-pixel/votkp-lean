@@ -1,0 +1,6 @@
+3d Sc:1.951 Ti:1.988 V:2.169 Cr*:2.436 Mn:2.104 Fe:2.050 Co:2.168 Ni:2.378 Cu*:2.626 Zn:1.912
+   best single-cutoff errors (movers = higher z1): 0
+4d Y:1.966 Zr:1.979 Nb*:2.119 Mo*:2.278 Tc:2.143 Ru*:2.277 Rh*:2.424 Pd*:2.331 Ag*:2.836 Cd:1.880
+   best single-cutoff errors (movers = higher z1): 1
+5d La:2.006 Hf:2.141 Ta:2.146 W:2.082 Re:2.119 Os:2.015 Ir:1.896 Pt*:2.072 Au*:2.190
+   best single-cutoff errors (movers = higher z1): 1

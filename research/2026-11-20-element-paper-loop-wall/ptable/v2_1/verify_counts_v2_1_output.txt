@@ -1,0 +1,9 @@
+H-At steps 3570 outside 8 | expected 3570 / 8
+Rn-Ds steps 2144 outside 0 | total 5714 expected 5714
+anion rungs 65 outside 53 | expected 65 / 53
+metals above 1/2 35 of 35 ; non-metals above 0 of 6
+window [5.807902, 5.866540)
+Fr radon-core z = 5.5000 S
+page: 3570 8 2144 0 65 53
+page tiles 118 Z range 1 118
+byline check: ['Jeromie Beasley · hydrogen to darmstadtium · v2.1, 22 November 2026'] | other names in visible text: []
