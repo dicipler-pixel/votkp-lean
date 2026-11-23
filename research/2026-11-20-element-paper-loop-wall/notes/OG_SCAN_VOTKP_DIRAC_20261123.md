@@ -75,3 +75,5 @@ For a reciprocal quadratic t² − 2k t + 1 with real root z = k + √(k²−1),
 And the trefoil's Alexander root e^{iπ/3} lies on the circle, where Γ = i tan(π/6) = i/√3: the same size 1/√3, turned onto the reactance axis.
 So the figure-eight's roots land on the real (peel) radius, the trefoil's on the imaginary (phase) axis, and the wall is the next rung up.
 **Untested as physics.** Test: count element peel steps within ±0.01 of Γ = 1/√5 and 1/√3 against the same window slid across Γ ∈ [0.3, 0.8]. **Kill:** if neither value is in the top 10% of windows, there is no elemental signal and it stays a knot-side fact.
+
+**L3 result (OG-WALL-LADDER-02, run on ptable_data.json, 3570 steps, window ±0.01 slid over Γ ∈ [0.30, 0.80]):** 1/√5 has 9 steps (61.7th percentile), 1/√3 has 1 (2.0th), and the wall 1/√2 has 2 (15.8th). Median window 4, 90th percentile 31. **Killed as an elemental signal.** Steps do not cluster at the knot rungs. The wall is a threshold steps cross, not a place they sit, which matches the 8-of-3570 count. The ladder stays a derived knot-side fact.
