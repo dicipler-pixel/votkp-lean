@@ -42,3 +42,36 @@ Grades: **derived** (follows from the math), **measured** (run on data, script e
 ## The March 2025 thread
 
 `our math.txt` is the first seed: Tesla's 25 Hz winding, 3-6-9 as harmonic octaves, Russell's two-way universe, ground/water/air-ether as three media, Dirac's symmetry. The percentages in it ("90.2% close", "100% fit") came from the chat model, with no tests behind them. The programme from July on replaced them with kill conditions. What carries forward from it is the questions: scales of media (Plato's elements as scales), 3-6-9 as a ladder, and two-way motion (the two rails in the Dirac Time ledger, the open/short mirror in the shapes work).
+
+## Part 2 — the July originals and the GitHub repos (added 23 Nov, 02:45 Central)
+
+Read in full from Drive: `Dirac_anchor (2).pdf` (9 Jul), `gpt.pdf` (9 Jul, Papers I–II), `gpt (4).pdf` (10 Jul, 14 pp), `gpt (8).pdf` (11 Jul, 17 pp).
+Read on GitHub: dirac-time-lean (README, file list), dirac-time-d25-lean (README, `AlexanderWall.lean`), operator-first
+`research/elemental_foundations/Elemental_Peeling.tex` (8 Sep, branch research/elemental-foundations), `papers/peeling-cascade/README.md`.
+
+| July / GitHub original | Bears on | Grade |
+|---|---|---|
+| Phase transport dΦ = [(m+α)dβ − (n+β)dα]/[(m+α)²+(n+β)²] on the torus Dirac anchor (9 Jul) | Every phase/winding reading since starts here | derived |
+| Redistribution operator F(Ω,Π) = (I−Π)ΩΠ + Π Ω(I−Π); F = 0 iff [Ω,Π] = 0 (11 Jul, App. A) | Same object as GRAD-PROJECTOR-01's [A,P] and the commutator ‖[I,T]‖² this month. The "gradient is a smaller projector" logic is the July F operator | derived |
+| Phase-lock rupture where the curve Jacobian J_M → 0, phase jump Δθ = π (Paper II) | Shape-space surgery: a polygon chart's Schwarz–Christoffel derivative (1−wⁿ)^(−2/n) blows up exactly at the n corners. Corners are the chart's rupture points. The jump there is the exterior angle 2π/n, π only for n = 2 | derived (match), meaning untested |
+| Gluing anomaly Δ = Σ log(1 + ε²μ_k) > 0 (9–11 Jul) | Same Schur form as v0.2 §5.3; the cost of joining two shape charts along an edge | derived |
+| Trichotomy of loops: open, chiral \|w\| = 1, neutral w = 0 (9 Jul) | Candidate classing for loop paths on the shape charts | untested |
+| A-polynomials 4₁ and 8₁₉ (L = −M⁻¹²) used as path constraints (9 Jul) | 8₁₉ is a torus knot; kept as the control family in Dirac Time v2 | derived |
+| D25 AlexanderWall.lean: trefoil walls on the circle at α ≡ ±1/6; figure-eight has no walls on the circle | See L3 | proved in Lean |
+| Elemental Peeling 1.0 (8 Sep): twin contacts with equal conductance G₀/2, Fano ½ and optical gap, opposite slopes; transmissions 8100/19981 vs 12100/20021 | The first "same scalar, different response" witness; the shapes table's address diamond is a coarser version of the same question | derived |
+
+Already killed in the July set and still dead (n-invariant audit, 9 Aug): η ≡ 0 on the torus by chiral symmetry; zero modes are points, not walls; straight-path spectral flow 0. Their surviving replacement is the Levine–Tristram signature, whose jumps sit at Alexander roots on the circle. That is the D25 wall criterion.
+
+### L3. The knot roots sit on the same reflection ladder as the peel wall (derived, script OG-WALL-LADDER-01)
+
+For a reciprocal quadratic t² − 2k t + 1 with real root z = k + √(k²−1), Γ(z) = (z−1)/(z+1) satisfies Γ² = (k−1)/(k+1). Exactly:
+
+| Polynomial | Source | Root | Γ | Γ² |
+|---|---|---|---|---|
+| t² − 3t + 1 | figure-eight Alexander (no circle walls, root on the real peel radius) | φ² = 2.618 | 1/√5 = 0.4472 | 1/5 |
+| t² − 4t + 1 | figure-eight twisted torsion (Sep 7 checkpoint) | 2+√3 = 3.732 | 1/√3 = 0.5774 | 1/3 |
+| t² − 6t + 1 | the peel wall | 3+2√2 = 5.828 | 1/√2 = 0.7071 | 1/2 |
+
+And the trefoil's Alexander root e^{iπ/3} lies on the circle, where Γ = i tan(π/6) = i/√3: the same size 1/√3, turned onto the reactance axis.
+So the figure-eight's roots land on the real (peel) radius, the trefoil's on the imaginary (phase) axis, and the wall is the next rung up.
+**Untested as physics.** Test: count element peel steps within ±0.01 of Γ = 1/√5 and 1/√3 against the same window slid across Γ ∈ [0.3, 0.8]. **Kill:** if neither value is in the top 10% of windows, there is no elemental signal and it stays a knot-side fact.
