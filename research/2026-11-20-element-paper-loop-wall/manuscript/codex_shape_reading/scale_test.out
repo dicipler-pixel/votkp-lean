@@ -1,0 +1,11 @@
+Input SHA256 1d09c6ea4b40dd1bb70b98cdd31fb00ea4e18bf55934c37140a4c8fc36438197
+77 elements, 8 successive ratios, 2926 unordered pairs
+method | same-column nearest / 77 (table display labels)
+log-ratio Euclidean 52
+log-log Euclidean 59
+centered log-log Euclidean 59
+unscaled log-log maximum error 56
+best-scaled log-log maximum error 60
+Euclidean, after removing scale: gained ['Co'] lost ['Ce']
+maximum, after removing scale: gained ['P', 'Co', 'Ir', 'Au'] lost []
+Exact twin: same projective shape, outside rungs 0/8 and 4/8.
