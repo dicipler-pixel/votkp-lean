@@ -1,0 +1,15 @@
+K = 8, 102 elements
+   shuffled short-form control: mean 0.130, 99th 0.235
+   circle/ball (now)          long-form 0.627   short-form 0.696   gain +0.069 [+0.048, +0.200]  READS THE SHORT FORM
+   diamond (per-step peel)    long-form 0.598   short-form 0.667   gain +0.069 [+0.030, +0.170]  READS THE SHORT FORM
+   cube own reading           long-form 0.618   short-form 0.725   gain +0.108 [+0.074, +0.242]  READS THE SHORT FORM
+   simplex (ladder shape)     long-form 0.667   short-form 0.755   gain +0.088 [+0.045, +0.197]  READS THE SHORT FORM
+   pairs the circle makes across blocks (nearest in another long column but same short group):
+     Al-Ac, Si-Zr, Rh-Pd, Eu-Sm, Ir-Pt, Mt-Ds, Ds-Mt
+
+STRAW-MAN: merging labels raises chance too.  Two fixes: (1) chance-corrected recall (r - chance)/(1 - chance);
+(2) merge ONLY the A/B partners (3-7 with 13-17, 1-2 with 11-12), keep 8, 9, 10 and 18 apart (no triad merging).
+   circle/ball (now)          corrected: long 0.609  short 0.652  A/B-only 0.612 ; A/B-only raw gain +0.020 [+0.016, +0.125] A/B pairing real
+   diamond (per-step peel)    corrected: long 0.578  short 0.618  A/B-only 0.569 ; A/B-only raw gain +0.010 [+0.000, +0.092] A/B pairing not shown
+   cube own reading           corrected: long 0.598  short 0.685  A/B-only 0.634 ; A/B-only raw gain +0.049 [+0.032, +0.164] A/B pairing real
+   simplex (ladder shape)     corrected: long 0.650  short 0.719  A/B-only 0.687 ; A/B-only raw gain +0.049 [+0.030, +0.143] A/B pairing real

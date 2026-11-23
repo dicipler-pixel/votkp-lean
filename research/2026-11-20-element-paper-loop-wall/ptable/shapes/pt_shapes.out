@@ -1,0 +1,36 @@
+K = 4 steps per element, 106 elements (Z 5 to 110)
+   shuffled-column control: mean 0.049, 99th percentile 0.113
+   circle/ball (now)          recall 0.443   difference vs circle +0.000 [+0.000, +0.000]  
+   diamond (per-step peel)    recall 0.415   difference vs circle -0.028 [-0.047, +0.030]  no clear difference
+   cube own reading           recall 0.434   difference vs circle -0.009 [-0.056, +0.047]  no clear difference
+   simplex (ladder shape)     recall 0.406   difference vs circle -0.038 [-0.092, +0.062]  no clear difference
+   control: raw energies      recall 0.132   difference vs circle -0.311 [-0.382, -0.173]  loses to the circle
+      Na  nearest: circle/ball K, diamond K, cube K, simplex K, control: Ne
+      Mg  nearest: circle/ball Ca, diamond Ca, cube Ca, simplex Ca, control: Na
+      Al  nearest: circle/ball B, diamond B, cube Y, simplex B, control: Mg
+      Si  nearest: circle/ball C, diamond C, cube Zr, simplex C, control: Ti
+      P   nearest: circle/ball Sb, diamond Sb, cube Sb, simplex Sb, control: As
+      S   nearest: circle/ball Se, diamond Se, cube Se, simplex Se, control: Se
+      Cl  nearest: circle/ball Br, diamond Br, cube Br, simplex F, control: Kr
+      Ar  nearest: circle/ball Kr, diamond Kr, cube Kr, simplex Ne, control: Cl
+      Fe  nearest: circle/ball Am, diamond Am, cube Am, simplex Am, control: Ni
+      Cu  nearest: circle/ball Cr, diamond Cr, cube Cr, simplex Mo, control: Ni
+
+K = 8 steps per element, 102 elements (Z 9 to 110)
+   shuffled-column control: mean 0.046, 99th percentile 0.108
+   circle/ball (now)          recall 0.627   difference vs circle +0.000 [+0.000, +0.000]  
+   diamond (per-step peel)    recall 0.598   difference vs circle -0.029 [-0.047, +0.068]  no clear difference
+   cube own reading           recall 0.618   difference vs circle -0.010 [-0.088, +0.017]  no clear difference
+   simplex (ladder shape)     recall 0.667   difference vs circle +0.039 [-0.048, +0.148]  no clear difference
+   control: raw energies      recall 0.088   difference vs circle -0.539 [-0.577, -0.331]  loses to the circle
+      Na  nearest: circle/ball K, diamond K, cube K, simplex K, control: Mg
+      Mg  nearest: circle/ball Ca, diamond Ca, cube Ca, simplex Ca, control: Na
+      Al  nearest: circle/ball Ac, diamond In, cube Y, simplex Ac, control: Mg
+      Si  nearest: circle/ball Zr, diamond Ti, cube Zr, simplex Zr, control: Al
+      P   nearest: circle/ball As, diamond As, cube Nb, simplex Sb, control: Si
+      S   nearest: circle/ball Se, diamond Se, cube Se, simplex Te, control: P
+      Cl  nearest: circle/ball F, diamond Br, cube Br, simplex F, control: S
+      Ar  nearest: circle/ball Ne, diamond Kr, cube Kr, simplex Ne, control: Fe
+      Fe  nearest: circle/ball Ru, diamond Md, cube Ru, simplex Ru, control: Ga
+      Cu  nearest: circle/ball Ni, diamond Ni, cube Ni, simplex Ag, control: Ni
+
