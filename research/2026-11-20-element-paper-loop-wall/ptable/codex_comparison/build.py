@@ -1,4 +1,5 @@
 """Build the standalone comparison edition from the tracked v2.2 mixer and benchmark."""
+import csv
 import hashlib
 import json
 import re
@@ -59,6 +60,24 @@ def build():
         if mixer[symbol]["ie"][k - 1] != plotted:
             raise ValueError(f"Unexpected energy on {symbol} removal {k}")
         display["archiveDifferences"].setdefault(symbol, {})[str(k)] = reference
+
+    transfer_dir = HERE.parent / "reference_transfer"
+    transfer = json.loads((transfer_dir / "results.json").read_bytes())
+    with (transfer_dir / "predictions.csv").open(newline="") as rows_file:
+        panels = list(csv.DictReader(rows_file))
+    for panel in ("historical", "heavy"):
+        rows = [r for r in panels if r["panel"] == panel]
+        block = transfer[panel]
+        if (len(rows) != block["queries"]
+                or sum(r["simplex_hit"] == "True" for r in rows) != block["simplex_hits"]
+                or sum(r["logs_hit"] == "True" for r in rows) != block["log_hits"]
+                or [r["symbol"] for r in rows if r["logs_hit"] == "True" and r["simplex_hit"] == "False"] != block["log_only"]):
+            raise ValueError(f"Inconsistent transfer summary for {panel}")
+    display["transfer"] = {
+        "historical": transfer["historical"], "heavy": transfer["heavy"],
+        "experimental_queries": transfer["heavy_all_E"]["queries"],
+        "rows": [r for r in panels if r["panel"] == "heavy"]
+    }
 
     title = "Periodic Table of Elemental Peels · Codex comparison edition"
     source = replace_once(source, "<title>Periodic Table of Elemental Peels v2.2", "<title>" + title)

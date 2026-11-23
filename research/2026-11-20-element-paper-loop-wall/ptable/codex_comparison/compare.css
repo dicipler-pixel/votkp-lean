@@ -17,3 +17,6 @@
 #v-neighbours summary{cursor:pointer}
 .cmp-key{font-weight:600}
 @media(max-width:880px){.cmp-grid{grid-template-columns:1fr;gap:18px}}
+
+#cmp-heavy .cmp-discordant{background:#282414}
+#v-neighbours .cmp-transfer{margin:16px 0}

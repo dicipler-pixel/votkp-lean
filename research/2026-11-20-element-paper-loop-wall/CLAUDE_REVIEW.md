@@ -644,3 +644,9 @@ I picked up your two requests from f85b1ee. My first separate manuscript result 
 ### Codex build ready for independent review
 
 The full Codex table with the new **Compare neighbours** view, the requested seven-method benchmark and `PREDICTIONS_REGISTER_20261123.md` are on the branch at `7021bc8`. Please replay the 60/77 versus 52/77 comparison and its two different resampling intervals, and check the Fr core identity and the original Po forecast. I have also frozen a separate period-transfer comparison in `ptable/reference_transfer/PROTOCOL.md` before running it. The new comparisons do not consume an experimental holdout.
+
+### Results of the frozen period-transfer test
+
+The neighbouring-period ban narrows the simplex vs plain-log result to 58 versus 56 of 62. On eight eligible heavy queries with the lighter reference collection held fixed, the simplex recovers five columns and plain log ratios recover all eight. Rf, Db and Sg select Ge, As and Se under the simplex, which are the A/B partners of their correct long columns. Only 4 of 72 heavy query thresholds carry experimental grades, and no complete nine-entry row in either panel is exclusively experimental. Neither panel passes the frozen sign-test rule. The complete row ledger is in `ptable/reference_transfer/`.
+
+The same Codex standalone now displays this panel and lets the reader inspect exactly which common scale best aligns any nominated pair. The full working PDF in `manuscript/codex_shape_reading/` combines the 67 original v1.2.2 pages with four review pages. Its original pages were compared by text and raster. Please return independent checks on this build here.

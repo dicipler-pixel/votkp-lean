@@ -68,6 +68,31 @@ function cmpTrace(selected,other){
   series(second,'#f5a9ce','7 5',other.name,310);
 }
 
+function cmpScale(first,second){
+  const logSteps=ie=>ie.slice(1,9).map((v,k)=>Math.log(v/ie[k]));
+  const x=logSteps(first), y=logSteps(second);
+  const u=x.map((v,k)=>Math.log(v/y[k]));
+  const lo=Math.min(...u), hi=Math.max(...u);
+  return {query:Math.log(first[8]/first[0]),neighbour:Math.log(second[8]/second[0]),
+    scale:Math.exp((hi+lo)/2),mismatch:Math.exp((hi-lo)/2)};
+}
+
+function cmpDrawTransfer(){
+  const table=$('cmp-heavy');
+  if(table.rows.length) return;
+  const {historical,heavy,experimental_queries,rows}=cmpData.transfer;
+  $('cmp-historical').textContent='Each of '+historical.queries+' F–At elements was matched outside its own period. The triangle family recovered '+historical.simplex_hits+' columns and Euclidean log ratios recovered '+historical.log_hits+' (paired sign test p = '+historical.descriptive_sign_p+'). La–Lu and Ac–Lr were excluded.';
+  $('cmp-heavy-summary').textContent='Each heavy query searched only the fixed '+heavy.reference_elements+'-element F–At reference panel. The triangle family recovered '+heavy.simplex_hits+' of '+heavy.queries+' columns and Euclidean log ratios recovered '+heavy.log_hits+' (p = '+heavy.descriptive_sign_p+'). Neither panel met the preregistered hurdle for a triangle-family advantage.';
+  cmpRow(table,['Element','Column','Query grades','Triangle neighbour','Its grades','Log-ratio neighbour','Its grades'],true);
+  for(const r of rows){
+    const row=cmpRow(table,[r.symbol,r.column,r.grades,r.simplex+' · '+(r.simplex_hit==='True'?'match':'miss'),
+      r.simplex_grades,r.logs+' · '+(r.logs_hit==='True'?'match':'miss'),r.logs_grades]);
+    if(r.simplex_hit!==r.logs_hit) row.className='cmp-discordant';
+  }
+  const g=heavy.query_thresholds;
+  $('cmp-grades').textContent='Heavy query thresholds: '+g.E+' experimental, '+g.S+' semiempirical and '+g.T+' theoretical. Heavy queries with nine experimental inputs: '+experimental_queries+' of '+heavy.queries+'.';
+}
+
 function drawComparison(){
   const scope=$('cmp-cohort').value, group=$('cmp-label').value, data=cmpData[scope];
   const elementSelect=$('cmp-element'), methodSelect=$('cmp-method');
@@ -89,6 +114,10 @@ function drawComparison(){
   const frow=scope==='primary'?'La through Lu use the mixer’s displayed columns 3–17.':'La through Lu are excluded from both the query and candidate sets.';
   $('cmp-label-note').textContent=group==='long'?frow:'Short-form labels merge the A/B partners. The three transition triads and the noble gases keep separate labels. '+frow;
   cmpTrace(selected,other);
+  const keep=cmpScale(selected.ie,other.ie);
+  $('cmp-span').textContent='Total log span T = ln(IE₉ / IE₁): '+selected.sym+' '+keep.query.toFixed(4)+' · '+other.sym+' '+keep.neighbour.toFixed(4)+'.';
+  $('cmp-scale').textContent='Multiply '+other.sym+'’s eight log steps by '+keep.scale.toFixed(5)+' to match '+selected.sym+'. The largest multiplicative mismatch remaining on the step logs is '+keep.mismatch.toFixed(5)+'× in either direction.';
+  cmpDrawTransfer();
   const score=$('cmp-score');score.replaceChildren();
   cmpRow(score,['Distance rule','Nearest',group==='long'?'Column match':'Group match','Hits / '+data.elements.length],true);
   for(const [method,record] of Object.entries(data.methods)){
@@ -104,7 +133,7 @@ function drawComparison(){
   for(const row of data.comparisons.filter(c=>c.shape==='simplex' && c.label===group))
     cmpRow(contrasts,[cmpMethodName(row.baseline),pp(row.delta),row.paired95.map(pp).join(' to '),row.deletion95.map(pp).join(' to '),row.shape_only,row.baseline_only]);
   const energies=$('cmp-energies');energies.replaceChildren();
-  cmpRow(energies,['Removal',selected.symbol+' table',selected.symbol+' archive',other.symbol+' table',other.symbol+' archive'],true);
+  cmpRow(energies,['Removal',selected.sym+' table',selected.sym+' archive',other.sym+' table',other.sym+' archive'],true);
   const archived=(e,k)=>cmpData.archiveDifferences[e.sym]?.[k+1] ?? e.ie[k];
   for(let k=0;k<9;k++) cmpRow(energies,[k+1,selected.ie[k],archived(selected,k),other.ie[k],archived(other,k)]);
 }
