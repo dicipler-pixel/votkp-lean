@@ -1,0 +1,10 @@
+twin starts 239099  arm counts [79905 79723 79471]
+z=3: per-turn angle i->j = 28.07 deg
+   total turning real 394138 deg; shuffled 95% [370750, 377551]  -> OUTSIDE (survives)
+   net frame turn real 174.0 deg; shuffled 95% [14.6, 172.3]  -> OUTSIDE
+z=5: per-turn angle i->j = 47.92 deg
+   total turning real 672867 deg; shuffled 95% [633277, 645841]  -> OUTSIDE (survives)
+   net frame turn real 67.7 deg; shuffled 95% [16.4, 174.3]  -> inside
+z=7: per-turn angle i->j = 58.72 deg
+   total turning real 824366 deg; shuffled 95% [776040, 789963]  -> OUTSIDE (survives)
+   net frame turn real 72.2 deg; shuffled 95% [9.7, 172.7]  -> inside
