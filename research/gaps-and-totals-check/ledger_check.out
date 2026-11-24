@@ -1,0 +1,8 @@
+L1 ledger at wall 0.34657359027997275  half log 2 0.34657359027997264
+L1 oscillator potential at wall 16.985281374238575  (17+12 sqrt2)/2 16.98528137423857  ratio to ledger 49.00916241343533
+L1 worst |S' - (w/2) Gamma| 3.646526414158302e-10   worst |S'' - (w^2/4) exp(-2S)| 1.5649120627819757e-07
+L1 scalar ledger not additive: log cosh 2 = 1.3250027473578645  2 log cosh 1 = 0.8675616609660542
+L2 non-commuting matrices: worst |log-det ledger - sum log cosh(half log eigen-ratio)| = 6.439293542825908e-14
+L3 spacing 0.1  ledger/spacing^2 = 0.1249479513625627  sqrt of it = 0.35347977504033057  1/(2 sqrt 2) = 0.35355339059327373
+L3 spacing 0.01  ledger/spacing^2 = 0.12499947917131739  sqrt of it = 0.3535526540295199  1/(2 sqrt 2) = 0.35355339059327373
+L3 spacing 0.001  ledger/spacing^2 = 0.12499999475848553  sqrt of it = 0.3535533831806528  1/(2 sqrt 2) = 0.35355339059327373
