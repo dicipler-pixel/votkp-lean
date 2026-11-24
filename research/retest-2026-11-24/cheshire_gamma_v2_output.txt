@@ -1,0 +1,14 @@
+C1 cat  left  (1+0j)
+C1 cat  right 0j
+C1 grin left  0j
+C1 grin right (1+0j)
+   success probability 0.25
+C2 flux 0.10 of a quantum: Gamma = -0.324920i   |Gamma| = 0.324920
+C2 flux 0.20 of a quantum: Gamma = -0.726543i   |Gamma| = 0.726543
+C2 flux 0.25 of a quantum: Gamma = -1.000000i   |Gamma| = 1.000000
+C2 flux 0.30 of a quantum: Gamma = -1.376382i   |Gamma| = 1.376382
+C2 flux 0.40 of a quantum: Gamma = -3.077684i   |Gamma| = 3.077684
+C2 flux 0.49 of a quantum: Gamma = -31.820516i   |Gamma| = 31.820516
+C3 circular (the published grin) -> linear 35 deg: Gamma_x=(-0.3624+0.932j) |.|=1.0000 ; handed: Gamma_x=(-0.1876+0j) |.|=0.1876 ; other hand: Gamma_x=(-5.3319+0j) |.|=5.3319
+C3 diagonal -> linear 35 deg: Gamma_x=(-0.1876+0j) |.|=0.1876 ; handed: Gamma_x=(-0.3624-0.932j) |.|=1.0000 ; other hand: Gamma_x=(-0.3624+0.932j) |.|=1.0000
+C3 horizontal/vertical -> linear 35 deg: Gamma_x=(-0+0j) |.|=0.0000 ; handed: Gamma_x=(-0+0j) |.|=0.0000 ; other hand: Gamma_x=(-0+0j) |.|=0.0000
