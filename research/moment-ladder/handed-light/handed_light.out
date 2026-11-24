@@ -1,0 +1,14 @@
+=== dipole elements COMPLEX
+curvature Omega_xy = -0.929697   metric g_xx, g_yy, g_xy = 1.1764, 0.9090, 0.3986   steady polarizability xx = 3.7668
+ handedness +1 : d_x on [E_x, E_y, dE_x/dt, dE_y/dt] = [ 3.76912e+00  1.47488e+00  2.87000e-03 -9.34700e-01]
+                 d_y on [E_x, E_y, dE_x/dt, dE_y/dt] = [ 1.47359e+00  2.27643e+00  9.51360e-01 -1.83000e-03]
+                 ratio (rate coefficient)/Omega: d_x,dE_y 1.0054   d_y,dE_x -1.0233   diagonal leak 0.0031, -0.0020
+ handedness -1 : d_x on [E_x, E_y, dE_x/dt, dE_y/dt] = [ 3.76976e+00  1.47496e+00  1.74000e-03 -9.34820e-01]
+                 d_y on [E_x, E_y, dE_x/dt, dE_y/dt] = [ 1.47420e+00  2.27892e+00  9.51410e-01 -1.73000e-03]
+                 ratio (rate coefficient)/Omega: d_x,dE_y 1.0055   d_y,dE_x -1.0234   diagonal leak 0.0019, -0.0019
+=== dipole elements REAL (control)
+curvature Omega_xy = -0.000000   metric g_xx, g_yy, g_xy = 0.1563, 0.0585, 0.0578   steady polarizability xx = 0.6675
+ handedness +1 : d_x on [E_x, E_y, dE_x/dt, dE_y/dt] = [ 6.6778e-01  1.8202e-01 -2.0000e-05 -9.0000e-05]
+                 d_y on [E_x, E_y, dE_x/dt, dE_y/dt] = [ 1.8184e-01  1.4252e-01  3.7000e-04 -1.2000e-04]
+ handedness -1 : d_x on [E_x, E_y, dE_x/dt, dE_y/dt] = [ 6.6779e-01  1.8198e-01 -5.0000e-05  2.0000e-05]
+                 d_y on [E_x, E_y, dE_x/dt, dE_y/dt] = [ 1.8188e-01  1.4256e-01  2.9000e-04 -1.2000e-04]
