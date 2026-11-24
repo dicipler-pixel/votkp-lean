@@ -1,0 +1,41 @@
+size 2: rank-1 matrices 9  rank-2 matrices 6  rank-1 pairs 72  rank-2 pairs 48
+R1 ways to write each rank-2 matrix as rank-1 + rank-1: [6]   partners per rank-1 matrix: [4]
+   even cover => (sum of 2 squared diagonals) <= (sum of 4 squared sides) averages to ratio <= 2 in any space with the quadrilateral inequality;
+   plain triangle inequality gives only d^2 <= 2a^2+2b^2, ratio <= 4 (reached by the word metric: rank-1 step = 1, rank-2 step = 2).
+   size 2 character of rank 1 : ratio 3/2
+   size 2 character of rank 2 : ratio 1/2
+R2 size 2 flat maximum 3/2  expected 3/2  formula 2-2^(1-mu) = 3/2  MATCH
+   size 3 character of rank 1 : ratio 7/4
+   size 3 character of rank 2 : ratio 35/36
+   size 3 character of rank 3 : ratio 11/12
+R2 size 3 flat maximum 7/4  expected 7/4  formula 2-2^(1-mu) = 7/4  MATCH
+   size 4 character of rank 1 : ratio 15/8
+   size 4 character of rank 2 : ratio 65/56
+   size 4 character of rank 3 : ratio 395/392
+   size 4 character of rank 4 : ratio 157/168
+R2 size 4 flat maximum 15/8  expected 15/8  formula 2-2^(1-mu) = 15/8  MATCH
+R3 star grouped by column space : ratio 5/3
+R3 star grouped by row space : ratio 5/3
+R3 star grouped by kernel : ratio 5/3
+   unequal legs (1,2,3), column space: 8/5  (1,1,2): 21/13
+R4 leg  0.01  ratio 1.500005   end-to-end minus (2*leg - ln(4/3)) = 2.850e-01
+R4 leg  1.00  ratio 1.535876   end-to-end minus (2*leg - ln(4/3)) = 7.543e-02
+R4 leg  2.00  ratio 1.582804   end-to-end minus (2*leg - ln(4/3)) = 1.189e-02
+R4 leg  5.00  ratio 1.632196   end-to-end minus (2*leg - ln(4/3)) = 3.026e-05
+R4 leg 10.00  ratio 1.649524   end-to-end minus (2*leg - ln(4/3)) = 1.374e-09
+R4 leg 20.00  ratio 1.658119   end-to-end minus (2*leg - ln(4/3)) = 0.000e+00
+R4 leg 40.00  ratio 1.662399   end-to-end minus (2*leg - ln(4/3)) = 1.421e-14
+R5a weak value - (1+Gamma)/2 simplifies to: 0 ;  Gamma - i tan(Phi/2): 0
+R5b N=3 signless==half-flux: True   signless==zero-flux: False
+R5b N=4 signless==half-flux: False   signless==zero-flux: True
+R5b N=5 signless==half-flux: True   signless==zero-flux: False
+R5b N=6 signless==half-flux: False   signless==zero-flux: True
+R5b N=7 signless==half-flux: True   signless==zero-flux: False
+R5c N=%d det(I-uB)-(1-2cos(Phi)u^N+u^2N) = 0
+R5c N=%d det(I-uB)-(1-2cos(Phi)u^N+u^2N) = 0
+R5c N=%d det(I-uB)-(1-2cos(Phi)u^N+u^2N) = 0
+R6 cat in L : weak value (1+0j)
+R6 cat in R : weak value 0j
+R6 grin in L : weak value 0j
+R6 grin in R : weak value (1+0j)
+   success probability of the post-selection: 0.25
