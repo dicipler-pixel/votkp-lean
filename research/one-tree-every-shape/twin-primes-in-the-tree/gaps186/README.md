@@ -64,3 +64,28 @@ This independently confirms the cap part of axiom 3. The 97 loss components were
 - a larger trial space (more signatures and degrees, another profile g);
 - retuning S, T, ρ and the hybrid constants for k = 39;
 - new distribution inputs.
+
+## Recentering the setup for k = 39 (GAPS-RECENTER-SCAN-01)
+
+**Calibration.** The coarse grid (N = 12288) gives best quotients 0.998745 at k = 40 and 0.992932 at k = 39. Both sit 0.00147 below the full grid, so the k = 40 to k = 39 drop matches: 0.00581 coarse, 0.00582 full.
+
+**Scan.** 10 profiles g × 12 values of the hybrid λ, with the best 77-trial taken at each setting.
+- λ = 1/125, their value, is best in every case.
+- Their profile (w = 0.105, slow = 0.01, fast = 181.4) is best among those tried:
+
+| change to the profile | coarse best quotient |
+|---|---|
+| none (their profile) | 0.992932 |
+| fast = 90 | 0.990748 |
+| fast = 360 | 0.989670 |
+| w = 0.05 | 0.992843 |
+| w = 0.2 | 0.992706 |
+| slow = 0.5 | 0.992928 |
+| slow = 2 | 0.992915 |
+| w = 0 | 0.992775 |
+| w = 1 | 0.949931 |
+| w = 0.3, slow = 0.5, fast = 60 | 0.983087 |
+
+**KILL fired.** No setting reaches 0.99871. Their setup is already centred, and recentring the free settings does not rescue k = 39.
+
+**Rough size of the missing arithmetic.** The quotient carries a factor ρ*. Recovering 0.58% by ρ alone would need ρ to rise by about 0.0015, which is about +0.003 in the order-three level (0.525 to about 0.528). This ignores how S, T and the shells move with ρ, so it is untested.

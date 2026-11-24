@@ -1,0 +1,10 @@
+mix w=0.105 slow=0.01 fast=181.4  best quotient 0.992932 at lambda 0.008   
+mix w=0.105 slow=0.01 fast=90  best quotient 0.990748 at lambda 0.008   
+mix w=0.105 slow=0.01 fast=360  best quotient 0.989670 at lambda 0.008   
+mix w=0.05 slow=0.01 fast=181.4  best quotient 0.992843 at lambda 0.008   
+mix w=0.2 slow=0.01 fast=181.4  best quotient 0.992706 at lambda 0.008   
+mix w=0.105 slow=0.5 fast=181.4  best quotient 0.992928 at lambda 0.008   
+mix w=0.105 slow=2 fast=181.4  best quotient 0.992915 at lambda 0.008   
+mix w=0.3 slow=0.5 fast=60  best quotient 0.983087 at lambda 0.008   
+mix w=0 slow=0.01 fast=181.4  best quotient 0.992775 at lambda 0.008   
+mix w=1 slow=0.01 fast=181.4  best quotient 0.949931 at lambda 0.008   

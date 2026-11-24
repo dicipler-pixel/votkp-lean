@@ -1,0 +1,4 @@
+k 40 N 12288 I_H 2.5275627631e-14 J 9.6165749846e-14 cap quotient 0.99872509
+k 40 best cap quotient 0.99874484  (their trial at k=40: 1.00020609)
+k 39 N 12288 I_H 9.1720780895e-14 J 3.4693500402e-13 cap quotient 0.99290538
+k 39 best cap quotient 0.99293188  (their trial at k=40: 1.00020609)
