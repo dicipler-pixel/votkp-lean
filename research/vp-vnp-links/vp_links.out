@@ -1,0 +1,14 @@
+V1 ball: violations 0 of 300000; largest (diagonals - sides)/total = -1.780e-04
+V2 tetrahedron reader: violations 5431 of 300000; worst case diagonals^2 = 2.5813 against sides^2 = 1.6032
+V3 Sym(3), all 1296 quadrilaterals: violations 0; equality with four distinct corners: 0
+V3 Sym(7), 200000 random quadrilaterals: violations 0
+V3 identity: Hamming = half the squared Frobenius distance of the permutation matrices: 5 5.0
+V4 k = 4: degree-zero constant 2.0 (ceil(k/2) = 2); fewest wires across a balanced cut 4 (2k^2/9 = 3.56)
+V4 k = 5: degree-zero constant 3.0 (ceil(k/2) = 3); fewest wires across a balanced cut 6 (2k^2/9 = 5.56)
+V4 k = 6: degree-zero constant 3.0 (ceil(k/2) = 3); fewest wires across a balanced cut 8 (2k^2/9 = 8.00)
+V4 k = 7: degree-zero constant 4.0 (ceil(k/2) = 4); fewest wires across a balanced cut 12 (2k^2/9 = 10.89)
+V4 k = 8: degree-zero constant 4.0 (ceil(k/2) = 4); fewest wires across a balanced cut 15 (2k^2/9 = 14.22)
+V4 k = 9: degree-zero constant 5.0 (ceil(k/2) = 5); fewest wires across a balanced cut 18 (2k^2/9 = 18.00)
+V4 degree-one constant, two-element coefficients, k = 4: 2.0000   (k/3 = 1.3333)
+V4 degree-one constant, two-element coefficients, k = 5: 1.6667   (k/3 = 1.6667)
+V4 degree-one constant, two-element coefficients, k = 6: 2.0000   (k/3 = 2.0000)
