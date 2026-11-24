@@ -62,3 +62,29 @@ Method:
 ### Consequence
 - dev×G stays near a constant, about (−0.95, +0.81, +0.14). So the tilt itself dies like 1/(mean gap), derived from Hardy–Littlewood.
 - That is the condition the 12.4651° limit needed. It now rests on Hardy–Littlewood, not only on the measured trend.
+
+## Two views, one light sphere: connection energy (TWIN-HCE-1E12)
+
+- **Setup.** L (forward, lab heading n) and Lᵀ (reversed, body heading u) are two views of the same product. Both headings run out to points on the light sphere.
+- **The mismatch.** ‖[L, L*]‖_F/‖L‖_F² = √2 tanh d sin(φ/2) sin β measures the mismatch between the two views.
+  - φ is the frame turn; β is the angle between the turn axis and the heading.
+  - It is zero exactly when the operator is normal.
+- **Identity check.** At 1e8 the explicit matrix gives 0.1263187207 and the formula gives 0.1263187207.
+
+| up to | 𝒩 |
+|---|---|
+| 1e5 | 0.08863 |
+| 1e6 | 0.11711 |
+| 1e7 | 0.12429 |
+| 1e8 | 0.12632 |
+| 1e9 | 0.12731 |
+| 1e10 | 0.12777 |
+| 1e11 | 0.12815 |
+| 1e12 | 0.12853 |
+
+- **Kill conditions.**
+  - Written before any run: fails if |𝒩(1e9) − 𝒩(1e8)| > |𝒩(1e8) − 𝒩(1e7)|. It passes.
+  - Extended: the change at 1e12 must be smaller than at 1e10. It passes.
+  - Caveat: the change per decade has flattened at about 3.8e-4. It follows the turn's slow climb as the tilt dies.
+- **β.** 57.39° at 1e9, rising to 57.71° at 1e12. It is not arccos(1/√3) = 54.74°: killed.
+- **Limit (estimate, untested).** With the turn limit 12.4651° and tanh d → 1, 𝒩 → 0.15353 sin β∞, which is about 0.130 if β levels near 58°.
