@@ -17,3 +17,18 @@ Script `ab_atlas_map.py` (AB-ATLAS-MAP-01), kill lines written in the file befor
 5. Ring zeta of the bundle itself: det(I - uB) = 1 - 2 cos(Phi) u^N + u^(2N) (B195, B197): the first prime keeps the flux.
 
 Not run: the quantum Cheshire cat arrangement in the same coordinate.
+
+## Cheshire cat in the Smith-disc coordinate (CHESHIRE-GAMMA-01), run after the mapping
+
+Seven kill lines written in the file before the run; none fired (4000 random arrangements).
+
+- Cat arm weak values are (1 - Gamma)/2 and (1 + Gamma)/2.
+- Grin arm weak values are the same two shares for a second coordinate Gamma_s, times the total grin weak value.
+- Gamma_s = Gamma (+) Gamma_b (+) (-Gamma_a) under the addition law of card B98.
+- Flux moves cat and grin together; it never separates them.
+- The original arrangement is Gamma = -1 with Gamma_s = +1: opposite ends of the diameter.
+- Card B158 holds for all four arm observables.
+- A mirror-fixed (linear) arm polarization gives a twist on the rim, |Gamma_x| = 1. A handed one gives a real twist;
+  the opposite handedness is the inverse point 1/Gamma_x, outside the disc.
+
+The divide warning in the output is the exact limit where the grin amplitude in arm L is zero (z_s infinite, Gamma_s = 1).
