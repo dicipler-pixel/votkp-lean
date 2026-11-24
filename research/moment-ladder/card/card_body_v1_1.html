@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Moment Ladder</title>
+<style>
+:root{--bg:#06080d;--ink:#cfe0ff;--dim:#7f93b8;--gold:#f0b93a;--blue:#3d8bff;--line:#182236;--card:#0a0f18}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Georgia,"Times New Roman",serif}
+.card{max-width:1120px;margin:0 auto;padding:22px 20px 40px}
+.tag{font:600 12px/1.2 ui-monospace,Menlo,Consolas,monospace;letter-spacing:.14em;color:var(--dim);text-transform:uppercase;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.chip{border:1px solid var(--line);border-radius:999px;padding:4px 10px;color:var(--ink)}
+.chip.t{border-color:#2c5fb3;color:#9cc4ff}.chip.v{border-color:#8a6a1c;color:var(--gold)}
+h1{font-size:clamp(26px,4.4vw,46px);line-height:1.08;margin:14px 0 6px;font-weight:600;color:#eef4ff}
+h1 .g{color:var(--gold)} h1 .b{color:#6fa8ff}
+.by{color:var(--dim);font-size:15px;margin:0 0 14px}
+.band{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:12px 0;margin:10px 0 14px;font:500 clamp(14px,1.9vw,18px)/1.75 ui-monospace,Menlo,Consolas,monospace;color:#e8f0ff}
+.band .g{color:var(--gold)} .band .b{color:#6fa8ff}
+p{font-size:17px;line-height:1.55;margin:0 0 12px;max-width:70ch}
+#stage{position:relative;width:100%;height:min(74vh,720px);min-height:460px;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:radial-gradient(ellipse at 50% 38%,#0c1422 0%,#06080d 70%);touch-action:none;cursor:grab}
+#stage canvas{display:block;width:100%;height:100%}
+#read{font:500 14px/1.6 ui-monospace,Menlo,Consolas,monospace;color:var(--ink);padding:10px 2px 2px;display:flex;gap:18px;flex-wrap:wrap}
+#read b.g{color:var(--gold)} #read b.b{color:#6fa8ff}
+.cap{color:var(--dim);font-size:14px;padding:8px 2px 0;line-height:1.45}
+.ctl{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px 22px;padding:8px 2px 4px;font:500 13px/1.4 ui-monospace,Menlo,Consolas,monospace;color:var(--dim)}
+.ctl label{display:block}.ctl input[type=range]{width:100%;accent-color:var(--gold)}
+.ctl input.e{accent-color:var(--blue)}
+.btns{display:flex;gap:8px;flex-wrap:wrap;padding:6px 2px 0}
+button{background:#0e1626;color:var(--ink);border:1px solid #24334f;border-radius:8px;padding:8px 12px;font:600 13px/1 ui-monospace,Menlo,Consolas,monospace;cursor:pointer}
+button:hover{border-color:var(--gold)}
+.cross{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px 28px;margin-top:22px;border-top:1px solid var(--line);padding-top:16px}
+.cross h2{font:600 12px/1.2 ui-monospace,Menlo,Consolas,monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin:0 0 8px}
+.cross ul,.cross ol{margin:0;padding-left:20px;font-size:15.5px;line-height:1.5}
+.cross li{margin:0 0 6px}
+table{border-collapse:collapse;font:500 13.5px/1.5 ui-monospace,Menlo,Consolas,monospace;width:100%}
+td,th{padding:3px 8px;border-bottom:1px solid var(--line);text-align:left}
+th{color:var(--dim);font-weight:600}
+tr.q td{color:#9cc4ff} tr.l td{color:var(--gold)}
+.foot{color:var(--dim);font-size:13.5px;margin-top:22px;border-top:1px solid var(--line);padding-top:12px;line-height:1.5}
+a{color:#9cc4ff}
+</style></head><body><div class="card">
+<div class="tag"><span>Operator-first atlas · 3D card</span><span class="chip">Subspace → Spectrum → Realizations</span><span class="chip t">identity: proved</span><span class="chip t">hydrogen 43/8: exact</span><span class="chip v">rubidium: calibrated</span></div>
+<h1><span class="g">Plain light reads the even rungs.</span> <span class="b">The tensor sits on the odd rung between them.</span></h1>
+<p class="by">Jeromie Beasley</p>
+<div class="band">
+S(k) = Σ<sub>m</sub> f<sub>m</sub> Δ<sub>m</sub><sup>k</sup> , &nbsp; f<sub>m</sub> = 2 Δ<sub>m</sub> |⟨0|D|m⟩|²<br>
+<span class="b">Q = Σ<sub>m</sub> |⟨0|D|m⟩|² / Δ<sub>m</sub>² = ½ S(−3)</span><br>
+<span class="g">α(ω) = S(−2) + ω² S(−4) + ω⁴ S(−6) + … &nbsp; (ω below the first gap)</span>
+</div>
+<p>Every transition out of the ground state carries one weight: twice its gap times its squared dipole element. Multiply each weight by the gap to the power k and add them up. That is rung k. One distribution, nine rungs, nine different physical quantities.</p>
+<p>Below the first gap, the response of the electron to plain (linearly polarized) light of photon energy ω is built from the even rungs −2, −4 and −6. The intrinsic tensor Q is half of rung −3. Move the gold slider: the light's reading swings, changes sign and passes through zero at the tune-out. The blue rung does not move.</p>
+
+<div id="stage" aria-label="Three-dimensional ladder of moments. Drag to turn, scroll to zoom."></div>
+<div class="cap">Figure: the two-gap model (first gap 1; second gap and its strength set by the blue sliders). Hydrogen's values are in the table below, not in the figure.</div>
+<div id="read"></div>
+<div class="ctl">
+<label>photon energy squared, y = ω² <input id="sy" type="range" min="0" max="3.9" step="0.001" value="0"></label>
+<label>second gap Δ₂ (first gap is 1) <input class="e" id="sg" type="range" min="1.2" max="3" step="0.01" value="2"></label>
+<label>second dipole strength |D₀₂|² (first is 1) <input class="e" id="ss" type="range" min="0.2" max="8" step="0.01" value="4"></label>
+</div>
+<div class="btns"><button id="b0">steady field (y = 0)</button><button id="b1">go to the tune-out</button><button id="b2">sweep the light</button><button id="b3">reset to the paper's example</button></div>
+
+<div class="cross">
+<div><h2>Conditions</h2><ul>
+<li>A single ground state with every gap Δ<sub>m</sub> open.</li>
+<li>One field direction; the field enters as H(E) = H₀ − E·D.</li>
+<li>The series for α(ω) holds below the first gap. Past it, use the exact sum Σ f<sub>m</sub> / (Δ<sub>m</sub>² − ω²), which this card does.</li>
+<li>Units with ħ = 1 and unit charge and mass, so that f<sub>m</sub> = 2Δ<sub>m</sub>|D|².</li>
+</ul></div>
+<div><h2>How to cross</h2><ol>
+<li>List the gaps and dipole elements out of the ground state.</li>
+<li>Form the weights f<sub>m</sub>. Rung k is Σ f<sub>m</sub>Δ<sub>m</sub><sup>k</sup>.</li>
+<li>Read the tensor at k = −3 and halve it.</li>
+<li>Read the light's response from the even rungs below it.</li>
+<li>Divide any rung by the one beneath it to get a weighted mean gap; these fall toward the smallest gap.</li>
+</ol></div>
+<div><h2>The rungs</h2><table>
+<tr><th>k</th><th>what it is</th><th>hydrogen</th></tr>
+<tr><td>+2</td><td>electron density at the nucleus</td><td>4/3</td></tr>
+<tr><td>+1</td><td>kinetic energy</td><td>2/3</td></tr>
+<tr><td>0</td><td>number of electrons</td><td>1</td></tr>
+<tr class="q"><td>−1</td><td>spread of the charge cloud</td><td>2</td></tr>
+<tr class="l"><td>−2</td><td>steady-field polarizability</td><td>9/2</td></tr>
+<tr class="q"><td>−3</td><td>twice the tensor Q (non-adiabatic polarizability)</td><td>43/4</td></tr>
+<tr class="l"><td>−4</td><td>first colour term of the response</td><td>319/12</td></tr>
+<tr class="q"><td>−5</td><td>next odd rung</td><td>9673/144</td></tr>
+<tr class="l"><td>−6</td><td>second colour term</td><td>297541/1728</td></tr>
+</table></div>
+<div><h2>Links to other bridges</h2><ul>
+<li>B22, projector–metric correspondence: the tensor here is that metric with the electric field as the parameter.</li>
+<li>B96, the two rails (a reading): gold is the travelling reference, blue is what the electron holds.</li>
+<li>Light Keeps the Ledger, Theorem 4.3 and the tune-out example: polarizability −6(3y − 4)/((y − 4)(y − 1)), zero at y = 4/3 with Q = 2.</li>
+<li>What the Peel Keeps, "direction is in the sign": an even quantity cannot tell order. Rung −3 is the first rung that measures lag.</li>
+</ul></div>
+<div><h2>What it says</h2><ul>
+<li>A light probe can go silent while the tensor stays finite, because the tensor adds the same transitions with positive weights and cannot cancel.</li>
+<li>Rung −2 is how far the cloud leans in a steady field. Rung −3 is the correction when the field changes in time: the inertia of the response.</li>
+<li>For hydrogen the tensor is exactly 43/8.</li>
+<li>Light with a handedness reads the odd rungs through the curvature half of the tensor: sideways dipole = curvature × rate of change of the field. The metric half does not appear at that order.</li>
+<li>Rubidium-87, two strong lines: the plain and handed parts cancel at 785.1535 nm; the measured tune-out for circular light is 785.1522(3) nm.</li>
+</ul></div>
+<div><h2>Sources</h2><ul>
+<li>Tang, Zhang, Zhang, Jiang, Mitroy, arXiv:1205.6883: sum rules for hydrogen-like ions; rung −3 equals 43/(4Z⁶).</li>
+<li>arXiv:0905.2110, calculations for lithium isotopes: rung −3 written as twice the non-adiabatic coefficient.</li>
+<li>arXiv:2010.01162, dipole oscillator strength distributions of benzene and related molecules: tables of rungs +2 to −6 and the even-rung series of the polarizability.</li>
+<li>Phys. Rev. A 105, L030802 (2022): rubidium-87 tune-out measured with circular light.</li>
+<li>Kolodrubetz, Sels, Mehta, Polkovnikov, arXiv:1602.01062: the metric as the inverse-square-frequency moment of a noise spectrum.</li>
+</ul></div>
+</div>
+<div class="foot">Gold is light. Blue is the electron. Ring size follows the logarithm of the rung. Each ring is split in two arcs: the solid arc is the share carried by the smaller gap, and the white seam joining the splits shows the ladder handing itself to the smallest gap as k falls. Drag to turn, scroll or pinch to zoom.<br>Jeromie Beasley · text and figure CC BY 4.0 · built with AI assistance · values from scripts MOMENT-LADDER-01, HYDROGEN-EXACT-RUNGS-01, HANDED-LIGHT-02 and RUBIDIUM-HANDED-02.</div>
+</div>
+<!--THREE-->
+<script>
+/* SCRIPT: MOMENT-LADDER-CARD-02 */
+(function(){
+"use strict";
+var P={y:0,g2:2,s2:4}, sweep=false, t0=performance.now(), userMoved=false, zoomed=false;
+var KS=[2,1,0,-1,-2,-3,-4,-5,-6];
+function model(){var gap=[1,P.g2],d2=[1,P.s2],f=[2*gap[0]*d2[0],2*gap[1]*d2[1]];
+  var S={},sh={};KS.forEach(function(k){var a=f[0]*Math.pow(gap[0],k),b=f[1]*Math.pow(gap[1],k);S[k]=a+b;sh[k]=a/(a+b);});
+  var Q=d2[0]/(gap[0]*gap[0])+d2[1]/(gap[1]*gap[1]);
+  var den0=gap[0]*gap[0]-P.y,den1=gap[1]*gap[1]-P.y;
+  var alpha=f[0]/den0+f[1]/den1;
+  var y0=(f[0]*gap[1]*gap[1]+f[1]*gap[0]*gap[0])/(f[0]+f[1]);
+  return {gap:gap,d2:d2,f:f,S:S,sh:sh,Q:Q,alpha:alpha,y0:y0};}
+var stage=document.getElementById('stage');
+var renderer=new THREE.WebGLRenderer({antialias:true,alpha:true});
+renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,2));
+stage.appendChild(renderer.domElement);
+var scene=new THREE.Scene();
+var cam=new THREE.PerspectiveCamera(38,1,0.1,200);
+var orb={th:0,ph:1.32,r:19,target:new THREE.Vector3(0,0,0)};
+function placeCam(){cam.position.set(orb.target.x+orb.r*Math.sin(orb.ph)*Math.sin(orb.th),orb.target.y+orb.r*Math.cos(orb.ph),orb.target.z+orb.r*Math.sin(orb.ph)*Math.cos(orb.th));cam.lookAt(orb.target);}
+function resize(){var w=stage.clientWidth,h=stage.clientHeight;renderer.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix();if(!zoomed)orb.r=Math.max(19,9.6/(0.3443*cam.aspect));}
+window.addEventListener('resize',resize);
+scene.add(new THREE.AmbientLight(0x8fa6d8,0.55));
+var kl=new THREE.PointLight(0xffffff,60,60);kl.position.set(6,8,9);scene.add(kl);
+var GOLD=0xf0b93a,BLUE=0x3d8bff,PALE=0xcfe0ff;
+var HY=0.92;function yk(k){return (k+2)*HY;}        /* rung +2 at the top, -6 at the bottom */
+function rk(S){return 0.75+0.62*Math.log10(1+S);}
+function colOf(k){if(k===-2||k===-4||k===-6)return GOLD;if(k===-1||k===-3||k===-5)return BLUE;return PALE;}
+var ladder=new THREE.Group();scene.add(ladder);
+var labels=new THREE.Group();scene.add(labels);
+function arcTube(R,y,a0,a1,rad,color,op,em){var pts=[],n=Math.max(8,Math.ceil(48*(a1-a0)/(2*Math.PI)));
+  for(var i=0;i<=n;i++){var a=a0+(a1-a0)*i/n;pts.push(new THREE.Vector3(R*Math.cos(a),y,R*Math.sin(a)));}
+  var g=new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts),n*2,rad,10,false);
+  var m=new THREE.MeshStandardMaterial({color:color,emissive:color,emissiveIntensity:em,roughness:0.35,metalness:0.2,transparent:op<1,opacity:op});
+  return new THREE.Mesh(g,m);}
+function textSprite(txt,color,scale){var c=document.createElement('canvas');var x=c.getContext('2d');var fs=44;x.font='600 '+fs+'px ui-monospace,Menlo,Consolas,monospace';
+  var w=Math.ceil(x.measureText(txt).width)+24;c.width=w;c.height=fs+22;x=c.getContext('2d');x.font='600 '+fs+'px ui-monospace,Menlo,Consolas,monospace';x.fillStyle=color;x.textBaseline='middle';x.fillText(txt,12,c.height/2);
+  var tx=new THREE.CanvasTexture(c);tx.minFilter=THREE.LinearFilter;var sp=new THREE.Sprite(new THREE.SpriteMaterial({map:tx,transparent:true,depthWrite:false}));
+  var s=(scale||1)*0.0082;sp.scale.set(c.width*s,c.height*s,1);return sp;}
+function clearGroup(g){while(g.children.length){var o=g.children.pop();if(o.geometry)o.geometry.dispose();if(o.material){if(o.material.map)o.material.map.dispose();o.material.dispose();}}}
+function fmt(v){var a=Math.abs(v);return a>=1000?v.toFixed(0):a>=100?v.toFixed(1):a>=10?v.toFixed(2):v.toFixed(3);}
+var NAMES={2:'density at nucleus',1:'kinetic energy',0:'electron count','-1':'spread of the cloud','-2':'steady polarizability','-3':'twice the tensor Q','-4':'first colour term','-5':'next odd rung','-6':'second colour term'};
+var halo,M;
+function build(){M=model();clearGroup(ladder);clearGroup(labels);
+  var seam=[],seam0=[];
+  KS.forEach(function(k){var R=rk(M.S[k]),y=yk(k),c=colOf(k),a=2*Math.PI*M.sh[k];
+    var thick=(k===-3)?0.085:0.055,em=(k===-3)?1.25:(c===PALE?0.35:0.75);
+    ladder.add(arcTube(R,y,0,Math.max(a,0.02),thick,c,1,em));
+    if(a<2*Math.PI-0.02)ladder.add(arcTube(R,y,a,2*Math.PI,thick*0.5,c,0.42,em*0.5));
+    seam.push(new THREE.Vector3(R*Math.cos(a),y,R*Math.sin(a)));seam0.push(new THREE.Vector3(R,y,0));
+    var lab=textSprite((k>0?'+':'')+k+'   '+NAMES[k]+'   '+fmt(M.S[k]),k===-3?'#9cc4ff':(c===GOLD?'#f0b93a':(c===BLUE?'#6fa8ff':'#cfe0ff')),k===-3?1.12:1);
+    lab.position.set(-(R+0.35)-lab.scale.x/2,y,0.0);labels.add(lab);});
+  function tube(pts,color,op,rad){var g=new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts),160,rad,8,false);return new THREE.Mesh(g,new THREE.MeshBasicMaterial({color:color,transparent:true,opacity:op}));}
+  ladder.add(tube(seam,0xffffff,0.85,0.022));ladder.add(tube(seam0,0x5a6d92,0.55,0.014));
+  /* blue halo on the tensor rung: its brightness follows Q only */
+  var hc=document.createElement('canvas');hc.width=hc.height=128;var hx=hc.getContext('2d');var gr=hx.createRadialGradient(64,64,4,64,64,62);gr.addColorStop(0,'rgba(90,150,255,0.95)');gr.addColorStop(0.35,'rgba(61,139,255,0.35)');gr.addColorStop(1,'rgba(61,139,255,0)');hx.fillStyle=gr;hx.fillRect(0,0,128,128);
+  halo=new THREE.Sprite(new THREE.SpriteMaterial({map:new THREE.CanvasTexture(hc),transparent:true,depthWrite:false,blending:THREE.AdditiveBlending}));
+  var Rq=rk(M.S[-3]);halo.position.set(0,yk(-3),0);var hs=2.4*Rq+0.9*Math.log10(1+M.Q);halo.scale.set(hs*1.5,hs*0.55,1);ladder.add(halo);
+  var ql=textSprite('tensor Q = '+fmt(M.Q),'#9cc4ff',1.25);ql.position.set(Rq+0.4+ql.scale.x/2,yk(-3)+0.02,0);labels.add(ql);
+  light();read();}
+/* the light: a gold beam through the even rungs, bent by the polarizability */
+var beam=new THREE.Group();scene.add(beam);var NP=220,pg,pm,pts,threads=[];
+function light(){clearGroup(beam);threads=[];
+  var yb=yk(-6)-1.55,a=M.alpha,ang=Math.atan(a/6)*0.55,L=8.5;
+  var pin=new THREE.Vector3(-L,yb,0),pc=new THREE.Vector3(0,yb,0),pout=new THREE.Vector3(L*Math.cos(ang),yb+L*Math.sin(ang),0);
+  var str=Math.min(1,Math.abs(a)/6);
+  function ln(p,q,op){var g=new THREE.BufferGeometry().setFromPoints([p,q]);var l=new THREE.Line(g,new THREE.LineBasicMaterial({color:GOLD,transparent:true,opacity:op}));beam.add(l);return l;}
+  ln(pin,pc,0.75);ln(pc,pout,0.12+0.75*str);
+  ln(pc,new THREE.Vector3(L,yb,0),0.10);
+  /* threads from the beam to the even rungs, weighted by each term of the series */
+  var terms=[M.S[-2],M.S[-4]*P.y,M.S[-6]*P.y*P.y],tot=Math.abs(terms[0])+Math.abs(terms[1])+Math.abs(terms[2]);
+  [-2,-4,-6].forEach(function(k,i){var R=rk(M.S[k]);var w=tot>0?Math.abs(terms[i])/tot:0;ln(pc,new THREE.Vector3(0,yk(k),R),0.14+0.8*w);ln(pc,new THREE.Vector3(0,yk(k),-R),0.06+0.3*w);});
+  pts=new Float32Array(NP*3);pg=new THREE.BufferGeometry();pg.setAttribute('position',new THREE.BufferAttribute(pts,3));
+  var dc=document.createElement('canvas');dc.width=dc.height=64;var dx=dc.getContext('2d');var g2=dx.createRadialGradient(32,32,1,32,32,30);g2.addColorStop(0,'rgba(255,225,150,1)');g2.addColorStop(1,'rgba(240,185,58,0)');dx.fillStyle=g2;dx.fillRect(0,0,64,64);
+  pm=new THREE.PointsMaterial({size:0.28,map:new THREE.CanvasTexture(dc),transparent:true,depthWrite:false,blending:THREE.AdditiveBlending,color:0xffffff});
+  beam.add(new THREE.Points(pg,pm));beam.userData={pin:pin,pc:pc,pout:pout,str:str,L:L};
+  var al=textSprite('light reads  α = '+(Math.abs(a)<5e-4?'0.000  (silent)':fmt(a)),'#f0b93a',1.2);al.position.set(-L*0.55,yb-0.6,0);beam.add(al);}
+function moveLight(time){var u=beam.userData;if(!u.pin)return;var k=0;
+  for(var i=0;i<NP;i++){var s=((i/NP)+time*0.00016)%1;var p;
+    if(s<0.5){p=u.pin.clone().lerp(u.pc,s/0.5);}else{if(((i*7919)%100)/100>0.08+0.92*u.str){p=new THREE.Vector3(999,999,999);}else p=u.pc.clone().lerp(u.pout,(s-0.5)/0.5);}
+    pts[k++]=p.x;pts[k++]=p.y;pts[k++]=p.z;}
+  pg.attributes.position.needsUpdate=true;}
+function read(){var el=document.getElementById('read');var a=M.alpha;
+  var near=(Math.abs(M.gap[0]*M.gap[0]-P.y)<0.02||Math.abs(M.gap[1]*M.gap[1]-P.y)<0.02);
+  el.innerHTML='<span>photon energy squared y = <b class="g">'+P.y.toFixed(3)+'</b></span>'+
+   '<span>polarizability α = <b class="g">'+(near?'at a gap (pole)':(Math.abs(a)<5e-4?'0.000':fmt(a)))+'</b></span>'+
+   '<span>tensor Q = ½ S(−3) = <b class="b">'+fmt(M.Q)+'</b></span>'+
+   '<span>tune-out at y = <b class="g">'+M.y0.toFixed(4)+'</b></span>'+
+   '<span>mean gaps S(−1)/S(−2), S(−2)/S(−3), S(−3)/S(−4) = '+fmt(M.S[-1]/M.S[-2])+', '+fmt(M.S[-2]/M.S[-3])+', '+fmt(M.S[-3]/M.S[-4])+'</span>';}
+function sync(){document.getElementById('sy').value=P.y;document.getElementById('sg').value=P.g2;document.getElementById('ss').value=P.s2;}
+function setP(o,structural){for(var k in o)P[k]=o[k];if(structural)build();else{M=model();light();read();}sync();}
+document.getElementById('sy').addEventListener('input',function(e){sweep=false;setP({y:+e.target.value},false);});
+document.getElementById('sg').addEventListener('input',function(e){setP({g2:+e.target.value},true);});
+document.getElementById('ss').addEventListener('input',function(e){setP({s2:+e.target.value},true);});
+document.getElementById('b0').addEventListener('click',function(){sweep=false;setP({y:0},false);});
+document.getElementById('b1').addEventListener('click',function(){sweep=false;setP({y:model().y0},false);});
+document.getElementById('b2').addEventListener('click',function(){sweep=!sweep;t0=performance.now()-P.y/3.9*24000;});
+document.getElementById('b3').addEventListener('click',function(){sweep=false;setP({y:0,g2:2,s2:4},true);});
+/* orbit */
+var drag=null,pinch=0;
+stage.addEventListener('pointerdown',function(e){drag={x:e.clientX,y:e.clientY};userMoved=true;stage.setPointerCapture(e.pointerId);stage.style.cursor='grabbing';});
+stage.addEventListener('pointermove',function(e){if(!drag)return;orb.th-=(e.clientX-drag.x)*0.006;orb.ph=Math.max(0.25,Math.min(2.9,orb.ph-(e.clientY-drag.y)*0.005));drag={x:e.clientX,y:e.clientY};});
+stage.addEventListener('pointerup',function(){drag=null;stage.style.cursor='grab';});
+stage.addEventListener('wheel',function(e){e.preventDefault();userMoved=true;zoomed=true;orb.r=Math.max(6,Math.min(60,orb.r*(1+e.deltaY*0.001)));},{passive:false});
+function frame(now){if(sweep){var s=((now-t0)%24000)/24000;var y=s*3.9;if(Math.abs(y-1)<0.012)y=1.012;setP({y:y},false);}
+  if(!userMoved)orb.th=0.30*Math.sin(now*0.00012);
+  if(halo)halo.material.opacity=0.55+0.25*Math.min(1,M.Q/4)+0.06*Math.sin(now*0.002);
+  moveLight(now);
+  /* keep labels readable: they sit on the left of the ladder as seen by the camera */
+  var right=new THREE.Vector3(Math.cos(orb.th),0,-Math.sin(orb.th));
+  labels.children.forEach(function(sp){if(sp.userData.side===undefined){sp.userData.side=sp.position.x<0?-1:1;sp.userData.d=Math.abs(sp.position.x);}
+    sp.position.x=right.x*sp.userData.side*sp.userData.d;sp.position.z=right.z*sp.userData.side*sp.userData.d;});
+  placeCam();renderer.render(scene,cam);requestAnimationFrame(frame);}
+orb.target.set(0,yk(-2.9),0);resize();build();requestAnimationFrame(frame);
+window.API={set:function(o){setP(o,true);},state:function(){var m=model();return {y:P.y,alpha:m.alpha,Q:m.Q,y0:m.y0,S:m.S};},still:function(th){userMoved=true;orb.th=th;}};
+})();
+</script>
+</body></html>
