@@ -1,0 +1,28 @@
+DECAYING tilt 0.06*(8/L)^4
+   X=1e+05  turn 14.8369  readout 35.6825  angle(u,m) 34.6133 deg
+   X=1e+06  turn 28.7031  readout 35.7503  angle(u,m) 9.6224 deg
+   X=1e+07  turn 33.9407  readout 35.7539  angle(u,m) 2.7044 deg
+   X=1e+08  turn 35.3369  readout 35.7547  angle(u,m) 0.9707 deg
+   after balanced tail: turn 35.7543  readout 35.7543  angle(u,m) 0.00000 deg ; turn - readout@1e8 = -0.0004
+   final turn - readout@1e6 = -0.4134 ;  readout drift 1e6->1e8 = +0.0044
+CONSTANT tilt 0.02
+   X=1e+05  turn 19.8488  readout 19.3327  angle(u,m) 2.7890 deg
+   X=1e+06  turn 19.2742  readout 19.3322  angle(u,m) 2.7238 deg
+   X=1e+07  turn 19.6547  readout 19.3328  angle(u,m) 1.8717 deg
+   X=1e+08  turn 20.0061  readout 19.3339  angle(u,m) 1.9757 deg
+   after balanced tail: turn 19.3345  readout 19.3338  angle(u,m) 0.00218 deg ; turn - readout@1e8 = +0.0006
+   final turn - readout@1e6 = +0.6739 ;  readout drift 1e6->1e8 = +0.0017
+NO tilt
+   X=1e+05  turn 19.2711  readout 19.3470  angle(u,m) 1.7309 deg
+   X=1e+06  turn 18.2317  readout 19.3492  angle(u,m) 1.4020 deg
+   X=1e+07  turn 18.6999  readout 19.3465  angle(u,m) 0.6643 deg
+   X=1e+08  turn 19.0821  readout 19.3464  angle(u,m) 0.2738 deg
+   after balanced tail: turn 19.3461  readout 19.3461  angle(u,m) 0.00000 deg ; turn - readout@1e8 = -0.0003
+   final turn - readout@1e6 = -0.2671 ;  readout drift 1e6->1e8 = -0.0028
+FAST-DECAYING tilt 0.06*(8/L)^10
+   X=1e+05  turn 14.7039  readout 35.6770  angle(u,m) 34.5533 deg
+   X=1e+06  turn 28.5161  readout 35.6769  angle(u,m) 8.7427 deg
+   X=1e+07  turn 33.9356  readout 35.6710  angle(u,m) 1.9506 deg
+   X=1e+08  turn 35.3155  readout 35.6708  angle(u,m) 0.4396 deg
+   after balanced tail: turn 35.6704  readout 35.6704  angle(u,m) 0.00000 deg ; turn - readout@1e8 = -0.0004
+   final turn - readout@1e6 = -0.3614 ;  readout drift 1e6->1e8 = -0.0061

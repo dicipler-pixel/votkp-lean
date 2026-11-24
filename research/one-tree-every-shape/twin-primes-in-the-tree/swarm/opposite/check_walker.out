@@ -1,0 +1,9 @@
+/tmp/claude-0/-home-claude/502f5ad8-acd9-59a2-b5cf-d48e7967cc3a/scratchpad/swarm/opposite/owalk.py:29: NumbaPerformanceWarning: [1m[1m'@' is faster on contiguous arrays, called on (Array(float64, 2, 'A', False, aligned=True), Array(float64, 1, 'C', False, aligned=True))[0m[0m
+  ri=r[i]; w=R@E[arm[i]]
+/tmp/claude-0/-home-claude/502f5ad8-acd9-59a2-b5cf-d48e7967cc3a/scratchpad/swarm/opposite/owalk.py:57: NumbaPerformanceWarning: [1m[1m'@' is faster on contiguous arrays, called on (Array(float64, 1, 'C', False, aligned=True), Array(float64, 2, 'A', False, aligned=True))[0m[0m
+  p1=a1@R; p2=a2@R
+twin 3D (np.float64(1.9539925233402755e-14), np.float64(5.662137425588298e-15), np.float64(6.441061572992623e-11), 6.0070762459786895)
+primes 4D (np.float64(1.2434497875801753e-14), np.float64(2.220446049250313e-15), np.float64(5.416916915024217e-13), 4.185042555493082)
+primes tetra (np.float64(5.717648576819556e-15), np.float64(1.0436096431476471e-14), np.float64(6.106226635438361e-15), 0.4514303750954206)
+signed 5D (np.float64(1.9984014443252818e-15), np.float64(6.661338147750939e-15), np.float64(4.773959005888173e-15), 1.1430629377793582)
+fixed ln5 (only 12 steps, matrices overflow later) (np.float64(0.0), np.float64(6.661338147750939e-16), np.float64(0.0001693805704380269), 14.568648050708934)

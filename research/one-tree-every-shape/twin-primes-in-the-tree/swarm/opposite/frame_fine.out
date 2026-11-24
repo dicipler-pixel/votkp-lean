@@ -1,0 +1,36 @@
+== all primes SO(1,4)
+  1.0e+04->3.2e+04  dL=1.153  frame increment 0.2472 deg   rate 0.2143 deg/unit L   body generator [ 0.36 -0.29  0.25 -0.66 -0.14  0.53]   total turning 286.2 deg
+  3.2e+04->1.0e+05  dL=1.152  frame increment 1.0755 deg   rate 0.9339 deg/unit L   body generator [ 0.08 -0.61 -0.15 -0.62 -0.21  0.41]   total turning 342.1 deg
+  1.0e+05->3.2e+05  dL=1.151  frame increment 0.2671 deg   rate 0.2320 deg/unit L   body generator [ 0.68  0.41  0.44 -0.34 -0.25  0.06]   total turning 398.5 deg
+  3.2e+05->1.0e+06  dL=1.151  frame increment 0.1262 deg   rate 0.1096 deg/unit L   body generator [ 0.05 -0.59 -0.36 -0.59 -0.37  0.2 ]   total turning 455.2 deg
+  1.0e+06->3.2e+06  dL=1.151  frame increment 0.1655 deg   rate 0.1437 deg/unit L   body generator [ 0.04 -0.61 -0.09 -0.6  -0.13  0.49]   total turning 512.0 deg
+  3.2e+06->1.0e+07  dL=1.151  frame increment 0.1769 deg   rate 0.1536 deg/unit L   body generator [ 0.57 -0.06  0.25 -0.64 -0.31  0.32]   total turning 569.0 deg
+  1.0e+07->3.2e+07  dL=1.151  frame increment 0.1935 deg   rate 0.1681 deg/unit L   body generator [ 0.51 -0.15  0.22 -0.67 -0.29  0.37]   total turning 626.0 deg
+  3.2e+07->1.0e+08  dL=1.151  frame increment 0.1558 deg   rate 0.1353 deg/unit L   body generator [ 0.5  -0.16  0.24 -0.66 -0.26  0.4 ]   total turning 683.1 deg
+== sexy
+  1.0e+04->3.2e+04  dL=1.154  frame increment 0.7111 deg   rate 0.6162 deg/unit L   body generator [-0.17 -0.85 -0.5 ]   total turning 281.8 deg
+  3.2e+04->1.0e+05  dL=1.151  frame increment 0.5370 deg   rate 0.4665 deg/unit L   body generator [ 0.66 -0.29 -0.69]   total turning 334.4 deg
+  1.0e+05->3.2e+05  dL=1.152  frame increment 0.9169 deg   rate 0.7959 deg/unit L   body generator [ 0.81  0.06 -0.58]   total turning 387.4 deg
+  3.2e+05->1.0e+06  dL=1.151  frame increment 1.4621 deg   rate 1.2700 deg/unit L   body generator [0.68 0.73 0.03]   total turning 440.8 deg
+  1.0e+06->3.2e+06  dL=1.151  frame increment 0.3965 deg   rate 0.3444 deg/unit L   body generator [0.51 0.82 0.25]   total turning 494.2 deg
+  3.2e+06->1.0e+07  dL=1.151  frame increment 0.4503 deg   rate 0.3911 deg/unit L   body generator [ 0.83  0.19 -0.52]   total turning 547.6 deg
+  1.0e+07->3.2e+07  dL=1.151  frame increment 0.4155 deg   rate 0.3609 deg/unit L   body generator [ 0.76  0.64 -0.09]   total turning 601.2 deg
+  3.2e+07->1.0e+08  dL=1.151  frame increment 0.4388 deg   rate 0.3812 deg/unit L   body generator [0.62 0.77 0.13]   total turning 654.8 deg
+== twins
+  1.0e+04->3.2e+04  dL=1.156  frame increment 4.8247 deg   rate 4.1743 deg/unit L   body generator [-0.32 -0.82 -0.48]   total turning 261.6 deg
+  3.2e+04->1.0e+05  dL=1.154  frame increment 2.3330 deg   rate 2.0221 deg/unit L   body generator [ 0.7   0.08 -0.71]   total turning 314.8 deg
+  1.0e+05->3.2e+05  dL=1.151  frame increment 2.5016 deg   rate 2.1739 deg/unit L   body generator [-0.16 -0.74 -0.65]   total turning 368.2 deg
+  3.2e+05->1.0e+06  dL=1.152  frame increment 1.0600 deg   rate 0.9203 deg/unit L   body generator [-0.74 -0.09  0.67]   total turning 421.9 deg
+  1.0e+06->3.2e+06  dL=1.151  frame increment 0.7185 deg   rate 0.6242 deg/unit L   body generator [-0.81 -0.5   0.32]   total turning 475.7 deg
+  3.2e+06->1.0e+07  dL=1.152  frame increment 0.2207 deg   rate 0.1916 deg/unit L   body generator [-0.33 -0.8  -0.5 ]   total turning 529.5 deg
+  1.0e+07->3.2e+07  dL=1.151  frame increment 0.1781 deg   rate 0.1547 deg/unit L   body generator [-0.68  0.03  0.73]   total turning 583.3 deg
+  3.2e+07->1.0e+08  dL=1.151  frame increment 0.1964 deg   rate 0.1706 deg/unit L   body generator [-0.12 -0.75 -0.65]   total turning 637.2 deg
+== cousins
+  1.0e+04->3.2e+04  dL=1.161  frame increment 1.7946 deg   rate 1.5463 deg/unit L   body generator [ 0.87  0.28 -0.4 ]   total turning 280.7 deg
+  3.2e+04->1.0e+05  dL=1.153  frame increment 3.6372 deg   rate 3.1557 deg/unit L   body generator [-0.63  0.24  0.74]   total turning 334.0 deg
+  1.0e+05->3.2e+05  dL=1.152  frame increment 2.3142 deg   rate 2.0080 deg/unit L   body generator [0.54 0.79 0.29]   total turning 387.6 deg
+  3.2e+05->1.0e+06  dL=1.151  frame increment 1.3054 deg   rate 1.1338 deg/unit L   body generator [0.66 0.74 0.13]   total turning 441.4 deg
+  1.0e+06->3.2e+06  dL=1.151  frame increment 0.4125 deg   rate 0.3583 deg/unit L   body generator [-0.71  0.02  0.7 ]   total turning 495.1 deg
+  3.2e+06->1.0e+07  dL=1.151  frame increment 0.3231 deg   rate 0.2806 deg/unit L   body generator [0.19 0.78 0.6 ]   total turning 548.9 deg
+  1.0e+07->3.2e+07  dL=1.151  frame increment 0.2032 deg   rate 0.1765 deg/unit L   body generator [-0.64  0.13  0.76]   total turning 602.8 deg
+  3.2e+07->1.0e+08  dL=1.151  frame increment 0.0649 deg   rate 0.0564 deg/unit L   body generator [0.45 0.81 0.37]   total turning 656.6 deg

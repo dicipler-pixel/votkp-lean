@@ -1,0 +1,9 @@
+E1 worst error = 9.5348e-147
+E2 worst error = 6.4957e-160
+E3 worst error = 1.2249e-159
+E4 worst error = 0
+E5 worst error = 2.3324e-111
+axis-sign: cases where (n x w) fits better than (w x n): 0
+K1 PASS  K2 PASS
+E6 r=0.0001: (eps - 2nd order)/r^3 = -0.0326698954891
+E6 r=1.0e-6: (eps - 2nd order)/r^3 = -0.0326741055706

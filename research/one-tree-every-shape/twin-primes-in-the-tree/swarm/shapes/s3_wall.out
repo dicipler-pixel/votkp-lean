@@ -1,0 +1,29 @@
+wall: z = 5.828427, rapidity ln z = 1.762747, G^2 = 1/2
+early steps (3->5 and 5->11 come before the chain: 3 and 5 carry no arm digit):
+   a -> a'     z        G=(z-1)/(z+1)  G^2     G^2/(1/2)   arm  Thomas turn with previous step
+     3 ->   5  1.6667   0.2500        0.0625  0.125       -
+     5 ->  11  2.2000   0.3750        0.1406  0.281       -
+    11 ->  17  1.5455   0.2143        0.0459  0.092       y    -
+    17 ->  29  1.7059   0.2609        0.0681  0.136       z    6.399 deg  (tan(th/2) = G_prev G)
+    29 ->  41  1.4138   0.1714        0.0294  0.059       x    5.121 deg  (tan(th/2) = G_prev G)
+    41 ->  59  1.4390   0.1800        0.0324  0.065       z    3.535 deg  (tan(th/2) = G_prev G)
+    59 ->  71  1.2034   0.0923        0.0085  0.017       x    1.904 deg  (tan(th/2) = G_prev G)
+    71 -> 101  1.4225   0.1744        0.0304  0.061       x    0 (same arm: the two boosts commute)
+   101 -> 107  1.0594   0.0288        0.0008  0.002       y    0.577 deg  (tan(th/2) = G_prev G)
+   107 -> 137  1.2804   0.1230        0.0151  0.030       y    0 (same arm: the two boosts commute)
+   137 -> 149  1.0876   0.0420        0.0018  0.004       z    0.591 deg  (tan(th/2) = G_prev G)
+   149 -> 179  1.2013   0.0915        0.0084  0.017       z    0 (same arm: the two boosts commute)
+   179 -> 191  1.0670   0.0324        0.0011  0.002       x    0.340 deg  (tan(th/2) = G_prev G)
+   191 -> 197  1.0314   0.0155        0.0002  0.000       y    0.057 deg  (tan(th/2) = G_prev G)
+   197 -> 227  1.1523   0.0708        0.0050  0.010       y    0 (same arm: the two boosts commute)
+   227 -> 239  1.0529   0.0258        0.0007  0.001       z    0.209 deg  (tan(th/2) = G_prev G)
+   239 -> 269  1.1255   0.0591        0.0035  0.007       z    0 (same arm: the two boosts commute)
+   269 -> 281  1.0446   0.0218        0.0005  0.001       x    0.148 deg  (tan(th/2) = G_prev G)
+largest single step from 11 on, below 1e9: 17 -> 29, z = 1.7059, G^2 = 0.0681 (wall 0.5)
+K3a -> survives (no single step reaches the wall)
+largest consecutive perpendicular pair: sinh(r1/2) sinh(r2/2) = 0.0593 at 11 -> 17 -> 29 (wall 1)
+K3b -> survives (no consecutive pair reaches the wall)
+(iii) the chain's point crosses the wall sphere rho = tanh(d/2) = 1/sqrt2 at step 197 -> 227: d = 1.8043, path L = 3.0271, c = +0.0567, frame turn so far 9.790 deg (of 12.27 at 1e9)
+(iv) books x,z reach the pair wall at twin start 1151: L_x = 1.4967, L_z = 2.0589 (path 4.650)
+(iv) books y,z reach the pair wall at twin start 2027: L_y = 1.4207, L_z = 2.1643 (path 5.216)
+(iv) books x,y reach the pair wall at twin start 4481: L_x = 1.8933, L_y = 1.6467 (path 6.010)

@@ -1,0 +1,25 @@
+K5a relabel x->y->z: worst turn change 1.3e-07 deg, worst |C axis - axis'| 1.2e-08 -> FAIL
+arm projections sit at 0, 120, 240 deg in the plane across the diagonal (x, y, z)
+   a'        frame turn  axis-to-diagonal  heading tilt  tilt dir  imbalance S dir  |S|     angle(tilt, S)
+   100151       9.870     49.009            3.790       191.3      244.8        0.6570     53.5
+   1000037     11.620     56.202            1.609       167.7      242.3        0.6321     74.6
+   10000139    12.072     57.304            0.755       165.1      241.4        0.6343     76.3
+   100000037   12.205     57.639            0.560       160.0      240.4        0.6372     80.4
+   999000071   12.269     57.800            0.469       156.1      239.5        0.6378     83.4
+K5b frame axis to diagonal at 1e9 = 57.80 deg -> KILLED
+   null (200 i.i.d.-arm chains to 1e8): axis-to-diagonal 10th/50th/90th percentile 63.0 / 80.8 / 88.4 deg; real 57.6 deg (rank 13/200)
+   (a uniformly random axis has median 60 deg to a fixed line)
+K5c -> survives
+K5d tilt-vs-imbalance angles at 1e8, 1e9: 80.4, 83.4 deg -> KILLED
+twin starts mod 9 classes present: [2, 5, 8]  counts [1140981 1142273 1141250]
+   mod-9 arms  a'=100151     d/L=0.58473  c=+0.06730  frame turn 12.252 deg  axis-to-diagonal 65.29 deg  heading tilt 3.531 deg
+   mod-9 arms  a'=1000037    d/L=0.58324  c=+0.06725  frame turn 10.799 deg  axis-to-diagonal 61.75 deg  heading tilt 2.076 deg
+   mod-9 arms  a'=10000139   d/L=0.58222  c=+0.06682  frame turn 9.450 deg  axis-to-diagonal 56.93 deg  heading tilt 0.424 deg
+   mod-9 arms  a'=100000037  d/L=0.58152  c=+0.06681  frame turn 9.287 deg  axis-to-diagonal 56.11 deg  heading tilt 0.086 deg
+   mod-9 arms  a'=999000071  d/L=0.58100  c=+0.06681  frame turn 9.219 deg  axis-to-diagonal 55.83 deg  heading tilt 0.018 deg
+K5e mod-9 slope 1e5->1e9 0.57730 -> survives
+   mod-9 class transitions (2,5,8):
+ [[355556 397075 388349]
+ [388738 356476 397059]
+ [396686 388722 355842]] 
+   repeat rate 0.3118

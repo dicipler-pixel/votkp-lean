@@ -1,0 +1,54 @@
+cube triple reproduces the axes: True
+K2a worst |pair turn formula - polar split| = 5.7e-15 -> PASS
+K2b worst |trace formula - matrix| = 4.9e-15 -> PASS
+
+== cube axes = octahedron face vertices ==
+   angle between arms 90.000 deg; predicted |P| = 0.57735; predicted late |omega|/r = 0.8165
+   first change (11->17 then 17->29) pair turn 6.399 deg; small steps: eps ~ r1 r2 sin(gamma)/2
+   pair wall at G^2 = 0.5000 (z = 5.828)
+   a'=1.00e+05  L=9.1165  d=5.37257  d/L=0.58932  c=d-|P|L=+0.10913  net frame turn 9.870 deg  body heading to u*: 3.790 deg
+   a'=1.00e+07  L=13.7202  d=8.02985  d/L=0.58526  c=d-|P|L=+0.10848  net frame turn 12.072 deg  body heading to u*: 0.755 deg
+   a'=1.00e+08  L=16.0228  d=9.35929  d/L=0.58412  c=d-|P|L=+0.10853  net frame turn 12.205 deg  body heading to u*: 0.560 deg
+   a'=9.99e+08  L=18.3244  d=10.68815  d/L=0.58328  c=d-|P|L=+0.10857  net frame turn 12.269 deg  body heading to u*: 0.469 deg
+   K2c slope 1e5->1e9 = 0.57729 vs 0.57735, miss 6.1e-05 -> survives
+   K2d mean |omega|/r after 1e8 = 0.8164; C1 law along the path 0.8164; lock value 0.8165; miss vs lock 0.01% -> survives
+== tetrahedron: three face normals ==
+   angle between arms 109.471 deg; predicted |P| = 0.33333; predicted late |omega|/r = 0.9428
+   first change (11->17 then 17->29) pair turn 6.148 deg; small steps: eps ~ r1 r2 sin(gamma)/2
+   pair wall at G^2 = 0.5147 (z = 6.078)
+   a'=1.00e+05  L=9.1165  d=3.20131  d/L=0.35115  c=d-|P|L=+0.16246  net frame turn 13.625 deg  body heading to u*: 8.681 deg
+   a'=1.00e+07  L=13.7202  d=4.73007  d/L=0.34475  c=d-|P|L=+0.15666  net frame turn 18.595 deg  body heading to u*: 2.331 deg
+   a'=1.00e+08  L=16.0228  d=5.49757  d/L=0.34311  c=d-|P|L=+0.15664  net frame turn 19.251 deg  body heading to u*: 1.550 deg
+   a'=9.99e+08  L=18.3244  d=6.26481  d/L=0.34188  c=d-|P|L=+0.15669  net frame turn 19.619 deg  body heading to u*: 1.158 deg
+   K2c slope 1e5->1e9 = 0.33271 vs 0.33333, miss 6.3e-04 -> survives
+   K2d mean |omega|/r after 1e8 = 0.9380; C1 law along the path 0.9380; lock value 0.9428; miss vs lock 0.51% -> survives
+== icosahedron: vertices of one face (= dodecahedron: normals of 3 faces at a vertex) ==
+   angle between arms 63.435 deg; predicted |P| = 0.79465; predicted late |omega|/r = 0.6071
+   first change (11->17 then 17->29) pair turn 5.585 deg; small steps: eps ~ r1 r2 sin(gamma)/2
+   pair wall at G^2 = 0.5279 (z = 6.314)
+   a'=1.00e+05  L=9.1165  d=7.30479  d/L=0.80127  c=d-|P|L=+0.06029  net frame turn 5.919 deg  body heading to u*: 2.136 deg
+   a'=1.00e+07  L=13.7202  d=10.96305  d/L=0.79904  c=d-|P|L=+0.06022  net frame turn 7.372 deg  body heading to u*: 0.325 deg
+   a'=1.00e+08  L=16.0228  d=12.79282  d/L=0.79841  c=d-|P|L=+0.06024  net frame turn 7.424 deg  body heading to u*: 0.278 deg
+   a'=9.99e+08  L=18.3244  d=14.62180  d/L=0.79794  c=d-|P|L=+0.06026  net frame turn 7.452 deg  body heading to u*: 0.241 deg
+   K2c slope 1e5->1e9 = 0.79465 vs 0.79465, miss 3.6e-06 -> survives
+   K2d mean |omega|/r after 1e8 = 0.6071; C1 law along the path 0.6071; lock value 0.6071; miss vs lock 0.00% -> survives
+== dodecahedron: three vertices next to a vertex ==
+   angle between arms 41.810 deg; predicted |P| = 0.91117; predicted late |omega|/r = 0.4120
+   first change (11->17 then 17->29) pair turn 4.098 deg; small steps: eps ~ r1 r2 sin(gamma)/2
+   pair wall at G^2 = 0.6000 (z = 7.873)
+   a'=1.00e+05  L=9.1165  d=8.33483  d/L=0.91425  c=d-|P|L=+0.02808  net frame turn 3.558 deg  body heading to u*: 1.313 deg
+   a'=1.00e+07  L=13.7202  d=12.52957  d/L=0.91322  c=d-|P|L=+0.02808  net frame turn 4.583 deg  body heading to u*: 0.176 deg
+   a'=1.00e+08  L=16.0228  d=14.62762  d/L=0.91293  c=d-|P|L=+0.02809  net frame turn 4.607 deg  body heading to u*: 0.162 deg
+   a'=9.99e+08  L=18.3244  d=16.72477  d/L=0.91271  c=d-|P|L=+0.02809  net frame turn 4.624 deg  body heading to u*: 0.141 deg
+   K2c slope 1e5->1e9 = 0.91117 vs 0.91117, miss 9.7e-07 -> survives
+   K2d mean |omega|/r after 1e8 = 0.4120; C1 law along the path 0.4120; lock value 0.4120; miss vs lock 0.00% -> survives
+== icosahedron: edges of one face, head to tail (closed loop) ==
+   angle between arms 120.000 deg; predicted |P| = 0.00000; predicted late |omega|/r = 1.0000
+   first change (11->17 then 17->29) pair turn 5.702 deg; small steps: eps ~ r1 r2 sin(gamma)/2
+   pair wall at G^2 = 0.5359 (z = 6.464)
+   a'=1.00e+05  L=9.1165  d=0.83324  d/L=0.09140  c=d-|P|L=+0.83324  net frame turn 8.365 deg  body heading to u*: nan deg
+   a'=1.00e+07  L=13.7202  d=0.80617  d/L=0.05876  c=d-|P|L=+0.80617  net frame turn 7.352 deg  body heading to u*: nan deg
+   a'=1.00e+08  L=16.0228  d=0.81004  d/L=0.05056  c=d-|P|L=+0.81004  net frame turn 7.061 deg  body heading to u*: nan deg
+   a'=9.99e+08  L=18.3244  d=0.81113  d/L=0.04426  c=d-|P|L=+0.81113  net frame turn 6.781 deg  body heading to u*: nan deg
+   K2e d grew by -0.0221 between 1e5 and 1e9 -> survives
+   mean |omega|/r after 1e8 = 0.2256 (no lock: heading free, C1 law along the path 0.2256)

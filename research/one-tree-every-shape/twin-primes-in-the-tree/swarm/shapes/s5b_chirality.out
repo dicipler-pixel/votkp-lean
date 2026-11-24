@@ -1,0 +1,17 @@
+steps of the arm walk on the 3-fold group: forward 0.3554  backward 0.3328  repeat 0.3118
+r r'-weighted: forward 0.6637 backward 0.1814 repeat 0.1549
+pair turn x-then-y: axis . e_z = -1.000 (rotation vector = -1 x angle x e_z)
+   a'          frame turn  diagonal part (rad)  in-plane part (rad)   Q (consecutive pairs, sign-adjusted)
+   1019         15.197 deg   -0.13876              0.22606               -0.12903
+   10007         6.995 deg   -0.11562              0.03923               -0.12696
+   100151        9.870 deg   -0.11300              0.13003               -0.12704
+   1000037      11.620 deg   -0.11282              0.16853               -0.12705
+   10000139     12.072 deg   -0.11382              0.17732               -0.12705
+   100000037    12.205 deg   -0.11402              0.17993               -0.12705
+   999000071    12.269 deg   -0.11411              0.18120               -0.12705
+K5f predicted sign -1, ball diagonal component -0.11411 -> survives
+K5g i.i.d. arms: mean diagonal component +0.00700 (s.e. 0.00617, sd 0.08724); real at 1e8 -0.11402 -> survives
+   real chain rank among i.i.d. by diagonal component: 16/200
+K5h Q = -0.12705 vs diagonal component -0.11411, ratio 0.898 -> survives
+mod-9 reading: the class step equals gap mod 9 / 3: True  gap mod 9 shares {0,3,6}: [0.3118, 0.3477, 0.3404]
+   mod-9 arms: forward-backward excess +25012 steps; frame diagonal component -0.09036, in-plane 0.13313; predicted sign -1

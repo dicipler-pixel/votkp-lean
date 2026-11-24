@@ -1,0 +1,5 @@
+1e6: angle(u,diag)=1.607 deg  angle(P_loc,diag)=1.293 deg  cos(offdiag dirs)=0.755  length ratio=1.24  P_loc=[0.324  0.3336 0.3424] KILL
+1e7: angle(u,diag)=0.754 deg  angle(P_loc,diag)=0.585 deg  cos(offdiag dirs)=0.959  length ratio=1.29  P_loc=[0.3292 0.3376 0.3332] PASS
+1e8: angle(u,diag)=0.560 deg  angle(P_loc,diag)=0.507 deg  cos(offdiag dirs)=0.941  length ratio=1.10  P_loc=[0.3301 0.3372 0.3326] PASS
+1e9: angle(u,diag)=0.469 deg  angle(P_loc,diag)=0.418 deg  cos(offdiag dirs)=0.999  length ratio=1.12  P_loc=[0.3303 0.3362 0.3335] PASS
+octant invariance: min component of the body velocity vector along the whole chain = 0.000e+00 PASS

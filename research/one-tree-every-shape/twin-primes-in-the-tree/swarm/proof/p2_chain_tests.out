@@ -1,0 +1,49 @@
+sieve done 13s, twin starts in (5,1e9]: 3424504
+sum r^2 up to 1e3 = 1.1705277   max r in (1e2,1e3] = 5.341e-01
+sum r^2 up to 1e4 = 1.2542553   max r in (1e3,1e4] = 1.455e-01
+sum r^2 up to 1e5 = 1.2664154   max r in (1e4,1e5] = 2.083e-02
+sum r^2 up to 1e6 = 1.2682616   max r in (1e5,1e6] = 5.084e-03
+sum r^2 up to 1e7 = 1.2685208   max r in (1e6,1e7] = 7.108e-04
+sum r^2 up to 1e8 = 1.2685574   max r in (1e7,1e8] = 1.433e-04
+sum r^2 up to 1e9 = 1.2685621   max r in (1e8,1e9] = 2.609e-05
+H2 tail (1e8,1e9] = 4.755e-06 K-H2 PASS
+block-max r (dyadic) at 2^10,2^15,2^20,2^25,2^29: ['7.87e-02', '1.01e-02', '7.11e-04', '5.63e-05', '6.83e-06']
+sum of dyadic block maxima to 2^29: 1.6078 ; block max * 2^b / b^2 (gap / ln^2 scale): ['3.05', '3.88', '6.29', '9.07']
+
+unit-path windows: L, n, weighted share (1,7,9), count share (1,7,9), rho, model (+rho/15,-rho/15,0)
+L= 5 n=      64  w=(0.3541 0.3276 0.3183)  c=(0.3594 0.3281 0.3125)  w-c=(-0.0052 -0.0005 +0.0058) rho=0.2274 model=(+0.0152 -0.0152 0)
+L= 6 n=     120  w=(0.2304 0.3416 0.4280)  c=(0.2750 0.3250 0.4000)  w-c=(-0.0446 +0.0166 +0.0280) rho=0.1581 model=(+0.0105 -0.0105 0)
+L= 7 n=     269  w=(0.3612 0.3463 0.2926)  c=(0.3680 0.3420 0.2900)  w-c=(-0.0068 +0.0042 +0.0026) rho=0.1298 model=(+0.0087 -0.0087 0)
+L= 8 n=     604  w=(0.2956 0.3513 0.3531)  c=(0.3212 0.3328 0.3460)  w-c=(-0.0255 +0.0185 +0.0071) rho=0.1065 model=(+0.0071 -0.0071 0)
+L= 9 n=    1413  w=(0.3306 0.3678 0.3016)  c=(0.3319 0.3482 0.3199)  w-c=(-0.0013 +0.0196 -0.0183) rho=0.0924 model=(+0.0062 -0.0062 0)
+L=10 n=    3247  w=(0.3237 0.3392 0.3370)  c=(0.3406 0.3289 0.3305)  w-c=(-0.0169 +0.0103 +0.0066) rho=0.0780 model=(+0.0052 -0.0052 0)
+L=11 n=    7740  w=(0.3263 0.3361 0.3375)  c=(0.3305 0.3394 0.3301)  w-c=(-0.0042 -0.0033 +0.0074) rho=0.0684 model=(+0.0046 -0.0046 0)
+L=12 n=   18219  w=(0.3287 0.3379 0.3334)  c=(0.3349 0.3320 0.3331)  w-c=(-0.0062 +0.0060 +0.0003) rho=0.0592 model=(+0.0039 -0.0039 0)
+L=13 n=   43277  w=(0.3289 0.3347 0.3364)  c=(0.3359 0.3342 0.3300)  w-c=(-0.0070 +0.0005 +0.0064) rho=0.0518 model=(+0.0035 -0.0035 0)
+L=14 n=  104072  w=(0.3299 0.3345 0.3356)  c=(0.3325 0.3351 0.3324)  w-c=(-0.0026 -0.0006 +0.0032) rho=0.0458 model=(+0.0031 -0.0031 0)
+L=15 n=  252341  w=(0.3304 0.3371 0.3325)  c=(0.3335 0.3331 0.3334)  w-c=(-0.0031 +0.0040 -0.0009) rho=0.0408 model=(+0.0027 -0.0027 0)
+L=16 n=  615437  w=(0.3298 0.3367 0.3335)  c=(0.3334 0.3334 0.3332)  w-c=(-0.0037 +0.0034 +0.0003) rho=0.0366 model=(+0.0024 -0.0024 0)
+L=17 n= 1510897  w=(0.3299 0.3362 0.3339)  c=(0.3329 0.3334 0.3337)  w-c=(-0.0030 +0.0028 +0.0002) rho=0.0331 model=(+0.0022 -0.0022 0)
+mean |w-1/3| L in [6,10): 0.03598   L in [14,18): 0.00237 K-DEC PASS
+pooled L>=10: measured w-c = (-0.00582 +0.00289 +0.00294), model = (+0.00345 -0.00345 0) K-MOD KILL
+weighted share - 1/3 for digit 1, times L^2: ['L5:+0.63', 'L6:-4.35', 'L7:+1.57', 'L8:-2.72', 'L9:-0.25', 'L10:-1.06', 'L11:-0.93', 'L12:-0.73', 'L13:-0.81', 'L14:-0.72', 'L15:-0.71', 'L16:-0.97', 'L17:-1.05']
+
+reduced recursion 297s
+1e4: L=6.8053 d-L/sqrt3=0.1125 d/L=0.59388 angle(u,diag)=8.584 deg  sum r*alpha=1.83953 sum r(1-tanh(d/2))=1.88195 frame moved n/a deg since 1e3
+1e5: L=9.1149 d-L/sqrt3=0.1092 d/L=0.58933 angle(u,diag)=3.867 deg  sum r*alpha=2.02938 sum r(1-tanh(d/2))=1.92645 frame moved 5.4560 deg since 1e4
+1e6: L=11.4176 d-L/sqrt3=0.1085 d/L=0.58686 angle(u,diag)=1.607 deg  sum r*alpha=2.12418 sum r(1-tanh(d/2))=1.93826 frame moved 2.4549 deg since 1e5
+1e7: L=13.7202 d-L/sqrt3=0.1085 d/L=0.58526 angle(u,diag)=0.754 deg  sum r*alpha=2.16872 sum r(1-tanh(d/2))=1.94139 frame moved 0.8526 deg since 1e6
+1e8: L=16.0228 d-L/sqrt3=0.1085 d/L=0.58412 angle(u,diag)=0.560 deg  sum r*alpha=2.19438 sum r(1-tanh(d/2))=1.94222 frame moved 0.2028 deg since 1e7
+1e9: L=18.3254 d-L/sqrt3=0.1086 d/L=0.58327 angle(u,diag)=0.469 deg  sum r*alpha=2.21509 sum r(1-tanh(d/2))=1.94244 frame moved 0.0976 deg since 1e8
+K-REC PASS   K-FRM PASS
+tail |N| at 1e4 (to 1e9 cut) = 0.1042 ; L=6.81 ; L*|N| = 0.709
+tail |N| at 1e5 (to 1e9 cut) = 0.0619 ; L=9.11 ; L*|N| = 0.564
+tail |N| at 1e6 (to 1e9 cut) = 0.0320 ; L=11.42 ; L*|N| = 0.366
+tail |N| at 1e7 (to 1e9 cut) = 0.0215 ; L=13.72 ; L*|N| = 0.295
+tail |N| at 1e8 (to 1e9 cut) = 0.0104 ; L=16.02 ; L*|N| = 0.167
+H3' integral sum r|N| up to 1e8 = 2.8608 (truncated tails)
+
+adversarial chain: counts [1141501 1141501 1141501]  gap-weighted shares [0.5665 0.2907 0.1429]
+adversarial d/L = 0.65597 ; true chain d/L = 0.58327 ; |P_adv| = 0.65253 ; 1/sqrt3 = 0.57735 ; angle(u, P_adv) = 3.154 deg
+K-ADV objection SURVIVES (count law does not fix endpoint)
+total 599s

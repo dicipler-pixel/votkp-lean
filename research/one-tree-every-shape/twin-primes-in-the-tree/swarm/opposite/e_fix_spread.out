@@ -1,0 +1,4 @@
+twin arms d/L 0.76363   repeat fraction 0.3072
+iid arms d/L: mean 0.77129  min 0.77124 max 0.77135
+shuffled twin arms d/L: [0.77104 0.77156 0.7712  0.77109]
+Markov arms with the twin repeat fraction: d/L 0.76423
