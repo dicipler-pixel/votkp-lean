@@ -1,0 +1,10 @@
+K1 worst |Aw-(1+Gamma)/2| = 2.275957200481571e-15
+K2 worst (lhs-rhs), must be <=0 : 0
+   Gamma is pure imaginary on the rim: Gamma = i*tan(Phi/2); example Phi=1 -> 0.5463024898437905j 0.5463024898437905j
+K3 N=3  |signless - halfflux| = 1.33e-15   |signless - zeroflux| = 2.00e+00   min zeroflux -0.0000  min halfflux 1.0000
+K3 N=5  |signless - halfflux| = 8.88e-16   |signless - zeroflux| = 1.24e+00   min zeroflux 0.0000  min halfflux 0.3820
+K3 N=7  |signless - halfflux| = 1.78e-15   |signless - zeroflux| = 8.90e-01   min zeroflux -0.0000  min halfflux 0.1981
+K3 N=4  |signless - halfflux| = 1.41e+00   |signless - zeroflux| = 0.00e+00   min zeroflux -0.0000  min halfflux 0.5858
+K3 N=6  |signless - halfflux| = 1.00e+00   |signless - zeroflux| = 0.00e+00   min zeroflux -0.0000  min halfflux 0.2679
+K4 worst |level - 2pi*dist| = 8.881784197001252e-16 ; zero level only at lattice points; at (1/2,0): 3.141592653589793  at (1/2,1/2): 4.442882938158366
+K5 worst |det(I-uB) - (1-2cos(Phi)u^N+u^2N)| = 4.742874840267547e-16
