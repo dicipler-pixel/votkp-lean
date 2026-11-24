@@ -1,0 +1,8 @@
+ln(4/3) = 0.28768207245178085   2*ln(1/sin 60deg) = 0.2876820724517812   sin^2(60deg) = 0.7499999999999999
+  legs at 40 deg: end-to-end - 2*leg = -2.14577129   -2 ln(1/sin(half angle)) = -2.14577129
+  legs at 90 deg: end-to-end - 2*leg = -0.693147181   -2 ln(1/sin(half angle)) = -0.693147181
+  legs at 120 deg: end-to-end - 2*leg = -0.287682072   -2 ln(1/sin(half angle)) = -0.287682072
+  legs at 150 deg: end-to-end - 2*leg = -0.069336464   -2 ln(1/sin(half angle)) = -0.069336464
+  flux 0.1 : |1-e^{iP}|^2/|1+e^{iP}|^2 = 0.105572809   tan^2(P/2) = 0.105572809
+  flux 0.25 : |1-e^{iP}|^2/|1+e^{iP}|^2 = 1.0   tan^2(P/2) = 1.0
+  flux 0.4 : |1-e^{iP}|^2/|1+e^{iP}|^2 = 9.472135955   tan^2(P/2) = 9.472135955
