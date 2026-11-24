@@ -1,0 +1,34 @@
+--- K1 sum rule, equal unit masses
+N = 3  total = 3.0  N(N-2) = 3
+N = 4  total = 8.0  N(N-2) = 8
+N = 5  total = 15.0  N(N-2) = 15
+N = 6  total = 24.0  N(N-2) = 24
+N = 7  total = 35.0  N(N-2) = 35
+--- K2 per-pair rule, unequal masses
+worst per-pair residual = 2.2963919654728215e-10
+--- K3 three equal bodies: sum and determinant
+worst |s1+s2-3| = 6.295248766718942e-10   worst |det - 12A^2/xyz| = 9.531979650034828e-10
+--- K4/K5 DISTANCE map (the draft)
+delta 0.1  gap/delta: [np.float64(2.986), np.float64(3.1821), np.float64(2.9029), np.float64(2.9077)]  gap/delta^2: [np.float64(29.86), np.float64(31.821), np.float64(29.029), np.float64(29.077)]
+delta 0.01  gap/delta: [np.float64(2.9963), np.float64(3.0165), np.float64(2.9882), np.float64(2.9886)]  gap/delta^2: [np.float64(299.633), np.float64(301.646), np.float64(298.815), np.float64(298.862)]
+delta 0.001  gap/delta: [np.float64(2.9996), np.float64(3.0016), np.float64(2.9988), np.float64(2.9988)]  gap/delta^2: [np.float64(2999.61), np.float64(3001.628), np.float64(2998.794), np.float64(2998.841)]
+loop radius 0.01  holonomy = -1.0
+loop radius 0.003  holonomy = -1.0
+--- K4/K5 SQUARED-distance map (your August operator)
+delta 0.1  gap/delta: [np.float64(2.3682), np.float64(2.3682), np.float64(2.3682), np.float64(2.3682)]  gap/delta^2: [np.float64(23.682), np.float64(23.682), np.float64(23.682), np.float64(23.682)]
+delta 0.01  gap/delta: [np.float64(0.24), np.float64(0.24), np.float64(0.24), np.float64(0.24)]  gap/delta^2: [np.float64(23.997), np.float64(23.997), np.float64(23.997), np.float64(23.997)]
+delta 0.001  gap/delta: [np.float64(0.024), np.float64(0.024), np.float64(0.024), np.float64(0.024)]  gap/delta^2: [np.float64(24.0), np.float64(24.0), np.float64(24.0), np.float64(24.001)]
+loop radius 0.01  holonomy = 1.0
+loop radius 0.003  holonomy = 1.0
+--- mass breaking: gap of the distance map AT the equilateral shape
+masses (1, 1, 2)  gap = 0.1
+masses (1, 2, 3)  gap = 0.19697
+masses (1, 1, 1.1)  gap = 0.002841
+masses (1, 1, 1.01)  gap = 3.3e-05
+--- near the collinear locus: smaller squared singular value against distance eps
+eps 0.1 distance  smaller sigma^2 / eps^2 = 11.1808
+eps 0.1 squared  smaller sigma^2 / eps^2 = 22.4813
+eps 0.01 distance  smaller sigma^2 / eps^2 = 14.1214
+eps 0.01 squared  smaller sigma^2 / eps^2 = 22.7804
+eps 0.001 distance  smaller sigma^2 / eps^2 = 14.3505
+eps 0.001 squared  smaller sigma^2 / eps^2 = 22.7835
