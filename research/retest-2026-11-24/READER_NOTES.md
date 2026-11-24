@@ -44,3 +44,14 @@ It re-ran the saved scripts, wrote its own, and was told not to soften anything.
 ## Not checked by anyone yet
 - Whether 5/3 is the true maximum over trees (search only), and over all nonpositively curved spaces.
 - A general tree search at size 3.
+
+## Second independent check (CHECK-16MATRIX-01, later on 24 Nov)
+
+New code: matrices as integers, rank by bitmask elimination.
+- Counts: 9 rank-1 and 6 rank-2 matrices. Each rank-2 matrix splits 6 ways and each rank-1 matrix has 4 partners. **Held.**
+- Flat maximum over all characters: 3/2, 7/4 and 15/8 at μ = 2, 3, 4. **Held.**
+- The star by column space gives 5/3. The exhaustive search over all 4^9 placements has maximum 5/3, reached by 12 placements. **Held.**
+- The hyperbolic star: 1.500005 at leg 0.01, 1.662399 at leg 40, 1.665814 at leg 200. **Held.**
+- At μ = 5 the rank-1 character gives exactly 31/16. Closed count: a random invertible matrix has its corner entry equal to 1 with probability 2^(μ−1)/(2^μ−1), so the ratio is 2 − 2^(1−μ) at every μ.
+- Characters of rank 2 to 5 at μ = 5 were sampled (200,000 invertible matrices) and come out at 1.25 or less. So 31/16 is the μ = 5 maximum up to sampling. Rank class determines the value, by GL × GL invariance.
+- Not rechecked here: the Poincaré numbers, and the Stong 1995 spectral-gap citation.

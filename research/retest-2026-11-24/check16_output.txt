@@ -1,0 +1,13 @@
+A rank1 9 rank2 6 pairs 72 48 ways {6} partners {4}
+B mu 2 flat max over characters 3/2
+B mu 3 flat max over characters 7/4
+B mu 4 flat max over characters 15/8
+C star by column space 5/3
+C exhaustive over 4^9 placements: max 5/3 reached by 12
+D hyperbolic star leg 0.01 1.500005 leg 40 1.662399 leg 200 1.665814
+E mu=5 rank-1 character exact ratio 31/16  formula 31/16
+E mu=5 character of rank 1 ratio ~ 1.9358
+E mu=5 character of rank 2 ratio ~ 1.2502
+E mu=5 character of rank 3 ratio ~ 1.0763
+E mu=5 character of rank 4 ratio ~ 0.9992
+E mu=5 character of rank 5 ratio ~ 0.9707
