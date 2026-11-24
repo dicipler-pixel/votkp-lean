@@ -1,0 +1,817 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx,booktabs,array,longtable}
+\usepackage[margin=1in]{geometry}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\newtheorem{prediction}{Prediction}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+\newcommand{\grade}[1]{\textsc{[#1]}}
+\renewcommand{\arraystretch}{1.15}
+\title{The Twin-Prime Chain in the Peel Ball\\[4pt]\large Endpoint Law, Frame Turn, and the Thread Cut by Every Prime}
+\author{Jeromie Beasley}
+\date{24 November 2026}
+\begin{document}
+\maketitle
+
+\begin{center}\small\emph{Prepared with AI assistance (Claude). Every number in this paper comes from a script listed in Appendix~B.}\end{center}
+
+\begin{abstract}
+The twin-prime starts $11,17,29,41,\dots$ are walked through the peel ball as a product of Lorentz boosts. Each step has rapidity $r=\ln(a'/a)$, so its peel reflection is $\Gamma=(z-1)/(z+1)=\tanh(r/2)$ with $z=a'/a$. The step runs along one of three perpendicular arms, chosen by the end digit $1,7,9$ of the next twin start, which is exactly its class $11,17,29 \pmod{30}$. Six results are established.
+\begin{enumerate}
+\item \emph{The exact step.} The step and its turn have an exact form at any arm angle $\gamma$: $\tan(\varepsilon/2)=\Gamma_1\Gamma_2\sin\gamma/(1+\Gamma_1\Gamma_2\cos\gamma)$. The wall where two equal steps stop composing into a rotation sits at $\Gamma^2=1/(1+\sin\gamma)$, which is $\Gamma^2=\tfrac12$ for perpendicular arms.
+\item \emph{The endpoint law.} The distance grows as $d=|P|\,L+c$, where $L=\ln(a/11)$ is the path and $P$ is the gap-weighted mean arm. This is proved under two weak conditions. For the three cube arms $|P|=1/\sqrt3$, and $c=0.1086$ is measured to $10^{12}$.
+\item \emph{The frame turn is a holonomy.} Each step's turn is the area it sweeps in rapidity space. A convergence theorem for the frame is proved under named conditions. A proof without those conditions would itself settle an open twin-prime statement.
+\item \emph{The tilt is derived.} The small end-digit tilt that steers the heading off the cube diagonal is derived from the Hardy--Littlewood local factors (the thread of the twin chain cut by every prime). It matches the twin primes in every decade from $10^5$ to $10^{12}$.
+\item \emph{The turn limit.} The frame turn is $12.3442^\circ$ at $10^{12}$, and the readout of the turn once the tilt dies is $12.46508^\circ$, stable from $10^{10}$ on.
+\item \emph{Connection energy.} The forward and reversed readings of the same chain disagree by a connection energy $\|[L,L^*]\|/\|L\|^2$ that levels off near $0.13$.
+\end{enumerate}
+A closing section reads these results against a view of light as the fixed stage and the electron as the mover. That section is interpretation, and is labelled as such.
+\end{abstract}
+
+\tableofcontents
+\bigskip
+
+\noindent\textbf{Grades.} Every statement carries one grade:
+\begin{itemize}
+\item \grade{proved}: exact algebra, also checked numerically;
+\item \grade{derived}: follows from stated inputs, with an approximation named;
+\item \grade{conditional}: proved under a named hypothesis;
+\item \grade{measured}: computed on the twin primes;
+\item \grade{cited}: a published result;
+\item \grade{untested}: a prediction with its kill condition written down.
+\end{itemize}
+
+%=====================================================
+\section{Introduction}
+
+The peel step of VOTKP reads a ratio $z$ as a reflection,
+\[
+\Gamma=\frac{z-1}{z+1}=\tanh\!\left(\tfrac12\ln z\right).
+\]
+In \emph{Two Trees in One Ball}, two perpendicular steps of equal size compose into a boost and a turn. The turn is the Thomas turn, $\tan(\theta/2)=\Gamma^2$. The pair stops composing into a pure rotation at the wall $\Gamma^2=\tfrac12$, that is $z=3+2\sqrt2$, where $\operatorname{tr}[A,B]=2-4\sinh^4(r/2)$ reaches $-2$.
+
+This paper puts the twin primes into that ball. Each twin start is a step. Its size is the log of the ratio to the previous start, and its direction is set by its end digit. The questions are:
+\begin{itemize}
+\item where the chain goes;
+\item how much its frame turns;
+\item what steers it;
+\item what the two readings of one chain, forward and reversed, have to say to each other.
+\end{itemize}
+
+The answers join several pieces of the framework:
+\begin{itemize}
+\item the peel step and the wall (VOTKP);
+\item the turn as curvature (the intrinsic, non-Riemannian geometry of the ball);
+\item connection energy as non-normality;
+\item the shrinking ruler of \emph{Matter at a Scale};
+\item the electron and light as the two parts of one dance.
+\end{itemize}
+
+%=====================================================
+\section{The chain}
+
+\begin{definition}[Twin chain]
+Let $a_0=11<a_1<a_2<\cdots$ be the twin-prime starts above $5$ (so $a$ and $a+2$ are both prime). For $n\ge1$:
+\begin{itemize}
+\item the step size is $r_n=\ln(a_n/a_{n-1})$, with ratio $z_n=a_n/a_{n-1}$ and peel reflection $\Gamma_n=\tanh(r_n/2)=(z_n-1)/(z_n+1)$;
+\item the arm $e_{s_n}\in\{e_x,e_y,e_z\}$ is chosen by the end digit of $a_n$: $1\mapsto e_x$, $7\mapsto e_y$, $9\mapsto e_z$.
+\end{itemize}
+\end{definition}
+
+\begin{proposition}[Arms are classes mod 30] \grade{proved}
+Every twin start $a>5$ satisfies $a\equiv 11,17,29\pmod{30}$, and the end digits $1,7,9$ match these three classes one to one.
+\end{proposition}
+\begin{proof}
+For $a$ and $a+2$ to both be prime above $5$:
+\begin{itemize}
+\item $a$ is odd;
+\item $a\not\equiv 1\pmod 3$, since otherwise $3\mid a+2$; so $a\equiv 2\pmod3$;
+\item $a\not\equiv 0,3\pmod 5$.
+\end{itemize}
+By the Chinese remainder theorem the classes mod 30 are $11,17,29$. Their end digits are $1,7,9$.
+\end{proof}
+
+Let $B(e,r)$ be the Lorentz boost of rapidity $r$ along $e$. The chain is the product
+\[
+L_n=B(e_{s_1},r_1)\,B(e_{s_2},r_2)\cdots B(e_{s_n},r_n),
+\]
+with polar split $L_n=\mathrm{Boost}(d_n\,n_n)\,R_n$. Its parts are:
+\begin{itemize}
+\item the distance $d_n$;
+\item the heading $n_n$, the lab view;
+\item the frame $R_n$;
+\item the body heading $u_n=R_n^{\mathsf T}n_n$.
+\end{itemize}
+The path is $L=\sum r_k=\ln(a_n/11)$.
+
+In spinors, $B(e,r)$ is $H=\cosh(r/2)+\sinh(r/2)\,e\cdot\sigma$, and the chain lives in $SL(2,\mathbb C)$. The position in the Poincar\'e ball is $\tanh(d/2)\,n$. Figure~\ref{fig:ball} shows the chain to $10^6$.
+
+%=====================================================
+\section{The exact step and the wall}
+
+\begin{proposition}[Polar factor] \grade{proved}
+If $M=HU$ with $H$ a boost, $U$ a rotation and $\det M=1$, then
+\[
+U=\frac{M+M^{\dagger\,-1}}{\operatorname{tr}H}.
+\]
+\end{proposition}
+\begin{proof}
+\begin{itemize}
+\item $M^{\dagger-1}=H^{-1}U$, because $H^\dagger=H$ and $U^{\dagger-1}=U$.
+\item By Cayley--Hamilton for $\det H=1$: $H+H^{-1}=(\operatorname{tr}H)\,I$.
+\item Hence $M+M^{\dagger-1}=(H+H^{-1})U=(\operatorname{tr}H)\,U$.
+\end{itemize}
+\end{proof}
+
+\begin{proposition}[Composition of two boosts] \grade{proved}
+Take two boosts with rapidities $\zeta_1,\zeta_2$ along directions at angle $\gamma$, and write $\Gamma_i=\tanh(\zeta_i/2)$. Their product is a boost times a rotation by $\varepsilon$ about the axis normal to both directions, with
+\[
+\tan\frac{\varepsilon}{2}=\frac{\Gamma_1\Gamma_2\sin\gamma}{1+\Gamma_1\Gamma_2\cos\gamma}
+=\frac{\sin\gamma}{\coth(\zeta_1/2)\coth(\zeta_2/2)+\cos\gamma}.
+\]
+The resulting rapidity satisfies
+\[
+\cosh d'=\cosh\zeta_1\cosh\zeta_2+\sinh\zeta_1\sinh\zeta_2\cos\gamma .
+\]
+\end{proposition}
+\begin{proof}
+Write $c_i=\cosh(\zeta_i/2)$ and $s_i=\sinh(\zeta_i/2)$, and take unit directions $n$ and $w$. Then
+\[
+M+M^{\dagger-1}=2\bigl[c_1c_2+s_1s_2\cos\gamma+i\,s_1s_2\,(n\times w)\cdot\sigma\bigr].
+\]
+A rotation by $\varepsilon$ is $\cos(\varepsilon/2)-i\sin(\varepsilon/2)\,a\cdot\sigma$. Reading off its two parts and dividing by $c_1c_2$ gives the first formula. The second is the time component of the composed boost.
+\end{proof}
+
+\noindent\emph{Checks.} At 160 digits the worst errors are:
+\begin{itemize}
+\item $10^{-146}$ for the turn;
+\item $6\times10^{-160}$ for the distance;
+\item $2\times10^{-111}$ for the body-frame update.
+\end{itemize}
+An independent double-precision check over 100 random pairs agrees to $7\times10^{-14}$. For perpendicular equal steps the formula reduces to $\tan(\varepsilon/2)=\Gamma^2$, the Thomas turn of \emph{Two Trees in One Ball}.
+
+\begin{corollary}[Step expansion] \grade{proved}
+For a walker at distance $d$ taking a step $r$ at angle $\theta$ to its heading,
+\[
+\varepsilon=r\tanh\frac d2\,\sin\theta-\frac{r^2}{2}\tanh^2\frac d2\,\sin\theta\cos\theta+O(r^3).
+\]
+\end{corollary}
+\noindent The remainder divided by $r^3$ is $-0.03267$ at both $r=10^{-4}$ and $r=10^{-6}$.
+
+\begin{proposition}[The wall at any angle] \grade{proved}
+For $A=\exp(\tfrac{r_1}{2}e\cdot\sigma)$ and $B=\exp(\tfrac{r_2}{2}m\cdot\sigma)$ with $e\cdot m=\cos\gamma$,
+\[
+\operatorname{tr}[A,B]=2-4\sinh^2\frac{r_1}{2}\sinh^2\frac{r_2}{2}\sin^2\gamma .
+\]
+For equal steps the wall $\operatorname{tr}[A,B]=-2$ sits at
+\[
+\Gamma^2=\frac{1}{1+\sin\gamma}.
+\]
+\end{proposition}
+\begin{proof}
+\begin{enumerate}
+\item Fricke's identity: $\operatorname{tr}[A,B]=\operatorname{tr}^2A+\operatorname{tr}^2B+\operatorname{tr}^2AB-\operatorname{tr}A\operatorname{tr}B\operatorname{tr}AB-2$.
+\item Substitute $\operatorname{tr}A=2c_1$, $\operatorname{tr}B=2c_2$ and $\operatorname{tr}AB=2(c_1c_2+s_1s_2\cos\gamma)$.
+\item Expand. The cross terms in $\cos\gamma$ cancel, leaving $4c_1^2+4c_2^2-4c_1^2c_2^2+4s_1^2s_2^2\cos^2\gamma-2$.
+\item With $c^2=1+s^2$ this is $2-4s_1^2s_2^2\sin^2\gamma$.
+\item At the wall, $s^4\sin^2\gamma=1$, so $s^2=1/\sin\gamma$ and $\Gamma^2=s^2/(1+s^2)=1/(1+\sin\gamma)$.
+\end{enumerate}
+Numerical check: the worst error over 100 random cases is $1.4\times10^{-14}$.
+\end{proof}
+
+\noindent\emph{The twin chain and the wall} \grade{measured}:
+\begin{itemize}
+\item No single step reaches the wall below $10^9$. The largest is $17\to29$, with $\Gamma^2=0.068$ (Figure~\ref{fig:wall}).
+\item The chain as a whole crosses the wall sphere $\rho^2=\tfrac12$ (with $\rho=\tanh(d/2)$) between the twin starts $197$ and $227$. By then $80\%$ of its final turn already exists.
+\item Read as three books (each arm's steps summed into one boost), the pairs of arms reach the wall at the twin starts $1151$ $(x,z)$, $2027$ $(y,z)$ and $4481$ $(x,y)$.
+\end{itemize}
+
+%=====================================================
+\section{The frame-free form}
+
+\begin{proposition}[Distance and heading run on their own] \grade{proved}
+Every boost is symmetric, so $L_n^{\mathsf T}=B_nL_{n-1}^{\mathsf T}$. The vector
+\[
+Y_n=L_n^{\mathsf T}e_0=(\cosh d_n,\ \sinh d_n\,u_n)
+\]
+obeys $Y_n=B(e_{s_n},r_n)\,Y_{n-1}$, with $Y_0=e_0$.
+\end{proposition}
+
+\noindent So distance and body heading form a walk of their own, and the frame is driven by them. Like a two-shaft gearbox, the inner shaft (distance and heading) turns by itself, and the outer sleeve (the frame) rides on it.
+
+\begin{proposition}[Octant] \grade{proved}
+In velocity form $v=\tanh(d)\,u$, a step along arm $s$ is relativistic velocity addition:
+\[
+v_s'=\frac{v_s+\tanh r}{1+v_s\tanh r},\qquad v_\perp'=\frac{v_\perp}{\cosh r\,(1+v_s\tanh r)}.
+\]
+Both maps keep every component non-negative. Since $v_0=0$, $v$ stays in the closed positive octant of the unit ball.
+\end{proposition}
+
+%=====================================================
+\section{The endpoint law}
+
+\begin{theorem}[Endpoint law] \grade{conditional}
+Assume the following.
+\begin{itemize}
+\item[(A1)] $r_n\to0$.
+\item[(A2)] For every fixed window of path length $T$, the window sums of $r_k(e_{s_k}-p_\infty)$ tend to $0$, for some limit weights $p_\infty$.
+\end{itemize}
+Write $P_\infty=\sum_s p_{\infty,s}\,e_s$. Then $u_n\to P_\infty/|P_\infty|$, $d_n\to\infty$, and $d_n/L\to|P_\infty|$. The condition $\sum r_n^2<\infty$ is not needed.
+\end{theorem}
+
+\begin{proof}[Outline]
+\begin{enumerate}
+\item In velocity form, $v_{n+1}=v_n+r_n[F(v_n)+U_n]+O(r_n^2)$, with $F(v)=P-(P\cdot v)v$ and noise $U_n=(I-vv^{\mathsf T})(e_{s_n}-P)$.
+\item The noise depends on the state, but $(I-vv^{\mathsf T})$ moves by $O(r)$ per step. Abel summation inside each window therefore reduces it to plain digit noise. That gives the Kushner--Clark condition.
+\item The state lives in a compact invariant set of $\mathbb R^3$. By the limit-set theorem for asymptotic pseudotrajectories (Bena\"im), the limit set is internally chain transitive for the flow $\dot v=F(v)$.
+\item Take $V=P\cdot v$. Then $\dot V=|P|^2-(P\cdot v)^2\ge|P|^2(1-|v|^2)$, which vanishes only at $\pm\hat P$.
+\item The point $-\hat P$ lies outside the positive octant, so it is excluded. Hence $v\to\hat P$.
+\item By the distance formula, $d'-d=r\,(u\cdot e_s)+O(r^2)$, so $d/L\to|P|$.
+\end{enumerate}
+\end{proof}
+
+\noindent\emph{Why $1/\sqrt3$} \grade{derived}. With balanced weights $p=(\tfrac13,\tfrac13,\tfrac13)$, $P$ points along the cube's body diagonal and $|P|=1/\sqrt3$. Each step runs along a cube edge, and only its shadow on the diagonal ($\cos=1/\sqrt3$) carries the walker outward; the rest goes into turning. For three arms at mutual angle $\gamma$:
+\[
+|P|=\sqrt{\frac{1+2\cos\gamma}{3}}.
+\]
+The slope is not a curvature effect. Run in flat Euclidean space, the same chain gives the slope $0.57840$ at $10^9$.
+
+\begin{proposition}[Counts alone do not fix the endpoint] \grade{measured}
+Keep the real gaps, and give each consecutive triple of steps one of each end digit, so that the counts per digit are exactly equal ($1{,}141{,}501$ each). Assign the largest gap in every triple to digit $1$. Then $d/L=0.656$, against $0.583$ for the real chain. The gap-weighted shares are $0.567, 0.291, 0.143$.
+\end{proposition}
+\noindent So the endpoint law needs gaps and end digits to spread out \emph{together}. Equal shares of counts do not give it. Section~\ref{sec:thread} derives that joint spreading.
+
+\noindent\emph{The constant $c$} \grade{measured}. With $d=L/\sqrt3+c$:
+
+\begin{center}
+\begin{tabular}{lccccc}
+\toprule
+up to & $10^8$ & $10^9$ & $10^{10}$ & $10^{11}$ & $10^{12}$\\
+\midrule
+$c$ & $0.108528$ & $0.108568$ & $0.108590$ & $0.108607$ & $0.108618$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent The value $c$ splits exactly (to $1.5\times10^{-12}$) into four parts at $10^9$:
+
+\begin{center}
+\begin{tabular}{lc}
+\toprule
+part & value\\
+\midrule
+first step & $+0.1840$\\
+curvature gain & $+0.5913$\\
+arm noise & $-0.4093$\\
+heading lag & $-0.2575$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+About the first $1200$ twin starts set it:
+\begin{itemize}
+\item Running the real chain to $10^4$ and then the averaged transient theory gives $0.1091$, against the measured $0.1086$.
+\item A model with random arms gives $0.245\pm0.128$.
+\item The value depends on the labelling: arms by residue mod 9 give $0.067$, arms mod 7 give $0.347$, and cousin primes give $0.184$.
+\end{itemize}
+So $c$ is a fingerprint of the early chain, not a universal constant. Its slow drift is accounted for by the tilt of Section~\ref{sec:thread}: the mean gain per unit path is $1/\sqrt3+(\sqrt3/2)|\beta|^2$. This puts its limit near $0.10866$ \grade{derived}.
+
+%=====================================================
+\section{The frame turn is a holonomy}
+
+\begin{proposition}[Turn as area] \grade{derived}
+On rapidity space $H^3$ (curvature $-1$), take the thin triangle with vertices at the origin, the walker at distance $d$, and the walker after a step $r$ at angle $\theta$. Its area is $(\cosh d-1)\,\delta\phi$, with $\delta\phi=r\sin\theta/\sinh d$. That equals $r\sin\theta\tanh(d/2)$, the first-order Wigner angle. So the total frame turn is the holonomy of the loop that runs from the origin, along the chain, and back along the geodesic.
+\end{proposition}
+
+\noindent The space bends; the primes choose the loop. Every flat reading of the same chain gives zero turn. On a curvature dial \grade{measured}:
+
+\begin{center}
+\begin{tabular}{cccc}
+\toprule
+$\sqrt{\text{curvature}}$ & turn & turn$/$(curvature$\times$flat area) & offset above flat\\
+\midrule
+$2$ & $30.93^\circ$ & $0.072$ & $+0.217$\\
+$1$ (the ball) & $12.20^\circ$ & $0.114$ & $+0.087$\\
+$1/16$ & $0.40^\circ$ & $0.966$ & $+0.0013$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{itemize}
+\item As the curvature goes to $0$, the turn approaches curvature times the flat loop area.
+\item The flat area grows by about $0.18$ per unit of path. That equals the leftover book imbalance $S=(-0.265,-0.256,+0.521)$ crossed with $(1,1,1)$, divided by $6$.
+\item Hyperbolic area cannot grow without limit, which is why the ball's turn has a finite limit.
+\end{itemize}
+
+\begin{lemma}[Corrector] \grade{proved}
+Let $R_n=R_{n-1}\exp(\hat\nu_n)$ with $\nu_n=B_n\xi_n+\eta_n$, where:
+\begin{itemize}
+\item $\sum|\eta_n|<\infty$;
+\item $|B_{n+1}-B_n|\le Cr_{n+1}$ and $|\xi_n|\le Cr_n$;
+\item $\sum r_n|N_n|<\infty$, where $N_n=\sum_{k>n}\xi_k$.
+\end{itemize}
+Then $R_n$ converges.
+\end{lemma}
+\begin{proof}
+\begin{enumerate}
+\item Put $z_n=B_{n+1}N_n$. Then $B_n\xi_n=z_{n-1}-z_n+(B_{n+1}-B_n)N_n$.
+\item Change gauge to $\tilde R_n=R_n\exp(\hat z_n)$. Each increment of $\tilde R$ has the form $e^{-a}e^{a-b+e}e^{b}$.
+\item By Hadamard's lemma applied twice, its logarithm is bounded by $C(|a||a-b|+|e|)$, which is summable.
+\item So $\tilde R$ is Cauchy in the bi-invariant metric, and $R=\tilde R\,e^{-\hat z}$ converges with it.
+\end{enumerate}
+\end{proof}
+
+\begin{theorem}[Frame convergence] \grade{conditional}
+Assume (A1) and $\sum r_n^2<\infty$. Assume also a weight path $p(L)\to p_\infty$ with $\int|p'|\,dL<\infty$, and $\sum r_n|N_n|<\infty$, where $N_n$ is the tail of $r_k(e_{s_k}-p(L_k))$. Then the frame $R_n$ converges, and so does $d-\int|P(L)|\,dL$.
+\end{theorem}
+
+\noindent The noise in this theorem is measured around the \emph{local} mean $p(L)$, not the fixed $(\tfrac13,\tfrac13,\tfrac13)$. Around the fixed mean the noise tail falls only like $1/L$, which is the borderline case. Around the local mean the remainder has root-mean-square size $3\times10^{-5}$, about the size of a random walk \grade{measured}.
+
+\begin{proposition}[What a proof without conditions would imply] \grade{proved}
+\begin{enumerate}
+\item $d_n\le L=\ln(a_n/11)$. So $d\to\infty$ by itself implies that there are infinitely many twin primes.
+\item Suppose the chain is infinite, the frame converges, $\liminf d>0$, and the heading's limit lies off the three axes. Then $\varepsilon_n\to0$, and the exact step gives $\tan(\varepsilon/2)\ge\sin\theta/(\coth(d/2)\coth(r/2)+1)$. Hence $r_n\to0$: for every $\epsilon>0$ there is a twin start in $(x,(1+\epsilon)x]$ for all large $x$.
+\end{enumerate}
+\end{proposition}
+\noindent The second conclusion is open. So convergence of the turn cannot be proved without an arithmetic input; the dynamics alone stop there.
+
+\begin{proposition}[Square-summable steps from Hardy--Littlewood] \grade{conditional}
+If the twin count obeys Hardy--Littlewood with error $O(x/\ln^{3+\eta}x)$, then $\sum r_n^2<\infty$. With the plain Hardy--Littlewood asymptotic, $r_n\to0$.
+\end{proposition}
+\noindent Measured: $\sum r_n^2=1.2685628$ at $10^{12}$, and the tail beyond $10^8$ is $4.8\times10^{-6}$.
+
+%=====================================================
+\section{Measurements to $10^{12}$}
+
+The walker is a $C$ program in $SL(2,\mathbb C)$ with long-double arithmetic and a segmented sieve. Chunks are combined in 40-digit arithmetic. It reproduces the earlier runs at every mark up to $10^9$. Its twin counts agree with the published $\pi_2(x)$ at $10^9,\dots,10^{12}$, and $|\det|-1<7\times10^{-13}$ \grade{measured}.
+
+\begin{center}
+\begin{tabular}{lccccc}
+\toprule
+up to & $10^8$ & $10^9$ & $10^{10}$ & $10^{11}$ & $10^{12}$\\
+\midrule
+frame turn & $12.2048^\circ$ & $12.2695^\circ$ & $12.2969^\circ$ & $12.3197^\circ$ & $12.3442^\circ$\\
+readout if the tilt dies & $12.46514^\circ$ & -- & $12.46507^\circ$ & $12.46508^\circ$ & $12.46508^\circ$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent\emph{How the readout works} \grade{measured}:
+\begin{itemize}
+\item The body heading sits on the tilted local mean, not on the cube diagonal: $0.47^\circ$ off at $10^9$, against $0.42^\circ$ for the mean, with offsets parallel to $\cos=0.999$.
+\item As the tilt dies, the frame must make the minimal rotation that carries the diagonal onto the heading. The readout is the turn after that rotation.
+\item Checked on chains with the real gaps and arms redrawn: after an exactly balanced tail, the turn lands on the readout to within $0.0006^\circ$. A chain whose tilt never dies stays $0.67^\circ$ away.
+\item The measured turn trails the readout by $0.476$ times the heading's angle from the diagonal, at both $10^{11}$ and $10^{12}$.
+\end{itemize}
+Free curve fits put the limit anywhere from $12.33^\circ$ to $12.53^\circ$, so no limit is claimed from fitting. Figure~\ref{fig:turn} shows the turn and the readout. The frame moves $5.46^\circ$, $2.45^\circ$, $0.85^\circ$, $0.20^\circ$ and $0.098^\circ$ per decade from $10^4$ to $10^9$.
+
+%=====================================================
+\section{The thread cut by every prime: the tilt}\label{sec:thread}
+
+\subsection{The chain as a cut thread}
+In the coordinates (angle $=a \bmod 30$, advance $=\ln a$), the twin starts sit on a three-start thread:
+\begin{itemize}
+\item One turn is $30$ integers. The three starts sit at $11,17,29$, spaced $6,12,12$ apart instead of evenly.
+\item In path length a turn covers $30/a$, so the pitch fines out as the size grows. That is $3\times10^{-5}$ at $10^6$ and $3\times10^{-8}$ at $10^9$.
+\item Most turns carry no twin; the crests are sparse.
+\item The arms step forward ($1\to7\to9$) at rate $0.355$, backward at $0.333$, and repeat at $0.312$ \grade{measured}. That is a hand. It accounts, to $10\%$ and with the right sign, for the $6.54^\circ$ of the $12.27^\circ$ turn that runs along the diagonal.
+\end{itemize}
+
+\subsection{The tilt}
+\begin{definition}
+In a range of twin starts with gaps $g$ and mean gap $G$, the tilt of end digit $j$ is
+\[
+\mathrm{dev}_j=\frac{\sum_{\text{end digit } j} g}{\sum g}-\frac{\#\{\text{end digit } j\}}{\#\{\text{all}\}}.
+\]
+\end{definition}
+\noindent Measured on the twin starts in $(10^8,10^9]$: $\mathrm{dev}\times G=(-0.924\pm0.041,\ +0.839\pm0.034,\ +0.085\pm0.054)$ for digits $1,7,9$.
+
+\subsection{Cutting the thread prime by prime}
+\emph{Model} (Granville type). Integers coprime to $W=\prod_{p\le P}p$ are prime with probability $q=(W/\varphi(W))/\ln N$, independently. A twin slot is an $n$ with $n$ and $n+2$ both coprime to $W$. Distinct twin slots share no integers, so twin starts are independent Bernoulli$(q^2)$ events on the slots. The gap ending at slot $s$ is $\mathrm{pos}(s)-\mathrm{pos}(s-k)$ with probability $q^2(1-q^2)^{k-1}$, so the tilt is computed exactly, with no random runs \grade{proved for the model}.
+
+\begin{center}
+\begin{tabular}{lcccccccc}
+\toprule
+largest prime $P$ & $5$ & $7$ & $11$ & $13$ & $17$ & $19$ & $23$\\
+\midrule
+digit-1 tilt $\times G$ ($10^8$--$10^9$) & $+0.675$ & $-0.905$ & $-1.074$ & $-1.158$ & $-0.965$ & $-0.971$ & $-0.741$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{itemize}
+\item The mod-30 screw alone ($P=5$) has the wrong sign.
+\item Cutting by $7$ gives the real sign.
+\item After that the value swings with every added prime (Figure~\ref{fig:cut}), so no finite cut is the answer.
+\item The nearest clearance in front of each start does not show the flip; the tilt comes from the run of about $20$ slots that one gap spans.
+\end{itemize}
+
+\subsection{Cutting by every prime at once}
+Given a twin start $x$ in class $j$, the chance that $x-h$ is also a twin start carries:
+\begin{itemize}
+\item the mod-30 rule: a factor $10$ if $(j-h)\bmod 30$ is a twin class, else $0$;
+\item for each prime $p\ge7$, the local factor
+\[
+f_p(h)=\frac{p\,(p-\nu_p(h))}{(p-2)^2},\qquad \nu_p(h)=\#\{0,-2,h,h-2\}\bmod p .
+\]
+\end{itemize}
+
+\noindent\emph{Why $f_p$} \grade{derived}. Given that $x$ is a twin start, $x$ is uniform over the $p-2$ residues avoiding $\{0,-2\}$. The start $x-h$ must avoid $\{h,h-2\}$ as well. So the conditional chance is $(p-\nu_p)/(p-2)$. Dividing by the unconditional $(p-2)/p$ gives $f_p$. These are the Hardy--Littlewood local factors for the pattern $\{0,2,h,h+2\}$, conditioned on the class of $x$.
+
+\noindent\emph{The tilt.} The gap back to the previous twin start uses a mean-field first arrival:
+\[
+\lambda_j(h)=\rho\,F_{30,j}(h)\prod_{7\le p}f_p(h),\qquad
+\Pr(\text{gap}=h\mid j)=\lambda_j(h)\exp\Bigl(-\sum_{m<h}\lambda_j(m)\Bigr),
+\]
+with density $\rho=2C_2/\ln^2N$ and $C_2=0.6601618\ldots$ This is \grade{derived}; the mean-field arrival is the named approximation.
+
+\noindent\emph{Validation.} With primes $\le19$ and the matching density, this reproduces the exact 19-prime screw to within $0.039$. The prediction stops moving by $p\le1000$; primes to $10^4$ and $10^5$ give the same three digits.
+
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+decade & predicted (1, 7, 9) & twins (1, 7, 9) & digits 1, 7 within $2$ se\\
+\midrule
+$10^5$--$10^6$ & $-0.947,\ +0.930,\ +0.016$ & $-1.344,\ +0.654,\ +0.691$ & yes\\
+$10^6$--$10^7$ & $-0.942,\ +0.880,\ +0.062$ & $-1.050,\ +0.429,\ +0.621$ & yes\\
+$10^7$--$10^8$ & $-0.937,\ +0.842,\ +0.095$ & $-0.830,\ +0.725,\ +0.105$ & yes\\
+$10^8$--$10^9$ & $-0.939,\ +0.820,\ +0.119$ & $-0.924,\ +0.839,\ +0.085$ & yes\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent\emph{Beyond $10^9$}, checked against the $10^{12}$ walk after calibrating its step weighting on $10^8$--$10^9$:
+
+\begin{center}
+\begin{tabular}{lcccc}
+\toprule
+decade & predicted (1, 7, 9) & walk (1, 7, 9) & predicted $G$ & walk $G$\\
+\midrule
+$10^9$--$10^{10}$ & $-0.945,\ +0.809,\ +0.136$ & $-0.915,\ +0.718,\ +0.198$ & $378$ & $375$\\
+$10^{10}$--$10^{11}$ & $-0.951,\ +0.806,\ +0.145$ & $-0.957,\ +0.744,\ +0.213$ & $459$ & $457$\\
+$10^{11}$--$10^{12}$ & $-0.955,\ +0.806,\ +0.150$ & $-0.939,\ +0.730,\ +0.209$ & $548$ & $547$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{itemize}
+\item Digit $1$ agrees to $0.03$ in every decade.
+\item The split between digits $7$ and $9$ runs about $0.07$ off in the same direction in all three decades. Whether it comes from the mean-field arrival or from the walk's step weighting is \grade{untested} (Prediction~\ref{pr:split}).
+\end{itemize}
+
+\begin{theorem}[The tilt, from the thread cut by every prime] \grade{derived, measured agreement}
+Under the Hardy--Littlewood local factors with mean-field first arrival, the gap-weighted end-digit tilt is $\mathrm{dev}_j\approx\kappa_j/G$, with $\kappa\approx(-0.95,\ +0.81,\ +0.14)$ nearly fixed from $10^5$ to $10^{12}$. The sign is set the moment $7$ cuts the thread. The tilt therefore dies like $1/G\sim 2C_2/\ln^2x$. That is the condition the turn limit of Section~6 needed, now resting on Hardy--Littlewood rather than on the measured trend alone.
+\end{theorem}
+
+\noindent In the measure used by the walk (the slope $\beta$ of $S_s=\sum r(\mathbf 1[s]-\tfrac13)$ against $L$), $|\beta|\times G=1.15, 1.15, 1.18, 1.17$ for the decades $10^8$--$10^9$ through $10^{11}$--$10^{12}$ \grade{measured}.
+
+%=====================================================
+\section{Other chains and other shapes}
+
+\subsection{The endpoint law across chains} \grade{measured}
+The ideal $|P|$ matches the free slope to $0.4\%$ in every chain whose steps shrink and whose arms stay mixed.
+
+\begin{center}\small
+\begin{tabular}{lcccl}
+\toprule
+chain & $|P|$ & $d/L$ & turn & frame\\
+\midrule
+twins, end digit ($10^8$) & $0.57735$ & $0.58412$ & $12.205^\circ$ & moves $0.20^\circ$/decade, shrinking\\
+twins mod 9 & $0.57735$ & $0.58152$ & $9.29^\circ$ & $0.37^\circ$\\
+twins mod 7 (five arms) & $0.44721$ & $0.46889$ & $34.6^\circ$ & $0.67^\circ$\\
+cousins & $0.57735$ & $0.58850$ & $14.8^\circ$ & $0.22^\circ$, shrinking\\
+sexy primes & $0.57735$ & $0.58344$ & $10.0^\circ$ & $0.85^\circ$, not shrinking\\
+all primes, four axes ($10^9$) & $0.5$ & $0.50274$ & $10.1^\circ$ & $0.30^\circ$, flat\\
+random twin-like chains ($\times5$) & $0.57735$ & $0.588$--$0.626$ & $10$--$42^\circ$ & $0.19$--$0.45^\circ$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{itemize}
+\item Reversing the chain gives $L^{\mathsf T}$, so the distance and turn are identical (to $3\times10^{-11}$).
+\item \emph{Where the law breaks:}
+  \begin{itemize}
+  \item arms held in blocks of path length $1$ or $4$ put $d/L$ $1.7\%$ and $8.4\%$ off;
+  \item even blocks of $0.25$ keep the frame turning about $3.5^\circ$ per decade;
+  \item fixed steps of $\ln5$ give $d/L=0.764$, a Lyapunov exponent rather than $|P|$.
+  \end{itemize}
+\item With fixed steps the twin digit order still shows: twin arms give $0.7636$, against $0.771$ for shuffled arms. This comes from the repeat rate $0.307<\tfrac13$.
+\item \emph{Arms that cancel} (four tetrahedral arms, $|P|=0$): the distance grows like $0.326\ln L$. This law was written before the $10^9$ run; it predicted a rise of $0.043$, and the measured rise was $0.0415$.
+\item \emph{All primes}: the path-weighted shares carry a steady $1/L$ tilt, $+0.080, -0.196, +0.174, -0.058$ for digits $1,3,7,9$. The cause is that each end digit forbids one class of incoming gap; for example, a prime ending in $7$ never follows a gap of $2$. Sexy primes carry the same kind of tilt. For both, frame convergence is undecided. Twin primes and cousins are the clean cases.
+\end{itemize}
+
+\subsection{The measuring shapes} \grade{measured to $10^9$}
+Both the slope law $|P|=\sqrt{(1+2\cos\gamma)/3}$ and the late turn per step $\sqrt{1-|P|^2}$ hold on every Platonic arm set (Figure~\ref{fig:platonic}).
+
+\begin{center}\footnotesize
+\begin{tabular}{lcccccc}
+\toprule
+arms & $\gamma$ & $|P|$ & slope & $c$ & turn & late turn/step (pred.)\\
+\midrule
+cube $=$ octahedron & $90^\circ$ & $0.57735$ & $0.57729$ & $0.1086$ & $12.27^\circ$ & $0.8164$ ($0.8165$)\\
+tetrahedron faces & $109.47^\circ$ & $0.33333$ & $0.33271$ & $0.1567$ & $19.62^\circ$ & $0.9380$ ($0.9428$)\\
+icosahedron vertices & $63.43^\circ$ & $0.79465$ & $0.79465$ & $0.0603$ & $7.45^\circ$ & $0.6071$ ($0.6071$)\\
+dodecahedron vertex & $41.81^\circ$ & $0.91117$ & $0.91117$ & $0.0281$ & $4.62^\circ$ & $0.4120$ ($0.4120$)\\
+icosa.\ edges (closed) & $120^\circ$ & $0$ & bounded at $0.81$ & -- & $6.78^\circ$ & --\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent The weaker the lock, the larger the offset and the turn. The three-fold reading behaves as follows:
+\begin{itemize}
+\item The arm walk moves on the $120^\circ$ turn group about the diagonal.
+\item In the mod-9 reading, each step is the gap mod 9, which always lies in $\{0,3,6\}$.
+\item The turn splits into $6.54^\circ$ along the diagonal and $10.38^\circ$ across it.
+\item The frame axis sits $57.8^\circ$ from the diagonal, nearer than random chains (median $80.8^\circ$).
+\end{itemize}
+
+%=====================================================
+\section{The ruler: stretching and compressing}
+
+The prime screw stretches and compresses at once:
+\begin{itemize}
+\item \emph{On a fixed ruler it stretches.} The mean twin gap grows like $\ln^2a$. Measured $129.6$, $177.1$, $236.0$, $301.6$ by decade from $10^5$ to $10^9$, against the Hardy--Littlewood values $128.6$, $178.1$, $235.9$, $301.5$.
+\item \emph{On the log path it compresses.} The pitch is $30/a$.
+\item \emph{Measured in the local mean gap} (the shrinking ruler of \emph{Matter at a Scale}), the gap shape is close to fixed (Figure~\ref{fig:gaps}).
+\end{itemize}
+
+\begin{center}
+\begin{tabular}{lcccc}
+\toprule
+decade & 25\% & 50\% & 75\% & 90\%\\
+\midrule
+$10^5$--$10^6$ & $0.341$ & $0.748$ & $1.406$ & $2.168$\\
+$10^8$--$10^9$ & $0.319$ & $0.712$ & $1.378$ & $2.242$\\
+random limit & $0.288$ & $0.693$ & $1.386$ & $2.303$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{itemize}
+\item The shape is not frozen. The $25\%$ point moves by $6.5\%$ over three decades, drifting toward the random limit.
+\item The small-gap end carries the memory: twin starts are never closer than $6$, and that rigidity fades as the ruler shrinks.
+\item In the same ruler the tilt is a constant ($\kappa$ above).
+\item The frame twist reaches a fixed stop because the rapidity steps are square-summable.
+\end{itemize}
+So in the self-scaled ruler the chain keeps a fixed tooth form and a constant tilt, with one slow relaxation at its small-gap end.
+
+%=====================================================
+\section{Two readings, one light sphere: connection energy}
+
+\begin{itemize}
+\item \emph{Two readings.} The same product of steps read forward is $L$, with lab heading $n$. Read reversed it is $L^{\mathsf T}$, with body heading $u$.
+\item \emph{The light sphere.} In the ball the light directions form the boundary sphere. Both headings run out to points on it.
+\item \emph{Turn and connection energy.} The frame is the rotation that carries one reading onto the other. Connection energy measures the mismatch.
+\end{itemize}
+
+\begin{proposition}[Connection energy of the chain] \grade{proved}
+With $L=PU$, $P=\mathrm{Boost}(d\,n)$ and $U$ a rotation by $\varphi$ about an axis at angle $\beta$ to $n$:
+\[
+[L,L^*]=P^2-U^*P^2U,\qquad
+\|[L,L^*]\|_F=\sqrt2\,\sinh d\cdot 2\sin\frac\varphi2\,\sin\beta .
+\]
+So $L$ is normal exactly when its turn is a pure twist about the heading.
+\end{proposition}
+\begin{proof}
+\begin{enumerate}
+\item $LL^*=P^2$ and $L^*L=U^*P^2U$.
+\item $P^2=\cosh d+\sinh d\,(n\cdot\sigma)$ and $U^*P^2U=\cosh d+\sinh d\,(Rn\cdot\sigma)$. The $\cosh d$ terms cancel.
+\item $\|v\cdot\sigma\|_F=\sqrt2|v|$, and $|n-Rn|=2\sin(\varphi/2)\sin\beta$.
+\end{enumerate}
+Numerical check: worst relative error $3.5\times10^{-13}$ over $200$ random cases.
+\end{proof}
+
+\noindent The difference $P^2-U^*P^2U$ is one edge $D-\mathcal U(D)$ of the identity \emph{non-normality is connection energy}. The normalised value
+\[
+\mathcal N=\frac{\|[L,L^*]\|_F}{\|L\|_F^2}=\sqrt2\tanh d\,\sin\frac\varphi2\,\sin\beta
+\]
+on the $10^{12}$ walk is shown below \grade{measured} (Figure~\ref{fig:ce}). At $10^8$ the explicit matrix gives $0.1263187207$, the same as the formula.
+
+\begin{center}
+\begin{tabular}{lcccccccc}
+\toprule
+up to & $10^5$ & $10^6$ & $10^7$ & $10^8$ & $10^9$ & $10^{10}$ & $10^{11}$ & $10^{12}$\\
+\midrule
+$\mathcal N$ & $0.0886$ & $0.1171$ & $0.1243$ & $0.1263$ & $0.1273$ & $0.1278$ & $0.1281$ & $0.1285$\\
+$\beta$ & $46.8^\circ$ & $54.9^\circ$ & $56.7^\circ$ & $57.2^\circ$ & $57.4^\circ$ & $57.5^\circ$ & $57.6^\circ$ & $57.7^\circ$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent Two kill conditions were set before the run, and both passed:
+\begin{itemize}
+\item $|\mathcal N(10^9)-\mathcal N(10^8)|\le|\mathcal N(10^8)-\mathcal N(10^7)|$;
+\item the change at $10^{12}$ is smaller than the change at $10^{10}$.
+\end{itemize}
+The change per decade has flattened at about $3.8\times10^{-4}$, following the turn's last climb as the tilt dies. With the turn limit $12.4651^\circ$ and $\tanh d\to1$, $\mathcal N\to0.1535\sin\beta_\infty$, which is about $0.130$ if $\beta$ levels near $58^\circ$ \grade{untested}. The angle $\beta$ is not the cube angle $\arccos(1/\sqrt3)=54.74^\circ$.
+
+So the two readings never become normal. A fixed amount of connection energy, about $0.13$, stays between them: the twin primes leave a lasting mismatch between the two surfaces, carried on the light sphere.
+
+%=====================================================
+\section{Light and the electron: a reading}
+
+\noindent\emph{This section is interpretation. It states a view and shows where the results above sit with it. It is not a test.}
+
+\begin{itemize}
+\item \emph{The view.} Light did its carving long ago and now holds still as the stage. The electron is what moves. Light today is not made anew so much as re-excited.
+\item \emph{In the chain.} The light sphere is fixed. The walker moves, and its headings run out to points already on that sphere. The carving happens early:
+  \begin{itemize}
+  \item about $80\%$ of the turn exists by the wall crossing at twin starts $197$--$227$;
+  \item the offset $c$ is set by about the first $1200$ starts;
+  \item what follows is the slow dance: the tilt dying like $1/G$, the connection energy levelling near $0.13$.
+  \end{itemize}
+\item \emph{In standard physics} \grade{cited}:
+  \begin{itemize}
+  \item Along a light path the proper time is zero, so from light's side emission and absorption share one moment.
+  \item In Dirac's equation the electron's instantaneous velocity takes only the values $\pm c$, and it trembles (Zitterbewegung) at a frequency set by twice its rest energy. That sits under Dirac Time.
+  \item In quantum field theory the electromagnetic field is always present in every mode, with zero-point energy $\tfrac12\hbar\omega$. A photon is a step up in one mode of that permanent field, so emission is a re-excitation.
+  \item Photon number is not conserved, so photons are new as a count, while the field and its modes are not.
+  \end{itemize}
+\end{itemize}
+
+%=====================================================
+\section{Predictions}
+
+\noindent Each prediction carries its kill condition, written now, before any run.
+
+\begin{prediction}[Turn limit] \grade{untested}
+The frame turn tends to $12.4651^\circ\pm0.0001^\circ$ from below, approaching roughly like $1/L^2$.
+\emph{Kill} if any of the following happens:
+\begin{itemize}
+\item the readout at $10^{13}$ or beyond leaves $12.4651\pm0.0005$;
+\item the measured turn decreases between two decades;
+\item the turn exceeds the readout.
+\end{itemize}
+\end{prediction}
+
+\begin{prediction}[Tilt at $10^{12}$--$10^{13}$] \grade{untested}
+Gap-weighted, $\mathrm{dev}\times G=(-0.957,\ +0.807,\ +0.150)$ from the full product, with mean gap $G=645$.
+\emph{Kill} if digit 1 is off by more than $0.05$, or digit 7 by more than $0.12$.
+\end{prediction}
+
+\begin{prediction}[Offset] \grade{untested}
+$c\to0.10866\pm0.00003$.
+\emph{Kill} if $c$ at $10^{14}$ lies outside $[0.10862, 0.10870]$.
+\end{prediction}
+
+\begin{prediction}[Connection energy] \grade{untested}
+$\mathcal N$ levels off near $0.130$.
+\emph{Kill} if the change per decade grows over two consecutive decades beyond $10^{12}$, or if $\mathcal N$ passes $0.1535$.
+\end{prediction}
+
+\begin{prediction}[Scaled gaps] \grade{untested}
+The $25\%$ point of the scaled gap keeps falling toward $0.288$ without reversing.
+\emph{Kill} if it rises over two consecutive decades.
+\end{prediction}
+
+\begin{prediction}[The split between digits 7 and 9]\label{pr:split} \grade{untested}
+The $0.07$ offset in the $7/9$ split beyond $10^9$ comes from the walk's step weighting, not from the tooth form.
+\emph{Kill} if a gap-weighted count taken directly on twin starts in $(10^9,10^{10}]$ reproduces the walk's split, $+0.72$ and $+0.20$, rather than the prediction's $+0.81$ and $+0.14$.
+\end{prediction}
+
+\begin{prediction}[Cousin primes] \grade{untested}
+The same thread construction, with the pattern $\{0,4,h,h+4\}$ and the cousin classes, predicts the cousin tilt.
+\emph{Kill} if digit-level agreement within $2$ se fails at $10^8$--$10^9$.
+\end{prediction}
+
+%=====================================================
+\section{Position}
+
+No earlier work was found that walks the twin primes as boosts, gives the endpoint law or the frame turn, or builds a holonomy constant from the primes (about $18$ searches). The closest work, and where this paper sits relative to it:
+\begin{itemize}
+\item twin primes by residue class with plain counts (Sahoo);
+\item flat last-digit prime walks (Fraile et al.);
+\item the end-digit bias of consecutive primes (Lemke Oliver and Soundararajan), which the all-primes tilt of Section~8 belongs with;
+\item the observation that counts converge while spacings do not (Lu).
+\end{itemize}
+The methods are standard:
+\begin{itemize}
+\item Wigner--Thomas rotation as holonomy;
+\item the Fricke trace identity;
+\item Robbins--Monro and Kushner--Clark stochastic approximation;
+\item Bena\"im's asymptotic pseudotrajectories;
+\item the Hardy--Littlewood local factors;
+\item the Granville sieve model.
+\end{itemize}
+
+%=====================================================
+\section*{Figures}
+\addcontentsline{toc}{section}{Figures}
+
+\begin{figure}[h!]\centering\includegraphics[width=0.62\textwidth]{fig/f1_chain_ball.png}
+\caption{The twin chain to $10^6$ in the Poincar\'e ball. Blue: the walker; gold: the light sphere and the cube diagonal.}\label{fig:ball}\end{figure}
+
+\begin{figure}[h!]\centering\includegraphics[width=0.9\textwidth]{fig/f2_turn_1e12.png}
+\caption{The frame turn to $10^{12}$ (blue) and the readout of the turn once the tilt dies (gold).}\label{fig:turn}\end{figure}
+
+\begin{figure}[h!]\centering\includegraphics[width=0.85\textwidth]{fig/f3_thread_cut.png}
+\caption{The thread cut prime by prime swings; cut by every prime, it lands on the twins.}\label{fig:cut}\end{figure}
+
+\begin{figure}[h!]\centering\includegraphics[width=0.95\textwidth]{fig/f4_tilt_pred_real.png}
+\caption{The end-digit tilt. Lines: every-prime prediction. Dots: twin primes, with $\pm2$ se. Squares: the $10^{12}$ walk.}\label{fig:tilt}\end{figure}
+
+\begin{figure}[h!]\centering\includegraphics[width=0.95\textwidth]{fig/f5_platonic.png}
+\caption{The endpoint slope against the angle between arms, for the Platonic arm sets, and the frame turn of each.}\label{fig:platonic}\end{figure}
+
+\begin{figure}[h!]\centering\includegraphics[width=0.8\textwidth]{fig/f6_wall.png}
+\caption{The wall at any arm angle, $\Gamma^2=1/(1+\sin\gamma)$, with the largest twin step marked.}\label{fig:wall}\end{figure}
+
+\begin{figure}[h!]\centering\includegraphics[width=0.8\textwidth]{fig/f7_scaled_gaps.png}
+\caption{Twin gaps measured in the local mean gap, drifting slowly toward the random shape.}\label{fig:gaps}\end{figure}
+
+\begin{figure}[h!]\centering\includegraphics[width=0.8\textwidth]{fig/f8_connection_energy.png}
+\caption{Connection energy between the forward and reversed readings of the chain.}\label{fig:ce}\end{figure}
+
+\clearpage
+%=====================================================
+\appendix
+\section{Test register}
+Every test run in this work, with the condition written before it ran, and the outcome. Where a test changed the picture, the picture above already carries the change.
+
+\small
+\begin{longtable}{p{4.2cm}p{6.2cm}p{4.3cm}}
+\toprule
+test & condition set before the run & outcome\\
+\midrule\endhead
+exact Wigner step (160 digits) & errors below $10^{-100}$ & pass ($\le2\times10^{-111}$)\\
+wall at any angle & trace formula within $10^{-12}$ & pass ($1.4\times10^{-14}$)\\
+frame-free form & zero error & pass\\
+octant & minimum component $\ge0$ to $10^9$ & pass\\
+endpoint law, all variants & $d/L$ within $1\%$ of $|P|+c/L$ & pass for mixed arms; fails for blocks and fixed steps\\
+counts fix the endpoint & equal-count chain keeps $d/L$ & fails: $0.656$ vs $0.583$\\
+lock on exact diagonal & heading on $(1,1,1)$ & fails: on the tilted local mean\\
+mod-30 lattice tilt & sign matches & fails: wrong sign\\
+bounded $d$ for $|P|=0$ & $d$ bounded & fails; $0.326\ln L$ law passes\\
+$c$ from random arms & within $0.01$ & fails ($0.245\pm0.128$)\\
+$c$ from real chain to $10^4$ & within $0.01$ & pass ($0.1091$ vs $0.1086$)\\
+frame axis on diagonal & within $5^\circ$ & fails ($57.8^\circ$)\\
+H2 tail & tail beyond $10^8$ below $10^{-4}$ & pass ($4.8\times10^{-6}$)\\
+frame moves less per decade & monotone shrink & pass to $10^9$\\
+walker reproduces earlier runs & to the last printed digit & pass\\
+twin counts to $10^{12}$ & match published $\pi_2$ & pass\\
+tilt decay $|\beta|$ & last decade $<0.5\times$ the $10^6$--$10^7$ value & pass ($0.47$)\\
+curve-fit limit & spread $<0.05^\circ$ & fails (spread $0.2^\circ$): no fitted limit claimed\\
+readout stability & scatter $<10^{-4}$ from $10^8$ & pass ($2.3\times10^{-5}$)\\
+$c$ stability & move $<2\times10^{-4}$ from $10^9$ to $10^{12}$ & pass ($5\times10^{-5}$)\\
+thread cut, random runs & one cut matches all three digits & fails\\
+exact screw, $P\le19$ & digits 1, 7 within 2 se in every decade & pass\\
+exact screw, $P\le23$ & stays within 2 se & fails: no finite cut is the answer\\
+full product, validation & within $0.06$ of the exact 19-prime screw & pass ($0.039$)\\
+full product, every decade & digits 1, 7 within 2 se, $10^5$--$10^9$ & pass\\
+full product beyond $10^9$ & within $0.10$ of the walk & pass; $7/9$ split offset $\sim0.07$\\
+scaled gaps & quartiles within $5\%$ across decades & fails ($6.5\%$ at 25\%): slow drift\\
+connection-energy identity & matrix $=$ formula & pass ($3.5\times10^{-13}$)\\
+H-CE & change shrinks $10^7\to10^9$ & pass\\
+H-CE extended & change at $10^{12}<$ at $10^{10}$ & pass\\
+$\beta=\arccos(1/\sqrt3)$ & within $0.5^\circ$ & fails ($57.7^\circ$)\\
+\bottomrule
+\end{longtable}
+\normalsize
+
+\section{Scripts and reproduction}
+\sloppy
+All scripts carry a \texttt{\# SCRIPT:} name and are on the branch \texttt{claude/moving-matrix-of-balls} of \texttt{dicipler-pixel/votkp-lean}, under \texttt{research/one-tree-every-shape/twin-primes-in-the-tree/}.
+\begin{itemize}
+\item \texttt{conv\_probe.py}, \texttt{conv\_checks.py}: first convergence argument.
+\item \texttt{swarm/proof/}: exact step (160 digits), chain tests, tracking.
+\item \texttt{swarm/opposite/}: other chains, random and adversarial arms.
+\item \texttt{swarm/shapes/}: diagonal, Platonic arms, wall, flat readers, three-fold reading.
+\item \texttt{swarm/precision/}: the $C$ walker \texttt{twinwalk.c}, the $10^{12}$ walk and its analysis.
+\item \texttt{swarm/priorart/}: the connection-energy identity check.
+\item \texttt{swarm/thread/}: \texttt{thread\_form.py}, \texttt{thread\_noise.py}, \texttt{thread\_exact.py}, \texttt{thread\_exact23.py}, \texttt{thread\_all.py}, \texttt{thread\_all\_decades.py}, \texttt{thread\_check\_1e12.py}, \texttt{scale\_ruler.py}, \texttt{hce\_1e12.py}.
+\item \texttt{paper/make\_figs.py}: every figure.
+\end{itemize}
+
+\begin{thebibliography}{99}\small
+\bibitem{HL} G.~H.~Hardy and J.~E.~Littlewood, Some problems of `partitio numerorum' III, \emph{Acta Math.} 44 (1923) 1--70.
+\bibitem{Brun} V.~Brun, La s\'erie $1/5+1/7+\dots$ o\`u les d\'enominateurs sont nombres premiers jumeaux est convergente, \emph{Bull. Sci. Math.} 43 (1919).
+\bibitem{RM} H.~Robbins and S.~Monro, A stochastic approximation method, \emph{Ann. Math. Statist.} 22 (1951).
+\bibitem{KC} H.~J.~Kushner and D.~S.~Clark, \emph{Stochastic Approximation Methods for Constrained and Unconstrained Systems}, Springer, 1978.
+\bibitem{B96} M.~Bena\"im, A dynamical system approach to stochastic approximations, \emph{SIAM J. Control Optim.} 34 (1996).
+\bibitem{B99} M.~Bena\"im, Dynamics of stochastic approximation algorithms, \emph{S\'em. Probab.} XXXIII, LNM 1709 (1999).
+\bibitem{LOS} R.~J.~Lemke Oliver and K.~Soundararajan, Unexpected biases in the distribution of consecutive primes, \emph{PNAS} 113 (2016); arXiv:1603.03720.
+\bibitem{Sahoo} Sahoo, twin primes in residue classes, arXiv:2111.09053.
+\bibitem{Fraile} Fraile et al., prime walks by last digit, arXiv:2105.12547; arXiv:2506.15357.
+\bibitem{Holt} Holt, gap populations and prime biases, arXiv:2405.03540.
+\bibitem{PP} V.~Palge and C.~Pfeifer, Thomas--Wigner rotation as holonomy, arXiv:2310.08121.
+\bibitem{MRT} K.~Matom\"aki, M.~Radziwi\l\l\ and T.~Tao, correlations of the von Mangoldt and higher divisor functions, arXiv:1707.01315.
+\bibitem{Lu} Lu, Counts converge, spacings do not, ICML 2026 poster.
+\bibitem{BFT} W.~Banks, T.~Freiberg and C.~Turnage-Butterbaugh, Consecutive primes in tuples, \emph{Acta Arith.} 167 (2015).
+\bibitem{Gran} A.~Granville, Harald Cram\'er and the distribution of prime numbers, \emph{Scand. Actuar. J.} (1995).
+\bibitem{Ungar} A.~A.~Ungar, \emph{Analytic Hyperbolic Geometry and Albert Einstein's Special Theory of Relativity}, World Scientific, 2008.
+\bibitem{JB1} J.~Beasley, Non-normality is connection energy, Zenodo, 10.5281/zenodo.22803572.
+\bibitem{JB2} J.~Beasley, VOTKP; Two Trees in One Ball; Matter at a Scale; Dirac Time (Zenodo and GitHub, \texttt{dicipler-pixel}).
+\end{thebibliography}
+\end{document}
