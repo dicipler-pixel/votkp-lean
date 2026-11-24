@@ -88,3 +88,17 @@ Method:
   - Caveat: the change per decade has flattened at about 3.8e-4. It follows the turn's slow climb as the tilt dies.
 - **β.** 57.39° at 1e9, rising to 57.71° at 1e12. It is not arccos(1/√3) = 54.74°: killed.
 - **Limit (estimate, untested).** With the turn limit 12.4651° and tanh d → 1, 𝒩 → 0.15353 sin β∞, which is about 0.130 if β levels near 58°.
+
+## The wall as the thread's bite (TWIN-WALL-BITE-01)
+
+**Method.** Scramble the end-digit arms inside one window of 13 steps, keeping the counts fixed, 200 times. Measure the spread of the final turn and of c at 1e8.
+
+| window | twin starts | turn sd | turn range | c sd |
+|---|---|---|---|---|
+| A, before the wall | 11 to 227 | 8.378° | 2.5° to 41.5° | 0.0787 |
+| B, just after the wall | 227 to 641 | 1.075° | | 0.0119 |
+| C, near 1e5 | 99989 to 101531 | 0.0030° | | 0.00009 |
+
+**Kill condition:** C runout ≥ half of A. Measured ratio 0.0004: **pass**.
+
+**Caveat:** early steps are also larger, so this test cannot separate "the wall" from "big steps". A curvature-dial run, which moves the wall crossing to other twin starts, would separate them. That run is untested.

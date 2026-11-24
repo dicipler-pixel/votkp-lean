@@ -33,3 +33,34 @@ DHL[39,2] would give 182. Their margin at k = 40 is about 2×10⁻⁵, while the
 - a new sieve idea.
 
 Axiom 3 can be pinned down independently only by reimplementing their certificate in interval arithmetic. That is also the tool needed to search a k = 39 trial.
+
+## Rebuild of the cap forms, and k = 39 (24 Nov, afternoon)
+
+The scripts are our own code. No OpenAI code was run.
+
+**GAPS-CAP-GRAM-02** (`capgram.py`, `exactconv.py`)
+- The engine is rebuilt from the paper's formulas: geometry, ladders, Dickman fragment measure, shells, caps and hybrid constants.
+- The cap forms are assembled as 77×77 Gram matrices.
+- Convolution is exact, through FLINT integer polynomials on non-negative parts only. The bundled FLINT fails OpenAI's signed-FFT regression check.
+- Float64 FFT was 8% off (GAPS-FFT-CHECK-01) and is not used.
+
+**k = 40, full grid (N = 98304), with their 77 coefficients**
+
+| quantity | ours | their certificate |
+|---|---|---|
+| I_H | 2.3685317853e-14 | in [2.3685317816, 2.3685317890]e-14 |
+| J | 9.0248755655e-14 | ≥ 9.0248755123e-14 |
+| cap quotient | 1.00020609 | > 1.000206 |
+
+This independently confirms the cap part of axiom 3. The 97 loss components were not rebuilt.
+
+**Best trial in the same 77-function space** (`optq.py`, generalized eigenvalue)
+- k = 40: 1.00021374. Their trial reaches 1.00020609, so this space is close to saturated.
+- k = 39: **0.99439115**. This is below 1 before any loss is charged. At k = 40 the losses cost about 0.00018.
+
+**Verdict:** DHL[39,2], and so the gap 182, cannot come from this trial space with these distribution inputs and this geometry. The deficit is about 0.0056, roughly 250 times their final k = 40 margin.
+
+**What remains open:**
+- a larger trial space (more signatures and degrees, another profile g);
+- retuning S, T, ρ and the hybrid constants for k = 39;
+- new distribution inputs.
