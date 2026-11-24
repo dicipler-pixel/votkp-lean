@@ -1,0 +1,13 @@
+check: plain part equals linear light: 70.33264622272418 70.33264622272327
+metric g_xx = 2655.0268   curvature Omega_xy = -73.6835   (atomic units)   steady polarizability = 308.117
+curvature / metric = -0.02775
+plain tune-out, two lines only: 790.0280 nm   (measured 790.03235)   background needed: 10.940 atomic units
+handed tune-out, two lines only: 785.1492 nm   measured 785.1522(3)   miss -0.0030 nm
+handed tune-out, with calibrated background: 785.1535 nm   measured 785.1522(3)   miss +0.0013 nm
+at that wavelength: plain part 12233.3, handed part -12318.3 (atomic units); paper quotes 12347.7 and 24716.8/2 = 12358.4 for its vector term
+sign test: opposite handedness gives a zero at no wavelength between the lines (the two parts add instead of cancelling)
+handed part at tune-out / (frequency * curvature) = 2880.8  -> near the lines the higher odd rungs dominate
+  low frequency 1e-04: handed/(frequency*curvature) = -1.000006
+  low frequency 1e-03: handed/(frequency*curvature) = -1.000570
+  low frequency 5e-03: handed/(frequency*curvature) = -1.014392
+sensitivity: 1e-4 change in circular fraction moves the handed tune-out by -0.00049 nm
