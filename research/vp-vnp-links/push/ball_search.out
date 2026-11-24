@@ -1,0 +1,20 @@
+=== B2 best ratio found
+1 factor(s) of hyperbolic  3-space: best ratio 1.649951  (start scale 5.00, mean radius 16.83; rank-1 distances 0.008 to 50.590, rank-2 0.006 to 82.951)
+1 factor(s) of hyperbolic  6-space: best ratio 1.648681  (start scale 3.00, mean radius 14.73; rank-1 distances 0.001 to 43.721, rank-2 0.049 to 70.081)
+1 factor(s) of hyperbolic 15-space: best ratio 1.647473  (start scale 3.00, mean radius 13.43; rank-1 distances 0.043 to 39.763, rank-2 0.010 to 63.535)
+2 factor(s) of hyperbolic  3-space: best ratio 1.646439  (start scale 1.50, mean radius 9.31; rank-1 distances 1.098 to 45.932, rank-2 0.151 to 74.517)
+3 factor(s) of hyperbolic  3-space: best ratio 1.642820  (start scale 0.50, mean radius 2.90; rank-1 distances 0.722 to 23.448, rank-2 1.383 to 23.713)
+2 factor(s) of hyperbolic  8-space: best ratio 1.644545  (start scale 5.00, mean radius 10.01; rank-1 distances 0.014 to 41.677, rank-2 0.024 to 54.423)
+=== B3 can the target with ratio exactly t sit in these spaces?
+1 factor(s) of hyperbolic  3-space, target ratio 1.50: smallest relative misfit 3.125e-02
+1 factor(s) of hyperbolic  3-space, target ratio 1.60: smallest relative misfit 4.206e-02
+1 factor(s) of hyperbolic  3-space, target ratio 1.75: smallest relative misfit 5.957e-02
+1 factor(s) of hyperbolic  3-space, target ratio 2.00: smallest relative misfit 9.069e-02
+1 factor(s) of hyperbolic 15-space, target ratio 1.50: smallest relative misfit 1.415e-09
+1 factor(s) of hyperbolic 15-space, target ratio 1.60: smallest relative misfit 9.862e-04
+1 factor(s) of hyperbolic 15-space, target ratio 1.75: smallest relative misfit 5.510e-03
+1 factor(s) of hyperbolic 15-space, target ratio 2.00: smallest relative misfit 1.852e-02
+2 factor(s) of hyperbolic  8-space, target ratio 1.50: smallest relative misfit 2.363e-08
+2 factor(s) of hyperbolic  8-space, target ratio 1.60: smallest relative misfit 9.871e-04
+
+[killed]

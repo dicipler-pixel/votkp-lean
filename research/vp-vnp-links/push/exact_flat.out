@@ -1,0 +1,12 @@
+=== (A) flat ceiling on Mat_mu(F2)
+mu = 2: 16 matrices, 9 of rank 1, 6 of rank mu; largest flat ratio 1.500000 (character of rank 1); predicted 1.500000; ceiling for prices 2
+        ratio by rank of the character: {1: [np.float64(1.5)], 2: [np.float64(0.5)]}
+mu = 3: 512 matrices, 49 of rank 1, 168 of rank mu; largest flat ratio 1.750000 (character of rank 1); predicted 1.750000; ceiling for prices 3
+        ratio by rank of the character: {1: [np.float64(1.75)], 2: [np.float64(0.972222)], 3: [np.float64(0.916667)]}
+mu = 4: 65536 matrices, 225 of rank 1, 20160 of rank mu; largest flat ratio 1.875000 (character of rank 1); predicted 1.875000; ceiling for prices 4
+        ratio by rank of the character: {1: [np.float64(1.875)], 2: [np.float64(1.160714)], 3: [np.float64(1.007653)], 4: [np.float64(0.934524)]}
+=== (B) flat Poincare constant on U_h
+h = 2: group order 2; smallest nonzero eigenvalue 2.000000; flat constant C = 0.5000
+h = 3: group order 8; smallest nonzero eigenvalue 0.585786; flat constant C = 1.7071
+h = 4: group order 64; smallest nonzero eigenvalue 0.290725; flat constant C = 3.4397
+h = 5: group order 1024; smallest nonzero eigenvalue 0.200456; flat constant C = 4.9886

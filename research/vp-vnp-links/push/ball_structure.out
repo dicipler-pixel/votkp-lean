@@ -1,0 +1,18 @@
+best ratio in the ball this run: 1.649161
+clusters (points closer than 5 percent of the median distance): 7
+  cluster 1 ['0101', '0110']
+  cluster 2 ['1010']
+  cluster 3 ['0001', '0011']
+  cluster 4 ['1011']
+  cluster 5 ['0000', '0010', '0100', '0111', '1001', '1110', '1111']
+  cluster 6 ['1100', '1101']
+  cluster 7 ['1000']
+cluster-to-cluster distances / median:
+[[0.   0.09 2.   1.9  0.99 1.94 2.01]
+ [0.09 0.   2.09 1.99 1.08 2.03 2.1 ]
+ [2.   2.09 0.   0.1  1.05 2.   2.07]
+ [1.9  1.99 0.1  0.   0.95 1.9  1.98]
+ [0.99 1.08 1.05 0.95 0.01 0.98 1.05]
+ [1.94 2.03 2.   1.9  0.98 0.02 0.08]
+ [2.01 2.1  2.07 1.98 1.05 0.08 0.  ]]
+largest relative failure of the tree (four-point) condition among cluster centres: 0.0009

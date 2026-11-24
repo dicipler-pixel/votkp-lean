@@ -1,0 +1,9 @@
+mu = 2: structured star ratio 5/3 = 1.666667 ; flat maximum 1.5000 ; ceiling 2 ; centre 7 of 16, 3 legs of 3
+mu = 3: structured star ratio 1 = 1.000000 ; flat maximum 1.7500 ; ceiling 3 ; centre 463 of 512, 7 legs of 7
+        after 12000 single-point moves from that start: 106281/67352 = 1.577993 (611 improving moves); centre 174
+Traceback (most recent call last):
+  File "/home/claude/push/star_structured.py", line 18, in <module>
+    N, A1, Am = setup(mu); lab = candidate(mu); ex = ratio_exact(lab, A1, Am)
+                ~~~~~^^^^
+  File "<string>", line 23, in setup
+numpy._core._exceptions._ArrayMemoryError: Unable to allocate 32.0 GiB for an array with shape (65536, 65536) and data type int64

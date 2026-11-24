@@ -1,0 +1,2 @@
+mu = 2: best star ratio 5/3 = 1.666667  (flat maximum 3/2 = 1.5000, ceiling 2); centre holds 7 of 16, legs hold [3, 3, 3]
+mu = 3: best star ratio 44457/41812 = 1.063259  (flat maximum 7/4 = 1.7500, ceiling 3); centre holds 150 of 512, legs hold [128, 121, 113]

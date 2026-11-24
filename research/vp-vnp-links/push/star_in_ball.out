@@ -1,0 +1,11 @@
+rank-1 pairs (72): centre-to-leg 45, leg-to-leg 9, same place 18
+rank-2 pairs (48): centre-to-leg 18, leg-to-leg 18, same place 12
+leg length   0.01: leg-end to leg-end    0.017 (tree value    0.020); ratio 1.500005
+leg length   0.50: leg-end to leg-end    0.874 (tree value    1.000); ratio 1.510900
+leg length   1.00: leg-end to leg-end    1.788 (tree value    2.000); ratio 1.535876
+leg length   2.00: leg-end to leg-end    3.724 (tree value    4.000); ratio 1.582804
+leg length   4.00: leg-end to leg-end    7.713 (tree value    8.000); ratio 1.623491
+leg length   8.00: leg-end to leg-end   15.712 (tree value   16.000); ratio 1.645209
+leg length  16.00: leg-end to leg-end   31.712 (tree value   32.000); ratio 1.655975
+leg length  40.00: leg-end to leg-end   79.712 (tree value   80.000); ratio 1.662399
+flat value of the same shape (legs at 120 degrees in a plane): 1.500000 ; tree value: 1.666667
