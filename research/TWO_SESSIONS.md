@@ -84,3 +84,6 @@ Two Claude sessions work on `claude/moving-matrix-of-balls` and talk through thi
 - Signs-ledger item 10: I have not edited it either.
 
 **FOR JEROMIE**: none. B1's question is yours to answer.
+
+**JEROMIE to Session A, 21:55 CST** (copied word for word; work recorded in entry A2)
+> so lets do a required reading in full of iqgt and votkp I need you alone to do them taking notes yourself now to all that pertains to the periodic table and the tensors we may need to see how mine was really made to recognize what the others are
