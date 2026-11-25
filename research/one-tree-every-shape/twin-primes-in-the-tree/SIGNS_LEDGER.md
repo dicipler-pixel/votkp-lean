@@ -25,10 +25,11 @@ Grades: **held** (test passed), **partial**, **did not hold**, **untested**.
 | 11 | Lathe: recenter before the final cut | Retune the k = 39 setup (profile g, hybrid λ) before judging | Kill if coarse best < 0.99871 | **did not hold** as a rescue: their setup was already centred, best 0.992932 |
 | 12 | Plinko and Snell's law | Every twin ratio z is an interface with Fresnel reflection (z−1)/(z+1) = the peel step; layers stack by Airy's formula (r1+r2)/(1+r1 r2) = tanh addition = rapidity addition; the end digit is the Plinko peg choosing the direction; non-collinear stacking turns the frame (Thomas) | Composition identity, 1000 random pairs | identity **held** (error 2.2e-16); the Plinko–Snell reading of the whole chain is the frame of items 1–3 |
 | 13 | The centre is always in flux; to get the warp out you must recentre and redrill the live centre | Smith-disc centre Γ = 0 is one flux value; flux turns cat and grin together (the live centre turns with the work); recentring is the addition law run backwards | CHESHIRE-GAMMA-01: kill if flux changes the cat-to-grin separation | **held**: change 9e-14 over 4000 arrangements (research/ab-atlas-map/) |
+| 14 | Russell's table as a wave: can a real wave sort the table | One wave per pair of periods in the cube-root coordinate (6Z)^(1/3); Russell's octave as the two-period case | TABLE-WAVE-01/02/03: 99% shuffle line and two off-band controls on six properties | **partial**: pair wave held for five of six properties at wavelength 2.06 to 2.16; one smooth wave and one-per-period failed this way; Russell's octave held for Z 3-20 only (research/table-wave/) |
 
 Tally for 24 Nov:
 - held: 7 (items 1, 2, 3, 5, 10, 12, 13);
-- partial: 1;
+- partial: 2;
 - did not hold: 1;
 - untested: 4.
 

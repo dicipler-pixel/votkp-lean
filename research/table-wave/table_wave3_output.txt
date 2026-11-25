@@ -1,0 +1,16 @@
+mendeleev version 1.4.0
+/usr/local/lib/python3.13/site-packages/mendeleev/models.py:477: UserWarning: P has multiple allotropes, check <P.phase_transitions> for details.
+  warnings.warn(
+/usr/local/lib/python3.13/site-packages/mendeleev/models.py:477: UserWarning: S has multiple allotropes, check <S.phase_transitions> for details.
+  warnings.warn(
+/usr/local/lib/python3.13/site-packages/mendeleev/models.py:477: UserWarning: Se has multiple allotropes, check <Se.phase_transitions> for details.
+  warnings.warn(
+/usr/local/lib/python3.13/site-packages/mendeleev/models.py:477: UserWarning: Sn has multiple allotropes, check <Sn.phase_transitions> for details.
+  warnings.warn(
+property                          n OCT_LO OCT_HI |   ONE   99% |  PAIR  wave   99% |  offA  offB | TRUE3 | verdict
+log first ionization energy      86  0.537  0.042 | 0.215 0.252 | 0.365  2.16 0.241 | 0.196 0.219 | 0.494 | P1 held, P2 held, P3 held
+Pauling electronegativity        77  0.783  0.073 | 0.347 0.299 | 0.467  2.13 0.270 | 0.268 0.380 | 0.592 | P1 held, P2 held, P3 held
+log covalent radius (Pyykko)     86  0.631  0.041 | 0.237 0.239 | 0.469  2.06 0.249 | 0.199 0.258 | 0.435 | P1 held, P2 held, P3 held
+log dipole polarizability        86  0.584  0.026 | 0.316 0.251 | 0.541  2.13 0.251 | 0.231 0.319 | 0.637 | P1 held, P2 held, P3 held
+electron affinity                73  0.090  0.152 | 0.175 0.247 | 0.163  2.53 0.244 | 0.175 0.081 | 0.093 | P1 FIRED, P2 FIRED, P3 FIRED
+log melting point                80  0.804  0.033 | 0.441 0.278 | 0.599  2.13 0.235 | 0.161 0.500 | 0.548 | P1 held, P2 held, P3 held

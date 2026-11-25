@@ -23,3 +23,26 @@ line is the pair of periods, in the cube-root coordinate. Russell's octave is ri
 and for nothing after them.
 
 Not tested: other properties (radius, electron affinity, polarizability); the peel-step Gamma showed no wave here.
+
+## The rest of the properties (`table_wave3.py`, TABLE-WAVE-03)
+
+Data: mendeleev 1.4.0, Z = 1 to 86 (2018 Schwerdtfeger-Nagle polarizabilities, Pyykko covalent radii, electron affinity,
+Pauling electronegativity, melting point). Kill lines and a prediction were written in the file before the run.
+A second control was added: the pair wave must also beat two neighbouring wavelength bands, which a smooth drift would not.
+
+| property | elements | octave, Z 3-20 | octave, Z 21-86 | one per period (99% line) | one per PAIR (99% line) | pair wavelength | true periods, 3 harmonics |
+|---|---|---|---|---|---|---|---|
+| log first ionization energy | 86 | 0.537 | 0.042 | 0.215 (0.252) | 0.365 (0.241) | 2.16 | 0.494 |
+| Pauling electronegativity | 77 | 0.783 | 0.073 | 0.347 (0.299) | 0.467 (0.270) | 2.13 | 0.592 |
+| log covalent radius | 86 | 0.631 | 0.041 | 0.237 (0.239) | 0.469 (0.249) | 2.06 | 0.435 |
+| log dipole polarizability | 86 | 0.584 | 0.026 | 0.316 (0.251) | 0.541 (0.251) | 2.13 | 0.637 |
+| electron affinity | 73 | 0.090 | 0.152 | 0.175 (0.247) | 0.163 (0.244) | 2.53 | 0.093 |
+| log melting point | 80 | 0.804 | 0.033 | 0.441 (0.278) | 0.599 (0.235) | 2.13 | 0.548 |
+
+Outcome: five of six properties pass all three kill lines. Electron affinity fails all three, as predicted.
+Melting point was predicted likely to fail and instead carries the strongest pair wave: that prediction was wrong.
+Four of the five passing properties put the pair wave at 2.13 to 2.16 in the cube-root coordinate; radius at 2.06.
+Russell's octave behaves the same way for all five: more than half the variance on Z = 3 to 20, under 8 percent beyond.
+The ionization-energy row from this second data source agrees with the first run (0.537, 0.365 against 0.537, 0.352).
+
+Not tested: Z above 86; densities; whether the pair wave's shape (not only its wavelength) is shared between properties.
