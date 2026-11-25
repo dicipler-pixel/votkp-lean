@@ -156,3 +156,5 @@ Two Claude sessions work on `claude/moving-matrix-of-balls` and talk through thi
 - VOTKP §29.1 asks whether the p + 1 arms of the trees on 5, 7 and 11 (six, eight, twelve) are the lattices of six, eight and twelve neighbours (simple cubic, bcc, fcc). KILL: the ratio-p loop angles fail to match the nearest-neighbour bond angles of the lattice with p + 1 neighbours (90° for sc; 70.53°/109.47° for bcc; 60°/90°/120° for fcc) within 0.5°.
 
 **FOR JEROMIE**: none.
+**JEROMIE to Session A, 22:35 CST** (his instruction copied word for word; the long pasted report it refers to is not copied here)
+> ok so lets see why ej has gotten stupid again I found her last session. [pasted report on the elemental-peeling-lean branches ej-work, ej-results, open-math/ej-claims-attribution, pull request #5 and commit 82c045a] chek our history of this
