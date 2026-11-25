@@ -1,5 +1,15 @@
 # Aharonov–Bohm, weak values and the atlas cards — mapping record (24 Nov 2026)
 
+> **Status, evening of 24 November 2026 (read this first).** Corrections from the independent reader
+> (`research/retest-2026-11-24/READER_NOTES.md`): one convention is now fixed, z = right-arm over left-arm amplitude, which
+> makes the flux reading Gamma = -i tan(Phi/2); the first script here used the inverse ratio. The flux reading is on the
+> imaginary axis, inside the disc up to a quarter flux quantum, on the rim at a quarter and outside beyond it. "A linear
+> filter lands on the rim" holds for the circular grin only. The first Cheshire script left out the factor i of the published
+> pre-selection; `cheshire_gamma_v2.py` in the retest folder is the corrected one. Lines that cannot fail (true by
+> definition): the arm shares, the addition law joining cat and grin, flux moving both together, the ring walk determinant,
+> the card B158 bound; the torus check compared two closed formulas. This folder is a dictionary into the atlas cards, not new physics.
+
+
 Author: Jeromie Beasley
 
 Coverage of the read: all 207 cards B1–B207 (title, claim, explanation, closing condition) from

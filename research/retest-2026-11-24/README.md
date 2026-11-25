@@ -1,5 +1,10 @@
 # Re-test of 24 November 2026: the 16-matrix test and the flux-loop mapping, derived a second way
 
+> **Convention note.** Item 5 below prints Gamma = i tan(Phi/2); under the convention fixed later the sign is minus
+> (see READER_NOTES.md, correction 8). The script for `zoom_identities_output.txt` and for the noise line
+> `table_wave2b_output.txt` (in research/table-wave) were run inline; both are now saved as files beside their outputs.
+
+
 Author: Jeromie Beasley
 
 `retest_all.py` (RETEST-ALL-01). Six kill lines written in the file before the run; none fired.

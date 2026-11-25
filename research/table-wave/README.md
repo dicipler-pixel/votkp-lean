@@ -22,7 +22,9 @@ Reading: the table repeats, but not as one smooth wave and not with one shape pe
 line is the pair of periods, in the cube-root coordinate. Russell's octave is right as a valence wave for two periods
 and for nothing after them.
 
-Not tested: other properties (radius, electron affinity, polarizability); the peel-step Gamma showed no wave here.
+Other properties (radius, electron affinity, polarizability, electronegativity, melting point) are tested in the section below.
+The peel-step Gamma: best single wave in plain Z was 0.207 at wavelength 2.60, with no noise line run for it; in the cube-root
+coordinate it was below the shuffle median. No wave was established for it.
 
 ## The rest of the properties (`table_wave3.py`, TABLE-WAVE-03)
 

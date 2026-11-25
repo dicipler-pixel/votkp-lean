@@ -20,3 +20,8 @@ Two scripts, both finite-difference, neither reuses the draft's proofs.
 Reading: the draft's cone and the August quadratic closing are both right. They are statements about two
 different maps (distances, and squared distances). The draft's Remarks 7.4, 7.6 and 7.8 call the August
 statements errors; for the August operator they are not.
+
+
+## Light ledger check (added to this folder the same day)
+`ledger_check.py` (LEDGER-CHECK-01) and its output check the Open Math light ledger against the August colour ledger
+(Jensen-Bregman log-determinant divergence, constant 1/(2 sqrt 2)); the Open Math proof covers diagonal matrices only.

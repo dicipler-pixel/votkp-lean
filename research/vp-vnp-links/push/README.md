@@ -1,5 +1,13 @@
 # The 16-matrix test from "VP != VNP over every field", run in flat space, in trees and in the ball
 
+> **Status, evening of 24 November 2026 (read this first).** Later work changed four statements below.
+> (1) The largest ratio a nonpositively curved space allows at size 2 is exactly 2, not "between 5/3 and 2": the cone over
+> the spherical building reaches it (`research/retest-2026-11-24/NOTE_FOR_THE_DOC.md`). (2) "All found the same star" was
+> checked for the three-dimensional run only. (3) A uniform placement does exist at 5/3 (the star averaged over the symmetries).
+> (4) "Below 2 at every size" is counted for sizes 2 to 5. Also: `ball_search.out` ends in a killed run and
+> `star_structured.out` ends in a memory error at size 4.
+
+
 Jeromie Beasley. 24 November 2026. Exploration; nothing here is part of that proof.
 
 The quantity (their Definition 2.1): on the mu x mu matrices over the two-element field,
