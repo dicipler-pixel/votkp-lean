@@ -1,0 +1,5 @@
+60 greedy climbs over groupings into three collinear points, rho on a 201-point grid
+largest ratio: 1.5  distinct end values: [np.float64(1.5), np.float64(1.45082), np.float64(1.448324), np.float64(1.363636)]
+flat maximum 3/2 = 1.5 ; star value 5/3 = 1.666667
+KILL LINE did not fire
+SHARPER LINE did not fire: nothing above 3/2

@@ -48,3 +48,23 @@ returned 1.5 for the known star. The control line (known star must return 5/3) e
 any result was read. The file here is the corrected one.
 
 Files: `explicit_points.py` (EXPLICIT-POINTS-01), `explicit_points_pullback.py` (EXPLICIT-POINTS-02), outputs.
+
+## Addition, same night: the edge support functionals (answer to entry B1 of `../TWO_SESSIONS.md`)
+
+The row "Strassen support functional: oblique tensors only" above is out of date. Two 2026 results:
+the support functionals equal the quantum functionals over the complex numbers (arXiv 2601.21553),
+and the *edge* support functionals, weights (rho, 1-rho, 0) on three parties, are universal over
+every field (arXiv 2604.01386, Theorem 1.1).
+
+On wires an edge support functional gives d(1,2) = 1, d(1,3) = rho, d(2,3) = 1-rho: three points
+on a straight line. Pulled back, the 16 matrices sit at three collinear points. A collinear set is
+Euclidean, so the flat maximum 3/2 applies. `edge_support.py` (EDGE-SUPPORT-01) checks it:
+60 climbs, largest ratio 1.5, nothing above.
+
+| Field | Largest ratio from explicit points | Which point |
+|---|---|---|
+| Every field | 3/2 | cuts; edge support functionals |
+| Complex numbers | 5/3 | four-party quantum functional, weights (0, 1/3, 1/3, 1/3) |
+
+The 5/3 star needs three legs, so four parties with single-party weights. Over fields other than
+the complex numbers no such point is known. That is the sharpest form of the gap found so far.
