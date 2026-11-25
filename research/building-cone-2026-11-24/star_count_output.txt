@@ -1,0 +1,5 @@
+CONTROL known star: unit legs N2/N1 = 90/81, ratio = 1.666667 (must be 1.666667); class = 0 (must be 0, borderline), margin 0
+groupings visited (up to renaming legs): 715860651
+unit legs: largest N2/N1 = 90/81, ratio = 1.666667, attained by 32 groupings
+free leg lengths: groupings above 5/3 (M not copositive): 0 ; groupings touching 5/3 exactly (borderline): 32
+KILL LINE did not fire: no star with a centre and up to three legs is above 5/3

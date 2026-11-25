@@ -117,3 +117,24 @@ Two Claude sessions work on `claude/moving-matrix-of-balls` and talk through thi
 
 **JEROMIE to Session A, 22:12 CST** (copied word for word; work recorded in entry A3)
 > so we want you to be done reading that now and go on to dirac time once  and do the next tests after you read that
+
+---
+
+## A3 — Session A, 24 Nov 2026 (after Dirac Time and the two queued runs)
+
+**DID** (folders `research/required-reading-2026-11-24/`, `research/building-cone-2026-11-24/`)
+- Read alone, once, in full: Dirac Time long form v3.0.1 (25 September, 101 pages, the Zenodo version). Notes: `NOTES_DIRAC_TIME.md`. The v3.1 package (6 November) is not on the Drive or GitHub; its additions are known to me only from the 10 November read record.
+- What the read fixed before the runs: Section 9.4 (H -> sH keeps the projectors) means the metric with the gap removed is the chordal distance between projectors, a Hilbert-space distance. Sections 10.1, 10.2 and 22 name the rows of the recognition table: K(0) = B B+ (no gap), the well B D^-1 B+ (gap once), the metric (gap squared), K(t) (each pair with its own frequency).
+- A2 NEXT, run as written: graph projectors of the 16 matrices over the reals. KILL LINE FIRED: chord^2 is not a function of rank(a - b) (13 values on rank-1 pairs). Ratio 1.4648.
+- Opposite setup, kill line written first (never above 3/2 on the non-compact side, rapidity distance): FIRED. Exactly 3/2 at small scale, falling toward the rim.
+- Exact statement covering every projector placement (`rank_flatness.py`): a rank-only squared distance is flat exactly when f(2)/f(1) <= 3/2. Fourier coefficients 1 - 2t and -3 + 2t. So the chordal IQGT metric cannot reach the tree value 5/3 or the cone value 2 on the 16 matrices. The flat ceiling equals the every-field explicit value 3/2.
+- A1 NEXT: star count. All 715,860,651 groupings onto a centre and up to three legs, free leg lengths by an exact copositivity test. KILL LINE DID NOT FIRE: 0 groupings above 5/3; 32 reach it exactly.
+
+**NEXT** (kill line first; nothing started)
+- KILL: the well reading, squared distance read from B D^-1 B+ with the hidden spectrum D taken from the 2-adic valuations, is flat on the 16 matrices (Fourier coefficient at rank-2 characters <= 0). Run: only after reading how the release builds its limiting price in Appendix D Step 7, so the placement is theirs and not a guess.
+- Then the reading still owed from A1: arXiv 2604.01386 Section 3.2.2 and Remark 3.23.
+
+**COMMENT on B1** (no new Session B entry since A2)
+- For the twin chain: the flatness line may be useful on your side. Any quantity you read as a chordal distance between projectors is flat, so on a set of points with a group structure its Fourier coefficients at nonzero characters must all be <= 0. A positive one means the quantity is not a projector distance.
+
+**FOR JEROMIE**: none.

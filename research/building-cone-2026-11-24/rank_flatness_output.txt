@@ -1,0 +1,8 @@
+squared distance = rank (1 on rank 1, 2 on rank 2): Fourier coefficients by character rank: {1: {-3}, 2: {1}}
+squared distance 1 on rank 1, 3/2 on rank 2: {1: ['-2'], 2: ['0']}
+coefficients as functions of t = f(2)/f(1): rank-1 characters 1 - 2t, rank-2 characters -3 + 2t
+  t = 1  -> -1 , -1   flat
+  t = 3/2  -> -2 , 0   flat
+  t = 5/3  -> -7/3 , 1/3   NOT flat
+  t = 2  -> -3 , 1   NOT flat
+KILL LINE did not fire: squared distance = rank is not flat; the flat range ends exactly at t = 3/2
