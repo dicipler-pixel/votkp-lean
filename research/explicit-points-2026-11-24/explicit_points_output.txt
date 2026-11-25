@@ -1,0 +1,11 @@
+rank-1 matrices: 9  rank-2 matrices: 6
+(A) cuts: splits checked 32767  largest ratio 3/2 = 1.5  attained by 69 splits
+    five largest ratios and how many splits give each: [('3/2', 69), ('15/11', 816), ('39/29', 432), ('45/34', 576), ('21/16', 1224)]
+    one best split, the side of size 4 : [(0, 0, 0, 0), (0, 0, 0, 1), (0, 0, 1, 0), (0, 0, 1, 1)]
+    sizes of the smaller side among best splits: [4, 8]
+(B) star with one leg per party
+    bound with theta allowed any sign (generalized eigenvalues): [np.float64(2.0), np.float64(1.0), np.float64(0.6)]
+    largest ratio over all 65535 patterns of legs of length 0 or 1: 3/2 = 1.5  legs switched on: [(0, 0, 0, 1), (0, 1, 1, 1), (1, 0, 1, 0), (1, 1, 0, 0)]
+    largest ratio from 400 random starts, theta >= 0 free: 1.5
+TREE VALUE 5/3 = 1.6666666666666667
+KILL LINE did not fire: no explicit point is above 5/3

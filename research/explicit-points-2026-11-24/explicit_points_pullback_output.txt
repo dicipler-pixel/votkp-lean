@@ -1,0 +1,8 @@
+CONTROL 1: known star with unit legs gives 1.6666666666666667  (5/3 = 1.6666666666666667 )
+CONTROL 1b: same grouping, leg lengths set free: best ratio 1.66666667  lengths [0. 1. 1. 1.]
+up to 4 groups: 40 random starts; largest ratio 1.607416 ; starts ending at 5/3: 0 ; distinct end values [np.float64(1.607416), np.float64(1.5)]
+up to 5 groups: 25 random starts; largest ratio 1.666667 ; starts ending at 5/3: 1 ; distinct end values [np.float64(1.666667), np.float64(1.607416), np.float64(1.524821), np.float64(1.515971), np.float64(1.5)]
+up to 6 groups: 15 random starts; largest ratio 1.666667 ; starts ending at 5/3: 3 ; distinct end values [np.float64(1.666667), np.float64(1.607416), np.float64(1.5)]
+up to 8 groups: 8 random starts; largest ratio 1.607416 ; starts ending at 5/3: 0 ; distinct end values [np.float64(1.607416), np.float64(1.5)]
+largest ratio found over all stars with free leg lengths: 1.666667   tree value 5/3 = 1.666667
+KILL LINE did not fire: no star found above 5/3
