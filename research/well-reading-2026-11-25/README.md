@@ -28,3 +28,14 @@ and below the cone value 2, and pass the one curvature test that every price mus
 that any of these readings is a price. A price comes from a spectral point (Definition A.4); the quadrilateral
 inequality is necessary for that, not sufficient, and is not even a full CAT(0) test on more than four points.
 Untested: a spectral point that produces this reading; the full CAT(0) embedding; other primes.
+
+## Where the hidden levels sit (checked, 25 Nov, after Jeromie's note linking this to the nilpotent, exceptional
+## and degenerate points of the suns and black hole papers)
+
+Over all 256 ordered pairs at mu = 2, the differences of rank 1 mod 2 split as:
+idempotent-type mod 2 (trace 1): 96, never a hidden level; nilpotent mod 2 (trace 0): 48, of which 8 carry the
+hidden level 2^1 and 40 carry none. So every hidden level sits on a nilpotent: one Jordan block at the prime.
+Those 8 are the sign patterns with all entries +-1 and det = +-2, and for them X X^T = 2I exactly
+(rows (a,b), (c,d) of +-1 give (ac+bd)^2 + (ad-bc)^2 = 4, so det = +-2 forces the rows orthogonal).
+So the same matrix is degenerate (nilpotent, a single Jordan block) mod 2 and is sqrt(2) times an orthogonal
+matrix over the 2-adic numbers. The gap the well reading adds is carried only by these points.
