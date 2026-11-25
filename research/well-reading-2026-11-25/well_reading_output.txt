@@ -1,0 +1,45 @@
+=== mu=2, lift 0,1
+  K(0) gap^0    D(1)^2=19/18 (1.0556)  D(2)^2/D(1)^2=36/19 (1.894737)
+      Gram min eigenvalue -1.0000e+00 -> KILL LINE 1 did not fire: not flat
+      quadrilateral C.4(b): 0 violations, worst excess 0.0000 -> KILL LINE 2 did not fire
+  well gap^1    D(1)^2=37/36 (1.0278)  D(2)^2/D(1)^2=72/37 (1.945946)
+      Gram min eigenvalue -7.5000e-01 -> KILL LINE 1 did not fire: not flat
+      quadrilateral C.4(b): 0 violations, worst excess 0.0000 -> KILL LINE 2 did not fire
+  metric gap^2  D(1)^2=73/72 (1.0139)  D(2)^2/D(1)^2=144/73 (1.972603)
+      Gram min eigenvalue -6.2500e-01 -> KILL LINE 1 did not fire: not flat
+      quadrilateral C.4(b): 0 violations, worst excess 0.0000 -> KILL LINE 2 did not fire
+  CONTROL release price rk(a-a'): D(1)^2=1.0 D(2)^2=2.0
+=== mu=2, lift +1,-1
+  K(0) gap^0    D(1)^2=19/18 (1.0556)  D(2)^2/D(1)^2=36/19 (1.894737)
+      Gram min eigenvalue -1.0000e+00 -> KILL LINE 1 did not fire: not flat
+      quadrilateral C.4(b): 0 violations, worst excess 0.0000 -> KILL LINE 2 did not fire
+  well gap^1    D(1)^2=37/72 (0.5139)  D(2)^2/D(1)^2=72/37 (1.945946)
+      Gram min eigenvalue -3.7500e-01 -> KILL LINE 1 did not fire: not flat
+      quadrilateral C.4(b): 0 violations, worst excess 0.0000 -> KILL LINE 2 did not fire
+  metric gap^2  D(1)^2=73/288 (0.2535)  D(2)^2/D(1)^2=144/73 (1.972603)
+      Gram min eigenvalue -1.5625e-01 -> KILL LINE 1 did not fire: not flat
+      quadrilateral C.4(b): 0 violations, worst excess 0.0000 -> KILL LINE 2 did not fire
+  CONTROL release price rk(a-a'): D(1)^2=1.0 D(2)^2=2.0
+=== mu=3, lift 0,1
+  K(0) gap^0    D(1)^2=949/784 (1.2105)  D(2)^2/D(1)^2=1675/949 (1.765016) D(3)^2/D(1)^2=2352/949 (2.478398)
+      Gram min eigenvalue -8.8635e+00 -> KILL LINE 1 did not fire: not flat
+      quadrilateral C.4(b): 0 violations, worst excess 0.0000 -> KILL LINE 2 did not fire
+  well gap^1    D(1)^2=1733/1568 (1.1052)  D(2)^2/D(1)^2=6483/3466 (1.870456) D(3)^2/D(1)^2=4704/1733 (2.714368)
+      Gram min eigenvalue -5.4252e+00 -> KILL LINE 1 did not fire: not flat
+      quadrilateral C.4(b): 0 violations, worst excess 0.0000 -> KILL LINE 2 did not fire
+  metric gap^2  D(1)^2=3301/3136 (1.0526)  D(2)^2/D(1)^2=25507/13204 (1.931763) D(3)^2/D(1)^2=9408/3301 (2.850045)
+      Gram min eigenvalue -3.8930e+00 -> KILL LINE 1 did not fire: not flat
+      quadrilateral C.4(b): 0 violations, worst excess 0.0000 -> KILL LINE 2 did not fire
+  CONTROL release price rk(a-a'): D(1)^2=1.0 D(2)^2=2.0 D(3)^2=3.0
+=== mu=3, lift +1,-1
+  K(0) gap^0    D(1)^2=949/784 (1.2105)  D(2)^2/D(1)^2=1675/949 (1.765016) D(3)^2/D(1)^2=2352/949 (2.478398)
+      Gram min eigenvalue -8.8635e+00 -> KILL LINE 1 did not fire: not flat
+      quadrilateral C.4(b): 0 violations, worst excess 0.0000 -> KILL LINE 2 did not fire
+  well gap^1    D(1)^2=1733/3136 (0.5526)  D(2)^2/D(1)^2=6483/3466 (1.870456) D(3)^2/D(1)^2=4704/1733 (2.714368)
+      Gram min eigenvalue -2.7126e+00 -> KILL LINE 1 did not fire: not flat
+      quadrilateral C.4(b): 0 violations, worst excess 0.0000 -> KILL LINE 2 did not fire
+  metric gap^2  D(1)^2=3301/12544 (0.2632)  D(2)^2/D(1)^2=25507/13204 (1.931763) D(3)^2/D(1)^2=9408/3301 (2.850045)
+      Gram min eigenvalue -9.7325e-01 -> KILL LINE 1 did not fire: not flat
+      quadrilateral C.4(b): 0 violations, worst excess 0.0000 -> KILL LINE 2 did not fire
+  CONTROL release price rk(a-a'): D(1)^2=1.0 D(2)^2=2.0 D(3)^2=3.0
+reference at mu=2: flat ceiling 3/2, tree star 5/3, building cone 2; at mu=3 flat ceiling 7/4, cone 3
