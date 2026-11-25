@@ -1,0 +1,3 @@
+wire q=5: rank 5  weight 5.0
+multiplicative: rank 6 = 6  weight 26.601866783 = 26.601866783
+restriction by an invertible map: rank 2 unchanged; weight 1.01 -> 2.0 (rises)

@@ -2,7 +2,8 @@
 
 Reader: Session A, alone, no agents. 24 November 2026.
 Text read: `iqgt_grassmannian_v7_3_1.html` from the public repository `iqgt-grassmannian-lean` (paper folder), every section 1 to 13, appendices A to D, references. The page stores its equations as drawings, so they were turned back into text with `mjx2txt.py` (in this folder) and read with the prose.
-Not read tonight: the June 2026 first versions (Drive only), where the contractive-operator form lives. That is the "first vision" half and is still owed.
+Also read in full: the earliest file on Drive, `grassmannian_qgt_tex.pdf`, 12 June 2026 18:13, 11 pages (Section D below). Neither file is an Open Math build: v7.3.1 was committed 13 October from the rebuild done with Jeromie; the June file is his own first edition.
+Still owed: the version that carries the contractive operator. It is not in the 12 June file. The other June files (13 to 20 June) were not opened tonight.
 
 The notes keep to two things, as asked: how the tensor is made, and what bears on the periodic table.
 
@@ -45,3 +46,24 @@ The notes keep to two things, as asked: how the tensor is made, and what bears o
 - **Tip and tail.** Subshell levels that sit together "fuse into one object; the gap decides where one object ends and the next begins" (Section 12.1). This is the paper's own rule for where a row of the table starts.
 - **Locking threshold.** Coupling over splitting = ½ gives 22.5° (Remark 12.1, Example 12.2). Same ratio test as a peel step crossing a shell wall.
 - **Fold seen through distances.** Example 8.8: three bodies read only through squared distances have a fold on the collinear circle; the lost direction is orientation. This is his squared-distance map, in the paper itself.
+
+## D. The first edition (12 June 2026) beside v7.3.1: how it was first made
+
+What the first edition already had, unchanged since:
+- The projector as the object; the tangent law V = ΠV + VΠ; "all global geometric features are generated exclusively by the mixing between the occupied and unoccupied subspaces".
+- One form, Q_Π(V,W) = Tr(ΠVW), split into ½Tr(VW) and a commutator part.
+- The Riesz contour and the three residue cases (one in and one out; both in; both out).
+- The pullback: "physical parameter spaces do not generate the geometry; they merely select finite-dimensional trajectories through a pre-existing Grassmannian geometry."
+- The two-band and spin-1 appendices and the Krylov appendix.
+
+What the first edition says that the later one dropped or changed:
+- **Sign.** First edition: Q = g + (i/2)Ω with Ω = −i Tr(Π[V,W]). v7.3.1: Q = g − (i/2)Ω with Ω = +i Tr(Π[V,W]). Same tensor, opposite sign convention for the curvature. Any paper of his that carries the −i is on the first convention.
+- **The bound.** First edition: |Ω| ≤ 2√(g(V,V) g(W,W)), the envelope. The sharp form with the subtracted g(V,W)² and the complex-line equality came later.
+- **The hierarchy.** First edition states "a precise causal hierarchy: Cross-Gap Transits ⟹ Metric ⟹ Curvature". v7.3.1 withdraws the word causal: "The ordering is one of control, not of generation."
+- **The gap as regulator.** First edition: "The gap is not merely a stability condition for perturbation theory. Rather, it acts as the fundamental geometric regulator controlling the magnitude of all admissible tangent motions." This sentence is gone from v7.3.1, though Section 12 says the same thing at length.
+- **Spectral susceptibility.** First edition: "the geometric tensor may be interpreted as a quantitative measure of spectral susceptibility. Large geometric responses correspond precisely to regions where infinitesimal perturbations most efficiently redistribute amplitude between occupied and unoccupied sectors." And: "a direct operator-level description of how spectral information is transferred through a quantum system." Not in v7.3.1 in these words.
+- **Dissipation.** First edition: δS_irr ≥ ∫ ȧ² g_aa dt straight from the Fisher information with ρ = Π. v7.3.1 keeps the Fisher identity and replaces the entropy claim by a declared bath and a tested friction weight.
+- **Spin-1 coefficient.** 9/16 in the first edition, ½ in v7.3.1.
+- **Targets named in the first edition:** quantum Hall plateaus at 0.002 T in screened graphene, and the quantum-metric-dipole nonlinear Hall effect. Gap closing "may admit a purely geometric characterization through the degeneration of the Grassmannian tensor itself".
+
+The one-line reading of how it was made: take an operator with a gap, keep only the projector, allow only moves that cross the gap, and read one Hermitian form on those moves. The gap is the regulator. Everything else in v7 is a consequence or a test.
