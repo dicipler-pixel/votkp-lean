@@ -1,0 +1,7 @@
+edge length l = 1.061275, check cosh(l/2) = 1.144123 vs cos36/sin45 = 1.144123, Gamma^2 = tanh^2(l/2) = 0.236068 = sqrt5-2 = 0.236068
+K-H0 pentagon loop: leftover distance -6.66e-16, rotation 90.000000 deg -> PASS
+first 1000000 twin steps end at twin start 252429029; arm shares [0.3334  0.33358 0.33301]
+consecutive repeat rate 0.30921 vs independence 0.33333 (se 0.00047)
+drift per step (d/n): real 0.756495; shuffles 0.764406 +- 0.000154; z = -51.4
+frame turn after 100 / 1000 edges: real 144.278 / 128.856 deg; shuffles mean 136.86 / 137.99, sd 40.30 / 37.06
+PASS: the arm order alone carries a prime signal on the honeycomb (z=-51.4)

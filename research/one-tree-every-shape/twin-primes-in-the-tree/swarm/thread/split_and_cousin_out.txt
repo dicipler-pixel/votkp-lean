@@ -1,0 +1,10 @@
+method check twins (1e8,1e9]: dev*G [-0.924  0.839  0.085] se [0.068 0.063 0.067]  (v1: -0.924 0.839 0.085, se 0.041 0.034 0.054)
+method check PASS
+twin starts in (1e9-1e4, 1e10]: 23988203   (72s)
+direct gap-weighted count (1e9,1e10]: dev*G [-0.95   0.775  0.175] se [0.032 0.033 0.036]  G 375.2  n 23988173
+prediction (full product) [-0.945  0.809  0.136] ; walk split (7,9) = (+0.72, +0.20)
+digit 7 closer to walk: False, digit 9 closer to walk: True -> PASS (split offset is the walk weighting)
+z of direct count vs prediction (1,7,9): [-0.2 -1.   1.1]
+cousins real (1e8,1e9] classes 7,13,19: dev*G [ 0.68   0.241 -0.921] se [0.072 0.081 0.092] G 301.6 n 2984422
+construction reproduces twin prediction (v1: -0.939 0.820 0.119): [-0.939  0.82   0.119]
+cousin prediction (full product) [ 0.705  0.143 -0.847]  G 305.0 ; z (7,13,19) [-0.3  1.2 -0.8] -> PASS

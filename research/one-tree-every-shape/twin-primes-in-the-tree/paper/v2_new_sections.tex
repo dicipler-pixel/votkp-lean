@@ -1,0 +1,194 @@
+%=====================================================
+\section{Where the turn is set: the first cut}\label{sec:firstcut}
+
+In the measurements, about $80\%$ of the frame turn is already present when the walker crosses the wall sphere $\rho^2=\tfrac12$ ($\rho=\tanh(d/2)$), which happens between twin starts $197$ and $227$. The tilt offset $c$ is set by the first $1{,}200$ starts. This raises the question of whether the wall is the seat the thread cuts into, the place where it bites. Two tests answer it.
+
+\subsection{The scramble test} \grade{measured}
+Scramble the end-digit arms inside one window of $13$ steps, keeping the counts. Do this $200$ times and measure the spread (runout) of the final turn at $10^8$.
+
+\begin{center}\begin{tabular}{lccc}
+\toprule
+window & twin starts & turn runout & runout of $c$\\
+\midrule
+before the wall & $11$--$227$ & $8.38^\circ$ & $0.0787$\\
+just after the wall & $227$--$641$ & $1.08^\circ$ & $0.0119$\\
+near $10^5$ & $99989$--$101531$ & $0.0030^\circ$ & $0.00009$\\
+\bottomrule
+\end{tabular}\end{center}
+
+The far window wobbles $0.0004$ as much as the first. In lathe terms, after that stretch the chain is only being polished. This test cannot separate two causes, though: the early steps are also the big steps.
+
+\subsection{The curvature dial} \grade{measured; the wall reading is killed}
+Scale every rapidity by a dial $\lambda$, so $r\to\lambda r$. This is the same chain in a ball whose curvature is $\lambda^2$ times stronger. The big steps stay where they are, at the start. The wall crossing moves: far out for small $\lambda$, early for large $\lambda$.
+
+\emph{Kill condition, written before the run:} the wall is not the bite if, at every $\lambda$ that puts the crossing beyond $10^4$, the before/after runout ratio is below $1.5$.
+
+\begin{center}\begin{tabular}{cccccc}
+\toprule
+$\lambda$ & wall crossed at & runout before & runout after & ratio & first steps $11$--$227$\\
+\midrule
+$0.25$ & $2{,}069{,}381$ & $0.00087^\circ$ & $0.00068^\circ$ & $1.29$ & $2.26^\circ$\\
+$0.35$ & $61{,}979$ & $0.0049^\circ$ & $0.0061^\circ$ & $0.81$ & $3.43^\circ$\\
+$0.5$ & $4{,}421$ & $0.036^\circ$ & $0.047^\circ$ & $0.78$ & $4.87^\circ$\\
+$0.75$ & $599$ & $0.94^\circ$ & $0.41^\circ$ & $2.30$ & $6.63^\circ$\\
+$1$ & $227$ & $7.86^\circ$ & $0.89^\circ$ & $8.84$ & $7.85^\circ$\\
+$1.5$ & $71$ & $8.07^\circ$ & $1.66^\circ$ & $4.86$ & $8.92^\circ$\\
+$2$ & $59$ & $7.42^\circ$ & $2.46^\circ$ & $3.01$ & $8.95^\circ$\\
+\bottomrule
+\end{tabular}\end{center}
+(At $\lambda=2$ the turn was read through the singular-value polar split, because $d$ is large there. At $\lambda=1$ that reading agrees with the earlier one to every printed digit.)
+
+The kill fires. When the wall sits among small steps ($\lambda\le0.5$), scrambling just before it and just after it does the same small thing. Meanwhile the first stretch, twin starts $11$--$227$, carries a runout of degrees at every $\lambda$.
+
+\subsection{The opposite setup} \grade{measured; the wall reading is killed again}
+Run it the other way round: keep $\lambda=1$ and start the walk late, so that no step is big.
+
+\begin{center}\begin{tabular}{lccccc}
+\toprule
+walk starts at & wall crossed at & first $13$ steps & before wall & after wall & ratio\\
+\midrule
+$10{,}007$ & $211{,}499$ & $0.497^\circ$ & $0.0053^\circ$ & $0.0101^\circ$ & $0.52$\\
+$100{,}151$ & $2{,}119{,}259$ & $0.111^\circ$ & $0.00080^\circ$ & $0.00062^\circ$ & $1.30$\\
+\bottomrule
+\end{tabular}\end{center}
+
+The wall does nothing special in either setup. Wherever the walk begins, its own first steps set the runout, and that runout is about $100$ times anything near the wall.
+
+\paragraph{What survives.} The thread is cut by its first steps. Those steps are the largest ones, and they are taken before the frame has any direction to hold. The wall sphere marks a distance the walker passes; it is not where the turn is fixed. In lathe terms, the first cut sets the part and the wall is a point the tool passes. This also explains why the turn limit $12.4651^\circ$ belongs to the chain that \emph{starts at $11$}. Section~\ref{sec:families} shows the same thing from the other side: start the twin chain at $17$ and its turn at $10^9$ is $27.12^\circ$.
+
+%=====================================================
+\section{The other prime pairs}\label{sec:families}
+
+\subsection{One arm rule for every pair family}
+Take a prime pair $(p,p+g)$ with $p>5$. Its residue mod~$5$ always has exactly three allowed values:
+\begin{itemize}
+\item $g=2$: $p\bmod5\in\{1,2,4\}$;
+\item $g=4$: $\{2,3,4\}$;
+\item $g=6$: $\{1,2,3\}$.
+\end{itemize}
+Put the arm on the allowed residue, in increasing order, mapped to $x,y,z$. For twins this \emph{is} the end-digit rule: $11\to x$, $17\to y$, $29\to z$. So the twins' ``end digit'' is really their residue mod~$5$, and the same rule carries over to every family. For cousins it gives $7\to x$, $13\to y$, $19\to z$.
+
+Sexy primes $(p,p+6)$ have six classes mod~$30$, because their residue mod~$3$ is free. That is a fork, so both readings were built:
+\begin{itemize}
+\item \emph{sexy-3}: cube arms from the residue mod~$5$;
+\item \emph{sexy-6}: the six octahedron directions, with the sign set by $p\bmod3$.
+\end{itemize}
+
+\subsection{Results to $10^9$} \grade{measured}
+Every family was sieved to $10^9$. The twin run reproduces the earlier chain exactly: turn $12.2690^\circ$, $d=10.68815$, $c=+0.10857$.
+\begin{center}\small\begin{tabular}{lcccccc}
+\toprule
+family & start & turn, $10^9$ & slope & $c$, $10^9$ & wall into & $L^*$\\
+\midrule
+twins ($g=2$) & $11$ & $12.2690^\circ$ & $0.57729$ & $+0.10857$ & $227$ & $3.027$\\
+cousins ($g=4$) & $7$ & $14.9926^\circ$ & $0.57726$ & $+0.18376$ & $127$ & $2.898$\\
+sexy-3 ($g=6$) & $7$ & $10.5305^\circ$ & $0.57955$ & $+0.1038$ (rising) & $151$ & $3.071$\\
+sexy-6 & $7$ & $8.9931^\circ$ & $0.0037$ & $d=0.53$, bounded & never & ---\\
+\bottomrule
+\end{tabular}\end{center}
+Slope is measured from $10^5$ to $10^9$; $L^*$ is the path length at the wall crossing; sexy-6 uses the octahedron arms.
+
+\paragraph{Why the slope is the same.} \grade{derived}
+\begin{enumerate}
+\item A step of rapidity $r$ along arm $e$ changes the distance by $r\,(u\cdot e)$ plus a curvature term whose total is a constant; $u$ is the body heading.
+\item The heading settles on the mean arm $P$, so $u\cdot e$ averages to $|P|$ and $d\approx|P|L+c$. That is the endpoint law of Section~5.
+\item Three perpendicular arms with equal shares give $P=(1,1,1)/3$, so $|P|=1/\sqrt3$.
+\end{enumerate}
+Measured, the classes have equal shares to $\pm0.0002$ in every family. Exact equality of the shares is a conjecture of the same kind as the twin-prime conjecture. For the octahedron reading $P=0$, so there is no drift, and since $\sum r^2$ converges, $d$ stays bounded.
+
+\paragraph{The turn is not a Hardy--Littlewood number.} \grade{measured}
+\begin{itemize}
+\item Twins and cousins have the same Hardy--Littlewood constant, $2C_2=1.3203$; the sieve counts $3{,}424{,}506$ against $3{,}424{,}680$. Yet their turns differ by $2.72^\circ$.
+\item Sexy primes have twice the constant and turn less.
+\item Moving the start by one member changes the turn a great deal:
+
+\begin{center}\begin{tabular}{lccc}
+\toprule
+family & usual start & one member later & two members later\\
+\midrule
+twins & $11$: $12.27^\circ$ & $17$: $27.12^\circ$ & $29$: $20.25^\circ$\\
+cousins & $7$: $14.99^\circ$ & $13$: $22.94^\circ$ & $19$: $34.21^\circ$\\
+sexy-3 & $7$: $10.53^\circ$ & $11$: $9.19^\circ$ & $13$: $7.92^\circ$\\
+\bottomrule
+\end{tabular}\end{center}
+\end{itemize}
+The turn is a property of each family's smallest members, the first cut of Section~\ref{sec:firstcut}. The slope and the wall crossing are properties of the arm geometry, so they are shared.
+
+\paragraph{The real arm order turns less than random arms.} \grade{measured}
+Keep each family's real gaps and draw the arms at random, $400$ times, to $10^7$.
+\begin{itemize}
+\item Real turns sit low: twins $z=-1.37$, cousins $z=-1.32$, sexy-3 $z=-1.49$.
+\item All three cycle their arms forward ($x\to y\to z\to x$ above $1/9$) and repeat an arm less often than $1/3$: twins $0.3124$, cousins $0.3108$, sexy-3 $0.2869$.
+\end{itemize}
+This is the consecutive-pair bias of the Lemke Oliver--Soundararajan kind, seen in the twin chain's own arms. Section~\ref{sec:honeycomb} reads it far more sharply.
+
+%=====================================================
+\section{The dodecahedral honeycomb $\{5,3,4\}$}\label{sec:honeycomb}
+
+\subsection{The twin arms are the honeycomb's edges} \grade{proved}
+In the honeycomb $\{5,3,4\}$, right-angled dodecahedra meet four around every edge and fill the ball with no gaps. Flat space cannot do this.
+\begin{enumerate}
+\item The vertex figure is the octahedron $\{3,4\}$. So the six edges at a vertex run along $\pm x,\pm y,\pm z$, which are the twin chain's three arms.
+\item Two edges of one face meet at an adjacent pair of octahedron vertices, which are $90^\circ$ apart. So every face is a regular pentagon with all angles $\pi/2$.
+\item For a regular hyperbolic $n$-gon with interior angle $\alpha$, $\cosh(\ell/2)=\cos(\pi/n)/\sin(\alpha/2)$. With $n=5$ and $\alpha=\pi/2$:
+\[\cosh\frac{\ell}{2}=\frac{\cos36^\circ}{\sin45^\circ}=\frac{\varphi/2}{1/\sqrt2}=\frac{\varphi}{\sqrt2},\qquad
+\cosh\ell=2\cosh^2\frac{\ell}{2}-1=\varphi^2-1=\varphi .\]
+So the edge length is $\ell=\operatorname{arccosh}\varphi=1.06128$.
+\item In peel terms:
+\[\Gamma^2=\tanh^2\frac{\ell}{2}=\frac{\cosh\ell-1}{\cosh\ell+1}=\frac{\varphi-1}{\varphi+1}=\varphi^{-3}=\sqrt5-2=0.23607.\]
+This is inside the wall $\tfrac12$, so one honeycomb edge is a step that still composes into a turn.
+\item Two perpendicular edges: by the exact step, $\tan(\varepsilon/2)=\Gamma^2=\sqrt5-2$, and so
+\[\tan\varepsilon=\frac{2(\sqrt5-2)}{1-(\sqrt5-2)^2}=\frac{2(\sqrt5-2)}{4\sqrt5-8}=\frac12 .\]
+The frame turn of two perpendicular honeycomb edges is $\arctan\tfrac12=26.5651^\circ$: the angle of the $1:2:\sqrt5$ triangle. The polar split gives the same value to $12$ digits.
+\item Model check, written before the run: the five-edge loop $x,y,-x,-y,x$ must close to a pure rotation of $90^\circ$. By Gauss--Bonnet, the area of a right-angled pentagon is $3\pi-5\pi/2=\pi/2$. Measured: leftover distance $7\times10^{-16}$, rotation $90.000000^\circ$. \textbf{Pass.}
+\end{enumerate}
+
+\subsection{Walking the twins on the honeycomb} \grade{measured}
+Walk one edge per twin step, along the arm set by the end digit. Every step has the same length $\ell$. The gaps are thrown away and only the \emph{order} of the end digits is walked. On equal steps a repeated arm goes straight and a changed arm turns, so the drift per step measures how often consecutive end digits repeat.
+
+\emph{Kill condition, written before the run:} the real drift lies within $2$ sd of $200$ shuffles with the same counts.
+
+\noindent Over the first $10^6$ twin steps (to twin start $252{,}429{,}029$):
+\begin{itemize}
+\item consecutive end digits repeat at a rate of $0.30921$, against $0.33333$ for independent digits (se $0.00047$);
+\item drift per step is $0.756495$ for the real order, against $0.764406\pm0.000154$ for the shuffles: $z=-51$. \textbf{Pass}: the order of the end digits alone carries a prime signal on the honeycomb. As predicted, the twins drift more slowly, because they avoid repeating an end digit.
+\end{itemize}
+%MARKOV%
+
+\paragraph{The honeycomb has no turn limit.} The frame turn after $100$ and $1000$ edges is $144.3^\circ$ and $128.9^\circ$ for the real order. For the shuffles it is $137^\circ\pm40^\circ$ at both lengths. The steps never shrink, so $\sum r^2$ diverges and the frame keeps moving. The chain's turn converges only because its steps shrink like $1/a$, the same reason Brun's sum converges. The honeycomb keeps the arm order and drops that shrinking, so it shows the end-digit memory but has no limit angle.
+
+%=====================================================
+\section{The 186 bound: rebuilding OpenAI's certificate}\label{sec:186}
+
+\noindent OpenAI's code was read and none of it was run. All checks are this work's own code.
+
+\paragraph{The claim.} DHL$[40,2]$: every admissible $40$-tuple has infinitely many shifts holding two primes. Their $40$-tuple spans $186$, which gives $\liminf(p_{n+1}-p_n)\le186$. It rests on three new pieces: triple dense divisibility, Stadlmann's prime minorant, and Dickman-type fragment measures. The level of distribution is $0.5253$ at order three. The certificate is a $77$-coefficient trial in $40$ variables with a margin just over $1/50000$. Three Lean axioms are assumed.
+
+\paragraph{The axioms.} \grade{measured}
+\begin{itemize}
+\item $|\mathrm{Kl}_3(c;p)|\le3$, which is Deligne's theorem. Checked for all $c$ and every $p\le160$: the largest value is $2.665$, at $p=107$.
+\item The Kloosterman correlation bound $\le8p\sqrt p$. Checked for all $A,B$ and every $p\le160$: the largest ratio is $4.06$. Split by case up to $p=400$: $3.30$ when $A=B$ and $4.50$ when $A\neq B$, with no main term at $A=B$. Whether the cited result covers $A=B$ is unconfirmed, because the note could not be fetched.
+\item The numerical bounds: rebuilt independently (below) for the cap part. The $97$ loss components were not rebuilt.
+\item The $40$-tuple itself is admissible, with size $40$ and width $186$.
+\end{itemize}
+
+\paragraph{The rebuild at $k=40$.} \grade{measured}
+The main sieve terms were rebuilt from the paper's formulas as two $77\times77$ Gram matrices. Convolution is exact, through integer polynomials. Double-precision FFT was $8\%$ off on these forms and is not used.
+\begin{center}\begin{tabular}{lcc}
+\toprule
+quantity & this rebuild & their certificate\\
+\midrule
+$I_H$ & $2.3685317853\times10^{-14}$ & in $[2.3685317816,\,2.3685317890]\times10^{-14}$\\
+$J$ & $9.0248755655\times10^{-14}$ & $\ge9.0248755123\times10^{-14}$\\
+cap quotient & $1.00020609$ & $>1.000206$\\
+\bottomrule
+\end{tabular}\end{center}
+This independently confirms the cap half of the third axiom.
+
+\paragraph{How far down.} \grade{measured}
+\begin{itemize}
+\item The best trial in their $77$-function space is a single generalized eigenvalue problem. At $k=40$ it gives $1.00021374$, so their trial is within $0.000008$ of the best the space allows.
+\item At $k=39$ (width $182$) the best is $0.99439$. That is below $1$ before any loss is charged, short by about $0.0056$, roughly $250$ times their final margin.
+\item A recentering scan over $10$ profiles and $12$ hybrid constants found their setup already best at every setting. The kill fired.
+\end{itemize}
+So $182$ cannot come from their trial space, distribution inputs and geometry as they stand. As a rough size \grade{untested}: recovering the deficit through the order-three level alone would need it raised from about $0.525$ to about $0.528$.

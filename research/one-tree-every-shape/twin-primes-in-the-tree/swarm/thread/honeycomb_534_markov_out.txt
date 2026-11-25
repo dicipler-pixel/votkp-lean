@@ -1,0 +1,6 @@
+transition matrix (row = from x,y,z):
+[[0.3091 0.36   0.3309]
+ [0.3338 0.3083 0.3579]
+ [0.3573 0.3325 0.3102]]
+drift per step: real 0.756495; Markov surrogates 0.757747 +- 0.000145; z = -8.66
+PASS: longer-range order shows on the honeycomb

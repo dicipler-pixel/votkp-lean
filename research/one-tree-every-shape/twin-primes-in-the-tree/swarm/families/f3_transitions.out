@@ -1,0 +1,12 @@
+twins    repeat share 0.3124 (iid 0.3333)   share of gap = 6: 0.0079   transition shares (row = from x,y,z):
+          0.1038  0.1187  0.1107
+          0.1115  0.1040  0.1180
+          0.1179  0.1108  0.1047
+cousins  repeat share 0.3108 (iid 0.3333)   share of gap = 6: 0.0159   transition shares (row = from x,y,z):
+          0.1033  0.1161  0.1139
+          0.1134  0.1040  0.1159
+          0.1166  0.1132  0.1036
+sexy-3   repeat share 0.2869 (iid 0.3333)   share of gap = 6: 0.1075   transition shares (row = from x,y,z):
+          0.1005  0.1407  0.0922
+          0.1069  0.0858  0.1406
+          0.1260  0.1067  0.1005

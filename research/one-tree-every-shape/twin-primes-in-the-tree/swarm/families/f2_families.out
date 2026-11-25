@@ -1,0 +1,80 @@
+arm rule check: twins == end-digit rule, cousins == 7,13,19 mod 30 order : OK
+
+== twins  (g=2)  first start 11, 3424504 pair starts to 1e9, arm shares [0.33325, 0.33352, 0.33323], |P| = 0.57735 ==
+   first starts: [11, 17, 29, 41, 59, 71, 101, 107, 137, 149]  arms: [0, 1, 2, 0, 2, 0, 0, 1, 1, 2]
+   a'=1.019e+03  L=  4.5287  d=  2.76060  d/L=0.60958  c=d-|P|L=+0.14597  turn=15.1974 deg
+   a'=1.001e+04  L=  6.8131  d=  4.04587  d/L=0.59383  c=d-|P|L=+0.11230  turn= 6.9955 deg
+   a'=1.002e+05  L=  9.1165  d=  5.37257  d/L=0.58932  c=d-|P|L=+0.10913  turn= 9.8700 deg
+   a'=1.000e+06  L= 11.4177  d=  6.70051  d/L=0.58686  c=d-|P|L=+0.10853  turn=11.6199 deg
+   a'=1.000e+07  L= 13.7202  d=  8.02985  d/L=0.58526  c=d-|P|L=+0.10848  turn=12.0725 deg
+   a'=1.000e+08  L= 16.0228  d=  9.35929  d/L=0.58412  c=d-|P|L=+0.10853  turn=12.2048 deg
+   a'=9.990e+08  L= 18.3244  d= 10.68815  d/L=0.58328  c=d-|P|L=+0.10857  turn=12.2690 deg
+   slope 1e5->1e9 = 0.57729  (|P| = 0.57735, miss 6.1e-05)   d(1e9)-d(1e5) = 5.3156
+   wall crossing (d >= 1.7627): step 197 -> 227, L* = 3.0271, d = 1.8043, turn so far 9.790 deg
+   (12.1s)
+
+== cousins(g=4)  first start 7, 3424679 pair starts to 1e9, arm shares [0.33333, 0.33333, 0.33334], |P| = 0.57735 ==
+   first starts: [7, 13, 19, 37, 43, 67, 79, 97, 103, 109]  arms: [0, 1, 2, 0, 1, 0, 2, 0, 1, 2]
+   a'=1.009e+03  L=  4.9708  d=  3.03015  d/L=0.60959  c=d-|P|L=+0.16025  turn= 7.1911 deg
+   a'=1.010e+04  L=  7.2743  d=  4.37974  d/L=0.60209  c=d-|P|L=+0.17993  turn=10.4002 deg
+   a'=1.002e+05  L=  9.5689  d=  5.70924  d/L=0.59664  c=d-|P|L=+0.18463  turn=11.3167 deg
+   a'=1.000e+06  L= 11.8696  d=  7.03651  d/L=0.59282  c=d-|P|L=+0.18357  turn=14.4066 deg
+   a'=1.000e+07  L= 14.1722  d=  8.36602  d/L=0.59031  c=d-|P|L=+0.18368  turn=14.7336 deg
+   a'=1.000e+08  L= 16.4748  d=  9.69544  d/L=0.58850  c=d-|P|L=+0.18373  turn=14.8448 deg
+   a'=9.990e+08  L= 18.7764  d= 11.02430  d/L=0.58714  c=d-|P|L=+0.18376  turn=14.9926 deg
+   slope 1e5->1e9 = 0.57726  (|P| = 0.57735, miss 9.4e-05)   d(1e9)-d(1e5) = 5.3151
+   wall crossing (d >= 1.7627): step 109 -> 127, L* = 2.8983, d = 1.8706, turn so far 22.304 deg
+   (3.1s)
+
+== sexy-3 (g=6)  first start 7, 6849046 pair starts to 1e9, arm shares [0.33343, 0.33329, 0.33328], |P| = 0.57735 ==
+   first starts: [7, 11, 13, 17, 23, 31, 37, 41, 47, 53]  arms: [1, 0, 2, 1, 2, 0, 1, 0, 1, 2]
+   a'=1.013e+03  L=  4.9748  d=  2.93009  d/L=0.58899  c=d-|P|L=+0.05791  turn= 6.6008 deg
+   a'=1.006e+04  L=  7.2705  d=  4.26854  d/L=0.58710  c=d-|P|L=+0.07091  turn= 6.9408 deg
+   a'=1.000e+05  L=  9.5674  d=  5.60731  d/L=0.58608  c=d-|P|L=+0.08354  turn= 6.6336 deg
+   a'=1.000e+06  L= 11.8696  d=  6.94296  d/L=0.58493  c=d-|P|L=+0.09002  turn= 8.4706 deg
+   a'=1.000e+07  L= 14.1722  d=  8.27839  d/L=0.58413  c=d-|P|L=+0.09607  turn= 9.1422 deg
+   a'=1.000e+08  L= 16.4748  d=  9.61208  d/L=0.58344  c=d-|P|L=+0.10037  turn= 9.9835 deg
+   a'=9.990e+08  L= 18.7764  d= 10.94434  d/L=0.58288  c=d-|P|L=+0.10381  turn=10.5305 deg
+   slope 1e5->1e9 = 0.57955  (|P| = 0.57735, miss 2.2e-03)   d(1e9)-d(1e5) = 5.3370
+   wall crossing (d >= 1.7627): step 131 -> 151, L* = 3.0714, d = 1.8441, turn so far 3.279 deg
+   (6.2s)
+
+== sexy-6 (g=6)  first start 7, 6849046 pair starts to 1e9, arm shares [0.16675, 0.16674, 0.16664, 0.16668, 0.16655, 0.16663], |P| = 0.00000 ==
+   first starts: [7, 11, 13, 17, 23, 31, 37, 41, 47, 53]  arms: [1, 3, 2, 4, 5, 0, 1, 3, 4, 5]
+   a'=1.013e+03  L=  4.9748  d=  0.46537  d/L=0.09355  c=d-|P|L=+0.46537  turn= 8.9135 deg
+   a'=1.006e+04  L=  7.2705  d=  0.45180  d/L=0.06214  c=d-|P|L=+0.45180  turn= 9.0660 deg
+   a'=1.000e+05  L=  9.5674  d=  0.49174  d/L=0.05140  c=d-|P|L=+0.49174  turn= 9.0564 deg
+   a'=1.000e+06  L= 11.8696  d=  0.51052  d/L=0.04301  c=d-|P|L=+0.51052  turn= 8.9999 deg
+   a'=1.000e+07  L= 14.1722  d=  0.52032  d/L=0.03671  c=d-|P|L=+0.52032  turn= 9.0224 deg
+   a'=1.000e+08  L= 16.4748  d=  0.52259  d/L=0.03172  c=d-|P|L=+0.52259  turn= 9.0115 deg
+   a'=9.990e+08  L= 18.7764  d=  0.52556  d/L=0.02799  c=d-|P|L=+0.52556  turn= 8.9931 deg
+   slope 1e5->1e9 = 0.00367  (|P| = 0.00000, miss 3.7e-03)   d(1e9)-d(1e5) = 0.0338
+   wall: not crossed in the first 399 steps
+   (6.5s)
+
+== drop-first control: chain started at the 2nd / 3rd member ==
+   twins  (g=2)  turn at 1e9 ->  start 11: 12.2690 | start 17: 27.1172 | start 29: 20.2471
+   cousins(g=4)  turn at 1e9 ->  start 7: 14.9926 | start 13: 22.9382 | start 19: 34.2129
+   sexy-3 (g=6)  turn at 1e9 ->  start 7: 10.5305 | start 11: 9.1893 | start 13: 7.9192
+
+== K4: arm-scramble ensemble on the real gap sequence (to 1e7, 400 draws each) ==
+   twins  (g=2) real turn(1e7) 12.0788   ensemble mean 25.296 sd 9.642  [5%,95%] = [9.26, 40.14]   z = -1.37  -> K4 survives
+   cousins(g=4) real turn(1e7) 14.7336   ensemble mean 28.076 sd 10.101  [5%,95%] = [9.66, 43.74]   z = -1.32  -> K4 survives
+   sexy-3 (g=6) real turn(1e7) 9.1450   ensemble mean 21.618 sd 8.382  [5%,95%] = [8.08, 35.40]   z = -1.49  -> K4 survives
+   sexy-6 (g=6) real turn(1e7) 9.0223   ensemble mean 11.149 sd 6.216  [5%,95%] = [3.47, 23.34]   z = -0.34  -> K4 survives
+
+== summary side by side ==
+   family         turn(1e7)  turn(1e9)   slope    c(1e9)    wall start  L*
+   twins  (g=2)   12.0725   12.2690   0.57729  +0.10857   227  3.0271
+   cousins(g=4)   14.7336   14.9926   0.57726  +0.18376   127  2.8983
+   sexy-3 (g=6)    9.1422   10.5305   0.57955  +0.10381   151  3.0714
+   sexy-6 (g=6)    9.0224    8.9931   0.00367  +0.52556   None  None
+
+   turn by decade (1e3,1e4,...,1e8,1e9):
+   twins  (g=2) 15.1974  6.9955  9.8700  11.6199  12.0725  12.2048  12.2690
+   cousins(g=4) 7.1911  10.4002  11.3167  14.4066  14.7336  14.8448  14.9926
+   sexy-3 (g=6) 6.6008  6.9408  6.6336  8.4706  9.1422  9.9835  10.5305
+   sexy-6 (g=6) 8.9135  9.0660  9.0564  8.9999  9.0224  9.0115  8.9931
+
+K1 cousins slope miss 9.4e-05, sexy-3 slope miss 2.2e-03 -> survives
+K2 |turn cousins - turn twins| at 1e9 = 2.7236 deg -> survives

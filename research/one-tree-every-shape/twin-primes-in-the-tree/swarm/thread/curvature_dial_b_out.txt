@@ -1,0 +1,4 @@
+lam 1.00 turn  12.205  wall at twin start      227 (step Gamma^2 0.0050) | runout before 7.86 after 0.8894 ratio 8.84 | early(11..227) 7.851
+lam 2.00 turn  30.926  wall at twin start       59 (step Gamma^2 0.1216) | runout before 7.416 after 2.461 ratio 3.01 | early(11..227) 8.949
+lam with wall beyond 1e4: []
+UNDECIDED: no lam put the wall beyond 1e4

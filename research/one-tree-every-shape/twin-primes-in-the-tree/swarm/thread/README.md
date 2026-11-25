@@ -102,3 +102,35 @@ Method:
 **Kill condition:** C runout ≥ half of A. Measured ratio 0.0004: **pass**.
 
 **Caveat:** early steps are also larger, so this test cannot separate "the wall" from "big steps". A curvature-dial run, which moves the wall crossing to other twin starts, would separate them. That run is untested.
+
+## The wall is not the bite: the first cut is (TWIN-CURVATURE-DIAL-01, -01b, -02; 24 Nov, night)
+
+Kill conditions in `CURVATURE_DIAL_PREREG.md`, written before each run.
+
+- **Dial.** Every rapidity is multiplied by λ: the same chain in a ball whose curvature is λ² times stronger. The big steps stay at the start, while the wall crossing moves.
+- **Result.** At λ = 0.25, 0.35 and 0.5 the wall sits at twin starts 2,069,381, 61,979 and 4,421. There the before/after runout ratios are 1.29, 0.81 and 0.78. **The kill fires.**
+- **First steps.** The first window, twin starts 11–227, carries 2.3° to 9° of runout at every λ.
+- **Opposite setup.** λ = 1, with the walk started at 10,007 or at 100,151: ratios 0.52 and 1.30. **The kill fires again.** The first 13 steps of the walk carry about 100 times the runout near the wall.
+- **Verdict.** The turn is set by the walk's own first steps, its first cut. The wall crossing is a distance the walker passes. (At λ = 2 the turn is read through the SVD polar split; the readings agree at λ = 1.)
+
+## Honeycomb {5,3,4} (TWIN-HONEYCOMB-534-01, -02)
+
+Kill conditions in `HONEYCOMB_PREREG.md`.
+
+- **Geometry.**
+  - The edges at a vertex run along ±x, ±y, ±z, which are the twin arms.
+  - Each face is a right-angled regular pentagon, with cosh ℓ = φ and Γ² = √5 − 2.
+  - Two perpendicular edges turn the frame by arctan(1/2) = 26.5651°, which is exact.
+  - The pentagon loop closes to a 90° rotation: **pass**.
+- **Walk.** One edge per twin step, so only the order of the end digits is walked.
+  - Repeat rate: 0.30921, against 0.33333 for independent digits.
+  - Drift per step: 0.756495 real, against 0.764406 ± 0.000154 for the shuffles, so z = −51.
+- **Markov surrogate** (first-order, with the real transition matrix): 0.757747 ± 0.000145, so z = −8.7. The pair bias explains 84% of the signal.
+- **Block-Markov check:** see `honeycomb_534_markov_blocks_out.txt`.
+
+## Version 1 predictions 6 and 7 (split_and_cousin.py; kill conditions in SPLIT_COUSIN_PREREG.md)
+
+- **7/9 split.** A direct gap-weighted count on 23,988,173 twin starts in (1e9, 1e10] gives (−0.950, +0.775, +0.175), with se (0.032, 0.033, 0.036). Against the prediction that is z = (−0.2, −1.0, +1.1): **pass**. The offset is the walk's step weighting.
+- **Cousin tilt.** The real values are (+0.680, +0.241, −0.921), with se (0.072, 0.081, 0.092). The prediction is (+0.705, +0.143, −0.847): **pass**, with |z| ≤ 1.2. The block se used here is wider than the se in version 1.
+
+## Other prime pairs: see ../families/ (an agent's run, reproduced in paper v2, Section 10)

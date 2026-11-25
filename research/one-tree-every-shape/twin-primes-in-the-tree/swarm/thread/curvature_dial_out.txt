@@ -1,0 +1,11 @@
+lam 0.25 turn   4.255  wall at twin start  2069381 (step Gamma^2 0.0000) | runout before 0.0008724 after 0.0006761 ratio 1.29 | early(11..227) 2.255
+lam 0.35 turn   6.143  wall at twin start    61979 (step Gamma^2 0.0000) | runout before 0.004924 after 0.006099 ratio 0.81 | early(11..227) 3.427
+lam 0.50 turn   8.010  wall at twin start     4421 (step Gamma^2 0.0000) | runout before 0.03639 after 0.04656 ratio 0.78 | early(11..227) 4.868
+lam 0.75 turn   9.923  wall at twin start      599 (step Gamma^2 0.0004) | runout before 0.9397 after 0.4084 ratio 2.30 | early(11..227) 6.628
+lam 1.00 turn  12.205  wall at twin start      227 (step Gamma^2 0.0050) | runout before 7.86 after 0.8894 ratio 8.84 | early(11..227) 7.851
+lam 1.50 turn  20.125  wall at twin start       71 (step Gamma^2 0.0190) | runout before 8.071 after 1.659 ratio 4.86 | early(11..227) 8.916
+/tmp/claude-0/-home-claude/502f5ad8-acd9-59a2-b5cf-d48e7967cc3a/scratchpad/swarm/thread/curvature_dial.py:13: RuntimeWarning: invalid value encountered in sqrt
+  M=L@L.conj().T; w,V=np.linalg.eigh(M); H=V@np.diag(np.sqrt(w))@V.conj().T; U=np.linalg.solve(H,L)
+lam 2.00 turn   0.000  wall at twin start       59 (step Gamma^2 0.1216) | runout before 14.41 after 38 ratio 0.38 | early(11..227) 40.53
+lam with wall beyond 1e4: [0.25, 0.35]
+KILL: wall is not the bite; big early steps are

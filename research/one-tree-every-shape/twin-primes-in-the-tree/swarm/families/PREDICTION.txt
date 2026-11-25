@@ -1,0 +1,41 @@
+PREDICTION AND KILL CONDITIONS -- written 2026-11-25T02:59:04Z, before any family chain was run.
+Angle: run the twin chain on the other admissible prime-pair families (cousins p,p+4 and sexy p,p+6).
+Is the turn limit, the 1/sqrt3 slope and the wall crossing special to gap 2? Does the turn track the Hardy-Littlewood constant?
+
+ARM RULE (one rule for every family, stated before running):
+  For a pair (p, p+g) with p > 5, the residue mod 3 is forced for g = 2 (p = 2) and g = 4 (p = 1),
+  and free (1 or 2) for g = 6. The residue mod 5 always has exactly three allowed values:
+     g=2: p mod 5 in {1,2,4}   g=4: p mod 5 in {2,3,4}   g=6: p mod 5 in {1,2,3}
+  Arm = the allowed mod-5 residues in increasing order -> sigma_x, sigma_y, sigma_z.
+  Check: for twins this is exactly the end-digit rule (11->1->x, 17->2->y, 29->4->z).
+         for cousins it is 7->x, 13->y, 19->z (classes 7,13,19 mod 30).
+  Sexy primes have 6 classes mod 30 (1,7,11,13,17,23). Fork, both built:
+     SEXY-3  : arm by mod-5 residue only (1,11 -> x; 7,17 -> y; 13,23 -> z) -- the cube axes like the twins.
+     SEXY-6  : octahedron: mod-5 residue picks the axis, mod-3 residue picks the sign (p = 1 mod 3 -> +, p = 2 mod 3 -> -).
+  Chain start: first pair start whose class carries an arm: twins 11, cousins 7, sexy 7.
+  (Families as usually defined: (p,p+g) both prime, nothing said about primes between.)
+
+HARDY-LITTLEWOOD CONSTANTS (counting constant for pairs at gap g): C(g) = 2 C2 prod_{p | g, p odd} (p-1)/(p-2)
+  twins C(2) = 2C2 = 1.3203, cousins C(4) = 2C2 = 1.3203 (same!), sexy C(6) = 4C2 = 2.6406.
+  Sanity prediction: counts to 1e9 in ratio cousins:twins ~ 1, sexy:twins ~ 2.
+
+P1 slope. Each arm class is asymptotically equally frequent (equidistribution of admissible classes), so the arm mean P has
+  |P| = 1/sqrt3 for twins, cousins, SEXY-3, and |P| = 0 for SEXY-6. The slope law d/L -> |P| is then generic, not gap-2 special.
+  KILL K1: measured slope (d(1e9)-d(1e5))/(L(1e9)-L(1e5)) off 1/sqrt3 by more than 0.005 for cousins or SEXY-3.
+  KILL K1b: SEXY-6 distance grows by more than 0.3 between 1e5 and 1e9 (prediction: bounded, no drift).
+
+P2 turn is NOT an HL quantity. The frame turn is mostly set by the first dozen steps (twins already 9.79 of 12.27 deg at 227),
+  i.e. by the small members of each family, which the HL constant does not see. Twins and cousins share the HL constant exactly.
+  Prediction: turn(cousins) and turn(SEXY-3) differ from turn(twins) by more than 1 degree.
+  KILL K2: |turn_cousins(1e9) - turn_twins(1e9)| < 0.3 deg -> my prediction dies and 'turn set by the HL constant' stays alive.
+
+P3 wall. Every family crosses the wall sphere tanh(d/2) = 1/sqrt2 (d = ln(3+2sqrt2) = 1.7627) early, at path
+  L* ~ sqrt3 (1.7627 - c) ~ 2.9-3.1, i.e. near 17-22 x the first start (cousins/sexy near a ~ 120-160).
+  KILL K3: a family's crossing has L* outside [2.3, 3.8], or never crosses.
+
+P4 genericity. Against an ensemble of the SAME gap sequence with arms drawn uniformly at random from the three axes,
+  each family's turn is an ordinary draw.
+  KILL K4: any family's real turn more than 3 ensemble standard deviations from the ensemble mean.
+
+Exploratory (no kill line written, so whatever comes out is reported as observation only): turn increments by decade,
+  and the offset c = d - L/sqrt3 per family.

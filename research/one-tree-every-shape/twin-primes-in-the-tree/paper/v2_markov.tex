@@ -1,0 +1,8 @@
+
+\paragraph{Is it only the pair bias?} \grade{measured}
+Two surrogates were run, each with its kill condition written before the run.
+\begin{itemize}
+\item \emph{First-order Markov chains} built on the real $3\times3$ transition matrix (60 runs): drift $0.757747\pm0.000145$. The real value is $0.756495$, so $z=-8.7$. The consecutive-pair bias explains $84\%$ of the gap to the shuffles: $(0.764406-0.757747)/(0.764406-0.756495)$.
+\item \emph{Block Markov chains}, with the matrix re-estimated in each of $20$ blocks of $50{,}000$ steps (60 runs). This follows the pair bias as it weakens with size; the repeat rate rises from $0.301$ to $0.312$ across the blocks. Drift $0.757727\pm0.000136$, so $z=-9.05$.
+\end{itemize}
+The pair bias, even as it drifts, does not account for the rest. About $16\%$ of the honeycomb signal is order in the twin end digits beyond consecutive pairs. Whether it is carried by triples or by longer runs is \grade{untested}.

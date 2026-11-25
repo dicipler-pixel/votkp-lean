@@ -1,0 +1,2 @@
+start 10007: turn 0.2928, wall at twin start 211499 | runout first13 0.497 before 0.00527 after 0.0101 ratio 0.52
+start 100151: turn 1.4894, wall at twin start 2119259 | runout first13 0.111 before 0.000802 after 0.000615 ratio 1.30
