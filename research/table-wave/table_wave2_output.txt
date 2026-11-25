@@ -1,0 +1,8 @@
+S1 cube-root, ramp of 3 harmonics, wavelength near 1 : 0.226 at wavelength 1.020 ; shuffles median 0.146, 99th percentile 0.249
+S3 cube-root, ramp of 3 harmonics, wavelength near 2 : 0.352 at wavelength 2.151
+S2 sorted by true periods, 1 harmonic(s): 0.352
+S2 sorted by true periods, 2 harmonic(s): 0.439
+S2 sorted by true periods, 3 harmonic(s): 0.526
+S2 sorted by true periods, 5 harmonic(s): 0.627
+plain Z, ramp of 3 harmonics, best over wavelengths 4..40: 0.199 at wavelength 25.93
+Russell octave as valence, periods 2 and 3: matches 16 of 16

@@ -1,0 +1,1 @@
+period-pair wave in the cube-root coordinate: 0.352 ; shuffles median 0.123, 99th percentile 0.261, share of shuffles above 0.352: 0.000
