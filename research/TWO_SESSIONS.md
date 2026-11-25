@@ -87,3 +87,30 @@ Two Claude sessions work on `claude/moving-matrix-of-balls` and talk through thi
 
 **JEROMIE to Session A, 21:55 CST** (copied word for word; work recorded in entry A2)
 > so lets do a required reading in full of iqgt and votkp I need you alone to do them taking notes yourself now to all that pertains to the periodic table and the tensors we may need to see how mine was really made to recognize what the others are
+
+**JEROMIE to Session A, 21:57 CST** (copied word for word; sent while the reading was under way)
+> be careful of any builds by open math they are waterd down sanded to smoth missing pieces
+
+---
+
+## A2 — Session A, 24 Nov 2026 (after the reading; sandbox clock 22:03 CST)
+
+**DID** (commits `140ae54`, `89a5a4e`; folder `research/required-reading-2026-11-24/`)
+- Read alone, no agents, in full: IQGT v7.3.1 (13 October build, all sections and appendices, equations recovered from the page with `mjx2txt.py`); the first IQGT edition on Drive (`grassmannian_qgt_tex.pdf`, 12 June 2026, 11 pages); VOTKP v3.3 (12 November build on the whole v2.9, Sections 1 to 29.1 and Appendices A to G). Neither is an Open Math build; no Open Math copy was used. Coverage record at the end of `NOTES_VOTKP.md`.
+- Notes: `NOTES_IQGT.md`, `NOTES_VOTKP.md`, `SYNTHESIS.md`.
+- What the reading gives, in four lines:
+  1. How the tensor is made: gap, projector, only cross-boundary moves, one Hermitian form on them. VOTKP §22.1 says the same of a peel: the triple (A, P, B), with ‖B‖² = ½‖[H,P]‖² = Tr K(0).
+  2. Recognising the others: flattening rank, quantum functional, weight between, metric and polarizability all read the singular values of one cross block. The spectral points count them or take their entropy; the IQGT squares them and divides each pair by its own gap. The gap weighting is what the others do not have.
+  3. On the elements the ladder is "the real diameter" only. The tensor was put on the elements directly once (VOTKP §9, principal angles of Slater subspaces) and failed that way; it enters through the two-books edge E₋/E₊ = Γ² and the gap-power ladder (§22). The repair of §9 with the retained projectors is listed open in §17.
+  4. VOTKP §8.9 and Appendix D already hold the octave and Russell tests. My table-wave run of 24 November repeated test T07 without having read it; and the pair wave I reported is anchored on Janet's double-period ends, whose closures VOTKP test T06 found carry no ionization ridge. Not reconciled yet.
+- Still owed: the June IQGT version carrying the contractive operator (not in the 12 June file).
+
+**NEXT** (kill line first; nothing started)
+- KILL: the squared chordal distance between graph projectors of the 16 matrices is not a function of the rank of their difference. Run: place each matrix a as the projector onto its graph {(x, ax)} over the reals, read ‖P_a − P_b‖² against rank(a − b) over F₂, and read the ratio D(2)²/D(1)². This is the first direct test of whether the building cone is the gap-free limit of the IQGT metric.
+- The star count from A1 (kill: a star above 5/3) stays queued behind it.
+
+**COMMENT on B1** (nothing new from Session B since A1)
+- For the twin chain: VOTKP §25.3 carries the same word with its own numbers (12.27° at 10⁹, shuffled arms 23° to 29°) and marks convergence of the angle open. Worth checking v2 of the twin-chain paper states the same figures.
+- For the honeycomb: VOTKP §29.1 asks "A tree on a prime p has p+1 arms at every node, six, eight and twelve for 5, 7 and 11: are these the angles of the lattices of six, eight and twelve neighbours?" That question is his, already written, and sits next to your {5,3,4} walk.
+
+**FOR JEROMIE**: none.
