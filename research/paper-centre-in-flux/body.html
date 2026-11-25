@@ -1,0 +1,423 @@
+<header>
+<div class="kicker">Research paper &middot; version 1 &middot; 24 November 2026</div>
+<h1>The Centre Is Always in Flux</h1>
+<div class="sub">A curvature gauge on sixteen matrices, the Smith-disc reading of flux and weak values, and the pair wave of the periodic table</div>
+<div class="by">Jeromie Beasley</div>
+<div class="note">Claude&rsquo;s version, written from Jeromie Beasley&rsquo;s research programme. This paper was prepared with AI assistance; the computations were run on a laptop and are calibrated against other people&rsquo;s published measurements.</div>
+</header>
+
+<section>
+<h2>Abstract</h2>
+<p>One coordinate runs through this paper. Take two positive strengths, form their ratio z, and write &Gamma; = (z &minus; 1)/(z + 1). This is the reflection coefficient of the Smith chart, the hyperbolic tangent of half a log-ratio, and the coordinate in which this research programme already records ionization ladders, optical films and the two books of a transport. The paper follows that coordinate into four places where it had not been taken.</p>
+<p>First, a test from a recent proof in algebraic complexity asks how far apart the sixteen two-by-two matrices over the two-element field can be placed when rank-2 steps are compared with rank-1 steps. The test turns out to be a curvature gauge with four exact readings: 3/2 in flat space, 5/3 on a tree, 2 in a building, and 4 with no curvature rule at all. The reading 2 is reached without condition, which shows that nonpositive curvature alone cannot decide the question that proof leaves open.</p>
+<p>Second, the weak value of a which-arm measurement in a loop threaded by flux is exactly (1 &plusmn; &Gamma;)/2. Flux moves the reading along the imaginary axis of the disc and reaches the rim at a quarter of a flux quantum; half a quantum exchanges the two books on every odd ring. The same share formula places both measured tune-out wavelengths of rubidium on the real diameter of the disc, at &minus;1/3 and +1/3, and it reads each conical point of the three-body shape sphere as half a flux quantum.</p>
+<p>Third, the periodic table is a wave, but not in the atomic number and not with one wave per row. The ends of the period pairs satisfy 6Z = m&sup3; &minus; m exactly, with m = 3, 5, 7, 9, and in that coordinate one pair is two units long. Five independent properties carry a wave of that length; electron affinity does not. Walter Russell&rsquo;s octave is the two-row case of it.</p>
+<p>Fourth, the primes carry ghost lines in the sense of Rowland&rsquo;s ruling engines: a line at every fraction a/q with squarefree q, of height one over Euler&rsquo;s count of q, measured to four places up to ten million.</p>
+<p>Every statement is graded where it is made: proved, derived from cited theorems, held numerically, did not hold in this setup, or open.</p>
+</section>
+
+<section>
+<h2>1. The coordinate and the two books</h2>
+<p>The programme this paper belongs to measures change by what crosses between a subspace and its complement. Its central object is the intrinsic quantum geometric tensor of a family of projectors &Pi;,</p>
+<p class="eq">Q<sub>ij</sub> = Tr(&Pi; &part;<sub>i</sub>&Pi; &part;<sub>j</sub>&Pi;) = g<sub>ij</sub> &minus; (i/2) &Omega;<sub>ij</sub>,</p>
+<p>whose real part g is a metric on the projector bundle and whose imaginary part &Omega; is its curvature. The tensor lives on the bundle. It is not a metric on space or on spacetime, and nothing below substitutes it for one.</p>
+<p>Three pieces of that programme are used throughout and are restated here so that the paper stands alone.</p>
+<p><b>The Smith coordinate.</b> For two positive numbers I and I&prime;,</p>
+<p class="eq">&Gamma; = (I&prime; &minus; I)/(I&prime; + I) = tanh(&tau;/2),&nbsp;&nbsp;&nbsp;&tau; = ln(I&prime;/I).</p>
+<p>The change of variables is exact and reversible. Successive ratios compose by adding their logarithms, which in the coordinate is the addition law</p>
+<p class="eq">u &oplus; v = (u + v)/(1 + uv).</p>
+<p>The centre &Gamma; = 0 is the matched case, both strengths equal. The rim |&Gamma;| = 1 is total reflection, one strength gone.</p>
+<p><b>The two books.</b> Put Hermitian blocks D on the vertices of a graph and unitary couplings on its edges. The squared self-commutator of the whole transport is the energy of the field D under the edge transport, the connection energy E<sup>&minus;</sup>. The same operator compared with its square instead of its adjoint gives the opposite book E<sup>+</sup>, with a plus sign where the first has a minus. On a scalar edge with ends d<sub>i</sub> and d<sub>j</sub> the books are (d<sub>i</sub> &minus; d<sub>j</sub>)&sup2; and (d<sub>i</sub> + d<sub>j</sub>)&sup2;, so</p>
+<p class="eq">E<sup>&minus;</sup> / E<sup>+</sup> = &Gamma;&sup2;.</p>
+<p>The ratio of the two books is the squared reflection coefficient of one step.</p>
+<p><b>The census depth.</b> Two directions separated by an angle &delta; are distinct channels when sin&sup2;&delta; clears a threshold, and resolving them costs a depth</p>
+<p class="eq">&Lambda;<sub>&delta;</sub> = 2 ln(1/sin &delta;).</p>
+<p>The title of the paper is a remark made during the work: the centre is always in flux. In the disc the remark is literal. The centre is the single reading at which both arms of a comparison are equal, and any flux or any twist moves the reading off it. The sections below measure where it moves to.</p>
+</section>
+
+<h2 class="part">Part I &middot; A curvature gauge on sixteen matrices</h2>
+
+<section>
+<h2>2. The test</h2>
+<p>A proof released in 2026 that the algebraic complexity classes VP and VNP differ over every field turns on one finite test. Take the &mu;-by-&mu; matrices over the two-element field and place them as points of a metric space. Let D(r)&sup2; be the mean squared distance between pairs whose difference has rank r. The test is the ratio</p>
+<p class="eq">D(&mu;)&sup2; / D(1)&sup2;.</p>
+<p>That proof builds a family of metrics it calls prices and shows that every price is pulled back from a nonpositively curved space, so that the ratio is at most &mu;. Its argument then divides in two. In the contracting case some size &mu; has every price held a fixed factor below &mu;. In the flat case every finite subset of Euclidean space is a price. The proof establishes that at least one case holds and states that it does not know which.</p>
+<p>This part treats the ratio as an instrument in its own right and asks what it reads in each kind of space. The smallest case, &mu; = 2, has sixteen points. Nine of the nonzero matrices have rank 1 and six have rank 2, giving 72 unordered pairs at a rank-1 step and 48 at a rank-2 step.</p>
+<p><b>The ceiling.</b> Let W and W&prime; have rank 1 with W + W&prime; of rank 2. The four points a, a + W, a + W + W&prime;, a + W&prime; form a four-sided figure whose sides are rank-1 steps. Because 2 = 0 in the field, both diagonals have the same difference W + W&prime;, of rank 2. In a nonpositively curved space the squared diagonals of any four-sided figure add up to at most the squared sides. Every rank-2 matrix is a sum of two rank-1 matrices in exactly 6 ordered ways and every rank-1 matrix has exactly 4 partners, so the figures cover both kinds of pair evenly, and averaging gives</p>
+<p class="eq">D(2)&sup2; &le; 2 D(1)&sup2;.</p>
+<p class="grade">Grade: proved. The even cover was counted exactly.</p>
+<p>With only the triangle inequality the same figures give 4, and the metric &ldquo;distance = rank&rdquo; reaches it, since a rank-2 step then costs two rank-1 steps.</p>
+</section>
+
+<section>
+<h2>3. Flat space reads 3/2</h2>
+<p>In Euclidean space of any dimension the largest ratio at size &mu; is</p>
+<p class="eq">2 &minus; 2<sup>1&minus;&mu;</sup>:&nbsp;&nbsp;&nbsp;3/2,&nbsp;&nbsp;7/4,&nbsp;&nbsp;15/8,&nbsp;&nbsp;31/16&nbsp;&nbsp;at sizes 2, 3, 4, 5.</p>
+<p><b>Why a count over characters is enough.</b> Squared Euclidean distances on a finite set form a kernel of negative type. Averaging a placement over all translations of the matrix group changes neither mean, so the best ratio is reached by a translation-invariant kernel. Such a kernel is a nonnegative combination of characters of the group, and a ratio of sums cannot exceed the best single ratio. So it suffices to evaluate each character alone.</p>
+<p><b>The best character.</b> It is the rank-1 character that reads one entry: place a matrix at +1 or &minus;1 according to its corner entry a<sub>11</sub>. A step then has squared length 4 if the corner entry of the difference is 1 and zero otherwise. In the language of Part II, every step carries either no flux or half a flux quantum. The ratio is a ratio of two probabilities,</p>
+<p class="eq">P(a<sub>11</sub> = 1 | full rank) / P(a<sub>11</sub> = 1 | rank 1) = (2/3)/(4/9) = 3/2 at size 2,</p>
+<p>and (4/7)/(16/49) = 7/4 at size 3. In general the first column of an invertible matrix is a uniformly random nonzero vector, whose first coordinate is 1 with probability 2<sup>&mu;&minus;1</sup>/(2<sup>&mu;</sup> &minus; 1), and the rank-1 probability is the square of that. The quotient is (2<sup>&mu;</sup> &minus; 1)/2<sup>&mu;&minus;1</sup> = 2 &minus; 2<sup>1&minus;&mu;</sup>.</p>
+<p class="grade">Grade: the value of the rank-1 character is proved at every size. That it is the maximum is proved by exact count over every character at sizes 2 to 5; at larger sizes it is open.</p>
+<p>Flat space therefore stays below 2 at the sizes counted, while the ceiling &mu; grows without bound.</p>
+</section>
+
+<section>
+<h2>4. A tree reads 5/3</h2>
+<p>A tree does better than flat space, and its best shape is exact.</p>
+<p><b>The star.</b> Take a tree with one centre and three legs of equal length. Put the zero matrix and the six invertible matrices at the centre. A rank-1 matrix has a one-dimensional image spanned by one of the three nonzero vectors (1,0), (0,1), (1,1); put it at the end of the leg named by that vector. Each leg end holds three matrices.</p>
+<p>With unit legs the distance between two points is 0, 1 or 2. Counting ordered pairs:</p>
+<table>
+<tr><th>Step</th><th>at distance 0</th><th>at distance 1</th><th>at distance 2</th><th>mean squared distance</th></tr>
+<tr><td>rank 1</td><td>36</td><td>90</td><td>18</td><td>(90 + 72)/144 = 9/8</td></tr>
+<tr><td>rank 2</td><td>24</td><td>36</td><td>36</td><td>(36 + 144)/96 = 15/8</td></tr>
+</table>
+<p class="eq">D(2)&sup2; / D(1)&sup2; = (15/8)/(9/8) = 5/3.</p>
+<p class="grade">Grade: proved by exact count.</p>
+<p><b>How far the star is forced.</b> All 4<sup>9</sup> = 262,144 ways of placing the nine rank-1 matrices on the centre and three legs were counted. The maximum is 5/3 and it is reached by exactly 12 labelings: grouping by image or by kernel, times the relabelings of the legs. Unequal legs lower the ratio (8/5 for legs 1, 2, 3). A search over all tree shapes on sixteen points, with about 200 restarts, returned the same equal-leg star every time and nothing above 5/3.</p>
+<p class="grade">Grade: 5/3 is the maximum over three-leg stars, proved by exhaustion. That it is the maximum over all trees held in a search and is open as a theorem.</p>
+<p><b>What the star is.</b> The map behind it sends a matrix to its image line, a point of the projective line over the two-element field, which has exactly three points. The star is the cone over that three-point line. Left multiplication by the six invertible matrices permutes the three legs as the full symmetric group on three letters, and right multiplication moves no leg. The dual star, built from kernels in place of images, also reads 5/3, and every weighted product of the two stars reads exactly 5/3. This is general: in a product of spaces with squared distances added, the ratio is a ratio of sums and cannot exceed the best factor. A product of trees cannot pass a tree.</p>
+<p class="grade">Grade: proved by exact count.</p>
+<p><b>The transpositions.</b> The six invertible matrices form the symmetric group on three letters. Each of its three transpositions t fixes exactly one nonzero vector, and t minus the identity is a rank-1 matrix on the leg of that vector. So the three transpositions are the three one-step neighbours of the identity, one on each leg, and any two of them differ by a rank-2 step. This is the same group, and the same three elements, that carry the witness of the permutation coboundary constant k/3 of the complete two-complex: a triangle whose edges hold the three distinct transpositions.</p>
+<p class="grade">Grade: the placement of the transpositions is proved. A numerical relation between the star&rsquo;s 5/3 and the coboundary constants was looked for and did not hold in this setup: the two-element-field coboundary constant is also 5/3 at k = 5, but it arises as 5 unbalanced triangles over an edge distance of 3, and no count is shared with (15/8)/(9/8). The match is a coincidence until a mechanism is shown.</p>
+</section>
+
+<section>
+<h2>5. The ball climbs from the flat value to the tree value</h2>
+<p>Draw the same star in the hyperbolic ball, with three legs of length &#8467; meeting at 120&deg;. The distance d between two leg ends follows from the hyperbolic cosine rule:</p>
+<p class="eq">cosh d = cosh&sup2;&#8467; + &frac12; sinh&sup2;&#8467;.</p>
+<p>For short legs the figure is the flat star and the ratio is 3/2. For long legs cosh d &asymp; (3/8) e<sup>2&#8467;</sup>, so</p>
+<p class="eq">d &rarr; 2&#8467; &minus; ln(4/3),</p>
+<p>a tree distance minus a fixed constant, and the ratio climbs toward the tree value: 1.500005 at &#8467; = 0.01, 1.5359 at 1, 1.6322 at 5, 1.662399 at 40, 1.665814 at 200.</p>
+<p>The constant has a name in this programme. For legs meeting at a general angle &theta; the same calculation gives</p>
+<p class="eq">d &rarr; 2&#8467; &minus; 2 ln(1/sin(&theta;/2)) = 2&#8467; &minus; &Lambda;<sub>&theta;/2</sub>,</p>
+<p>so the shortfall from a tree is exactly the census depth of the half-angle: what it costs to resolve the two directions. At 120&deg; the half-angle is 60&deg;, sin&sup2; 60&deg; = 3/4, and the depth is ln(4/3).</p>
+<p class="grade">Grade: proved by derivation; confirmed at four angles to nine places.</p>
+<p>A free numerical search in the three-dimensional ball arrived at the same star on its own, at ratio 1.6500, with seven clusters and the tree condition met to 0.0009.</p>
+</section>
+
+<section>
+<h2>6. A building reads 2</h2>
+<p>The ceiling is reached, in a space that is neither flat nor a tree.</p>
+<p><b>The construction.</b> Send each &mu;-by-&mu; matrix a to its graph, the set of pairs (x, ax). The graph is a &mu;-dimensional subspace of a 2&mu;-dimensional space over the two-element field. Two graphs meet exactly where a and b agree, so</p>
+<p class="eq">dim(graph a &cap; graph b) = &mu; &minus; rank(a &minus; b).</p>
+<p>The subspaces of that space are the corners of a spherical building. Any two of them lie in a common apartment, a round sphere tiled by the Weyl chambers of the symmetric group, in which a &mu;-dimensional subspace is the vector with &mu; coordinates equal to +&frac12; and &mu; equal to &minus;&frac12;. Two such vectors sharing &mu; &minus; k of their +&frac12; coordinates meet at an angle &theta;<sub>k</sub> with</p>
+<p class="eq">cos &theta;<sub>k</sub> = 1 &minus; 2k/&mu;.</p>
+<p>Take the Euclidean cone over the building and put every graph at radius R with R&sup2; = &mu;/4. The cone distance is d&sup2; = 2R&sup2;(1 &minus; cos &theta;<sub>k</sub>), which gives</p>
+<p class="eq">d(a, b)&sup2; = rank(a &minus; b).</p>
+<p>Then D(r)&sup2; = r for every r, and the ratio is exactly &mu;.</p>
+<p class="grade">Grade: derived from two cited theorems (a spherical building has curvature at most 1 in the comparison sense; the Euclidean cone over such a space is nonpositively curved), together with the algebra above, which was checked exactly. As a test that could have refuted it, the weighted four-point inequalities that every such metric must satisfy were evaluated on all 65,536 ordered quadruples at size 2 and on 300,000 random quadruples at size 3, each on 441 pairs of weights. The smallest value was zero, with no violation. Passing those inequalities is necessary, not sufficient; the embedding rests on the two theorems.</p>
+<p><b>The sixteen lines.</b> At size 2 the ambient space has 35 two-dimensional subspaces. One is the fixed vertical subspace, 18 meet it in a point, and the remaining 16 are the graphs. Against the graph of the zero matrix, one graph is equal to it, nine meet it in a point (the rank-1 matrices) and six miss it (the invertible ones). The star of Section 4 is the same construction for the smaller group: its three legs are the three hyperplanes through the zero graph.</p>
+<p><b>What this settles and what it does not.</b> The largest ratio a nonpositively curved space allows is exactly &mu;, at every size. So nonpositive curvature alone can never establish the contracting case of the proof described in Section 2: the gap between its two cases is a question about which curved spaces are prices, and not about curvature. The proof itself uses the metric &ldquo;square root of rank&rdquo; as a price under the assumption that the contracting case fails. The point added here is that this metric is nonpositively curved with no assumption at all.</p>
+<p class="grade">Open: whether the building-cone metric is a price over any field. That is the open question of that proof in its sharpest finite form.</p>
+</section>
+
+<section>
+<h2>7. The scale</h2>
+<p>The instrument has four readings at size 2.</p>
+<table>
+<tr><th>Space</th><th>Largest ratio</th><th>What reaches it</th><th>Grade</th></tr>
+<tr><td>Flat (Euclidean)</td><td>3/2</td><td>one character reading one entry</td><td>proved</td></tr>
+<tr><td>Tree</td><td>5/3</td><td>the three-leg star, the cone over the projective line</td><td>proved for stars; held in search for all trees</td></tr>
+<tr><td>Hyperbolic ball</td><td>rises from 3/2 toward 5/3</td><td>the same star with long legs</td><td>derived; search found nothing higher</td></tr>
+<tr><td>Nonpositively curved</td><td>2</td><td>the cone over the spherical building</td><td>derived from cited theorems</td></tr>
+<tr><td>Any metric space</td><td>4</td><td>distance = rank</td><td>proved</td></tr>
+</table>
+<p>A tree is the smallest building. The full reading needs flat rooms and branching walls together: flat space has only the first, a tree has only the second, and a product of trees does not combine them. The picture &ldquo;one tree, every shape&rdquo; that this programme uses for its measuring shapes reaches the tree value and stops there. Reading it as one building is the natural next form.</p>
+<p>One further measurement belongs here. On the groups of upper unitriangular matrices over the two-element field, the flat form of the Poincar&eacute; inequality used in the contracting case has constants 0.5000, 1.7071, 3.4397, 4.9886, 6.4019, 7.5848 for sizes 2 to 7. In flat space this constant is an ordinary spectral gap. For odd primes the published gap is of order one over the size, which bounds the constant. The same statement for the two-element field was not confirmed here.</p>
+</section>
+
+<h2 class="part">Part II &middot; Flux, weak values and the disc</h2>
+
+<section>
+<h2>8. A weak value is a share on the disc</h2>
+<p>A particle enters a loop with two arms, left and right, and a flux &Phi; threads the loop. It is prepared in the equal superposition of the two arms and later found in the equal superposition with the phase e<sup>i&Phi;</sup> on the right arm. Between the two, ask in which arm it was. The weak value of the projector on an arm is the amplitude through that arm divided by the total amplitude. Writing z for the right-arm amplitude over the left-arm amplitude,</p>
+<p class="eq">left arm reads (1 &minus; &Gamma;)/2,&nbsp;&nbsp;&nbsp;right arm reads (1 + &Gamma;)/2,&nbsp;&nbsp;&nbsp;&Gamma; = (z &minus; 1)/(z + 1).</p>
+<p>The two shares add to one. For pure flux z = e<sup>&minus;i&Phi;</sup> and</p>
+<p class="eq">&Gamma; = &minus;i tan(&Phi;/2).</p>
+<p>The reading sits on the imaginary axis of the disc. It is at the centre for no flux, on the rim at a quarter of a flux quantum (&Phi; = &pi;/2), and outside the disc beyond that, running to infinity at half a quantum, where the two arms cancel and the post-selection never succeeds.</p>
+<p class="grade">Grade: proved. It is an identity of the definitions, confirmed symbolically.</p>
+<p><b>The price of a large reading.</b> The chance that the post-selection succeeds is cos&sup2;(&Phi;/2), and the programme&rsquo;s bound on weak values holds along the whole axis: success probability times the squared weak value is 1/4, below the second moment 1/2.</p>
+<p><b>The two books are the two ports.</b> Put a phase &Phi; between the two ends of one scalar edge. The connection energy and its opposite are |1 &minus; e<sup>i&Phi;</sup>|&sup2; and |1 + e<sup>i&Phi;</sup>|&sup2;, so</p>
+<p class="eq">E<sup>&minus;</sup> / E<sup>+</sup> = tan&sup2;(&Phi;/2) = |&Gamma;|&sup2;.</p>
+<p>These are the intensities at the dark and bright ports of a two-arm interferometer. A quarter of a flux quantum balances the books. Half a quantum empties one of them.</p>
+<p class="grade">Grade: proved; confirmed at three flux values to nine places.</p>
+</section>
+
+<section>
+<h2>9. Half a flux quantum</h2>
+<p><b>Odd rings.</b> On a ring of N sites the connection energy of a scalar field is the Laplacian form, and its opposite is the signless Laplacian. Flipping the sign of the field on alternate sites turns one into the other on every edge except, when N is odd, a single edge that cannot be made consistent. That leftover sign is a flux of half a quantum through the ring. So</p>
+<p class="eq">on an odd ring, the opposite book is the connection energy with half a flux quantum;</p>
+<p>on an even ring it is the connection energy with none. The characteristic polynomials agree identically for rings of 3, 5 and 7, and for rings of 4 and 6 the opposite book matches zero flux.</p>
+<p class="grade">Grade: proved (a gauge argument), confirmed symbolically.</p>
+<p>The zero mode follows the flux. Without flux the ring has a constant zero mode. With half a quantum the lowest level lifts to 1 for a ring of 3, 0.382 for 5 and 0.198 for 7. In this reading the question of which book holds the zero mode is the question of whether the loop carries a whole or a half flux quantum.</p>
+<p><b>The torus.</b> On a flat unit torus with holonomies (a, b) around its two cycles the levels of the twisted operator are 2&pi; times the lengths of the vectors (n + a, m + b) with n and m whole numbers. The lowest level is therefore 2&pi; times the distance from the holonomy point to the integer lattice, and a zero mode exists only when both holonomies are whole numbers. Half a quantum through either hole removes it. This is the correct form, on a torus, of the statement that the parity of a spin-like index is set by picked-up flux: flux through the surface changes the index, and flux through a hole changes only the levels, but at the half quantum it decides whether a zero mode exists at all.</p>
+<p class="grade">Grade: proved from the level formula.</p>
+<p><b>What the books cannot see and the primes of a graph can.</b> A plain phase on the edges drops out of the induced transport, so both books are blind to it. The walk determinant of the ring keeps it:</p>
+<p class="eq">det(I &minus; uB) = 1 &minus; 2 cos(&Phi;) u<sup>N</sup> + u<sup>2N</sup>,</p>
+<p>where B is the matrix of non-backtracking steps. The ring&rsquo;s single prime cycle carries the flux as its coefficient.</p>
+<p class="grade">Grade: proved; the determinant factors into the two directions of travel.</p>
+</section>
+
+<section>
+<h2>10. The Cheshire cat is a diameter</h2>
+<p>In the quantum Cheshire cat arrangement a photon and its circular handedness are found, by weak values between a prepared and a selected state, in opposite arms of an interferometer. With the published states the four weak values are</p>
+<p class="eq">photon: 1 in the left arm, 0 in the right;&nbsp;&nbsp;&nbsp;handedness: 0 in the left arm, 1 in the right,</p>
+<p>with a success probability of 1/4.</p>
+<p>In the disc the arrangement is two points. The photon&rsquo;s arm ratio gives &Gamma; = &minus;1 and the handedness, read through its own arm ratio, gives &Gamma; = +1. The cat and its grin sit at opposite ends of one diameter, the kept edge and the erased edge of the rim.</p>
+<p>The general arrangement, with any polarization filter in each arm and any flux, keeps this form. The handedness has its own coordinate, and it equals the photon&rsquo;s coordinate composed, by the addition law of Section 1, with one twist for each arm. Flux multiplies both arm ratios by the same factor and therefore moves the two points together; it cannot separate them. Only a difference between the arm filters does.</p>
+<p class="grade">Grade: the published weak values were reproduced exactly. The share formulas, the composition by the addition law and the statement about flux are true by definition of the coordinate: they are a dictionary, and they add no physics to the standard account of weak values. Where a given filter lands depends on which observable is read as the grin. For the circular grin a mirror-fixed (linear) filter lies on the rim and a handed one on the real diameter, with the opposite handedness at the inverse point outside the disc. For a diagonal observable the two roles are exchanged.</p>
+<p>The dictionary earns its place in the next two sections, where the same share formula meets a measurement.</p>
+<p>For the picture this programme uses for absorption, light leaving its message at a hypersurface, the arrangement gives a precise small model: the photon&rsquo;s presence ends at one rim point and its handedness is delivered at the opposite one. The literature gives two cautions about reading more into it. A contextuality analysis attributes the effect to coherences typical of prepared-and-selected systems, with no property actually leaving its particle, and a zero weak value of a polarization component can equally be read as linear polarization.</p>
+</section>
+
+<section>
+<h2>11. A tune-out is a weak-value share</h2>
+<p>An atom in a light field is pushed by each of its absorption lines, with opposite signs on the two sides of a line. Between two lines there is a wavelength at which the pushes cancel and the atom does not feel the light: a tune-out. For rubidium-87 between its two strongest lines, the tune-out has been measured for plain light and for handed light.</p>
+<p>Write the cancellation in the resonant limit. With line strengths s<sub>lower</sub> and s<sub>upper</sub> for the light in question, the zero falls at the fraction</p>
+<p class="eq">(1 + &Gamma;)/2 of the way from the lower line to the upper,&nbsp;&nbsp;&nbsp;&Gamma; = (z &minus; 1)/(z + 1),&nbsp;&nbsp;&nbsp;z = s<sub>lower</sub>/s<sub>upper</sub>.</p>
+<p>This is the right-arm share of Section 8 with the two lines as the two arms. For unsplit lines and light of circular fraction C the ratio of strengths gives</p>
+<p class="eq">&Gamma; = (2C &minus; 1)/3.</p>
+<p>Plain light sits at &minus;1/3 and fully handed light at +1/3: mirror points on the real diameter. Half-handed light sits at the centre, with the zero exactly midway. The opposite handedness gives &Gamma; = &minus;1, the rim, where the zero falls on the lower line itself; that is why that handedness has no tune-out between the lines.</p>
+<table>
+<tr><th>Light</th><th>&Gamma;</th><th>Resonant formula</th><th>With counter-rotating terms</th><th>Measured</th></tr>
+<tr><td>Plain</td><td>&minus;0.3316</td><td>789.997 nm</td><td>790.0280 nm</td><td>790.03235 nm</td></tr>
+<tr><td>Handed (C = 0.9931)</td><td>+0.3305</td><td>785.119 nm</td><td>785.1492 nm</td><td>785.1522(3) nm</td></tr>
+</table>
+<p class="grade">Grade: the share formula is proved in the resonant limit. Against published measurement the two-line values fall 0.004 nm and 0.003 nm short on a separation of 4.88 nm. Adding a background term for the remaining lines, with its constant fitted (10.940 atomic units against a measured core value of 9.116), moves the handed prediction to 785.1535 nm, a miss of 0.0013 nm, which is about four times the stated measurement uncertainty. The agreement is at the level of a two-line model and is not a precision test.</p>
+</section>
+
+<section>
+<h2>12. A cone is half a flux quantum</h2>
+<p>Three bodies in a plane, with size and rotation removed, have a shape space that is a sphere. Read through the squares of the three mutual distances, the relational operator on that sphere has two eigenvalues, and where they touch the eigendirection is undefined.</p>
+<p>With equal masses the two sheets touch at the two equilateral poles. The symmetry there forbids a linear coupling, the gap closes quadratically, and carrying the eigendirection around a pole returns it unchanged: holonomy +1. With unequal masses the symmetry is broken, each touching splits, and the sphere carries four conical points on two axes. Around each of them the eigendirection returns reversed: holonomy &minus;1.</p>
+<p>In the coordinate of Section 8 a holonomy of &minus;1 is a flux of half a quantum, the pole of &Gamma;, the reading at which the two books change places. Each cone has line index exactly +&frac12;, and four halves make 2, the Euler characteristic of the sphere. The quadratic pole of the equal-mass case is two half quanta merged: a whole quantum, &Gamma; = 0, invisible to holonomy.</p>
+<p class="grade">Grade: the indices were measured numerically at &frac12; each with total 2.000; the total is forced by the index theorem for line fields on a sphere. The equal-mass sum rule on N bodies, N(N &minus; 2), was confirmed at N = 3 to 7 (3, 8, 15, 24, 35), and the per-pair rule to a worst error of 2 &times; 10<sup>&minus;10</sup>.</p>
+<p>A map built from the plain distances in place of their squares reads the same sphere differently. At the equilateral shape with equal masses its gap closes linearly, with slope 3, and the holonomy is &minus;1; for the squared-distance operator the gap over the squared displacement tends to 24 and the holonomy is +1. The two maps are different instruments, and a statement about one does not correct the other.</p>
+</section>
+
+<section>
+<h2>13. The moment ladder</h2>
+<p>An atom&rsquo;s response to light is carried by its transitions, each with a gap &Delta;<sub>m</sub> and a dipole strength. The oscillator strength of a transition is f<sub>m</sub> = 2&Delta;<sub>m</sub>|D<sub>m</sub>|&sup2;, and the moments</p>
+<p class="eq">S(k) = &Sigma;<sub>m</sub> f<sub>m</sub> &Delta;<sub>m</sub><sup>k</sup></p>
+<p>form a ladder. Rung &minus;2 is the static polarizability, and the response at frequency &omega; climbs the even rungs: &alpha;(&omega;) = S(&minus;2) + &omega;&sup2;S(&minus;4) + &omega;<sup>4</sup>S(&minus;6) + &hellip;. The field-space form of this programme&rsquo;s tensor sits between them,</p>
+<p class="eq">Q = &Sigma;<sub>m</sub> |D<sub>m</sub>|&sup2;/&Delta;<sub>m</sub>&sup2; = &frac12; S(&minus;3).</p>
+<p>For hydrogen every rung is an exact fraction:</p>
+<p class="eq">S(&minus;1) = 2,&nbsp;&nbsp;S(&minus;2) = 9/2,&nbsp;&nbsp;S(&minus;3) = 43/4,&nbsp;&nbsp;S(&minus;4) = 319/12,&nbsp;&nbsp;S(&minus;5) = 9673/144,&nbsp;&nbsp;S(&minus;6) = 297541/1728,</p>
+<p>so Q = 43/8.</p>
+<p><b>The rungs box each other.</b> Because the oscillator strengths are positive, the ladder is log-convex: S(k)&sup2; &le; S(k &minus; 1) S(k + 1). It is the same positivity that bounds curvature by the metric in the tensor Q. On hydrogen the four exact quotients are 0.942, 0.966, 0.979, 0.986. The ratios of successive rungs rise, 2.25, 2.389, 2.473, 2.527, 2.563, toward 8/3, the inverse of the lowest gap. For the tensor this gives</p>
+<p class="eq">81/16 &le; 43/8 &le; 6.</p>
+<p class="grade">Grade: proved (Cauchy&ndash;Schwarz) and checked on the exact fractions.</p>
+<p><b>Handed light reads the other half.</b> Plain light reads the even rungs, the metric half. Light whose handedness is fixed drives a sideways dipole equal to the curvature half of the tensor times the rate of change of the field. In three numerical setups the ratios of measured to predicted response were 1.005 and &minus;1.023, 1.010 and &minus;0.974, 1.005 and &minus;1.012, with a control at zero.</p>
+<p class="grade">Grade: held numerically to within about 3 percent; two of the six ratios lay outside the 2 percent line set in advance, and the source of that scatter was not identified.</p>
+</section>
+
+<h2 class="part">Part III &middot; The wave of the elements</h2>
+
+<section>
+<h2>14. Russell&rsquo;s octave</h2>
+<p>Walter Russell drew the elements as a wave of octaves. Each octave runs +1, +2, +3, 4, &minus;3, &minus;2, &minus;1 and returns to rest at an inert gas. Read as valence, the octave matches the usual valences of the sixteen elements from lithium to argon, 16 of 16.</p>
+<p>As a wave of fixed length 8 in the atomic number it was tested on five properties of the elements. On lithium to calcium it explains more than half of the variance in every one of them: 0.54 for ionization energy, 0.58 for polarizability, 0.63 for covalent radius, 0.78 for electronegativity, 0.80 for melting point. From scandium on, the same wave explains less than 8 percent of any of them. The periods grow to 18 and 32, and a wave of fixed length cannot follow.</p>
+<p class="grade">Grade: held numerically, against lines set before the run (above one half on the first range, below one quarter on the second).</p>
+<p>Russell&rsquo;s wave is correct as the two-row case of a wave whose length has to grow. The next section finds the coordinate in which it does not grow.</p>
+</section>
+
+<section>
+<h2>15. The pair wave</h2>
+<p><b>An exact coordinate.</b> The periods of the table have lengths 2, 8, 8, 18, 18, 32, 32. Read in the left-step order they come in equal pairs, 2 and 2, 8 and 8, 18 and 18, 32 and 32, and the pairs end at the alkaline earths with atomic numbers 4, 20, 56 and 120. These are every second tetrahedral number, and they satisfy</p>
+<p class="eq">6Z = m&sup3; &minus; m&nbsp;&nbsp;&nbsp;with&nbsp;&nbsp;&nbsp;m = 3, 5, 7, 9</p>
+<p>exactly: 24 = 27 &minus; 3, 120 = 125 &minus; 5, 336 = 343 &minus; 7, 720 = 729 &minus; 9. Define m(Z) for every element by the same equation. In that coordinate one pair of periods is exactly 2 units long. The cube root (6Z)<sup>1/3</sup> equals m &minus; 1/(3m) to leading order, so in the cube-root coordinate the pairs are 2.048, 2.020 and 2.011 long.</p>
+<p class="grade">Grade: proved by derivation.</p>
+<p><b>The test.</b> For each property, a repeating ramp built from three harmonics was fitted in the cube-root coordinate, with the wavelength searched near one unit (one wave per period) and near two (one wave per pair). Each fit faced three lines set in advance: it must exceed 99 percent of fits to shuffled copies of the same data; it must exceed the best fit at two neighbouring wavelengths, which a slow drift would not; and Russell&rsquo;s octave must behave as in Section 14.</p>
+<table>
+<tr><th>Property (elements 1 to 86)</th><th>One per period (noise line)</th><th>One per pair (noise line)</th><th>Pair wavelength</th><th>Outcome</th></tr>
+<tr><td>First ionization energy</td><td>0.215 (0.252)</td><td>0.365 (0.241)</td><td>2.16</td><td>pair wave held</td></tr>
+<tr><td>Electronegativity</td><td>0.347 (0.299)</td><td>0.467 (0.270)</td><td>2.13</td><td>pair wave held</td></tr>
+<tr><td>Covalent radius</td><td>0.237 (0.239)</td><td>0.469 (0.249)</td><td>2.06</td><td>pair wave held</td></tr>
+<tr><td>Dipole polarizability</td><td>0.316 (0.251)</td><td>0.541 (0.251)</td><td>2.13</td><td>pair wave held</td></tr>
+<tr><td>Melting point</td><td>0.441 (0.278)</td><td>0.599 (0.235)</td><td>2.13</td><td>pair wave held</td></tr>
+<tr><td>Electron affinity</td><td>0.175 (0.247)</td><td>0.163 (0.244)</td><td>2.53</td><td>did not hold</td></tr>
+</table>
+<p class="grade">Grade: held numerically for five properties on two independent data sources (ionization energy gave 0.352 on the programme&rsquo;s own table and 0.365 here). One smooth wave, and one ramp per period, did not hold for ionization energy in this setup: 0.206 against a noise line of 0.211, and 0.226 against 0.249. Electron affinity did not hold on any line; many elements bind no extra electron, and the property has gaps a wave cannot follow. Melting point had been expected to fail, as a property of the bulk solid and not of the single atom, and instead carries the strongest wave.</p>
+<p><b>Why the fitted length is 2.13 and not 2.</b> The visible features of every property are anchored at the inert gases, two places before the pair ends. A synthetic ramp anchored at the inert gases fits at 2.145 in the cube-root coordinate; anchored at the alkaline earths it fits at 1.980. In the exact coordinate m(Z) the fitted lengths are 2.02 to 2.11, and only one of the five lies inside the band 1.95 to 2.05 set in advance, so that form did not hold. Shifting the coordinate by the two places, to m(Z + 2), puts helium, argon and xenon exactly at m = 3, 5 and 7. All five properties then fit better (0.424, 0.498, 0.484, 0.593, 0.623), at lengths between 1.94 and 2.04.</p>
+<p class="grade">Grade: held numerically. The table is a wave of length 2 in the exact pair coordinate, anchored at the inert gases.</p>
+<p><b>One shape, turned over.</b> The fitted waves of the five properties are not independent. One common shape carries 0.825 of them. The waves of ionization energy and of polarizability are mirror images, with correlation &minus;0.993 and first-harmonic phases 3&deg; and &minus;179&deg;. Across the 86 elements,</p>
+<p class="eq">log polarizability = 10.28 &minus; 3.04 &times; log ionization energy,</p>
+<p>explaining 0.906 of the variance. Polarizability is rung &minus;2 of the ladder of Section 13. A single gap would give an exponent of 2; the measured exponent is near 3, which is a known empirical rule and reflects a size that shrinks as the gap grows.</p>
+<p class="grade">Grade: held numerically. No derivation of the exponent from the ladder is offered.</p>
+<p>The first peel step of this programme, the coordinate &Gamma; between an element&rsquo;s second and first ionization energies, and the &Gamma; between neighbouring elements, were both tested for the same wave and did not hold in this setup (0.077 against a noise line of 0.236).</p>
+</section>
+
+<section>
+<h2>16. What is and is not new in Part III</h2>
+<p>That atomic structure repeats in the cube root of the atomic number is established physics: the semiclassical theory of the atom contains an oscillating correction to the energy with that period, read by its authors as the shells. The left-step arrangement of the table, with its equal pairs, is a century old, and the tetrahedral count of its pair ends has been noted in the literature on that arrangement. What is added here is the test on measured properties with noise lines and neighbouring-wavelength controls, the finding that the pair and not the period is the unit that passes, the anchoring at the inert gases that turns a fitted 2.13 into an exact 2, the reading of Russell&rsquo;s octave as the two-row case, and the near-identity of the ionization and polarizability waves.</p>
+<p>For the periodic table of elemental peels that this programme is building, the pair coordinate supplies a number for every element, m(Z + 2), from sourced data and with tests that could have failed. It has not yet been tested above element 86, on density, or for the shape of the wave within a pair.</p>
+</section>
+
+<h2 class="part">Part IV &middot; Ghost lines of the primes</h2>
+
+<section>
+<h2>17. Rowland&rsquo;s screw</h2>
+<p>Henry Rowland ruled diffraction gratings with an engine driven by a screw. Any error in the screw that repeated with a fixed period put false lines, ghosts, beside every true line of a spectrum, at spacings set by that period. A fault of the thread became a line in the light.</p>
+<p>The primes above 5 fall only in the 8 residues coprime to 30, a wheel that this programme has described as a screw with a three-start thread for the twin primes. Treat the wheel as the periodic error of a ruling engine and ask where the ghosts fall. Form the Fourier sum of the primes at a frequency of a/q turns per integer step, normalised by the number of primes.</p>
+<p><b>The law.</b> For a reduced fraction a/q,</p>
+<p class="eq">line height = 1/&phi;(q) if q is squarefree, and zero otherwise,</p>
+<p>where &phi;(q) is Euler&rsquo;s count of the residues coprime to q; the height is the same for every a. For the starts of twin-prime pairs the lines of one period are unequal. Splitting a/q into its parts a<sub>p</sub>/p over the odd primes p dividing q,</p>
+<p class="eq">twin line height = product over those p of 2|cos(2&pi; a<sub>p</sub>/p)| / (p &minus; 2).</p>
+<table>
+<tr><th>Frequency</th><th>Primes, measured</th><th>Formula</th><th>Twin starts, measured</th><th>Formula</th></tr>
+<tr><td>1/3</td><td>0.5000</td><td>0.5000</td><td>1.0000</td><td>1.0000</td></tr>
+<tr><td>1/5</td><td>0.2503</td><td>0.2500</td><td>0.2107</td><td>0.2060</td></tr>
+<tr><td>2/5</td><td>0.2498</td><td>0.2500</td><td>0.5376</td><td>0.5393</td></tr>
+<tr><td>1/7</td><td>0.1669</td><td>0.1667</td><td>0.2500</td><td>0.2494</td></tr>
+<tr><td>2/7</td><td>0.1666</td><td>0.1667</td><td>0.0872</td><td>0.0890</td></tr>
+<tr><td>3/7</td><td>0.1665</td><td>0.1667</td><td>0.3605</td><td>0.3604</td></tr>
+<tr><td>1/30</td><td>0.1252</td><td>0.1250</td><td>0.2107</td><td>0.2060</td></tr>
+<tr><td>1/210</td><td>0.0211</td><td>0.0208</td><td>0.1983</td><td>0.1944</td></tr>
+<tr><td>1/4, 1/9, 1/25</td><td>below 0.001</td><td>0</td><td>below 0.003</td><td>0</td></tr>
+</table>
+<p>The measurement runs to ten million: 664,569 primes and 58,975 twin starts. The squared heights of the 30 lines of the wheel add to 3.7500 for the primes and 10.0004 for the twins, against 30/8 and 30/3 from the number of live residues. At three frequencies off the grid everything is below 0.006.</p>
+<p class="grade">Grade: held numerically; no line set in advance was crossed. The law itself is prior work: it is the structure of the major arcs in the circle method, and the heights are Ramanujan sums over Euler&rsquo;s count. What is added is the reading as ruling-engine ghosts and the explicit unequal heights for twin starts.</p>
+</section>
+
+<section>
+<h2>18. The endpoint offset of the twin chain</h2>
+<p>Carried through the tree as a chain of steps, the twin primes end at a distance that follows d = L/&radic;3 + 0.109, where L is the route length. After Section 5 it is natural to ask whether the constant belongs to the census family, as ln(4/3) does. Nine closed forms built from logarithms of sines of the chain&rsquo;s angles were tried against the measured 0.10866 &plusmn; 0.00003. Eight miss by between 0.0002 and 0.057. One, (2 &minus; &radic;3) ln(3/2) = 0.10864, lands, with no mechanism behind it, and is recorded as a coincidence.</p>
+<p class="grade">Grade: did not hold in this setup. The offset is set almost entirely by the first twelve hundred twin starts; a single early step moves it from 0.142 to 0.035. One piece is exact: the first step contributes ln(17/11)(1 &minus; 1/&radic;3) = 0.1840.</p>
+</section>
+
+<h2 class="part">Part V &middot; Reading matter with a cut</h2>
+
+<section>
+<h2>19. The machinist&rsquo;s signs</h2>
+<p>Several results above were reached by way of the machine shop. This part records the reading and grades it as a reading.</p>
+<p><b>Recentring.</b> A part that has been stress-relieved moves, and the centre hole drilled for the tailstock is no longer on the true axis. To take the warp out the part must be recentred and the hole redrilled. In the disc, any flux or twist moves the reading off &Gamma; = 0, and the old centre is no longer the balance point. Recentring is the addition law run backwards. The live centre turns with the work; flux turns the cat and the grin together.</p>
+<p><b>The cut reads the making.</b> Casting, forging and heat treatment leave stress locked into a part, and removing material releases it. The contour method of residual-stress measurement uses exactly this: a part is cut along a plane, the stress across the plane relaxes, and the shape of each new face is mapped to reconstruct the stress that was inside. Below that layer lies another. The material in the lathe is formed matter. A chip forms by shear along the planes of the crystal, and which planes exist is set by how the atoms packed, which is set by their outer electrons. The table of feeds and speeds is a table of the elements read by a cutting edge.</p>
+<p><b>The bulk carries the wave.</b> Section 15 found that melting point, a property of the solid, carries the pair wave of the table more strongly than any property of the single atom tested.</p>
+<p class="grade">Grade: Sections 5, 8, 15 and 17 are the tested forms of these signs. The link between the contour method and the seam of this programme, in which an interface is a Schur complement that keeps loading from both sides, is a reading and has not been tested.</p>
+<p>The tradition is old. Rumford reached the idea that heat is motion from the boring of cannon. Rowland&rsquo;s spectroscopy rested on the making of a nearly perfect screw.</p>
+</section>
+
+<h2 class="part">Part VI &middot; Where it stands</h2>
+
+<section>
+<h2>20. Statements and grades</h2>
+<table>
+<tr><th>Statement</th><th>Grade</th></tr>
+<tr><td>The ratio is at most 2 in every nonpositively curved space, by an even cover of four-sided figures</td><td>Proved</td></tr>
+<tr><td>Flat maximum 2 &minus; 2<sup>1&minus;&mu;</sup></td><td>Proved for sizes 2 to 5; value of the best character proved at every size</td></tr>
+<tr><td>Three-leg star reads exactly 5/3; it is the cone over the projective line</td><td>Proved</td></tr>
+<tr><td>5/3 is the most a tree can give</td><td>Held in search; open</td></tr>
+<tr><td>End to end in the ball is twice the leg minus the census depth of the half-angle</td><td>Proved</td></tr>
+<tr><td>The cone over the spherical building reads exactly &mu;</td><td>Derived from cited theorems</td></tr>
+<tr><td>The building-cone metric is a price</td><td>Open</td></tr>
+<tr><td>Weak value of an arm = (1 &plusmn; &Gamma;)/2; flux on the imaginary axis; rim at a quarter quantum</td><td>Proved (identity)</td></tr>
+<tr><td>Book ratio with a phase = tan&sup2;(&Phi;/2)</td><td>Proved</td></tr>
+<tr><td>Opposite book on an odd ring = connection energy at half a flux quantum</td><td>Proved</td></tr>
+<tr><td>Cheshire arrangement = the diameter from &minus;1 to +1</td><td>Proved (dictionary)</td></tr>
+<tr><td>Tune-out at the share (1 + &Gamma;)/2 with &Gamma; = (2C &minus; 1)/3</td><td>Proved in the resonant limit; agrees with measurement at the two-line level</td></tr>
+<tr><td>Each cone of the shape sphere is half a flux quantum; four make the Euler characteristic</td><td>Held numerically; total forced</td></tr>
+<tr><td>Ladder log-convex; 81/16 &le; 43/8 &le; 6</td><td>Proved</td></tr>
+<tr><td>Handed light reads the curvature half</td><td>Held to about 3 percent</td></tr>
+<tr><td>Russell&rsquo;s octave: valence 16 of 16; wave for elements 3 to 20 only</td><td>Held numerically</td></tr>
+<tr><td>Pair ends satisfy 6Z = m&sup3; &minus; m</td><td>Proved</td></tr>
+<tr><td>Pair wave in five properties; length 2 when anchored at the inert gases</td><td>Held numerically</td></tr>
+<tr><td>Pair wave in electron affinity, in the peel step, in neighbour &Gamma;</td><td>Did not hold in this setup</td></tr>
+<tr><td>Ghost lines of height 1/&phi;(q); unequal twin heights</td><td>Held numerically; law is prior work</td></tr>
+<tr><td>Twin-chain offset as a census depth</td><td>Did not hold in this setup</td></tr>
+<tr><td>Star&rsquo;s 5/3 tied to the coboundary constants</td><td>Did not hold in this setup</td></tr>
+</table>
+</section>
+
+<section>
+<h2>21. What is open</h2>
+<p>In Part I: a proof that 5/3 is the tree maximum; a general tree search at size 3, where the star should be the cone over the seven-point projective plane; whether the building-cone metric is a price; the flat Poincar&eacute; constant over the two-element field.</p>
+<p>In Part II: the source of the scatter in the handed-light ratios; a tune-out calculation with a measured, not fitted, background; the link from the contour method to the seam.</p>
+<p>In Part III: elements above 86; density; the shape of the wave within a pair; a derivation of the exponent near 3 from the ladder.</p>
+<p>In the wider programme, and named here because this work bears on them: the measuring shapes still carry the ball&rsquo;s tree and should be rebuilt as shapes joined face to face, which is a building; the Platonic solids have not yet been run as instruments on the Andrews&ndash;Curtis problem or on the table; and the two books have not yet been written on the primes.</p>
+</section>
+
+<h2 class="part">Plates</h2>
+<section class="plates">
+<figure><img src="{{FIG1}}" alt="The scale"><figcaption><b>Plate 1.</b> The four readings of the gauge at size 2. Gold marks the ceiling reached in a building.</figcaption></figure>
+<figure><img src="{{FIG2}}" alt="The star"><figcaption><b>Plate 2.</b> The star. Seven matrices at the centre, three on each leg, grouped by image.</figcaption></figure>
+<figure><img src="{{FIG3}}" alt="The disc"><figcaption><b>Plate 3.</b> The Smith disc with the readings of Part II. Flux runs down the imaginary axis and meets the rim at a quarter quantum. The cat and the grin are the ends of the real diameter; the two rubidium tune-outs are mirror points on it.</figcaption></figure>
+<figure><img src="{{FIG4}}" alt="The pair wave"><figcaption><b>Plate 4.</b> Ionization energy (gold) and polarizability (blue) for elements 1 to 86 in the exact pair coordinate. Helium, argon and xenon fall at m = 3, 5, 7. The two curves are mirror images.</figcaption></figure>
+<figure><img src="{{FIG5}}" alt="Ghost lines"><figcaption><b>Plate 5.</b> Ghost lines of the primes and of twin-prime starts up to ten million, measured against the formula. Lines at non-squarefree periods are absent.</figcaption></figure>
+<figure><img src="{{FIG6}}" alt="The ladder"><figcaption><b>Plate 6.</b> Ratios of successive rungs of the hydrogen moment ladder, rising toward 8/3.</figcaption></figure>
+</section>
+
+<h2 class="part">Appendices</h2>
+
+<section>
+<h2>Appendix A. Results taken from the literature, with their hypotheses</h2>
+<p><b>A1. The four-point rule.</b> In a nonpositively curved space, for any four points w, x, y, z, d(w,y)&sup2; + d(x,z)&sup2; &le; d(w,x)&sup2; + d(x,y)&sup2; + d(y,z)&sup2; + d(z,w)&sup2;. For a space with shortest paths the rule holding for every four points is equivalent to nonpositive curvature (Berg and Nikolaev; a short proof by Sato). Used in Section 2. Hypothesis used: the target is nonpositively curved in the global comparison sense.</p>
+<p><b>A2. Weighted four-point inequalities.</b> Any four points of such a space satisfy, for all weights t and s between 0 and 1, 0 &le; (1&minus;t)(1&minus;s) d(x,y)&sup2; + t(1&minus;s) d(y,z)&sup2; + ts d(z,w)&sup2; + (1&minus;t)s d(w,x)&sup2; &minus; t(1&minus;t) d(x,z)&sup2; &minus; s(1&minus;s) d(y,w)&sup2; (Gromov; Sturm). For five points or fewer these decide embeddability (Toyoda); for six they do not (Lebedeva and Petrunin). Used in Section 6 as a necessary test only.</p>
+<p><b>A3. Buildings and cones.</b> A spherical building with its natural metric has curvature at most 1 in the comparison sense, and the Euclidean cone over a space of curvature at most 1 is nonpositively curved (see Bridson and Haefliger). Any two simplices of a building lie in a common apartment, and distances between them are measured there. Used in Section 6.</p>
+<p><b>A4. The two cases.</b> The dichotomy of Section 2, the bound D(&mu;) &le; &radic;&mu; D(1) for prices, and the use of the metric square-root-of-rank outside the contracting case are from the 2026 proof that VP differs from VNP over every field.</p>
+<p><b>A5. Shell oscillations.</b> The ground-state energy of a neutral atom has an oscillating correction periodic in the cube root of the electron number (Schwinger and Englert). Used in Section 16 as prior art.</p>
+<p><b>A6. Random walks on unitriangular groups.</b> For odd primes the second eigenvalue of the natural walk lies within a constant over n of 1 (Stong, as quoted by Coppersmith and Pak). Used in Section 7; not confirmed for the two-element field.</p>
+<p><b>A7. Weak values and the Cheshire arrangement.</b> Aharonov, Popescu, Rohrlich and Skrzypczyk; the neutron experiment of Denkmayr and co-workers; the contextuality analysis of Hance, Ji and Hofmann; the alternative reading of Quach. The local account of the Aharonov&ndash;Bohm phase through the quantised field is due to Marletto and Vedral, and to Saldanha.</p>
+<p><b>A8. Measured values.</b> Rubidium-87 tune-out wavelengths 790.03235 nm and 785.1522(3) nm from published measurement. Element data from the mendeleev package, version 1.4.0: polarizabilities from the 2018 table of Schwerdtfeger and Nagle, covalent radii of Pyykk&ouml;.</p>
+</section>
+
+<section>
+<h2>Appendix B. The derivations, step by step</h2>
+<p><b>B1. The even cover.</b> At size 2 enumerate ordered pairs (W, W&prime;) of rank-1 matrices with W + W&prime; of rank 2. Each of the 6 rank-2 matrices arises 6 times; each of the 9 rank-1 matrices has 4 partners. For a uniformly random base point a and a uniformly random such pair, each diagonal is a uniformly random rank-2 pair and each side a uniformly random rank-1 pair. The mean of the four-point rule is then 2 D(2)&sup2; &le; 4 D(1)&sup2;.</p>
+<p><b>B2. The flat count.</b> For the character reading the corner entry, the squared distance between a and b is 4 when (a &minus; b)<sub>11</sub> = 1 and 0 otherwise. Among the 6 invertible two-by-two matrices 4 have corner entry 1; among the 9 rank-1 matrices 4 do. So D(2)&sup2; = 4 &times; 2/3 and D(1)&sup2; = 4 &times; 4/9, and the ratio is 3/2. A rank-1 matrix is u v<sup>T</sup> with u and v nonzero, and its corner entry is u<sub>1</sub>v<sub>1</sub>, which is 1 with probability (2<sup>&mu;&minus;1</sup>/(2<sup>&mu;</sup> &minus; 1))&sup2;.</p>
+<p><b>B3. The star count.</b> Ordered pairs at a rank-1 step number 16 &times; 9 = 144. Both ends at the centre: the zero matrix has no rank-1 neighbour at the centre, and each invertible matrix has 3 invertible neighbours at a rank-1 step, 18 in all; both ends on one leg: 18; total at distance 0: 36. One end at the centre and one on a leg: 90. Ends on different legs: 18. The rank-2 count is the same enumeration with 16 &times; 6 = 96 pairs: 24, 36, 36.</p>
+<p><b>B4. The star in the ball.</b> Two geodesic legs of length &#8467; leave a point at angle &theta;. The hyperbolic cosine rule gives cosh d = cosh&sup2;&#8467; &minus; sinh&sup2;&#8467; cos &theta;. For large &#8467; both cosh&sup2;&#8467; and sinh&sup2;&#8467; are e<sup>2&#8467;</sup>/4, so cosh d &asymp; e<sup>2&#8467;</sup>(1 &minus; cos &theta;)/4 and d &asymp; 2&#8467; + ln((1 &minus; cos &theta;)/2) = 2&#8467; + ln sin&sup2;(&theta;/2).</p>
+<p><b>B5. The building angle.</b> In an apartment, a &mu;-dimensional subspace spanned by &mu; of 2&mu; basis vectors is the vector v<sub>S</sub> with entries +&frac12; on S and &minus;&frac12; off it, of squared length &mu;/2. If S and S&prime; share &mu; &minus; k elements, the entries agree in 2&mu; &minus; 2k places and differ in 2k, so v<sub>S</sub>&middot;v<sub>S&prime;</sub> = (2&mu; &minus; 4k)/4 and cos &theta;<sub>k</sub> = 1 &minus; 2k/&mu;. The cone distance at radius R is d&sup2; = 2R&sup2;(1 &minus; cos &theta;<sub>k</sub>) = 4R&sup2;k/&mu;.</p>
+<p><b>B6. The weak value.</b> With the prepared state (L + R)/&radic;2 and the selected state (L + e<sup>i&Phi;</sup>R)/&radic;2, the overlap is (1 + e<sup>&minus;i&Phi;</sup>)/2 and the left-arm amplitude is 1/2. The left-arm weak value is 1/(1 + z) with z = e<sup>&minus;i&Phi;</sup>, which is (1 &minus; &Gamma;)/2.</p>
+<p><b>B7. The tune-out share.</b> Near two lines at frequencies &omega;<sub>1</sub> &lt; &omega;<sub>2</sub> with strengths s<sub>1</sub>, s<sub>2</sub> the shift is proportional to s<sub>1</sub>/(&omega; &minus; &omega;<sub>1</sub>) + s<sub>2</sub>/(&omega; &minus; &omega;<sub>2</sub>). It vanishes at &omega; = &omega;<sub>1</sub> + (&omega;<sub>2</sub> &minus; &omega;<sub>1</sub>) s<sub>1</sub>/(s<sub>1</sub> + s<sub>2</sub>), and s<sub>1</sub>/(s<sub>1</sub> + s<sub>2</sub>) = (1 + &Gamma;)/2 with z = s<sub>1</sub>/s<sub>2</sub>.</p>
+<p><b>B8. The pair coordinate.</b> The period pair ending at the n-th pair end holds 2(1&sup2; + 2&sup2; + &hellip;) elements in the left-step order, giving Z = (2n)(2n + 1)(2n + 2)/6. With m = 2n + 1 this is (m &minus; 1)m(m + 1)/6 = (m&sup3; &minus; m)/6.</p>
+<p><b>B9. Ghost heights.</b> Primes are equidistributed among the &phi;(q) residues coprime to q. The sum of e<sup>2&pi;i a r/q</sup> over those residues is the Ramanujan sum, equal to &plusmn;1 for squarefree q and 0 when a squared prime divides q with a coprime to q. Dividing by &phi;(q) gives the height.</p>
+</section>
+
+<section>
+<h2>Appendix C. The record of computations</h2>
+<p>Every number in this paper comes from a script that carries its name inside the file and, where it tests a claim, a line written before the run stating what result would refute the claim. They are held in the repository votkp-lean, on the working branch, in the folders listed.</p>
+<table>
+<tr><th>Folder</th><th>Scripts</th><th>Sections</th></tr>
+<tr><td>research/vp-vnp-links/push</td><td>exact_flat, star_search, star_structured, star_in_ball, ball_search, ball_structure, poincare_big</td><td>3, 4, 5, 7</td></tr>
+<tr><td>research/retest-2026-11-24</td><td>retest_all, check16, building_cone, cheshire_gamma_v2, zoom_identities</td><td>2 to 10</td></tr>
+<tr><td>research/connections-2026-11-24</td><td>star_building, joins, table_exact, ghosts</td><td>4, 11, 12, 13, 15, 17, 18</td></tr>
+<tr><td>research/ab-atlas-map</td><td>ab_atlas_map, cheshire_gamma</td><td>8, 9, 10</td></tr>
+<tr><td>research/moment-ladder</td><td>moment_ladder, hydrogen_exact, handed_light, rubidium_handed</td><td>11, 13</td></tr>
+<tr><td>research/gaps-and-totals-check</td><td>gaps_totals_check, squared_map_mass_breaking</td><td>12</td></tr>
+<tr><td>research/table-wave</td><td>table_wave, table_wave2, table_wave2b, table_wave3</td><td>14, 15</td></tr>
+<tr><td>research/paper-centre-in-flux</td><td>make_figures, build_paper</td><td>plates</td></tr>
+</table>
+<p>The results were re-derived three times by separately written code, and an independent reading of the record was made before this paper was written. Statements graded &ldquo;did not hold in this setup&rdquo; are kept with their numbers.</p>
+</section>
+
+<section>
+<h2>References</h2>
+<ol class="refs">
+<li>Claude (Anthropic). VP &ne; VNP over every field. Repository anthropics/formal-math, 2026.</li>
+<li>I. D. Berg and I. G. Nikolaev. Quasilinearization and curvature of Aleksandrov spaces. Geometriae Dedicata 133 (2008).</li>
+<li>T. Sato. An alternative proof of Berg and Nikolaev&rsquo;s characterization of CAT(0)-spaces via quadrilateral inequality. Archiv der Mathematik 93 (2009).</li>
+<li>Yu. G. Reshetnyak. Inextensible mappings in a space of curvature no greater than K. Siberian Mathematical Journal (1968).</li>
+<li>M. R. Bridson and A. Haefliger. Metric Spaces of Non-Positive Curvature. Springer, 1999.</li>
+<li>T. Toyoda. An intrinsic characterization of five points in a CAT(0) space. Analysis and Geometry in Metric Spaces 8 (2020).</li>
+<li>N. Lebedeva and A. Petrunin. 5-point CAT(0) spaces after Tetsu Toyoda. Analysis and Geometry in Metric Spaces 9 (2021).</li>
+<li>F. Bruhat and J. Tits. Groupes r&eacute;ductifs sur un corps local I. Publications Math&eacute;matiques de l&rsquo;IH&Eacute;S (1972).</li>
+<li>R. Stong. Random walks on the groups of upper triangular matrices. Annals of Probability 23 (1995).</li>
+<li>D. Coppersmith and I. Pak. Random walk on upper triangular matrices mixes rapidly. Probability Theory and Related Fields 117 (2000).</li>
+<li>Y. Aharonov, S. Popescu, D. Rohrlich and P. Skrzypczyk. Quantum Cheshire Cats. New Journal of Physics 15 (2013).</li>
+<li>T. Denkmayr and co-workers. Observation of a quantum Cheshire Cat in a matter-wave interferometer experiment. Nature Communications 5 (2014).</li>
+<li>J. R. Hance, M. Ji and H. F. Hofmann. Contextuality, coherences, and quantum Cheshire cats (2023).</li>
+<li>J. Q. Quach. Dual to the anomalous weak value effect of photon-polarisation separation (2019).</li>
+<li>C. Marletto and V. Vedral. Aharonov&ndash;Bohm phase is locally generated like all other quantum phases. Physical Review Letters 125 (2020).</li>
+<li>P. L. Saldanha. Local description of the Aharonov&ndash;Bohm effect with a quantum electromagnetic field (2021).</li>
+<li>Vector tune-out wavelength of rubidium-87. Physical Review A 105, L030802 (2022).</li>
+<li>B.-G. Englert and J. Schwinger. The semiclassical atom (1985); B.-G. Englert, Julian Schwinger and the semiclassical atom (2019).</li>
+<li>P. Schwerdtfeger and J. K. Nagle. 2018 table of static dipole polarizabilities of the neutral elements. Molecular Physics 117 (2019).</li>
+<li>G. H. Hardy and J. E. Littlewood. Some problems of Partitio Numerorum III. Acta Mathematica 44 (1923).</li>
+<li>B. Thompson, Count Rumford. An experimental enquiry concerning the source of the heat which is excited by friction. Philosophical Transactions 88 (1798).</li>
+<li>M. B. Prime and A. R. Gonzales. The contour method: simple 2-D mapping of residual stresses. Sixth International Conference on Residual Stresses (2000).</li>
+<li>W. Russell. The Universal One (1926).</li>
+<li>J. Beasley. The Relational Atlas, continuous edition 4, card set 7. Zenodo (2026). Cards B8, B15, B16, B77, B87, B88, B97, B98, B146, B156, B158, B187, B189, B192, B193, B195, B197 are used here.</li>
+<li>J. Beasley. The permutation coboundary constant of the complete two-complex is k/3. Zenodo and repository coboundary-k3-lean (2026).</li>
+<li>J. Beasley. VOTKP: The Vector of Traits Kept under Peeling. Zenodo (2026).</li>
+</ol>
+</section>

@@ -1,0 +1,31 @@
+T1 m(Z) at Z = 4, 20, 56, 120: [3. 5. 7. 9.] ; cube-root coordinate there: [2.8845 4.9324 6.9521 8.9628] spacings [2.0479 2.0196 2.0108]
+   noble gases 2, 18, 54, 118 in the cube-root coordinate: [2.2894 4.7622 6.8683 8.9127] spacings [2.4728 2.1061 2.0445]
+   mid-pair noble gases 10, 36, 86: [3.9149 6.     8.0208] spacings [2.0851 2.0208]
+
+best pair wave: share of variance and wavelength, in three coordinates
+  log ionization energy    cube root (6Z)^(1/3): 0.366 at 2.150 | tetrahedral m(Z): 0.377 at 2.105 | tetrahedral m(Z+2): 0.424 at 1.945  | m(Z) with wavelength fixed at 2: 0.301
+  electronegativity        cube root (6Z)^(1/3): 0.467 at 2.135 | tetrahedral m(Z): 0.475 at 2.095 | tetrahedral m(Z+2): 0.498 at 1.955  | m(Z) with wavelength fixed at 2: 0.400
+  log covalent radius      cube root (6Z)^(1/3): 0.470 at 2.055 | tetrahedral m(Z): 0.452 at 2.015 | tetrahedral m(Z+2): 0.484 at 1.940  | m(Z) with wavelength fixed at 2: 0.448
+  log polarizability       cube root (6Z)^(1/3): 0.541 at 2.125 | tetrahedral m(Z): 0.547 at 2.085 | tetrahedral m(Z+2): 0.593 at 1.950  | m(Z) with wavelength fixed at 2: 0.455
+  log melting point        cube root (6Z)^(1/3): 0.600 at 2.120 | tetrahedral m(Z): 0.582 at 2.075 | tetrahedral m(Z+2): 0.623 at 2.035  | m(Z) with wavelength fixed at 2: 0.525
+T2 properties with m-coordinate wavelength inside 1.95..2.05: 1 of 5 FIRED
+T3 synthetic sawtooth, pair ends at alkaline earths (4, 20, 56) : cube-root coordinate wavelength 1.980 (share 0.836); m coordinate 1.950 (share 0.833) FIRED
+T3 synthetic sawtooth, pair ends at noble gases (2, 18, 54) : cube-root coordinate wavelength 2.145 (share 0.789); m coordinate 2.115 (share 0.801) HELD
+
+correlation between the fitted pair waves (wavelength 2 in m), all 86 positions
+  log ionization energy    +1.00 +0.94 -0.90 -0.99 -0.63
+  electronegativity        +0.94 +1.00 -0.92 -0.97 -0.39
+  log covalent radius      -0.90 -0.92 +1.00 +0.94 +0.31
+  log polarizability       -0.99 -0.97 +0.94 +1.00 +0.55
+  log melting point        -0.63 -0.39 +0.31 +0.55 +1.00
+T4 ionization energy against polarizability: -0.993 HELD
+   one common shape carries 0.825 of the five normalised waves (singular values [2.031 0.888 0.27  0.117 0.032])
+   first-harmonic phase of log ionization energy      3.4 degrees, amplitude 0.127
+   first-harmonic phase of electronegativity          9.5 degrees, amplitude 0.195
+   first-harmonic phase of log covalent radius      155.1 degrees, amplitude 0.125
+   first-harmonic phase of log polarizability      -178.6 degrees, amplitude 0.461
+   first-harmonic phase of log melting point       -175.5 degrees, amplitude 0.239
+   log polarizability = 10.28 + (-3.036) x log ionization energy ; share explained 0.906
+   log polarizability = -11.60 + (3.214) x log covalent radius ; share explained 0.832
+T5 neighbour Gamma of ionization energy, cube root coordinate: share 0.077 at wavelength 2.255 ; 99th percentile of shuffles 0.236 FIRED
+T5 neighbour Gamma of ionization energy, m coordinate: share 0.080 at wavelength 2.205 ; 99th percentile of shuffles 0.253 FIRED

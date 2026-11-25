@@ -1,0 +1,34 @@
+J1 C = 0.0000: Gamma = -0.33159 (unsplit: (2C-1)/3 = -0.33333); resonant formula 789.9972 nm, measured 790.03235, miss -0.0351 nm HELD ; with counter-rotating terms 790.0280 nm against record 790.0280 (+0.0000) HELD
+J1 C = 0.9931: Gamma = +0.33048 (unsplit: (2C-1)/3 = +0.32873); resonant formula 785.1188 nm, measured 785.15220, miss -0.0334 nm HELD ; with counter-rotating terms 785.1492 nm against record 785.1492 (-0.0000) HELD
+   opposite handedness C = -1: Gamma = -1.0 (the rim: the zero sits on the lower line itself, no tune-out between the lines)
+   C = 1/2: Gamma = 0.0 (centre of the disc: zero exactly midway)
+J2 degenerate points found: 4 ; chart winding of the traceless part / 2 at each: [0.5 0.5 0.5 0.5]
+   around the north pole the tensor winds -2.00 in the rotating frame, so its true line index there is 1 + (-2.00)/2 = 0.00 (regular point if 0)
+   around the south pole (loop reversed for the outward normal): frame winding +2.00, true line index 1 - (+2.00)/2 = 0.00
+   sum of the four cone indices (magnitudes): 2.000 ; Euler characteristic 2 ; equal masses: 2 poles x index 1 = 2. HELD
+   flux reading: holonomy -1 is Phi = pi, Gamma = i tan(Phi/2) = infinity (books swapped); two of them merged give Phi = 2 pi, Gamma = 0, holonomy +1.
+J3 S(-2)^2 = 81/4 <= S(-1) S(-3) = 43/2 : True (quotient 0.94186)
+J3 S(-3)^2 = 1849/16 <= S(-2) S(-4) = 957/8 : True (quotient 0.96604)
+J3 S(-4)^2 = 101761/144 <= S(-3) S(-5) = 415939/576 : True (quotient 0.97861)
+J3 S(-5)^2 = 93566929/20736 <= S(-4) S(-6) = 94915579/20736 : True (quotient 0.98579)
+   rung quotients S(k-1)/S(k): [2.25, 2.3889, 2.4729, 2.5269, 2.5633] -> 8/3 = 2.6667 ; increasing: True ; all below 8/3: True
+   lower bound on the tensor half-rung: S(-3)/2 = 43/8 >= S(-2)^2/(2 S(-1)) = 81/16 ; upper: S(-3)/2 <= (8/3) S(-2)/2 = 6 HELD
+   Smith coordinate of each rung quotient against the first line, Gamma = (x-1)/(x+1), x = quotient x 3/8: [-0.0847, -0.0549, -0.0377, -0.0269, -0.0198]
+J4 ln(4/3)/sqrt(3) (star offset on the diagonal shadow)                                            0.16609  miss +0.05743  missed
+J4 ln(4/3)/3                                                                                       0.09589  miss -0.01277  missed
+J4 half the census depth at 90 degrees between arms, 2 ln(1/sin 45) / 2 = ln(2)/2, times (1 - 1/sqrt 3)^2 0.06191  miss -0.04675  missed
+J4 ln(3/2)/4 (census depth at the arm-to-diagonal angle, sin^2 = 2/3, quartered)                   0.10137  miss -0.00729  missed
+J4 ln(9/8) (census depth at the tetrahedral angle 70.53)                                           0.11778  miss +0.00912  missed
+J4 ln(17/11)/4 (first step over four)                                                              0.10883  miss +0.00017  missed
+J4 (2 - sqrt 3) ln(3/2)                                                                            0.10864  miss -0.00002  within 0.0001
+J4 ln(4/3)(1 - 1/sqrt 3)                                                                           0.12159  miss +0.01293  missed
+J4 1/(2 pi sqrt(3)) + ...: 1/(3 pi)                                                                0.10610  miss -0.00256  missed
+   exact piece: the first-step part of the offset, ln(17/11)(1 - 1/sqrt 3) = 0.1840 (record: +0.1840)
+   cube 90                offset 0.1086 ; offset/(1 - P^2) = 0.1629 ; offset/(1 - P) = 0.2570
+   tetrahedron 109.47     offset 0.1567 ; offset/(1 - P^2) = 0.1763 ; offset/(1 - P) = 0.2350
+   icosahedron 63.43      offset 0.0603 ; offset/(1 - P^2) = 0.1636 ; offset/(1 - P) = 0.2936
+   dodecahedron 41.81     offset 0.0281 ; offset/(1 - P^2) = 0.1655 ; offset/(1 - P) = 0.3163
+J5 transposition ((0, 1), (1, 0)) fixes [(1, 1)] ; t - I = ((1, 1), (1, 1)) rank 1 ; its leg (image) is {(1, 1)}
+J5 transposition ((1, 0), (1, 1)) fixes [(0, 1)] ; t - I = ((0, 0), (1, 0)) rank 1 ; its leg (image) is {(0, 1)}
+J5 transposition ((1, 1), (0, 1)) fixes [(1, 0)] ; t - I = ((0, 1), (0, 0)) rank 1 ; its leg (image) is {(1, 0)}
+   differences between two transpositions have rank: [2, 2, 2] ; all three legs used once: HELD
